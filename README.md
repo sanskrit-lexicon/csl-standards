@@ -6,6 +6,14 @@ This repository is the home for TEI, OntoLex/Lexicog, RDF, SHACL, and related
 interoperability experiments that are too technical for `csl-atlas` and not
 GitHub/org observability work for `csl-observatory`.
 
+Status: public repository created on 2026-06-04 from the CSL Atlas boundary
+cleanup.
+
+- Public repo: <https://github.com/sanskrit-lexicon/csl-standards>
+- Dictionary atlas: <https://github.com/sanskrit-lexicon/csl-atlas>
+- GitHub/org observatory: <https://github.com/sanskrit-lexicon/csl-observatory>
+- DCS/corpus home: <https://github.com/gasyoun/VisualDCS>
+
 ## Mission
 
 - Validate CDSL dictionary markup against explicit TEI-style profiles.
@@ -25,3 +33,6 @@ C:\Users\user\Documents\GitHub\csl-atlas
 
 The migration plan is in [docs/MIGRATION_PLAN.md](docs/MIGRATION_PLAN.md).
 Boundary rules are in [docs/BOUNDARY_RULES.md](docs/BOUNDARY_RULES.md).
+
+The atlas-side removal and pointer update merged in
+[`csl-atlas` PR #32](https://github.com/sanskrit-lexicon/csl-atlas/pull/32).

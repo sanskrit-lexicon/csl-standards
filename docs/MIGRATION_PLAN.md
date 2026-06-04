@@ -4,6 +4,11 @@ Date: 2026-06-03
 
 Decision: move standards/export work from `csl-atlas` to `csl-standards`.
 
+Status: completed and published on 2026-06-04.
+
+- Public repo: `https://github.com/sanskrit-lexicon/csl-standards`
+- Atlas cleanup PR: `https://github.com/sanskrit-lexicon/csl-atlas/pull/32`
+
 ## Goals
 
 - TEI: validate CDSL markup and support publication for other lexicographic
@@ -26,7 +31,11 @@ Destination:
 C:\Users\user\Documents\GitHub\csl-standards
 ```
 
-## Candidate Move Manifest
+## Completed Move Manifest
+
+The following list is the completed initial migration set. Keep it as a
+reproducibility manifest when auditing why a standards file is no longer in
+`csl-atlas`.
 
 Scripts:
 
@@ -83,6 +92,8 @@ Package commands:
 - `validate-external-profiles:strict`
 
 ## Migration Order
+
+Completed on 2026-06-04. The order below is retained as an audit trail.
 
 1. Copy the manifest above into `csl-standards` and make it reproducible there.
 2. Run the standards validation gates in `csl-standards`.

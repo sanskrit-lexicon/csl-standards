@@ -1,9 +1,11 @@
 # Boundary Rules
 
 Date: 2026-06-03
+Last updated: 2026-06-04
 
 Status: human decision. `csl-standards` is the standards/export path for CDSL
-dictionary data.
+dictionary data. The public repository was created on 2026-06-04 at
+`https://github.com/sanskrit-lexicon/csl-standards`.
 
 ## Mission
 
@@ -38,6 +40,12 @@ here.
 - Neutral models when they exist to compare standards, not to become a new
   atlas data layer.
 - Migration notes for moving TEI/OntoLex work out of `csl-atlas`.
+
+## Related Repositories
+
+- `csl-atlas`: dictionary evidence and dictionary structure.
+- `csl-observatory`: GitHub/org observatory work.
+- `VisualDCS`: DCS/corpus data and passage/corpus dashboards.
 
 ## Does Not Belong Here
 

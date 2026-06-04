@@ -2,6 +2,10 @@
 
 This legacy roadmap assumes a public standards workbench from the first scaffold, but scholarship leads the engineering. The tool is a research instrument.
 
+Status update, 2026-06-04: the repository now exists publicly at
+`https://github.com/sanskrit-lexicon/csl-standards`. Treat this roadmap as the
+post-migration standards workbench plan, not as a `csl-atlas` plan.
+
 ## Month 1: Model And Hard Sample
 
 Goal: define the research object and generate the first difficult sample.
