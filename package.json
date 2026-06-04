@@ -1,0 +1,43 @@
+{
+  "name": "csl-standards",
+  "version": "0.1.0",
+  "description": "Standards and export workbench for CDSL dictionary data",
+  "type": "module",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "dev": "observable preview",
+    "build": "observable build",
+    "sample-hard-cases": "node scripts/sample-hard-cases.mjs",
+    "select-review-cases": "node scripts/select-review-cases.mjs",
+    "build-neutral-model": "node scripts/build-neutral-model.mjs",
+    "build-loss-reports": "node scripts/build-loss-reports.mjs",
+    "refine-curated-stubs": "node scripts/refine-curated-stubs.cjs",
+    "export-tei": "node scripts/export-tei.mjs",
+    "export-ontolex": "node scripts/export-ontolex.mjs",
+    "build-pilot": "npm run sample-hard-cases && npm run select-review-cases && npm run build-neutral-model && npm run build-loss-reports && npm run export-tei && npm run export-ontolex && npm run validate-pilot && npm run validate-tei-profile && npm run validate-ontolex-profile",
+    "validate-pilot": "node scripts/validate-pilot.mjs",
+    "validate-tei-profile": "node scripts/validate-tei-profile.mjs",
+    "validate-tei-odd": "node scripts/validate-tei-profile.mjs",
+    "validate-ontolex-profile": "node scripts/validate-ontolex-profile.mjs",
+    "validate-ontolex-shacl": "node scripts/validate-ontolex-profile.mjs",
+    "validate-external-profiles": "node scripts/validate-external-profiles.mjs",
+    "validate-external-profiles:strict": "node scripts/validate-external-profiles.mjs --strict"
+  },
+  "devDependencies": {
+    "@observablehq/framework": "^1.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanskrit-lexicon/csl-standards.git"
+  },
+  "homepage": "https://sanskrit-lexicon.github.io/csl-standards/",
+  "keywords": [
+    "sanskrit",
+    "lexicography",
+    "tei",
+    "ontolex",
+    "rdf",
+    "cdsl"
+  ],
+  "author": "CDSL contributors"
+}
