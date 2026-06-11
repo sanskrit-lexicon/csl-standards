@@ -1,0 +1,187 @@
+openapi: 3.1.0
+info:
+  title: CSL Salt API — C-SALT-compatible REST profile
+  version: 0.1.0
+  description: >
+    REST profile for the Cologne Digital Sanskrit Lexicon "Salt API"
+    (sanskrit-lexicon.uni-koeln.de), wire-compatible with the C-SALT / Kosh REST API
+    verified live against api.c-salt.uni-koeln.de on 2026-06-11. CSL reproduces the Kosh
+    `entries` and `ids` endpoints field-for-field and adds a namespaced `csl` extension
+    object. Clean-room: C-SALT is used only as a parity oracle, not as a code source.
+servers:
+  - url: https://sanskrit-lexicon.uni-koeln.de
+    description: Cologne original (implementation target, csl-apidev)
+  - url: https://api.c-salt.uni-koeln.de
+    description: C-SALT derivative (reference / parity oracle)
+paths:
+  /dicts/{id}/restful/entries:
+    get:
+      operationId: searchEntries
+      summary: Search dictionary entries
+      parameters:
+        - $ref: '#/components/parameters/DictId'
+        - name: field
+          in: query
+          required: true
+          description: Indexed field to search.
+          schema: { $ref: '#/components/schemas/Field' }
+        - name: query
+          in: query
+          required: true
+          schema: { type: string }
+        - name: query_type
+          in: query
+          required: true
+          schema: { $ref: '#/components/schemas/QueryType' }
+        - name: size
+          in: query
+          required: false
+          schema: { type: integer, minimum: 1, default: 25 }
+        - name: transLit
+          in: query
+          required: false
+          description: CSL extension — input/echo transliteration. Not present in C-SALT.
+          schema: { type: string, enum: [slp1, deva, hk, roman, itrans], default: slp1 }
+        - name: accent
+          in: query
+          required: false
+          description: CSL extension — return Vedic accents. Not present in C-SALT.
+          schema: { type: string, enum: ['yes', 'no'], default: 'no' }
+      responses:
+        '200':
+          description: Matching entries
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/EntriesEnvelope' }
+        '400':
+          description: Missing or invalid parameter
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+  /dicts/{id}/restful/ids:
+    get:
+      operationId: getEntriesByIds
+      summary: Batch-fetch entries by id (not a search)
+      parameters:
+        - $ref: '#/components/parameters/DictId'
+        - name: ids
+          in: query
+          required: true
+          description: Repeated id parameters (multi-value form).
+          style: form
+          explode: true
+          schema: { type: array, items: { type: string } }
+      responses:
+        '200':
+          description: Entries for the given ids
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/IdsEnvelope' }
+        '400':
+          description: Missing or invalid parameter
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+  /dicts/{id}/graphql:
+    post:
+      operationId: graphql
+      summary: GraphQL endpoint (entries, ids). Schema in salt-api.graphql.
+      parameters:
+        - $ref: '#/components/parameters/DictId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [query]
+              properties:
+                query: { type: string }
+                variables: { type: object }
+                operationName: { type: string }
+      responses:
+        '200':
+          description: GraphQL response
+          content:
+            application/json:
+              schema: { type: object }
+components:
+  parameters:
+    DictId:
+      name: id
+      in: path
+      required: true
+      description: >
+        Lower-case Salt dictionary id (e.g. mw, ap90, pwg). The seven C-SALT ids
+        (mw, ap90, bhs, vei, pwg, gra, ae) plus every other CDSL v02 dictionary on the
+        CSL host.
+      schema: { type: string, examples: [mw] }
+  schemas:
+    Field:
+      type: string
+      description: C-SALT REST field enum (snake_case).
+      enum: [id, headword_slp1, sense, re_headwords_slp1, created, xml]
+    QueryType:
+      type: string
+      description: C-SALT query_type enum — seven modes.
+      enum: [term, fuzzy, match, match_phrase, prefix, wildcard, regexp]
+    Entry:
+      type: object
+      description: >
+        Top-level fields are byte-compatible with the C-SALT/Kosh entry. The `csl` block
+        is the CSL-only extension.
+      properties:
+        id: { type: string, examples: ['lemma-agni'] }
+        headword_slp1: { type: string, examples: [agni] }
+        sense:
+          type: array
+          items: { type: string }
+        re_headwords_slp1:
+          type: array
+          items: { type: string }
+        created: { type: string, format: date-time }
+        xml:
+          type: [string, 'null']
+          description: TEI-P5 body. Null on CSL until Phase 5; never CSL display-XML.
+        csl: { $ref: '#/components/schemas/CslExtension' }
+    CslExtension:
+      type: object
+      description: CSL-only additive block. Absent on C-SALT.
+      properties:
+        lnum: { type: string, description: 'Cologne record id / L-number (e.g. 144239); equals TEI monier_<lnum>.' }
+        page: { type: string }
+        column: { type: string }
+        scanUrl: { type: string, format: uri }
+        html: { type: string }
+        text: { type: string }
+        xmlCsl: { type: string, description: CSL display-XML (Cologne edition markup). }
+        references:
+          type: array
+          items: { type: string }
+        headwordDeva: { type: string }
+        headwordIast: { type: string }
+        accentedKey: { type: string, examples: ['agn/i'] }
+    EntriesEnvelope:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            entries:
+              type: array
+              items: { $ref: '#/components/schemas/Entry' }
+    IdsEnvelope:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            ids:
+              type: array
+              items: { $ref: '#/components/schemas/Entry' }
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          examples: ["Missing or invalid parameter: 'field'"]
