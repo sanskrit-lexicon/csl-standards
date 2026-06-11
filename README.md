@@ -23,6 +23,22 @@ cleanup.
   documented.
 - Freeze FrAC work until VisualDCS or another corpus-evidence source is ready.
 
+## Salt API profile
+
+The normative spec for a [C-SALT](https://api.c-salt.uni-koeln.de)-compatible REST + GraphQL
+API, so the original [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon/csl-apidev)
+can serve the same contract as C-SALT over CDSL data. Verified field-for-field against the
+live MW API on 2026-06-11.
+
+- [`docs/SALT_API_PROFILE.md`](docs/SALT_API_PROFILE.md) — normative profile (EN; [Russian mirror](docs/SALT_API_PROFILE.ru.md))
+- [`data/schema/salt-api.openapi.yaml`](data/schema/salt-api.openapi.yaml) + [`salt-api.graphql`](data/schema/salt-api.graphql) — machine schemas
+- [`docs/SALT_API_LOSS_REPORT.md`](docs/SALT_API_LOSS_REPORT.md) — CSL ↔ C-SALT divergences (findings, not bugs)
+- [`docs/SALT_API_INTEGRATION_ROADMAP.md`](docs/SALT_API_INTEGRATION_ROADMAP.md) — phased server-integration plan
+- [`data/pilot/parity_mw.py`](data/pilot/parity_mw.py) — MW parity check (roadmap §9)
+
+Server-side implementation lives in [`csl-apidev`](https://github.com/sanskrit-lexicon/csl-apidev)
+([Phase 1 skeleton, #46](https://github.com/sanskrit-lexicon/csl-apidev/pull/46)).
+
 ## Starting Point
 
 The initial migration source was the TEI/OntoLex pilot from:
