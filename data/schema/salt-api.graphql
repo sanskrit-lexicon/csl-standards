@@ -1,0 +1,112 @@
+# CSL "Salt API" — GraphQL schema (profile)
+#
+# Part of the C-SALT API Profile in csl-standards. Normative for the Cologne original
+# (sanskrit-lexicon.uni-koeln.de, implemented in csl-apidev). Wire-compatible with the
+# C-SALT / Kosh GraphQL schema verified live against
+#   https://api.c-salt.uni-koeln.de/dicts/mw/graphql   (introspected 2026-06-11).
+#
+# CSL adds exactly one thing to the Kosh type: the `csl` extension block (fields Kosh does
+# not model). Everything else reproduces Kosh field-for-field, so a C-SALT client works
+# against the original unchanged.
+#
+# Clean-room note: this schema is reconstructed from CSL data; the C-SALT schema is used
+# only as a parity oracle, never copied.
+#
+# Casing: GraphQL uses camelCase field names (headwordSlp1, reHeadwordsSlp1); the REST
+# face (salt-api.openapi.yaml) uses the snake_case forms named in the `Field` enum.
+
+schema {
+  query: Query
+}
+
+type Query {
+  "Search entries. Mirrors Kosh `entries(field, query, queryType, size)`."
+  entries(
+    field: Field = headword_slp1
+    query: String!
+    queryType: QueryType = term
+    size: Int = 25
+  ): [Entry!]
+
+  "Batch-fetch entries by id list. Mirrors Kosh `ids(ids)` — a get-by-id, not a search."
+  ids(ids: [String!]!): [Entry!]
+}
+
+"Searchable fields. Values match the C-SALT REST `field` enum exactly."
+enum Field {
+  id
+  headword_slp1
+  sense
+  re_headwords_slp1
+  created
+  xml
+}
+
+"Search modes. Values match the C-SALT `query_type` enum exactly (seven modes)."
+enum QueryType {
+  term
+  fuzzy
+  match
+  match_phrase
+  prefix
+  wildcard
+  regexp
+}
+
+scalar DateTime
+
+"""
+A dictionary entry.
+
+Top-level fields are byte-compatible with the C-SALT/Kosh entry type (which the live
+service names after the dictionary id, e.g. `mw`). The profile names it `Entry` and treats
+the per-dictionary type alias as a Kosh implementation detail.
+"""
+type Entry {
+  "Stable id, matching C-SALT exactly: lemma-{headwordSlp1}, or lemma-{headwordSlp1}-{n} for homonyms."
+  id: String
+
+  "Headword in SLP1."
+  headwordSlp1: String
+
+  "Extracted sense glosses. Best-effort before TEI (Phase 5); TEI-grade after."
+  sense: [String]
+
+  "Run-on / sub-headwords in SLP1."
+  reHeadwordsSlp1: [String]
+
+  "Index/build timestamp."
+  created: DateTime
+
+  "TEI-P5 entry body. Null on the CSL side until Phase 5 fills it; never CSL display-XML."
+  xml: String
+
+  "CSL-only additive block. Absent on C-SALT. Carries everything Kosh does not model."
+  csl: CslExtension
+}
+
+"CSL extension: data the original has and the Kosh model has no slot for."
+type CslExtension {
+  "Cologne record id / L-number (e.g. 144239); equals the TEI monier_<lnum> and Jim's lnum parameter."
+  lnum: String
+  "Scan page number."
+  page: String
+  "Scan column."
+  column: String
+  "Clean Salt URL to the scanned page image."
+  scanUrl: String
+  "Rendered HTML of the entry, as shown on the website."
+  html: String
+  "Plain-text rendering of the entry."
+  text: String
+  "CSL display-XML (the Cologne edition markup). Available immediately, unlike TEI `xml`."
+  xmlCsl: String
+  "Flat list of source/reference labels (the structural form lives inside the TEI)."
+  references: [String]
+  "Headword in Devanagari."
+  headwordDeva: String
+  "Headword in IAST."
+  headwordIast: String
+  "Accented key2 form, e.g. `agn/i`."
+  accentedKey: String
+}
