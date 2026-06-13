@@ -23,7 +23,7 @@
       "loss": { "type": "string" },
       "failureClassification": {
         "type": "string",
-        "enum": ["none", "cdsl-markup-gap", "model-vocabulary-gap", "print-compression"]
+        "enum": ["none", "cdsl-markup-gap", "model-vocabulary-gap", "print-compression", "editorial-compression"]
       },
       "extensionNeeded": { "type": "boolean" },
       "reviewStatus": { "type": "string", "enum": ["machine", "reviewed", "published"] }

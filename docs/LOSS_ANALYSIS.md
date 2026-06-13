@@ -1,9 +1,9 @@
 # Loss-Report Analysis (Month 3)
 
 Quantitative analysis of the pilot loss reports and the MW/PWG/PWK
-cross-dictionary signal. This backs [PAPER_OUTLINE.md](PAPER_OUTLINE.md) §8
-(Standards Critique), Figure 2 (evidence-class comparison), and Figure 5
-(loss-report distribution).
+cross-dictionary signal. This backs [PAPER_OUTLINE.md](PAPER_OUTLINE.md) §7
+(PWG→PWK→MW transformations), §8 (Standards Critique), Figure 2 (evidence-class
+comparison), and Figure 5 (loss-report distribution).
 
 All numbers here are **regenerable**: run `npm run analyze-loss`
 ([`scripts/analyze-loss-reports.mjs`](../scripts/analyze-loss-reports.mjs)),
@@ -12,107 +12,123 @@ which reads [`data/pilot/loss-reports.json`](../data/pilot/loss-reports.json) an
 machine artifact [`data/pilot/loss-analysis.json`](../data/pilot/loss-analysis.json).
 Do not hand-edit the tables below — re-run the script.
 
-Corpus: **124 loss reports across 50 cases** (each case yields a TEI and an
-OntoLex report per phenomenon).
+Corpus: **197 loss reports across 50 cases**. Two families are present:
 
-## 1. The central finding: the two models fail asymmetrically
+- **Target-model losses** (124): what TEI / OntoLex cannot hold when mapping a
+  CDSL record. Generated per case per target per phenomenon.
+- **Source-collapse losses** (73): named evidence the *dictionary lineage* itself
+  drops along PWG → PWK → MW. These are `target: "neutral"` because TEI and
+  OntoLex can both hold named citations — the loss is editorial, upstream of any
+  model choice, so `extensionNeeded` is `false`.
+
+## 1. The central finding: two kinds of asymmetry
 
 | target | clean | partial | lossy | failure |
 |---|--:|--:|--:|--:|
 | tei | 15 | 47 | 0 | 0 |
 | ontolex | 0 | 42 | 20 | 0 |
+| neutral | 0 | 25 | 48 | 0 |
 
-This is the paper's argument expressed as data. **TEI is never `lossy`** (15
-clean, 47 partial) and **OntoLex is never `clean`** (42 partial, 20 lossy). The
-TEI archival profile can always at least preserve the dictionary *as an edition*
-(the string, the source record, a custom `@type`); what it cannot always do is
-make the lexicographic semantics explicit. OntoLex is the mirror image: it forces
-every statement into a semantic graph, so it never merely transcribes — it either
-relates the data or drops what it cannot relate. The models do not fail; they
-**succeed differently**, exactly as [PAPER_OUTLINE.md](PAPER_OUTLINE.md) §3 claims.
+**Target asymmetry.** The TEI archival profile is never `lossy` (15 clean, 47
+partial); OntoLex is never `clean` (42 partial, 20 lossy). TEI can always at
+least preserve the dictionary *as an edition*; OntoLex never merely transcribes,
+so it either relates the data or drops what it cannot relate. The models do not
+fail — they **succeed differently** ([PAPER_OUTLINE.md](PAPER_OUTLINE.md) §3).
 
-Overall status: 89 partial (72%), 20 lossy (16%), 15 clean (12%).
+**Source asymmetry.** The `neutral` lane (the dictionary lineage, before any
+model) is the *most* lossy of the three: 48 lossy, 25 partial, 0 clean. Much of
+what looks like "interoperability loss" is in fact loss that already happened in
+the 19th-century editorial chain, recoverable only by reading across PWG, PWK, and
+MW together (see §4).
+
+Overall status: 114 partial (58%), 68 lossy (35%), 15 clean (8%).
 
 ## 2. Failure classification (by cause)
 
 | failureClassification | n | % |
 |---|--:|--:|
-| model-vocabulary-gap | 66 | 53% |
-| cdsl-markup-gap | 27 | 22% |
-| print-compression | 16 | 13% |
-| none (clean) | 15 | 12% |
+| editorial-compression | 73 | 37% |
+| model-vocabulary-gap | 66 | 34% |
+| cdsl-markup-gap | 27 | 14% |
+| print-compression | 16 | 8% |
+| none (clean) | 15 | 8% |
 
-The dominant cause is the **target models' vocabulary**, not the CDSL source: a
-majority of losses (53%) are cases where TEI/OntoLex simply lack a concept (an
-evidence class, a derivational-base relation, an explicit component graph). Only
-22% trace to a CDSL markup gap and 13% to print-layout compression. This matters
-for the standards critique: the remedy is mostly an **extension layer on the
-standards** (§8), not better CDSL encoding. Consistently, 89 of 124 reports
-(72%) carry `extensionNeeded: true`.
+The two leading causes are now near-equal and tell different stories.
+**Editorial-compression (37%)** is upstream lineage loss — the standards could
+hold the evidence, but MW/PWK already discarded it. **Model-vocabulary-gap (34%)**
+is downstream — the target standards lack a concept (an evidence class, a
+derivational-base relation). Only 14% is a CDSL-markup gap and 8% print-layout
+compression. So the remedy splits cleanly: a **standards extension layer** for the
+model-vocabulary gaps (§8), and **cross-dictionary lineage modeling** for the
+editorial-compression losses (§7). Consistently, the 73 editorial-compression
+reports all carry `extensionNeeded: false` (the standards are not at fault).
 
 ## 3. Where the stress concentrates (phenomenon)
 
 | phenomenon | n | % |
 |---|--:|--:|
-| generic-lexicographer-hedge | 54 | 44% |
-| continuation-parent | 16 | 13% |
-| compound-subentry | 15 | 12% |
-| compound-decomposition | 15 | 12% |
-| root-as-entry | 12 | 10% |
-| root-as-derivational-base | 12 | 10% |
+| source-collapse | 73 | 37% |
+| generic-lexicographer-hedge | 54 | 27% |
+| continuation-parent | 16 | 8% |
+| compound-subentry | 15 | 8% |
+| compound-decomposition | 15 | 8% |
+| root-as-entry | 12 | 6% |
+| root-as-derivational-base | 12 | 6% |
 
-The single largest stress point is the **MW `L.` hedge** (44% of all reports;
-present in 27 of 50 cases). The evidence problem, not derivation or compounding,
-is the centre of gravity of the sample — which is why §4 (Evidence and
-Provenance) carries the argument.
+`source-collapse` is now the single largest phenomenon (37%), ahead of the MW
+`L.` hedge (27%). Together the two evidence-related phenomena are 64% of the
+corpus — the evidence problem, not derivation or compounding, is the centre of
+gravity (§4).
 
-## 4. The MW/PWG/PWK cross-dictionary signal (neutral model)
+## 4. The PWG → PWK → MW lineage, as loss reports (§7)
 
-All 50 cases have all three dictionary records (mw=50, pwg=50, pwk=50). The
-neutral-model phenomena that drive the lineage argument (§7):
+The 73 source-collapse reports are evidence-bound: each carries a `sourceEvidence`
+object with the `<ls>` named-citation counts and a sample of the dropped sources.
 
-| phenomenon | n | % of 50 |
-|---|--:|--:|
-| tri-dict / pwg-rich / pwk-abridged / homophone | 50 | 100% |
-| hedge (MW `L.`) | 27 | 54% |
-| **mw-uncited-pwg-cited** | 23 | 46% |
-| compound | 15 | 30% |
-| root | 12 | 24% |
-| continuation | 8 | 16% |
+| transition | reports | status |
+|---|--:|---|
+| PWG → MW (MW carries no citation) | 23 | lossy |
+| PWG → PWK, all dropped | 25 | lossy |
+| PWG → PWK, partially retained | 25 | partial |
 
-The key lineage number is **`mw-uncited-pwg-cited` = 23/50 (46%)**: in nearly
-half the sample PWG carries a *named* attestation where MW carries only the `L.`
-hedge or nothing. This is direct evidence for the §4/§7 claim that evidential
-certainty **degrades** along the PWG → PWK → MW lineage, and it is the data
-behind Figure 2 (PWG named kosha citations vs MW `L.`).
+In **23 of 50 cases (46%)** PWG names a textual source (e.g. `AV. 6,116,1.`,
+`RAGH. 2,10.`, `ṚV. 7,6,5.`) that MW reduces to the `L.` hedge or drops entirely
+— the data behind Figure 2. PWK abridges PWG in **all 50 cases**: half drop the
+named apparatus completely, half retain a subset (e.g. *ac*: PWG 35 → PWK 8 → MW
+3). This is the §7 claim — that compression along the lineage is *not* a
+semantically neutral operation — expressed as a measurement.
+
+This matches the neutral-model phenomenon labels (all 50 cases have all three
+records; 23 are `mw-uncited-pwg-cited`; all 50 are `pwk-abridged`), now lifted
+from labels into evidence-bound reports.
 
 ## 5. Coverage gaps — what the instrument does not yet measure
 
-These are honest limits of the current pilot, recorded so they are not mistaken
-for absence of the phenomena (the roadmap's "do not hide model failures").
+Honest limits of the current pilot, recorded so they are not mistaken for absence
+of the phenomena (the roadmap's "do not hide model failures").
 
-- **Loss reports are MW-only.** Every one of the 124 reports has
-  `sourceDictionary: "mw"`. The PWG → PWK → MW *transformation* (§7) and Figure 2
-  are argued from the neutral model's phenomenon labels, **not yet from loss
-  reports**. A `source-collapse` report family sourced from PWG and PWK is the
-  obvious next slice.
-- **PWG named citations are not materialized.** The neutral model captures 25
-  citations, all `generic-lexicographer-hedge` (MW `L.`); zero
-  `named-kosha-citation` objects exist yet, even though 23 cases are flagged
-  `mw-uncited-pwg-cited`. The named evidence is detected but not lifted into the
-  citation model.
+- **PWG named citations are not materialized in the neutral model.** The 73
+  source-collapse reports count and sample the `<ls>` citations directly from raw,
+  but the neutral model still carries only 25 `generic-lexicographer-hedge`
+  citation objects and **zero `named-kosha-citation`** objects. Lifting PWG's
+  named sources into the citation model (so the TEI/OntoLex *exports* carry them)
+  is the next slice.
 - **Schema phenomena not yet emitted:** `named-kosha-citation`,
-  `source-collapse`, `citation-coordinate`, `editorial-reference`
-  (defined in [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) but unused).
-- **No `failure` status** is emitted, and two roadmap failure causes —
-  `sanskrit-convention` and `data-quality` — are not used. The current heuristics
-  classify everything as a model/markup/print issue; genuinely
-  Sanskrit-convention-bound losses (e.g. the kośa sense/citation fusion in
-  [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md) §5) are documented in prose but not yet
-  in the loss-report corpus.
+  `citation-coordinate`, `editorial-reference` (defined in
+  [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) but unused). Note `source-collapse`
+  is now emitted.
+- **No `failure` status**, and two roadmap failure causes — `sanskrit-convention`
+  and `data-quality` — remain unused. Genuinely Sanskrit-convention-bound losses
+  (e.g. the kośa sense/citation fusion in [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md)
+  §5) are documented in prose but not yet in the loss-report corpus.
 
 ## 6. Reviewer-trust note
 
-56 of 124 reports are `reviewed` (the 15 high-stress review-slice keys), 68 are
-`machine`. The asymmetry finding in §1 holds within the reviewed slice as well as
-the full corpus, so it is not an artefact of unreviewed heuristics.
+Of the 197 reports, 73 (the 15 high-stress review-slice keys) are marked
+`reviewed`; the rest are `machine`. The **target** asymmetry of §1 holds within
+the reviewed slice — TEI is still never lossy (0 of 28) and OntoLex is still never
+clean (13 lossy, 15 partial) — so it is not an artefact of unreviewed heuristics.
+The **source** asymmetry (the neutral lane being the *most* lossy) is a
+full-corpus measurement: the review slice is deliberately root/hedge-heavy, so it
+contains only 17 of the 73 source-collapse reports (4 lossy, 13 partial) and does
+not, on its own, show the lineage-collapse magnitude.

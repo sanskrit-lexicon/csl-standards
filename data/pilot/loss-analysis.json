@@ -1,18 +1,20 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 124,
+    "total": 197,
     "cases": 50,
     "byStatus": {
-      "partial": 89,
-      "lossy": 20,
+      "partial": 114,
+      "lossy": 68,
       "clean": 15
     },
     "byTarget": {
+      "neutral": 73,
       "tei": 62,
       "ontolex": 62
     },
     "byPhenomenon": {
+      "source-collapse": 73,
       "generic-lexicographer-hedge": 54,
       "continuation-parent": 16,
       "compound-subentry": 15,
@@ -21,21 +23,24 @@
       "root-as-derivational-base": 12
     },
     "byFailureClassification": {
+      "editorial-compression": 73,
       "model-vocabulary-gap": 66,
       "cdsl-markup-gap": 27,
       "print-compression": 16,
       "none": 15
     },
     "byExtensionNeeded": {
-      "extensionNeeded=true": 89,
-      "extensionNeeded=false": 35
+      "extensionNeeded=false": 108,
+      "extensionNeeded=true": 89
     },
     "byReviewStatus": {
-      "machine": 68,
-      "reviewed": 56
+      "machine": 124,
+      "reviewed": 73
     },
     "bySourceDictionary": {
-      "mw": 124
+      "mw": 124,
+      "pwk": 50,
+      "pwg": 23
     },
     "targetByStatus": {
       "tei": {
@@ -45,6 +50,10 @@
       "ontolex": {
         "partial": 42,
         "lossy": 20
+      },
+      "neutral": {
+        "partial": 25,
+        "lossy": 48
       }
     }
   },
@@ -75,11 +84,12 @@
   },
   "coverageGaps": {
     "sourceDictionariesInstrumented": [
-      "mw"
+      "mw",
+      "pwk",
+      "pwg"
     ],
     "schemaPhenomenaNotEmitted": [
       "named-kosha-citation",
-      "source-collapse",
       "citation-coordinate",
       "editorial-reference"
     ],

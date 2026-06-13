@@ -45,7 +45,9 @@ A loss report records what happens when a CDSL dictionary record is mapped into 
 | `claim` | yes | Scholarly claim being tested |
 | `mappedAs` | no | Target-model representation |
 | `loss` | yes unless `status=clean` | What is not preserved |
-| `extensionNeeded` | yes | Whether the model needs an extension |
+| `failureClassification` | no | Cause: `none`, `cdsl-markup-gap`, `model-vocabulary-gap`, `print-compression`, or `editorial-compression` (upstream lineage loss) |
+| `extensionNeeded` | yes | Whether the model needs an extension. `false` for `editorial-compression` (the loss is upstream, not a standards gap) |
+| `sourceEvidence` | no | For `source-collapse`: `<ls>` named-citation counts per dictionary (`pwg`/`pwk`/`mw`) plus a `sample` of dropped sources |
 | `reviewStatus` | yes | `machine`, `reviewed`, or `published` |
 
 ## Phenomenon Vocabulary
