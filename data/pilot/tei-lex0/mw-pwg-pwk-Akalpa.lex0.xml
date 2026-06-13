@@ -11,7 +11,14 @@
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
@@ -25,6 +32,19 @@
         </form>
         <sense xml:id="mw-pwg-pwk-Akalpa-sense-unparsed"><note type="sense-status">No machine sense extracted; see the archival profile for the source record.</note></sense>
         <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>TRIK. 3,3,274.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. an. 3,440.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MED. p. 15.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 2,6,3,1.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>TRIK.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. 635.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>an. 3,439.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MED.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MBH. 3,13373.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>RAGH. 17,22.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>18,51.</abbr><ref type="inherited-siglum">RAGH.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>SĀH. D. 54,12.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Akalpa-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>KĀD. II,46,19</abbr></bibl>
         <note type="source-record">mw L22062</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>

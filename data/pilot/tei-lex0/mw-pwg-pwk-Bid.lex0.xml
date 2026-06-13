@@ -11,7 +11,14 @@
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
@@ -30,6 +37,35 @@
         <sense xml:id="mw-pwg-pwk-Bid-sense-1" n="1">
           <def xml:lang="en" cert="high" resp="#machine">split, cleave, break, cut or rend asunder, pierce, destroy</def>
         </sense>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-1" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Dhātup. xix, 2</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-2" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-3" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>ib.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-4" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Var.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-5" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>AV.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-6" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>R.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-7" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>TS.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-8" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Br.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-9" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Up.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-10" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>ŚBr.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-11" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Hariv.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-12" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Śak.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-13" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 29,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-14" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 6,1,68.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-15" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>8,2,75</abbr><ref type="inherited-siglum">P.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-16" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 10,89,14</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-17" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 1,2,5.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-18" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>7,2,61.</abbr><ref type="inherited-siglum">P.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-19" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>62.</abbr><ref type="inherited-siglum">P. 7,2,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-20" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>67</abbr><ref type="inherited-siglum">P. 7,2,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-21" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 7,2,67</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-22" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 3,1,57.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-23" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>7,2,3</abbr><ref type="inherited-siglum">P.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-24" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 1,2,11.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-25" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>ṚV. 6,27,6</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-26" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>BAUDH.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-27" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>Comm. zu ĀPAST. ŚR. 5,29,12</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-28" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>MBH. 6,4125</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-Bid-cite-29" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>104,27</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
         <note type="source-record">mw L150727</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>

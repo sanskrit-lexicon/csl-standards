@@ -73,10 +73,15 @@ async function main() {
   const phen = {};
   let mw = 0, pwg = 0, pwk = 0, citTotal = 0;
   const citTypes = {};
+  const citByDict = {};
   for (const m of models) {
     if (m.records?.mw) mw++; if (m.records?.pwg) pwg++; if (m.records?.pwk) pwk++;
     for (const p of m.phenomena || []) phen[p] = (phen[p] || 0) + 1;
-    for (const c of m.citations || []) { citTotal++; citTypes[c.type] = (citTypes[c.type] || 0) + 1; }
+    for (const c of m.citations || []) {
+      citTotal++;
+      citTypes[c.type] = (citTypes[c.type] || 0) + 1;
+      if (c.dictionary) citByDict[c.dictionary] = (citByDict[c.dictionary] || 0) + 1;
+    }
   }
 
   // --- coverage gaps (findings, not failures) ---
@@ -88,7 +93,7 @@ async function main() {
     schemaPhenomenaNotEmitted: SCHEMA_PHENOMENA.filter(p => !emittedPhenomena.has(p)),
     schemaStatusesNotEmitted: SCHEMA_STATUSES.filter(s => !emittedStatuses.has(s)),
     roadmapCausesNotEmitted: ROADMAP_CAUSES.filter(c => !emittedCauses.has(c)),
-    namedKoshaCitationsMaterialized: citTypes["named-kosha-citation"] || 0
+    namedSourceCitationsMaterialized: citTypes["named-source-citation"] || 0
   };
 
   const analysis = {
@@ -103,7 +108,7 @@ async function main() {
       cases: models.length,
       recordsPresent: { mw, pwg, pwk },
       phenomena: phen,
-      citations: { total: citTotal, byType: citTypes }
+      citations: { total: citTotal, byType: citTypes, byDictionary: citByDict }
     },
     coverageGaps: gaps
   };

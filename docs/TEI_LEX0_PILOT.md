@@ -171,9 +171,16 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    sense-level (not entry-level) linkage of an example to its specific sense.
 3. A Lex-0 loss-report row family for the sense/citation-fusion phenomenon,
    alongside the existing archival loss reports.
-4. Richer sense-citation linkage for the Western cases: the neutral model does
-   not yet link a citation to the specific sense it attests, so named sources are
-   entry-level there (the parsed *kośa* senses already carry their authority).
+4. **Partly done:** the neutral model now materializes every `<ls>` named source
+   across MW/PWG/PWK as `named-source-citation` objects tagged with their
+   dictionary (519 of them, capped at 12 per dictionary), and the Lex-0 export
+   emits them as entry-level `<bibl type="named-source" source="#dict-…">` — so a
+   Western lemma uncited in MW (e.g. *arcya*) now carries PWG's named apparatus.
+   Still open: **sense-level** linkage — the model does not yet link a citation to
+   the specific sense it attests, so the named sources are entry-level (the parsed
+   *kośa* senses already carry their authority). Note the archival and OntoLex
+   exports still re-extract citations from raw independently; folding them onto the
+   neutral model's citation layer would remove that duplication.
 
 ## References
 

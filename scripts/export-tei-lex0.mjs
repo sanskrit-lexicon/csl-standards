@@ -137,7 +137,9 @@ function citationsXml(model, id) {
     rows.push(`<usg type="hint"${cert("observed")}>lexicographers only (${escapeXml(h.source)})</usg>`);
   }
   named.forEach((c, i) => {
-    rows.push(`<bibl xml:id="${id}-cite-${i + 1}" type="named-source"${cert("observed")}><abbr>${escapeXml(c.source)}</abbr></bibl>`);
+    const prov = c.dictionary ? ` source="#dict-${escapeXml(c.dictionary)}"` : "";
+    const inh = c.inheritedFrom ? `<ref type="inherited-siglum">${escapeXml(c.inheritedFrom)}</ref>` : "";
+    rows.push(`<bibl xml:id="${id}-cite-${i + 1}" type="named-source"${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${inh}</bibl>`);
   });
   return rows;
 }
@@ -203,7 +205,14 @@ function teiDocument(model) {
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>${PROFILE_VERSION}; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>

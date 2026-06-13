@@ -107,16 +107,19 @@ from labels into evidence-bound reports.
 Honest limits of the current pilot, recorded so they are not mistaken for absence
 of the phenomena (the roadmap's "do not hide model failures").
 
-- **PWG named citations are not materialized in the neutral model.** The 73
-  source-collapse reports count and sample the `<ls>` citations directly from raw,
-  but the neutral model still carries only 25 `generic-lexicographer-hedge`
-  citation objects and **zero `named-kosha-citation`** objects. Lifting PWG's
-  named sources into the citation model (so the TEI/OntoLex *exports* carry them)
-  is the next slice.
-- **Schema phenomena not yet emitted:** `named-kosha-citation`,
+- **Named citations are now materialized in the neutral model** (done). The model
+  carries 544 citation objects — 25 `generic-lexicographer-hedge` and **519
+  `named-source-citation`** (PWG 391, MW 81, PWK 72, capped at 12 per dictionary),
+  each tagged with its `dictionary`. The TEI Lex-0 export now emits them as
+  entry-level `<bibl type="named-source" source="#dict-…">`, so a lemma like
+  *arcya* — uncited in MW — carries PWG's eight named sources. Still open:
+  **sense-level** linkage (which sense each citation attests); the named sources
+  are entry-level (see [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md) §7.4).
+- **Schema *phenomena* not yet emitted:** `named-kosha-citation`,
   `citation-coordinate`, `editorial-reference` (defined in
-  [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) but unused). Note `source-collapse`
-  is now emitted.
+  [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) as loss-report phenomena but
+  unused). Note these are loss-report phenomena, distinct from the citation
+  *type* now materialized above; `source-collapse` is now emitted.
 - **No `failure` status**, and two roadmap failure causes — `sanskrit-convention`
   and `data-quality` — remain unused. Genuinely Sanskrit-convention-bound losses
   (e.g. the kośa sense/citation fusion in [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md)

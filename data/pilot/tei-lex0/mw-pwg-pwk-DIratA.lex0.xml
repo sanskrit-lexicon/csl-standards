@@ -11,7 +11,14 @@
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
@@ -24,6 +31,15 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">DIratA</orth>
         </form>
         <sense xml:id="mw-pwg-pwk-DIratA-sense-unparsed"><note type="sense-status">No machine sense extracted; see the archival profile for the source record.</note></sense>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>RAGH. 8,43.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MEGH. 112.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>PAÑCAT. 129,22.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ed. orn. I,85.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KATHĀS. 11,51.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHŪRTAS. 72,13.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KATHĀS. 6,21.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>PRAB. 15,8.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DIratA-cite-9" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>Spr. 2713</abbr></bibl>
         <note type="source-record">mw L101344</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>

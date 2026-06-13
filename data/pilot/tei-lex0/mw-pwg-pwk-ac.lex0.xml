@@ -11,7 +11,14 @@
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
@@ -47,6 +54,27 @@
           <def xml:lang="en" cert="high" resp="#machine">adorn</def>
         </sense>
         <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-1" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Dharmaś.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NAIGH. 2,14.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 8,4,58</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 7,6.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>21,2.</abbr><ref type="inherited-siglum">DHĀTUP.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VOP. 8,58.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>BHAṬṬ. 4,22.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>14,99.</abbr><ref type="inherited-siglum">BHAṬṬ.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 3,1,34.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. 444.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>26,102.</abbr><ref type="inherited-siglum">VOP.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NIR. 5,17.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-13" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DURGA</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>Spr. 7734</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-15" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>Comm. zu TBR. 2,1,4,3</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-16" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>GĪT. 10,11</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-17" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>37,28</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-18" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>PRASANNAR. 136,1</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-19" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>BĀLAR. 203,8</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-20" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>BĀLAR. 208,4</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ac-cite-21" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>VIDDH. 76,13</abbr></bibl>
         <note type="source-record">mw L1767</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>
