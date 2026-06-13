@@ -9,6 +9,13 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- Month-3 loss-report analysis: [scripts/analyze-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/analyze-loss-reports.mjs)
+  (`npm run analyze-loss`) quantifies the 124 loss reports into the regenerable
+  artifact [data/pilot/loss-analysis.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-analysis.json),
+  with the narrative in [docs/LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md):
+  the TEI-never-lossy / OntoLex-never-clean asymmetry, the by-cause breakdown
+  (53% model-vocabulary gaps), the MW/PWG/PWK signal (23/50 mw-uncited-pwg-cited),
+  and the instrument's coverage gaps. Wired into `build-pilot` and PAPER_OUTLINE §8.
 - Broadened the SKD *kośa* parser ([scripts/parse-skd-kosa.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs))
   from one record (*Darmma*) to six, with SLP1→IAST transliteration of glosses,
   a wider authority/work vocabulary, and a kośa-work-vs-person split rendered as
