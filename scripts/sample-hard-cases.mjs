@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { generatedAt } from "./lib/provenance.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -291,7 +292,7 @@ function caseIdFor(candidate) {
 }
 
 const output = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: generatedAt(),
   generator: "scripts/sample-hard-cases.mjs",
   maxItems,
   sources: publicSources,

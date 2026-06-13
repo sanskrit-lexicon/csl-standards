@@ -12,6 +12,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { generatedAt } from "./lib/provenance.mjs";
 
 const root = process.cwd();
 const dir = path.join(root, "data", "pilot", "tei-lex0");
@@ -69,7 +70,7 @@ function main() {
   fs.writeFileSync(REPORT, `${JSON.stringify({
     schemaVersion: "1.0.0",
     license: "CC-BY-SA-4.0",
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAt(),
     generatedBy: "npm run validate-tei-lex0",
     profileVersion: PROFILE_VERSION,
     note: "Structural Lex-0 baseline checks; full TEI Lex-0 RNG validation is external (see docs/TEI_LEX0_PILOT.md sec. 6).",
