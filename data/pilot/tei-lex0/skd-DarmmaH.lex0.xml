@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-DarmmaH">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: Darmma</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-DarmmaH" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">Darmma</orth>
+        </form>
+        <gramGrp>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gen norm="masculine" cert="high" resp="#source">masculine</gen>
+          <gen norm="neuter" cert="high" resp="#source">neuter</gen>
+        </gramGrp>
+        <etym xml:id="skd-DarmmaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">Df</mentioned> <bibl><title>Uṇādisūtra 1.139</title></bibl></etym>
+        <sense xml:id="skd-DarmmaH-sense-1" n="1">
+          <def xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">SuBAdfzwam — paryāya: puRyam, SreyaH, sukftam, vfzaH</def>
+          <cit type="example" xml:lang="sa">
+            <quote xml:space="preserve">eka eva suhfdDarmmo niDane&apos;pyanuyAti yaH . SarIreRa samaM nASaM sarvvamanyattu gacCati ..</quote>
+            <bibl><title>hitodeSe</title><citedRange>1.59</citedRange></bibl>
+          </cit>
+          <bibl><author>Amara</author></bibl>
+          <note type="model-loss" resp="#source">In the source this synonym run and its authority (iti Amara) are one indivisible iti-unit: sense enumeration and source attestation are a single construction, split into def + bibl here.</note>
+        </sense>
+        <sense xml:id="skd-DarmmaH-sense-2" n="2">
+          <def xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">nyAyaH; svaBAvaH; AcAraH; upamA; kratuH; ahiMsA; upanizat</def>
+          <cit type="example" xml:lang="sa">
+            <quote xml:space="preserve">kftvA pravargyaM DarmmAKyaM yaTAvat dvijasattamAH . cakruste viDivadrAjaMstaTEvABizavaM dbijAH ..</quote>
+            <bibl><title>mahABArate</title><citedRange>14.88.21</citedRange></bibl>
+          </cit>
+          <bibl><author>Medinī</author></bibl>
+        </sense>
+        <sense xml:id="skd-DarmmaH-sense-3" n="3">
+          <def xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">dAnAdike, klI</def>
+          <cit type="example" xml:lang="sa">
+            <quote xml:space="preserve">prARAyAmastaTA DyAnaM pratyAhAro&apos;Ta DAraRA . smaraRaYcEva yoge&apos;smin paYca DarmmAH prakIrttitAH ..</quote>
+            <bibl><title>yogasAre</title></bibl>
+          </cit>
+          <bibl><author>Hemacandra</author></bibl>
+        </sense>
+        <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
+        <note type="source-record">skd L17667</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

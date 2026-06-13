@@ -2,9 +2,10 @@
 
 Date: 2026-06-13
 
-Status: draft. Slice 1 (target encoding + worked exemplars) and slice 2
-(generator + structural validator over the pilot corpus) are done; the Lex-0
-ODD, RNG validation, and a real *kośa* parser are slice 3 (sec. 6–7).
+Status: draft. Slice 1 (target encoding + worked exemplars), slice 2 (generator +
+structural validator), and slice 3 (a source *kośa* parser, so the indigenous
+entry is ingested from SKD rather than hand-curated) are done. The Lex-0 ODD and
+RNG validation remain (sec. 6–7).
 
 This pilot establishes a **TEI Lex-0** baseline encoding for CDSL dictionary
 entries, covering one Western dictionary (Monier-Williams) and — for the first
@@ -20,10 +21,12 @@ Hand-authored exemplar (the documented target encoding, with inline comments):
 Generated corpus: `npm run export-tei-lex0`
 ([`scripts/export-tei-lex0.mjs`](../scripts/export-tei-lex0.mjs)) emits **51**
 Lex-0 entries under `data/pilot/tei-lex0/*.lex0.xml` — the 50 MW/PWG/PWK neutral-
-model cases plus the curated indigenous SKD fixture
-([`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json)) — each with
-`@cert`/`@resp` bindings; `npm run validate-tei-lex0` checks all 51 against the
-Lex-0 baseline shape. Both are wired into `build-pilot`.
+model cases plus the indigenous SKD entry. The SKD entry is **parsed from source**
+by `npm run parse-skd-kosa` ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)),
+which segments the kośa record by its closing authorities (*iti amaraḥ* / *iti
+medinī* / *iti hemacandraḥ*) into [`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json).
+Every statement carries `@cert`/`@resp`; `npm run validate-tei-lex0` checks all
+51 against the Lex-0 baseline shape. The three steps are wired into `build-pilot`.
 
 ## Trust Block
 
@@ -114,8 +117,15 @@ authority**, *ity amaraḥ* ("so [says] Amara"). In the source this is a single
 *iti*-unit: the enumeration of senses and the citation of the source that
 licenses them are **one indivisible construction**. TEI Lex-0 (like the European
 lexicographic tradition it baselines) assumes sense and source are separable, so
-the encoding must split the unit into a `<def>` plus a `<bibl>` — and the sample
+the encoding must split the unit into a `<def>` plus a `<bibl>` — and the output
 flags this with `<note type="model-loss">`.
+
+The parser ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)) makes
+this structural rather than asserted: it segments the record on its closing
+authorities, so each `<sense>` *is* an authority group (Amara → Medinī →
+Hemacandra), and the synonym run plus its `iti amaraḥ` become one sense carrying
+the loss note. The split into `<def>` + `<bibl>` is therefore visibly an
+encoding artefact of the target standard, not a feature of the source.
 
 This is the same finding the sense-inheritance paper reports at corpus scale
 (`csl-atlas` `docs/articles/paper_sense_inheritance.md` §7) and the crosswalk
@@ -140,19 +150,19 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
   DARIAH Lex-0 schema run through `jing`/`teitorelaxng` (the optional external
   harness, `validate-external-profiles`), and a project Lex-0 ODD.
 
-## 7. Next steps (slice 3)
+## 7. Next steps
 
 1. A Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation wired
    into `validate-external-profiles`, including the *kośa* sense-boundary
    customisation (sec. 5).
-2. **A real *kośa* parser** — the SKD case is currently a curated fixture
-   ([`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json)) because
-   the *iti*-unit / *paryāya* structure is not yet parsed; ingesting SKD/VCP from
-   source means parsing the indigenous sense boundaries (sec. 5).
+2. Broaden the *kośa* parser ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs))
+   beyond *Darmma* (L17667) to more SKD/VCP records, and transliterate the
+   SLP1 source text to IAST in glosses.
 3. A Lex-0 loss-report row family for the sense/citation-fusion phenomenon,
    alongside the existing archival loss reports.
-4. Richer sense-citation linkage: the neutral model does not yet link a citation
-   to the specific sense it attests, so named sources are entry-level here.
+4. Richer sense-citation linkage for the Western cases: the neutral model does
+   not yet link a citation to the specific sense it attests, so named sources are
+   entry-level there (the parsed *kośa* senses already carry their authority).
 
 ## References
 
