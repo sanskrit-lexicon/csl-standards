@@ -181,11 +181,16 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    dictionary (519 of them, capped at 12 per dictionary), and the Lex-0 export
    emits them as entry-level `<bibl type="named-source" source="#dict-…">` — so a
    Western lemma uncited in MW (e.g. *arcya*) now carries PWG's named apparatus.
+   The `<ls>` parser is now shared across the three generators
+   ([`scripts/lib/citations.mjs`](../scripts/lib/citations.mjs)) — build-neutral,
+   export-tei, and export-ontolex no longer each re-implement it.
    Still open: **sense-level** linkage — the model does not yet link a citation to
    the specific sense it attests, so the named sources are entry-level (the parsed
-   *kośa* senses already carry their authority). Note the archival and OntoLex
-   exports still re-extract citations from raw independently; folding them onto the
-   neutral model's citation layer would remove that duplication.
+   *kośa* senses already carry their authority). This is **blocked upstream on MW
+   sense extraction**: only 11 of the 50 Western Lex-0 entries currently yield any
+   machine sense at all (39 are "unparsed"), so most cases have no sense to link a
+   citation to. A stronger MW gloss/`<div>` segmenter is the prerequisite, and is
+   its own slice.
 
 ## References
 

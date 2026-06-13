@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { stripPseudoMarkup, extractLabeledSources } from "./lib/citations.mjs";
 
 const DICTS = ["mw", "pwg", "pwk"];
 const DICT_LABEL = {
@@ -31,16 +32,6 @@ function ttlIri(value) {
   return `<${value}>`;
 }
 
-function stripPseudoMarkup(raw) {
-  return String(raw || "")
-    .replace(/\{#([^#]+)#\}/g, "$1")
-    .replace(/\{%([^%]+)%\}/g, "$1")
-    .replace(/<ls\b[^>]*>([\s\S]*?)<\/ls>/g, " $1 ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 function extractDefinitions(raw, phenomena) {
   const plain = stripPseudoMarkup(raw);
   const defs = [];
@@ -59,23 +50,6 @@ function extractDefinitions(raw, phenomena) {
     }
   }
   return defs;
-}
-
-function extractCitations(raw, maxPerRecord = 40) {
-  const citations = [];
-  for (const match of String(raw || "").matchAll(/<ls\b([^>]*)>([\s\S]*?)<\/ls>/g)) {
-    const attrs = match[1] || "";
-    const source = stripPseudoMarkup(match[2]);
-    const inherited = attrs.match(/\bn="([^"]+)"/)?.[1] || null;
-    if (!source && !inherited) continue;
-    citations.push({
-      source: source || inherited,
-      type: source === "L." ? "generic-lexicographer-hedge" : "named-source-citation",
-      inheritedFrom: inherited
-    });
-    if (citations.length >= maxPerRecord) break;
-  }
-  return citations;
 }
 
 function entryType(model) {
@@ -135,7 +109,7 @@ function jsonldFor(model, rawByDict, isReviewCase) {
       "rdf:value": rawByDict[dict]
     });
 
-    extractCitations(rawByDict[dict]).forEach((citation, index) => {
+    extractLabeledSources(rawByDict[dict]).forEach((citation, index) => {
       const attId = iriFor(model.id, `attestation-${dict}-${index + 1}`);
       attestationNodes.push({
         "@id": attId,

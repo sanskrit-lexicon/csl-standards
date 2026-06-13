@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import { extractLabeledSources } from "./lib/citations.mjs";
 
 function parseGenderOrGrammar(raw) {
   if (!raw) return null;
@@ -17,7 +18,6 @@ function parseGenderOrGrammar(raw) {
   return null;
 }
 
-const LS_RE = /<ls\b([^>]*)>([\s\S]*?)<\/ls>/g;
 const MAX_CITATIONS_PER_DICT = 12;
 
 function stripMarkup(value) {
@@ -30,25 +30,21 @@ function stripMarkup(value) {
 
 // Canonical citation layer: every <ls> labeled source across MW/PWG/PWK, tagged
 // with its dictionary so downstream models (TEI Lex-0, analysis) read the named
-// evidence from the neutral model rather than re-deriving it. The MW "L." siglum
-// is the generic lexicographer hedge; everything else is a named source.
+// evidence from the neutral model rather than re-deriving it. Shares the <ls>
+// parser with the exporters (scripts/lib/citations.mjs); deduped and capped per
+// dictionary for a compact canonical layer.
 function extractCitations(item) {
   const citations = [];
   for (const dict of ["mw", "pwg", "pwk"]) {
-    const raw = item.records[dict]?.raw || "";
     const seen = new Set();
-    for (const match of raw.matchAll(LS_RE)) {
-      const inherited = (match[1] || "").match(/\bn="([^"]+)"/)?.[1] || null;
-      const source = stripMarkup(match[2]) || inherited;
-      if (!source) continue;
-      const dedupe = `${dict}:${source}`;
-      if (seen.has(dedupe)) continue;
-      seen.add(dedupe);
+    for (const c of extractLabeledSources(item.records[dict]?.raw, { strip: stripMarkup, max: Infinity })) {
+      if (seen.has(c.source)) continue;
+      seen.add(c.source);
       citations.push({
-        source,
-        type: source === "L." ? "generic-lexicographer-hedge" : "named-source-citation",
+        source: c.source,
+        type: c.type,
         dictionary: dict,
-        ...(inherited ? { inheritedFrom: inherited } : {})
+        ...(c.inheritedFrom ? { inheritedFrom: c.inheritedFrom } : {})
       });
       if (seen.size >= MAX_CITATIONS_PER_DICT) break;
     }
