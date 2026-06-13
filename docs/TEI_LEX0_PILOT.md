@@ -2,8 +2,9 @@
 
 Date: 2026-06-13
 
-Status: draft, slice 1 (target encoding + worked exemplars). The generator and
-RNG validation are slice 2 (sec. 6–7).
+Status: draft. Slice 1 (target encoding + worked exemplars) and slice 2
+(generator + structural validator over the pilot corpus) are done; the Lex-0
+ODD, RNG validation, and a real *kośa* parser are slice 3 (sec. 6–7).
 
 This pilot establishes a **TEI Lex-0** baseline encoding for CDSL dictionary
 entries, covering one Western dictionary (Monier-Williams) and — for the first
@@ -12,8 +13,17 @@ the `csl-atlas` review gap **G2** ("no actual TEI Lex-0 export yet") by pinning
 down the target element model and proving the hard, novel case (the indigenous
 entry), with each statement's epistemic status bound to `@cert`/`@resp`.
 
-Sample: [`data/pilot/tei-lex0/pilot-sample.lex0.tei.xml`](../data/pilot/tei-lex0/pilot-sample.lex0.tei.xml)
+Hand-authored exemplar (the documented target encoding, with inline comments):
+[`data/pilot/tei-lex0/pilot-sample.lex0.tei.xml`](../data/pilot/tei-lex0/pilot-sample.lex0.tei.xml)
 (entries `mw-gaja`, `skd-dharma`; well-formed; 5 senses; 11 `@cert`-bound nodes).
+
+Generated corpus: `npm run export-tei-lex0`
+([`scripts/export-tei-lex0.mjs`](../scripts/export-tei-lex0.mjs)) emits **51**
+Lex-0 entries under `data/pilot/tei-lex0/*.lex0.xml` — the 50 MW/PWG/PWK neutral-
+model cases plus the curated indigenous SKD fixture
+([`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json)) — each with
+`@cert`/`@resp` bindings; `npm run validate-tei-lex0` checks all 51 against the
+Lex-0 baseline shape. Both are wired into `build-pilot`.
 
 ## Trust Block
 
@@ -118,25 +128,31 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
 
 ## 6. Validation status
 
-- **Now:** the sample parses as well-formed XML and aligns with the Lex-0 element
-  model (`entry` / `form` / `gramGrp` / `pos` / `gen` / `sense` / `def` / `cit` /
-  `quote` / `bibl` / `etym` / `re` / `usg`).
-- **Not yet:** validation against the **TEI Lex-0 RNG/ODD**. The archival
-  validator [`validate-tei-profile.mjs`](../scripts/validate-tei-profile.mjs)
-  checks the *archival* profile (it asserts three `<cit type="source-entry">` per
-  entry — a Lex-0 entry has none), so it does **not** apply here. Lex-0 validation
-  needs the DARIAH Lex-0 schema run through `jing`/`teitorelaxng` (the optional
-  external harness, `validate-external-profiles`).
+- **Done (slice 2):** [`scripts/validate-tei-lex0.mjs`](../scripts/validate-tei-lex0.mjs)
+  checks all 51 generated entries for well-formedness and the Lex-0 baseline
+  shape — a lemma `form/orth`, a `gramGrp` or `sense`, `@cert` on the lemma orth,
+  the profile-version note, and the **absence** of the archival
+  `<cit type="source-entry">`. Report: `data/pilot/tei-lex0-review.json`. Note the
+  archival validator [`validate-tei-profile.mjs`](../scripts/validate-tei-profile.mjs)
+  does **not** apply here (it requires three source-entry cits per entry, which a
+  Lex-0 entry has none of).
+- **Not yet:** validation against the **TEI Lex-0 RNG** itself. That needs the
+  DARIAH Lex-0 schema run through `jing`/`teitorelaxng` (the optional external
+  harness, `validate-external-profiles`), and a project Lex-0 ODD.
 
-## 7. Next steps (slice 2)
+## 7. Next steps (slice 3)
 
-1. `scripts/export-tei-lex0.mjs` — generate Lex-0 entries over the pilot set from
-   the neutral model, emitting `@cert`/`@resp` from each field's evidence label.
-2. **SKD ingestion** — extend the pilot sources beyond MW/PWG/PWK so the
-   indigenous case is generated, not hand-authored.
-3. A Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation wired
-   into `build-pilot`, including the *kośa* sense-boundary customisation (sec. 5).
-4. A Lex-0 loss report row family for the sense/citation-fusion phenomenon.
+1. A Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation wired
+   into `validate-external-profiles`, including the *kośa* sense-boundary
+   customisation (sec. 5).
+2. **A real *kośa* parser** — the SKD case is currently a curated fixture
+   ([`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json)) because
+   the *iti*-unit / *paryāya* structure is not yet parsed; ingesting SKD/VCP from
+   source means parsing the indigenous sense boundaries (sec. 5).
+3. A Lex-0 loss-report row family for the sense/citation-fusion phenomenon,
+   alongside the existing archival loss reports.
+4. Richer sense-citation linkage: the neutral model does not yet link a citation
+   to the specific sense it attests, so named sources are entry-level here.
 
 ## References
 

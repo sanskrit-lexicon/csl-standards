@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-Darmma">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: Darmma</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-Darmma" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">Darmma</orth>
+        </form>
+        <gramGrp>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gen norm="masculine" cert="high" resp="#source">masculine</gen>
+          <gen norm="neuter" cert="high" resp="#source">neuter</gen>
+        </gramGrp>
+        <etym xml:id="skd-Darmma-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">Dṛ</mentioned> <bibl><title>Uṇādisūtra 1.139</title></bibl></etym>
+        <sense xml:id="skd-Darmma-sense-1" n="1">
+          <def xml:lang="sa" cert="high" resp="#source">śubhādṛṣṭam</def>
+          <cit type="example" xml:lang="sa">
+            <quote xml:space="preserve">eka eva suhṛd dharmo nidhane &apos;py anuyāti yaḥ</quote>
+            <bibl><title>Hitopadeśa</title><citedRange>1.59</citedRange></bibl>
+          </cit>
+        </sense>
+        <sense xml:id="skd-Darmma-sense-2" n="2">
+          <def xml:lang="sa" cert="high" resp="#source">paryāya: puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ</def>
+          <bibl><author>Amara</author><citedRange>1.4.24</citedRange></bibl>
+          <note type="model-loss" resp="#source">The paryāya synonym run and its authority (ity amaraḥ) are a single iti-unit in the source: sense enumeration and source attestation are one construction, not separable into def + bibl.</note>
+        </sense>
+        <sense xml:id="skd-Darmma-sense-3" n="3">
+          <def xml:lang="en" cert="high" resp="#source">law; nature; custom; likeness; sacrifice; non-violence; an Upaniṣad</def>
+          <bibl><title>Medinī</title></bibl>
+        </sense>
+        <sense xml:id="skd-Darmma-sense-4" n="4">
+          <def xml:lang="en" cert="high" resp="#source">(in the neuter) a gift, charity</def>
+          <bibl><author>Hemacandra</author></bibl>
+        </sense>
+        <note type="model-loss" resp="#source">Indigenous kosa entry: senses are provided explicitly (curated) because the iti-unit/paryāya structure of Sanskrit-to-Sanskrit lexica is not yet parsed by the pilot&apos;s MW-tuned extractor. A kosa sense-boundary parser is slice 3.</note>
+        <note type="source-record">skd L17667</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>
