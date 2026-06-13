@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-pAruzyaM">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: pAruzyaM</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-pAruzyaM" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">pAruzyaM</orth>
+        </form>
+        <gramGrp>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gen norm="neuter" cert="high" resp="#source">neuter</gen>
+        </gramGrp>
+        <etym xml:id="skd-pAruzyaM-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">paruṣa + ṣyañ</mentioned></etym>
+        <sense xml:id="skd-pAruzyaM-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">apriyabhāṣaṇam — paryāya: abhivādaḥ</def>
+          <bibl><author>Amara</author></bibl>
+          <note type="model-loss" resp="#source">In the source this synonym run and its authority (iti Amara) are one indivisible iti-unit: sense enumeration and source attestation are a single construction, split into def + bibl here.</note>
+        </sense>
+        <sense xml:id="skd-pAruzyaM-sense-2" n="2">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">paruṣatvam; durvvākyam</def>
+          <bibl><title>Medinī</title></bibl>
+        </sense>
+        <sense xml:id="skd-pAruzyaM-sense-3" n="3">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">indrasya vanam</def>
+          <bibl><title>Viśva</title></bibl>
+        </sense>
+        <sense xml:id="skd-pAruzyaM-sense-4" n="4">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">aguru</def>
+          <bibl><title>Śabdacandrikā</title></bibl>
+        </sense>
+        <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
+        <note type="source-record">skd L21315</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

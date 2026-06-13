@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-kIrttiH">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: kIrtti</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-kIrttiH" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">kIrtti</orth>
+        </form>
+        <gramGrp>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gen norm="feminine" cert="high" resp="#source">feminine</gen>
+        </gramGrp>
+        <etym xml:id="skd-kIrttiH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">kṝt + ktin</mentioned> <bibl><title>Uṇādisūtra 4.118</title></bibl></etym>
+        <sense xml:id="skd-kIrttiH-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">sukhyātiḥ — paryāya: yaśaḥ, samajñā</def>
+          <bibl><author>Amara</author></bibl>
+          <note type="model-loss" resp="#source">In the source this synonym run and its authority (iti Amara) are one indivisible iti-unit: sense enumeration and source attestation are a single construction, split into def + bibl here.</note>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-2" n="2">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">samājñā samākhyā samajyā</def>
+          <bibl><author>Bharata</author></bibl>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-3" n="3">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">abhikhyā ślokaḥ varṇaḥ</def>
+          <bibl><author>Jaṭādhara</author></bibl>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-4" n="4">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">kīrttanā</def>
+          <bibl><title>Śabdaratnāvalī</title></bibl>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-5" n="5">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">prasādaḥ</def>
+          <bibl><title>Medinī</title></bibl>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-6" n="6">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">śabdaḥ; dīptiḥ; mātṛkāviśeṣaḥ</def>
+          <bibl><title>Śabdaratnāvalī</title></bibl>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-7" n="7">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">vistāraḥ; karddamaḥ</def>
+          <bibl><title>Viśva</title></bibl>
+        </sense>
+        <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
+        <note type="source-record">skd L7806</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>
