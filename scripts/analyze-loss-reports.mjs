@@ -113,7 +113,11 @@ async function main() {
     coverageGaps: gaps
   };
 
-  await fs.writeFile(path.resolve(root, "data/pilot/loss-analysis.json"), `${JSON.stringify(analysis, null, 2)}\n`, "utf8");
+  // Write to data/ and mirror into src/ so the Observable site can load it.
+  const serialized = `${JSON.stringify(analysis, null, 2)}\n`;
+  for (const dir of ["data/pilot", "src/data/pilot"]) {
+    await fs.writeFile(path.resolve(root, dir, "loss-analysis.json"), serialized, "utf8");
+  }
 
   // Markdown summary to stdout (the tables embedded in docs/LOSS_ANALYSIS.md).
   const out = [];
