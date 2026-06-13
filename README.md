@@ -45,4 +45,4 @@ The atlas-side removal and pointer update merged in
 - [docs/TEI_LEX0_PILOT.md](docs/TEI_LEX0_PILOT.md) — TEI Lex-0 baseline encoding for CDSL entries, covering a Western (MW) and an indigenous *kośa* (SKD) entry, with the sense/citation-fusion loss.
 - [docs/SALT_API_PROFILE.md](docs/SALT_API_PROFILE.md) — normative C-SALT-compatible REST + GraphQL profile.
 - [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](docs/VALIDATED_INTEROPERABILITY_PROFILE.md) — 50-case TEI + OntoLex/FrAC validation.
-- [docs/LOSS_ANALYSIS.md](docs/LOSS_ANALYSIS.md) — Month-3 quantitative analysis of the 124 loss reports (the TEI-vs-OntoLex asymmetry, by-cause breakdown, MW/PWG/PWK signal); regenerate with `npm run analyze-loss`.
+- [docs/LOSS_ANALYSIS.md](docs/LOSS_ANALYSIS.md) — Month-3 quantitative analysis of the 197 loss reports: the TEI-vs-OntoLex target asymmetry, the PWG→PWK→MW source-collapse family (73 lineage losses), and by-cause breakdown; regenerate with `npm run analyze-loss`.

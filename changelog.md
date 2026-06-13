@@ -9,6 +9,14 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- PWG/PWK source-collapse loss-report family: [scripts/build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
+  now emits 73 `target: neutral` reports for evidence dropped along the PWG → PWK
+  → MW lineage (23 PWG→MW collapses + 50 PWK abridgements), each evidence-bound
+  with `<ls>` citation counts and a `sourceEvidence` sample. New
+  `editorial-compression` failure cause (loss is upstream, `extensionNeeded:
+  false`); `neutral` target now accepted by `validate-pilot`. Corpus 124 → 197;
+  source-collapse is the largest phenomenon (37%). PAPER_OUTLINE §7 and
+  LOSS_ANALYSIS.md updated with the lineage measurements.
 - Month-3 loss-report analysis: [scripts/analyze-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/analyze-loss-reports.mjs)
   (`npm run analyze-loss`) quantifies the 124 loss reports into the regenerable
   artifact [data/pilot/loss-analysis.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-analysis.json),

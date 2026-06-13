@@ -16,6 +16,10 @@ async function main() {
   const models = JSON.parse(await fs.readFile(inputPath, "utf-8"));
   const reports = [];
 
+  // Labeled-source citations (<ls>…</ls>) carried in a record's raw markup.
+  const lsList = raw => [...String(raw || "").matchAll(/<ls[^>]*>(.*?)<\/ls>/g)]
+    .map(m => m[1].replace(/<[^>]+>/g, "").trim()).filter(Boolean);
+
   for (const model of models) {
     const isHighStress = HIGH_STRESS_KEYS.has(model.key);
     const reviewStatus = isHighStress ? "reviewed" : "machine";
@@ -133,6 +137,54 @@ async function main() {
           reviewStatus
         });
       }
+    }
+
+    // Source-level (lineage) collapse: named evidence present upstream is reduced
+    // along PWG -> PWK -> MW. These are NOT target-model failures (TEI/OntoLex can
+    // both hold named citations) — the loss is editorial, so target is "neutral"
+    // and extensionNeeded is false. See docs/PAPER_OUTLINE.md sec. 7.
+    const mwLs = lsList(model.records.mw?.raw);
+    const pwgLs = lsList(model.records.pwg?.raw);
+    const pwkLs = lsList(model.records.pwk?.raw);
+    const sample = list => list.slice(0, 5);
+
+    // PWG -> MW: PWG attests the lemma but MW carries no citation at all.
+    if (pwgLs.length > 0 && mwLs.length === 0) {
+      reports.push({
+        caseId: model.id,
+        target: "neutral",
+        status: "lossy",
+        phenomenon: "source-collapse",
+        sourceDictionary: "pwg",
+        sourcePointer: { L: model.records.pwg.L, line: model.records.pwg.line },
+        claim: `PWG attests this lemma with ${pwgLs.length} named citation(s); MW carries none.`,
+        loss: `PWG's named sources (e.g. ${sample(pwgLs).join("; ")}) are reduced to the MW lexicographer hedge or dropped; the lemma becomes textually unattested at the MW endpoint.`,
+        failureClassification: "editorial-compression",
+        extensionNeeded: false,
+        reviewStatus,
+        sourceEvidence: { pwg: pwgLs.length, pwk: pwkLs.length, mw: 0, sample: sample(pwgLs) }
+      });
+    }
+
+    // PWG -> PWK: PWK abridges PWG's apparatus (drops some or all citations).
+    if (pwgLs.length > 0 && pwkLs.length < pwgLs.length) {
+      const droppedAll = pwkLs.length === 0;
+      reports.push({
+        caseId: model.id,
+        target: "neutral",
+        status: droppedAll ? "lossy" : "partial",
+        phenomenon: "source-collapse",
+        sourceDictionary: "pwk",
+        sourcePointer: { L: model.records.pwk.L, line: model.records.pwk.line },
+        claim: `PWK abridges PWG: PWG has ${pwgLs.length} named citation(s), PWK retains ${pwkLs.length}.`,
+        loss: droppedAll
+          ? `PWK drops PWG's entire named apparatus (e.g. ${sample(pwgLs).join("; ")}).`
+          : `PWK keeps ${pwkLs.length} of ${pwgLs.length} PWG citation(s) and drops the rest.`,
+        failureClassification: "editorial-compression",
+        extensionNeeded: false,
+        reviewStatus,
+        sourceEvidence: { pwg: pwgLs.length, pwk: pwkLs.length, mw: mwLs.length, sample: sample(pwgLs) }
+      });
     }
   }
 
