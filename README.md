@@ -36,3 +36,11 @@ Boundary rules are in [docs/BOUNDARY_RULES.md](docs/BOUNDARY_RULES.md).
 
 The atlas-side removal and pointer update merged in
 [`csl-atlas` PR #32](https://github.com/sanskrit-lexicon/csl-atlas/pull/32).
+
+## Key documents
+
+- [docs/BOUNDARY_RULES.md](docs/BOUNDARY_RULES.md) — what belongs here vs. delegates.
+- [docs/INTEROPERABILITY_MODEL.md](docs/INTEROPERABILITY_MODEL.md) — neutral JSON layer between CDSL source, TEI, and OntoLex.
+- [docs/EVIDENCE_LABEL_CROSSWALK.md](docs/EVIDENCE_LABEL_CROSSWALK.md) — maps the `csl-atlas` evidence labels and review statuses to W3C PROV-O and TEI `@cert`/`@resp` (FAIR interoperability).
+- [docs/SALT_API_PROFILE.md](docs/SALT_API_PROFILE.md) — normative C-SALT-compatible REST + GraphQL profile.
+- [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](docs/VALIDATED_INTEROPERABILITY_PROFILE.md) — 50-case TEI + OntoLex/FrAC validation.
