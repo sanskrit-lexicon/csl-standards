@@ -188,6 +188,36 @@ async function main() {
     }
   }
 
+  // Indigenous kosa sense/citation fusion (TEI Lex-0 pilot sec. 5): a kosa
+  // structures sense and source as one indivisible "iti <authority>" unit, which
+  // the Lex-0 export must split into def + bibl. This is not a model or markup
+  // gap — it is a Sanskrit lexicographic convention with no equivalent in the
+  // sense/citation-separating standards, hence "sanskrit-convention".
+  const fixturesPath = path.resolve(process.cwd(), "data/pilot/lex0-fixtures.json");
+  let fixtures = [];
+  try { fixtures = JSON.parse(await fs.readFile(fixturesPath, "utf-8")); } catch { /* optional */ }
+  for (const entry of fixtures) {
+    if (!(entry.phenomena || []).includes("sense-citation-fusion")) continue;
+    const groups = (entry.senses || []).filter(s => s.authority);
+    const fused = (entry.senses || []).filter(s => s.loss);
+    const authorities = [...new Set(groups
+      .map(s => s.authority.author || s.authority.title).filter(Boolean))];
+    reports.push({
+      caseId: entry.id,
+      target: "tei",
+      status: "lossy",
+      phenomenon: "sense-citation-fusion",
+      sourceDictionary: "skd",
+      sourcePointer: { L: entry.records?.skd?.L ?? null, line: null },
+      claim: "In the kosa, sense and source authority form one indivisible 'iti <authority>' unit.",
+      loss: `The TEI Lex-0 baseline splits ${groups.length} authority-bound sense group(s) into separate <def> + <bibl>; the indivisibility of the kosa iti-unit (a candidate Lex-0 ODD customisation) is not expressible in the baseline.`,
+      failureClassification: "sanskrit-convention",
+      extensionNeeded: true,
+      reviewStatus: "machine",
+      sourceEvidence: { authorityGroups: groups.length, fusedSynonymRuns: fused.length, authorities }
+    });
+  }
+
   for (const outputPath of outputPaths) {
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
     await fs.writeFile(outputPath, `${JSON.stringify(reports, null, 2)}\n`, "utf-8");

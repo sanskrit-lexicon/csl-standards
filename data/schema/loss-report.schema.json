@@ -9,7 +9,7 @@
       "target": { "type": "string", "enum": ["tei", "ontolex", "neutral"] },
       "status": { "type": "string", "enum": ["clean", "partial", "lossy", "failure"] },
       "phenomenon": { "type": "string" },
-      "sourceDictionary": { "type": "string", "enum": ["mw", "pwg", "pwk"] },
+      "sourceDictionary": { "type": "string", "enum": ["mw", "pwg", "pwk", "skd"] },
       "sourcePointer": {
         "type": "object",
         "properties": {
@@ -23,7 +23,7 @@
       "loss": { "type": "string" },
       "failureClassification": {
         "type": "string",
-        "enum": ["none", "cdsl-markup-gap", "model-vocabulary-gap", "print-compression", "editorial-compression"]
+        "enum": ["none", "cdsl-markup-gap", "model-vocabulary-gap", "print-compression", "editorial-compression", "sanskrit-convention"]
       },
       "extensionNeeded": { "type": "boolean" },
       "reviewStatus": { "type": "string", "enum": ["machine", "reviewed", "published"] }
