@@ -1,0 +1,95 @@
+{
+  "generatedBy": "scripts/analyze-loss-reports.mjs",
+  "lossReports": {
+    "total": 124,
+    "cases": 50,
+    "byStatus": {
+      "partial": 89,
+      "lossy": 20,
+      "clean": 15
+    },
+    "byTarget": {
+      "tei": 62,
+      "ontolex": 62
+    },
+    "byPhenomenon": {
+      "generic-lexicographer-hedge": 54,
+      "continuation-parent": 16,
+      "compound-subentry": 15,
+      "compound-decomposition": 15,
+      "root-as-entry": 12,
+      "root-as-derivational-base": 12
+    },
+    "byFailureClassification": {
+      "model-vocabulary-gap": 66,
+      "cdsl-markup-gap": 27,
+      "print-compression": 16,
+      "none": 15
+    },
+    "byExtensionNeeded": {
+      "extensionNeeded=true": 89,
+      "extensionNeeded=false": 35
+    },
+    "byReviewStatus": {
+      "machine": 68,
+      "reviewed": 56
+    },
+    "bySourceDictionary": {
+      "mw": 124
+    },
+    "targetByStatus": {
+      "tei": {
+        "partial": 47,
+        "clean": 15
+      },
+      "ontolex": {
+        "partial": 42,
+        "lossy": 20
+      }
+    }
+  },
+  "crossDictionary": {
+    "cases": 50,
+    "recordsPresent": {
+      "mw": 50,
+      "pwg": 50,
+      "pwk": 50
+    },
+    "phenomena": {
+      "hedge": 27,
+      "root": 12,
+      "tri-dict": 50,
+      "pwg-rich": 50,
+      "pwk-abridged": 50,
+      "homophone": 50,
+      "compound": 15,
+      "mw-uncited-pwg-cited": 23,
+      "continuation": 8
+    },
+    "citations": {
+      "total": 25,
+      "byType": {
+        "generic-lexicographer-hedge": 25
+      }
+    }
+  },
+  "coverageGaps": {
+    "sourceDictionariesInstrumented": [
+      "mw"
+    ],
+    "schemaPhenomenaNotEmitted": [
+      "named-kosha-citation",
+      "source-collapse",
+      "citation-coordinate",
+      "editorial-reference"
+    ],
+    "schemaStatusesNotEmitted": [
+      "failure"
+    ],
+    "roadmapCausesNotEmitted": [
+      "sanskrit-convention",
+      "data-quality"
+    ],
+    "namedKoshaCitationsMaterialized": 0
+  }
+}
