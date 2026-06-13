@@ -169,8 +169,13 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    split. Still open: more records (esp. nibandha-heavy entries like *jñāti*
    L13859, whose trailing prose group does not reduce to glosses) and VCP, plus
    sense-level (not entry-level) linkage of an example to its specific sense.
-3. A Lex-0 loss-report row family for the sense/citation-fusion phenomenon,
-   alongside the existing archival loss reports.
+3. **Done:** a Lex-0 loss-report row family for the sense/citation-fusion
+   phenomenon — [`scripts/build-loss-reports.mjs`](../scripts/build-loss-reports.mjs)
+   emits one `sense-citation-fusion` report per SKD entry (`target: tei`,
+   `sourceDictionary: skd`, cause `sanskrit-convention`, `extensionNeeded: true`),
+   recording the authority groups the baseline had to split. See
+   [`EVIDENCE_LABEL_CROSSWALK.md`](EVIDENCE_LABEL_CROSSWALK.md) and
+   [`LOSS_ANALYSIS.md`](LOSS_ANALYSIS.md) §4a.
 4. **Partly done:** the neutral model now materializes every `<ls>` named source
    across MW/PWG/PWK as `named-source-citation` objects tagged with their
    dictionary (519 of them, capped at 12 per dictionary), and the Lex-0 export

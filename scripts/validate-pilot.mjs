@@ -32,6 +32,7 @@ const neutral = readJson("data/pilot/neutral-model.json");
 const neutralForApp = readJson("src/data/pilot/neutral-model.json");
 const reports = readJson("data/pilot/loss-reports.json");
 const reportsForApp = readJson("src/data/pilot/loss-reports.json");
+const lex0Fixtures = readJson("data/pilot/lex0-fixtures.json") || [];
 const reviewCases = readJson("data/pilot/review-cases.json");
 const reviewCasesForApp = readJson("src/data/pilot/review-cases.json");
 const lossSchema = readJson("data/schema/loss-report.schema.json");
@@ -70,8 +71,9 @@ for (const item of items) {
 const sourceString = JSON.stringify(hardCases?.sources || {});
 check(!/[A-Za-z]:\\|\\\\Users\\\\|\/Users\/|\/home\//.test(sourceString), "hard-case sources must not contain local absolute paths");
 
+const fixtureIdSet = new Set(lex0Fixtures.map(f => f.id));
 for (const report of reports || []) {
-  check(hardIdSet.has(report.caseId), `loss report points to unknown case ${report.caseId}`);
+  check(hardIdSet.has(report.caseId) || fixtureIdSet.has(report.caseId), `loss report points to unknown case ${report.caseId}`);
   check(["tei", "ontolex", "neutral"].includes(report.target), `loss report ${report.id} has invalid target ${report.target}`);
   check(["clean", "partial", "lossy"].includes(report.status), `loss report ${report.id} has invalid status ${report.status}`);
   check(allowedReviewStatus.has(report.reviewStatus), `loss report ${report.id} has invalid reviewStatus ${report.reviewStatus}`);

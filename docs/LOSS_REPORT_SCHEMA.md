@@ -40,12 +40,12 @@ A loss report records what happens when a CDSL dictionary record is mapped into 
 | `target` | yes | `tei`, `ontolex`, or `neutral` |
 | `status` | yes | `clean`, `partial`, `lossy`, or `failure` |
 | `phenomenon` | yes | The stress point being evaluated |
-| `sourceDictionary` | yes | `mw`, `pwg`, or `pwk` |
+| `sourceDictionary` | yes | `mw`, `pwg`, `pwk`, or `skd` (indigenous *kośa*) |
 | `sourcePointer` | yes | Source record pointer |
 | `claim` | yes | Scholarly claim being tested |
 | `mappedAs` | no | Target-model representation |
 | `loss` | yes unless `status=clean` | What is not preserved |
-| `failureClassification` | no | Cause: `none`, `cdsl-markup-gap`, `model-vocabulary-gap`, `print-compression`, or `editorial-compression` (upstream lineage loss) |
+| `failureClassification` | no | Cause: `none`, `cdsl-markup-gap`, `model-vocabulary-gap`, `print-compression`, `editorial-compression` (upstream lineage loss), or `sanskrit-convention` (tradition-bound, e.g. the kośa fusion) |
 | `extensionNeeded` | yes | Whether the model needs an extension. `false` for `editorial-compression` (the loss is upstream, not a standards gap) |
 | `sourceEvidence` | no | For `source-collapse`: `<ls>` named-citation counts per dictionary (`pwg`/`pwk`/`mw`) plus a `sample` of dropped sources |
 | `reviewStatus` | yes | `machine`, `reviewed`, or `published` |
@@ -57,6 +57,7 @@ A loss report records what happens when a CDSL dictionary record is mapped into 
 | `generic-lexicographer-hedge` | MW `L.` evidence |
 | `named-kosha-citation` | PWG named indigenous lexicon source |
 | `source-collapse` | Rich evidence reduced to generic or absent evidence |
+| `sense-citation-fusion` | Indigenous *kośa* iti-unit (sense + authority) split into `<def>` + `<bibl>` |
 | `root-as-entry` | Root modeled as lexical entry |
 | `root-as-derivational-base` | Root modeled as derivational node |
 | `compound-subentry` | Compound preserved as dictionary subentry |

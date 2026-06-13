@@ -8,6 +8,16 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- Indigenous *kośa* sense/citation-fusion loss-report family: [scripts/build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
+  now emits one `sense-citation-fusion` report per SKD entry (6 total, `target:
+  tei`, `sourceDictionary: skd`, cause `sanskrit-convention`), recording the
+  authority groups the Lex-0 baseline had to split into `<def>` + `<bibl>`. Adds
+  `skd` and `sanskrit-convention` to the loss-report schema; `validate-pilot`
+  accepts fixture caseIds; `build-pilot` reordered so `parse-skd-kosa` precedes
+  `build-loss-reports`. Corpus 197 → 203. This refines the central finding: the
+  only `tei`-lossy reports are the 6 indigenous fusions, not the Western cases.
+
 ### Fixed
 - Generated artifacts are now byte-reproducible: the six generators no longer
   stamp a wallclock `generatedAt`. A shared helper

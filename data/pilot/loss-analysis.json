@@ -1,16 +1,16 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 197,
-    "cases": 50,
+    "total": 203,
+    "cases": 56,
     "byStatus": {
       "partial": 114,
-      "lossy": 68,
+      "lossy": 74,
       "clean": 15
     },
     "byTarget": {
       "neutral": 73,
-      "tei": 62,
+      "tei": 68,
       "ontolex": 62
     },
     "byPhenomenon": {
@@ -20,32 +20,36 @@
       "compound-subentry": 15,
       "compound-decomposition": 15,
       "root-as-entry": 12,
-      "root-as-derivational-base": 12
+      "root-as-derivational-base": 12,
+      "sense-citation-fusion": 6
     },
     "byFailureClassification": {
       "editorial-compression": 73,
       "model-vocabulary-gap": 66,
       "cdsl-markup-gap": 27,
       "print-compression": 16,
-      "none": 15
+      "none": 15,
+      "sanskrit-convention": 6
     },
     "byExtensionNeeded": {
       "extensionNeeded=false": 108,
-      "extensionNeeded=true": 89
+      "extensionNeeded=true": 95
     },
     "byReviewStatus": {
-      "machine": 124,
+      "machine": 130,
       "reviewed": 73
     },
     "bySourceDictionary": {
       "mw": 124,
       "pwk": 50,
-      "pwg": 23
+      "pwg": 23,
+      "skd": 6
     },
     "targetByStatus": {
       "tei": {
         "partial": 47,
-        "clean": 15
+        "clean": 15,
+        "lossy": 6
       },
       "ontolex": {
         "partial": 42,
@@ -92,7 +96,8 @@
     "sourceDictionariesInstrumented": [
       "mw",
       "pwk",
-      "pwg"
+      "pwg",
+      "skd"
     ],
     "schemaPhenomenaNotEmitted": [
       "named-kosha-citation",
@@ -103,7 +108,6 @@
       "failure"
     ],
     "roadmapCausesNotEmitted": [
-      "sanskrit-convention",
       "data-quality"
     ],
     "namedSourceCitationsMaterialized": 519
