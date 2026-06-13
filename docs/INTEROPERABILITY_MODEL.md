@@ -44,6 +44,11 @@ The neutral model keeps the scholarly interpretation visible. TEI and OntoLex ex
 
 ## Evidence Classes
 
+Evidence *classes* below answer *what kind of source* licenses a claim. They are
+orthogonal to the epistemic *evidence level* (`observed` / `derived` / `inferred`
+/ `reviewed`) and the human-review lifecycle; for the mapping of those to PROV-O
+and TEI `@cert`/`@resp`, see [`EVIDENCE_LABEL_CROSSWALK.md`](EVIDENCE_LABEL_CROSSWALK.md).
+
 | Class | Definition | Example |
 |---|---|---|
 | `textual-source` | Named literary or scholastic source | `RV.`, `MBh.`, `Pāṇ.` |
