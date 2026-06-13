@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEI Lex-0 pilot sample. See docs/TEI_LEX0_PILOT.md.
+     Two hand-authored entries: one Western (MW, gaja) and one indigenous
+     kosa (SKD, Darmma). This is a baseline-profile exemplar, NOT the archival
+     profile in data/pilot/tei/ (tei-archival-profile-v0.1). Evidence labels
+     are bound to @cert/@resp per docs/EVIDENCE_LABEL_CROSSWALK.md:
+     observed/reviewed -> cert="high", derived -> cert="high" resp="#machine",
+     inferred -> cert="low". Sanskrit orth is SLP1; glosses/notes use IAST. -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="csl-lex0-pilot-sample">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 pilot sample (MW gaja, SKD Darmma)</title>
+        <respStmt xml:id="mw-source">
+          <resp>headword, gender, and citations as printed</resp>
+          <name>Monier-Williams 1899 (csl-orig v02/mw)</name>
+        </respStmt>
+        <respStmt xml:id="skd-source">
+          <resp>headword, genders, paryaya, and authority as printed</resp>
+          <name>Sabdakalpadruma (csl-orig v02/skd)</name>
+        </respStmt>
+        <respStmt xml:id="machine">
+          <resp>derived classification and gloss extraction (deterministic)</resp>
+          <name>csl-standards Lex-0 pilot</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW record L62306 and SKD record L17667 for a TEI
+           Lex-0 baseline-profile pilot.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-lex0-pilot-v0.1. Targets the DARIAH TEI Lex-0 baseline element
+           model (entry, form/orth, gramGrp/pos+gen, sense/def, cit/quote,
+           bibl, etym, usg), distinct from the archival profile in
+           data/pilot/tei/. Per-statement epistemic status is carried in
+           @cert/@resp, mapped from the csl-atlas evidence labels.</p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+
+      <!-- ============ Western: Monier-Williams, gaja (L62306) ============ -->
+      <entry xml:id="mw-gaja" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#mw-source">gaja</orth>
+        </form>
+        <gramGrp>
+          <!-- <lex>m.</lex>: gender masculine is OBSERVED; "noun" is DERIVED. -->
+          <gen norm="masculine" cert="high" resp="#mw-source">m</gen>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+        </gramGrp>
+        <sense xml:id="mw-gaja-s1">
+          <def xml:lang="en" cert="high" resp="#machine">an elephant</def>
+          <bibl><abbr xml:lang="en">ṢaḍvBr.</abbr><citedRange>v, 3</citedRange></bibl>
+          <bibl><abbr xml:lang="en">Mn.</abbr></bibl>
+        </sense>
+        <!-- ifc. f(A): a feminine compound-final form, attested in R. -->
+        <re type="comb" subtype="ifc">
+          <form type="inflected">
+            <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#mw-source">gajA</orth>
+            <gramGrp><gen norm="feminine" cert="high" resp="#mw-source">f</gen></gramGrp>
+          </form>
+          <bibl><abbr xml:lang="en">R.</abbr><citedRange>ii, 57, 7</citedRange></bibl>
+        </re>
+      </entry>
+
+      <!-- ========= Indigenous kosa: Sabdakalpadruma, Darmma (L17667) ========= -->
+      <entry xml:id="skd-dharma" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#skd-source">Darmma</orth>
+        </form>
+        <gramGrp>
+          <gen norm="masculine" cert="high" resp="#skd-source">puṃ</gen>
+          <gen norm="neuter" cert="high" resp="#skd-source">klī</gen>
+        </gramGrp>
+        <etym cert="high" resp="#skd-source">
+          <lbl>from</lbl> <mentioned xml:lang="sa-Latn-x-SLP1">Dṛ</mentioned>
+          <bibl><title>Uṇādisūtra</title><citedRange>1.139</citedRange></bibl>
+        </etym>
+        <sense xml:id="skd-dharma-s1">
+          <def xml:lang="sa">śubhādṛṣṭam</def>
+          <cit type="example" xml:lang="sa">
+            <quote xml:space="preserve">eka eva suhṛd dharmo nidhane 'py anuyāti yaḥ</quote>
+            <bibl><title>Hitopadeśa</title><citedRange>1.59</citedRange></bibl>
+          </cit>
+        </sense>
+        <!-- The paryaya run: a synonym list that IS the sense, terminated by the
+             authority "ity Amaraḥ". In the source these are one indivisible
+             iti-unit; Lex-0 forces them into separate <def> and <bibl>. See the
+             model-loss note below and docs/TEI_LEX0_PILOT.md sec. 5. -->
+        <sense xml:id="skd-dharma-s2">
+          <def xml:lang="sa"><lbl>paryāya</lbl> puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ</def>
+          <bibl><author>Amara</author><citedRange>1.4.24</citedRange></bibl>
+          <note type="model-loss" resp="#skd-source">In the source the synonym run
+            and its authority (<mentioned xml:lang="sa">ity amaraḥ</mentioned>) are a
+            single iti-unit: sense enumeration and source attestation are one
+            construction, not separable into def + bibl as encoded here.</note>
+        </sense>
+        <sense xml:id="skd-dharma-s3">
+          <def xml:lang="en">law; nature; custom; likeness; sacrifice; non-violence; an Upaniṣad</def>
+          <bibl><title>Medinī</title></bibl>
+        </sense>
+        <sense xml:id="skd-dharma-s4">
+          <def xml:lang="en" cert="high" resp="#skd-source">(in the neuter) a gift, charity</def>
+          <gramGrp><gen norm="neuter">klī</gen></gramGrp>
+          <bibl><author>Hemacandra</author></bibl>
+        </sense>
+      </entry>
+
+    </body>
+  </text>
+</TEI>
