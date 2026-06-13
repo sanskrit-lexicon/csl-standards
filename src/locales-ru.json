@@ -44,6 +44,8 @@
     "model-vocabulary-gap": "пробел-в-словаре-модели",
     "print-compression": "печатное-сжатие",
     "cdsl-markup-gap": "пробел-в-разметке-cdsl",
+    "editorial-compression": "редакторское-сжатие",
+    "sanskrit-convention": "санскритская-традиция",
     "none": "отсутствует"
   },
   "phenomenon": {
@@ -52,6 +54,29 @@
     "root-as-derivational-base": "корень-как-база-деривации",
     "compound-subentry": "композит-подстатья",
     "compound-decomposition": "декомпозиция-композита",
-    "continuation-parent": "продолжение-родитель"
+    "continuation-parent": "продолжение-родитель",
+    "source-collapse": "схлопывание-источников",
+    "sense-citation-fusion": "слияние-значения-и-цитаты"
+  },
+  "lossAnalysis": {
+    "title": "Анализ потерь",
+    "description": "Количественный анализ корпуса отчётов о потерях и линии MW/PWG/PWK; пересоздаётся командой npm run analyze-loss.",
+    "metric-reports": "отчётов о потерях",
+    "metric-lossy": "доля потерь",
+    "metric-cases": "случаев",
+    "metric-citations": "именованных цитат",
+    "target-status": "Цель × статус: как отказывают модели",
+    "asymmetry-note": "Для западных случаев MW/PWG/PWK TEI никогда не теряет данные, а OntoLex никогда не бывает чистым — модели успешны по-разному. Нейтральная линия (сама линия словарей) теряет больше всего. Единственные потери TEI — слияние значения и цитаты в индийских кошах.",
+    "by-cause": "По причине",
+    "by-phenomenon": "По явлению",
+    "cross-dictionary": "Межсловарный слой цитат",
+    "coverage-gaps": "Пробелы охвата (ещё не измерено)",
+    "col-target": "цель",
+    "col-cause": "причина",
+    "col-phenomenon": "явление",
+    "col-count": "кол-во",
+    "col-share": "доля",
+    "records-present": "записей присутствует",
+    "citations-by-dict": "именованные цитаты по словарям"
   }
 }

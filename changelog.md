@@ -9,6 +9,14 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- Public **Loss Analysis** page on the Observable site
+  ([src/tools/loss-analysis.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/src/tools/loss-analysis.md)):
+  renders the target×status asymmetry, by-cause and by-phenomenon breakdowns, the
+  cross-dictionary citation layer, and the coverage gaps from
+  `loss-analysis.json` — bilingual (EN/RU). `analyze-loss` now mirrors its artifact
+  into `src/data/pilot/` so the site can load it; locales gained the
+  `editorial-compression`, `sanskrit-convention`, `source-collapse`, and
+  `sense-citation-fusion` labels.
 - Indigenous *kośa* sense/citation-fusion loss-report family: [scripts/build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
   now emits one `sense-citation-fusion` report per SKD entry (6 total, `target:
   tei`, `sourceDictionary: skd`, cause `sanskrit-convention`), recording the

@@ -12,7 +12,8 @@ export default {
     {
       name: "Interoperability",
       pages: [
-        { name: "MW-PWG-PWK hard cases", path: "/tools/interoperability-hard-cases" }
+        { name: "MW-PWG-PWK hard cases", path: "/tools/interoperability-hard-cases" },
+        { name: "Loss analysis", path: "/tools/loss-analysis" }
       ]
     }
   ],
