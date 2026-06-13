@@ -11,7 +11,14 @@
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
@@ -25,6 +32,30 @@
         </form>
         <sense xml:id="mw-pwg-pwk-ABoga-sense-unparsed"><note type="sense-status">No machine sense extracted; see the archival profile for the source record.</note></sense>
         <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MBH. 3,9957.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>15,1077.</abbr><ref type="inherited-siglum">MBH.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>R. 2,65,3.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>BHARTṚ. 1,19.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>PRAB. 81,15.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚRUT. 40.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MEGH. 89.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>SĀH. D. 42,11.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>BALLANTYNE</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 2,6,3,28.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>TRIK. 3,3,55.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. 1432.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>MBH. 3,109,11</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>MBH. 3,178,25.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-15" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>15,38,21.</abbr><ref type="inherited-siglum">MBH.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-16" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>16,4,14</abbr><ref type="inherited-siglum">MBH.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-17" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>R. 2,65,3</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-18" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>ŚĀK. 8,1</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-19" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>KATHĀS. 18,72</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-20" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>BĀLAR. 27,23</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-21" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>KĀD. II,74,5</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-22" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>Spr. 1443</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-23" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>7254</abbr><ref type="inherited-siglum">Spr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ABoga-cite-24" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>S. S. S. 120</abbr></bibl>
         <note type="source-record">mw L25369</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>

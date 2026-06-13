@@ -9,6 +9,14 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- Named-source citation layer in the neutral model: [scripts/build-neutral-model.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-neutral-model.mjs)
+  now extracts every `<ls>` labeled source across MW/PWG/PWK (519
+  `named-source-citation` objects + 25 hedges, tagged with `dictionary`, capped
+  at 12/dict). The TEI Lex-0 export carries them as entry-level
+  `<bibl type="named-source" source="#dict-…">` with the source dictionaries
+  declared in the header, so a Western lemma uncited in MW (e.g. *arcya*) now
+  carries PWG's named apparatus. `analyze-loss` reports
+  `namedSourceCitationsMaterialized` (was 0) and citation counts by dictionary.
 - PWG/PWK source-collapse loss-report family: [scripts/build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
   now emits 73 `target: neutral` reports for evidence dropped along the PWG → PWK
   → MW lineage (23 PWG→MW collapses + 50 PWK abridgements), each evidence-bound

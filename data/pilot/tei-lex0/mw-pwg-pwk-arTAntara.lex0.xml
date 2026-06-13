@@ -11,7 +11,14 @@
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
@@ -24,6 +31,20 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">arTAntara</orth>
         </form>
         <sense xml:id="mw-pwg-pwk-arTAntara-sense-unparsed"><note type="sense-status">No machine sense extracted; see the archival profile for the source record.</note></sense>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>SĀH. D. 460.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KĀVYĀD. 2,169.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>SĀH. D. 709.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>PRATĀPAR. 98,a,8.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KUVALAY. 122,b</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>147,b</abbr><ref type="inherited-siglum">KUVALAY.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>Verz. d. Oxf. H. 208,b,21.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MALLIN.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KIR. 5,51.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>SĀH. D. 253.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>584.</abbr><ref type="inherited-siglum">SĀH. D.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AV. PRĀT. 4,102.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>231,29</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-arTAntara-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>NYĀYAS. 5,2,7</abbr></bibl>
         <note type="source-record">mw L16023</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>

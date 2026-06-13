@@ -11,7 +11,14 @@
         <publisher>CSL Standards</publisher>
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
-      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
@@ -35,6 +42,30 @@
           <def xml:lang="en" cert="high" resp="#machine">be washed</def>
         </sense>
         <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-1" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Bhaṭṭ.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-2" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV. ix, 70, 8</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-3" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Prab. iv, 23</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-4" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Kauś.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-5" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-6" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Śiś.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-7" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Br.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-8" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Mn.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-9" type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 15,92</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 7,3,78</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NIR. 13,6.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-13" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 9,58,1.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-14" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>21,1.</abbr><ref type="inherited-siglum">ṚV. 9,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-15" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>54,2.</abbr><ref type="inherited-siglum">ṚV. 9,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-16" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>6,17,4.</abbr><ref type="inherited-siglum">ṚV.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-17" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AIT. BR. 3,33.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-18" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KĀṬH. 23,6. 8.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-19" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AV. 10,6,14.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-20" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>HARIV. 14516.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-21" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>SUŚR. 1,247,13.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-22" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>133,4</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-23" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>153,4</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-DAv-cite-24" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>ṚV. 10,146,2</abbr></bibl>
         <note type="source-record">mw L101170</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>

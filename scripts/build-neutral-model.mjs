@@ -17,11 +17,49 @@ function parseGenderOrGrammar(raw) {
   return null;
 }
 
+const LS_RE = /<ls\b([^>]*)>([\s\S]*?)<\/ls>/g;
+const MAX_CITATIONS_PER_DICT = 12;
+
+function stripMarkup(value) {
+  return String(value || "")
+    .replace(/\{[#%]([^#%]*)[#%]\}/g, "$1")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Canonical citation layer: every <ls> labeled source across MW/PWG/PWK, tagged
+// with its dictionary so downstream models (TEI Lex-0, analysis) read the named
+// evidence from the neutral model rather than re-deriving it. The MW "L." siglum
+// is the generic lexicographer hedge; everything else is a named source.
+function extractCitations(item) {
+  const citations = [];
+  for (const dict of ["mw", "pwg", "pwk"]) {
+    const raw = item.records[dict]?.raw || "";
+    const seen = new Set();
+    for (const match of raw.matchAll(LS_RE)) {
+      const inherited = (match[1] || "").match(/\bn="([^"]+)"/)?.[1] || null;
+      const source = stripMarkup(match[2]) || inherited;
+      if (!source) continue;
+      const dedupe = `${dict}:${source}`;
+      if (seen.has(dedupe)) continue;
+      seen.add(dedupe);
+      citations.push({
+        source,
+        type: source === "L." ? "generic-lexicographer-hedge" : "named-source-citation",
+        dictionary: dict,
+        ...(inherited ? { inheritedFrom: inherited } : {})
+      });
+      if (seen.size >= MAX_CITATIONS_PER_DICT) break;
+    }
+  }
+  return citations;
+}
+
 function extractFormsAndRelations(item, id) {
   const forms = [];
   const relations = [];
-  const citations = [];
-  
+
   // Extract Lemma Form from MW / PWG / PWK
   const baseForm = {
     orth: item.key,
@@ -30,15 +68,9 @@ function extractFormsAndRelations(item, id) {
   };
   forms.push(baseForm);
 
-  // Extract L. Hedge citations
+  // Named-source + lexicographer-hedge citations across all three dictionaries.
   const mwRaw = item.records.mw?.raw || "";
-  if (/<ls>L\.<\/ls>/.test(mwRaw)) {
-    citations.push({
-      source: "L.",
-      type: "generic-lexicographer-hedge",
-      context: "MW lexicographer-only attestation"
-    });
-  }
+  const citations = extractCitations(item);
 
   // Handle Root Phenomena
   if (item.phenomena.includes("root")) {
