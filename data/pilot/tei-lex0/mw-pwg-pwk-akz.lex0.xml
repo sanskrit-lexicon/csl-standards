@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-akz">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: akz</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc><p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p></sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-akz" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">akz</orth>
+        </form>
+        <gramGrp>
+          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="verb-class" cert="high" resp="#source">1,5</gram>
+        </gramGrp>
+        <etym xml:id="mw-pwg-pwk-akz-etym-root" type="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:akz1,1;akz2,1" cert="high" resp="#source">akz1,1;akz2,1</ref></etym>
+        <sense xml:id="mw-pwg-pwk-akz-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">reach</def>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-akz-sense-2" n="2">
+          <def xml:lang="en" cert="high" resp="#machine">pass through, penetrate, pervade, embrace</def>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-akz-sense-3" n="3">
+          <def xml:lang="en" cert="high" resp="#machine">accumulate (to form the cube?)</def>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-akz-sense-4" n="4">
+          <def xml:lang="en" cert="high" resp="#machine">cause to pervade</def>
+        </sense>
+        <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        <note type="source-record">mw L423</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>
