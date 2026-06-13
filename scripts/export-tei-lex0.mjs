@@ -8,8 +8,9 @@
 // <cit type="source-entry"> raw quotes.
 //
 // Inputs: data/pilot/neutral-model.json (50 MW/PWG/PWK cases) plus an optional
-// data/pilot/lex0-fixtures.json (curated entries, e.g. the indigenous SKD kosa
-// case, whose senses are provided explicitly rather than extracted).
+// data/pilot/lex0-fixtures.json — extra entries whose senses are provided
+// explicitly rather than extracted from MW raw. For the indigenous SKD kosa
+// case that file is produced from source by scripts/parse-skd-kosa.mjs.
 //
 // Usage: npm run export-tei-lex0
 // See docs/TEI_LEX0_PILOT.md.
@@ -238,7 +239,7 @@ async function main() {
   for (const model of all) {
     await fs.writeFile(path.join(outputDir, `${safeCaseId(model.id)}.lex0.xml`), teiDocument(model), "utf8");
   }
-  console.log(`Exported ${all.length} TEI Lex-0 entries to ${outputDir} (${models.length} extracted + ${fixtures.length} curated fixture(s)).`);
+  console.log(`Exported ${all.length} TEI Lex-0 entries to ${outputDir} (${models.length} extracted + ${fixtures.length} fixture(s)).`);
 }
 
 main().catch(error => { console.error(error); process.exit(1); });

@@ -1,52 +1,79 @@
 [
   {
-    "id": "skd:Darmma",
+    "id": "skd:DarmmaH",
     "key": "Darmma",
-    "phenomena": ["indigenous-kosa", "paryaya", "iti-authority", "sense-citation-fusion"],
+    "phenomena": [
+      "indigenous-kosa",
+      "iti-authority",
+      "sense-citation-fusion"
+    ],
     "records": {
-      "skd": { "L": "17667", "line": 206577, "pc": "2-783-b" }
+      "skd": {
+        "L": "17667"
+      }
     },
     "forms": [
-      { "orth": "Darmma", "type": "lemma" }
+      {
+        "orth": "Darmma",
+        "type": "lemma"
+      }
     ],
-    "genders": ["masculine", "neuter"],
+    "genders": [
+      "masculine",
+      "neuter"
+    ],
     "relations": [
-      { "type": "etymology", "label": "from", "mention": "Dṛ", "source": "Uṇādisūtra 1.139" }
+      {
+        "type": "etymology",
+        "label": "from",
+        "mention": "Df",
+        "source": "Uṇādisūtra 1.139"
+      }
     ],
     "senses": [
       {
-        "def": "śubhādṛṣṭam",
-        "lang": "sa",
+        "def": "SuBAdfzwam — paryāya: puRyam, SreyaH, sukftam, vfzaH",
+        "lang": "sa-Latn-x-SLP1",
         "evidence": "observed",
+        "authority": {
+          "author": "Amara"
+        },
         "example": {
-          "quote": "eka eva suhṛd dharmo nidhane 'py anuyāti yaḥ",
-          "source": "Hitopadeśa",
-          "cited": "1.59"
+          "source": "hitodeSe",
+          "cited": "1.59",
+          "quote": "eka eva suhfdDarmmo niDane'pyanuyAti yaH . SarIreRa samaM nASaM sarvvamanyattu gacCati .."
+        },
+        "loss": "In the source this synonym run and its authority (iti Amara) are one indivisible iti-unit: sense enumeration and source attestation are a single construction, split into def + bibl here."
+      },
+      {
+        "def": "nyAyaH; svaBAvaH; AcAraH; upamA; kratuH; ahiMsA; upanizat",
+        "lang": "sa-Latn-x-SLP1",
+        "evidence": "observed",
+        "authority": {
+          "author": "Medinī"
+        },
+        "example": {
+          "source": "mahABArate",
+          "cited": "14.88.21",
+          "quote": "kftvA pravargyaM DarmmAKyaM yaTAvat dvijasattamAH . cakruste viDivadrAjaMstaTEvABizavaM dbijAH .."
         }
       },
       {
-        "def": "paryāya: puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ",
-        "lang": "sa",
+        "def": "dAnAdike, klI",
+        "lang": "sa-Latn-x-SLP1",
         "evidence": "observed",
-        "authority": { "author": "Amara", "cited": "1.4.24" },
-        "loss": "The paryāya synonym run and its authority (ity amaraḥ) are a single iti-unit in the source: sense enumeration and source attestation are one construction, not separable into def + bibl."
-      },
-      {
-        "def": "law; nature; custom; likeness; sacrifice; non-violence; an Upaniṣad",
-        "lang": "en",
-        "evidence": "observed",
-        "authority": { "title": "Medinī" }
-      },
-      {
-        "def": "(in the neuter) a gift, charity",
-        "lang": "en",
-        "evidence": "observed",
-        "authority": { "author": "Hemacandra" }
+        "authority": {
+          "author": "Hemacandra"
+        },
+        "example": {
+          "source": "yogasAre",
+          "quote": "prARAyAmastaTA DyAnaM pratyAhAro'Ta DAraRA . smaraRaYcEva yoge'smin paYca DarmmAH prakIrttitAH .."
+        }
       }
     ],
     "citations": [],
     "loss": [
-      "Indigenous kosa entry: senses are provided explicitly (curated) because the iti-unit/paryāya structure of Sanskrit-to-Sanskrit lexica is not yet parsed by the pilot's MW-tuned extractor. A kosa sense-boundary parser is slice 3."
+      "Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti <author>), the kosa's own sense-and-citation unit."
     ]
   }
 ]
