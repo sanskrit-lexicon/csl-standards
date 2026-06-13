@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { generatedAt } from "./lib/provenance.mjs";
 
 const root = process.cwd();
 const errors = [];
@@ -164,7 +165,7 @@ for (const item of items) {
 }
 
 const report = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: generatedAt(),
   generator: "scripts/validate-tei-profile.mjs",
   profileVersion: TEI_PROFILE,
   validationScope: VALIDATION_SCOPE,

@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { generatedAt } from "./lib/provenance.mjs";
 
 const INPUT = path.resolve(process.cwd(), "data", "pilot", "hard-cases.json");
 const OUTPUTS = [
@@ -72,7 +73,7 @@ async function main() {
   }
 
   const output = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAt(),
     generator: "scripts/select-review-cases.mjs",
     profileVersion: "interoperability-profile-v0.1",
     description: "Deterministic 15-case validation slice for TEI archival and OntoLex/FrAC modeling.",

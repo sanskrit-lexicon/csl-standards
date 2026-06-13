@@ -8,6 +8,14 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Fixed
+- Generated artifacts are now byte-reproducible: the six generators no longer
+  stamp a wallclock `generatedAt`. A shared helper
+  [scripts/lib/provenance.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/provenance.mjs)
+  honours `SOURCE_DATE_EPOCH` (reproducible-builds standard) and otherwise omits
+  the field, so re-running `build-pilot` produces no diff. Removed the stale
+  timestamps from the committed review/sample artifacts.
+
 ### Added
 - Named-source citation layer in the neutral model: [scripts/build-neutral-model.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-neutral-model.mjs)
   now extracts every `<ls>` labeled source across MW/PWG/PWK (519

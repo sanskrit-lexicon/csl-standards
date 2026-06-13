@@ -2,6 +2,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import {spawnSync} from "node:child_process";
+import { generatedAt } from "./lib/provenance.mjs";
 
 const root = process.cwd();
 const strict = process.argv.includes("--strict");
@@ -233,7 +234,7 @@ runShaclValidation(models);
 const failedChecks = checks.filter(check => check.status === "fail");
 const skippedChecks = checks.filter(check => check.status === "skipped");
 const report = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: generatedAt(),
   generator: "scripts/validate-external-profiles.mjs",
   strict,
   caveat: "External validation depends on locally installed TEI and SHACL tooling. Skipped checks are recorded explicitly and fail only in --strict mode.",
