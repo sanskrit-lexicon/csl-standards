@@ -8,6 +8,15 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Changed
+- Centralised the `<ls>` labeled-source parser into
+  [scripts/lib/citations.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/citations.mjs);
+  `build-neutral-model`, `export-tei`, and `export-ontolex` now share it instead
+  of each re-implementing `stripPseudoMarkup` + `extractCitations`. Output is
+  byte-identical (verified: no data churn); net −17 lines. Documented that
+  sense-level citation linkage is blocked upstream on MW sense extraction (only
+  11/50 Western Lex-0 entries yield a machine sense).
+
 ### Added
 - Public **Loss Analysis** page on the Observable site
   ([src/tools/loss-analysis.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/src/tools/loss-analysis.md)):
