@@ -19,14 +19,20 @@ Hand-authored exemplar (the documented target encoding, with inline comments):
 (entries `mw-gaja`, `skd-dharma`; well-formed; 5 senses; 11 `@cert`-bound nodes).
 
 Generated corpus: `npm run export-tei-lex0`
-([`scripts/export-tei-lex0.mjs`](../scripts/export-tei-lex0.mjs)) emits **51**
+([`scripts/export-tei-lex0.mjs`](../scripts/export-tei-lex0.mjs)) emits **56**
 Lex-0 entries under `data/pilot/tei-lex0/*.lex0.xml` — the 50 MW/PWG/PWK neutral-
-model cases plus the indigenous SKD entry. The SKD entry is **parsed from source**
+model cases plus **6 indigenous SKD entries** (*Darmma*, *kīrti*, *kaṇṭha*,
+*vara*, *pāruṣya*, *tūla*). The SKD entries are **parsed from source**
 by `npm run parse-skd-kosa` ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)),
-which segments the kośa record by its closing authorities (*iti amaraḥ* / *iti
-medinī* / *iti hemacandraḥ*) into [`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json).
-Every statement carries `@cert`/`@resp`; `npm run validate-tei-lex0` checks all
-51 against the Lex-0 baseline shape. The three steps are wired into `build-pilot`.
+which segments each kośa record by its closing authorities (*iti amaraḥ* / *iti
+medinī* / *iti hemacandraḥ*, plus *Bharata*, *Jaṭādhara*, *Trikāṇḍaśeṣa*,
+*Śabdaratnāvalī*, *Viśva*, *Śabdacandrikā*) into
+[`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json). Glosses are
+transliterated from the SLP1 source to IAST (the lemma `orth` is left in SLP1, as
+declared); recognised kośas are emitted as `<bibl><title>`, persons as
+`<bibl><author>`. Every statement carries `@cert`/`@resp`; `npm run
+validate-tei-lex0` checks all 56 against the Lex-0 baseline shape. The three steps
+are wired into `build-pilot`.
 
 ## Trust Block
 
@@ -139,7 +145,7 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
 ## 6. Validation status
 
 - **Done (slice 2):** [`scripts/validate-tei-lex0.mjs`](../scripts/validate-tei-lex0.mjs)
-  checks all 51 generated entries for well-formedness and the Lex-0 baseline
+  checks all 56 generated entries for well-formedness and the Lex-0 baseline
   shape — a lemma `form/orth`, a `gramGrp` or `sense`, `@cert` on the lemma orth,
   the profile-version note, and the **absence** of the archival
   `<cit type="source-entry">`. Report: `data/pilot/tei-lex0-review.json`. Note the
@@ -155,9 +161,14 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
 1. A Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation wired
    into `validate-external-profiles`, including the *kośa* sense-boundary
    customisation (sec. 5).
-2. Broaden the *kośa* parser ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs))
-   beyond *Darmma* (L17667) to more SKD/VCP records, and transliterate the
-   SLP1 source text to IAST in glosses.
+2. **Done (slice 4):** broadened the *kośa* parser
+   ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)) beyond *Darmma*
+   (L17667) to 6 SKD records (*kīrti* L7806, *kaṇṭha* L6080, *vara* L31183,
+   *pāruṣya* L21315, *tūla* L15202), with SLP1→IAST transliteration of glosses,
+   a wider authority/work vocabulary, and a work-vs-person `<title>`/`<author>`
+   split. Still open: more records (esp. nibandha-heavy entries like *jñāti*
+   L13859, whose trailing prose group does not reduce to glosses) and VCP, plus
+   sense-level (not entry-level) linkage of an example to its specific sense.
 3. A Lex-0 loss-report row family for the sense/citation-fusion phenomenon,
    alongside the existing archival loss reports.
 4. Richer sense-citation linkage for the Western cases: the neutral model does

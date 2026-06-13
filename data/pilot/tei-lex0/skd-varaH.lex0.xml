@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-DarmmaH">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-varaH">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>CDSL TEI Lex-0 entry: Darmma</title>
+        <title>CDSL TEI Lex-0 entry: vara</title>
         <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
         <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
       </titleStmt>
@@ -19,43 +19,46 @@
   </teiHeader>
   <text>
     <body>
-      <entry xml:id="skd-DarmmaH" xml:lang="sa">
+      <entry xml:id="skd-varaH" xml:lang="sa">
         <form type="lemma">
-          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">Darmma</orth>
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">vara</orth>
         </form>
         <gramGrp>
           <pos norm="noun" cert="high" resp="#machine">noun</pos>
           <gen norm="masculine" cert="high" resp="#source">masculine</gen>
-          <gen norm="neuter" cert="high" resp="#source">neuter</gen>
         </gramGrp>
-        <etym xml:id="skd-DarmmaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">dhṛ</mentioned> <bibl><title>Uṇādisūtra 1.139</title></bibl></etym>
-        <sense xml:id="skd-DarmmaH-sense-1" n="1">
-          <def xml:lang="sa-Latn" cert="high" resp="#source">śubhādṛṣṭam — paryāya: puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ</def>
-          <cit type="example" xml:lang="sa">
-            <quote xml:space="preserve">eka eva suhṛddharmmo nidhane&apos;pyanuyāti yaḥ . śarīreṇa samaṃ nāśaṃ sarvvamanyattu gacchati ..</quote>
-            <bibl><title>hitodeśe</title><citedRange>1.59</citedRange></bibl>
-          </cit>
+        <etym xml:id="skd-varaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">vṛ + ap</mentioned></etym>
+        <sense xml:id="skd-varaH-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">varaṇam — paryāya: vṛtiḥ</def>
           <bibl><author>Amara</author></bibl>
           <note type="model-loss" resp="#source">In the source this synonym run and its authority (iti Amara) are one indivisible iti-unit: sense enumeration and source attestation are a single construction, split into def + bibl here.</note>
         </sense>
-        <sense xml:id="skd-DarmmaH-sense-2" n="2">
-          <def xml:lang="sa-Latn" cert="high" resp="#source">nyāyaḥ; svabhāvaḥ; ācāraḥ; upamā; kratuḥ; ahiṃsā; upaniṣat</def>
+        <sense xml:id="skd-varaH-sense-2" n="2">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">dve veṣṭane; prāthenāviśeṣe ityanye</def>
+          <bibl><author>Bharata</author></bibl>
+        </sense>
+        <sense xml:id="skd-varaH-sense-3" n="3">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">devādvṛvaḥ; devasakāśāt yācitaḥ</def>
+          <bibl><author>Bharata</author></bibl>
+        </sense>
+        <sense xml:id="skd-varaH-sense-4" n="4">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">jāmātā; ṣiḍgaḥ</def>
           <cit type="example" xml:lang="sa">
-            <quote xml:space="preserve">kṛtvā pravargyaṃ dharmmākhyaṃ yathāvat dvijasattamāḥ . cakruste vidhivadrājaṃstathaivābhiṣavaṃ dbijāḥ ..</quote>
-            <bibl><title>mahābhārate</title><citedRange>14.88.21</citedRange></bibl>
+            <quote xml:space="preserve">pramuditavarapakṣamekatastat kṣitipatimaṇḍalamanyato vitānam ..</quote>
+            <bibl><title>raghuḥ</title><citedRange>6.86</citedRange></bibl>
           </cit>
           <bibl><title>Medinī</title></bibl>
         </sense>
-        <sense xml:id="skd-DarmmaH-sense-3" n="3">
-          <def xml:lang="sa-Latn" cert="high" resp="#source">dānādike, klī</def>
-          <cit type="example" xml:lang="sa">
-            <quote xml:space="preserve">prāṇāyāmastathā dhyānaṃ pratyāhāro&apos;tha dhāraṇā . smaraṇañcaiva yoge&apos;smin pañca dharmmāḥ prakīrttitāḥ ..</quote>
-            <bibl><title>yogasāre</title></bibl>
-          </cit>
+        <sense xml:id="skd-varaH-sense-5" n="5">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">gulguluḥ</def>
+          <bibl><title>Śabdaratnāvalī</title></bibl>
+        </sense>
+        <sense xml:id="skd-varaH-sense-6" n="6">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">patiḥ</def>
           <bibl><author>Hemacandra</author></bibl>
         </sense>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
-        <note type="source-record">skd L17667</note>
+        <note type="source-record">skd L31183</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>
     </body>

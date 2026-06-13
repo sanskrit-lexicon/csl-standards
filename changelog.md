@@ -6,6 +6,15 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [Unreleased]
+
+### Added
+- Broadened the SKD *kośa* parser ([scripts/parse-skd-kosa.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs))
+  from one record (*Darmma*) to six, with SLP1→IAST transliteration of glosses,
+  a wider authority/work vocabulary, and a kośa-work-vs-person split rendered as
+  TEI `<bibl><title>` vs `<bibl><author>`. The Lex-0 corpus now has 56 entries
+  (50 MW/PWG/PWK + 6 SKD); `validate-tei-lex0` passes 56/56.
+
 ## [1.0.0] - 2026-06-13
 
 ### Added
