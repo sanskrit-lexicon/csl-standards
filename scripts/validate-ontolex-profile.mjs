@@ -86,7 +86,16 @@ function validateCase(model, reviewIds) {
     return {id: model.id, key: model.key, status: "fail", errors: caseErrors, warnings: caseWarnings};
   }
 
-  caseCheck(nodeTypes(entry).includes("lexicog:Entry"), "missing lexicog:Entry type");
+  // Multi-resource (OntoLex-Lexicog): a lexicog:Entry per source dictionary that
+  // has senses, each describing the lexical entry. (The lemma node itself is
+  // ontolex:LexicalEntry.) A sense-less stub legitimately has no resource.
+  const hasSenses = graph.some(node => node["@type"] === "ontolex:LexicalSense");
+  const resources = graph.filter(node => nodeTypes(node).includes("lexicog:Entry"));
+  caseCheck(!hasSenses || resources.length > 0, "entry has senses but no lexicog:Entry resource (multi-resource view)");
+  for (const resource of resources) {
+    caseCheck(resource["lexicog:describes"]?.["@id"] === entry["@id"],
+      `lexicog:Entry ${resource["@id"]} does not describe the lexical entry`);
+  }
   caseCheck(Boolean(entry["ontolex:canonicalForm"]?.["@id"]), "missing canonical form link");
   caseCheck(entry["csl:profileVersion"] === PROFILE_VERSION, "profile version mismatch");
   caseCheck(entry["csl:validationScope"] === VALIDATION_SCOPE, "validation scope mismatch");
@@ -108,11 +117,16 @@ function validateCase(model, reviewIds) {
     caseCheck(String(record?.["csl:recordNumber"] || "") === String(model.records?.[dict]?.L || ""), `source record number mismatch for ${dict}`);
   }
 
+  // An attestation may attest the entry (entry-level evidence) or a specific
+  // sense (sense-level citation linkage); both targets live in this graph.
+  const senseIds = new Set(graph.filter(node => node["@type"] === "ontolex:LexicalSense").map(node => node["@id"]));
+  const attestTargets = new Set([entry["@id"], ...senseIds]);
   const attestations = graph.filter(node => node["@type"] === "frac:Attestation");
   caseCheck(attestations.length > 0, "expected at least one FrAC attestation");
   for (const attestation of attestations) {
-    caseCheck(Boolean(attestation["frac:attests"]?.["@id"]), `attestation ${attestation["@id"]} lacks attests link`);
-    caseCheck(attestation["frac:attests"]?.["@id"] === entry["@id"], `attestation ${attestation["@id"]} points to a different entry`);
+    const target = attestation["frac:attests"]?.["@id"];
+    caseCheck(Boolean(target), `attestation ${attestation["@id"]} lacks attests link`);
+    caseCheck(attestTargets.has(target), `attestation ${attestation["@id"]} attests neither the entry nor one of its senses`);
     caseCheck(Boolean(attestation["prov:wasDerivedFrom"]?.["@id"]), `attestation ${attestation["@id"]} lacks provenance link`);
     caseCheck(Boolean(attestation["csl:evidenceType"]), `attestation ${attestation["@id"]} lacks evidence type`);
   }
@@ -136,7 +150,8 @@ function validateCase(model, reviewIds) {
   for (const prefix of ["@prefix ontolex:", "@prefix lexicog:", "@prefix frac:", "@prefix prov:", "@prefix rdf:", "@prefix csl:"]) {
     caseCheck(ttl.includes(prefix), `${ttlRelative}: missing ${prefix}`);
   }
-  caseCheck(ttl.includes(`<${entry["@id"]}> a ontolex:LexicalEntry, lexicog:Entry`), `${ttlRelative}: missing entry type triple`);
+  caseCheck(ttl.includes(`<${entry["@id"]}> a ontolex:LexicalEntry`), `${ttlRelative}: missing entry type triple`);
+  caseCheck(!hasSenses || ttl.includes("a lexicog:Entry"), `${ttlRelative}: missing lexicog:Entry resource triple`);
   caseCheck(ttl.includes(`csl:profileVersion "${PROFILE_VERSION}"`), `${ttlRelative}: missing profile version triple`);
   caseCheck(ttl.includes(`csl:validationScope "${VALIDATION_SCOPE}"`), `${ttlRelative}: missing validation scope triple`);
   caseCheck(ttl.includes("frac:Attestation"), `${ttlRelative}: missing FrAC attestation triples`);

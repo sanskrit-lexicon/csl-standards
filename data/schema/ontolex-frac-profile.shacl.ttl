@@ -49,3 +49,13 @@ csl:AttestationShape
   sh:property [ sh:path frac:evidence ; sh:minCount 1 ] ;
   sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ] ;
   sh:property [ sh:path csl:evidenceType ; sh:minCount 1 ] .
+
+# Multi-resource (OntoLex-Lexicog): one lexicog:Entry per source dictionary that
+# has senses, describing the shared lexical entry and listing its senses.
+csl:LexicographicResourceShape
+  a sh:NodeShape ;
+  sh:targetClass lexicog:Entry ;
+  sh:property [ sh:path dct:source ; sh:minCount 1 ] ;
+  sh:property [ sh:path csl:dictionary ; sh:minCount 1 ] ;
+  sh:property [ sh:path lexicog:describes ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path lexicog:component ; sh:minCount 1 ] .

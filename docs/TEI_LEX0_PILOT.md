@@ -218,7 +218,10 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    PWK 203/250 (939 senses, 216 linked). These live in the neutral model (the
    canonical layer); folding three dictionaries' sense divisions into one Lex-0
    entry is an OntoLex-Lexicog (multi-resource) concern, not the Lex-0 baseline's,
-   so the Lex-0 export stays MW-primary. OntoLex/Lexicog surfacing is the next step.
+   so the Lex-0 export stays MW-primary. The **OntoLex export now surfaces them**:
+   one `lexicog:Entry` per source dictionary (each `lexicog:describes` the lemma and
+   lists its `lexicog:component` senses), with `frac:Attestation`s attesting the
+   specific sense — sense-level citation linkage on the semantic side.
 
 ## References
 
