@@ -132,6 +132,8 @@ It records three independent hardening checks:
 |---|---|---|
 | TEI ODD compilation | `teitorelaxng` from the TEI Stylesheets | Compiles `data/schema/tei-archival-profile.odd.xml` to a temporary RELAX NG schema when available. |
 | TEI XML validation | `jing` or `xmllint` | Validates all 250 generated TEI XML files against a compiled RELAX NG schema. Set `CSL_STANDARDS_TEI_RNG` to use a precompiled schema. |
+| Lex-0 ODD compilation | `teitorelaxng` from the TEI Stylesheets | Compiles `data/schema/tei-lex0-profile.odd.xml` to a temporary RELAX NG schema when available. |
+| Lex-0 XML validation | `jing` or `xmllint` | Validates all 256 generated `*.lex0.xml` files against the compiled RELAX NG schema. Set `CSL_STANDARDS_LEX0_RNG` to use a precompiled schema. |
 | SHACL validation | `pyshacl` | Validates all 250 RDF/Turtle files against `data/schema/ontolex-frac-profile.shacl.ttl`. |
 
 The default command records missing external tools as `skipped`; `:strict` turns skipped checks into a failing CI-style result.

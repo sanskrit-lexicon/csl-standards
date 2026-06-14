@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="csl-tei-lex0-profile-odd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CSL Standards TEI Lex-0 Profile ODD</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Project ODD for the generated CDSL TEI Lex-0 baseline entries
+        (<ref target="../../docs/TEI_LEX0_PILOT.md">docs/TEI_LEX0_PILOT.md</ref>).
+        It customises the DARIAH TEI Lex-0 baseline element set for the MW-PWG-PWK
+        pilot and the indigenous SKD <foreign>kośa</foreign> case. Distinct from
+        the archival profile (<ref target="tei-archival-profile.odd.xml">tei-archival-profile.odd.xml</ref>):
+        Lex-0 entries promote lexical structure into TEI dictionary elements and
+        do NOT carry the archival <gi>cit</gi> <att>type</att> source-entry raw
+        quotes.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2026-06-14">Created: project Lex-0 ODD + RNG validation wiring (TEI_LEX0_PILOT sec. 7.1).</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="csl-tei-lex0-profile-v0.1" start="TEI">
+        <moduleRef key="tei"/>
+        <moduleRef key="header"/>
+        <moduleRef key="core"/>
+        <moduleRef key="textstructure"/>
+        <moduleRef key="dictionaries"/>
+        <moduleRef key="linking"/>
+        <moduleRef key="namesdates"/>
+        <moduleRef key="analysis"/>
+        <!-- The TEI Lex-0 baseline element set, as used by the generator:
+             entry, form/orth, gramGrp (pos, gen, gram), sense/def, cit/quote,
+             bibl, etym, usg, re, xr/ref. Each statement binds its epistemic
+             status to @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md). -->
+        <constraintSpec ident="csl-lex0-baseline-shape" scheme="schematron">
+          <constraint>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:rule context="tei:TEI">
+                <sch:assert test="@xml:id">Every Lex-0 document has a stable case xml:id.</sch:assert>
+                <sch:assert test="tei:teiHeader">Every Lex-0 document has a teiHeader.</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:entry">
+                <sch:assert test="@xml:id">Each entry has a stable xml:id.</sch:assert>
+                <sch:assert test="tei:form[@type='lemma']/tei:orth">Each entry has a lemma form with an orthographic form.</sch:assert>
+                <sch:assert test="tei:form/tei:orth/@cert">The lemma orth carries an epistemic @cert.</sch:assert>
+                <sch:assert test="tei:gramGrp or tei:sense">Each entry has a gramGrp or at least one sense.</sch:assert>
+                <sch:assert test="tei:note[@type='profile-version'] = 'tei-lex0-pilot-v0.1'">Each entry declares the Lex-0 profile version.</sch:assert>
+                <sch:assert test="not(tei:cit[@type='source-entry'])">A Lex-0 entry must NOT carry the archival source-entry raw quote (that is the archival profile).</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:sense">
+                <sch:assert test="tei:def or tei:xr or tei:note">Each sense carries a definition, a cross-reference, or an explanatory note.</sch:assert>
+              </sch:rule>
+            </sch:pattern>
+          </constraint>
+        </constraintSpec>
+        <!-- Kośa sense-boundary customisation (TEI_LEX0_PILOT sec. 5). In an
+             indigenous kośa the closing authority formula ("iti <authority>") is
+             the boundary of the sense unit, not detachable apparatus. The Lex-0
+             baseline can only split it into <def> + <bibl>; this profile records
+             that split as a deliberate, documented customisation rather than a
+             silent flattening. SKD entries (xml:id starting "skd-") therefore
+             carry the authority as a <bibl> inside the <sense> it closes, and a
+             model-loss note witnessing the fused iti-unit. -->
+        <constraintSpec ident="csl-lex0-kosa-sense-boundary" scheme="schematron">
+          <constraint>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:rule context="tei:entry[starts-with(@xml:id,'skd-')]/tei:sense">
+                <sch:assert test="tei:bibl or tei:note[@type='model-loss']">Each kośa sense carries its closing authority (bibl) or a model-loss note witnessing the sense/citation fusion.</sch:assert>
+              </sch:rule>
+            </sch:pattern>
+          </constraint>
+        </constraintSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
