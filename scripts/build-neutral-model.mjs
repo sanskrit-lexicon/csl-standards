@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { extractLabeledSources } from "./lib/citations.mjs";
+import { extractMwSenses } from "./lib/mw-senses.mjs";
 
 function parseGenderOrGrammar(raw) {
   if (!raw) return null;
@@ -166,7 +167,7 @@ async function main() {
         }
       },
       forms,
-      senses: [],
+      senses: extractMwSenses(item.records.mw?.raw, item.phenomena || []),
       citations,
       relations,
       loss: []

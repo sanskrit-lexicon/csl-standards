@@ -8,6 +8,15 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- MW sense segmenter ([scripts/lib/mw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/mw-senses.mjs)):
+  populates `model.senses` from the MW record — splitting on `;`/`<div>`, glossing
+  verbal roots as "to …" phrases, and recognising cross-references (`See …`, `= X`,
+  `(for … See …)`). TEI Lex-0 entries carrying a real sense rose from **11 to 44**
+  of 50 (the other 6 are genuine grammatical stubs); cross-references render as
+  `<xr type="cf"><ref>`. Archival TEI and OntoLex outputs are unchanged (they keep
+  their own definition extraction); this unblocks sense-level citation linkage.
+
 ### Changed
 - Centralised the `<ls>` labeled-source parser into
   [scripts/lib/citations.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/citations.mjs);
