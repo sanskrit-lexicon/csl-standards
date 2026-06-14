@@ -7,10 +7,25 @@
 // entry per sense with a `kind` ("gloss" | "cross-reference"); stubs yield [].
 //
 // It deliberately favours precision over recall: a segment is kept only when it
-// reads like a gloss, so grammatical residue stays out of the sense list.
+// reads like a gloss, so grammatical residue stays out of the sense list. Each
+// sense also carries the MW <ls> citations that fall within its segment, so a
+// source can be linked to the specific sense it attests rather than the entry.
+
+import { extractLabeledSources } from "./citations.mjs";
 
 // Leading grammatical tokens to strip before a gloss (POS, gaṇa, fr./cf., etc.).
 const LEAD = "mfn|mf|mn|m|f|n|ind\\.p|ind|am|pl|sg|du|g|fr|cf|a";
+
+// MW <ls> citations within a segment, tagged as MW for the sense-level link.
+function segmentCitations(segment) {
+  const cits = extractLabeledSources(segment).map(c => ({
+    source: c.source,
+    type: c.type,
+    dictionary: "mw",
+    ...(c.inheritedFrom ? { inheritedFrom: c.inheritedFrom } : {})
+  }));
+  return cits.length ? { citations: cits } : {};
+}
 
 function cleanGloss(value) {
   return String(value || "")
@@ -66,7 +81,7 @@ function extractRootSenses(body) {
     g = g.slice(at).replace(/\s*[([].*$/, "");  // cut trailing etymology/refs
     g = g.replace(/[\s,;:.]+$/, "").trim();
     if (isGloss(g) && !senses.some(s => s.def === g)) {
-      senses.push({ def: g, evidence: "derived", kind: "gloss" });
+      senses.push({ def: g, evidence: "derived", kind: "gloss", ...segmentCitations(segment) });
     }
     if (senses.length >= 12) break;
   }
@@ -86,7 +101,7 @@ export function extractMwSenses(raw, phenomena = []) {
   // "See …" or "= <synonym> …"
   if (/^see\b/i.test(lead) || /^=\s*[A-Za-z√]/.test(lead)) {
     const def = lead.replace(/[\s.,)]+$/, "").trim();
-    return isGloss(def) ? [{ def, evidence: "derived", kind: "cross-reference" }] : [];
+    return isGloss(def) ? [{ def, evidence: "derived", kind: "cross-reference", ...segmentCitations(body) }] : [];
   }
   // Parenthetical redirect: "(for … See <target> …)".
   const redirect = refsInline.match(/\(\s*for\b[^)]*?\bSee\b\s*([^)]*)\)/i);
@@ -106,7 +121,7 @@ export function extractMwSenses(raw, phenomena = []) {
   for (const segment of segments) {
     const def = tidy(segment);
     if (isGloss(def) && !senses.some(s => s.def === def)) {
-      senses.push({ def, evidence: "derived", kind: "gloss" });
+      senses.push({ def, evidence: "derived", kind: "gloss", ...segmentCitations(segment) });
     }
     if (senses.length >= 12) break;
   }

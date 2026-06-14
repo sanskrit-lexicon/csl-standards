@@ -144,9 +144,11 @@ of the phenomena (the roadmap's "do not hide model failures").
   each tagged with its `dictionary`. The TEI Lex-0 export now emits them as
   entry-level `<bibl type="named-source" source="#dict-…">`, so a lemma like
   *arcya* — uncited in MW — carries PWG's eight named sources. MW senses are now
-  extracted too (44 of 50 Western entries carry a `<def>`/`<xr>`, up from 11).
-  Still open: **sense-level** linkage (which sense each citation attests); the
-  named sources are entry-level (see [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md) §6).
+  extracted too (44 of 50 Western entries carry a `<def>`/`<xr>`, up from 11), and
+  **sense-level linkage is done**: each MW `<ls>` is attached to the sense it
+  attests (25 entries / 52 senses), so MW sources sit inside the `<sense>` and only
+  the cross-dictionary PWG/PWK sources remain entry-level (see
+  [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md) §6).
 - **Schema *phenomena* not yet emitted:** `named-kosha-citation`,
   `citation-coordinate`, `editorial-reference` (defined in
   [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) as loss-report phenomena but

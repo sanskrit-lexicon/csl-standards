@@ -9,6 +9,14 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- Sense-level citation linkage: `extractMwSenses` now carries per-sense
+  `citations` (the MW `<ls>` within each `<div>` segment), and the TEI Lex-0
+  export renders them inside the `<sense>` — named sources as
+  `<bibl type="named-source" source="#dict-mw">`, the hedge as `<usg type="hint">`.
+  MW sources are no longer duplicated at entry level (the entry index keeps the
+  cross-dictionary PWG/PWK sources). 25 entries / 52 senses carry linked citations
+  (e.g. *ac* "to adorn" → `Dharmaś.`). Completes TEI_LEX0_PILOT §7.4; archival
+  TEI/OntoLex unchanged.
 - MW sense segmenter ([scripts/lib/mw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/mw-senses.mjs)):
   populates `model.senses` from the MW record — splitting on `;`/`<div>`, glossing
   verbal roots as "to …" phrases, and recognising cross-references (`See …`, `= X`,
