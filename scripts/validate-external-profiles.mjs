@@ -107,16 +107,19 @@ function tryTeiOddCompile(compiler, oddPath, rngPath) {
   return {ok: false, attempts};
 }
 
-function resolveTeiRng() {
-  const oddPath = path.join(root, "data/schema/tei-archival-profile.odd.xml");
-  const envRng = process.env.CSL_STANDARDS_TEI_RNG;
+// Resolve a RELAX NG schema for a profile: prefer a precompiled schema from an
+// env var, else compile the project ODD with teitorelaxng, else skip. `type`
+// prefixes the recorded check names (e.g. "tei", "lex0").
+function resolveRng({type, oddRel, envVar, rngName}) {
+  const oddPath = path.join(root, oddRel);
+  const envRng = process.env[envVar];
   if (envRng) {
     const resolved = path.resolve(root, envRng);
     if (!fs.existsSync(resolved)) {
-      failed("tei-rng", `CSL_STANDARDS_TEI_RNG points to a missing file: ${resolved}`);
+      failed(`${type}-rng`, `${envVar} points to a missing file: ${resolved}`);
       return "";
     }
-    passed("tei-rng", "Using precompiled RELAX NG schema from CSL_STANDARDS_TEI_RNG.", {
+    passed(`${type}-rng`, `Using precompiled RELAX NG schema from ${envVar}.`, {
       schema: rel(resolved)
     });
     return resolved;
@@ -125,72 +128,82 @@ function resolveTeiRng() {
   const compiler = commandPath("teitorelaxng");
   if (!compiler) {
     skipped(
-      "tei-odd-compile",
-      "TEI Stylesheets command teitorelaxng is not available; install TEI Stylesheets or set CSL_STANDARDS_TEI_RNG to a precompiled RELAX NG schema."
+      `${type}-odd-compile`,
+      `TEI Stylesheets command teitorelaxng is not available; install TEI Stylesheets or set ${envVar} to a precompiled RELAX NG schema.`
     );
     return "";
   }
 
   const outDir = makeTempDir();
-  const rngPath = path.join(outDir, "csl-tei-archival-profile.rng");
+  const rngPath = path.join(outDir, rngName);
   const result = tryTeiOddCompile(compiler, oddPath, rngPath);
   if (!result.ok) {
-    failed("tei-odd-compile", "TEI ODD to RELAX NG compilation failed.", {
+    failed(`${type}-odd-compile`, `${oddRel} ODD to RELAX NG compilation failed.`, {
       attempts: result.attempts
     });
     return "";
   }
 
-  passed("tei-odd-compile", "TEI ODD compiled to RELAX NG with teitorelaxng.", {
+  passed(`${type}-odd-compile`, `${oddRel} compiled to RELAX NG with teitorelaxng.`, {
     compiler,
     source: rel(oddPath)
   });
   return rngPath;
 }
 
-function teiValidator() {
+function rngValidator() {
   const jing = commandPath("jing");
   if (jing) return {tool: "jing", command: jing};
 
   const xmllint = commandPath("xmllint");
   if (xmllint) return {tool: "xmllint", command: xmllint};
 
-  skipped("tei-xml-validator", "No external RELAX NG validator found; install jing or xmllint.");
+  skipped("rng-validator", "No external RELAX NG validator found; install jing or xmllint.");
   return null;
 }
 
-function runTeiValidation(models) {
-  const rngPath = resolveTeiRng();
-  const validator = rngPath ? teiValidator() : null;
+// Validate a set of XML files against an RNG schema. `type` prefixes the check
+// names; `files` is a list of {id, path}.
+function runRngValidation({type, rngPath, validator, files}) {
   if (!rngPath || !validator) return;
-
-  for (const model of models) {
-    const xmlPath = path.join(root, "data/pilot/tei", `${safeCaseId(model.id)}.xml`);
+  for (const {id, path: xmlPath} of files) {
     if (!fs.existsSync(xmlPath)) {
-      failed("tei-xml", `Missing TEI XML file for ${model.id}.`, {id: model.id, file: rel(xmlPath)});
+      failed(`${type}-xml`, `Missing ${type} XML file for ${id}.`, {id, file: rel(xmlPath)});
       continue;
     }
-
     const args = validator.tool === "jing"
       ? [rngPath, xmlPath]
       : ["--noout", "--relaxng", rngPath, xmlPath];
     const result = run(validator.command, args);
     if (result.status === 0) {
-      passed("tei-xml", `External TEI XML validation passed for ${model.id}.`, {
-        id: model.id,
-        tool: validator.tool,
-        file: rel(xmlPath)
+      passed(`${type}-xml`, `External ${type} XML validation passed for ${id}.`, {
+        id, tool: validator.tool, file: rel(xmlPath)
       });
     } else {
-      failed("tei-xml", `External TEI XML validation failed for ${model.id}.`, {
-        id: model.id,
-        tool: validator.tool,
-        file: rel(xmlPath),
-        stdout: tail(result.stdout),
-        stderr: tail(result.stderr)
+      failed(`${type}-xml`, `External ${type} XML validation failed for ${id}.`, {
+        id, tool: validator.tool, file: rel(xmlPath),
+        stdout: tail(result.stdout), stderr: tail(result.stderr)
       });
     }
   }
+}
+
+function teiFiles(models) {
+  return models.map(model => ({
+    id: model.id,
+    path: path.join(root, "data/pilot/tei", `${safeCaseId(model.id)}.xml`)
+  }));
+}
+
+// Every generated Lex-0 entry (*.lex0.xml), excluding the hand-authored
+// *.lex0.tei.xml exemplar.
+function lex0Files() {
+  const dir = path.join(root, "data/pilot/tei-lex0");
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter(name => name.endsWith(".lex0.xml"))
+    .sort()
+    .map(name => ({id: name.replace(/\.lex0\.xml$/, ""), path: path.join(dir, name)}));
 }
 
 function runShaclValidation(models) {
@@ -228,7 +241,24 @@ function runShaclValidation(models) {
 }
 
 const models = readJson("data/pilot/neutral-model.json");
-runTeiValidation(models);
+const validator = rngValidator();
+
+const teiRng = resolveRng({
+  type: "tei",
+  oddRel: "data/schema/tei-archival-profile.odd.xml",
+  envVar: "CSL_STANDARDS_TEI_RNG",
+  rngName: "csl-tei-archival-profile.rng"
+});
+runRngValidation({type: "tei", rngPath: teiRng, validator, files: teiFiles(models)});
+
+const lex0Rng = resolveRng({
+  type: "lex0",
+  oddRel: "data/schema/tei-lex0-profile.odd.xml",
+  envVar: "CSL_STANDARDS_LEX0_RNG",
+  rngName: "csl-tei-lex0-profile.rng"
+});
+runRngValidation({type: "lex0", rngPath: lex0Rng, validator, files: lex0Files()});
+
 runShaclValidation(models);
 
 const failedChecks = checks.filter(check => check.status === "fail");

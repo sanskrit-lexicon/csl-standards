@@ -8,6 +8,17 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- Project **TEI Lex-0 ODD** ([data/schema/tei-lex0-profile.odd.xml](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml))
+  and RNG validation wired into `validate-external-profiles`: it compiles the ODD
+  with `teitorelaxng` (or uses `CSL_STANDARDS_LEX0_RNG`) and validates every
+  `*.lex0.xml` with `jing`/`xmllint`, recording a `skipped` check where the Java
+  toolchain is absent. The ODD encodes the Lex-0 baseline shape and the *kośa*
+  sense-boundary customisation (TEI_LEX0_PILOT §5) as Schematron constraints.
+  Generalised the harness's RNG resolver/validator so TEI-archival and Lex-0 share
+  one path. Completes TEI_LEX0_PILOT §7.1 (authoring + wiring; running it still
+  needs the local toolchain).
+
 ### Changed
 - **Extended the pilot from 50 to 250 hard cases.** The sampler default is now
   250 ([scripts/sample-hard-cases.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/sample-hard-cases.mjs)),

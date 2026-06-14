@@ -8,16 +8,26 @@
     "shaclValidator": null
   },
   "totals": {
-    "checks": 2,
+    "checks": 4,
     "passed": 0,
     "failed": 0,
-    "skipped": 2
+    "skipped": 4
   },
   "checks": [
+    {
+      "type": "rng-validator",
+      "status": "skipped",
+      "message": "No external RELAX NG validator found; install jing or xmllint."
+    },
     {
       "type": "tei-odd-compile",
       "status": "skipped",
       "message": "TEI Stylesheets command teitorelaxng is not available; install TEI Stylesheets or set CSL_STANDARDS_TEI_RNG to a precompiled RELAX NG schema."
+    },
+    {
+      "type": "lex0-odd-compile",
+      "status": "skipped",
+      "message": "TEI Stylesheets command teitorelaxng is not available; install TEI Stylesheets or set CSL_STANDARDS_LEX0_RNG to a precompiled RELAX NG schema."
     },
     {
       "type": "shacl-engine",

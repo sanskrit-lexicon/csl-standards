@@ -4,8 +4,9 @@ Date: 2026-06-13
 
 Status: draft. Slice 1 (target encoding + worked exemplars), slice 2 (generator +
 structural validator), and slice 3 (a source *kośa* parser, so the indigenous
-entry is ingested from SKD rather than hand-curated) are done. The Lex-0 ODD and
-RNG validation remain (sec. 6–7).
+entry is ingested from SKD rather than hand-curated) are done. The Lex-0 ODD is
+authored and RNG validation is wired into the external harness (sec. 6); actually
+running it needs the Java/TEI-Stylesheets toolchain.
 
 This pilot establishes a **TEI Lex-0** baseline encoding for CDSL dictionary
 entries, covering one Western dictionary (Monier-Williams) and — for the first
@@ -44,8 +45,8 @@ are wired into `build-pilot`.
 - Validation: `python -m xml.etree.ElementTree` parse passes; full RNG check
   deferred to slice 2.
 - Owner repo: `csl-standards`.
-- Next use: slice 2 — a generator over the pilot set (incl. SKD ingestion) and
-  Lex-0 RNG validation wired into `build-pilot`.
+- Next use: slice 2 — a generator over the pilot set (incl. SKD ingestion); Lex-0
+  RNG validation is wired into `validate-external-profiles` (sec. 6).
 
 ## 1. What already exists, and the gap
 
@@ -152,15 +153,22 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
   archival validator [`validate-tei-profile.mjs`](../scripts/validate-tei-profile.mjs)
   does **not** apply here (it requires three source-entry cits per entry, which a
   Lex-0 entry has none of).
-- **Not yet:** validation against the **TEI Lex-0 RNG** itself. That needs the
-  DARIAH Lex-0 schema run through `jing`/`teitorelaxng` (the optional external
-  harness, `validate-external-profiles`), and a project Lex-0 ODD.
+- **Wired (RNG):** a project Lex-0 ODD
+  ([`data/schema/tei-lex0-profile.odd.xml`](../data/schema/tei-lex0-profile.odd.xml))
+  is authored and the RNG validation is wired into
+  [`validate-external-profiles`](../scripts/validate-external-profiles.mjs): it
+  compiles the ODD with `teitorelaxng` (or uses a precompiled schema from
+  `CSL_STANDARDS_LEX0_RNG`) and validates every `*.lex0.xml` with `jing`/`xmllint`.
+  The run is **gated on the local Java/TEI-Stylesheets toolchain**; where those are
+  absent it is recorded as a `skipped` check (not a silent pass), exactly like the
+  archival `tei-rng` check.
 
 ## 7. Next steps
 
-1. A Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation wired
-   into `validate-external-profiles`, including the *kośa* sense-boundary
-   customisation (sec. 5).
+1. **Done:** a Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation
+   wired into `validate-external-profiles`, including the *kośa* sense-boundary
+   customisation (sec. 5) as a documented Schematron constraint. Still external:
+   actually *running* the RNG needs the Java/TEI-Stylesheets toolchain (see sec. 6).
 2. **Done (slice 4):** broadened the *kośa* parser
    ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)) beyond *Darmma*
    (L17667) to 6 SKD records (*kīrti* L7806, *kaṇṭha* L6080, *vara* L31183,
