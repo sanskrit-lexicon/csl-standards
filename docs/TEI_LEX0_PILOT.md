@@ -184,13 +184,20 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    The `<ls>` parser is now shared across the three generators
    ([`scripts/lib/citations.mjs`](../scripts/lib/citations.mjs)) — build-neutral,
    export-tei, and export-ontolex no longer each re-implement it.
-   Still open: **sense-level** linkage — the model does not yet link a citation to
-   the specific sense it attests, so the named sources are entry-level (the parsed
-   *kośa* senses already carry their authority). This is **blocked upstream on MW
-   sense extraction**: only 11 of the 50 Western Lex-0 entries currently yield any
-   machine sense at all (39 are "unparsed"), so most cases have no sense to link a
-   citation to. A stronger MW gloss/`<div>` segmenter is the prerequisite, and is
-   its own slice.
+5. **Done:** the MW sense segmenter
+   ([`scripts/lib/mw-senses.mjs`](../scripts/lib/mw-senses.mjs)) populates
+   `model.senses` from the MW record — splitting on `;`/`<div>`, glossing verbal
+   roots as "to …" phrases, and recognising cross-references (`See …`, `= X`,
+   `(for … See …)`) as `kind: "cross-reference"`. Coverage rose from **11 to 44**
+   of 50 Western Lex-0 entries carrying a real `<def>`/`<xr>` (the remaining 6 are
+   genuine grammatical stubs — gaṇa membership, a homonym number, an etymology-only
+   `cf.`, a name-only entry — that have no English gloss). The Lex-0 export renders
+   glosses as `<def>` and cross-references as `<xr type="cf"><ref>`.
+6. **Now unblocked: sense-level citation linkage.** Senses exist for the Western
+   cases, but the model still attaches named sources at the entry level rather than
+   to the specific sense (`<div>` segment) each `<ls>` falls under (the parsed
+   *kośa* senses already carry their authority). With senses materialized, linking
+   each citation to its sense segment is the next slice.
 
 ## References
 

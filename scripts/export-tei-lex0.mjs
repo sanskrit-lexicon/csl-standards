@@ -108,7 +108,11 @@ function senseXml(sense, id, index) {
   const lines = [`<sense xml:id="${sid}" n="${index + 1}">`];
   const lang = sense.lang || "en";
   const ev = sense.evidence || "derived";
-  lines.push(`  <def xml:lang="${escapeXml(lang)}"${cert(ev)}>${escapeXml(sense.def)}</def>`);
+  if (sense.kind === "cross-reference") {
+    lines.push(`  <xr type="cf"><ref xml:lang="${escapeXml(lang)}"${cert(ev)}>${escapeXml(sense.def)}</ref></xr>`);
+  } else {
+    lines.push(`  <def xml:lang="${escapeXml(lang)}"${cert(ev)}>${escapeXml(sense.def)}</def>`);
+  }
   if (sense.example) {
     lines.push(`  <cit type="example" xml:lang="sa">`);
     lines.push(`    <quote xml:space="preserve">${escapeXml(sense.example.quote)}</quote>`);
