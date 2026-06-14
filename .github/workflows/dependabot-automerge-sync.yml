@@ -1,0 +1,51 @@
+name: Dependabot auto-merge — org sync
+
+# Weekly onboarding so the hands-off Dependabot setup "always runs without me".
+# Ensures every non-archived gasyoun/* and sanskrit-lexicon/* repo has:
+#   * .github/dependabot.yml                       (opens Dependabot PRs)
+#   * .github/workflows/dependabot-auto-merge.yml  (merges them once checks pass)
+#   * allow_auto_merge / allow_squash_merge / delete_branch_on_merge settings
+# Idempotent — only adds what is missing; never overwrites an existing file.
+#
+# Runs entirely on GitHub (no local machine, no Claude). Inert until the
+# ORG_AUTOMERGE_TOKEN secret is set — see docs/dependabot-automerge-sync.md.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'          # Monday 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'List actions without applying them'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dependabot-automerge-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Onboard repos missing Dependabot auto-merge
+        env:
+          GH_TOKEN: ${{ secrets.ORG_AUTOMERGE_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::warning title=ORG_AUTOMERGE_TOKEN missing::Set a repo secret named ORG_AUTOMERGE_TOKEN (a PAT with repo+workflow scope, or a GitHub App token with contents:write + administration:write + workflows:write) so this job can write to sibling repos. Skipping this run."
+            exit 0
+          fi
+          python .github/scripts/onboard_dependabot.py
