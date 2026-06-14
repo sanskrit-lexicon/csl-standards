@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-arj">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: arj</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-arj" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">arj</orth>
+        </form>
+        <gramGrp>
+          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="verb-class" cert="high" resp="#source">1P,1Ā</gram>
+        </gramGrp>
+        <etym xml:id="mw-pwg-pwk-arj-etym-root" type="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:fj,14" cert="high" resp="#source">fj,14</ref></etym>
+        <sense xml:id="mw-pwg-pwk-arj-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">to procure, acquire, &amp;</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Naiṣ.</abbr></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Bhaṭṭ.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-arj-sense-2" n="2">
+          <def xml:lang="en" cert="high" resp="#machine">to go,, to stand firm,, to procure</def>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-arj-sense-3" n="3">
+          <def xml:lang="en" cert="high" resp="#machine">to be of good health</def>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-arj-sense-4" n="4">
+          <def xml:lang="en" cert="high" resp="#machine">to procure, acquire, obtain</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Bhaṭṭ.</abbr></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 7,49.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NAIṢ. 5,84.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>BHAṬṬ. 14,74.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 33,52.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>M. 11,193.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MBH. 1,8134.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KATHĀS. 6,36.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MṚCCH. 53,13.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>BHAṬṬ. 17,38.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>15,43.</abbr><ref type="inherited-siglum">BHAṬṬ.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>INDR. 3,7.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>M. 4,193.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>NAIṢ.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>BHAṬṬ.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-15" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>GOBH. 1,8,28</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-arj-cite-16" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>BHĀVAPR. 3,30</abbr></bibl>
+        <note type="source-record">mw L15739</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

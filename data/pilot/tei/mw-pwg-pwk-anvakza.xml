@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-anvakza">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case anvakza</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-anvakza-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Aanvakza">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">anvakza</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-anvakza-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-anvakza-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-anvakza-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anvakza-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-anvakza-record-pwg">
+        <abbr>AK. 3,2,28.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anvakza-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-anvakza-record-pwg">
+        <abbr>H. 1457.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anvakza-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-anvakza-record-pwg">
+        <abbr>VOP. 6,65.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anvakza-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-anvakza-record-pwg">
+        <abbr>R. 2,52,69.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anvakza-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-anvakza-record-pwg">
+        <abbr>YĀJÑ. 3,21.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anvakza-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-anvakza-record-pwk">
+        <abbr>GAUT. 14,9</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-anvakza-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">8726</idno>
+        <idno type="line">31834</idno>
+        <idno type="pc">46,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;8726&lt;pc&gt;46,1&lt;k1&gt;anvakza&lt;k2&gt;anv-akza&lt;e&gt;1
+&lt;s&gt;anv-akza&lt;/s&gt; ¦ &lt;lex&gt;mfn.&lt;/lex&gt; (&lt;ab&gt;fr.&lt;/ab&gt; &lt;hom&gt;4.&lt;/hom&gt; &lt;s&gt;akza&lt;/s&gt;), following, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m:f:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-anvakza-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">3613</idno>
+        <idno type="line">30208</idno>
+        <idno type="pc">1-0271</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;3613&lt;pc&gt;1-0271&lt;k1&gt;anvakza&lt;k2&gt;anvakza
+{#anvakza#}¦ (1. {#anu + akza#} {%Auge%}) &lt;lex&gt;adj.&lt;/lex&gt; {%nachfolgend%}
+&lt;ls&gt;AK. 3,2,28.&lt;/ls&gt;
+&lt;ls&gt;H. 1457.&lt;/ls&gt; Davon {#˚kzam#} &lt;lex&gt;adv.&lt;/lex&gt; &lt;is&gt;gaṇa&lt;/is&gt; {#SaradAdi#};
+&lt;ls&gt;VOP. 6,65.&lt;/ls&gt; {%hinterher%}: {#Aroha tvam — nAvamimAm — sItAM cAropayAnvakzam#}
+&lt;ls&gt;R. 2,52,69.&lt;/ls&gt; {%unmittelbar darnach, sogleich%}
+&lt;ls&gt;YĀJÑ. 3,21.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-anvakza-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">5718</idno>
+        <idno type="line">21197</idno>
+        <idno type="pc">1-067-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5718&lt;pc&gt;1-067-c&lt;k1&gt;anvakza&lt;k2&gt;anvakza
+{#anvakza#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 *&lt;lex&gt;Adj.&lt;/lex&gt; {%nachfolgend%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {#˚m#} &lt;lex&gt;Adv.&lt;/lex&gt; {%hinterher, unmittelbar darnach%} &lt;ls&gt;GAUT. 14,9&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

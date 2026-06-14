@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-il">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case il</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-il-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Ail">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">il</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">6P,10P</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-il-sense-1" n="1">
+      <def xml:lang="en">send, cast</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-il-sense-2" n="2">
+      <def xml:lang="en">sleep</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-il-sense-3" n="3">
+      <def xml:lang="en">keep still, not to move</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-il-sense-4" n="4">
+      <def xml:lang="en">become quiet</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-il-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:il,9">il,9</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>Dhātup. xxviii, 65</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>Hariv.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>VP.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-4" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-5" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-6" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>AV. i, 17, 4</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-7" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>Pāṇ. iii, 1, 51</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-8" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>AV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-9" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>TS.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-mw-10" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-mw">
+        <abbr>ŚBr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>AV. 1,17,4</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>MÜLLER</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>ṚV. 1,191,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>AV. 10,7,37.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>TS. 6,4,2,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>AIT. BR. 5,25.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>ŚAT. BR. 2,3,1,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>3,9,2,5.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>10,3,3,8.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>P. 3,1,51.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>Sch. 7,2,5</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>VOP. 8,86.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>18,1.</abbr>
+        <ref type="inherited-siglum">VOP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>DHĀTUP. 32,118</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>28,65</abbr>
+        <ref type="inherited-siglum">DHĀTUP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>HARIV. 620</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwg">
+        <abbr>AV. 6,16,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-il-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-il-record-pwk">
+        <abbr>VP.² 3,234</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-il-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">29396</idno>
+        <idno type="line">103969</idno>
+        <idno type="pc">168,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;29396&lt;pc&gt;168,2&lt;k1&gt;il&lt;k2&gt;il&lt;e&gt;1
+&lt;s&gt;il&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 6. &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;ilati&lt;/s&gt; (&lt;s&gt;iyela&lt;/s&gt;, &lt;s&gt;elizyati&lt;/s&gt;, &lt;s&gt;ElIt&lt;/s&gt;, &lt;s&gt;elitum&lt;/s&gt;, &lt;ls&gt;Dhātup. xxviii, 65&lt;/ls&gt;) to come, &lt;ls&gt;Hariv.&lt;/ls&gt;; &lt;ls&gt;VP.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to send, cast, &lt;ls&gt;L.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to sleep, &lt;ls&gt;L.&lt;/ls&gt; : &lt;ab&gt;cl.&lt;/ab&gt; 10. &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;ilayati&lt;/s&gt; (&lt;ab&gt;Impv.&lt;/ab&gt; 2. &lt;ab&gt;pl.&lt;/ab&gt; &lt;s&gt;ila/yatA&lt;/s&gt;, &lt;ls&gt;AV. i, 17, 4&lt;/ls&gt;) or &lt;s&gt;elayati&lt;/s&gt; (&lt;ls&gt;Pāṇ. iii, 1, 51&lt;/ls&gt;) &lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;Elilat&lt;/s&gt; or &lt;s&gt;ElayIt&lt;/s&gt;, to keep still, not to move;
+&lt;div n=&quot;to&quot;/&gt;to become quiet, &lt;ls&gt;AV.&lt;/ls&gt;; &lt;ls&gt;TS.&lt;/ls&gt;; &lt;ls&gt;ŚBr.&lt;/ls&gt; &amp;c.;
+&lt;div n=&quot;vp&quot;/&gt; &lt;info westergaard=&quot;ila,28.65,06.0064&quot;/&gt;&lt;info whitneyroots=&quot;il,9&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;6P,10P&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-il-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">10344</idno>
+        <idno type="line">91509</idno>
+        <idno type="pc">1-0817</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;10344&lt;pc&gt;1-0817&lt;k1&gt;il&lt;k2&gt;il
+{#il#}¦, {#ila/yati#}; &lt;ab&gt;imperf.&lt;/ab&gt; {#ElayIt#}; &lt;ab&gt;partic.&lt;/ab&gt; {#ilita/#}; {%stillhalten, sich nicht rühren; zur Ruhe kommen%}: {#tizWa^te\laya^tA\#} (so mehrere &lt;ab&gt;Handschrr.&lt;/ab&gt;, auch
+&lt;ls&gt;AV. 1,17,4&lt;/ls&gt;; &lt;ls&gt;MÜLLER&lt;/ls&gt; schreibt {#iLa˚) su ka^m#} {%stehet, haltet still!%}
+&lt;ls&gt;ṚV. 1,191,6.&lt;/ls&gt; {#ka\TaM vAto\ nela^yati ka\TaM na ra^mate\ mana^H#}
+&lt;ls&gt;AV. 10,7,37.&lt;/ls&gt;
+&lt;ls&gt;TS. 6,4,2,6.&lt;/ls&gt;
+&lt;ls&gt;AIT. BR. 5,25.&lt;/ls&gt; {#ilitA hi Sere#}
+&lt;ls&gt;ŚAT. BR. 2,3,1,3.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,9,2,5.&lt;/ls&gt; {#AsAM devatAnAM yAM yAM kAmayate sA BUtvelayati#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;10,3,3,8.&lt;/ls&gt; {#elayati#}
+&lt;ls&gt;P. 3,1,51.&lt;/ls&gt; {#kAmamElayIt#} (&lt;ab&gt;angebl.&lt;/ab&gt; &lt;ab&gt;ved.&lt;/ab&gt; &lt;ab&gt;aor.&lt;/ab&gt;, entsprechend dem klass. {#Elilat#})
+&lt;ls&gt;Sch. 7,2,5&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;ls&gt;VOP. 8,86.&lt;/ls&gt; &lt;ls n=&quot;VOP.&quot;&gt;18,1.&lt;/ls&gt; Nach &lt;ls&gt;DHĀTUP. 32,118&lt;/ls&gt; bedeutet {#il, ela/yati#} {%werfen%}; nach
+&lt;ls n=&quot;DHĀTUP.&quot;&gt;28,65&lt;/ls&gt; {#il, ila/ti#} {%schlafen; werfen; gehen.%} Den &lt;ab&gt;imperat.&lt;/ab&gt; {#ila#} ({%komme%}) haben wir
+&lt;ls&gt;HARIV. 620&lt;/ls&gt; zur Erklärung des Ursprungs des &lt;ab&gt;N. pr.&lt;/ab&gt; {#ilA#} (&lt;ab&gt;s. d.&lt;/ab&gt;): {#tAmiletyeva hovAca manurdaRqaDarastadA . anugacCasva mAM Badre tAmilA pratyuvAca ha .#}
+&lt;div n=&quot;p&quot;&gt;— {#ava#} {%zur Ruhe kommen%}: {#tOvi^li\ke &apos;ve^la\yAvA\yamE^la\ba E^layIt#}
+&lt;ls&gt;AV. 6,16,3.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-il-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">17247</idno>
+        <idno type="line">66092</idno>
+        <idno type="pc">1-208-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;17247&lt;pc&gt;1-208-b&lt;k1&gt;il&lt;k2&gt;il
+√{#il#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 {#ilati#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%kommen%} &lt;ls&gt;VP.² 3,234&lt;/ls&gt;.
+&lt;div n=&quot;2&quot;&gt;— b〉 *{#svapnakzepaRayoH#}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {#ila/yati#} {%stillstehen, sich nicht rühren, zur Ruhe kommen%}. {#iLa/yati#} fehlerhaft.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; *{#ilayati#} ({#preraRe#}).
+&lt;div n=&quot;p&quot;&gt;— Mit {#ava#} ({#ilayati#}) {%zur Ruhe kommen%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

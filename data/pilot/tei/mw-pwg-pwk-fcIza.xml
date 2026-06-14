@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-fcIza">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case fcIza</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>continuation</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-fcIza-entry" type="continuation" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AfcIza">
+    <form type="continuation">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">fcIza</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-fcIza-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <xr xml:id="mw-pwg-pwk-fcIza-continuation-relation" type="adjacency-continuation-parent" target="#e-1A"><ref>MW e=1A</ref></xr>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-fcIza-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-fcIza-record-pwg">
+        <abbr>H. 1020.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-fcIza-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-fcIza-record-pwg">
+        <abbr>WILS.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-fcIza-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">38767</idno>
+        <idno type="line">135954</idno>
+        <idno type="pc">225,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;38767&lt;pc&gt;225,2&lt;k1&gt;fcIza&lt;k2&gt;fcIza&lt;e&gt;1A
+¦ [&lt;ab&gt;cf.&lt;/ab&gt; &lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;fjIza&lt;/s&gt;.]&lt;info lex=&quot;inh&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-fcIza-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">12940</idno>
+        <idno type="line">116597</idno>
+        <idno type="pc">1-1042</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;12940&lt;pc&gt;1-1042&lt;k1&gt;fcIza&lt;k2&gt;fcIza
+{#fcIza#}¦ &lt;lex&gt;n.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%Kochtopf, Bratpfanne%}
+&lt;ls&gt;H. 1020.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%eine &lt;ab&gt;best.&lt;/ab&gt; Hölle%}
+&lt;ls&gt;WILS.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#fjIza#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-fcIza-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">21343</idno>
+        <idno type="line">82796</idno>
+        <idno type="pc">1-261-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;21343&lt;pc&gt;1-261-a&lt;k1&gt;fcIza&lt;k2&gt;*fcIza
+*{#fcIza#}¦ &lt;lex&gt;n.&lt;/lex&gt; = {#fjIza#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%Bratpfanne%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%eine &lt;ab&gt;best.&lt;/ab&gt; Hölle%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

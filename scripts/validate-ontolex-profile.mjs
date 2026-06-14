@@ -6,7 +6,7 @@ const root = process.cwd();
 const errors = [];
 const warnings = [];
 const PROFILE_VERSION = "ontolex-frac-profile-v0.1";
-const VALIDATION_SCOPE = "full-50-ontolex-shacl-profile";
+const VALIDATION_SCOPE = "full-ontolex-shacl-profile";
 
 function safeCaseId(id) {
   return id.replace(/:/g, "-");
@@ -73,7 +73,7 @@ function validateCase(model, reviewIds) {
   const graph = doc["@graph"] || [];
   const context = doc["@context"] || {};
   const ttl = fs.readFileSync(ttlFile, "utf8");
-  const expectedStatus = reviewIds.has(model.id) ? "validated-slice" : "full-50-machine-review";
+  const expectedStatus = reviewIds.has(model.id) ? "validated-slice" : "full-machine-review";
 
   for (const prefix of ["ontolex", "lexicog", "decomp", "frac", "prov", "dct", "rdf", "rdfs", "skos", "csl"]) {
     caseCheck(Boolean(context[prefix]), `missing ${prefix} context`);
@@ -165,7 +165,7 @@ const models = readJson("data/pilot/neutral-model.json");
 const review = readJson("data/pilot/review-cases.json");
 const reviewIds = new Set(review.items.map(item => item.id));
 
-check(models.length === 50, `expected 50 neutral models, found ${models.length}`);
+check(models.length >= 50, `expected at least 50 neutral models, found ${models.length}`);
 check(review.items.length === 15, `expected 15 initial review cases, found ${review.items.length}`);
 
 const items = models.map(model => validateCase(model, reviewIds));
@@ -181,7 +181,7 @@ const report = {
   validationScope: VALIDATION_SCOPE,
   shaclProfile: "data/schema/ontolex-frac-profile.shacl.ttl",
   reviewType: "machine-review",
-  caveat: "This is full 50-case machine review and project SHACL/profile validation, not a human philological review.",
+  caveat: "This is full machine review and project SHACL/profile validation, not a human philological review.",
   totals: {
     cases: items.length,
     passed: items.filter(item => item.status === "pass").length,

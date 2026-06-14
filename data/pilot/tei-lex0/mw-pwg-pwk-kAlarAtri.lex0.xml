@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-kAlarAtri">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: kAlarAtri</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-kAlarAtri" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">kAlarAtri</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-kAlarAtri-sense-1" n="1">
+          <xr type="cf"><ref xml:lang="en" cert="high" resp="#machine">See p. 278, col. 3</ref></xr>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. ś. 48.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>R. 5,47,26.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>6,19,18.</abbr><ref type="inherited-siglum">R.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>2,42,32.</abbr><ref type="inherited-siglum">R.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MBH. 13,1401.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>4454.</abbr><ref type="inherited-siglum">MBH. 13,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>HARIV. 2846.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>SUŚR. 1,285,4.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>HARIV. 3269.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>9425.</abbr><ref type="inherited-siglum">HARIV.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>PRAB. 11,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KĀŚĪKHAṆḌA</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-kAlarAtri-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>PAÑCAD.</abbr></bibl>
+        <note type="source-record">mw L49172</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

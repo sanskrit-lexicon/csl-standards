@@ -64,7 +64,7 @@ const phenomena = Array.from(new Set(items.flatMap(d => d.phenomena || []))).sor
 const statusOrder = ["lossy", "partial", "clean"];
 const worstStatus = reports => statusOrder.find(status => reports.some(report => report.status === status)) || "none";
 const statusText = status => status === "none" ? "none" : t(`status.${status}`);
-const reviewText = row => row.review ? `${row.review.bucket} #${row.review.reviewRank}` : "full-50 machine";
+const reviewText = row => row.review ? `${row.review.bucket} #${row.review.reviewRank}` : "full machine";
 ```
 
 ```js
@@ -88,7 +88,7 @@ const caseRows = items.map(item => {
     phenomenaText: (item.phenomena || []).join(", "),
     lossStatus,
     lossStatusText: statusText(lossStatus),
-    reviewStatus: review ? "validated-slice" : "full-50-machine-review",
+    reviewStatus: review ? "validated-slice" : "full-machine-review",
     reviewLabel: reviewText({review}),
     teiStatus: teiReview?.status || "missing",
     rdfStatus: ontolexReview?.status || "missing",
@@ -306,7 +306,7 @@ const phenomenonFilter = view(Inputs.select(["all", ...phenomena], {
 ```
 
 ```js
-const reviewFilter = view(Inputs.select(["all", "validated-slice", "full-50-machine-review"], {
+const reviewFilter = view(Inputs.select(["all", "validated-slice", "full-machine-review"], {
   label: "Review layer",
   value: "all",
   format: d => d === "all" ? "All cases" : d

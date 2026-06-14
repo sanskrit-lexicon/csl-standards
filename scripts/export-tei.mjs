@@ -229,7 +229,7 @@ ${phenomenaTerms}
       </textClass>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-05-29" who="#csl-standards">${isReviewCase ? "Selected for the first 15-case validated TEI profile slice." : "Included in the full 50-case machine-reviewed TEI profile."}</change>
+      <change when="2026-05-29" who="#csl-standards">${isReviewCase ? "Selected for the first 15-case validated TEI profile slice." : "Included in the full machine-reviewed TEI profile."}</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -241,8 +241,8 @@ ${relations}
 ${citationIndex}
 ${sourceRecords}
         <note type="profile-version">${PROFILE_VERSION}</note>
-        <note type="review-status">${isReviewCase ? "validated-slice" : "full-50-machine-review"}</note>
-        <note type="validation-scope">full-50-tei-odd-profile</note>
+        <note type="review-status">${isReviewCase ? "validated-slice" : "full-machine-review"}</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
       </entry>
     </body>
   </text>

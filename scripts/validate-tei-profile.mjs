@@ -6,7 +6,7 @@ const root = process.cwd();
 const errors = [];
 const warnings = [];
 const TEI_PROFILE = "tei-archival-profile-v0.1";
-const VALIDATION_SCOPE = "full-50-tei-odd-profile";
+const VALIDATION_SCOPE = "full-tei-odd-profile";
 
 function safeCaseId(id) {
   return id.replace(/:/g, "-");
@@ -95,7 +95,7 @@ function validateTeiCase(model, reviewIds) {
 
   const xml = fs.readFileSync(file, "utf8");
   const status = textForNote(xml, "review-status");
-  const expectedStatus = reviewIds.has(model.id) ? "validated-slice" : "full-50-machine-review";
+  const expectedStatus = reviewIds.has(model.id) ? "validated-slice" : "full-machine-review";
   const sourceEntryCount = (xml.match(/<cit\b[^>]*type="source-entry"/g) || []).length;
 
   wellFormedEnough(xml, relative);
@@ -155,7 +155,7 @@ const models = readJson("data/pilot/neutral-model.json");
 const review = readJson("data/pilot/review-cases.json");
 const reviewIds = new Set(review.items.map(item => item.id));
 
-check(models.length === 50, `expected 50 neutral models, found ${models.length}`);
+check(models.length >= 50, `expected at least 50 neutral models, found ${models.length}`);
 check(review.items.length === 15, `expected 15 initial review cases, found ${review.items.length}`);
 
 const items = models.map(model => validateTeiCase(model, reviewIds));
@@ -171,7 +171,7 @@ const report = {
   validationScope: VALIDATION_SCOPE,
   schemaProfile: "data/schema/tei-archival-profile.odd.xml",
   reviewType: "machine-review",
-  caveat: "This is full 50-case machine review and project ODD/profile validation, not a human philological review.",
+  caveat: "This is full machine review and project ODD/profile validation, not a human philological review.",
   totals: {
     cases: items.length,
     passed: items.filter(item => item.status === "pass").length,

@@ -19,8 +19,8 @@ Hand-authored exemplar (the documented target encoding, with inline comments):
 (entries `mw-gaja`, `skd-dharma`; well-formed; 5 senses; 11 `@cert`-bound nodes).
 
 Generated corpus: `npm run export-tei-lex0`
-([`scripts/export-tei-lex0.mjs`](../scripts/export-tei-lex0.mjs)) emits **56**
-Lex-0 entries under `data/pilot/tei-lex0/*.lex0.xml` — the 50 MW/PWG/PWK neutral-
+([`scripts/export-tei-lex0.mjs`](../scripts/export-tei-lex0.mjs)) emits **256**
+Lex-0 entries under `data/pilot/tei-lex0/*.lex0.xml` — the 250 MW/PWG/PWK neutral-
 model cases plus **6 indigenous SKD entries** (*Darmma*, *kīrti*, *kaṇṭha*,
 *vara*, *pāruṣya*, *tūla*). The SKD entries are **parsed from source**
 by `npm run parse-skd-kosa` ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)),
@@ -31,7 +31,7 @@ medinī* / *iti hemacandraḥ*, plus *Bharata*, *Jaṭādhara*, *Trikāṇḍaś
 transliterated from the SLP1 source to IAST (the lemma `orth` is left in SLP1, as
 declared); recognised kośas are emitted as `<bibl><title>`, persons as
 `<bibl><author>`. Every statement carries `@cert`/`@resp`; `npm run
-validate-tei-lex0` checks all 56 against the Lex-0 baseline shape. The three steps
+validate-tei-lex0` checks all 256 against the Lex-0 baseline shape. The three steps
 are wired into `build-pilot`.
 
 ## Trust Block
@@ -50,7 +50,7 @@ are wired into `build-pilot`.
 ## 1. What already exists, and the gap
 
 The workbench already emits TEI: [`scripts/export-tei.mjs`](../scripts/export-tei.mjs)
-produces 50 entries under `data/pilot/tei/`, validated by
+produces 250 entries under `data/pilot/tei/`, validated by
 [`scripts/validate-tei-profile.mjs`](../scripts/validate-tei-profile.mjs). But that
 output is the project's own **archival** profile (`tei-archival-profile-v0.1`,
 see [`VALIDATED_INTEROPERABILITY_PROFILE.md`](VALIDATED_INTEROPERABILITY_PROFILE.md)),
@@ -145,7 +145,7 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
 ## 6. Validation status
 
 - **Done (slice 2):** [`scripts/validate-tei-lex0.mjs`](../scripts/validate-tei-lex0.mjs)
-  checks all 56 generated entries for well-formedness and the Lex-0 baseline
+  checks all 256 generated entries for well-formedness and the Lex-0 baseline
   shape — a lemma `form/orth`, a `gramGrp` or `sense`, `@cert` on the lemma orth,
   the profile-version note, and the **absence** of the archival
   `<cit type="source-entry">`. Report: `data/pilot/tei-lex0-review.json`. Note the
@@ -178,7 +178,7 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    [`LOSS_ANALYSIS.md`](LOSS_ANALYSIS.md) §4a.
 4. **Partly done:** the neutral model now materializes every `<ls>` named source
    across MW/PWG/PWK as `named-source-citation` objects tagged with their
-   dictionary (519 of them, capped at 12 per dictionary), and the Lex-0 export
+   dictionary (2501 of them, capped at 12 per dictionary), and the Lex-0 export
    emits them as entry-level `<bibl type="named-source" source="#dict-…">` — so a
    Western lemma uncited in MW (e.g. *arcya*) now carries PWG's named apparatus.
    The `<ls>` parser is now shared across the three generators
@@ -188,16 +188,16 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    ([`scripts/lib/mw-senses.mjs`](../scripts/lib/mw-senses.mjs)) populates
    `model.senses` from the MW record — splitting on `;`/`<div>`, glossing verbal
    roots as "to …" phrases, and recognising cross-references (`See …`, `= X`,
-   `(for … See …)`) as `kind: "cross-reference"`. Coverage rose from **11 to 44**
-   of 50 Western Lex-0 entries carrying a real `<def>`/`<xr>` (the remaining 6 are
-   genuine grammatical stubs — gaṇa membership, a homonym number, an etymology-only
-   `cf.`, a name-only entry — that have no English gloss). The Lex-0 export renders
+   `(for … See …)`) as `kind: "cross-reference"`. **224 of 250** Western Lex-0
+   entries carry a real `<def>`/`<xr>` (the rest are grammatical stubs — gaṇa
+   membership, a homonym number, an etymology-only `cf.`, a name-only entry — that
+   have no English gloss). The Lex-0 export renders
    glosses as `<def>` and cross-references as `<xr type="cf"><ref>`.
 6. **Done: sense-level citation linkage.** Each MW `<ls>` is now attached to the
    sense (`<div>` segment) it falls under: `extractMwSenses` carries per-sense
    `citations`, and the Lex-0 export renders them inside the `<sense>` (named
    sources as `<bibl type="named-source" source="#dict-mw">`, the hedge as
-   `<usg type="hint">`). 25 entries / 52 senses carry sense-linked citations — e.g.
+   `<usg type="hint">`). 117 entries / 244 senses carry sense-linked citations — e.g.
    *ac* attests "to request, ask" and "to speak indistinctly" each with `L.`, and
    "to adorn" with `Dharmaś.`. MW sources are no longer duplicated at entry level;
    the entry-level index keeps the cross-dictionary PWG/PWK sources (which have no

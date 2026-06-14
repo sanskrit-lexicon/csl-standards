@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-antika-mw8332">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: antika</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-antika-mw8332" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">antika</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-antika-mw8332-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">near, proximate, ( compar., superl. )</def>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>M. 2,46.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>3,1.</abbr><ref type="inherited-siglum">M.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>YĀJÑ. 1,36.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>M. 9,101.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>8,379.</abbr><ref type="inherited-siglum">M.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>R. 4,28,32.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>M. 8,359.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>PAÑCAT. 157,1.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 3,2,17.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>4,32,14.</abbr><ref type="inherited-siglum">AK. 3,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>COL. 3,4,28,14.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MED. k. 43.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>GAL.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>54,7</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-15" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>78,25</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-16" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>199,5</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <note type="source-record">mw L8332</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

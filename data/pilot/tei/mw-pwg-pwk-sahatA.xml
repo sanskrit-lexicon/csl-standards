@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-sahatA">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case sahatA</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-sahatA-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AsahatA">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">sahatA</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-sahatA-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-sahatA-compound-relation" type="compound">
+      <seg type="component">saha</seg>
+      <seg type="component">tA</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-sahatA-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-sahatA-record-pwg">
+        <abbr>RĀJA-TAR. 3,215.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sahatA-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-sahatA-record-pwg">
+        <abbr>KATHĀS. 17,51.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-sahatA-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">239987</idno>
+        <idno type="line">797071</idno>
+        <idno type="pc">1193,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;239987&lt;pc&gt;1193,1&lt;k1&gt;sahatA&lt;k2&gt;saha—tA&lt;h&gt;1&lt;e&gt;3
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;saha—tA&lt;/s&gt; ¦ &lt;lex&gt;f.&lt;/lex&gt;&lt;info lex=&quot;f&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-sahatA-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">107512</idno>
+        <idno type="line">1000165</idno>
+        <idno type="pc">7-0863</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;107512&lt;pc&gt;7-0863&lt;k1&gt;sahatA&lt;k2&gt;sahatA
+{#sahatA#}¦ &lt;lex&gt;f.&lt;/lex&gt; &lt;ab&gt;nom. abstr.&lt;/ab&gt; von 2. {#saha#} am Ende eines &lt;ab&gt;comp.&lt;/ab&gt;: {#kleSa˚#} {%das Ertragen von%}
+&lt;ls&gt;RĀJA-TAR. 3,215.&lt;/ls&gt; {#vicAra˚#} {%das Vermögen —, im-Stande-Sein zu%}
+&lt;ls&gt;KATHĀS. 17,51.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-sahatA-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">122869</idno>
+        <idno type="line">512790</idno>
+        <idno type="pc">7-099-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;122869&lt;pc&gt;7-099-c&lt;k1&gt;sahatA&lt;k2&gt;˚sahatA
+{#˚sahatA#}¦ &lt;lex&gt;f.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%das Ertragen von%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%das Vermögen, im Stande Sein zu%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

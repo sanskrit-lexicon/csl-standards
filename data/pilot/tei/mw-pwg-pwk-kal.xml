@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-kal">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case kal</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-kal-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Akal">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">kal</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">10P,10Ā</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-kal-sense-1" n="1">
+      <def xml:lang="en">throw</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-kal-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:kal,17">kal,17</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-mw">
+        <abbr>BhP.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-mw">
+        <abbr>R. iii, 41, 26</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-mw">
+        <abbr>MBh. iii, 14853</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-mw-5" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-kal-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>DHĀTUP. 35,13</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>P. 3,4,48</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>KATHĀS. 18,90.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>MBH. 1,620.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>R. 5,83,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BHAG. 10,30.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BHĀG. P. 3,29,38.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>SCHLEGEL</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BURNOUF</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚĀNTIŚ. 4,18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BHAIRAVADHYĀNA</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>GĪT. 1,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>16.</abbr>
+        <ref type="inherited-siglum">GĪT. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>17.</abbr>
+        <ref type="inherited-siglum">GĪT. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚRUT.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BR.) 40.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BHARTṚ. 3,20.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>SĀH. D. 40,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>57,18.</abbr>
+        <ref type="inherited-siglum">SĀH. D.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>GĪT. 12,26.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>8,4.</abbr>
+        <ref type="inherited-siglum">GĪT.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>11,19.</abbr>
+        <ref type="inherited-siglum">GĪT.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚIŚ. 4,36.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>SĀH. D. 79,15.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>KATHĀS. 23,94.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>VIKR. 57.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚIŚ. 9,59</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>NAIṢ. 3,12.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BHARTṚ. 1,71.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>RĀJA-TAR. 4,629.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚIŚ. 9,83.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>H. an. 3,257.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>TRIK. 3,3,154.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>MED. t. 102.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>BHARTṚ. 2,37.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚĀNTIŚ. 4,15.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>GĪT. 4,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>7,7.</abbr>
+        <ref type="inherited-siglum">GĪT.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwg">
+        <abbr>ŚIŚ. 9,58.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>HEMĀDRI 1,763,9</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>NAIṢ. 2,104</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>BĀLAR. 168,17</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>74,13</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>NAIṢ. 12,106</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Spr. 1041</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-7" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Spr. 4017</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-8" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>7017</abbr>
+        <ref type="inherited-siglum">Spr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-9" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>BĀLAR. 108,15</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-10" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Chr. 310,16</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-11" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Spr. 7783</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-12" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>BHĀVAPR. 1,68</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-13" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>MBH. 4,22,65</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-14" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>ŚIŚ. 9,72</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-15" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>NYĀYAM. S. 1, Śl. 3</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-16" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>NAIṢ. 5,70</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-17" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>120,14</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-18" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Spr. 3311</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-19" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>68,18</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-20" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>127,12</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-21" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>43,17</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-22" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>NAIṢ. 5,31</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-23" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>ŚIŚ. 3,73</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-24" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Spr. 7621</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-25" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Comm. zu BHĀG. P. 1,10,23</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-26" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>BĀLAR. 258,2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-27" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>KĀD. 140,1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-28" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>HARṢAC. 123,23</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-29" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>BHĀVAPR. 1,69</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-30" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>HARṢAC. 122,6. 183,17</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-31" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>GAṆIT. 1,28</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-32" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>Spr. 1531</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kal-cite-pwk-33" type="named-source-citation" corresp="#mw-pwg-pwk-kal-record-pwk">
+        <abbr>KĀD. II,40,20</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-kal-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">45580</idno>
+        <idno type="line">158646</idno>
+        <idno type="pc">260,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;45580&lt;pc&gt;260,1&lt;k1&gt;kal&lt;k2&gt;kal&lt;h&gt;2&lt;e&gt;1
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;kal&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 10. &lt;ab&gt;P.&lt;/ab&gt; (rarely &lt;ab&gt;Ā.&lt;/ab&gt;) &lt;s&gt;kAlayati&lt;/s&gt; (&lt;s&gt;˚te&lt;/s&gt;), to push on, drive forward, drive before one&apos;s self or away, carry off, &lt;ls&gt;MBh.&lt;/ls&gt;; &lt;ls&gt;BhP.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to go after (with hostile intention), persecute, &lt;ls&gt;R. iii, 41, 26&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to count, tell over, &lt;ls&gt;MBh. iii, 14853&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to throw, &lt;ls&gt;L.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to announce the time (?). &lt;info whitneyroots=&quot;kal,17&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;10P,10Ā&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kal-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">15603</idno>
+        <idno type="line">143955</idno>
+        <idno type="pc">2-0150</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;15603&lt;pc&gt;2-0150&lt;k1&gt;kal&lt;k2&gt;kal&lt;h&gt;2
+2. {#kal#}¦, {#kala/yati#}
+&lt;ls&gt;DHĀTUP. 35,13&lt;/ls&gt; ({%gehen, zählen%}).
+&lt;div n=&quot;1&quot;&gt; 1) {%treiben, antreiben%}: {#daRqopaGAtaM gAH kalayati#}
+&lt;ls&gt;P. 3,4,48&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#javasya mama paryantaH kiM nu syAditi medinIm . kalayantamiva#} (von einem Pferde in schnellem Laufe)
+&lt;ls&gt;KATHĀS. 18,90.&lt;/ls&gt; {#ApAne pAnakalitA dEvenABipracoditAH . erakArUpiBirvajrErnijaGnuritaretaram ..#}
+&lt;ls&gt;MBH. 1,620.&lt;/ls&gt; {#rAkzasA hi suyudDena Bavantvadya raRAjire . AhArakalitAH sarve yugapatkapiBojanAH ..#}
+&lt;ls&gt;R. 5,83,10.&lt;/ls&gt; {#kAlaH kalayatAmaham (kfzRaH)#}
+&lt;ls&gt;BHAG. 10,30.&lt;/ls&gt; {#kAlaH kalayatAM praBuH#}
+&lt;ls&gt;BHĀG. P. 3,29,38.&lt;/ls&gt; &lt;ls&gt;SCHLEGEL&lt;/ls&gt; : {%tempus ego numeros modulantium%},
+&lt;ls&gt;BURNOUF&lt;/ls&gt; : {%le Temps, le plus puissant de ceux qui ont l&apos;empire.%} &lt;ab&gt;Vgl.&lt;/ab&gt;
+3. {#kal#} .
+&lt;div n=&quot;1&quot;&gt;— 2) {%halten, tragen%}: {#BikzABaktEH karakalitagaNgAmbutaralEH#}
+&lt;ls&gt;ŚĀNTIŚ. 4,18.&lt;/ls&gt; {#karakalitakapAlaH kuRqalI daRqapARiH#}
+&lt;ls&gt;BHAIRAVADHYĀNA&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; {#mlecCanivahaniDane kalayasi karabAlam#}
+&lt;ls&gt;GĪT. 1,14.&lt;/ls&gt; {#halaM kalayate#} (&lt;ab&gt;dat.&lt;/ab&gt; des &lt;ab&gt;partic.&lt;/ab&gt;)
+&lt;ls n=&quot;GĪT. 1,&quot;&gt;16.&lt;/ls&gt; {#kalitalalitavanamAla#}
+&lt;ls n=&quot;GĪT. 1,&quot;&gt;17.&lt;/ls&gt; {#kalitakamalA#}
+&lt;ls&gt;ŚRUT.&lt;/ls&gt; (&lt;ls&gt;BR.) 40.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%thun, machen, bewerkstelligen%}: {#sadA pAnTaH pUzA gaganaparimARaM kalayati#}
+&lt;ls&gt;BHARTṚ. 3,20.&lt;/ls&gt; {#kzaRAtkalayate#} (&lt;ab&gt;med.&lt;/ab&gt;) {#hrIyantraRAM kAmapi#}
+&lt;ls&gt;SĀH. D. 40,10.&lt;/ls&gt; {#kalayati tilakaM taTA Sakalam#}
+&lt;ls n=&quot;SĀH. D.&quot;&gt;57,18.&lt;/ls&gt; {%Etwas irgendwohin thun, irgendwo anbringen%} (oder {%anheften, auflegen, auftragen%}; &lt;ab&gt;vgl.&lt;/ab&gt; &lt;ab&gt;u.&lt;/ab&gt; — {#A): kalaya valayaSreRIM pARO pade kuru nUpurO#}
+&lt;ls&gt;GĪT. 12,26.&lt;/ls&gt; {#marakatasakalakalitakalaTOtalipi#}
+&lt;ls n=&quot;GĪT.&quot;&gt;8,4.&lt;/ls&gt; einen Laut {%hervorbringen%}: {#maDupakulakalitarAva#}
+&lt;ls n=&quot;GĪT.&quot;&gt;11,19.&lt;/ls&gt; {#vihagAH kadambasuraBAviha gAH (= vAcaH) kalayantyanukzaRamanekalayam#}
+&lt;ls&gt;ŚIŚ. 4,36.&lt;/ls&gt; {#mAdyantaH kalayantu cUtaSiKare kelIpikAH paYcamam#}
+&lt;ls&gt;SĀH. D. 79,15.&lt;/ls&gt; {#taM ca krIqAkalitalalitAvyaktanarmABilApam#}
+&lt;ls&gt;KATHĀS. 23,94.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#kala#} .
+&lt;div n=&quot;1&quot;&gt;— 4) {%mit Etwas versehen%}, {#kalita#} {%versehen mit%}: {#anyatkaTamiva pulakEH kalitaM (kalilaM?#}
+&lt;ab&gt;Sch.&lt;/ab&gt; : = {#yuktaM) mama gAtrakaM karasparSAt#}
+&lt;ls&gt;VIKR. 57.&lt;/ls&gt; {#DEryakalita#}
+&lt;ls&gt;ŚIŚ. 9,59&lt;/ls&gt; (&lt;ab&gt;Sch.&lt;/ab&gt; = {#kalitaDErya#}).
+&lt;div n=&quot;1&quot;&gt;— 5) {%bemerken, wahrnehmen, in Betracht ziehen%}: {#yadEnAM CAyAdvitIyAM kalayAM cakAra#}
+&lt;ls&gt;NAIṢ. 3,12.&lt;/ls&gt; {#DanyaH ko &apos;pi na vikriyAM kalayatiprApte nave yOvane#}
+&lt;ls&gt;BHARTṚ. 1,71.&lt;/ls&gt;
+&lt;ls&gt;RĀJA-TAR. 4,629.&lt;/ls&gt;
+&lt;ls&gt;ŚIŚ. 9,83.&lt;/ls&gt; {#kalita = vedita#}
+&lt;ls&gt;H. an. 3,257.&lt;/ls&gt; = {#vidita#}
+&lt;ls&gt;TRIK. 3,3,154.&lt;/ls&gt;
+&lt;ls&gt;MED. t. 102.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 6) {%für Etwas ansehen, halten%}: {#sa paScAtsaMpUrRaH kalayati#}
+(&lt;ab&gt;v. l.&lt;/ab&gt; {#gaRayati) DaritrIM tfRasamAm#}
+&lt;ls&gt;BHARTṚ. 2,37.&lt;/ls&gt; {#idAnImasmAkaM tfRamiva samastaM kalayatAm#}
+&lt;ls&gt;ŚĀNTIŚ. 4,15.&lt;/ls&gt; {#vyAlanilayamilanena garalamiva kalayati malayasamIram#}
+&lt;ls&gt;GĪT. 4,2.&lt;/ls&gt; {#kalayAmi valayAdimaRiBUzaRam — bahudUzaRam#}
+&lt;ls n=&quot;GĪT.&quot;&gt;7,7.&lt;/ls&gt; &lt;ls&gt;ŚIŚ. 9,58.&lt;/ls&gt; {#kalita = gaRita#} ({%gezählt, für Etwas angesehen%})
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 7) &lt;ab&gt;denom.&lt;/ab&gt; von {#kali#} ({%ein &lt;ab&gt;best.&lt;/ab&gt; Würfel) den%} &lt;is&gt;Kali&lt;/is&gt; {%ergreifen%} (&lt;ab&gt;vgl.&lt;/ab&gt; {#kftay#})
+&lt;ls&gt;P. 3,1,21.&lt;/ls&gt;
+&lt;ls&gt;VOP. 21,17.&lt;/ls&gt; {#acakalat#}
+&lt;ls&gt;P.&lt;/ls&gt;, &lt;is&gt;Vārtt&lt;/is&gt;. &lt;ls&gt;VOP. 8,112.&lt;/ls&gt; &lt;ls n=&quot;VOP.&quot;&gt;21,17.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 8) vom &lt;ab&gt;partic.&lt;/ab&gt; {#kalita#} kennen die Lexicographen noch &lt;ab&gt;folgg.&lt;/ab&gt; &lt;ab&gt;Bedd.&lt;/ab&gt;: = {#Apta#} {%erlangt%}
+&lt;ls&gt;TRIK. 3,3,154.&lt;/ls&gt;
+&lt;ls&gt;H. an. 3,257.&lt;/ls&gt;
+&lt;ls&gt;MED. t. 102&lt;/ls&gt; (&lt;ab&gt;vgl.&lt;/ab&gt; {#DEryakalita#}
+&lt;ls&gt;ŚIŚ. 9,59&lt;/ls&gt;, was nach den &lt;ab&gt;Schol.&lt;/ab&gt; = {#kalitaDErya#} sein soll). = {#Bedita#} {%gespalten, getrennt%}
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; {%sounded indistinctly, buzzed, murmured, &lt;ab&gt;etc.&lt;/ab&gt;%} (&lt;ab&gt;vgl.&lt;/ab&gt; {#kala#})
+&lt;ls&gt;WILS.&lt;/ls&gt; {#kalita#} am Ende eines &lt;ab&gt;comp.&lt;/ab&gt; nach einem &lt;ab&gt;subst.&lt;/ab&gt; in gleichem Casusverhältniss &lt;is&gt;gaṇa&lt;/is&gt; {#kftAdi#} zu &lt;ls&gt;P. 2,1,59.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ava#}, &lt;ab&gt;partic.&lt;/ab&gt; {#avakalita#} {%gesehen, wahrgenommen%}
+&lt;ls&gt;DHAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; &lt;ab&gt;u.&lt;/ab&gt; {#avakalita#} .
+&lt;div n=&quot;p&quot;&gt;— {#vyava#}, {#vyavakalita#} {%abgezogen, subtrahirt%}; &lt;lex&gt;n.&lt;/lex&gt; {%Subtraction%}
+&lt;ls&gt;LĪLĀV.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; &lt;ab&gt;u.&lt;/ab&gt; — {#sam#} .
+&lt;div n=&quot;p&quot;&gt;— {#A#}
+&lt;div n=&quot;1&quot;&gt; 1) {%schütteln%}: {#mArutAkalitAstatra drumAH#}
+&lt;ls&gt;MBH. 1,2853.&lt;/ls&gt; {#IzadAkalitaM#} ({%sich schüttelnd, zitternd%}) {#cApi kroDAddrutapadaM sTitam#}
+&lt;ls n=&quot;MBH.&quot;&gt;4,762.&lt;/ls&gt; {#keSAnAkalayan (marut)#}
+&lt;ls&gt;BHARTṚ. 1,50&lt;/ls&gt; (die &lt;ab&gt;var. l.&lt;/ab&gt; hat {#Akulayan#}, welches auch wegen des grössern Gleichklangs mit dem folgenden {#mukulayan#} vorzuziehen
+[Page2-0151]
+ist). {%werfen, schleudern%}
+&lt;ls&gt;ŚIŚ. 3,73. 9,72.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%ergreifen, packen%}
+&lt;ls&gt;ŚIŚ. 7,21.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%anbinden, befestigen%}: {#saMBramAkalitAMSukA#}
+&lt;ls&gt;KATHĀS. 20,52.&lt;/ls&gt; {#suvarRasUtrAkalitADarAmbarAm#}
+&lt;ls&gt;ŚIŚ. 1,6. 9,45.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%übergeben, übertragen%}: {#svaM dIpaM sapta varzARi viBajya saptavarzanAmaBya AtmajeBya Akalayya#}
+&lt;ls&gt;BHĀG. P. 5,20,2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%wahrnehmen, in Betracht ziehen%}: {#tataH paScAdAyAntaM BayahetumAkalayya manTaro jalaM pravizwaH#}
+&lt;ls&gt;HIT. 38,10.&lt;/ls&gt; {#KinnamasUyayA hfdayaM tavAkalayAmi#}
+&lt;ls&gt;GĪT. 3,7.&lt;/ls&gt; {#AtmAnaM ca pravayasamAkalayya vanaM viraktaH prAtizWat#}
+&lt;ls&gt;BHĀG. P. 4,9,67.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P. 4,&quot;&gt;12,16.&lt;/ls&gt; {#yaTA paraSurAmamAkalayatu BavatI tAvat#}
+&lt;ls&gt;PRAB. 5,5.&lt;/ls&gt;
+&lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;GHAṬ. 22.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 6) {%für Etwas ansehen, halten%}
+&lt;ls&gt;BHARTṚ. 3,36.&lt;/ls&gt; &lt;ls n=&quot;BHARTṚ. 3,&quot;&gt;81.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#Akalana#} .
+&lt;div n=&quot;p&quot;&gt;— {#pratyA#} {%aufzählen, herzählen%}: {#pratyAkalitasvadurnayaH#}
+&lt;ls&gt;DAŚAK.&lt;/ls&gt; in &lt;ls&gt;BENF. Chr. 185,10.&lt;/ls&gt; &lt;ls&gt;BENFEY&lt;/ls&gt; : {%vorwerfen, anklagen, verurtheilen.%} {#pratyAkalita#}
+&lt;div n=&quot;1&quot;&gt; 1) {%interposed%};
+&lt;div n=&quot;1&quot;&gt; 2) {%introduced, as a step in legal process%}
+&lt;ls&gt;WILSON.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ud#} {%losbinden, lösen%}; {#utkalita#} {%losgemacht, der sich losgemacht hat%}: {#sa tasya hastotkalitastadAsuro vikrIqato yadvadahirgarutmataH#}
+&lt;ls&gt;BHĀG. P. 7,8,26.&lt;/ls&gt; {%eröffnet, aufgeblüht%} (&lt;ab&gt;u.&lt;/ab&gt; {#utkalita#} fälschlich: {%mit Knospen bedeckt)%}: {#AliNgitastilaka utkalita ABAti#} ad
+&lt;ls&gt;KUMĀRAS. 3,26.&lt;/ls&gt; {#praharzavegotkalitAnana#}
+&lt;ls&gt;BHĀG. P. 7,8,35.&lt;/ls&gt; {#BaktyutkalitAmalAtmanA#}
+&lt;ls&gt;BHĀG. P. 1,10,23.&lt;/ls&gt; &lt;ls&gt;BURNOUF&lt;/ls&gt; : {%avec une intelligence pure et ardente de dévotion.%}
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#utkalita, utkalikA#} .
+&lt;div n=&quot;p&quot;&gt;— {#pari#}
+&lt;div n=&quot;1&quot;&gt; 1) {%sehen, wahrnehmen%}
+&lt;ls&gt;NAIṢ. 2,65.&lt;/ls&gt; {#aparikalitapUrva#}
+&lt;ls&gt;LALITAM.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%für Etwas ansehen, halten%}
+&lt;ls&gt;ŚIŚ. 8,9.&lt;/ls&gt; — {#parikalita#} &lt;is&gt;gaṇa&lt;/is&gt; {#izwAdi#} zu &lt;ls&gt;P. 5,2,88&lt;/ls&gt;
+; davon {#parikalitin#} &lt;ab&gt;ebend.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#sam#} {%aufhäufen (?)%}: {#saMkalayati kAlayati vA BUtAnIti kAlaH#}
+&lt;ls&gt;SUŚR. 1,18,20.&lt;/ls&gt; &lt;ab&gt;partic.&lt;/ab&gt; {#saMkalita#} (davon {#saMkalitin#}) &lt;is&gt;gaṇa&lt;/is&gt; {#izwAdi#} zu &lt;ls&gt;P. 5,2,88.&lt;/ls&gt;
+{%aufgehäuft%}
+&lt;ls&gt;AK. 3,2,42.&lt;/ls&gt;
+&lt;ls&gt;H. 1485.&lt;/ls&gt; {%addirt%}, &lt;lex&gt;n.&lt;/lex&gt; {%Addition%}
+&lt;ls&gt;LĪLĀV.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pratyAsam#} {%nach verschiedenen Indicien schliessen%}: {#anumAnaM pratyAsaMkalitam#}
+&lt;ls&gt;VYAVAHĀRAT. 38,18.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kal-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">25348</idno>
+        <idno type="line">99583</idno>
+        <idno type="pc">2-032-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;25348&lt;pc&gt;2-032-a&lt;k1&gt;kal&lt;k2&gt;kal&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; √{#kal#}¦, {#kalayati#} (selten &lt;ab&gt;Med.&lt;/ab&gt;)
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%treiben, antreiben%} &lt;ls&gt;HEMĀDRI 1,763,9&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%halten, tragen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%sich hinbegeben zu%} (&lt;ab&gt;Acc.&lt;/ab&gt;). {#vimAnakalitavyoman#} &lt;ls&gt;NAIṢ. 2,104&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%thun, machen, bewerkstelligen%}. {#mUrCAm#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%in Ohnmacht fallen%} &lt;ls&gt;BĀLAR. 168,17&lt;/ls&gt;. {#culukaMjalasya#} {%einen Schluck Wasser thun%} &lt;ls n=&quot;Chr.&quot;&gt;74,13&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 5〉 (einen Laut) {%hervorbringen, ertönen lassen, anstimmen%} &lt;ls&gt;NAIṢ. 12,106&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 6〉 {%thun,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%auflegen, anheften, anbringen%}.
+&lt;div n=&quot;1&quot;&gt;— 7〉 {%bemerken, gewahrwerden%}. {#tUzRIm#} {%stillschweigend aufnehmen%} &lt;ls&gt;Spr. 1041&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 8〉 {%annehmen, meinen%} &lt;ls&gt;Spr. 4017&lt;/ls&gt;. {%glauben an%} &lt;ls n=&quot;Spr.&quot;&gt;7017&lt;/ls&gt;. {%beachten%} &lt;ls&gt;BĀLAR. 108,15&lt;/ls&gt;. {%halten für%} (mit zwei &lt;ab&gt;Acc.&lt;/ab&gt;) &lt;ls&gt;Chr. 310,16&lt;/ls&gt;. {%erkennen als%} (mit zwei &lt;ab&gt;Acc.&lt;/ab&gt;) &lt;ls&gt;Spr. 7783&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 9〉 {#kalita#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%versehen mit%} (im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend) &lt;ls&gt;BHĀVAPR. 1,68&lt;/ls&gt;.
+&lt;div n=&quot;2&quot;&gt;— b〉 *= {#Bedita#}. &lt;ab&gt;Vgl.&lt;/ab&gt; {#kalay#}.
+&lt;div n=&quot;p&quot;&gt;— Mit *{#ava#}, {#˚kalita#} {%gesehen, wahrgenommen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vyava#}, {#˚kalita#} {%abgezogen, subtrahirt%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#A#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%Schütteln%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%festhalten%} &lt;ls&gt;MBH. 4,22,65&lt;/ls&gt;. &lt;ls&gt;ŚIŚ. 9,72&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%befestigen, anbinden%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%annehmen%}. {#mUrtim#} &lt;ls&gt;NYĀYAM. S. 1, Śl. 3&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%übergeben%}.
+&lt;div n=&quot;1&quot;&gt;— 6〉 {%erkennen, wahrnehmen, finden%}. {#AkalayitrI#} &lt;ls&gt;NAIṢ. 5,70&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 7〉 {%prüfen, untersuchen%} &lt;ls n=&quot;Chr.&quot;&gt;120,14&lt;/ls&gt;. &lt;ls&gt;Spr. 3311&lt;/ls&gt;. {#dfSA#} &lt;ls n=&quot;Chr.&quot;&gt;68,18&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 8〉 {%bei sich denken, eine Betrachtung anstellen%} &lt;ls n=&quot;Chr.&quot;&gt;127,12&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 9〉 {%annehmen, [Page2-032-b] glauben an%} &lt;ls n=&quot;Chr.&quot;&gt;43,17&lt;/ls&gt;. halten für (mit zwei &lt;ab&gt;Acc.&lt;/ab&gt;; beim zweiten &lt;ab&gt;Acc.&lt;/ab&gt; auch {#iva#}) &lt;ls&gt;NAIṢ. 5,31&lt;/ls&gt;. &lt;ls&gt;ŚIŚ. 3,73&lt;/ls&gt;. &lt;ls&gt;Spr. 7621&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pratyA#} {%aufzählen, herzählen%}. &lt;ab&gt;Vgl.&lt;/ab&gt; {#pratyAkalita#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ud#}, {#utkalita#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%losgemacht, — gelassen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%aufgeblüht, blühend%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%strahlend von%} (im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend), {%von den Augen, vom Gesicht und von der Seele%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%zu Tage getreten%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 *{%sehnsüchtig;%} &lt;ab&gt;Vgl.&lt;/ab&gt; &lt;ls&gt;Comm. zu BHĀG. P. 1,10,23&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 6〉 *{%gedeihend%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pari#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%ergreifen%} &lt;ls&gt;BĀLAR. 258,2&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%in sich aufnehmen, verschlingen%} &lt;ls&gt;KĀD. 140,1&lt;/ls&gt;. &lt;ls&gt;HARṢAC. 123,23&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%ansehen —, halten für%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {#˚kalita#} {%umlegt —, umgeben mit%} (im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend) &lt;ls&gt;BHĀVAPR. 1,69&lt;/ls&gt;. &lt;ls&gt;HARṢAC. 122,6. 183,17&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#sam#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%zusammenthun, — fügen, — fassen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%addiren%} &lt;ls&gt;GAṆIT. 1,28&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%der Meinung sein%} &lt;ls&gt;Spr. 1531&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pratyAsam#} in {#pratyAsaMkalita#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#utsam#}, {#utsaMkalita#} {%angetrieben, beauftragt%} &lt;ls&gt;KĀD. II,40,20&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-navagraha">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case navagraha</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-navagraha-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Anavagraha">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">navagraha</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-navagraha-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-navagraha-compound-relation" type="compound">
+      <seg type="component">nava</seg>
+      <seg type="component">graha</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwg">
+        <abbr>WILS.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwg">
+        <abbr>Verz. d. B. H. No. 325.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwg">
+        <abbr>1256.</abbr>
+        <ref type="inherited-siglum">Verz. d. B. H.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwg">
+        <abbr>1127.</abbr>
+        <ref type="inherited-siglum">Verz. d. B. H.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwg">
+        <abbr>1247.</abbr>
+        <ref type="inherited-siglum">Verz. d. B. H.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwg">
+        <abbr>MACK. Coll. I,55.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navagraha-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-navagraha-record-pwk">
+        <abbr>OPP. CAT. 1</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-navagraha-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">104492</idno>
+        <idno type="line">350251</idno>
+        <idno type="pc">530,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;104492&lt;pc&gt;530,3&lt;k1&gt;navagraha&lt;k2&gt;nava—graha&lt;h&gt;1&lt;e&gt;3
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;nava—graha&lt;/s&gt; ¦ &lt;lex&gt;mfn.&lt;/lex&gt; (for &lt;hom&gt;2.&lt;/hom&gt; See &lt;hom&gt;4.&lt;/hom&gt; &lt;s&gt;nava&lt;/s&gt;) recently caught. &lt;s1&gt;Kad&lt;/s1&gt;.&lt;info lex=&quot;m:f:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-navagraha-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">37936</idno>
+        <idno type="line">370897</idno>
+        <idno type="pc">4-0070</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;37936&lt;pc&gt;4-0070&lt;k1&gt;navagraha&lt;k2&gt;navagraha&lt;h&gt;2
+2. {#navagraha#}¦ ({#navan + graha#}) &lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;pl.&lt;/ab&gt; {%die neun Planeten%} (&lt;ab&gt;s. u.&lt;/ab&gt; {#graha#} 2, {%a%})
+&lt;ls&gt;ŚKDR.&lt;/ls&gt; &lt;ls&gt;WILS.&lt;/ls&gt; Diese Zusammensetzung erscheint gewiss nur wieder in einer Zusammensetzung, wie &lt;ab&gt;z. B.&lt;/ab&gt; in {#navagrahaSAnti#}
+&lt;ls&gt;Verz. d. B. H. No. 325.&lt;/ls&gt; {#˚homa#}
+&lt;ls n=&quot;Verz. d. B. H.&quot;&gt;1256.&lt;/ls&gt; {#˚maKa#}
+&lt;ls n=&quot;Verz. d. B. H.&quot;&gt;1127.&lt;/ls&gt; &lt;ls n=&quot;Verz. d. B. H.&quot;&gt;1247.&lt;/ls&gt; {#˚pUjA#}
+&lt;ls&gt;MACK. Coll. I,55.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-navagraha-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">57082</idno>
+        <idno type="line">234920</idno>
+        <idno type="pc">3-185-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;57082&lt;pc&gt;3-185-b&lt;k1&gt;navagraha&lt;k2&gt;navagraha˚&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; {#navagraha˚#}¦ {%die neun Planeten%}. {#˚pUjA#} &lt;lex&gt;f.&lt;/lex&gt;, {#˚praSna#} &lt;lex&gt;m.&lt;/lex&gt;, {#˚maKa#} &lt;lex&gt;m.&lt;/lex&gt;, {#˚mantra#} &lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;Pl.&lt;/ab&gt;, {#˚yAga#} &lt;lex&gt;m.&lt;/lex&gt;, {#˚SAnti#} &lt;lex&gt;f.&lt;/lex&gt;, {#˚stotra#} &lt;lex&gt;n.&lt;/lex&gt; (&lt;ls&gt;OPP. CAT. 1&lt;/ls&gt;), {#˚homa#} &lt;lex&gt;m.&lt;/lex&gt; Titel von Werken.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

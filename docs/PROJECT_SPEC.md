@@ -92,12 +92,12 @@ Paper sections:
 
 By the end of month 3:
 
-- 50 automatically sampled hard cases are public.
+- 250 automatically sampled hard cases are public.
 - All available CDSL v02 dictionaries with main source files have a reproducible coverage and size inventory.
 - Each case has MW/PWG/PWK raw snippets where available.
 - Each case has a normalized JSON record.
-- All 50 cases have strict, reproducible TEI archival-profile mappings and machine-review reports.
-- All 50 cases have OntoLex/FrAC JSON-LD, RDF/Turtle mirrors, and machine-review reports.
+- All 250 cases have strict, reproducible TEI archival-profile mappings and machine-review reports.
+- All 250 cases have OntoLex/FrAC JSON-LD, RDF/Turtle mirrors, and machine-review reports.
 - The project includes a TEI ODD/profile file and an OntoLex/FrAC SHACL/profile file for reproducible validation.
 - The project records optional external validator status for TEI ODD/RELAX NG and SHACL engines separately from the canonical local profile validators.
 - The workbench exposes loss reports, not just successful mappings.

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-aBava">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case aBava</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>continuation</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-aBava-entry" type="continuation" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AaBava">
+    <form type="continuation">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">aBava</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-aBava-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <xr xml:id="mw-pwg-pwk-aBava-continuation-relation" type="adjacency-continuation-parent" target="#e-1A"><ref>MW e=1A</ref></xr>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>R. 3,69,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>70,1.</abbr>
+        <ref type="inherited-siglum">R. 3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>5,89,31.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>21,22.</abbr>
+        <ref type="inherited-siglum">R. 5,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>2,77,24.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>22,22.</abbr>
+        <ref type="inherited-siglum">R. 3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>SĀV. 3,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aBava-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-aBava-record-pwg">
+        <abbr>R. 2,106,6.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-aBava-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">11160</idno>
+        <idno type="line">40631</idno>
+        <idno type="pc">60,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;11160&lt;pc&gt;60,3&lt;k1&gt;aBava&lt;k2&gt;a-Bava&lt;e&gt;1A
+¦ destruction, end of the world.&lt;info lex=&quot;inh&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aBava-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">4466</idno>
+        <idno type="line">36687</idno>
+        <idno type="pc">1-0328</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4466&lt;pc&gt;1-0328&lt;k1&gt;aBava&lt;k2&gt;aBava
+{#aBava#}¦ (3. {#a + Bava)#} &lt;lex&gt;m.&lt;/lex&gt; {%Nichtsein, Vernichtung%}: {#lokAnAmaBavAya#}
+&lt;ls&gt;R. 3,69,9.&lt;/ls&gt; &lt;ls n=&quot;R. 3,&quot;&gt;70,1.&lt;/ls&gt; &lt;ab&gt;Gegens.&lt;/ab&gt; {#Bava#} {%Sein, Entstehung%}: {#BavAya sarvaBUtAnAmaBavAya ca rakzasAm#}
+&lt;ls n=&quot;R.&quot;&gt;5,89,31.&lt;/ls&gt; &lt;ls n=&quot;R. 5,&quot;&gt;21,22.&lt;/ls&gt; {#sarvaBUtaBavABavam#}
+&lt;ls n=&quot;R.&quot;&gt;2,77,24.&lt;/ls&gt; {#BavABavO#}
+&lt;ls n=&quot;R. 3,&quot;&gt;22,22.&lt;/ls&gt; {#BavABavAtmaka#}
+&lt;ls&gt;SĀV. 3,10.&lt;/ls&gt; {#praBava#} {%Entstehung%}: {#praBavABavakovida#}
+&lt;ls&gt;R. 2,106,6.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#aBAva#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aBava-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">7233</idno>
+        <idno type="line">26724</idno>
+        <idno type="pc">1-084-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7233&lt;pc&gt;1-084-c&lt;k1&gt;aBava&lt;k2&gt;aBava
+{#aBava#}¦ &lt;lex&gt;m.&lt;/lex&gt; {%Vernichtung%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-Band">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case Band</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-Band-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3ABand">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">Band</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">1Ā</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-Band-sense-1" n="1">
+      <def xml:lang="en">be greeted with praise, receive applause</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-Band-sense-2" n="2">
+      <def xml:lang="en">be or make fortunate or excellent</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-Band-sense-3" n="3">
+      <def xml:lang="en">be or make glad</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-Band-sense-4" n="4">
+      <def xml:lang="en">shine</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-Band-sense-5" n="5">
+      <def xml:lang="en">honour or worship)</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-Band-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:Band,109">Band,109</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-mw">
+        <abbr>Dhātup. ii, 11</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-mw-3" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-Band-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-mw">
+        <abbr>Dhātup. xxxii, 50</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-mw-5" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-mw">
+        <abbr>Vop.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>NAIGH. 3,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>NIR. 5,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>DHĀTUP. 2,11</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>VOP.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>ṚV. 1,142,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>3,4,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>2,12.</abbr>
+        <ref type="inherited-siglum">ṚV. 3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>3,4.</abbr>
+        <ref type="inherited-siglum">ṚV. 3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>NAIGH. 1,16.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>VOP.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Band-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-Band-record-pwg">
+        <abbr>DHĀTUP. 32,50.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-Band-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">148252</idno>
+        <idno type="line">496916</idno>
+        <idno type="pc">745,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;148252&lt;pc&gt;745,3&lt;k1&gt;Band&lt;k2&gt;Band&lt;e&gt;1
+&lt;s&gt;Band&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;Ā.&lt;/ab&gt; (&lt;ls&gt;Dhātup. ii, 11&lt;/ls&gt;) &lt;s&gt;Ba/ndate&lt;/s&gt;, to be greeted with praise, receive applause, &lt;ls&gt;RV.&lt;/ls&gt; (&lt;ls&gt;L.&lt;/ls&gt; also = to be or make fortunate or excellent; to be or make glad; to shine; to honour or worship) :
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Caus.&lt;/ab&gt; &lt;s&gt;Bandayati&lt;/s&gt;, to cause to prosper, &lt;ls&gt;Dhātup. xxxii, 50&lt;/ls&gt;; &lt;ls&gt;Vop.&lt;/ls&gt;&lt;info westergaard=&quot;Badi,2.11,01.0012;Baqi,32.50,10.0046&quot;/&gt;&lt;info whitneyroots=&quot;Band,109&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;1Ā&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Band-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">54101</idno>
+        <idno type="line">523336</idno>
+        <idno type="pc">5-0201</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;54101&lt;pc&gt;5-0201&lt;k1&gt;Band&lt;k2&gt;Band
+{#Band#}¦, {#Ba/ndate#} so &lt;ab&gt;v. a.&lt;/ab&gt; {#arcati#}
+&lt;ls&gt;NAIGH. 3,14.&lt;/ls&gt;
+&lt;ls&gt;NIR. 5,2.&lt;/ls&gt;
+&lt;ls&gt;DHĀTUP. 2,11&lt;/ls&gt; ({#kalyARe suKe caH mutprItyoH SuBe#}
+&lt;ls&gt;VOP.&lt;/ls&gt;). {%jauchzenden Zuruf —, Lob empfangen%}: {#A Banda^mAne\ upA^ke\ nakto\zAsA^#} ({#sIdatAm#})
+&lt;ls&gt;ṚV. 1,142,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;3,4,6.&lt;/ls&gt; {#vE\SvA\na\raH pra\tnaTA\ nAka\mAru^haddi\vaspf\zWaM Banda^mAnaH su\manma^BiH#}
+&lt;ls n=&quot;ṚV. 3,&quot;&gt;2,12.&lt;/ls&gt; {#A vi^veSa\ roda^sI\ BUri^varpasA purupri\yo Ba^ndate\ DAma^BiH ka\viH#}
+&lt;ls n=&quot;ṚV. 3,&quot;&gt;3,4.&lt;/ls&gt; Angeblich auch so &lt;ab&gt;v. a.&lt;/ab&gt; {#jvalati#}
+&lt;ls&gt;NAIGH. 1,16.&lt;/ls&gt; {#Banda/yati#} ({#kalyARe#})
+&lt;ls&gt;VOP.&lt;/ls&gt; in &lt;ls&gt;DHĀTUP. 32,50.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#Badra#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Band-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">78811</idno>
+        <idno type="line">324593</idno>
+        <idno type="pc">4-250-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;78811&lt;pc&gt;4-250-a&lt;k1&gt;Band&lt;k2&gt;Band
+√{#Band#}¦, {#Ba/ndate#} {%jauchzenden Zuruf —, Lob empfangen%}. Nach den Lexicographen = √{#arc#}, √{#jval#}, {#kalyARe#}, {#suKe#}, {#mutprItyoH#}, {#SuBe#}
+&lt;div n=&quot;m&quot;&gt;— *&lt;ab&gt;Caus.&lt;/ab&gt; {#Bandayati#} ({#kalyARe#})
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

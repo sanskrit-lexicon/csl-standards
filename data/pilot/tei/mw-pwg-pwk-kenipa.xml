@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-kenipa">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case kenipa</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>continuation</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-kenipa-entry" type="continuation" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Akenipa">
+    <form type="continuation">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">kenipa</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-kenipa-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <xr xml:id="mw-pwg-pwk-kenipa-continuation-relation" type="adjacency-continuation-parent" target="#e-1A"><ref>MW e=1A</ref></xr>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-kenipa-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-kenipa-record-pwg">
+        <abbr>NAIGH. 3,15</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kenipa-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-kenipa-record-pwg">
+        <abbr>ṚV. 10,44,4.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-kenipa-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">55745.1</idno>
+        <idno type="line">191309</idno>
+        <idno type="pc">1325,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;55745.1&lt;pc&gt;1325,2&lt;k1&gt;kenipa&lt;k2&gt;kenipa/&lt;e&gt;1A
+¦ (&lt;ab&gt;accord.&lt;/ab&gt; to some &lt;ab&gt;fr.&lt;/ab&gt; &lt;s&gt;keni&lt;/s&gt; [√ &lt;hom&gt;3.&lt;/hom&gt; &lt;s&gt;ci&lt;/s&gt;] + &lt;s&gt;pa&lt;/s&gt;, ‘attending to the worship or sacrifice’).&lt;info n=&quot;sup&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kenipa-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">19040</idno>
+        <idno type="line">176220</idno>
+        <idno type="pc">2-0427</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;19040&lt;pc&gt;2-0427&lt;k1&gt;kenipa&lt;k2&gt;kenipa/
+{#kenipa/#}¦ &lt;lex&gt;m.&lt;/lex&gt; nach
+&lt;ls&gt;NAIGH. 3,15&lt;/ls&gt; = {#meDAvin: oja^H kfzva\ saMgf^BAya\ tve apyaso\ yaTA^ keni\pAnA^mi\no vf\De#}
+&lt;ls&gt;ṚV. 10,44,4.&lt;/ls&gt; &lt;is&gt;Padap&lt;/is&gt;.: {#kenipAnAm#} .
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#Akenipa#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kenipa-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">204498</idno>
+        <idno type="line">582564</idno>
+        <idno type="pc">3-260-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;204498&lt;pc&gt;3-260-a&lt;k1&gt;kenipa&lt;k2&gt;kenipa/
+{#kenipa/#}¦, so zu accentuiren.&lt;info n=&quot;sup_3&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

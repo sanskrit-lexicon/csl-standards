@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-caYcura">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case caYcura</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-caYcura-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AcaYcura">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">caYcura</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-caYcura-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-caYcura-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-caYcura-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-caYcura-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-caYcura-record-pwg">
+        <abbr>RĀJAN.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-caYcura-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-caYcura-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-caYcura-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-caYcura-record-pwk">
+        <abbr>RĀJAN. 4,146</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-caYcura-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">70821</idno>
+        <idno type="line">239687</idno>
+        <idno type="pc">382,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;70821&lt;pc&gt;382,3&lt;k1&gt;caYcura&lt;k2&gt;caYcura&lt;h&gt;1&lt;e&gt;2
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;caYcura&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; = &lt;s&gt;˚cu-pattra&lt;/s&gt;, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-caYcura-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">24443</idno>
+        <idno type="line">232052</idno>
+        <idno type="pc">2-0921</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;24443&lt;pc&gt;2-0921&lt;k1&gt;caYcura&lt;k2&gt;caYcura
+{#caYcura#}¦ (wie eben) &lt;lex&gt;m.&lt;/lex&gt; {%eine &lt;ab&gt;best.&lt;/ab&gt; Gemüsepflanze%}, = {#caYcu#} &lt;lex&gt;f.&lt;/lex&gt;
+&lt;ls&gt;RĀJAN.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-caYcura-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">38426</idno>
+        <idno type="line">155288</idno>
+        <idno type="pc">2-206-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;38426&lt;pc&gt;2-206-b&lt;k1&gt;caYcura&lt;k2&gt;*caYcura
+*{#caYcura#}¦ &lt;lex&gt;m.&lt;/lex&gt; {%eine &lt;ab&gt;best.&lt;/ab&gt; Gemüsepflanze%} &lt;ls&gt;RĀJAN. 4,146&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

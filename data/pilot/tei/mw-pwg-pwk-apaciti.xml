@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-apaciti">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case apaciti</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-apaciti-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Aapaciti">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">apaciti</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-apaciti-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-apaciti-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>P. 7,2,30</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>AK. 3,4,70.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>H. an. 4,97.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>MED. t. 185.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>H. an.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>MED.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>AK.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>H. an.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>103.</abbr>
+        <ref type="inherited-siglum">H. ś.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>MED.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>VS. 21,58.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>20,9.</abbr>
+        <ref type="inherited-siglum">VS.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>ŚAT. BR. 3,4,1,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>14,4,3,32.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>BṚH. ĀR. UP. 1,5,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>CHĀND. UP. 1,1,9.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>AIT. BR. 8,26.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>KĀTY. ŚR. 22,10,28.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>R. 2,74,26.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>ṚV. 4,28,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>Verz. d. B. H. 72 (V,3. 4.)</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwg">
+        <abbr>VP. 82, N. 2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>46,6</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>15</abbr>
+        <ref type="inherited-siglum">Chr. 46,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>TĀṆḌYA-BR. 19,8,1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>KĀTY. ŚR. 22,10,28</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>TĀṆḌYA-BR. 19,8,1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>KĀTY. ŚR. 22,10,28</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-7" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>ĀŚV. ŚR. 9,8,21</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-8" type="named-source-citation" corresp="#mw-pwg-pwk-apaciti-record-pwk">
+        <abbr>VAITĀN. 40</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-apaciti-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">9119</idno>
+        <idno type="line">33258</idno>
+        <idno type="pc">48,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;9119&lt;pc&gt;48,3&lt;k1&gt;apaciti&lt;k2&gt;apa-citi&lt;h&gt;2&lt;e&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;apa-citi&lt;/s&gt; ¦ &lt;lex&gt;f.&lt;/lex&gt; loss, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;f&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-apaciti-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">3717</idno>
+        <idno type="line">31055</idno>
+        <idno type="pc">1-0279</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;3717&lt;pc&gt;1-0279&lt;k1&gt;apaciti&lt;k2&gt;a/paciti
+{#a/paciti#}¦ (wie eben)
+&lt;ls&gt;P. 7,2,30&lt;/ls&gt;, &lt;is&gt;Vārtt&lt;/is&gt;. (vom &lt;ab&gt;caus.&lt;/ab&gt; von {#ci#}) &lt;lex&gt;f.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%Verlust%} ({#kzaya, hAni#})
+&lt;ls&gt;AK. 3,4,70.&lt;/ls&gt;
+&lt;ls&gt;H. an. 4,97.&lt;/ls&gt;
+&lt;ls&gt;MED. t. 185.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%Ausgabe%} ({#vyaya#})
+&lt;ls&gt;H. an.&lt;/ls&gt; &lt;ls&gt;MED.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%Ausschluss%} ({#nizkfti#}) &lt;ab&gt;dies.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%Abrechnung, Vergeltung%} und zwar:
+&lt;div n=&quot;2&quot;&gt; a) {%Ehrenerweisung, Verehrung%}
+&lt;ls&gt;AK.&lt;/ls&gt; &lt;ls&gt;H. an.&lt;/ls&gt; &lt;ls n=&quot;H. ś.&quot;&gt;103.&lt;/ls&gt; &lt;ls&gt;MED.&lt;/ls&gt; {#daDa^dindri\yamUrja\mapa^citiM sva\DAm#}
+&lt;ls&gt;VS. 21,58.&lt;/ls&gt; &lt;ls n=&quot;VS.&quot;&gt;20,9.&lt;/ls&gt; {#aTa yadEva vimuYcate &apos;TAsmA udakaM harantyaTApacitiM kurvanti tarhi hi sa Agato Bavati#}
+&lt;ls&gt;ŚAT. BR. 3,4,1,5.&lt;/ls&gt; {#etasyA eva devatAyA apacityE#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;14,4,3,32.&lt;/ls&gt; (= &lt;ls&gt;BṚH. ĀR. UP. 1,5,14.&lt;/ls&gt;) {#etasyEvAkzarasyApacityE#}
+&lt;ls&gt;CHĀND. UP. 1,1,9.&lt;/ls&gt;
+&lt;ls&gt;AIT. BR. 8,26.&lt;/ls&gt; {#apacitikAmasyApacitI#} (&lt;ab&gt;du.&lt;/ab&gt;)
+&lt;ls&gt;KĀTY. ŚR. 22,10,28.&lt;/ls&gt; {#ahaM tvapacitiM BrAtuH pituSca sakalAmimAm . varDanaM yaSasaScApi karizyAmi#}
+&lt;ls&gt;R. 2,74,26.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— b) {%Bestrafung%}: {#avi^ndeTA\mapa^citi\M vaDa^trEH#}
+&lt;ls&gt;ṚV. 4,28,4.&lt;/ls&gt; Dieselbe Bedeutung hat das Wort wohl auch
+&lt;ls&gt;Verz. d. B. H. 72 (V,3. 4.)&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 5) &lt;ab&gt;N. pr.&lt;/ab&gt; eine Tochter &lt;is&gt;Marīci&apos;s&lt;/is&gt;
+&lt;ls&gt;VP. 82, N. 2.&lt;/ls&gt;
+
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-apaciti-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">5874</idno>
+        <idno type="line">21781</idno>
+        <idno type="pc">1-069-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5874&lt;pc&gt;1-069-c&lt;k1&gt;apaciti&lt;k2&gt;a/paciti
+{#a/paciti#}¦ &lt;lex&gt;f.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%Vergeltung%} (im Guten und im Bösen) &lt;ls n=&quot;Chr.&quot;&gt;46,6&lt;/ls&gt;. &lt;ls n=&quot;Chr. 46,&quot;&gt;15&lt;/ls&gt;. {#apacitikAma#} &lt;lex&gt;Adj.&lt;/lex&gt; &lt;ls&gt;TĀṆḌYA-BR. 19,8,1&lt;/ls&gt;. &lt;ls&gt;KĀTY. ŚR. 22,10,28&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%Sühne%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 *{%Verlust%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 *{%Ausgabe%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%ein &lt;ab&gt;best.&lt;/ab&gt;%} &lt;is&gt;Kratu&lt;/is&gt; &lt;ls&gt;TĀṆḌYA-BR. 19,8,1&lt;/ls&gt;. &lt;ls&gt;KĀTY. ŚR. 22,10,28&lt;/ls&gt;. &lt;ls&gt;ĀŚV. ŚR. 9,8,21&lt;/ls&gt; (&lt;ab&gt;Comm.&lt;/ab&gt; &lt;lex&gt;m.&lt;/lex&gt;) &lt;ls&gt;VAITĀN. 40&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 6〉 &lt;ab&gt;N. pr.&lt;/ab&gt; einer Tochter &lt;is&gt;Marīci&lt;/is&gt;ʼs.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

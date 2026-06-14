@@ -20,7 +20,7 @@ for (let i = 2; i < process.argv.length; i += 1) {
   }
 }
 
-const maxItems = Number.parseInt(args.get("max") || "50", 10);
+const maxItems = Number.parseInt(args.get("max") || "250", 10);
 const cslOrigArg = args.get("csl-orig") || path.resolve(repoRoot, "..", "csl-orig");
 const cslV02 = path.basename(cslOrigArg).toLowerCase() === "v02"
   ? cslOrigArg
@@ -61,7 +61,10 @@ function parseRecords(filePath, dictionaryCode) {
       raw,
       ...parsed,
       citationCount: countMatches(raw, /<ls\b/g),
-      hasHedge: /<ls>L\.<\/ls>/.test(raw),
+      // Detect the hedge on the COMPACTED raw that is actually stored, so the
+      // "hedge" phenomenon matches the generated artifacts even when a long
+      // record's L. siglum falls past the truncation point.
+      hasHedge: /<ls\b[^>]*>L\.<\/ls>/.test(compactRaw(raw)),
       hasHom: /<hom>/.test(raw),
       hasInfo: /<info\b/.test(raw),
       hasRootMarker: /<info\b[^>]*verb="genuineroot"/.test(raw),
@@ -218,6 +221,9 @@ for (const mw of mwRecords) {
   if (!mw.k1) continue;
   const pwg = chooseCounterpart(pwgIndex.get(mw.k1));
   const pwk = chooseCounterpart(pwkIndex.get(mw.k1));
+  // The pilot is a tri-dictionary stress test: require a counterpart record in
+  // all three dictionaries (every case must carry MW, PWG, and PWK raw text).
+  if (!mw.raw || !pwg?.raw || !pwk?.raw) continue;
   const phenomena = phenomenaFor(mw, pwg, pwk);
   const isHard = phenomena.some((item) => ["hedge", "root", "compound", "continuation"].includes(item));
   if (!isHard) continue;

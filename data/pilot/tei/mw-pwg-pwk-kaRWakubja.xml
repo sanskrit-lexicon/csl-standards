@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-kaRWakubja">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case kaRWakubja</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-kaRWakubja-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AkaRWakubja">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">kaRWakubja</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-kaRWakubja-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-kaRWakubja-compound-relation" type="compound">
+      <seg type="component">kaRWa</seg>
+      <seg type="component">kubja</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-kaRWakubja-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-kaRWakubja-record-pwg">
+        <abbr>Verz. d. Oxf. H. 319,a,3. 5. b, No. 758.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-kaRWakubja-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">42467</idno>
+        <idno type="line">148359</idno>
+        <idno type="pc">245,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;42467&lt;pc&gt;245,3&lt;k1&gt;kaRWakubja&lt;k2&gt;kaRWa—kubja&lt;e&gt;3
+&lt;s&gt;kaRWa—kubja&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; a kind of fever (&lt;ab&gt;cf.&lt;/ab&gt; &lt;s&gt;aDara-kaRWa&lt;/s&gt;, &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;ut-kaRWa&lt;/s&gt;, &amp;c.)&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kaRWakubja-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">69440</idno>
+        <idno type="line">650528</idno>
+        <idno type="pc">5-1239</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;69440&lt;pc&gt;5-1239&lt;k1&gt;kaRWakubja&lt;k2&gt;kaRWakubja
+{#kaRWakubja#}¦ ({#kaRWa + ku˚#}) &lt;lex&gt;m.&lt;/lex&gt; {%schiefer Hals%}, unter den 14 Arten von Fiebern
+&lt;ls&gt;Verz. d. Oxf. H. 319,a,3. 5. b, No. 758.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kaRWakubja-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">23674</idno>
+        <idno type="line">92110</idno>
+        <idno type="pc">2-008-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;23674&lt;pc&gt;2-008-a&lt;k1&gt;kaRWakubja&lt;k2&gt;kaRWakubja
+{#kaRWakubja#}¦ &lt;lex&gt;m.&lt;/lex&gt; {%eine Art Fieber%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

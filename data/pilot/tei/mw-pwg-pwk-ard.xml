@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-ard">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case ard</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-ard-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Aard">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">ard</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">6P,1P,7</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-ard-sense-1" n="1">
+      <def xml:lang="en">move, be moved, be scattered (as dust)</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ard-sense-2" n="2">
+      <def xml:lang="en">dissolve</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ard-sense-3" n="3">
+      <def xml:lang="en">torment, hurt, kill</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ard-sense-4" n="4">
+      <def xml:lang="en">make agitated, stir up, shake vehemently</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-ard-sense-5" n="5">
+      <def xml:lang="en">strike, hurt, kill, destroy</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-ard-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:fd,15">fd,15</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>RV. iv, 17, 2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>vii, 104, 24.</abbr>
+        <ref type="inherited-siglum">RV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>Naigh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>AV. xii, 4, 3</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-5" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>Bhaṭṭ.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-6" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>Pāṇ. vii, 4, 71</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-7" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-8" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>Ragh. v, 17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-9" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>Naigh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-10" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>Pāṇ. iii, 1, 51</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-11" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>AV. iv, 15, 6</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-12" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>11</abbr>
+        <ref type="inherited-siglum">AV. iv, 15,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-13" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>vi, 49, 2</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-14" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-15" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-mw-16" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-mw">
+        <abbr>AV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>DHĀTUP. 3,18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>NAIGH. 2,19.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>P. 7,4,71</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>VOP. 8,53.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>ṚV. 4,17,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>7,104,24.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>AV. 12,4,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>NAIGH. 2,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>DHĀTUP.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>ŚABDAR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>DHĀTUP.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>RAGH. 5,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>AK. 3,2,47.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>H. an. 3,238.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>MED. t. 79.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>KĀŚ.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>VOP. 8,52.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>DHĀTUP. 34,22.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>BHAṬṬ. 12,56.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>VOP. 8,86.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>18,1.</abbr>
+        <ref type="inherited-siglum">VOP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>P. 3,1,51.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>AV. 4,15,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>11.</abbr>
+        <ref type="inherited-siglum">AV. 4,15,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>6,49,2.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>SUŚR. 1,255,18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>MBH. 3,16450.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>1,1182.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>3,11255.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>R. 3,14,16.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>BHAṬṬ. 2,46.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>R. 4,58,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>3,14,11.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>MBH. 3,2505.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>VIŚV. 4,20.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>10,4.</abbr>
+        <ref type="inherited-siglum">VIŚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>ŚUK. 39,13.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>BRAHMA-P. in LA. 59,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwg">
+        <abbr>HIḌ. 2,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwk">
+        <abbr>ṚV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ard-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-ard-record-pwk">
+        <abbr>VIDDH. 82,14</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-ard-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">16095</idno>
+        <idno type="line">57828</idno>
+        <idno type="pc">91,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;16095&lt;pc&gt;91,3&lt;k1&gt;ard&lt;k2&gt;ard&lt;e&gt;1
+&lt;s&gt;ard&lt;/s&gt; ¦ &lt;lang&gt;Ved.&lt;/lang&gt; &lt;ab&gt;cl.&lt;/ab&gt; 6. &lt;ab&gt;P.&lt;/ab&gt; (&lt;ab&gt;Imper.&lt;/ab&gt; 3. &lt;ab&gt;pl.&lt;/ab&gt; &lt;s&gt;fdantu&lt;/s&gt;; &lt;ab&gt;impf.&lt;/ab&gt; 3. &lt;ab&gt;pl.&lt;/ab&gt; &lt;s&gt;A/rdan&lt;/s&gt;)
+&lt;div n=&quot;to&quot;/&gt;to move, be moved, be scattered (as dust), &lt;ls&gt;RV. iv, 17, 2&lt;/ls&gt; and &lt;ls n=&quot;RV.&quot;&gt;vii, 104, 24.&lt;/ls&gt; &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;ardati&lt;/s&gt; (&lt;s&gt;a/rdati&lt;/s&gt;, ‘to go, move’, &lt;ls&gt;Naigh.&lt;/ls&gt;)
+&lt;div n=&quot;to&quot;/&gt;to dissolve, &lt;ls&gt;AV. xii, 4, 3&lt;/ls&gt;, (&lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;ArdIt&lt;/s&gt;, &lt;ls&gt;Bhaṭṭ.&lt;/ls&gt;, &lt;ab&gt;perf.&lt;/ab&gt; &lt;s&gt;Anarda&lt;/s&gt;, &lt;ls&gt;Pāṇ. vii, 4, 71&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;)
+&lt;div n=&quot;to&quot;/&gt;to torment, hurt, kill, &lt;ls&gt;L.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to ask, beg for (&lt;ab&gt;acc.&lt;/ab&gt;), &lt;ls&gt;Ragh. v, 17.&lt;/ls&gt; &lt;ab&gt;cl.&lt;/ab&gt; 7. &lt;s&gt;fRatti&lt;/s&gt;, to kill, &lt;ls&gt;Naigh.&lt;/ls&gt; :
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Caus.&lt;/ab&gt; &lt;s&gt;ardayati&lt;/s&gt; (&lt;ab&gt;Subj.&lt;/ab&gt; &lt;s&gt;ardayAsi&lt;/s&gt;, &lt;ab&gt;Imper.&lt;/ab&gt; 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;ardaya&lt;/s&gt;, &lt;ab&gt;impf.&lt;/ab&gt; &lt;s&gt;A/dayat&lt;/s&gt;, 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;Arda/yas&lt;/s&gt;; &lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;Ardidat&lt;/s&gt;, or [after &lt;s&gt;mA&lt;/s&gt;] &lt;s&gt;ardayIt&lt;/s&gt;, &lt;ls&gt;Pāṇ. iii, 1, 51&lt;/ls&gt;)
+&lt;div n=&quot;to&quot;/&gt;to make agitated, stir up, shake vehemently, &lt;ls&gt;AV. iv, 15, 6&lt;/ls&gt; &amp; &lt;ls n=&quot;AV. iv, 15,&quot;&gt;11&lt;/ls&gt;; &lt;ls n=&quot;AV.&quot;&gt;vi, 49, 2&lt;/ls&gt;, to do harm, torment, distress, &lt;ls&gt;MBh.&lt;/ls&gt; &amp;c. (generally used in &lt;ab&gt;perf.&lt;/ab&gt; &lt;ab&gt;Pass.&lt;/ab&gt; &lt;ab&gt;p.&lt;/ab&gt; &lt;s&gt;ardita&lt;/s&gt;, &lt;ab&gt;q.v.&lt;/ab&gt;),
+&lt;div n=&quot;to&quot;/&gt;to strike, hurt, kill, destroy, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ls&gt;AV.&lt;/ls&gt; &amp;c. &lt;ab&gt;Desid.&lt;/ab&gt; &lt;s&gt;ardidizati&lt;/s&gt;; &lt;info whitneyroots=&quot;fd,15&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;6P,1P,7&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ard-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">5935</idno>
+        <idno type="line">49673</idno>
+        <idno type="pc">1-0439</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5935&lt;pc&gt;1-0439&lt;k1&gt;ard&lt;k2&gt;ard
+{#ard#}¦, {#a/rdati#}
+&lt;ls&gt;DHĀTUP. 3,18.&lt;/ls&gt; {#fdantu#} &lt;ab&gt;ved.&lt;/ab&gt; {#fRAtti#}
+&lt;ls&gt;NAIGH. 2,19.&lt;/ls&gt; {#Anarda#}
+&lt;ls&gt;P. 7,4,71&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;ls&gt;VOP. 8,53.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%in Bewegung%} (der Theile) {%gerathen, zerstieben, sich auflösen%}: {#f\GA\yanta^ su\Bva1^\H parva^tAsa\ Arda\nDanvA^ni sa\raya^nta\ Apa^H#}
+&lt;ls&gt;ṚV. 4,17,2.&lt;/ls&gt; {#vigrI^vAso\ mUra^devA fdantu#}
+&lt;ls n=&quot;ṚV.&quot;&gt;7,104,24.&lt;/ls&gt; {#kU\wayA^sya\ saM SI^ryante Slo\RayA^ kA\wama^rdati#}
+&lt;ls&gt;AV. 12,4,3.&lt;/ls&gt; {%gehen, sich bewegen%}
+&lt;ls&gt;NAIGH. 2,14.&lt;/ls&gt;
+&lt;ls&gt;DHĀTUP.&lt;/ls&gt; {#ardita#} (&lt;ab&gt;caus.&lt;/ab&gt; Form) {%gegangen%}
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%um Etwas%} (&lt;ab&gt;acc.&lt;/ab&gt;) {%bitten%}
+&lt;ls&gt;DHĀTUP.&lt;/ls&gt; {#nirgalitAmbugarBaM SaradGanaM nArdati cAtako &apos;pi#}
+&lt;ls&gt;RAGH. 5,17.&lt;/ls&gt; {#ardita#} (&lt;ab&gt;caus.&lt;/ab&gt; Form) {%erbeten%}
+&lt;ls&gt;AK. 3,2,47.&lt;/ls&gt;
+&lt;ls&gt;H. an. 3,238.&lt;/ls&gt;
+&lt;ls&gt;MED. t. 79.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#ardanA#} .
+&lt;div n=&quot;1&quot;&gt;— 3) {%quälen%}
+&lt;ls&gt;KĀŚ.&lt;/ls&gt; &lt;ls&gt;VOP. 8,52.&lt;/ls&gt; {%verwunden, tödten%}
+&lt;ls&gt;DHĀTUP. 34,22.&lt;/ls&gt; {#rakzaHsahasrARi — ArdIt#}
+&lt;ls&gt;BHAṬṬ. 12,56.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; das &lt;ab&gt;caus.&lt;/ab&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {#arda/yati, Ardidat#} oder {#ArdayIt#}
+&lt;ls&gt;VOP. 8,86.&lt;/ls&gt; &lt;ls n=&quot;VOP.&quot;&gt;18,1.&lt;/ls&gt; die letztere Form &lt;ab&gt;ved.&lt;/ab&gt;
+&lt;ls&gt;P. 3,1,51.&lt;/ls&gt; {#kAmamardayIt#}
+&lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%in Unstätigkeit, in Unruhe versetzen, aufregen, erschüttern%}: {#a\Bi kra^nda sta\nayA\rdayo^da\Dim#}
+&lt;ls&gt;AV. 4,15,6.&lt;/ls&gt; &lt;ls n=&quot;AV. 4,15,&quot;&gt;11.&lt;/ls&gt; {#SI\rzRA Siro &apos;psa\sApso a\rdaya^n#}
+&lt;ls n=&quot;AV.&quot;&gt;6,49,2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%verzerren%}: {#ardayitvAnilo vaktramarditaM#} (&lt;ab&gt;s. d.&lt;/ab&gt;) {#janayatyataH#}
+&lt;ls&gt;SUŚR. 1,255,18.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%beunruhigen, bedrängen, quälen%}: {#tata enaM mahAvegErardayAmAsa tomarEH . tAnAgatAnsa cicCeda#}
+&lt;ls&gt;MBH. 3,16450.&lt;/ls&gt; {#asurAH — suragaRamardayaMstadA#}
+&lt;ls n=&quot;MBH.&quot;&gt;1,1182.&lt;/ls&gt; {#yErardyamAnAH suBfSaM tapastapyanti mAnavAH#}
+&lt;ls n=&quot;MBH.&quot;&gt;3,11255.&lt;/ls&gt; {#ardyamAnAnrakzoBiH#}
+&lt;ls&gt;R. 3,14,16.&lt;/ls&gt; {#yena (DanuzA) ArdidaddEtyapuraM pinAkI#}
+&lt;ls&gt;BHAṬṬ. 2,46.&lt;/ls&gt; {#sUryaraSmiBirarditam#}
+&lt;ls&gt;R. 4,58,7.&lt;/ls&gt; {#rAkzasEH — arditAH sma BfSam#}
+&lt;ls n=&quot;R.&quot;&gt;3,14,11.&lt;/ls&gt; {#vyasanenArditam#}
+&lt;ls&gt;MBH. 3,2505.&lt;/ls&gt; {#viSvAmitrArditAndfzwvA pahlavAn#}
+&lt;ls&gt;VIŚV. 4,20.&lt;/ls&gt; {#BayArdita#}
+&lt;ls n=&quot;VIŚV.&quot;&gt;10,4.&lt;/ls&gt; {#kopArdita#}
+&lt;ls&gt;ŚUK. 39,13.&lt;/ls&gt; {#yogabalA˚#}
+&lt;ls&gt;BRAHMA-P. in LA. 59,2.&lt;/ls&gt; {#kzuDArdita#}
+&lt;ls&gt;HIḌ. 2,3.&lt;/ls&gt; {#madanArditA#}
+&lt;ls&gt;R. 3,23,14.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%schlagen, verletzen, verwunden, tödten%}
+&lt;ls&gt;NAIGH. 2,19.&lt;/ls&gt;
+&lt;ls&gt;DHĀTUP. 34,22.&lt;/ls&gt; {#(tvamindra) Sra\va\sya\tA mana^sA vf\trama^rdayaH#}
+&lt;ls&gt;ṚV. 10,147,2.&lt;/ls&gt; {#Arda^yadvf\tramakf^Rodu lo\kam#}
+&lt;ls n=&quot;ṚV. 10,&quot;&gt;104,10.&lt;/ls&gt; {#amE^ra\mitra^mardaya#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,64,10.&lt;/ls&gt; &lt;ls&gt;VĀLAKH. 5,2.&lt;/ls&gt; {#parA^Sara tvaM tezA\M parA^Yca\M Suzma^mardaya#}
+&lt;ls&gt;AV. 6,65,1.&lt;/ls&gt; {#vicaranto &apos;rdayansarvAnsiMhavyAGramahoragAn#}
+&lt;ls&gt;R. 1,16,30.&lt;/ls&gt; {#Ardidat#}
+&lt;ls&gt;BHAṬṬ. 9,19.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ.&quot;&gt;15,90.&lt;/ls&gt; {#ardita#} {%verletzt, verwundet%}
+&lt;ls&gt;H. an. 3,238.&lt;/ls&gt;
+&lt;ls&gt;MED. t. 79.&lt;/ls&gt; {#muzwiprahArAdiBirardite &apos;Nge#}
+&lt;ls&gt;SUŚR. 1,288,5.&lt;/ls&gt; {#kusumezuRArditA#}
+&lt;ls&gt;PAÑCAT. 221,13.&lt;/ls&gt; {#SAlvavARArdite tasmin#}
+&lt;ls&gt;MBH. 3,717.&lt;/ls&gt; {#sa tEH SarErmUrDni — rAkzasArditaH#}
+&lt;ls&gt;R. 5,42,8.&lt;/ls&gt; {#arditapakzABiGAtacikitsA#}
+&lt;ls&gt;Verz. d. B. H. No. 1005.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ati#} {%stark bedrängen%}: {#atyArdIdbAlinaH putram#}
+&lt;ls&gt;BHAṬṬ. 15,115.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#aBi#} {%bedrängen, peinigen%}: {#aByardasi mAM suduHKam#}
+&lt;ls&gt;R. 2,21,55.&lt;/ls&gt; {#aByardita#}
+&lt;ls&gt;MBH. 1,4116.&lt;/ls&gt; {#aByardito vfzalaH . SItena pIqita ityarTaH#}
+&lt;ls&gt;P. 7,2,25&lt;/ls&gt;, &lt;ls&gt;Sch. 24&lt;/ls&gt;
+wird auch {#aByarRa#} (&lt;ab&gt;s. d.&lt;/ab&gt;) {%nahe%} hierhergezogen.
+&lt;div n=&quot;p&quot;&gt;— {#ud#} {%aufschlagen%}, von einer Woge
+&lt;ls&gt;ŚAT. BR. 5,3,4,5.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 5,3,4,&quot;&gt;6.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ni#} &lt;ab&gt;part.&lt;/ab&gt; {#nya^rRa#}
+&lt;ls&gt;P. 7,2,24.&lt;/ls&gt;
+&lt;ls&gt;VOP. 26,112.&lt;/ls&gt; {%aufgelöst, schwindend%}: {#sa ha nyarRaH SiSye#}
+&lt;ls&gt;ŚAT. BR. 12,7,1,10.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#nis#} {%ausströmen%}: {#so &apos;syAyaM parANeva prARo nirardati#}
+&lt;ls&gt;ŚAT. BR. 4,1,1,3.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pra#} &lt;ab&gt;caus.&lt;/ab&gt; {%abfliessen machen%}: {#tAsA\manu^ pra\vata^ indra\ panTA\M prArda^yo\ nIcI^ra\pasa^H samu\dram#}
+&lt;ls&gt;ṚV. 6,17,12.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#prati#} &lt;ab&gt;caus.&lt;/ab&gt; {%einen Andrang erwiedern%}, mit dem &lt;ab&gt;acc.&lt;/ab&gt;: {#mArgaRavarzeRa rAmaM pratyardayadraRe#}
+&lt;ls&gt;R. 6,92,32.&lt;/ls&gt; &lt;ab&gt;med.&lt;/ab&gt;: {#pratyardayata saMkrudDo rAGavaM punarAhave#}
+&lt;ls n=&quot;R. 6,&quot;&gt;88,2.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vi#} &lt;ab&gt;part.&lt;/ab&gt; {#vyarRa#}
+&lt;ls&gt;P. 7,2,24.&lt;/ls&gt;
+&lt;ls&gt;VOP. 26,112.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%wegfliessen%}: {#yA UrmI vyardataH#}
+[Page1-0440]
+&lt;ls&gt;ŚAT. BR. 5,3,4,4.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%bedrängen%}: {#avyarRa#} {%nicht bedrängt%}
+&lt;ls&gt;BHAṬṬ. 9,19.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%zerstieben machen, zerstören, vernichten%}: {#yasya^ tri\to vyoja^sA vf\traM vipa^rvama\rdaya^t#}
+&lt;ls&gt;ṚV. 1,187,1.&lt;/ls&gt; {#bfha^spate\ vi pa^ri\rApo^ ardaya#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,23,14.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#sam#} &lt;ab&gt;part.&lt;/ab&gt; {#samarRa#}
+&lt;ls&gt;P. 7,2,24.&lt;/ls&gt;
+&lt;ls&gt;VOP. 26,112.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%verwunden%}: {#yantAramasya sahasA triBirvAREH samArdayat#}
+&lt;ls&gt;MBH. 3,761.&lt;/ls&gt; {#tam — vatsadantEstriBiH pArSve samArdayat#}
+&lt;ls n=&quot;MBH. 3,&quot;&gt;11724.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ard-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">9574</idno>
+        <idno type="line">35897</idno>
+        <idno type="pc">1-112-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;9574&lt;pc&gt;1-112-c&lt;k1&gt;ard&lt;k2&gt;ard
+√{#ard#}¦ {#fdati#} (&lt;ls&gt;ṚV.&lt;/ls&gt;), {#a/rdati#} und *{#fRatti#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%zerstieben%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%aufregen%} &lt;ls&gt;VIDDH. 82,14&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%beunruhigen, bedrängen, quälen, hart mitnehmen%}. {#ardita#} hierher oder zum &lt;ab&gt;Caus.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%Jmd mit einer Bitte angehen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {#arda/yati#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%in Unruhe versetzen, aufregen, erschüttern%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%verzerren%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%beunruhigen, bedrängen, quälen, hart mitnehmen%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%schlagen, verwunden, tödten, vernichten%}.
+&lt;div n=&quot;p&quot;&gt;— Mit *{#ati#} {%stark bedrängen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBi#} {%bedrängen, peinigen, quälen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; &lt;ab&gt;dass.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— Mit {#ud#} {%aufschlagen%} (von einer Woge).
+&lt;div n=&quot;p&quot;&gt;— Mit {#ni#}. &lt;ab&gt;Partic.&lt;/ab&gt; {#nya^rRRa#} {%aufgelöst, hinschwinden%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#nis#} {%ausströmen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pra#} &lt;ab&gt;Caus.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%fliessen machen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 *{%aufreiben%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#prati#} &lt;ab&gt;Caus.&lt;/ab&gt; &lt;ab&gt;Act.&lt;/ab&gt; &lt;ab&gt;Med.&lt;/ab&gt; {%einen Andrang%} &lt;ab&gt;u. s. w.&lt;/ab&gt; {%erwiedern%} (mit &lt;ab&gt;Acc.&lt;/ab&gt; der Person).
+&lt;div n=&quot;p&quot;&gt;— Mit {#vi#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%wegfliessen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 *{%bedrängen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%zerstieben machen, vernichten%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#sam#}, &lt;ab&gt;Partic.&lt;/ab&gt; *{#samarRRa#}
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%verwunden%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

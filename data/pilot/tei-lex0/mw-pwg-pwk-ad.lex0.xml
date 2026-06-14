@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-ad">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: ad</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-ad" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">ad</orth>
+        </form>
+        <gramGrp>
+          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="verb-class" cert="high" resp="#source">2P</gram>
+        </gramGrp>
+        <etym xml:id="mw-pwg-pwk-ad-etym-root" type="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:ad,3" cert="high" resp="#source">ad,3</ref></etym>
+        <sense xml:id="mw-pwg-pwk-ad-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">to eat, consume, devour, Inf</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-ad-sense-2" n="2">
+          <def xml:lang="en" cert="high" resp="#machine">to feed</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>ĀpŚr.</abbr></bibl>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 2,4,72.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 24,1.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VS. 12,105.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 7,3,100.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VOP. 9,3.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 1,164,10.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VS. 12,65.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>23,8.</abbr><ref type="inherited-siglum">VS.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VOP. 9,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 10,15,11.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VS. 29,11.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 7,2,40.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>30,13</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>108,2</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-15" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>245,1</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-16" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>NYĀYAM. 3,5,35</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ad-cite-17" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>225,31</abbr><ref type="inherited-siglum">Chr.</ref></bibl>
+        <note type="source-record">mw L3575</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

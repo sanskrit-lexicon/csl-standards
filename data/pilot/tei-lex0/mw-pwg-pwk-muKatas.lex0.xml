@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-muKatas">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: muKatas</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-muKatas" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">muKatas</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-muKatas-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">from or at the mouth, by means of the m˚</def>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MBH. 3,2389.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>YĀJÑ. 1,194.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 1,162,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>TBR. 1,7,3,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>1,2,8.</abbr><ref type="inherited-siglum">TBR. 1,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AIT. BR. 5,3.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>TS. 1,6,8,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>5,1,8,3.</abbr><ref type="inherited-siglum">TS.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>5,3,3.</abbr><ref type="inherited-siglum">TS. 5,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>7,2,7,2.</abbr><ref type="inherited-siglum">TS.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚAT. BR. 1,4,1,37.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-muKatas-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>11,5,4,17.</abbr><ref type="inherited-siglum">ŚAT. BR.</ref></bibl>
+        <note type="source-record">mw L164880</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

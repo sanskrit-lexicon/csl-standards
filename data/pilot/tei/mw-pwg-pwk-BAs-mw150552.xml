@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-BAs-mw150552">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case BAs</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-BAs-mw150552-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3ABAs-mw150552">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">BAs</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">1Ā,1P</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-BAs-mw150552-sense-1" n="1">
+      <def xml:lang="en">shine, be bright</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-BAs-mw150552-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:BAs,110">BAs,110</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>Dhātup. xvi, 23</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>AV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-5" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>ib.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-6" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-7" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>Sāh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-8" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>Vedāntas.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-9" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>Pāṇ. vii, 4, 3</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-10" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>Up.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-11" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-12" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>Bhaṭṭ.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-13" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>Cat.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-mw-14" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-mw">
+        <abbr>ib.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>DHĀTUP. 16,23.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>VS. 12,32.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>MBH. 1,4852.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>2,433.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>3,11862.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>4,1326.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>12,7857.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>HARIV. 5724.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>NIR. 6,25.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>32.</abbr>
+        <ref type="inherited-siglum">NIR. 6,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>MBH. 3,12299.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>4,1461.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>6,2603.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>7,633.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>14,670.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>HARIV. 3584.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>5034</abbr>
+        <ref type="inherited-siglum">HARIV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>5561.</abbr>
+        <ref type="inherited-siglum">HARIV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>14994.</abbr>
+        <ref type="inherited-siglum">HARIV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>R. 2,78,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>5,28,17.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>RAGH. ed. Calc. 7,21</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>ST.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>KUMĀRAS. 6,11.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>BHAṬṬ. 10,61.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>14,83.</abbr>
+        <ref type="inherited-siglum">BHAṬṬ.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>HARIV. 11759.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>Spr. 1080.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>2101.</abbr>
+        <ref type="inherited-siglum">Spr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>Verz. d. Oxf. H. 266,a,26.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>KUSUM. 45,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>BĀLAB. 18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>VEDĀNTAS. (Allah.) No. 125.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>AṢṬĀV. 2,7. 8.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>9.</abbr>
+        <ref type="inherited-siglum">AṢṬĀV. 2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>15,14.</abbr>
+        <ref type="inherited-siglum">AṢṬĀV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>NĪLAK. 56,89.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>P. 7,4,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>MAITRYUP. 6,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwg">
+        <abbr>MBH. 3,1668.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwk">
+        <abbr>215,15</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwk">
+        <abbr>ŚAṂK. zu BĀDAR. 2,1,11</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwk">
+        <abbr>MĀRK. P. 105,18</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwk">
+        <abbr>106,28</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwk">
+        <abbr>KĀD. 2,88,22</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-BAs-mw150552-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-BAs-mw150552-record-pwk">
+        <abbr>258,23</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-BAs-mw150552-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">150552</idno>
+        <idno type="line">504224</idno>
+        <idno type="pc">755,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;150552&lt;pc&gt;755,3&lt;k1&gt;BAs&lt;k2&gt;BAs&lt;h&gt;1&lt;e&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;BAs&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;Ā.&lt;/ab&gt; (&lt;ls&gt;Dhātup. xvi, 23&lt;/ls&gt;) &lt;s&gt;BAsate&lt;/s&gt; (in older language also &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;BA/sati&lt;/s&gt;, &lt;ls&gt;AV.&lt;/ls&gt; &amp;c.; &lt;ab&gt;p.&lt;/ab&gt; &lt;s&gt;BA/sat&lt;/s&gt;, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ab&gt;pf.&lt;/ab&gt; &lt;s&gt;baBAse&lt;/s&gt;, &lt;ls&gt;MBh.&lt;/ls&gt;; &lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;aBAsizwa&lt;/s&gt; &lt;ab&gt;Gr.&lt;/ab&gt;; &lt;ab&gt;fut.&lt;/ab&gt; &lt;s&gt;BAsizyate&lt;/s&gt;, &lt;s&gt;BAsitA&lt;/s&gt;, &lt;ls&gt;ib.&lt;/ls&gt;),
+&lt;div n=&quot;to&quot;/&gt;to shine, be bright, &lt;ls&gt;RV.&lt;/ls&gt; &amp;c. &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to appear (‘as’ or ‘like’ &lt;ab&gt;nom.&lt;/ab&gt; or &lt;ab&gt;instr.&lt;/ab&gt; of an abstract noun), occur to the mind, be conceived or imagined, become clear or evident, &lt;ls&gt;Sāh.&lt;/ls&gt;; &lt;ls&gt;Vedāntas.&lt;/ls&gt; &amp;c.:
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Caus.&lt;/ab&gt; &lt;s&gt;BAsayati&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt; (&lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;abaBAsat&lt;/s&gt; and &lt;s&gt;abIBasat&lt;/s&gt;, &lt;ls&gt;Pāṇ. vii, 4, 3&lt;/ls&gt;), to make shine, illuminate, &lt;ls&gt;Up.&lt;/ls&gt;; &lt;ls&gt;MBh.&lt;/ls&gt; &amp;c. &lt;pb n=&quot;756,1&quot;/&gt;;
+&lt;div n=&quot;to&quot;/&gt;to show, make evident, cause to appear (‘by way of’, &lt;ab&gt;instr.&lt;/ab&gt; of an abstract noun), &lt;ls&gt;Bhaṭṭ.&lt;/ls&gt;; &lt;ls&gt;Cat.&lt;/ls&gt; &lt;ab&gt;Desid.&lt;/ab&gt; &lt;s&gt;biBAsizate&lt;/s&gt; &lt;ab&gt;Gr.&lt;/ab&gt;:
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Intens.&lt;/ab&gt; &lt;s&gt;bABAsyate&lt;/s&gt;, &lt;s&gt;bABAsti&lt;/s&gt;, &lt;ls&gt;ib.&lt;/ls&gt; (&lt;ab&gt;cf.&lt;/ab&gt; √ &lt;s&gt;BA&lt;/s&gt;, of which √ &lt;s&gt;BAs&lt;/s&gt; is a secondary form). &lt;info westergaard=&quot;BAsf,16.23,01.0403&quot;/&gt;&lt;info whitneyroots=&quot;BAs,110&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;1Ā,1P&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-BAs-mw150552-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">54780</idno>
+        <idno type="line">531033</idno>
+        <idno type="pc">5-0272</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;54780&lt;pc&gt;5-0272&lt;k1&gt;BAs&lt;k2&gt;BAs&lt;h&gt;2
+2. {#BAs#}¦, {#BA/sati#} in der älteren, {#BA/sate#} in der späteren Sprache
+&lt;ls&gt;DHĀTUP. 16,23.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%scheinen, leuchten%}: {#bfhadBi^rBA\nuBi\rBAsa^n#}
+&lt;ls&gt;VS. 12,32.&lt;/ls&gt; {#BAsatastejasAtyarTam#}
+&lt;ls&gt;MBH. 1,4852.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;2,433.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;3,11862.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;4,1326.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;12,7857.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 5724.&lt;/ls&gt; &lt;ab&gt;med.&lt;/ab&gt;: {#BAskaro BAsamAno dravati#}
+&lt;ls&gt;NIR. 6,25.&lt;/ls&gt; &lt;ls n=&quot;NIR. 6,&quot;&gt;32.&lt;/ls&gt;
+&lt;ls&gt;MBH. 3,12299.&lt;/ls&gt; {#agnayaSca na BAsante samidDAH#}
+&lt;ls n=&quot;MBH.&quot;&gt;4,1461.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;6,2603.&lt;/ls&gt; {#baBAse sa raRoddeSaH kAlasUrya ivoditaH#}
+&lt;ls n=&quot;MBH.&quot;&gt;7,633.&lt;/ls&gt; {#SAntArciza ivAgnayaH . indriyARi na BAsante#}
+&lt;ls n=&quot;MBH.&quot;&gt;14,670.&lt;/ls&gt; &lt;ls&gt;HARIV. 3584.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;5034&lt;/ls&gt; = &lt;ls n=&quot;HARIV.&quot;&gt;5561.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;14994.&lt;/ls&gt; &lt;ls&gt;R. 2,78,7.&lt;/ls&gt; {#(tasyAH) vaktraM baBAse sitacArudantaM rAhormuKAccandra ivArDamuktaH#} {%leuchtete%} oder {%erschien wie%}
+&lt;ls n=&quot;R.&quot;&gt;5,28,17.&lt;/ls&gt; &lt;ls&gt;RAGH. ed. Calc. 7,21&lt;/ls&gt; {#(cakAse#}
+&lt;ls&gt;ST.&lt;/ls&gt;). &lt;ls&gt;KUMĀRAS. 6,11.&lt;/ls&gt; &lt;ls&gt;BHAṬṬ. 10,61.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ.&quot;&gt;14,83.&lt;/ls&gt; {#vidyudBiriva BAsitEH#} {%leuchtend%}
+&lt;ls&gt;HARIV. 11759.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;ab&gt;med.&lt;/ab&gt; {%erscheinen, zur Vorstellung kommen, deutlich werden, einleuchten, begriffen werden%}: {#tvadaNgamArdavaM drazwuH kasya citte na BAsate . mAlatISaSaBflleKAkadalInAM kaWoratA ..#}
+&lt;ls&gt;Spr. 1080.&lt;/ls&gt; {#asti nAstIti saMdehaH kasya citte na BAsate ..#} {%in wessen Geiste taucht nicht der Zweifel auf?%}
+&lt;ls n=&quot;Spr.&quot;&gt;2101.&lt;/ls&gt; {#AcArasaMkoco BAsate#}
+&lt;ls&gt;Verz. d. Oxf. H. 266,a,26.&lt;/ls&gt; &lt;ls&gt;KUSUM. 45,4.&lt;/ls&gt; {#brahma vikftatvena BAsate#} {%erscheint verändert%}
+&lt;ls&gt;BĀLAB. 18.&lt;/ls&gt;
+&lt;ls&gt;VEDĀNTAS. (Allah.) No. 125.&lt;/ls&gt; &lt;ls&gt;AṢṬĀV. 2,7. 8.&lt;/ls&gt; {#aho vikalpitaM viSvamajYAnAnmayi BAsate . rUpyaM SuktO PaRI rajjO vAri sUryakare yaTA ..#}
+[Page5-0273]
+&lt;ls n=&quot;AṢṬĀV. 2,&quot;&gt;9.&lt;/ls&gt; &lt;ls n=&quot;AṢṬĀV.&quot;&gt;15,14.&lt;/ls&gt; &lt;ls&gt;NĪLAK. 56,89.&lt;/ls&gt; — Eine Nebenform von 1. {#BA#} .
+&lt;div n=&quot;p&quot;&gt;— &lt;ab&gt;caus.&lt;/ab&gt; &lt;ab&gt;aor.&lt;/ab&gt; {#abaBAsat#} und {#abIBasat#}
+&lt;ls&gt;P. 7,4,3.&lt;/ls&gt; {%leuchten machen, beleuchten, erhellen%}: {#BAsayatImAn lokAn#}
+&lt;ls&gt;MAITRYUP. 6,7.&lt;/ls&gt; &lt;ls&gt;MBH. 3,1668.&lt;/ls&gt; &lt;ls n=&quot;MBH. 3,&quot;&gt;11861.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;6,3179.&lt;/ls&gt; &lt;ls n=&quot;MBH. 6,&quot;&gt;5111.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;8,556.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;11,721.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;13,7375.&lt;/ls&gt; &lt;ls&gt;HARIV. 1318.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;1324.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;1331.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;6548.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;13249.&lt;/ls&gt; &lt;ls&gt;R. 5,11,2.&lt;/ls&gt; &lt;ls n=&quot;R. 5,&quot;&gt;14,32.&lt;/ls&gt; &lt;ls&gt;RAGH. 9,17.&lt;/ls&gt; &lt;ls&gt;SŪRYAS. 13,12.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 29,40.&lt;/ls&gt; &lt;ls&gt;VID. 3.&lt;/ls&gt; &lt;ls&gt;MĀRK. P. 16,85.&lt;/ls&gt; &lt;ls n=&quot;MĀRK. P.&quot;&gt;63,6.&lt;/ls&gt; &lt;ls n=&quot;MĀRK. P.&quot;&gt;97,14.&lt;/ls&gt; &lt;ls&gt;LA. (II) 89,12.&lt;/ls&gt; &lt;ls&gt;Verz. d. Oxf. H. 28,b,17.&lt;/ls&gt;
+&lt;ab&gt;Inschr.&lt;/ab&gt; in &lt;ls&gt;Journ. of the Am. Or. S. 6,504, Śl. 14.&lt;/ls&gt; &lt;ls&gt;VEDĀNTAS. (Allah.) No. 112.&lt;/ls&gt; &lt;ab&gt;med.&lt;/ab&gt;: {#na tadBAsayate sUryo na SaSANko na pAvakaH#}
+&lt;ls&gt;BHAG. 15,6.&lt;/ls&gt; &lt;ls n=&quot;BHAG. 15,&quot;&gt;12.&lt;/ls&gt;
+&lt;ls&gt;MBH. 3,182.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;9,2010.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt;: {#deho DIsTajIvena BAsyate#}
+&lt;ls&gt;Verz. d. Oxf. H. 222,b,27.&lt;/ls&gt; {#BAsita#} &lt;ab&gt;ebend.&lt;/ab&gt;
+&lt;ls&gt;MBH. 2,1334.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;7,7619.&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 45,12.&lt;/ls&gt;
+&lt;ls&gt;MĀRK. P. 65,5.&lt;/ls&gt; {#uditena vimalajYAnena sadBAsitaH#}
+&lt;ls&gt;ŚATR. 2,659.&lt;/ls&gt; {%erscheinen machen, zeigen%}: {#abaBAsansvakAH SaktIH#}
+&lt;ls&gt;BHAṬṬ. 15,42.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ. 15,&quot;&gt;111.&lt;/ls&gt; {#ityevamAdInBAsayatyekaDA citiH#}
+&lt;ls&gt;BĀLAB. 4.&lt;/ls&gt; {#viBaktaBAvena BAsayati#}
+&lt;ls&gt;Verz. d. Oxf. H. 238,b,19.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ava#} &lt;ab&gt;med.&lt;/ab&gt; {%scheinen, leuchten%}: {#sa tejasA sUrya ivAvaBAsate#}
+&lt;ls&gt;MBH. 5,1091.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;1,1253.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 5,23,2.&lt;/ls&gt; {#BAsita#} {%scheinend, leuchtend%}: {#soma#}
+&lt;ls&gt;MBH. 12,13221.&lt;/ls&gt; {%erscheinen, sich den Augen darstellen%}
+&lt;ls&gt;Spr. 678.&lt;/ls&gt;
+&lt;ls&gt;SUŚR. 1,104,7.&lt;/ls&gt; {#naBo netrErivAvftam . nakzatratArAgahanaM jyotirBiravaBAsate ..#}
+&lt;ls&gt;R. 1,35,16.&lt;/ls&gt; {#yatredamAdarSa ivAvaBAsate#}
+&lt;ls&gt;BHĀG. P. 4,21,41.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P. 4,&quot;&gt;29,69.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;5,26,28.&lt;/ls&gt;
+&lt;ls&gt;BĀLAB. 17.&lt;/ls&gt; {#prAksargAdeka etasminbahuDA yo &apos;vaBAsate#}
+&lt;ls&gt;Verz. d. Oxf. H. 181,b, No. 413.&lt;/ls&gt; {#etattrayaM taptAyaHpiRqavadekatvenAvaBAsamAnam#} {%als einfach erscheinend%}
+&lt;ls&gt;VEDĀNTAS. (Allah.) No. 94.&lt;/ls&gt; &lt;ls&gt;ŚAṂK.&lt;/ls&gt; zu &lt;ls&gt;BṚH. ĀR. UP. S. 16.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%beleuchten, erhellen%}: {#vEvasvato DarmarAjo vimAnenAvaBAsayan . trI~llokAn#}
+&lt;ls&gt;MBH. 3,1674.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;12,8345&lt;/ls&gt; {#(avaBAsayat#} mit der &lt;ls&gt;ed. Bomb.&lt;/ls&gt; zu lesen).
+&lt;ls n=&quot;MBH.&quot;&gt;13,4088.&lt;/ls&gt; &lt;ls&gt;ŚAṂK.&lt;/ls&gt; zu &lt;ls&gt;BṚH. ĀR. UP. S. 60.&lt;/ls&gt; &lt;ls&gt;BHĀG. P. 5,1,8.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P. 5,1,&quot;&gt;30.&lt;/ls&gt; &lt;ls&gt;VEDĀNTAS. (Allah.) No. 112.&lt;/ls&gt; {#avaBAsita#}
+&lt;ls&gt;MBH. 4,1776.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;5,2525.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;7,6672&lt;/ls&gt; {#(avaBAsitA#} mit der &lt;ls&gt;ed. Bomb.&lt;/ls&gt; zu lesen).
+&lt;ls n=&quot;MBH. 7,&quot;&gt;7601.&lt;/ls&gt; &lt;ls n=&quot;MBH. 7,&quot;&gt;7605&lt;/ls&gt; {#(dIptEs#} &lt;ab&gt;st.&lt;/ab&gt; {#dIptEs#} mit der &lt;ls&gt;ed. Bomb.&lt;/ls&gt; zu lesen).
+&lt;ls n=&quot;MBH.&quot;&gt;12,13361.&lt;/ls&gt; &lt;ls&gt;R. 4,2,9.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;5,20,18.&lt;/ls&gt; &lt;ls&gt;SUŚR. 1,54,16.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 35,112.&lt;/ls&gt; &lt;ls n=&quot;KATHĀS.&quot;&gt;45,312.&lt;/ls&gt; &lt;ls&gt;ŚIŚ. 9,37.&lt;/ls&gt; {#sarvavarRAnavaBAsayati#} {%lässt erscheinen%}
+&lt;ls&gt;SUŚR. 1,326,3.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#avaBAsa#} &lt;ab&gt;fgg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#A#} &lt;ab&gt;med.&lt;/ab&gt; {%erscheinen wie%} {#(iva): sA vedirvedasaMpannErdevadvijamaharziBiH . AbaBAse samAkIrRA nakzatrErdyOrivAyatA ..#}
+&lt;ls&gt;MBH. 2,1313.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;8,204.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 7,40.&lt;/ls&gt; &lt;ls n=&quot;RAGH. 7,&quot;&gt;60.&lt;/ls&gt; &lt;ls n=&quot;RAGH.&quot;&gt;14,12.&lt;/ls&gt; &lt;ls n=&quot;RAGH.&quot;&gt;16,41.&lt;/ls&gt;
+&lt;ls&gt;KUMĀRAS. 7,3.&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 45,339.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%bescheinen%}: {#eza hi dyAvApfTivyAvABAsayati#}
+&lt;ls&gt;NIR. 7,23.&lt;/ls&gt; {#ABAsya#}
+&lt;ls&gt;MĀRK. P. 105,18&lt;/ls&gt; fehlerhaft für {#ABAzya#} .
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#ABAs#} &lt;ab&gt;fgg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ud#} {%aufleuchten, zu scheinen beginnen%}: {#agnirASirivodBAsansamidDaH#}
+&lt;ls&gt;MBH. 1,1241.&lt;/ls&gt; {#udaBAsaddivA candraH#}
+&lt;ls&gt;R. 3,29,10.&lt;/ls&gt; {#udBAsitaSca#} (so mit der &lt;ls&gt;ed. Bomb.&lt;/ls&gt; zu lesen) {#savitA#}
+&lt;ls&gt;MBH. 13,7302.&lt;/ls&gt; {%in die Augen fallen, auffallen%}: {#udBAsate hyaYjanabinduvattacCuBre vastre yadBavetkilvizaM vaH#}
+&lt;ls n=&quot;MBH.&quot;&gt;5,728.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%erleuchten, erhellen%}: {#lokAnudBAsayasi#}
+&lt;ls&gt;HARIV. 2051.&lt;/ls&gt; {#ravikiraRodBAsitA#}
+&lt;ls&gt;VARĀH. BṚH. S. 30,20.&lt;/ls&gt; &lt;ls n=&quot;VARĀH. BṚH. S.&quot;&gt;32,21.&lt;/ls&gt; &lt;ls n=&quot;VARĀH. BṚH. S.&quot;&gt;43,3.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAR. 4,3,30&lt;/ls&gt; {#(udBAzita#} &lt;ab&gt;gedr.&lt;/ab&gt;). {%hervortreten lassen%}: {#raYjanadraveRodBAsitam (citram)#}
+&lt;ls&gt;MALLIN.&lt;/ls&gt; zu &lt;ls&gt;KUMĀRAS. 1,2.&lt;/ls&gt; {%verherrlichen, verschönern%}: {#kAle GanodBAsite#}
+&lt;ls&gt;MṚCCH. 86,18.&lt;/ls&gt; {#gotramudBAsitaM me#}
+&lt;ls n=&quot;MṚCCH.&quot;&gt;159,2.&lt;/ls&gt; {#udBAsitaM maNgalasaMviDABiH saMbanDinaH sadma#}
+&lt;ls&gt;RAGH. 7,16.&lt;/ls&gt; {#udBAsitAKilaKala#}
+&lt;ls&gt;Spr. 466.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#udBAsa#} &lt;ab&gt;fgg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#nis#} &lt;ab&gt;caus.&lt;/ab&gt; {%erhellen%}: {#tato nirBAsitaM rUpaM tejasA saMhatena vE#}
+&lt;ls&gt;HARIV. 590.&lt;/ls&gt; {#nirBAsita#} als &lt;ab&gt;Erkl.&lt;/ab&gt; von {#dIpta#}
+&lt;ls&gt;MED. t. 25.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pari#} &lt;ab&gt;med.&lt;/ab&gt; {%erscheinen%}: {#sa eza kanInakaH kumAraka iva pariBAsate#}
+&lt;ls&gt;ŚAT. BR. 3,1,3,11.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%verschönern, schmücken%}: {#pariBAsita#}
+&lt;ls&gt;Verz. d. Oxf. H. 72,a,24.&lt;/ls&gt;
+[Page5-0274]
+&lt;div n=&quot;p&quot;&gt;— {#pra#} {%leuchten, glänzen%}: {#praBAsate yaTA somaH#}
+&lt;ls&gt;MBH. 3,5005.&lt;/ls&gt; {#praBAsantaM BAnumantaM mahAntaM yaTAdityam#}
+&lt;ls n=&quot;MBH. 3,&quot;&gt;17090.&lt;/ls&gt; {#praBAsantaM mahAbAhuM sTitaM merumivAparam#}
+&lt;ls n=&quot;MBH.&quot;&gt;8,2202.&lt;/ls&gt; {#dantEH praBAsadBiH#}
+&lt;ls&gt;HARIV. 6618.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;9013.&lt;/ls&gt; {#SriyA ca rUpeRa ca vikrameRa ca praBAsase tvaM nfvaro narezviva#} {%erscheinst%}
+&lt;ls&gt;MBH. 4,238.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%erleuchten, erhellen%}: {#yaTA hi divi dIptAMSuH praBAsayati tejasA#}
+&lt;ls&gt;MBH. 1,6532.&lt;/ls&gt; {#praBAsayasi taM deSaM dvitIya iva BAskaraH#}
+&lt;ls&gt;R. 4,43,50.&lt;/ls&gt;
+&lt;ls&gt;MBH. 9,2052.&lt;/ls&gt; {#praBAsitamivAkASam#}
+&lt;ls n=&quot;MBH.&quot;&gt;4,1776.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#praBAsa#} &lt;ab&gt;fg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#prati#} &lt;ab&gt;med.&lt;/ab&gt; {%erscheinen, sich darstellen, sich offenbaren%}: {#bahavaH pratyaBAsanta vaDyAstasyodyatakruDaH#}
+&lt;ls&gt;RĀJA-TAR. 4,380.&lt;/ls&gt; &lt;ls n=&quot;RĀJA-TAR.&quot;&gt;6,327&lt;/ls&gt; {#(pratyaBAzanta#} beide &lt;ab&gt;Ausgg.&lt;/ab&gt;).
+&lt;ls&gt;Spr. 4232.&lt;/ls&gt; {#nAnAtvena pratiBAsamAnajIvagatAjYAnAnAm#}
+&lt;ls&gt;VEDĀNTAS. (Allah.) No. 23.&lt;/ls&gt; {#yattvaM paSyasi tatrEkastvameza pratiBAsase#}
+&lt;ls&gt;AṢṬĀV. 15,14.&lt;/ls&gt; {#prajYA na bAhye vizaye pratiBAsate#}
+&lt;ls&gt;NĪLAK. 222.&lt;/ls&gt; {#mama tena (pARqityena) vinA hyezA lakzmIrna pratiBAsate#} {%hat kein Ansehen%}
+&lt;ls&gt;KATHĀS. 6,143.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#pratiBAsa#} &lt;ab&gt;fg.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vi#} {%scheinen, leuchten%}; &lt;ab&gt;act.&lt;/ab&gt;
+&lt;ls&gt;AV. 13,4,7.&lt;/ls&gt; {#yaTA^ hiraRya\teja^sA vi\BAsa^si\ janA\~ anu^#}
+&lt;ls n=&quot;AV.&quot;&gt;19,26,23.&lt;/ls&gt; &lt;ab&gt;med.&lt;/ab&gt;: {#sidDiSElo viBAsate#}
+&lt;ls&gt;ŚATR. 1,35.&lt;/ls&gt; {#maRiH#}
+&lt;ls&gt;Spr. 595.&lt;/ls&gt; {#sA triyAmA tadArtasya candramaRqalamaRqitA . rAjYo vilapamAnasya na vyaBAsata SarvarI ..#} {%wurde für ihn nicht hell%}
+&lt;ls&gt;R. 2,13,10.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%erhellen%}: {#viBAsitaH sUryamarIcinA dfQaM Sirogatenodayaparvato yaTA#}
+&lt;ls&gt;MBH. 8,4667.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#nirvi#} &lt;ab&gt;caus.&lt;/ab&gt; {%erhellen%}: {#sa lokAMstejasA sarvAnsvaBAsA nirviBAsayan#}
+&lt;ls&gt;MBH. 12,13912.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-BAs-mw150552-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">79706</idno>
+        <idno type="line">328772</idno>
+        <idno type="pc">4-264-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;79706&lt;pc&gt;4-264-b&lt;k1&gt;BAs&lt;k2&gt;BAs&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; √{#BAs#}¦, {#BA/sati#} &lt;ab n=&quot;und&quot;&gt;u.&lt;/ab&gt; {#BAsate#} (in der späteren Sprache)
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%scheinen, leuchten%}. {#BAsita#} {%leuchtend%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%erscheinen, — als oder wie%} (&lt;ab&gt;Nomin.&lt;/ab&gt; oder &lt;ab&gt;Instr.&lt;/ab&gt; eines &lt;ab&gt;Nom. abstr.&lt;/ab&gt;), {%auftauchen, zur Vorstellung kommen, deutlich werden, einleuchten, begriffen werden%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {#BAsayati#}, {#˚te#} (metrisch)
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%leuchten machen, beleuchten, erhellen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%erscheinen machen, zeigen, erscheinen lassen als%} (&lt;ab&gt;Nom. abstr.&lt;/ab&gt; im &lt;ab&gt;Instr.&lt;/ab&gt;)
+&lt;div n=&quot;p&quot;&gt;— Mit {#ava#} &lt;ab&gt;Med.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%scheinen, leuchten%}. [Page4-264-c]
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%erscheinen, sich den Augen darstellen, erscheinen wie%} ({#˚vat#} &lt;ls n=&quot;Chr.&quot;&gt;215,15&lt;/ls&gt;) oder {%als%} (&lt;ab&gt;Nom. abstr.&lt;/ab&gt; im &lt;ab&gt;Instr.&lt;/ab&gt;).
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%beleuchten, erhellen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%erscheinen lassen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pratyava#} in {#˚BAsa#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vyava#} &lt;ab&gt;Caus.&lt;/ab&gt; {%vollkommen erleuchten, — erhellen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#A#} &lt;ab&gt;Med.&lt;/ab&gt; {%erscheinen wie%} ({#iva#}).
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%bescheinen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%als Trugbild%} (&lt;ab&gt;vgl.&lt;/ab&gt; {#ABAsa#}) {%darstellen, als unhaltbar erweisen%} &lt;ls&gt;ŚAṂK. zu BĀDAR. 2,1,11&lt;/ls&gt;. — {#ABAsya#} &lt;ls&gt;MĀRK. P. 105,18&lt;/ls&gt; fehlerhaft für {#ABAzya#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ud#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%aufleuchten, zu scheinen beginnen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%in die Augen fallen, auffallen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%erleuchten, erhellen%} &lt;ls n=&quot;Chr.&quot;&gt;106,28&lt;/ls&gt; (&lt;ab&gt;Med.&lt;/ab&gt;).
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%hervortreten lassen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%verherrlichen, verschönern%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#samud#} {%in die Augen fallen durch, prangen mit%} (&lt;ab&gt;Instr.&lt;/ab&gt;) &lt;ls&gt;KĀD. 2,88,22&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#nis#} &lt;ab&gt;Caus.&lt;/ab&gt; {%erhellen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pari#} &lt;ab&gt;Med.&lt;/ab&gt; {%erscheinen —, aussehen wie%} ({#iva#}).
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%verschönern, schmücken%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pra#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%leuchten, glänzen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%erscheinen wie%} ({#iva#}).
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%erleuchten, erhellen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#prati#} &lt;ab&gt;Med.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%erscheinen, sich darstellen, sich offenbaren, erscheinen wie%} (&lt;ab&gt;Nomin.&lt;/ab&gt;) oder {%als%} (&lt;ab&gt;Nom. abstr.&lt;/ab&gt; im &lt;ab&gt;Instr.&lt;/ab&gt; &lt;ls n=&quot;Chr.&quot;&gt;258,23&lt;/ls&gt;).
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%in seinem Glanz erscheinen, ein Ansehen haben%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vi#} {%scheine, leuchten%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -28,7 +28,7 @@ The primary data for this study derives from the digitized editions maintained b
 
 ### 3. Method
 
-To systematically test the limits of TEI and OntoLex representations, we developed an automated sampling pipeline that targets "hard cases" of interoperability. We generated a 50-case deterministic slice specifically designed to challenge standard schemas. For each case, we first extracted a "neutral model"—a JSON representation of the raw CDSL data that suspends commitment to either TEI or OntoLex structures. From this neutral model, we generated two divergent profiles: a TEI archival mapping that preserves the editorial structure and source records as escaped quotes, and an OntoLex semantic mapping that constructs a linked-data graph of lexical entries, senses, and attestations. Finally, we employed a loss-report methodology to explicitly track and classify (as clean, partial, or lossy) any lexicographic meaning that was discarded or degraded during the conversion process.
+To systematically test the limits of TEI and OntoLex representations, we developed an automated sampling pipeline that targets "hard cases" of interoperability. We generated a 250-case deterministic slice specifically designed to challenge standard schemas. For each case, we first extracted a "neutral model"—a JSON representation of the raw CDSL data that suspends commitment to either TEI or OntoLex structures. From this neutral model, we generated two divergent profiles: a TEI archival mapping that preserves the editorial structure and source records as escaped quotes, and an OntoLex semantic mapping that constructs a linked-data graph of lexical entries, senses, and attestations. Finally, we employed a loss-report methodology to explicitly track and classify (as clean, partial, or lossy) any lexicographic meaning that was discarded or degraded during the conversion process.
 
 ### 4. Evidence And Provenance
 
@@ -44,11 +44,11 @@ The dense compression of MW, PWG, and PWK relies heavily on nested subentries fo
 
 ### 7. PWG To PWK To MW Transformations
 
-Tracing entries across the three dictionaries reveals that compression and translation are not semantically neutral operations. PWK serves as an abridgement and reinterpretation of PWG, often discarding specific kosha citations in favor of generalized summaries. MW, in turn, acts as an English recomposition of the Petersburg dictionaries, further simplifying the evidential apparatus (e.g., collapsing specific references into the `L.` hedge). This editorial compression is semantically meaningful; tracking the transformation from PWG to PWK to MW demonstrates how evidential certainty degrades across the lineage. We measure this directly: of the 50 cases, PWK abridges PWG's named apparatus in **all 50** (25 drop it entirely, 25 retain a subset — e.g. *ac*: PWG 35 → PWK 8 → MW 3), and in **23 cases** MW carries no citation at all where PWG named a textual source. These 73 source-collapse losses are recorded as `target: neutral` loss reports with `editorial-compression` as the cause and an evidence-bound `sourceEvidence` payload, because the loss is upstream of any model choice — TEI and OntoLex can both represent named citations. An interoperable model must be capable of representing these cross-dictionary lineage transformations. Full breakdown in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4.
+Tracing entries across the three dictionaries reveals that compression and translation are not semantically neutral operations. PWK serves as an abridgement and reinterpretation of PWG, often discarding specific kosha citations in favor of generalized summaries. MW, in turn, acts as an English recomposition of the Petersburg dictionaries, further simplifying the evidential apparatus (e.g., collapsing specific references into the `L.` hedge). This editorial compression is semantically meaningful; tracking the transformation from PWG to PWK to MW demonstrates how evidential certainty degrades across the lineage. We measure this directly: of the 250 cases, PWK abridges PWG's named apparatus in **all 250** (123 drop it entirely, 127 retain a subset — e.g. *ac*: PWG 35 → PWK 8 → MW 3), and in **119 cases** MW carries no citation at all where PWG named a textual source. These 369 source-collapse losses are recorded as `target: neutral` loss reports with `editorial-compression` as the cause and an evidence-bound `sourceEvidence` payload, because the loss is upstream of any model choice — TEI and OntoLex can both represent named citations. An interoperable model must be capable of representing these cross-dictionary lineage transformations. Full breakdown in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4.
 
 ### 8. Standards Critique
 
-Our dual-profile mapping reveals what maps cleanly, what maps partially, and what becomes lossy. Across the 124 loss reports for the 50-case pilot, the two models fail **asymmetrically**: the TEI archival profile is never `lossy` (15 clean, 47 partial, 0 lossy), while the OntoLex semantic profile is never `clean` (0 clean, 42 partial, 20 lossy). TEI can always at least preserve the dictionary as an edition; OntoLex never merely transcribes, so it either relates the data or drops what it cannot relate. By cause, a majority of losses (53%) are **model-vocabulary gaps** — the target standards lack a concept — against 22% CDSL-markup and 13% print-compression, so the remedy is primarily an extension layer on the standards rather than better source encoding. The single largest stress point is the MW `L.` hedge (44% of reports). To address these gaps, we propose a Sanskrit lexicographic extension layer for both standards. This layer introduces specific modeling for the evidence class, root relation types, compound decomposition status, continuation parent status, and source-collapse relations, ensuring that the unique features of Sanskrit lexicography are preserved in digital formats. The full breakdown, and the honest coverage limits of the current instrument, are in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md).
+Our dual-profile mapping reveals what maps cleanly, what maps partially, and what becomes lossy. Across the 959 loss reports for the 250-case pilot, the two models fail **asymmetrically**: the TEI archival profile is never `lossy` for the Western cases (75 clean, 217 partial), while the OntoLex semantic profile is never `clean` (0 clean, 192 partial, 100 lossy). TEI can always at least preserve the dictionary as an edition; OntoLex never merely transcribes, so it either relates the data or drops what it cannot relate. By cause, the two leading classes are **editorial-compression (38%)** — upstream lineage loss the standards could have held — and **model-vocabulary gaps (33%)** where the target standards lack a concept, against 12% CDSL-markup and 8% print-compression, so the remedy combines a standards extension layer with cross-dictionary lineage modeling. The single largest stress point is source-collapse (38%), ahead of the MW `L.` hedge (24% of reports). To address these gaps, we propose a Sanskrit lexicographic extension layer for both standards. This layer introduces specific modeling for the evidence class, root relation types, compound decomposition status, continuation parent status, and source-collapse relations, ensuring that the unique features of Sanskrit lexicography are preserved in digital formats. The full breakdown, and the honest coverage limits of the current instrument, are in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md).
 
 ### 9. The Standards Workbench
 
@@ -61,7 +61,7 @@ Sanskrit dictionaries are not mere edge cases to be normalized away by rigid dig
 ## Figures
 
 1. Three-view architecture: CDSL -> neutral model -> TEI/OntoLex.
-2. Evidence-class comparison: PWG named kosha citations vs MW `L.` — 23/50 cases
+2. Evidence-class comparison: PWG named kosha citations vs MW `L.` — 119/250 cases
    are `mw-uncited-pwg-cited` (PWG names a source MW reduces to `L.` or drops).
    Data: [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4.
 3. Root modeling diagram.
@@ -72,9 +72,9 @@ Sanskrit dictionaries are not mere edge cases to be normalized away by rigid dig
 
 ## Minimum Submission Dataset
 
-- 50 generated hard cases.
+- 250 generated hard cases.
 - 15 deterministic profile-validated review-slice mappings.
-- Full 50-case machine-reviewed TEI and OntoLex/FrAC outputs.
+- Full 250-case machine-reviewed TEI and OntoLex/FrAC outputs.
 - External validation report when the TEI/SHACL toolchain is available.
 - Human philological review status clearly separated from machine/profile validation.
 - 5 fully discussed paper cases.

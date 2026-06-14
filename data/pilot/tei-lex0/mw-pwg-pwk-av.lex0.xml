@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-av">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: av</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-av" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">av</orth>
+        </form>
+        <gramGrp>
+          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="verb-class" cert="high" resp="#source">1</gram>
+        </gramGrp>
+        <sense xml:id="mw-pwg-pwk-av-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">to drive, impel, animate</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-av-sense-2" n="2">
+          <def xml:lang="en" cert="high" resp="#machine">to promote, favour</def>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-av-sense-3" n="3">
+          <def xml:lang="en" cert="high" resp="#machine">to offer</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV. iv, 44, 6</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-av-sense-4" n="4">
+          <def xml:lang="en" cert="high" resp="#machine">to lead or bring to</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-av-sense-5" n="5">
+          <def xml:lang="en" cert="high" resp="#machine">to be pleased with, like, accept favourably</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-av-sense-6" n="6">
+          <def xml:lang="en" cert="high" resp="#machine">to guard, defend, protect, govern, BhP</def>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-av-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 15,91.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 6,1,116.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NAIGH. 2,8.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 1,131,5.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>3,13,6.</abbr><ref type="inherited-siglum">ṚV.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VS. 20,74.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 7,59,6.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>3,2.</abbr><ref type="inherited-siglum">ṚV. 7,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>1,58,2.</abbr><ref type="inherited-siglum">ṚV.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>8,36,2.</abbr><ref type="inherited-siglum">ṚV.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>10,15,1.</abbr><ref type="inherited-siglum">ṚV.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>120,7.</abbr><ref type="inherited-siglum">ṚV. 10,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-av-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>R. ed. Bomb. 4,60,20</abbr></bibl>
+        <note type="source-record">mw L16938</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>
