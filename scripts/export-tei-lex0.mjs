@@ -113,6 +113,16 @@ function senseXml(sense, id, index) {
   } else {
     lines.push(`  <def xml:lang="${escapeXml(lang)}"${cert(ev)}>${escapeXml(sense.def)}</def>`);
   }
+  // Sense-level citations: the MW <ls> sources that attest this specific sense.
+  for (const c of sense.citations || []) {
+    if (c.type === "generic-lexicographer-hedge") {
+      lines.push(`  <usg type="hint"${cert("observed")}>lexicographers only (${escapeXml(c.source)})</usg>`);
+    } else {
+      const prov = c.dictionary ? ` source="#dict-${escapeXml(c.dictionary)}"` : "";
+      const inh = c.inheritedFrom ? `<ref type="inherited-siglum">${escapeXml(c.inheritedFrom)}</ref>` : "";
+      lines.push(`  <bibl type="named-source"${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${inh}</bibl>`);
+    }
+  }
   if (sense.example) {
     lines.push(`  <cit type="example" xml:lang="sa">`);
     lines.push(`    <quote xml:space="preserve">${escapeXml(sense.example.quote)}</quote>`);
@@ -132,10 +142,14 @@ function senseXml(sense, id, index) {
 }
 
 function citationsXml(model, id) {
-  // Lex-0: named source citations and the MW lexicographer hedge, entry-level
-  // (the neutral model does not link citations to specific senses).
-  const named = (model.citations || []).filter(c => c.type !== "generic-lexicographer-hedge");
-  const hedges = (model.citations || []).filter(c => c.type === "generic-lexicographer-hedge");
+  // Entry-level citations: the cross-dictionary (PWG/PWK) named sources and any
+  // citations not linked to a sense. When MW senses carry their own citations
+  // (sense-level linkage), MW sources are shown there, not duplicated here; an
+  // entry with no sense-linked citations (a stub) still lists everything.
+  const senseLinked = (model.senses || []).some(s => (s.citations || []).length);
+  const eligible = (model.citations || []).filter(c => !(senseLinked && c.dictionary === "mw"));
+  const named = eligible.filter(c => c.type !== "generic-lexicographer-hedge");
+  const hedges = eligible.filter(c => c.type === "generic-lexicographer-hedge");
   const rows = [];
   for (const h of hedges) {
     rows.push(`<usg type="hint"${cert("observed")}>lexicographers only (${escapeXml(h.source)})</usg>`);

@@ -193,11 +193,16 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    genuine grammatical stubs — gaṇa membership, a homonym number, an etymology-only
    `cf.`, a name-only entry — that have no English gloss). The Lex-0 export renders
    glosses as `<def>` and cross-references as `<xr type="cf"><ref>`.
-6. **Now unblocked: sense-level citation linkage.** Senses exist for the Western
-   cases, but the model still attaches named sources at the entry level rather than
-   to the specific sense (`<div>` segment) each `<ls>` falls under (the parsed
-   *kośa* senses already carry their authority). With senses materialized, linking
-   each citation to its sense segment is the next slice.
+6. **Done: sense-level citation linkage.** Each MW `<ls>` is now attached to the
+   sense (`<div>` segment) it falls under: `extractMwSenses` carries per-sense
+   `citations`, and the Lex-0 export renders them inside the `<sense>` (named
+   sources as `<bibl type="named-source" source="#dict-mw">`, the hedge as
+   `<usg type="hint">`). 25 entries / 52 senses carry sense-linked citations — e.g.
+   *ac* attests "to request, ask" and "to speak indistinctly" each with `L.`, and
+   "to adorn" with `Dharmaś.`. MW sources are no longer duplicated at entry level;
+   the entry-level index keeps the cross-dictionary PWG/PWK sources (which have no
+   MW sense structure) plus citations from stub entries with no senses. This
+   completes the original §7.4 goal.
 
 ## References
 
