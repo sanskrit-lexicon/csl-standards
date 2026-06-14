@@ -145,12 +145,15 @@ of the phenomena (the roadmap's "do not hide model failures").
   `named-source-citation`** (PWG 1872, MW 379, PWK 366, capped at 12 per
   dictionary), each tagged with its `dictionary`. The TEI Lex-0 export emits them
   as entry-level `<bibl type="named-source" source="#dict-…">`, so a lemma like
-  *arcya* — uncited in MW — carries PWG's named sources. MW senses are extracted
-  too (224 of 250 Western entries carry a `<def>`/`<xr>`), and **sense-level
-  linkage is done**: each MW `<ls>` is attached to the sense it attests (117
-  entries / 244 senses), so MW sources sit inside the `<sense>` and only the
-  cross-dictionary PWG/PWK sources remain entry-level (see
-  [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md) §6).
+  *arcya* — uncited in MW — carries PWG's named sources. **Senses are extracted
+  and sense-linked for all three dictionaries** in the neutral model: MW (English,
+  224/250 entries, 414 senses, 244 sense-linked — also rendered into the TEI Lex-0
+  entry, §6) and the German Petersburg dictionaries via their explicit `<div>` +
+  `{%…%}` structure — PWG (214/250, 455 senses, 431 linked) and PWK (203/250, 939
+  senses, 216 linked), carried on each source record (`records.{pwg,pwk}.senses`).
+  PWG/PWK senses are not yet folded into the single TEI Lex-0 entry (a tri-source
+  merge is OntoLex-Lexicog's job, not the Lex-0 baseline's), so those citations
+  stay entry-level in the Lex-0 export while being sense-linked in the model.
 - **Schema *phenomena* not yet emitted:** `named-kosha-citation`,
   `citation-coordinate`, `editorial-reference` (defined in
   [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) as loss-report phenomena but

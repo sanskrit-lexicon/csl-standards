@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { extractLabeledSources } from "./lib/citations.mjs";
 import { extractMwSenses } from "./lib/mw-senses.mjs";
+import { extractPwSenses } from "./lib/pw-senses.mjs";
 
 function parseGenderOrGrammar(raw) {
   if (!raw) return null;
@@ -157,13 +158,15 @@ async function main() {
           L: item.records.pwg?.L || null,
           line: item.records.pwg?.line || null,
           pc: item.records.pwg?.pc || null,
-          raw: item.records.pwg?.raw || null
+          raw: item.records.pwg?.raw || null,
+          senses: extractPwSenses(item.records.pwg?.raw, "pwg")
         },
         pwk: {
           L: item.records.pwk?.L || null,
           line: item.records.pwk?.line || null,
           pc: item.records.pwk?.pc || null,
-          raw: item.records.pwk?.raw || null
+          raw: item.records.pwk?.raw || null,
+          senses: extractPwSenses(item.records.pwk?.raw, "pwk")
         }
       },
       forms,

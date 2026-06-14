@@ -74,6 +74,19 @@ async function main() {
   let mw = 0, pwg = 0, pwk = 0, citTotal = 0;
   const citTypes = {};
   const citByDict = {};
+  // Per-dictionary sense coverage: MW senses live in model.senses; PWG/PWK senses
+  // on each source record. `linked` = senses that carry sense-level citations.
+  const senseCov = {
+    mw: { entries: 0, senses: 0, linked: 0 },
+    pwg: { entries: 0, senses: 0, linked: 0 },
+    pwk: { entries: 0, senses: 0, linked: 0 }
+  };
+  const countSenses = (acc, arr) => {
+    if (!arr || !arr.length) return;
+    acc.entries++;
+    acc.senses += arr.length;
+    acc.linked += arr.filter(s => s.citations && s.citations.length).length;
+  };
   for (const m of models) {
     if (m.records?.mw) mw++; if (m.records?.pwg) pwg++; if (m.records?.pwk) pwk++;
     for (const p of m.phenomena || []) phen[p] = (phen[p] || 0) + 1;
@@ -82,6 +95,9 @@ async function main() {
       citTypes[c.type] = (citTypes[c.type] || 0) + 1;
       if (c.dictionary) citByDict[c.dictionary] = (citByDict[c.dictionary] || 0) + 1;
     }
+    countSenses(senseCov.mw, m.senses);
+    countSenses(senseCov.pwg, m.records?.pwg?.senses);
+    countSenses(senseCov.pwk, m.records?.pwk?.senses);
   }
 
   // --- coverage gaps (findings, not failures) ---
@@ -108,7 +124,8 @@ async function main() {
       cases: models.length,
       recordsPresent: { mw, pwg, pwk },
       phenomena: phen,
-      citations: { total: citTotal, byType: citTypes, byDictionary: citByDict }
+      citations: { total: citTotal, byType: citTypes, byDictionary: citByDict },
+      sensesByDictionary: senseCov
     },
     coverageGaps: gaps
   };

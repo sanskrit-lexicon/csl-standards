@@ -9,6 +9,15 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- **PWG/PWK sense modeling**: [scripts/lib/pw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/pw-senses.mjs)
+  extracts German senses from the Petersburg dictionaries (explicit `<div>` +
+  `{%…%}` gloss structure) with their `<ls>` citations sense-linked, carried on
+  each source record (`records.{pwg,pwk}.senses`): PWG 214/250 entries (455
+  senses, 431 linked), PWK 203/250 (939 senses, 216 linked). `analyze-loss`
+  reports `crossDictionary.sensesByDictionary`. Senses now exist and are
+  sense-linked for all three dictionaries in the neutral model; folding the German
+  divisions into the single TEI Lex-0 entry is left to OntoLex-Lexicog. Exporters
+  unchanged (byte-identical tei/ontolex/rdf/tei-lex0).
 - Project **TEI Lex-0 ODD** ([data/schema/tei-lex0-profile.odd.xml](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml))
   and RNG validation wired into `validate-external-profiles`: it compiles the ODD
   with `teitorelaxng` (or uses `CSL_STANDARDS_LEX0_RNG`) and validates every
