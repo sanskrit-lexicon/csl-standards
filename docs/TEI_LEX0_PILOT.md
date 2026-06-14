@@ -208,9 +208,17 @@ rather than as detachable apparatus — which is a candidate Lex-0 customisation
    `<usg type="hint">`). 117 entries / 244 senses carry sense-linked citations — e.g.
    *ac* attests "to request, ask" and "to speak indistinctly" each with `L.`, and
    "to adorn" with `Dharmaś.`. MW sources are no longer duplicated at entry level;
-   the entry-level index keeps the cross-dictionary PWG/PWK sources (which have no
-   MW sense structure) plus citations from stub entries with no senses. This
-   completes the original §7.4 goal.
+   the entry-level index keeps the cross-dictionary PWG/PWK sources plus citations
+   from stub entries with no senses. This completes the original §7.4 goal.
+7. **Done: PWG/PWK sense modeling.** The German Petersburg dictionaries delimit
+   senses explicitly (`<div>` + numbered run-ins; German glosses in `{%…%}`), so
+   [`scripts/lib/pw-senses.mjs`](../scripts/lib/pw-senses.mjs) extracts them with
+   their `<ls>` citations sense-linked, carried on each source record
+   (`records.{pwg,pwk}.senses`): PWG 214/250 entries (455 senses, 431 linked),
+   PWK 203/250 (939 senses, 216 linked). These live in the neutral model (the
+   canonical layer); folding three dictionaries' sense divisions into one Lex-0
+   entry is an OntoLex-Lexicog (multi-resource) concern, not the Lex-0 baseline's,
+   so the Lex-0 export stays MW-primary. OntoLex/Lexicog surfacing is the next step.
 
 ## References
 
