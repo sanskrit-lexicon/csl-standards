@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-AScarya">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: AScarya</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-AScarya" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">AScarya</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-AScarya-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">Nom. P., to be marvellous or strange</def>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 6,1,147.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 1,1,7,19.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KAṬHOP. 2,7.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>PRAB. 57,13.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 2,2,14</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>RAGH. 16,87.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚĀK. 99,7.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NIR. 2,24.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>11,2.</abbr><ref type="inherited-siglum">NIR.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>3,4,180.</abbr><ref type="inherited-siglum">AK.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. 304.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-AScarya-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>N. 12,72.</abbr></bibl>
+        <note type="source-record">mw L27596</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

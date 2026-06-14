@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-dAman">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case dAman</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-dAman-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AdAman">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">dAman</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-dAman-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-dAman-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-mw">
+        <abbr>AV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-mw">
+        <abbr>ŚBr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-mw-5" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-mw">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>P. 4,1,11</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>UJJVAL.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>UṆĀDIS. 4,144.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>TRIK. 3,5,20.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>AK. 2,9,74.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>H. 1274.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>ṚV. 1,56,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>162,8.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>2,28,7.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>7,86,5.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>AV. 6,63,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>103,2.</abbr>
+        <ref type="inherited-siglum">AV. 6,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>7,83,1.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>2.</abbr>
+        <ref type="inherited-siglum">AV. 7,83,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>TS. 2,4,13,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>ŚAT. BR. 5,3,1,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>KĀTY. ŚR. 15,3,30.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>ŚAT. BR. 14,5,2,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>KĀTY. ŚR. 22,4,21.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>20.</abbr>
+        <ref type="inherited-siglum">KĀTY. ŚR. 22,4,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>PAÑCAV. BR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>Ind. St. 1,33.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>LĀṬY. 8,6,20.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>MBH. 1,6678.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>12,3479.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>HARIV. 3394.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>BHĀG. P. 1,8,31.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>4,11,27.</abbr>
+        <ref type="inherited-siglum">BHĀG. P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>5,1,14.</abbr>
+        <ref type="inherited-siglum">BHĀG. P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>6,3,13.</abbr>
+        <ref type="inherited-siglum">BHĀG. P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>MBH. 6,5510.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>13,834.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>HARIV. 13114.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>R. 2,78,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>R. GORR. 2,8,60.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>HARIV. 3529</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>3536</abbr>
+        <ref type="inherited-siglum">HARIV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>5184.</abbr>
+        <ref type="inherited-siglum">HARIV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>9460.</abbr>
+        <ref type="inherited-siglum">HARIV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwg">
+        <abbr>BHĀG. P. 1,10,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-dAman-record-pwk">
+        <abbr>MBH. 12,92,17</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-dAman-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">91459</idno>
+        <idno type="line">307344</idno>
+        <idno type="pc">475,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;91459&lt;pc&gt;475,1&lt;k1&gt;dAman&lt;k2&gt;dA/man&lt;h&gt;3&lt;e&gt;2
+&lt;hom&gt;3.&lt;/hom&gt; &lt;s&gt;dA/man&lt;/s&gt; ¦ &lt;lex&gt;n.&lt;/lex&gt; (&lt;lex type=&quot;hwalt&quot;&gt;m.&lt;/lex&gt;, &lt;ls&gt;L.&lt;/ls&gt;) string, cord, rope, fetter, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ls&gt;AV.&lt;/ls&gt;; &lt;ls&gt;ŚBr.&lt;/ls&gt;; &lt;ls&gt;MBh.&lt;/ls&gt; &amp;c.&lt;info lex=&quot;m:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-dAman-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">32554</idno>
+        <idno type="line">317593</idno>
+        <idno type="pc">3-0590</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;32554&lt;pc&gt;3-0590&lt;k1&gt;dAman&lt;k2&gt;dA/man&lt;h&gt;4
+4. {#dA/man#}¦ (von 4. {#dA#}) &lt;lex&gt;f.&lt;/lex&gt; (dieses nicht zu belegen) und &lt;lex&gt;n.&lt;/lex&gt;
+&lt;ls&gt;P. 4,1,11&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;ls&gt;UJJVAL.&lt;/ls&gt; zu &lt;ls&gt;UṆĀDIS. 4,144.&lt;/ls&gt; &lt;ls&gt;TRIK. 3,5,20.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%Band, Fessel, Schnur%}, &lt;lex&gt;f.&lt;/lex&gt; &lt;lex&gt;n.&lt;/lex&gt;
+&lt;ls&gt;AK. 2,9,74.&lt;/ls&gt; &lt;lex&gt;n.&lt;/lex&gt; &lt;ls&gt;H. 1274.&lt;/ls&gt; &lt;ls&gt;ṚV. 1,56,3.&lt;/ls&gt; {#yadvA\jino\ dAma^ sa\MdAna\marva^taH#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;162,8.&lt;/ls&gt; {#dAme^va va\tsAdvi mu^mu\gDyaMha^H#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,28,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,86,5.&lt;/ls&gt; &lt;ls&gt;AV. 6,63,1.&lt;/ls&gt; &lt;ls n=&quot;AV. 6,&quot;&gt;103,2.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;7,83,1.&lt;/ls&gt; &lt;ls n=&quot;AV. 7,83,&quot;&gt;2.&lt;/ls&gt; &lt;ls&gt;TS. 2,4,13,1.&lt;/ls&gt; {#vAla˚#}
+&lt;ls&gt;ŚAT. BR. 5,3,1,10.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 15,3,30.&lt;/ls&gt;
+&lt;ls&gt;ŚAT. BR. 14,5,2,2.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 22,4,21.&lt;/ls&gt; {#dAmatUzARi vAsAMsi#}
+&lt;ls n=&quot;KĀTY. ŚR. 22,4,&quot;&gt;20.&lt;/ls&gt; &lt;ls&gt;PAÑCAV. BR.&lt;/ls&gt; in &lt;ls&gt;Ind. St. 1,33.&lt;/ls&gt; &lt;ls&gt;LĀṬY. 8,6,20.&lt;/ls&gt; {#dfQena dAmnA badDvA#}
+&lt;ls&gt;MBH. 1,6678.&lt;/ls&gt; {#dAmnaH#} (der &lt;ab&gt;gen.&lt;/ab&gt; von {#vaSa#} abhängig) {#SlakzRasya vaSavartinaH#}
+&lt;ls n=&quot;MBH.&quot;&gt;12,3479.&lt;/ls&gt; {#vatsAnAM ropitEH kIlErdAmaBiSca viBUzitam (govrajam)#}
+&lt;ls&gt;HARIV. 3394.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 1,8,31.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;4,11,27.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;5,1,14.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;6,3,13.&lt;/ls&gt; {#kAYcanAni ca dAmAni#}
+&lt;ls&gt;MBH. 6,5510.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;13,834.&lt;/ls&gt;
+&lt;ls&gt;HARIV. 13114.&lt;/ls&gt; {#meKalAdAmaBiH#} {%Gürtelschnüre%}
+&lt;ls&gt;R. 2,78,7.&lt;/ls&gt; {#vimuktottamadAmaBUzaRA#} {%Gürtel%}
+&lt;ls&gt;R. GORR. 2,8,60.&lt;/ls&gt; {#dAmanIdAmaBArEH#}
+&lt;ls&gt;HARIV. 3529&lt;/ls&gt; (&lt;ab&gt;vgl.&lt;/ab&gt; {#dAmanIpASapASitEH#}
+&lt;ls n=&quot;HARIV.&quot;&gt;3536&lt;/ls&gt;). {#muktA˚#} {%Perlenschnur%}
+&lt;ls n=&quot;HARIV.&quot;&gt;5184.&lt;/ls&gt; &lt;ls n=&quot;HARIV.&quot;&gt;9460.&lt;/ls&gt; &lt;ls&gt;BHĀG. P. 1,10,17.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;4,9,55.&lt;/ls&gt; {#dAmaBirvaramAlyAnAm#} {%Blumenguirlanden%}
+&lt;ls&gt;R. GORR. 2,12,31.&lt;/ls&gt; &lt;ls n=&quot;R. GORR.&quot;&gt;5,14,3.&lt;/ls&gt; {#mAlya˚#}
+&lt;ls&gt;MBH. 1,2354.&lt;/ls&gt; &lt;ls n=&quot;MBH. 1,&quot;&gt;6962.&lt;/ls&gt; {#mAlA˚#}
+&lt;ls&gt;R. 2,33,2.&lt;/ls&gt; {#sragdAman#}
+&lt;ls&gt;MBH. 1,5974.&lt;/ls&gt; {#puzpa˚#} {%Blumenguirlande%}
+&lt;ls&gt;HARIV. 7690.&lt;/ls&gt; {#campaka˚#}
+&lt;ls&gt;MBH. 15,668.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;7,9342.&lt;/ls&gt;
+&lt;ls&gt;VIKR. 6.&lt;/ls&gt;
+&lt;ls&gt;CAURAP. 1.&lt;/ls&gt;
+&lt;ls&gt;PRAB. 40,5.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 3,16,20.&lt;/ls&gt; {#toraRorDve tu maNgalyaM dAma vandanamAlikA#} {%Laubgewinde%}
+&lt;ls&gt;H. 1008.&lt;/ls&gt; {#SiKA˚#} {%ein auf dem Kopfe getragener Kranz%}
+&lt;ls&gt;MEGH. 89.&lt;/ls&gt; &lt;ab&gt;Uneig.&lt;/ab&gt;: {#vidyuddAmnA#}
+&lt;ls&gt;MĀLAV. 56.&lt;/ls&gt;
+&lt;ls&gt;MEGH. 28.&lt;/ls&gt; {#uddAmadyutidAmaBistaqidiva pradyotayantI diSaH#}
+&lt;ls&gt;PRAB. 116,1.&lt;/ls&gt; Am Ende eines &lt;ab&gt;adj. comp.&lt;/ab&gt;: {#vAgISatantyAmurudAmni badDAH#}
+&lt;ls&gt;BHĀG. P. 7,5,31.&lt;/ls&gt; {#alaGuvilambipicCadAmnaH#} (&lt;ab&gt;acc.&lt;/ab&gt; &lt;ab&gt;pl.&lt;/ab&gt;; nach dem &lt;ab&gt;Schol.&lt;/ab&gt; {#dAman = sraj#})
+&lt;ls&gt;ŚIŚ. 4,50.&lt;/ls&gt; nach einem &lt;ab&gt;vorangeh.&lt;/ab&gt; Zahlwort &lt;lex&gt;f.&lt;/lex&gt; {#I#}
+&lt;ls&gt;P. 4,1,27.&lt;/ls&gt;
+&lt;ls&gt;VOP. 4,14.&lt;/ls&gt; Am Ende von Personennamen
+&lt;ls&gt;Z. f. d. K. d. M. III,162&lt;/ls&gt;; &lt;ab&gt;vgl.&lt;/ab&gt; {#ASA˚#} .
+&lt;div n=&quot;1&quot;&gt;— 2) {%eine &lt;ab&gt;bes.&lt;/ab&gt; Art von Verband (a large bandage to support parts%}
+&lt;ls&gt;WISE&lt;/ls&gt;) &lt;ls&gt;SUŚR. 1,65,17. 20.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%eine &lt;ab&gt;best.&lt;/ab&gt; Constellation%}
+&lt;ls&gt;VARĀH. BṚH. 12,10. 18.&lt;/ls&gt;
+&lt;ls&gt;LAGHUJ. 10,11.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#dAma#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-dAman-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">49720</idno>
+        <idno type="line">204363</idno>
+        <idno type="pc">3-082-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;49720&lt;pc&gt;3-082-b&lt;k1&gt;dAman&lt;k2&gt;dAma/n&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; {#dAma/n#}¦ &lt;lex&gt;m.&lt;/lex&gt; {%Geber, ein freigebiger Mann%} &lt;ls&gt;MBH. 12,92,17&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

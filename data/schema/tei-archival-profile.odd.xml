@@ -16,7 +16,7 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change when="2026-05-29">Created for full 50-case machine review and profile validation.</change>
+      <change when="2026-05-29">Created for full machine review and profile validation.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -42,7 +42,7 @@
                 <sch:assert test="tei:form/tei:orth[@notation='SLP1']">Each entry has an SLP1 orthographic form.</sch:assert>
                 <sch:assert test="count(tei:cit[@type='source-entry']) = 3">Each entry preserves MW, PWG, and PWK source records.</sch:assert>
                 <sch:assert test="tei:note[@type='profile-version'] = 'tei-archival-profile-v0.1'">Each entry declares the profile version.</sch:assert>
-                <sch:assert test="tei:note[@type='validation-scope'] = 'full-50-tei-odd-profile'">Each entry declares the full validation scope.</sch:assert>
+                <sch:assert test="tei:note[@type='validation-scope'] = 'full-tei-odd-profile'">Each entry declares the full validation scope.</sch:assert>
               </sch:rule>
               <sch:rule context="tei:cit[@type='source-entry']">
                 <sch:assert test="@source">Each source-entry citation points to a source dictionary taxonomy id.</sch:assert>

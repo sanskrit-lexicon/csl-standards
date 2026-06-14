@@ -45,8 +45,10 @@ const neutralIds = new Set((neutral || []).map(item => item.id));
 const allowedReviewStatus = new Set(lossSchema?.items?.properties?.reviewStatus?.enum || []);
 const allowedFailureClassification = new Set(lossSchema?.items?.properties?.failureClassification?.enum || []);
 
+const expectedCount = hardCases?.maxItems ?? items.length;
 check(Array.isArray(items), "data/pilot/hard-cases.json must contain an items array");
-check(items.length === 50, `expected 50 hard cases, found ${items.length}`);
+check(items.length >= 50 && items.length === expectedCount,
+  `expected the sampler's ${expectedCount} hard cases (min 50), found ${items.length}`);
 check(hardCasesForApp?.items?.length === items.length, "src hard-cases JSON is out of sync");
 check(neutral?.length === items.length, "neutral model count must match hard-case count");
 check(neutralForApp?.length === neutral?.length, "src neutral-model JSON is out of sync");

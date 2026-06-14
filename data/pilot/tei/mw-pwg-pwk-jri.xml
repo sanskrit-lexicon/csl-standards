@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-jri">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case jri</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-jri-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Ajri">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">jri</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-jri-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-jri-compound-relation" type="compound">
+      <note type="decomposition-status">Component segmentation requires philological review.</note>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-jri-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-jri-record-pwg">
+        <abbr>NAIGH. 2,14.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-jri-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-jri-record-pwg">
+        <abbr>DHĀTUP. 22,49.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-jri-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-jri-record-pwg">
+        <abbr>ṚV. 9,71,5.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-jri-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">80855</idno>
+        <idno type="line">272244</idno>
+        <idno type="pc">428,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;80855&lt;pc&gt;428,1&lt;k1&gt;jri&lt;k2&gt;jri&lt;h&gt;2&lt;e&gt;3
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;jri&lt;/s&gt; ¦ See &lt;s&gt;uru-&lt;/s&gt; and &lt;s&gt;pari-jri/&lt;/s&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-jri-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">28050</idno>
+        <idno type="line">271472</idno>
+        <idno type="pc">3-0167</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;28050&lt;pc&gt;3-0167&lt;k1&gt;jri&lt;k2&gt;jri&lt;h&gt;1
+1. {#jri#}¦, {#jra/yati = gatikarman#}
+&lt;ls&gt;NAIGH. 2,14.&lt;/ls&gt; {%überwältigen%}
+&lt;ls&gt;DHĀTUP. 22,49.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#upa#} {%sich ausbreiten zu%}(?): {#jigA\dupa^ jrayati\ gora^pI\cya^M pa\daM yada^sya ma\tuTA\ ajI^janan#}
+&lt;ls&gt;ṚV. 9,71,5.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pari#} &lt;ab&gt;s.&lt;/ab&gt; {#parijri#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-jri-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">43624</idno>
+        <idno type="line">177855</idno>
+        <idno type="pc">2-279-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;43624&lt;pc&gt;2-279-c&lt;k1&gt;jri&lt;k2&gt;jri&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; √{#jri#}¦, {#jra/yati#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 *{#gatikarman#}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 *{#aBiBave#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#upa#} {%hingehen zu%} (&lt;ab&gt;Acc.&lt;/ab&gt;).
+&lt;div n=&quot;p&quot;&gt;— Mit {#pari#} in {#parijri/#}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

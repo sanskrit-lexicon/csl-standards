@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-aYc">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case aYc</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-aYc-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AaYc">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">aYc</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">1P,1Ā,10P,10Ā</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-aYc-sense-1" n="1">
+      <def xml:lang="en">bend, curve, incline, curl</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-aYc-sense-2" n="2">
+      <def xml:lang="en">reverence (with inclined body), to honour</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-aYc-sense-3" n="3">
+      <def xml:lang="en">tend, move, go, wander about</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-aYc-sense-4" n="4">
+      <def xml:lang="en">request</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-aYc-sense-5" n="5">
+      <def xml:lang="en">be desirous of bending</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-aYc-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:ac,1">ac,1</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-aYc-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-aYc-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aYc-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-aYc-record-pwg">
+        <abbr>P. 3,2,59</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-aYc-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">2250</idno>
+        <idno type="line">8051</idno>
+        <idno type="pc">10,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;2250&lt;pc&gt;10,3&lt;k1&gt;aYc&lt;k2&gt;aYc&lt;h&gt;1&lt;e&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;aYc&lt;/s&gt; ¦ (connected with √ &lt;s&gt;ac&lt;/s&gt;, &lt;ab&gt;q.v.&lt;/ab&gt;) &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;P.&lt;/ab&gt; &lt;ab&gt;Ā.&lt;/ab&gt; &lt;s&gt;a/Ycati&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt;, &lt;s&gt;AnaYca&lt;/s&gt;, &lt;s&gt;˚ce&lt;/s&gt;, &lt;s&gt;aYcizyati&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt;, &lt;s&gt;aYcitum&lt;/s&gt;, to bend, curve, incline, curl;
+&lt;div n=&quot;to&quot;/&gt;to reverence (with inclined body), to honour;
+&lt;div n=&quot;to&quot;/&gt;to tend, move, go, wander about;
+&lt;div n=&quot;to&quot;/&gt;to request, &lt;ls&gt;L.&lt;/ls&gt; : &lt;ab&gt;cl.&lt;/ab&gt; 10. or &lt;ab&gt;Caus.&lt;/ab&gt; &lt;s&gt;aYcayati&lt;/s&gt;, to unfold, make clear, produce. &lt;ab&gt;Desid.&lt;/ab&gt; &lt;ab&gt;P.&lt;/ab&gt; &lt;ab&gt;Ā.&lt;/ab&gt; &lt;s&gt;aYcicizati&lt;/s&gt;, &lt;s&gt;˚te&lt;/s&gt;, to be desirous of bending:
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Pass.&lt;/ab&gt; &lt;s&gt;aYcyate&lt;/s&gt; or &lt;s&gt;acyate&lt;/s&gt;, to be bent.&lt;info whitneyroots=&quot;ac,1&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;1P,1Ā,10P,10Ā&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aYc-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">1044</idno>
+        <idno type="line">8817</idno>
+        <idno type="pc">1-0076</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1044&lt;pc&gt;1-0076&lt;k1&gt;aYc&lt;k2&gt;aYc&lt;h&gt;2
+2. {#aYc#}¦ &lt;lex&gt;adj.&lt;/lex&gt; am Ende von &lt;ab&gt;Zusamm.&lt;/ab&gt; {%gehend, gerichtet%}
+&lt;ls&gt;P. 3,2,59&lt;/ls&gt;; &lt;ab&gt;vgl.&lt;/ab&gt; {#akuDryaYc, avAYc, udaYc, devadryaYc, nyaYc, parAYc, pratyaYc, prAYc, viSvadryaYc, saDryaYc, samyaYc#} &lt;ab&gt;u. s. w.&lt;/ab&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aYc-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">1424</idno>
+        <idno type="line">5428</idno>
+        <idno type="pc">1-017-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1424&lt;pc&gt;1-017-b&lt;k1&gt;aYc&lt;k2&gt;˚aYc&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {#˚aYc#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; ({%gebogen%}) {%gerichtet nach, zu%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

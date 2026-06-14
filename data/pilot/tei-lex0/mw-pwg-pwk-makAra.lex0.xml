@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-makAra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: makAra</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-makAra" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">makAra</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-makAra-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">the foot called molossus</def>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚĀṄKH. BR. 11,5. 14,3.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AV. PRĀT. 1,67.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>2,25.</abbr><ref type="inherited-siglum">AV. PRĀT.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>31.</abbr><ref type="inherited-siglum">AV. PRĀT. 2,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>M. 2,76.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>Verz. d. Oxf. H. 97,a,37.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>104,b,36.</abbr><ref type="inherited-siglum">Verz. d. Oxf. H.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>226,b,6.</abbr><ref type="inherited-siglum">Verz. d. Oxf. H.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>Ind. St. 8,22, N.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚYĀMĀR.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>WILSON, Sel. Works I,256</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-makAra-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>Ind. St. 8,344,3.</abbr></bibl>
+        <note type="source-record">mw L153872</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

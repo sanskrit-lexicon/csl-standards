@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-navaraNga">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case navaraNga</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-navaraNga-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AnavaraNga">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">navaraNga</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-navaraNga-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-navaraNga-compound-relation" type="compound">
+      <seg type="component">nava</seg>
+      <seg type="component">raNga</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-navaraNga-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-navaraNga-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-navaraNga-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-navaraNga-record-pwg">
+        <abbr>KULĀCĀRYAKĀRIKĀ.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-navaraNga-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">104538</idno>
+        <idno type="line">350422</idno>
+        <idno type="pc">531,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;104538&lt;pc&gt;531,1&lt;k1&gt;navaraNga&lt;k2&gt;nava—raNga&lt;e&gt;3
+&lt;s&gt;nava—raNga&lt;/s&gt; ¦ See under &lt;hom&gt;4.&lt;/hom&gt; &lt;s&gt;nava&lt;/s&gt;.&lt;info hui=&quot;a&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-navaraNga-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">37990</idno>
+        <idno type="line">371271</idno>
+        <idno type="pc">4-0073</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;37990&lt;pc&gt;4-0073&lt;k1&gt;navaraNga&lt;k2&gt;navaraNga
+{#navaraNga#}¦ ({#navan + raNga#}) &lt;lex&gt;n.&lt;/lex&gt; = {#kAyasTamuKyakulInAnAM paYcadAnacaturgrahaRAsmakakulaviSezaH#}
+&lt;ls&gt;ŚKDR.&lt;/ls&gt; nach der &lt;ls&gt;KULĀCĀRYAKĀRIKĀ.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-navaraNga-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">57160</idno>
+        <idno type="line">235196</idno>
+        <idno type="pc">3-186-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;57160&lt;pc&gt;3-186-a&lt;k1&gt;navaraNga&lt;k2&gt;navaraNga
+{#navaraNga#}¦ &lt;lex&gt;n.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 *{%eine Art Gewand%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%ein &lt;ab&gt;best.&lt;/ab&gt; hochstehendes Geschlecht der Schreiber%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

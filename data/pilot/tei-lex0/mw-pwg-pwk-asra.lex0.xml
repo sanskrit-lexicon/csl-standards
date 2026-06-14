@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-asra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: asra</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-asra" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">asra</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-asra-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">hair of the head</def>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 3,4,166.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. ś. 117</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>an. 2,393.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MED. r. 5.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 2,6,2,15.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>TRIK. 3,3,325.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. 622.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-8" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>RAGH. 16,15</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-asra-cite-9" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>CAṆḌAK. 70,9</abbr></bibl>
+        <note type="source-record">mw L21551</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-nfpAyya">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case nfpAyya</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-nfpAyya-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AnfpAyya">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">nfpAyya</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-nfpAyya-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-nfpAyya-compound-relation" type="compound">
+      <seg type="component">nf</seg>
+      <seg type="component">pA/yya</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-nfpAyya-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-nfpAyya-record-pwg">
+        <abbr>VS. PRĀT. 4,150.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-nfpAyya-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-nfpAyya-record-pwg">
+        <abbr>ṚV. 2,41,7.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-nfpAyya-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-nfpAyya-record-pwg">
+        <abbr>8,9,18.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-nfpAyya-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-nfpAyya-record-pwg">
+        <abbr>26,14.</abbr>
+        <ref type="inherited-siglum">ṚV. 8,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-nfpAyya-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-nfpAyya-record-pwg">
+        <abbr>15.</abbr>
+        <ref type="inherited-siglum">ṚV. 8,9,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-nfpAyya-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-nfpAyya-record-pwg">
+        <abbr>10,35,12.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-nfpAyya-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">111865</idno>
+        <idno type="line">375593</idno>
+        <idno type="pc">567,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;111865&lt;pc&gt;567,3&lt;k1&gt;nfpAyya&lt;k2&gt;nf—pA/yya&lt;e&gt;3
+&lt;s&gt;nf—pA/yya&lt;/s&gt; ¦ &lt;lex&gt;mfn.&lt;/lex&gt; (√ &lt;hom&gt;3.&lt;/hom&gt; &lt;s&gt;pA&lt;/s&gt;) men-protecting&lt;info lex=&quot;m:f:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-nfpAyya-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">40700</idno>
+        <idno type="line">397290</idno>
+        <idno type="pc">4-0308</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;40700&lt;pc&gt;4-0308&lt;k1&gt;nfpAyya&lt;k2&gt;nfpA/yya
+{#nfpA/yya#}¦ (1. {#nar + pA˚#}) &lt;lex&gt;adj.&lt;/lex&gt; {%Männer schirmend%}
+&lt;ls&gt;VS. PRĀT. 4,150.&lt;/ls&gt; {#vartis#}
+&lt;ls&gt;ṚV. 2,41,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,9,18.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;26,14.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,9,&quot;&gt;15.&lt;/ls&gt; {#Cadis#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,35,12.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-nfpAyya-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">60937</idno>
+        <idno type="line">250589</idno>
+        <idno type="pc">3-239-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;60937&lt;pc&gt;3-239-a&lt;k1&gt;nfpAyya&lt;k2&gt;(nfpAyya)
+({#nfpAyya#}) {#nfpA/yia#}¦ &lt;lex&gt;n.&lt;/lex&gt; {%Männer (bergend), Männersaal, Halle, ein grosses und festes Gebäude%} oder {%Gemach%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

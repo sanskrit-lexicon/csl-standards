@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-Cardis">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case Cardis</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-Cardis-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3ACardis">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">Cardis</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-Cardis-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-Cardis-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-mw">
+        <abbr>Car. i</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-mw">
+        <abbr>vi</abbr>
+        <ref type="inherited-siglum">Car.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-mw">
+        <abbr>viii.</abbr>
+        <ref type="inherited-siglum">Car.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>NAIGH. 3,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>ṚV. 8,5,12.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>1,114,5.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>6,15,3.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>46,9.</abbr>
+        <ref type="inherited-siglum">ṚV. 6,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>12.</abbr>
+        <ref type="inherited-siglum">ṚV. 6,46,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>7,74,5.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>8,27,20.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>74,5.</abbr>
+        <ref type="inherited-siglum">ṚV. 8,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>10,35,12.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>VS. 13,19.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>14,12.</abbr>
+        <ref type="inherited-siglum">VS.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>ṚV. 1,48,15.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>8,18,21.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>27,4.</abbr>
+        <ref type="inherited-siglum">ṚV. 8,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>56,6.</abbr>
+        <ref type="inherited-siglum">ṚV. 8,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwg">
+        <abbr>60,14.</abbr>
+        <ref type="inherited-siglum">ṚV. 8,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-Cardis-record-pwk">
+        <abbr>CARAKA. 1,19. 25. 6,20. 8,2</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-Cardis-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">76120</idno>
+        <idno type="line">257008</idno>
+        <idno type="pc">407,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;76120&lt;pc&gt;407,2&lt;k1&gt;Cardis&lt;k2&gt;Cardis&lt;h&gt;2&lt;e&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;Cardis&lt;/s&gt; ¦ &lt;lex&gt;n.&lt;/lex&gt; (&lt;lex type=&quot;hwalt&quot;&gt;f.&lt;/lex&gt;, &lt;ls&gt;L.&lt;/ls&gt;) vomition, &lt;ls&gt;Car. i&lt;/ls&gt;, &lt;ls n=&quot;Car.&quot;&gt;vi&lt;/ls&gt;, &lt;ls n=&quot;Car.&quot;&gt;viii.&lt;/ls&gt;&lt;info lex=&quot;f:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Cardis-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">26141</idno>
+        <idno type="line">250414</idno>
+        <idno type="pc">2-1083</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;26141&lt;pc&gt;2-1083&lt;k1&gt;Cardis&lt;k2&gt;Cardi/s&lt;h&gt;1
+1. {#Cardi/s#}¦ &lt;lex&gt;n.&lt;/lex&gt; {%Schirm, Schutzwehr; sicherer Wohnort%}, = {#gfha#}
+&lt;ls&gt;NAIGH. 3,4.&lt;/ls&gt; Gewöhnlich in Verbindung mit {#yam: Ca\rdirya^nta\madA^Byam#}
+&lt;ls&gt;ṚV. 8,5,12.&lt;/ls&gt; {#Sarma\ varma\ cCa\rdira\smaBya^M yaMsat#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,114,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;6,15,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 6,&quot;&gt;46,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 6,46,&quot;&gt;12.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,74,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,27,20.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;74,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,35,12.&lt;/ls&gt; {#a\gnizwvA\Bi pA^tu ma\hyA sva\styA Ca\rdizA\ Santa^mena#}
+&lt;ls&gt;VS. 13,19.&lt;/ls&gt; &lt;ls n=&quot;VS.&quot;&gt;14,12.&lt;/ls&gt; Das Wort ist wahrscheinlich auf 1. {#Cad#} zurückzuführen, also wesentlich identisch mit {#Cadis#}, wofür auch der Umstand spricht, dass es als Jambus gebraucht wird,
+&lt;ab&gt;z. B.&lt;/ab&gt; &lt;ls&gt;ṚV. 1,48,15.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,18,21.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;27,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;56,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;60,14.&lt;/ls&gt; Das {%r%} wäre als unorganisch anzusehen.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Cardis-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">40992</idno>
+        <idno type="line">166488</idno>
+        <idno type="pc">2-242-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;40992&lt;pc&gt;2-242-c&lt;k1&gt;Cardis&lt;k2&gt;Cardis&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {#Cardis#}¦ (*&lt;lex&gt;f.&lt;/lex&gt;) &lt;lex&gt;n.&lt;/lex&gt; {%Erbrechen,%} &lt;ab&gt;Pl.&lt;/ab&gt; {%Arten des Erbrechens%} &lt;ls&gt;CARAKA. 1,19. 25. 6,20. 8,2&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

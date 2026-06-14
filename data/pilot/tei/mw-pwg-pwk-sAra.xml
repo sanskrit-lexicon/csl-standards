@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-sAra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case sAra</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>continuation</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-sAra-entry" type="continuation" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AsAra">
+    <form type="continuation">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">sAra</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-sAra-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <xr xml:id="mw-pwg-pwk-sAra-continuation-relation" type="adjacency-continuation-parent" target="#e-1A"><ref>MW e=1A</ref></xr>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>P. 3,3,17</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>6,1,159</abbr>
+        <ref type="inherited-siglum">P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>P. 2,4,31.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>SIDDH. K. 249,b,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>ṚV. 3,53,19.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>P. 3,3,17</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>VARĀH. BṚH. S. 79,11.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>SUŚR. 1,339,18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>ŚĀRṄG. SAṂH. 1,5,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>SUŚR. 1,339,21.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>MBH. 3,10064.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>P. 3,3,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>AK. 3,4,25,173.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>H. an. 2,466.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>MED. r. 96.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>ŚABDAR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>MBH. 1,6029.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>5,1991.</abbr>
+        <ref type="inherited-siglum">MBH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>BHĀG. P. 5,1,29.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>SUŚR. 1,188,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>KUMĀRAS. 1,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>6,50.</abbr>
+        <ref type="inherited-siglum">KUMĀRAS.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>3,13.</abbr>
+        <ref type="inherited-siglum">KUMĀRAS.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>BHĀG. P. 8,18,20.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>6,11,5.</abbr>
+        <ref type="inherited-siglum">BHĀG. P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>7,3,18.</abbr>
+        <ref type="inherited-siglum">BHĀG. P.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>SUŚR. 1,43,5. 247,21.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>ŚĀRṄG. SAṂH. 1,6,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>MĀRK. P. 34,56.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>AV. 4,4,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>VARĀH. BṚH. S. 2, S. 4, Z. 18. fg.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>MBH. 1,7076.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>RAGH. 6,54.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>R. 6,37,64.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>RAGH. 2,74.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>MBH. 12,11156.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>RAGH. 6,42.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>1,14.</abbr>
+        <ref type="inherited-siglum">RAGH.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwg">
+        <abbr>KUMĀRAS. 5,19.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>HEMĀDRI 1,747,15. 760,19</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>RĀJAN. 15,2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>VĀSAV. 105,2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>ZACH. Beitr. 42</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>Spr. 2347</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>5775</abbr>
+        <ref type="inherited-siglum">Spr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-7" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>KĀD. 142,14</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sAra-cite-pwk-8" type="named-source-citation" corresp="#mw-pwg-pwk-sAra-record-pwk">
+        <abbr>250,4</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-sAra-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">242825</idno>
+        <idno type="line">806303</idno>
+        <idno type="pc">1208,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;242825&lt;pc&gt;1208,1&lt;k1&gt;sAra&lt;k2&gt;sA/ra&lt;e&gt;1A
+¦ (= &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;SAra&lt;/s&gt;) a piece at chess or backgammon &amp;c.&lt;info lex=&quot;inh&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-sAra-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">108632</idno>
+        <idno type="line">1010281</idno>
+        <idno type="pc">7-0945</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;108632&lt;pc&gt;7-0945&lt;k1&gt;sAra&lt;k2&gt;sA/ra&lt;h&gt;2
+2. {#sA/ra#}¦ ({#sAra/#}
+&lt;ls&gt;P. 3,3,17&lt;/ls&gt;; &lt;ab&gt;vgl.&lt;/ab&gt;
+&lt;ls n=&quot;P.&quot;&gt;6,1,159&lt;/ls&gt;)
+&lt;div n=&quot;1&quot;&gt; 1) &lt;lex&gt;m.&lt;/lex&gt; &lt;lex&gt;n.&lt;/lex&gt; &lt;is&gt;gaṇa&lt;/is&gt; {#arDarcAdi#}
+zu &lt;ls&gt;P. 2,4,31.&lt;/ls&gt; &lt;ls&gt;SIDDH. K. 249,b,4.&lt;/ls&gt; am Ende eines &lt;ab&gt;adj. comp.&lt;/ab&gt; &lt;lex&gt;f.&lt;/lex&gt; {#A#} .
+&lt;div n=&quot;2&quot;&gt; a) {%die inneren festen Bestandtheile eines Körpers%}: {#Ka\di\rasya^#} {%Kernholz%}
+&lt;ls&gt;ṚV. 3,53,19.&lt;/ls&gt; {#Kadira˚, SAla˚#}
+&lt;ls&gt;P. 3,3,17&lt;/ls&gt;, &lt;ab&gt;Schol.&lt;/ab&gt; {#tindukasAreRa nirmitaH paryaNkaH#}
+&lt;ls&gt;VARĀH. BṚH. S. 79,11.&lt;/ls&gt; {#aByantaragatEH sArEryaTA tizWanti BUruhAH . asTisArEstaTA dehAH#}
+&lt;ls&gt;SUŚR. 1,339,18.&lt;/ls&gt;
+&lt;ls&gt;ŚĀRṄG. SAṂH. 1,5,4.&lt;/ls&gt; {#asTIni na vinaSyanti sArARyetAni dehinAm#}
+&lt;ls&gt;SUŚR. 1,339,21.&lt;/ls&gt; {#sArARi#} von Früchten neben {#rasa#} und {#tvac#} vielleicht {%Kerngehäuse%}
+&lt;ls&gt;MBH. 3,10064.&lt;/ls&gt; {#sAra#} &lt;lex&gt;m.&lt;/lex&gt; = {#sTira#}
+&lt;ls&gt;P. 3,3,17.&lt;/ls&gt; = {#sTirAMSa#}
+&lt;ls&gt;AK. 3,4,25,173.&lt;/ls&gt;
+&lt;ls&gt;H. an. 2,466.&lt;/ls&gt;
+&lt;ls&gt;MED. r. 96.&lt;/ls&gt; = {#atidfQa#}
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— b) {%Festigkeit, Härte; Stärke, Kraft%}: {#BujayoH sAramarpaya#}
+&lt;ls&gt;MBH. 1,6029.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;5,1991.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 5,1,29.&lt;/ls&gt; {#˚sTita#}
+&lt;ls&gt;SUŚR. 1,188,3.&lt;/ls&gt; {#DaritrIDaraRakzama#} eines Berges
+&lt;ls&gt;KUMĀRAS. 1,17.&lt;/ls&gt; {#˚guruBiH padanyAsEH#} &lt;ab&gt;desgl.&lt;/ab&gt;
+&lt;ls n=&quot;KUMĀRAS.&quot;&gt;6,50.&lt;/ls&gt; &lt;is&gt;Kāma&apos;s&lt;/is&gt; &lt;ls n=&quot;KUMĀRAS.&quot;&gt;3,13.&lt;/ls&gt; {#aKilasArasaMBfta#} &lt;is&gt;Viṣṇu&lt;/is&gt; als Zwerg
+&lt;ls&gt;BHĀG. P. 8,18,20.&lt;/ls&gt; {#yadi vaH praDane SradDA sAraM vA kzullakA hfdi#}
+&lt;ls n=&quot;BHĀG. P.&quot;&gt;6,11,5.&lt;/ls&gt; {#adrAkzamahametatte hftsAraM mahadadButam#}
+&lt;ls n=&quot;BHĀG. P.&quot;&gt;7,3,18.&lt;/ls&gt; {#AhArasya#} {%die nährende Kraft%}
+&lt;ls&gt;SUŚR. 1,43,5. 247,21.&lt;/ls&gt;
+&lt;ls&gt;ŚĀRṄG. SAṂH. 1,6,4.&lt;/ls&gt; {#sArodDaraRadUzita (mAMsa)#}
+&lt;ls&gt;MĀRK. P. 34,56.&lt;/ls&gt; {#sAra^ (sArA#} &lt;is&gt;Padap&lt;/is&gt;., wohl für {#sAram) fza\BARA^m#} {%die zeugende Kraft%}
+&lt;ls&gt;AV. 4,4,4.&lt;/ls&gt; {#vAksAra#} {%die Kraft der Rede, Beredsamkeit%}
+&lt;ls&gt;VARĀH. BṚH. S. 2, S. 4, Z. 18. fg.&lt;/ls&gt;
+[Page7-0946]
+am Ende eines &lt;ab&gt;adj. comp.&lt;/ab&gt;: {#vajrasamAna˚#} ein Mann
+&lt;ls&gt;MBH. 1,7076.&lt;/ls&gt; {#mahendrAdisamAna˚#}
+&lt;ls&gt;RAGH. 6,54.&lt;/ls&gt; {#mahABujO giriSfNgasArO#}
+&lt;ls&gt;R. 6,37,64.&lt;/ls&gt; {#Buje BujagendrasamAnasAre#}
+&lt;ls&gt;RAGH. 2,74.&lt;/ls&gt; {#nala˚#} {%die Härte%} (&lt;ab&gt;d. i.&lt;/ab&gt; {%Weichheit, Schwäche) des Rohrschilfs habend%}
+&lt;ls&gt;MBH. 12,11156.&lt;/ls&gt; {#utpalapattra˚#}
+&lt;ls&gt;RAGH. 6,42.&lt;/ls&gt; {#sarvAtirikta˚ (Atman)#}
+&lt;ls n=&quot;RAGH.&quot;&gt;1,14.&lt;/ls&gt; {#vapuH sasAram#}
+&lt;ls&gt;KUMĀRAS. 5,19.&lt;/ls&gt; {#dfzwa˚#}
+&lt;ls&gt;Spr. (II) 6212&lt;/ls&gt; ({#gajendra#}).
+&lt;ls&gt;RAGH. 11,47&lt;/ls&gt; ({#vIryaSulka#}). {#dfzwistfRIkftajagattrayasattvasArA#}
+&lt;ls&gt;UTTARAR. 111,17&lt;/ls&gt; (&lt;ls n=&quot;UTTARAR.&quot;&gt;151,1&lt;/ls&gt; = &lt;ls&gt;SĀH. D. 38,10&lt;/ls&gt;). {#ajAta˚#}
+&lt;ls&gt;R. GORR. 1,39,17.&lt;/ls&gt; {#aBedya˚#}
+&lt;ls&gt;RĀJA-TAR. 4,298.&lt;/ls&gt; {#kzIRa˚#}
+&lt;ls&gt;MBH. 13,281.&lt;/ls&gt; {#gfhIta˚#}
+&lt;ls&gt;BHĀG. P. 5,14,19.&lt;/ls&gt; {#Atta˚#}
+&lt;ls n=&quot;BHĀG. P.&quot;&gt;6,10,29.&lt;/ls&gt; {#smaranunna˚#}
+&lt;ls n=&quot;BHĀG. P.&quot;&gt;10,21,12.&lt;/ls&gt; {#mahA˚#} {%fest, stark%}: Bogen
+&lt;ls&gt;R. 2,100,19.&lt;/ls&gt; {#alpa˚#} {%schwach%}
+&lt;ls&gt;Spr. (II) 1952.&lt;/ls&gt;
+&lt;ls&gt;KĀM. NĪTIS. 11,8.&lt;/ls&gt; {#hftasArA suDA#} {%berauschende Kraft%}
+&lt;ls&gt;R. 2,61,18.&lt;/ls&gt; {#sAra#} &lt;lex&gt;m.&lt;/lex&gt; = {#sTAman#}
+&lt;ls&gt;HALĀY. 5,67.&lt;/ls&gt; = {#bala#}
+&lt;ls&gt;AK. 2,4,12.&lt;/ls&gt;
+&lt;ls&gt;H. an.&lt;/ls&gt;
+&lt;ls&gt;MED.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— c) {%Werth%}: {#sAratas#}
+&lt;ls&gt;M. 8,405.&lt;/ls&gt;
+&lt;ls&gt;YĀJÑ. 2,275.&lt;/ls&gt; {#(vijYAtaH) rAjYA himavataH sAro rAjYaH sAro himAdriRA#}
+&lt;ls&gt;RAGH. 4,79.&lt;/ls&gt; {#puruzArTa˚#}
+&lt;ls&gt;BHĀG. P. 3,13,49.&lt;/ls&gt; {#mahA˚#} &lt;lex&gt;adj.&lt;/lex&gt; {%werthvoll, kostbar%}
+&lt;ls&gt;R. 3,72,1.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;4,33,15&lt;/ls&gt; &lt;ls n=&quot;R. 4,&quot;&gt;43,33.&lt;/ls&gt; {#alpa˚#} &lt;lex&gt;adj.&lt;/lex&gt; {%von geringem Werth%}
+&lt;ls&gt;M. 11,164.&lt;/ls&gt; {#gata˚#} &lt;lex&gt;adj.&lt;/lex&gt; {%werthlos geworden, nichtig%}
+&lt;ls&gt;Spr. (II) 2067.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;6122.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— d) {%Vermögen, Besitz, Reichthum%}; &lt;ab&gt;neutr.&lt;/ab&gt;
+&lt;ls&gt;H. 191.&lt;/ls&gt;
+&lt;ls&gt;H. an.&lt;/ls&gt;
+&lt;ls&gt;MED.&lt;/ls&gt;
+&lt;ls&gt;HALĀY. 1,80.&lt;/ls&gt; &lt;ab&gt;masc.&lt;/ab&gt; &lt;ls n=&quot;HALĀY.&quot;&gt;5,67.&lt;/ls&gt; {#sArAparADO#}
+&lt;ls&gt;M. 8,126.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;9,262.&lt;/ls&gt; {#karaM dApayAmAsa sAragrahaRapUrvakam#}
+&lt;ls&gt;MĀRK. P. 122,10.&lt;/ls&gt; {#sArApahAramakarotparihAsapurasya#}
+&lt;ls&gt;RĀJA-TAR. 5,160.&lt;/ls&gt; {#sAratas#}
+&lt;ls&gt;DAŚAK. 70,13.&lt;/ls&gt; am Ende eines &lt;ab&gt;adj. comp.&lt;/ab&gt;: {#nEkakowi˚#}
+&lt;ls n=&quot;DAŚAK.&quot;&gt;75,13.&lt;/ls&gt; {#sAvitrImAtra˚#}
+&lt;ls&gt;M. 2,118.&lt;/ls&gt; {#gAmAttasArAm#}
+&lt;ls&gt;RAGH. 5,26.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— e) {%Kern%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%Hauptsache, Quintessenz, das Beste, Werthvollste, etwas Werthvolles%}: {#etatsAram#} ({#kAmaH#}) — {#DarmArTAvatra saMsTitO#}
+&lt;ls&gt;MBH. 12,6244.&lt;/ls&gt; {#sAraM tato grAhyam#}
+&lt;ls&gt;Spr. (II) 243.&lt;/ls&gt; {#sarvataH sAramAdadyAt#}
+&lt;ls n=&quot;Spr. (II)&quot;&gt;459.&lt;/ls&gt; {#atra na kimapi sAramaRIyaH#}
+&lt;ls n=&quot;Spr. (II)&quot;&gt;554.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;777.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;1794.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;2347.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;2954.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;5699.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;5776.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;6605.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;6639. fg.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;7211.&lt;/ls&gt; {#sAra iti#} (besser als {#ratnamiti#})
+&lt;ls&gt;VIKR. 143&lt;/ls&gt;, &lt;ab&gt;v. l.&lt;/ab&gt;
+&lt;ls&gt;KATHĀS. 28,16.&lt;/ls&gt; &lt;ls n=&quot;KATHĀS.&quot;&gt;34,190.&lt;/ls&gt; &lt;ls n=&quot;KATHĀS.&quot;&gt;39,213.&lt;/ls&gt;
+&lt;ls&gt;SĀH. D. 23,17.&lt;/ls&gt;
+&lt;ls&gt;MĀRK. P. 18,43.&lt;/ls&gt;
+&lt;ls&gt;VET. in LA. (III) 16,16.&lt;/ls&gt; &lt;ls&gt;BHĀG. P. 1,1,11.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;4,18,2.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P. 4,18,&quot;&gt;13.&lt;/ls&gt; &lt;ls&gt;SARVADARŚANAS. 158,20.&lt;/ls&gt; {#sArAtsAraM vadasva naH#}
+&lt;ls&gt;Verz. d. Oxf. H. 7,a, No. 42.&lt;/ls&gt;
+{#apAm#}
+&lt;ls&gt;RAGH. 10,10.&lt;/ls&gt; &lt;ls n=&quot;RAGH. 10,&quot;&gt;53.&lt;/ls&gt; {#kftsnasya jagataH#}
+&lt;ls&gt;R. 5,12,27.&lt;/ls&gt; {#Darmasya#}
+&lt;ls&gt;KATHĀS. 33,34.&lt;/ls&gt; {#dfzwaH sArastasyAH#} (so ist zu lesen) {#puro BavAn#}
+&lt;ls n=&quot;KATHĀS.&quot;&gt;54,62.&lt;/ls&gt; {#tat — sarvavedetihAsAnAM sAraM sAraM samuddftam#}
+&lt;ls&gt;BHĀG. P. 1,3,41.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAR. 1,15,13.&lt;/ls&gt; {#sarvamantrezu sAraSca mantrarAjaH prakIrtitaH#}
+&lt;ls n=&quot;PAÑCAR.&quot;&gt;2,3,104.&lt;/ls&gt; &lt;ls&gt;Verz. d. Oxf. H. 252,b, No. 626, Z. 4.&lt;/ls&gt; {#kaTAmeva kaTAsu sAram . udDftya puzpeBya iva#}
+&lt;ls&gt;BHĀG. P. 3,5,15.&lt;/ls&gt; {#˚mArgaRam#}
+&lt;ls&gt;Spr. (II) 4823.&lt;/ls&gt; {#sArAdAnaM zawpadavat#}
+&lt;ls&gt;KAP. 4,13.&lt;/ls&gt; {#˚SUnya#}
+&lt;ls&gt;Spr. (II) 2919.&lt;/ls&gt; {#˚saMgraha#}
+&lt;ls&gt;CĀṆ. 1.&lt;/ls&gt; {#˚grAhin#}
+&lt;ls&gt;R. 3,72,1.&lt;/ls&gt; {#˚darSin#}
+&lt;ls n=&quot;R.&quot;&gt;5,84,7.&lt;/ls&gt; {#sArArTin#}
+&lt;ls&gt;MBH. 4,1567.&lt;/ls&gt; {#samudra˚#}
+&lt;ls n=&quot;MBH.&quot;&gt;2,1893.&lt;/ls&gt; {#kaTAsAro hi sA (kaTA) matA#}
+&lt;ls n=&quot;MBH.&quot;&gt;12,12711.&lt;/ls&gt; {#loka˚#}
+&lt;ls n=&quot;MBH.&quot;&gt;14,597.&lt;/ls&gt; {#trivarga˚#} ({#Darma#})
+&lt;ls&gt;KUMĀRAS. 5,31.&lt;/ls&gt; {#muktA˚#}
+&lt;ls&gt;RAGH. 4,50.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAR. 1,4,54.&lt;/ls&gt; &lt;ls n=&quot;PAÑCAR. 1,&quot;&gt;7,49.&lt;/ls&gt; &lt;ls n=&quot;PAÑCAR. 1,&quot;&gt;11,13.&lt;/ls&gt; {#veda˚, yajYa˚, sAma˚#}
+&lt;ls n=&quot;PAÑCAR.&quot;&gt;4,3,50.&lt;/ls&gt; {#AcAra˚#}
+&lt;ls&gt;RĀJA-TAR. 4,344.&lt;/ls&gt; {#mandira˚#}
+&lt;ls&gt;Spr. (II) 473.&lt;/ls&gt; {#sakalArTaSAstra˚#}
+&lt;ls&gt;PAÑCAT. Pr. 3.&lt;/ls&gt; {#jIvaloka˚#}
+&lt;ls n=&quot;PAÑCAT.&quot;&gt;49,4.&lt;/ls&gt; {#samastavastusaMBAra˚#}
+&lt;ls n=&quot;PAÑCAT.&quot;&gt;157,22.&lt;/ls&gt; &lt;ls&gt;DHŪRTAS. 88,1.&lt;/ls&gt; {#vastusArARAm#}
+&lt;ls&gt;BHĀG. P. 2,6,4.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;10,6,7.&lt;/ls&gt; am Ende eines &lt;ab&gt;adj. comp.&lt;/ab&gt;: {#hfta˚#}
+&lt;ls&gt;R. 2,33,18.&lt;/ls&gt;
+&lt;ls&gt;R. GORR. 2,36,12.&lt;/ls&gt; {#upAtta˚#}
+&lt;ls&gt;MĀLAV. 22,19.&lt;/ls&gt; {#Atta˚#}
+&lt;ls&gt;BHĀG. P. 3,15,23.&lt;/ls&gt; {#sAra#} &lt;lex&gt;m.&lt;/lex&gt; = {#SrezWa#}
+&lt;ls&gt;H. an.&lt;/ls&gt; &lt;ls&gt;HALĀY. 5,67.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— f) {%das Vorwaltende, Hauptsache%} am Ende eines &lt;ab&gt;adj. comp.&lt;/ab&gt; (&lt;ab&gt;vgl.&lt;/ab&gt; den Gebrauch von {#para#}): {#tUzRIM˚#}
+&lt;ls&gt;AIT. BR. 2,31.&lt;/ls&gt; {#prIti˚#} ({#kAma#})
+&lt;ls&gt;MBH. 2,153.&lt;/ls&gt;
+&lt;ls&gt;R. GORR. 2,109,61.&lt;/ls&gt; {#kzamA˚#}
+&lt;ls&gt;HARIV. 15624. fg.&lt;/ls&gt; {#Darma˚#}
+&lt;ls&gt;R. 2,33,15.&lt;/ls&gt;
+&lt;ls&gt;Spr. (II) 3113.&lt;/ls&gt; &lt;ls&gt;WEBER, RĀMAT. UP. 338.&lt;/ls&gt; &lt;ls&gt;ŚRUT. 20.&lt;/ls&gt; &lt;ls&gt;Spr. (II) 2789.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;3738.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;4253.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;6233.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;6985.&lt;/ls&gt; &lt;ls&gt;GĪT. 5,8.&lt;/ls&gt; &lt;ls&gt;KATHĀS. 40,48.&lt;/ls&gt; &lt;ls&gt;VP. 1,9,22.&lt;/ls&gt; &lt;ls&gt;BHĀG. P. 1,19,19.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;3,5,45.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;6,9,50.&lt;/ls&gt; &lt;ls n=&quot;BHĀG. P.&quot;&gt;8,16,60.&lt;/ls&gt; &lt;ls&gt;CAURAP. 5.&lt;/ls&gt; &lt;ls n=&quot;CAURAP.&quot;&gt;33.&lt;/ls&gt;
+[Page7-0947]
+&lt;div n=&quot;2&quot;&gt;— g) {%ein dem Temperamente eines Menschen zu Grunde liegender Hauptbestandtheil des Körpers%}: es werden deren acht oder auch nur sieben angenommen: {#sattva#} (fehlt bei
+&lt;ls&gt;VARĀH.&lt;/ls&gt;), {#Sukra, majjan, asTi, medas, mAMsa, rakta#} und {#Sukra#}
+&lt;ls&gt;SUŚR. 1,125,11. 126,18.&lt;/ls&gt; {#tvaksAra#} &lt;lex&gt;adj.&lt;/lex&gt;
+&lt;ls n=&quot;SUŚR.&quot;&gt;127,3.&lt;/ls&gt; &lt;ls&gt;CARAKA 3,8.&lt;/ls&gt; &lt;ls&gt;VARĀH. BṚH. S. 68,1.&lt;/ls&gt; &lt;ls n=&quot;VARĀH. BṚH. S. 68,&quot;&gt;96.&lt;/ls&gt; &lt;ls n=&quot;VARĀH. BṚH. S.&quot;&gt;69,21.&lt;/ls&gt; {#rakta˚#} &lt;lex&gt;adj.&lt;/lex&gt;
+&lt;ls n=&quot;VARĀH. BṚH. S.&quot;&gt;68,97.&lt;/ls&gt; {#mAMsa˚#} &lt;lex&gt;adj.&lt;/lex&gt;
+&lt;ls n=&quot;VARĀH. BṚH. S. 68,&quot;&gt;100.&lt;/ls&gt; &lt;ls&gt;LAGHUJ. 2,13. fgg.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— h) {%Bestandtheil%} &lt;ab&gt;überh.&lt;/ab&gt;: {#paYca˚#} &lt;lex&gt;adj.&lt;/lex&gt; ({#peya#})
+&lt;ls&gt;SUŚR. 2,421,5.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— i) {%das Rechte, Richtige%}; &lt;ab&gt;neutr.&lt;/ab&gt; = {#nyAyya#}
+&lt;ls&gt;AK.&lt;/ls&gt; &lt;ls&gt;H. an.&lt;/ls&gt; &lt;ls&gt;MED.&lt;/ls&gt; {#nEtatsAram#} &lt;ab&gt;Comm.&lt;/ab&gt; zu &lt;ls&gt;TS. PRĀT. 14,5.&lt;/ls&gt;
+{#tadasAram#}
+zu &lt;ls n=&quot;TS. PRĀT.&quot;&gt;1,21.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— k) {%Nektar%}: {#yattatrotpatsyate sAraM tatpAsyAmaH#}
+&lt;ls&gt;R. GORR. 1,46,19.&lt;/ls&gt; {#sAraM juzAM caraRayoH#}
+&lt;ls&gt;BHĀG. P. 7,6,25.&lt;/ls&gt; am Ende eines &lt;ab&gt;adj. comp.&lt;/ab&gt;: {#nirvizwasArAM pitfBirhimAMSorantyAM kalAm#}
+&lt;ls&gt;RAGH. 14,80.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— l) {%Seim%}
+&lt;ls&gt;KAP. 4,13.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 1,18,7.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— m) {%saurer Rahm%}
+&lt;ls&gt;SUŚR. 2,378,6.&lt;/ls&gt; {#daDnA sasAreRa#}
+&lt;ls n=&quot;SUŚR.&quot;&gt;441,8.&lt;/ls&gt; {#sAra#} &lt;lex&gt;n.&lt;/lex&gt; = {#daDyuttara#}
+&lt;ls&gt;ŚABDAC.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— n) {%verdickter als Räucherwerk verwandter Pflanzensaft, Harz%}
+&lt;ls&gt;SUŚR. 1,133,9. 12. 183,15. 2,12,15. 63,1. 73,21. 83,14. fg. 119,3. 175,4. 468,21.&lt;/ls&gt;
+&lt;ls&gt;ŚĀRṄG. SAṂH. 1,1,42.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#sArin#} .
+&lt;div n=&quot;2&quot;&gt;— o) {%Dünger%}
+&lt;ls&gt;KṚṢIS. 8,26.&lt;/ls&gt; {#vinA sAreRa yadDAnyaM varDate na Palatyapi#}
+&lt;ls n=&quot;KṚṢIS.&quot;&gt;9,3.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— p) {%ein Fürst, der einem andern im Kriege zu Hilfe kommt, Bundesgenosse%}
+&lt;ls&gt;VARĀH. BṚH. S. 34,22&lt;/ls&gt;; &lt;ab&gt;vgl.&lt;/ab&gt; {#AsAra#}
+&lt;div n=&quot;1&quot;&gt; 3) in den Nachträgen.
+&lt;div n=&quot;2&quot;&gt;— q) &lt;ab&gt;Bez.&lt;/ab&gt; {%des Gürtels bei den%} &lt;is&gt;Maga&lt;/is&gt;
+&lt;ls&gt;Verz. d. Oxf. H. 33,b,30.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— r) &lt;lex&gt;m.&lt;/lex&gt; in der Rhetorik {%eine Art Klimax%}: {#uttarottaramutkarzo BavetsAraH parAvaDiH#}
+&lt;ls&gt;KĀVYAPR. 173,8 (331,15).&lt;/ls&gt; &lt;ls&gt;SĀH. D. 731.&lt;/ls&gt; &lt;ls&gt;KUVALAY. 113,a.&lt;/ls&gt; &lt;ls&gt;PRATĀPAR. 103,b,3.&lt;/ls&gt; Beispiele
+&lt;ls&gt;Spr. (II) 2347.&lt;/ls&gt; &lt;ls n=&quot;Spr. (II)&quot;&gt;5776.&lt;/ls&gt; — Die Lexicographen kennen noch folgende nicht zu belegende &lt;ab&gt;Bedd.&lt;/ab&gt;
+&lt;div n=&quot;3&quot;&gt; α) &lt;lex&gt;m.&lt;/lex&gt; = {#majjan#}
+&lt;ls&gt;AK. 2,4,1,12.&lt;/ls&gt;
+&lt;ls&gt;H. 1121.&lt;/ls&gt;
+&lt;ls&gt;H. an.&lt;/ls&gt;
+&lt;ls&gt;MED.&lt;/ls&gt;
+&lt;ls&gt;HALĀY. 2,28. 5,67.&lt;/ls&gt; = {#asTi#}
+&lt;ls&gt;H. 626&lt;/ls&gt; (&lt;ab&gt;neutr.&lt;/ab&gt; &lt;ab&gt;v. l.&lt;/ab&gt;). = {#tvacisAra#}
+&lt;ls n=&quot;H.&quot;&gt;1153&lt;/ls&gt;, &lt;ab&gt;Schol.&lt;/ab&gt; = {#vajrakzAra#}
+&lt;ls&gt;RĀJAN. 6,256.&lt;/ls&gt; = {#vAyu#} (&lt;ab&gt;vgl.&lt;/ab&gt; {#SAra#})
+&lt;ls&gt;JAṬĀDH.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; = {#roga#}
+&lt;ls&gt;DHAR.&lt;/ls&gt; &lt;ab&gt;ebend.&lt;/ab&gt; = {#pASaka#} (&lt;ab&gt;vgl.&lt;/ab&gt; {#SAra#})
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; &lt;ab&gt;ebend.&lt;/ab&gt;
+&lt;div n=&quot;3&quot;&gt;— β) &lt;lex&gt;n.&lt;/lex&gt; = {#jala#}
+&lt;ls&gt;H. an.&lt;/ls&gt; &lt;ls&gt;MED.&lt;/ls&gt; = {#navanIta#}
+&lt;ls&gt;RĀJAN.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; = {#lOha#}
+&lt;ls&gt;BHĀVAPR.&lt;/ls&gt; &lt;ab&gt;ebend.&lt;/ab&gt; = {#vipina#}
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; &lt;ab&gt;ebend.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;lex&gt;f.&lt;/lex&gt; {#A = kfzRatrivftA#}
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; = {#dUrvA#} (&lt;ab&gt;vgl.&lt;/ab&gt; {#SArI#})
+&lt;ls&gt;ŚABDAC.&lt;/ls&gt; &lt;ab&gt;ebend.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) &lt;lex&gt;f.&lt;/lex&gt; {#I#} {%der Vogel%} &lt;is&gt;Sārikā&lt;/is&gt; und = {#pASaka#} (&lt;ab&gt;vgl.&lt;/ab&gt; {#SArI#})
+&lt;ls&gt;ŚABDAR.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; = {#saptalA#}
+&lt;ls&gt;RĀJAN.&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) &lt;lex&gt;adj.&lt;/lex&gt;
+&lt;div n=&quot;2&quot;&gt; a) {%hart, fest, stark%}: {#˚druma#}
+&lt;ls&gt;VARĀH. BṚH. S. 43,58.&lt;/ls&gt; {#˚dAru#}
+&lt;ls n=&quot;VARĀH. BṚH. S.&quot;&gt;54,118.&lt;/ls&gt; {#DanuzI#}
+&lt;ls&gt;R. GORR. 1,77,14.&lt;/ls&gt; {#˚puNKa#}
+&lt;ls&gt;ŚĀK. 10.&lt;/ls&gt; {#˚gAtra (˚yoDa#} &lt;ls&gt;ed. Bomb.&lt;/ls&gt;)
+&lt;ls&gt;MBH. 6,3316.&lt;/ls&gt;
+&lt;ls&gt;SUŚR. 1,151,5.&lt;/ls&gt; &lt;ls&gt;CARAKA 3,8.&lt;/ls&gt; {#maDusUdana#}
+&lt;ls&gt;HARIV. 5794.&lt;/ls&gt; {#ye tu garBANkurAH sArAstAndivyAnparvatAnviduH#}
+&lt;ls n=&quot;HARIV.&quot;&gt;11446&lt;/ls&gt; (die neuere &lt;ab&gt;Ausg.&lt;/ab&gt; hat eine andere Lesart). {#bala#} {%Kerntruppen%} (&lt;ab&gt;Gegens.&lt;/ab&gt; {#Palgu#})
+&lt;ls&gt;MBH. 2,1031.&lt;/ls&gt; &lt;ls n=&quot;MBH.&quot;&gt;5,2205.&lt;/ls&gt; &lt;ls n=&quot;MBH. 5,&quot;&gt;2516. fg.&lt;/ls&gt; &lt;ls n=&quot;MBH. 5,&quot;&gt;5244.&lt;/ls&gt;
+&lt;ls&gt;KĀM. NĪTIS. 18,58. 19,59.&lt;/ls&gt; &lt;ls&gt;Spr. (II) 5966.&lt;/ls&gt; &lt;ls&gt;MĀRK. P. 122,18.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— b) {%kostbar, werthvoll%}: {#sArABaraRa#}
+&lt;ls&gt;DAŚAK. 84,11.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— c) {%der vorzüglichste, beste%}; = {#vara#}
+&lt;ls&gt;AK. 3,4,25,173.&lt;/ls&gt;
+&lt;ls&gt;MED.&lt;/ls&gt; {#sarvavedodDftaH sAro mantraH#}
+&lt;ls&gt;Verz. d. Oxf. H. 106,a,32.&lt;/ls&gt; {#sUkta#}
+&lt;ls&gt;BHĀG. P. 4,22,17.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAR. 1,5,22.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— d) mit einem &lt;ab&gt;instr.&lt;/ab&gt; {%voller%}: {#SukreRa = SukrasAra#} &lt;ab&gt;adj. comp.&lt;/ab&gt; {%Samen zum Hauptbestandtheil im Körper habend%}
+&lt;ls&gt;VARĀH. BṚH. S. 69,33.&lt;/ls&gt;
+&lt;div n=&quot;2&quot;&gt;— e) = {#SAra#} {%bunt, scheckig%}: {#maRqUkaH kfzRaH sAraH#} ({#kfzRasAraH?#}) {#kuhakaH#}
+&lt;ls&gt;SUŚR. 2,290,6.&lt;/ls&gt; {#sAraH SabalaH kfzRaScAsO sAraSca kfzRasAraH kfzRamfgaH#}
+&lt;ls&gt;MALLIN.&lt;/ls&gt; zu &lt;ls&gt;KUMĀRAS. 3,36.&lt;/ls&gt; nicht {%schwarz und scheckig%}, sondern {%in dem das Schwarze vorwaltet.%} — {#sAraniyuktaM#}
+&lt;ls&gt;HARIV. 4530&lt;/ls&gt; wohl fehlerhaft für {#sADunirvyUhaM#}, wie die neuere &lt;ab&gt;Ausg.&lt;/ab&gt; liest. &lt;ab&gt;Vgl.&lt;/ab&gt; {#a˚#} ({%werthlos, nichtig%} auch
+&lt;ls&gt;MBH. 14,597.&lt;/ls&gt;
+&lt;ls&gt;KATHĀS. 36,105.&lt;/ls&gt;
+&lt;ls&gt;BHĀG. P. 7,5,26&lt;/ls&gt;), {#aguru˚#} ({%das Harz der Aquilaria Agallocha%}
+&lt;ls&gt;SUŚR. 1,183,15.&lt;/ls&gt; &lt;ls n=&quot;SUŚR.&quot;&gt;2,175,4.&lt;/ls&gt;
+&lt;ls&gt;RAGH. 6,8&lt;/ls&gt;), {#agra˚, adri˚, antaH˚#} ({%innerer Gehalt%}
+&lt;ls&gt;Spr. (II) 350.&lt;/ls&gt;
+[Page7-0948]
+{%inwendig hart, — fest%}
+&lt;ls&gt;VARĀH. BṚH. 3,7&lt;/ls&gt;), {#amBaH, arTa˚, aSma˚, kaM˚, karka˚, kAla˚, kusuma˚, kfzRa˚, kzIra˚, ganDa˚, gAyatri˚, giri˚, Gana˚, candana˚#} (auch
+&lt;ls&gt;R. 2,78,6&lt;/ls&gt;), {#carma˚, takra˚, tantu˚, tantra˚, taru˚, tIkzRa˚, tfRa˚, tvak˚, tvaci˚, dravya˚, DAnya˚, naya˚, niH˚, nIti˚, piNga˚, picCila˚, pIta˚, pIlu˚, puRya˚, puzkarasArI, puzpa˚, prapaYca˚, prayoga˚, prARa˚#} ({%Lebenskraft%}
+&lt;ls&gt;RĀJA-TAR. 6,368&lt;/ls&gt;), {#bahu˚, bindu˚, bimbi˚, Badra˚, BAgavata˚, BAvasAraviveka, BAvanAsArasaMgraha, BUta˚, BUzaRasAradarpaRa, majjA˚, maRi˚, mada˚, manaH˚, mahA˚, mAMsa˚, mADvasidDAnta˚, meGa˚, moca˚, yajYa˚, yaTAsAram, yudDa˚, yoga˚, rakta˚, laGu˚, lokabindu˚, vajra˚, vasu˚, vAkya˚, vAri˚, viveka˚, viSva˚, veda˚, vezwa˚, vEdyakasArasaMgraha, vEyAkaraRaBUzaRa˚#} (unter {#vEyAkaraRaBUzaRa), vyavahAra˚, vyAKyA˚, SAla˚, SilA˚, SuBa˚, SEla˚#} (auch
+&lt;ls&gt;KIR. 10,14&lt;/ls&gt;), {#SyAma˚, Sveta˚, sakalavedopanizat˚, saMkzipta˚#} (unter {#saMkzipta), saMgIta˚, samara˚, samudra˚, sarva˚, sita˚, sidDAnta˚#} .
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-sAra-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">124335</idno>
+        <idno type="line">518519</idno>
+        <idno type="pc">7-120-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;124335&lt;pc&gt;7-120-b&lt;k1&gt;sAra&lt;k2&gt;sA/ra&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {#sA/ra#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;m.&lt;/lex&gt; &lt;lex&gt;n.&lt;/lex&gt; (&lt;ab&gt;adj. Comp.&lt;/ab&gt; &lt;lex&gt;f.&lt;/lex&gt; {#A#})
+&lt;div n=&quot;2&quot;&gt;— a〉 {%die inneren, festen Bestandtheile eines Körpers%}. Bei Früchten so &lt;ab&gt;v. a.&lt;/ab&gt; {%Kerngehäuse%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 {%Festigkeit, Härte; Stärke, Kraft%}. Als relativer Begriff auch so &lt;ab&gt;v. a.&lt;/ab&gt; {%Schwäche%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 {%Werth%}. {#sAratas#} {%dem Werthe nach%} {#viBavasAreRa#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%nach den Vermögensumständen%} &lt;ls&gt;HEMĀDRI 1,747,15. 760,19&lt;/ls&gt;.
+&lt;div n=&quot;2&quot;&gt;— d〉 {%Vermögen, Besitz, Reichthum%}. {#sAratas#} {%nach den Vermögensumständen%}.
+&lt;div n=&quot;2&quot;&gt;— e〉 {%Kern,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%Hauptsache, Quintessenz, das Beste, Werthvollste, etwas Werthvolles%}. {#sArAtsAram#} {%das Allerbeste%}. Am Ende eines &lt;ab&gt;adj. Comp.&lt;/ab&gt; {%das Vorwaltende, Hauptsache%}.
+&lt;div n=&quot;2&quot;&gt;— f〉 {%ein dem Temperament eines Menschen zu Grunde liegender Hauptbestandtheil des Körpers%} (deren 8 oder 7).
+&lt;div n=&quot;2&quot;&gt;— g〉 {%Bestandtheil%} &lt;ab&gt;überh.&lt;/ab&gt;
+&lt;div n=&quot;2&quot;&gt;— h〉 {%Nektar%}.
+&lt;div n=&quot;2&quot;&gt;— i〉 {%saurer Rahm und *Butter%} (&lt;ls&gt;RĀJAN. 15,2&lt;/ls&gt;).
+&lt;div n=&quot;2&quot;&gt;— k〉 {%verdickter [Page7-120-c] als Räucherwerk verwandter Pflanzensaft, Harz%}.
+&lt;div n=&quot;2&quot;&gt;— l〉 {%Dünger%}.
+&lt;div n=&quot;2&quot;&gt;— m〉 {%Wasser%} &lt;ls&gt;VĀSAV. 105,2&lt;/ls&gt;. &lt;ab&gt;Vgl.&lt;/ab&gt; &lt;ls&gt;ZACH. Beitr. 42&lt;/ls&gt;.
+&lt;div n=&quot;2&quot;&gt;— n〉 {%ein Fürst, der einem anderen im Kriege zu Hülfe kommt, Bundesgenosse%}.
+&lt;div n=&quot;2&quot;&gt;— o〉 bei dem &lt;is&gt;Maga&lt;/is&gt; &lt;ab&gt;Bez.&lt;/ab&gt; {%des Gürtels%}.
+&lt;div n=&quot;2&quot;&gt;— p〉 in der Rhetorik {%eine Art Klimax%}. Beispiel &lt;ls&gt;Spr. 2347&lt;/ls&gt;. &lt;ls n=&quot;Spr.&quot;&gt;5775&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 *&lt;lex&gt;m.&lt;/lex&gt; = {#majjan#}, {#asTi#}, {#tvacisAra#}, {#vajrakzAra, vAyu, roga#} und {#pASaka#}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 *&lt;lex&gt;f.&lt;/lex&gt; {#sArA#} = {#kfzRatrivftA#} und {#dUrvA#}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 &lt;lex&gt;f.&lt;/lex&gt; {#sArI#} = *{#sArikA#}, {#pASana#} (&lt;ab&gt;vgl.&lt;/ab&gt; {#sArIkrIqA#}) und *{#saptalA#}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 *&lt;lex&gt;n.&lt;/lex&gt; = {#nacanIta, lOha#} und {#vipina#}.
+&lt;div n=&quot;1&quot;&gt;— 6〉 &lt;lex&gt;Adj.&lt;/lex&gt; (&lt;lex&gt;f.&lt;/lex&gt; {#A#})
+&lt;div n=&quot;2&quot;&gt;— a〉 {%hart, fest, stark%}. {#bala#} &lt;lex&gt;n.&lt;/lex&gt; so &lt;ab&gt;v. a.&lt;/ab&gt; {%Kerntruppen%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 {%kostbar, werthvoll%}.
+&lt;div n=&quot;2&quot;&gt;— c〉 {%der beste, vorzüglichste%}.
+&lt;div n=&quot;2&quot;&gt;— d〉 {%richtig%}.
+&lt;div n=&quot;2&quot;&gt;— e〉 mit einem &lt;ab&gt;Instr.&lt;/ab&gt; so &lt;ab&gt;v. a.&lt;/ab&gt; {%voller%}.
+&lt;div n=&quot;2&quot;&gt;— f〉 = {#SAra#} {%bunt, scheckig%} &lt;ls&gt;KĀD. 142,14&lt;/ls&gt; ({#SAra#} &lt;ls n=&quot;Chr.&quot;&gt;250,4&lt;/ls&gt;).
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

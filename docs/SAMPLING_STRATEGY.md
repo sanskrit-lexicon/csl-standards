@@ -4,7 +4,7 @@ The pilot sample is not meant to be statistically representative. It is meant to
 
 ## Target Size
 
-Initial target: 50 MW-led cases with matching PWG and/or PWK records where possible.
+Initial target: 250 MW-led cases with matching PWG and/or PWK records where possible.
 
 ## Candidate Sources
 
@@ -42,7 +42,7 @@ Candidates are scored by accumulated stress:
 - MW has no citation but PWG has one: +2
 - homophone marker: +1
 
-The sampler then applies soft quotas so the top 50 are not all compounds.
+The sampler then applies soft quotas so the top 250 are not all compounds.
 
 ## Output
 

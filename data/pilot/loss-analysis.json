@@ -1,94 +1,94 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 203,
-    "cases": 56,
+    "total": 959,
+    "cases": 256,
     "byStatus": {
-      "partial": 114,
-      "lossy": 74,
-      "clean": 15
+      "partial": 536,
+      "lossy": 348,
+      "clean": 75
     },
     "byTarget": {
-      "neutral": 73,
-      "tei": 68,
-      "ontolex": 62
+      "neutral": 369,
+      "tei": 298,
+      "ontolex": 292
     },
     "byPhenomenon": {
-      "source-collapse": 73,
-      "generic-lexicographer-hedge": 54,
-      "continuation-parent": 16,
-      "compound-subentry": 15,
-      "compound-decomposition": 15,
-      "root-as-entry": 12,
-      "root-as-derivational-base": 12,
+      "source-collapse": 369,
+      "generic-lexicographer-hedge": 234,
+      "continuation-parent": 80,
+      "compound-subentry": 75,
+      "compound-decomposition": 75,
+      "root-as-entry": 60,
+      "root-as-derivational-base": 60,
       "sense-citation-fusion": 6
     },
     "byFailureClassification": {
-      "editorial-compression": 73,
-      "model-vocabulary-gap": 66,
-      "cdsl-markup-gap": 27,
-      "print-compression": 16,
-      "none": 15,
+      "editorial-compression": 369,
+      "model-vocabulary-gap": 312,
+      "cdsl-markup-gap": 117,
+      "print-compression": 80,
+      "none": 75,
       "sanskrit-convention": 6
     },
     "byExtensionNeeded": {
-      "extensionNeeded=false": 108,
-      "extensionNeeded=true": 95
+      "extensionNeeded=false": 544,
+      "extensionNeeded=true": 415
     },
     "byReviewStatus": {
-      "machine": 130,
-      "reviewed": 73
+      "machine": 863,
+      "reviewed": 96
     },
     "bySourceDictionary": {
-      "mw": 124,
-      "pwk": 50,
-      "pwg": 23,
+      "mw": 584,
+      "pwk": 250,
+      "pwg": 119,
       "skd": 6
     },
     "targetByStatus": {
       "tei": {
-        "partial": 47,
-        "clean": 15,
+        "partial": 217,
+        "clean": 75,
         "lossy": 6
       },
       "ontolex": {
-        "partial": 42,
-        "lossy": 20
+        "partial": 192,
+        "lossy": 100
       },
       "neutral": {
-        "partial": 25,
-        "lossy": 48
+        "partial": 127,
+        "lossy": 242
       }
     }
   },
   "crossDictionary": {
-    "cases": 50,
+    "cases": 250,
     "recordsPresent": {
-      "mw": 50,
-      "pwg": 50,
-      "pwk": 50
+      "mw": 250,
+      "pwg": 250,
+      "pwk": 250
     },
     "phenomena": {
-      "hedge": 27,
-      "root": 12,
-      "tri-dict": 50,
-      "pwg-rich": 50,
-      "pwk-abridged": 50,
-      "homophone": 50,
-      "compound": 15,
-      "mw-uncited-pwg-cited": 23,
-      "continuation": 8
+      "hedge": 117,
+      "root": 60,
+      "tri-dict": 250,
+      "pwg-rich": 235,
+      "pwk-abridged": 250,
+      "homophone": 208,
+      "mw-uncited-pwg-cited": 119,
+      "compound": 75,
+      "continuation": 40
     },
     "citations": {
-      "total": 544,
+      "total": 2617,
       "byType": {
-        "generic-lexicographer-hedge": 25,
-        "named-source-citation": 519
+        "generic-lexicographer-hedge": 116,
+        "named-source-citation": 2501
       },
       "byDictionary": {
-        "mw": 81,
-        "pwg": 391,
-        "pwk": 72
+        "mw": 379,
+        "pwg": 1872,
+        "pwk": 366
       }
     }
   },
@@ -110,6 +110,6 @@
     "roadmapCausesNotEmitted": [
       "data-quality"
     ],
-    "namedSourceCitationsMaterialized": 519
+    "namedSourceCitationsMaterialized": 2501
   }
 }

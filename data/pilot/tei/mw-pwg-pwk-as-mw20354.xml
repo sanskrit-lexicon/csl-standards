@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-as-mw20354">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case as</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-as-mw20354-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Aas-mw20354">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">as</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">4P,4Ā</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-as-mw20354-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-as-mw20354-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <ref type="whitney-root" target="urn:csl:whitney-root:as2,5">as2,5</ref>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-mw">
+        <abbr>AV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-mw">
+        <abbr>Nir. ii, 2</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-mw">
+        <abbr>Pāṇ. vii, 4, 17</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-mw">
+        <abbr>VS.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-mw-5" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-mw-6" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-mw">
+        <abbr>Nalod. iv, 36</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>DHĀTUP. 26,100.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>VOP. 11,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>P. 7,4,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>VOP. 8,91.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>125.</abbr>
+        <ref type="inherited-siglum">VOP. 8,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>11,5.</abbr>
+        <ref type="inherited-siglum">VOP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>P. 1,3,29</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>R. 4,13,45</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>ṚV. 1,103,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>114,4.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>6,3,5.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>7,104,25.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>AV. 1,13,1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>19,2.</abbr>
+        <ref type="inherited-siglum">AV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>6,90,1.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>3.</abbr>
+        <ref type="inherited-siglum">AV. 6,90,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>4,6,4.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>7.</abbr>
+        <ref type="inherited-siglum">AV. 4,6,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>6,59,3.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>65,2.</abbr>
+        <ref type="inherited-siglum">AV. 6,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>66,2.</abbr>
+        <ref type="inherited-siglum">AV. 6,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>10,1,23.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>11,2,17.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>25.</abbr>
+        <ref type="inherited-siglum">AV. 11,2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>12,4,17.</abbr>
+        <ref type="inherited-siglum">AV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>VS. 16,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>22.</abbr>
+        <ref type="inherited-siglum">VS. 16,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>ŚAT. BR. 5,2,4,18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>1,7,3,4.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>3,7,2,2.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>KĀTY. ŚR. 14,3,16.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>17,2,4.</abbr>
+        <ref type="inherited-siglum">KĀTY. ŚR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>KAṬHOP. 5,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>R. 2,67,18.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>MBH. 1,2292.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>8235.</abbr>
+        <ref type="inherited-siglum">MBH. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>RAGH. 12,23.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>BHAṬṬ. 15,91.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>14,77.</abbr>
+        <ref type="inherited-siglum">BHAṬṬ.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwg">
+        <abbr>P. 3,2,129</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>104,14</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>21</abbr>
+        <ref type="inherited-siglum">Chr. 104,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-3" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>ŚAṂK. zu BĀDAR. 4,1,5. 6</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-4" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>297,1</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-5" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>124,21</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-6" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>75,23</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-7" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>299,25</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-8" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>BĀLAR. 39,14. 102,13</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-9" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>Spr. 5238</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-10" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>93,5</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-11" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>BĪJAG. 34</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-12" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>MBH. 1,138,41</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-13" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>ŚULBAS. 2,9</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-14" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>Spr. 7615</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-15" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>ṚV. 1,140,10</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-16" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>ŚAT. BR. 1,5,2,1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-17" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>ŚĀK. 34,1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-18" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>GAUT. 9,12</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-19" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>93,27</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-20" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>BĀLAR. 147,13</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-21" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>113,17</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-22" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>218,6</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-23" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>169,11</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-24" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>311,11</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-25" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>Spr. 1876</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-26" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>Spr. 7758</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-27" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>292,4</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-28" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>326,33</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-29" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>ṚV. PRĀT. 3,17</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-30" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>ŚRUT. 27</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-31" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>R. 4,4,17</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-32" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>MBH. 3,158,28</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-33" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>250,3</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-34" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>304,32</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-35" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>310,4</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-36" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>320,8</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-37" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>175,31</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-38" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>115,17</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-39" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>MEGH. 84</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-as-mw20354-cite-pwk-40" type="named-source-citation" corresp="#mw-pwg-pwk-as-mw20354-record-pwk">
+        <abbr>43,21</abbr>
+        <ref type="inherited-siglum">Chr.</ref>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-as-mw20354-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">20354</idno>
+        <idno type="line">72838</idno>
+        <idno type="pc">117,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;20354&lt;pc&gt;117,2&lt;k1&gt;as&lt;k2&gt;as&lt;h&gt;2&lt;e&gt;1
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;as&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 4. &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;a/syati&lt;/s&gt; (&lt;ab&gt;p.&lt;/ab&gt; &lt;s&gt;a/syat&lt;/s&gt;; &lt;ab&gt;impf.&lt;/ab&gt; &lt;s&gt;A/syat&lt;/s&gt;, &lt;ls&gt;AV.&lt;/ls&gt; [&lt;ab&gt;cf.&lt;/ab&gt; &lt;s&gt;parA&lt;srs/&gt;s&lt;/s&gt; and &lt;s&gt;vy-as&lt;/s&gt;]; &lt;ab&gt;fut.&lt;/ab&gt; &lt;ab&gt;p.&lt;/ab&gt; &lt;s&gt;asizya/t&lt;/s&gt;; &lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;AsTat&lt;/s&gt; [&lt;ls&gt;Nir. ii, 2&lt;/ls&gt;; &lt;ls&gt;Pāṇ. vii, 4, 17&lt;/ls&gt;; &lt;ab&gt;cf.&lt;/ab&gt; &lt;s&gt;vy-as&lt;/s&gt;]; &lt;ab&gt;perf.&lt;/ab&gt; &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;A/sa&lt;/s&gt; [&lt;ab&gt;cf.&lt;/ab&gt; &lt;s&gt;parA&lt;srs/&gt;s&lt;/s&gt;] &lt;ab&gt;Ā.&lt;/ab&gt; &lt;s&gt;Ase&lt;/s&gt; [&lt;ab&gt;cf.&lt;/ab&gt; &lt;s&gt;vy-as&lt;/s&gt;]; &lt;lang&gt;Ved.&lt;/lang&gt; &lt;ab&gt;Inf.&lt;/ab&gt; &lt;s&gt;a/stave&lt;/s&gt;, &lt;ls&gt;VS.&lt;/ls&gt;)
+&lt;div n=&quot;to&quot;/&gt;to throw, cast, shoot at (&lt;ab&gt;loc.&lt;/ab&gt; &lt;ab&gt;dat.&lt;/ab&gt;, or &lt;ab&gt;gen.&lt;/ab&gt;), &lt;ls&gt;RV.&lt;/ls&gt; &amp;c.;
+&lt;div n=&quot;to&quot;/&gt;to drive or frighten away, &lt;ls&gt;Nalod. iv, 36&lt;/ls&gt;;
+&lt;div n=&quot;vp&quot;/&gt; See also &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;asta/&lt;/s&gt; &lt;ab&gt;s.v.&lt;/ab&gt;&lt;info whitneyroots=&quot;as2,5&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;4P,4Ā&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-as-mw20354-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">7257</idno>
+        <idno type="line">61441</idno>
+        <idno type="pc">1-0538</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7257&lt;pc&gt;1-0538&lt;k1&gt;as&lt;k2&gt;as&lt;h&gt;2
+2. {#as#}¦, {#a/syati#}
+&lt;ls&gt;DHĀTUP. 26,100.&lt;/ls&gt;
+&lt;ls&gt;VOP. 11,5.&lt;/ls&gt; {#A/sa, asizya/ti, A/sTat#}
+&lt;ls&gt;P. 7,4,17.&lt;/ls&gt;
+&lt;ls&gt;VOP. 8,91.&lt;/ls&gt; &lt;ls n=&quot;VOP. 8,&quot;&gt;125.&lt;/ls&gt; &lt;ls n=&quot;VOP.&quot;&gt;11,5.&lt;/ls&gt; In Verbindung mit &lt;ab&gt;praepp.&lt;/ab&gt; &lt;ab&gt;act.&lt;/ab&gt; &lt;ab&gt;med.&lt;/ab&gt;
+&lt;ls&gt;P. 1,3,29&lt;/ls&gt;, &lt;is&gt;Vārtt&lt;/is&gt;. 3. mit {#aBi, ni, vini, saMni#} auch {#as, a/sati#} . &lt;ab&gt;part.&lt;/ab&gt; &lt;ab&gt;praet.&lt;/ab&gt; &lt;ab&gt;pass.&lt;/ab&gt; {#asta (nirasita#}
+&lt;ls&gt;R. 4,13,45&lt;/ls&gt;).
+&lt;div n=&quot;1&quot;&gt; 1) {%schleudern, werfen, schiessen%}; mit dem &lt;ab&gt;acc.&lt;/ab&gt; der Sache und &lt;ab&gt;dat.&lt;/ab&gt; &lt;ab&gt;loc.&lt;/ab&gt; oder &lt;ab&gt;gen.&lt;/ab&gt; des Ziels; auch mit dem &lt;ab&gt;instr.&lt;/ab&gt; der Sache: {#dasya^ve he\tima^sya#}
+&lt;ls&gt;ṚV. 1,103,3.&lt;/ls&gt; {#A\re a\smaddEvya\M heLo^ asyatu#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;114,4.&lt;/ls&gt; {#sa idaste^va\ prati^ DAdasi\zyan#}
+&lt;ls n=&quot;ṚV.&quot;&gt;6,3,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,104,25.&lt;/ls&gt; {#yenA^ dU\qASe\ asya^si#}
+&lt;ls&gt;AV. 1,13,1.&lt;/ls&gt; {#ye a\stA ye cA\syA^H (SaravaH)#}
+&lt;ls n=&quot;AV. 1,&quot;&gt;19,2.&lt;/ls&gt; {#yAM te^ ru\dra izu\mAsya^t#}
+&lt;ls n=&quot;AV.&quot;&gt;6,90,1.&lt;/ls&gt; &lt;ls n=&quot;AV. 6,90,&quot;&gt;3.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;4,6,4.&lt;/ls&gt; &lt;ls n=&quot;AV. 4,6,&quot;&gt;7.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;6,59,3.&lt;/ls&gt; &lt;ls n=&quot;AV. 6,&quot;&gt;65,2.&lt;/ls&gt; &lt;ls n=&quot;AV. 6,&quot;&gt;66,2.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;10,1,23.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;11,2,17.&lt;/ls&gt; &lt;ls n=&quot;AV. 11,2,&quot;&gt;25.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;12,4,17.&lt;/ls&gt; {#yAmizu^M giriSanta\ haste^ bi\Barzyasta^ve#} (&lt;ab&gt;dat.&lt;/ab&gt; von {#astu#} als &lt;ab&gt;infin.&lt;/ab&gt;)
+&lt;ls&gt;VS. 16,3.&lt;/ls&gt; &lt;ls n=&quot;VS. 16,&quot;&gt;22.&lt;/ls&gt; {#prAYcaM sruvamasyati#}
+&lt;ls&gt;ŚAT. BR. 5,2,4,18.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;1,7,3,4.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,7,2,2.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 14,3,16.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;17,2,4.&lt;/ls&gt; {#UrDvaM prARamunnayatyapAnaM pratyagasyati#}
+&lt;ls&gt;KAṬHOP. 5,3.&lt;/ls&gt; {#SarAnsaMtatamasyatAm#} (&lt;ab&gt;gen.&lt;/ab&gt; &lt;ab&gt;pl.&lt;/ab&gt;)
+&lt;ls&gt;R. 2,67,18.&lt;/ls&gt; {#asyan#}
+&lt;ls&gt;MBH. 1,2292.&lt;/ls&gt; {#vARErasyatA#}
+&lt;ls n=&quot;MBH. 1,&quot;&gt;8235.&lt;/ls&gt; {#tasminnAsTadizIkAstram#}
+&lt;ls&gt;RAGH. 12,23.&lt;/ls&gt; {#tAvAsTatAM vARAn#}
+&lt;ls&gt;BHAṬṬ. 15,91.&lt;/ls&gt; {#SastrARyAsuH parasparam#}
+&lt;ls n=&quot;BHAṬṬ.&quot;&gt;14,77.&lt;/ls&gt; {#asyamAnaM#} (das &lt;ab&gt;med.&lt;/ab&gt; angeblich nach
+&lt;ls&gt;P. 3,2,129&lt;/ls&gt;) {#mahAgadAH#}
+&lt;ls n=&quot;P. 3,&quot;&gt;5,81.&lt;/ls&gt; {#asta#} {%geworfen%}
+&lt;ls&gt;AK. 3,2,37.&lt;/ls&gt;
+&lt;ls&gt;TRIK. 3,3,147.&lt;/ls&gt;
+&lt;ls&gt;H. 324.&lt;/ls&gt; {#vAtAstaM vAri SIkaraH#}
+&lt;ls n=&quot;H.&quot;&gt;165.&lt;/ls&gt; {#rAmAsta ASugaH#}
+&lt;ls&gt;RAGH. 12,91.&lt;/ls&gt; {#a/nasta#} ({#izu#})
+&lt;ls&gt;ŚAT. BR. 3,7,2,2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%vertreiben, verscheuchen%}: {#strIRAmAsAmAsa Sramam#}
+&lt;ls&gt;NALOD. 4,36.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; &lt;ab&gt;u.&lt;/ab&gt; {#apa#} .
+&lt;div n=&quot;1&quot;&gt;— 3) {%von sich werfen, ablegen, fahren lassen, aufgeben%}: {#astavArAharUpa#} &lt;lex&gt;adj.&lt;/lex&gt;
+&lt;ls&gt;KATHĀS. 11,56.&lt;/ls&gt; {#astamOna#}
+&lt;ls n=&quot;KATHĀS.&quot;&gt;6,141.&lt;/ls&gt; {#astaSoka#}
+&lt;ls&gt;PRAB. 95,3.&lt;/ls&gt; {#astakopa#} ad
+&lt;ls&gt;MEGH. 113.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {#asta#} {%beendigt%}
+&lt;ls&gt;MED. t. 2.&lt;/ls&gt;
+[Page1-0539]
+&lt;div n=&quot;p&quot;&gt;— {#ati#}
+&lt;div n=&quot;1&quot;&gt; 1) {%durch Werfen, durch Schiessen Jmd besiegen%}: {#bahuBiScEkamatyasyannEkena ca bahUYjanAn . viniryokzyAmyahaM vARAnnfvAjigajamarmasu ..#}
+&lt;ls&gt;R. 2,23,37.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {#atyasta#}
+&lt;ls&gt;P. 2,1,24.&lt;/ls&gt; {%über Etwas hinweg gebracht, Etwas hinter sich habend%}: {#tuhinamatyastaH, tuhinAtyastaH#}
+&lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#atyAsa#} .
+&lt;div n=&quot;p&quot;&gt;— {#vyati#} &lt;ab&gt;part.&lt;/ab&gt; {#vyatyasta#} {%umgestellt, in eine umgekehrte Lage gebracht%}: {#vyatyastapARinA kAryamupasaMgrahaRaM guroH . savyena savyaH sprazwavyo dakziRena ca dakziRaH (pAdaH) ..#}
+&lt;ls&gt;M. 2,72.&lt;/ls&gt; {#vyatyA/sam#} &lt;lex&gt;adv.&lt;/lex&gt; {%abwechselnd%}
+&lt;ls&gt;ŚAT. BR. 4,5,9,11.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;5,1,2,16.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 16,6,5.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;17,7,10.&lt;/ls&gt;
+&lt;ls&gt;ĀŚV. ŚR. 9,8. 10,4.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#aDi#} {%darüberwerfen%}: {#tayoSCadiraDyasyati#}
+&lt;ls&gt;KĀTY. ŚR. 8,3,23.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#aDyAsa#} .
+&lt;div n=&quot;p&quot;&gt;— {#anu#} &lt;ab&gt;part.&lt;/ab&gt; {#a/nvasta#} {%durchschossen, durchflochten%}: {#(meKalA) muYjavalSenAnvastA Bavati#}
+&lt;ls&gt;ŚAT. BR. 3,2,1,13.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#apa#}
+&lt;div n=&quot;1&quot;&gt; 1) {%wegschleudern, wegwerfen, abwerfen%}: {#a\BimA^tI\rapA^sya#}
+&lt;ls&gt;ṚV. 3,24,1.&lt;/ls&gt; {#barhireva tatstfRannapAsyat#}
+&lt;ls&gt;ŚAT. BR. 1,2,5,26.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 1,&quot;&gt;1,2,15.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,2,1,31.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;3,2,8.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 6,6,10.&lt;/ls&gt; {#cIrARyapAsyAjjanakasya kanyA#}
+&lt;ls&gt;R. 2,38,6.&lt;/ls&gt; {#BUzaRamapAsya#}
+&lt;ls&gt;NALOD. 3,8.&lt;/ls&gt; {#bAle &apos;pAstapipIlike#}
+&lt;ls&gt;KATHĀS. 13,61.&lt;/ls&gt; {#apAsta#} {%fortgestossen%}
+&lt;ls&gt;AMAR. 2.&lt;/ls&gt; {%wegtreiben, verscheuchen%}: {#apAsya hi rasAnBOmAMstaptvA ca jagadaMSuBiH . paretAcaritAM BImAM ravirAviSate diSam ..#}
+&lt;ls&gt;DAŚ. 1,14.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#apAsana#} .
+&lt;div n=&quot;1&quot;&gt;— 2) {%zur Seite werfen, bei Seite lassen, in Stich lassen, aufgeben, keine Rücksicht auf Jmd%} oder {%Etwas nehmen%}; stets &lt;ab&gt;gerund.&lt;/ab&gt;: {#annapAnamapAsya#}
+&lt;ls&gt;MBH. 1,7942.&lt;/ls&gt; {#apAsya cAsya yantAram#}
+&lt;ls n=&quot;MBH.&quot;&gt;2,36.&lt;/ls&gt; {#apAsya PalakuddAlaM kuruzva vacanaM mama#}
+&lt;ls&gt;R. 2,32,30.&lt;/ls&gt; {#dfzwvA maDUnyapAsyEva#} (der &lt;ab&gt;folg.&lt;/ab&gt; &lt;ab&gt;acc.&lt;/ab&gt; davon abhängig) {#sarvAnasmAnaBakzayat#}
+&lt;ls n=&quot;R.&quot;&gt;5,63,6.&lt;/ls&gt; {#sAraM tato grAhyamapAsya Palgu#}
+&lt;ls&gt;PAÑCAT. Pr. 10.&lt;/ls&gt; &lt;ls&gt;HIT. 70,10.&lt;/ls&gt; &lt;ls&gt;PRAB. 17,14.&lt;/ls&gt; &lt;ls n=&quot;PRAB.&quot;&gt;85,10.&lt;/ls&gt; &lt;ls&gt;ŚIŚ. 1,44.&lt;/ls&gt; {#yadi samaramapAsya#} ({%vom Kampfe abgesehen, ausgenommen im Kampfe%}) {#nAsti mftyorBayam#}
+&lt;ls&gt;HIT. III,139.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%verwerfen, zurückweisen%}: {#ityAdInAM kAvyalakzaRatvamapAstam#}
+&lt;ls&gt;SĀH. D. 5,8.&lt;/ls&gt; {#iti mETilamatamapAstam#}
+&lt;ls&gt;TITHYĀDITATTVA&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt; &lt;ab&gt;u.&lt;/ab&gt; {#apAsta#} .
+&lt;div n=&quot;p&quot;&gt;— {#aBi#}
+&lt;div n=&quot;1&quot;&gt; 1) {%hinwerfen, zuwerfen, abschiessen%}: {#yaM prativeSaM SakalaM vindettamaByasyABijuhuyAt#}
+&lt;ls&gt;ŚAT. BR. 12,4,3,1.&lt;/ls&gt; {#noparizwAtsamiDamaByasya harati#}
+&lt;ls n=&quot;ŚAT. BR. 12,&quot;&gt;5,1,10.&lt;/ls&gt; &lt;ls&gt;AIT. BR. 3,22.&lt;/ls&gt; {#aByasyato#} (&lt;ab&gt;gen.&lt;/ab&gt; &lt;ab&gt;sg.&lt;/ab&gt;) {#vARAn#}
+&lt;ls&gt;MBH. 1,5479.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%seine Thätigkeit, seine Aufmerksamkeit auf ein &lt;ab&gt;best.&lt;/ab&gt; Ziel richten, obliegen, betreiben, besorgen, verrichten, studiren, lesen%}: {#vedameva sadAByasyet#}
+&lt;ls&gt;M. 2,166.&lt;/ls&gt;
+&lt;ls&gt;MBH. 1,6759.&lt;/ls&gt; {#aByasyatIva vratamAsiDAram#}
+&lt;ls&gt;RAGH. 13,67.&lt;/ls&gt; {#aByasyanti tawAGAtam (gajAH)#}
+&lt;ls&gt;KUMĀRAS. 2,50.&lt;/ls&gt; {#mfgakulaM romanTamaByasyatu#}
+&lt;ls&gt;ŚĀK. 39.&lt;/ls&gt; {#vyApAramaByasyatA#} (&lt;ab&gt;instr.&lt;/ab&gt;)
+&lt;ls&gt;MṚCCH. 52,2.&lt;/ls&gt; {#kukarmajAmivAByasyanBavizyatImaDogatim#}
+&lt;ls&gt;KATHĀS. 24,94.&lt;/ls&gt;
+&lt;ls&gt;VID. 21.&lt;/ls&gt; {#vedamevAByasennityam#}
+&lt;ls&gt;M. 4,147.&lt;/ls&gt;
+&lt;ls&gt;KULL.&lt;/ls&gt; zu &lt;ls n=&quot;M.&quot;&gt;6,29.&lt;/ls&gt; {#cAndrAyaRaM vA trInmAsAnaByaset#}
+&lt;ls&gt;M. 11,106.&lt;/ls&gt; {#aByasanvedam#}
+&lt;ls&gt;YĀJÑ. 3,204.&lt;/ls&gt; {#tadbahma — kAle kAle sadAByasan#}
+&lt;ls&gt;MBH. 3,1450.&lt;/ls&gt; {#sahasrakftvastvaByasya#} ({%hersagend%}) {#bahiretaktrikam#}
+&lt;ls&gt;M. 2,79.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;4,125.&lt;/ls&gt; {#vedamaByasya#}
+&lt;ls n=&quot;M.&quot;&gt;6,95.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;11,251.&lt;/ls&gt; &lt;ls n=&quot;M. 11,&quot;&gt;254.&lt;/ls&gt; &lt;ls n=&quot;M. 11,&quot;&gt;257.&lt;/ls&gt; &lt;ls n=&quot;M. 11,&quot;&gt;258.&lt;/ls&gt; &lt;ls n=&quot;M. 11,&quot;&gt;262.&lt;/ls&gt; &lt;ab&gt;med.&lt;/ab&gt;: {#brahmEvAByasate punaH#}
+&lt;ls&gt;M. 4,149.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt;: {#kaccidaByasyate samyaggfhe te — Danurvedasya sUtraM vE yantrasUtraM ca nAgaram#}
+&lt;ls&gt;MBH. 2,256.&lt;/ls&gt; {#nAByastA ca kazAyavastraracanA#}
+&lt;ls&gt;MṚCCH. 114,5.&lt;/ls&gt; {#nayanayoraByastamAmIlanam#}
+&lt;ls&gt;AMAR. 92.&lt;/ls&gt; {#vidyA#}
+&lt;ls&gt;RAGH. 1,8.&lt;/ls&gt;
+&lt;ls&gt;BHARTṚ. 3,47.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAT. 244,1.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#aByasana, aByasta, aByAsa#} .
+&lt;div n=&quot;p&quot;&gt;— {#ava#} {%hinwerfen%}
+&lt;ls&gt;ŚAT. BR. 6,3,3,6.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#aByava#} {%auf Etwas hinwerfen%}: {#dakziRAparamazwamadeSamaByavAsyedbarhiH#}
+&lt;ls&gt;KAUŚ. 87.&lt;/ls&gt;
+[Page1-0540]
+&lt;div n=&quot;p&quot;&gt;— {#A#} &lt;ab&gt;med.&lt;/ab&gt; {%einfassen, hineinschöpfen%}: {#tamAsya^DvamU\rmima\dyA su^hastAH#}
+&lt;ls&gt;ṚV. 10,30,2.&lt;/ls&gt; {#GftavatImaDvaryo srucamAsyasva#}
+&lt;ls&gt;ŚAT. BR. 1,5,2,1.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ud#}
+&lt;div n=&quot;1&quot;&gt; 1) {%in die Höhe werfen, in die Höhe heben%}
+&lt;ls&gt;ŚAT. BR. 7,1,1,5.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;13,8,2,4.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 13,8,2,&quot;&gt;9.&lt;/ls&gt; {#tadudastamalAtam#}
+&lt;ls&gt;MBH. 3,430.&lt;/ls&gt; {#pucCamudasyati#}
+&lt;ls&gt;P. 3,1,20&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#pUrvArDena puzpaSayyAmudasya#}
+&lt;ls&gt;ŚĀK. 34,1.&lt;/ls&gt; {#udasta#} {%hinaufgeworfen%}
+&lt;ls&gt;H. 1482&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%hinauswerfen%}
+&lt;ls&gt;ŚAT. BR. 2,6,2,16.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 5,10,18.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#anUd#} {%hinter Jmd in die Höhe werfen%}
+&lt;ls&gt;ŚAT. BR. 5,2,1,16.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 5,2,1,&quot;&gt;17.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#paryud#} {%umherstellen, hier und da anbringen%}: {#himavatsAgarAnUpAH sarve ratnAkarAstaTA . antyAH sarve paryudastA yuDizWiraniveSane ..#}
+&lt;ls&gt;MBH. 2,1805.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vyud#}
+&lt;div n=&quot;1&quot;&gt; 1) {%herausschleudern, umherstreuen, ausbreiten%}: {#vyudasyatyasaMKyAtAH SarkarAH#}
+&lt;ls&gt;KAUŚ. 50.&lt;/ls&gt; {#muYjavajjarjarIBUtA bahavastatra pAdapAH . cIrARIva vyudastAni rejustatra mahAvane ..#}
+&lt;ls&gt;MBH. 3,434.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%fahren lassen, aufgeben%}: {#rAgadvezO vyudasya#}
+&lt;ls&gt;BHAG. 18,51.&lt;/ls&gt; {#kAmakroDO vyudasya#}
+&lt;ls&gt;MBH. 2,564.&lt;/ls&gt; {#sImantinIBujalatAgahanaM vyudasya#}
+&lt;ls&gt;ŚĀNTIŚ. 2,17.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#upa#} {%unter Etwas werfen, zu Etwas hinwerfen%}: {#a\Daste\ aSma^no ma\nyumupA^syAmasi\ yo gu\ruH#}
+&lt;ls&gt;AV. 6,42,2.&lt;/ls&gt; {#PalIkaraRAtkapAlenADo &apos;DaH kfzRAjinamupAsyati#}
+&lt;ls&gt;ŚAT. BR. 1,9,2,33.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,8,1,14.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,8,&quot;&gt;2,15.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;4,2,5,6.&lt;/ls&gt; {#tasyADastAdbarhirupAsyati#}
+&lt;ls&gt;ĀPAST.&lt;/ls&gt; bei &lt;ls&gt;SĀY.&lt;/ls&gt; zu &lt;ls&gt;AIT. BR. 2,11.&lt;/ls&gt; {#camasezUpAsyanti#}
+&lt;ls&gt;KĀTY. ŚR. 10,5,11.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;4,1,16.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;6,5,15.&lt;/ls&gt; {#pAdayo rukmA upAsyati#}
+&lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;19,4,10.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vyupa#} &lt;ab&gt;dass.&lt;/ab&gt; mit Hinzutritt des Begriffes der {%Vertheilung%}: {#aTa suvarRarajatO rukmO vyupAsyati#}
+&lt;ls&gt;ŚAT. BR. 12,8,3,11.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ni#}
+&lt;div n=&quot;1&quot;&gt; 1) {%niederwerfen, niederlegen, niedersetzen%}: {#yaM balba^ja\M nyasya^Ta#}
+&lt;ls&gt;AV. 14,2,22.&lt;/ls&gt; {#aTa punarlozwaM nyasyati#}
+&lt;ls&gt;ŚAT. BR. 3,2,2,21.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;3,3,7.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 21,3,27.&lt;/ls&gt; {#nyasetpAdam#}
+&lt;ls&gt;M. 6,46.&lt;/ls&gt; {#nyasyatAM kalasaH#}
+&lt;ls&gt;R. 1,2,7.&lt;/ls&gt; {#Barturnyasya SanEH SiraH#}
+&lt;ls&gt;SĀV. 5,9.&lt;/ls&gt; {#nyastaSastraH#}
+&lt;ls&gt;M. 3,192.&lt;/ls&gt;
+&lt;ls&gt;DRAUP. 7,8.&lt;/ls&gt; {#nyastacihnA#}
+&lt;ls&gt;RAGH. 2,7.&lt;/ls&gt; {#tAmantikanyastabalipradIpAm#}
+&lt;ls&gt;RAGH. 2,24.&lt;/ls&gt; &lt;ab&gt;übertr.&lt;/ab&gt;: {#api prARAnnyasizyanti#} ({%das Leben aufgeben%})
+&lt;ls&gt;R. 2,46,20.&lt;/ls&gt; {#yaTA—na jIvitaM nyasya yamakzayaM vrajet#}
+&lt;ls n=&quot;R. 2,&quot;&gt;38,17.&lt;/ls&gt; {#nyastadeha#} {%gestorben%}
+&lt;ls n=&quot;R. 2,&quot;&gt;78,9.&lt;/ls&gt; {#arTAntaraM nyasyati#} {%er bringt einen neuen Umstand zur Sprache%}
+&lt;ls&gt;MALLIN.&lt;/ls&gt; zu &lt;ls&gt;ŚIŚ. 1,17.&lt;/ls&gt; mit einem &lt;ab&gt;loc.&lt;/ab&gt; {%auf Etwas niedersetzen, niederlegen, aufsetzen, auflegen%}: {#CandaHpuruzamenonirRodanaM SarIre nyaset#}
+&lt;ls&gt;KĀTY. ANUKR. 4,13&lt;/ls&gt; in &lt;ls&gt;VS. p. LVI.&lt;/ls&gt; {#ayogye na madviDo nyasyati BAramagryam#}
+&lt;ls&gt;BHAṬṬ. 1,22.&lt;/ls&gt; {#SiKarizu padaM nyasya#}
+&lt;ls&gt;MEGH. 13.&lt;/ls&gt; {#tAnyasminsyandane kzipraM nyasyantAm (AyuDAni)#}
+&lt;ls&gt;R. 3,28,27.&lt;/ls&gt; {#upahAraM Buvi nyastam#}
+&lt;ls n=&quot;R.&quot;&gt;4,41,29.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;2,104,7.&lt;/ls&gt; &lt;ls n=&quot;R. 2,104,&quot;&gt;8.&lt;/ls&gt; {#nyastaH — sarpamuKe karaH#}
+&lt;ls&gt;HIT. II,137.&lt;/ls&gt; {#mayA — nyastaM muKaM tanmuKe#}
+&lt;ls&gt;AMAR. 33.&lt;/ls&gt; {#pramadAlocananyastaM malImasamivAYjanam#}
+&lt;ls&gt;HIT. II,148.&lt;/ls&gt; &lt;ls&gt;ŚĀK. 57.&lt;/ls&gt; {#aMSanyasta#}
+&lt;ls&gt;MEGH. 60.&lt;/ls&gt; {#puro nyastaM lalAmakam#}
+&lt;ls&gt;AK. 2,6,3,37.&lt;/ls&gt;
+&lt;ls&gt;H. 652.&lt;/ls&gt; {#citranyasta#} {%auf ein Gemälde aufgetragen, gemalt%}
+&lt;ls&gt;KUMĀRAS. 2,24&lt;/ls&gt; (&lt;ab&gt;vgl.&lt;/ab&gt; {#ar#} &lt;ab&gt;caus.&lt;/ab&gt; 4). {#paTi nyas#} {%auf die Strasse werfen, ablegen, aufgeben%}: {#nyasetpaTi (karma#} {%ein Gewerbe%})
+&lt;ls&gt;YĀJÑ. 3,35.&lt;/ls&gt; {#SirasyAjYAM nyas#} {%einen Befehl mit der gebührenden Ehrerbietung aufnehmen%}
+&lt;ls&gt;AMAR. 82.&lt;/ls&gt; {#evaM SApaM mayi nyasya#} ({%einen Fluch auf Jmd schleudern%})
+&lt;ls&gt;R. 2,64,55.&lt;/ls&gt; {#antarnyasta#} {%hineingelegt%}
+&lt;ls&gt;AK. 2,2,3.&lt;/ls&gt; — {%hineinsetzen, in Etwas setzen%}; mit dem &lt;ab&gt;loc.&lt;/ab&gt;: {#rAjA kftvA pure sTAnaM brAhmaRAnnyasya tatra#}
+&lt;ls&gt;YĀJÑ. 2,185.&lt;/ls&gt; {#drOpadImASrame nyasya#}
+&lt;ls&gt;DRAUP. 1,5.&lt;/ls&gt; {#pitrA hyezaH — rAjyaBrazwo vane nyastaH#}
+&lt;ls&gt;R. 4,3,9.&lt;/ls&gt; {#nyastAM sAgaratoye vA pAtAle vApi mETilIm#}
+&lt;ls n=&quot;R. 4,&quot;&gt;16,41.&lt;/ls&gt; — {#nyasta#} {%hingestreckt, hingeworfen%}: {#nyastAM BUmO ca vEdehIm#}
+&lt;ls&gt;R. 3,58,2.&lt;/ls&gt; {#sa BUmO nyastasarvANgaH#} ({%mit gesenkten Gliedern%}) — {#papAta#}
+&lt;ls n=&quot;R.&quot;&gt;4,16,2.&lt;/ls&gt; {#sunyasta#} {%eine schöne Stellung im Liegen einnehmend, schön gelegen%}: {#SyAmAvadAtAH sunyastAH (varANganAH)#}
+&lt;ls&gt;R. 5,14,23.&lt;/ls&gt; {#ratnavasanAM laNkAM #}
+[Page1-0541]
+{# kozWAgArAvataMsakAm . sunyastAM susamfdDArTAM pramadAmiva rUpiRIm ..#}
+&lt;ls n=&quot;R. 5,&quot;&gt;10,1.&lt;/ls&gt; {%befindlich%}: {#nyasta ekAdaSAdyaH#} {%die vor der 11ten befindliche Silbe, die 10te Silbe%}
+&lt;ls&gt;ŚRUT. 27.&lt;/ls&gt; {%ausgestellt%}: {#krayyaM nyastaM krayAya yat#}
+&lt;ls&gt;H. 871.&lt;/ls&gt; {%niedrig, schwach%} (vom Ton)
+&lt;ls&gt;ṚV. PRĀT. 3,17.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%Jmd%} oder {%Etwas%} (&lt;ab&gt;acc.&lt;/ab&gt;) {%bei Jmd%} (&lt;ab&gt;loc.&lt;/ab&gt;) {%niederlegen, in Verwahrung geben, anvertrauen, übergeben%}: {#sa rAjyaM sacive nyasya#}
+&lt;ls&gt;MBH. 3,9922.&lt;/ls&gt; {#DanUratnam — nyAsaBUtaM tadA nyastamasmAkaM pUrvake#}
+&lt;ls&gt;R. 1,66,13.&lt;/ls&gt; {#sa yadi prapadyeta yaTAnyastaM yaTAkftam#}
+&lt;ls&gt;M. 8,183.&lt;/ls&gt; {#DanaM kule nyasya#}
+&lt;ls&gt;YĀJÑ. 2,62.&lt;/ls&gt; {#nyastA tena mantrizu koSalA#}
+&lt;ls&gt;RAGH. ed. Calc. 1,35.&lt;/ls&gt; {#rAme SrIrnyasyatAm#}
+&lt;ls n=&quot;RAGH. ed. Calc.&quot;&gt;12,2.&lt;/ls&gt; {#madgehe nyastA vipreRa kenacit . AvantikABiDA yEzA#}
+&lt;ls&gt;KATHĀS. 16,102.&lt;/ls&gt; {#BrAtari nyasya — mAm#}
+&lt;ls&gt;BHAṬṬ. 5,82.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%niedersetzen heissen%}: {#gaNgAtIre — nyAsayAmAsuraTa tAM SivikAm#}
+&lt;ls&gt;MBH. 1,4948.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#aBini#} {%niederdrücken%}: {#aBinyasyatyagnIdutkaram#}
+&lt;ls&gt;KĀTY. ŚR. 2,6,22.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#aBinyAsa#} .
+&lt;div n=&quot;p&quot;&gt;— {#upani#}
+&lt;div n=&quot;1&quot;&gt; 1) {%hinzulegen%}: {#dIpyamAnaM tato vahniM puzpEH satkftya satkftam . tatropanyasya ca prItastayormaDye samoDitam ..#}
+&lt;ls&gt;R. 4,4,17.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%anvertrauen, übergeben%}: {#upanyasya mahAtejA vipreByaH pARqavAn#}
+&lt;ls&gt;MBH. 3,11551.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%ausführlich darlegen, auseinandersetzen, mit Argumenten begleiten%}: {#BUtamapyanupanyastaM hIyate vyavahArataH#} {%selbst die Thatsache, wenn sie nicht dargelegt wird, verliert im Processe%}
+&lt;ls&gt;YĀJÑ. 2,19.&lt;/ls&gt; {#yadyapi gfDreRa mahAmantriRA saMDAnamupanyastam#}
+&lt;ls&gt;HIT. 120,5.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; &lt;ab&gt;u.&lt;/ab&gt; {#samupani#}.{# kimidamupanyastam#} {%was ist dies für ein Raisonnement (Andeutung?)?%}
+&lt;ls&gt;ŚĀK. 65,15.&lt;/ls&gt; {#sa tu tatra viSezadurlaBaH sadupanyasyati kftyavartma yaH#} {%welcher den guten Weg des Zuthuenden darlegt, verkündet%}
+&lt;ls&gt;KIR. 2,3.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#upanyAsa#} .
+&lt;div n=&quot;p&quot;&gt;— {#samupani#} {%ausführlich darlegen, mit Argumenten begleiten%}: {#tvayA ca — mayA samupanyastezvapi mantrezvavajYAnaM vAkpAruzyaM ca kftam#}
+&lt;ls&gt;HIT. 103,3.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; oben &lt;ab&gt;u.&lt;/ab&gt; {#upani#} 3.
+&lt;div n=&quot;p&quot;&gt;— {#parini#} {%ausstrecken, hinstrecken%}: {#SayanIyaparinyastagAtra#}
+&lt;ls&gt;KATHĀS. 6,121.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pratini#} {%für Jeden besonders hinlegen%}: {#taTEvAyuDajAlAni BrAtfByAM kavacAni ca . raTopasTe pratinyasya sacarma kaWinaM ca yat ..#}
+&lt;ls&gt;R. 2,40,16.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vini#}
+&lt;div n=&quot;1&quot;&gt; 1) {%hier und da hinstellen, auseinanderlegen, vertheilen, ausbreiten%}: {#guRAMSca sUpaSAkAdyAnpayo daDi GftaM maDu . vinyasetprayataH pUrvaM BUmAveva#}
+&lt;ls&gt;M. 3,226.&lt;/ls&gt; {#(yUpAH) vinyastA viDivatsarve#}
+&lt;ls&gt;R. 1,13,28.&lt;/ls&gt; {#susaMmfzwezu deSezu vinyastAnmaRivedikAn#}
+&lt;ls n=&quot;R.&quot;&gt;5,17,2.&lt;/ls&gt; {#(hArAH) stanamaDye suvinyastAH#}
+&lt;ls n=&quot;R. 1,&quot;&gt;13,37.&lt;/ls&gt; {#(indrakozakEH) prAkAratAlavinyastEScandrasUryaSatEriva#}
+&lt;ls n=&quot;R. 1,&quot;&gt;9,18.&lt;/ls&gt; {#viBAgavinyastamahArGaratnam (siMhAsanam)#}
+&lt;ls&gt;BHAṬṬ. 3,3.&lt;/ls&gt; {#kzititalavinyastamOlimaRqalaH#}
+&lt;ls&gt;PAÑCAT. 230,18.&lt;/ls&gt; {#vinyastavEdUryaSilAtale#}
+&lt;ls&gt;KUMĀRAS. 7,10.&lt;/ls&gt; {#vinyastaSuklAguru (aNgam)#}
+&lt;ls n=&quot;KUMĀRAS. 7,&quot;&gt;15.&lt;/ls&gt; {#itastato vinyastakfzRAjinadfzadupala — muSalam#}
+&lt;ls&gt;PRAB. 21,11.&lt;/ls&gt; {#˚SilAvinyastaBAsvadvfSIsaMvizwAH#}
+&lt;ls n=&quot;PRAB. 21,&quot;&gt;4.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%niedersetzen, auflegen%}: {#tvadarTamiha vinyastA — SilA#}
+&lt;ls&gt;R. 2,96,6.&lt;/ls&gt; {#ekaM pAdamaTEkasminvinyasyoruRi saMsTitam . itarasmiMstaTA coruM vIrAsanamudAhftam ..#}
+&lt;ls&gt;VASIṢṬHA&lt;/ls&gt; beim &lt;ab&gt;Sch.&lt;/ab&gt; zu &lt;ls&gt;KUMĀRAS. 3,45.&lt;/ls&gt;
+{#svorasi vinyasya vaktraM tasya#}
+&lt;ls&gt;N. 24,40.&lt;/ls&gt; {#SezAnmAsAn — vinyasyantI Buvi gaRanayA dehalImuktapuzpEH#}
+&lt;ls&gt;MEGH. 85.&lt;/ls&gt; &lt;ab&gt;Uebertr.&lt;/ab&gt; ({%seinen Geist, seinen Blick) auf Jmd%} oder {%Etwas richten%}: {#rAme vinyastamAnasA#}
+&lt;ls&gt;R. 2,60,7.&lt;/ls&gt; {#vinyasyantIM dfSO timire paTi#}
+&lt;ls&gt;GĪTAG. 5,19.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%hineinstecken%}: {#karRAlaMkftipadmarAgaSakalaM vinyasya caYcUpuwe#}
+&lt;ls&gt;AMAR. 13.&lt;/ls&gt; {#vaktradvAravinyastottarIyAYcalaH#}
+&lt;ls&gt;PAÑCAT. 236,9.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%übergeben%}: {#tava sUnAvadya vinyasya rAjyam#}
+&lt;ls&gt;VIKR. 155.&lt;/ls&gt; {#sutavinyastapatnIkaH#}
+&lt;ls&gt;YĀJÑ. 3,45.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#saMni#}
+&lt;div n=&quot;1&quot;&gt; 1) {%zusammen niederlegen, zusammenlegen%}: {#yAni mAMsAni saMkftya #}
+[Page1-0542]
+{# saMnyAsuH#}
+&lt;ls&gt;ŚAT. BR. 3,1,3,4.&lt;/ls&gt; {#tAnAlupya sArDaM saMnyAsuH#}
+&lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;4,1,17.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%niederlegen, ablegen, hinlegen, sinken lassen%}: {#sarvARi saMnyasyABaraRAni#}
+&lt;ls&gt;MBH. 3,16708.&lt;/ls&gt;
+&lt;ls&gt;MEGH. 91.&lt;/ls&gt; {#tasya copAntasaMnyaste SayAnAM Sayane#}
+&lt;ls&gt;R. 5,14,29.&lt;/ls&gt; {#saMnyastaBujadvayaH . svapsyasi#}
+&lt;ls n=&quot;R.&quot;&gt;3,35,63.&lt;/ls&gt; {#saMnyastaSastraH#}
+&lt;ls&gt;RAGH. 2,59.&lt;/ls&gt; {#vrIqAdamuM devamudvIkzya manye saMnyastadehaH svayameva kAmaH#}
+&lt;ls&gt;KUMĀRAS. 7,67.&lt;/ls&gt; {%auflegen%}: {#BAraM hi mayi saMnnyasya yAtaH#}
+&lt;ls&gt;MBH. 3,740.&lt;/ls&gt; {#saMnyasta#} {%hingestreckt, hingelagert%}: {#madavinyAsasaMnyastAH svapnayuktAH#}
+&lt;ls&gt;R. 5,13,45.&lt;/ls&gt; {#anye (vAnarAH) tvanyezu deSezu saMnyastASca#}
+&lt;ls n=&quot;R.&quot;&gt;6,16,46.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%in Verwahrung geben, anvertrauen, übergeben, übertragen%}: {#praRiDiBiH — saMnyasya hiraRyaM tasya#} ({%vermittelst Jmd in Verwahrung geben%})
+&lt;ls&gt;M. 8,182.&lt;/ls&gt; {#mantrisaMnyastakAryArTam#}
+&lt;ls&gt;R. 4,28,5.&lt;/ls&gt; {#saMnyasya tvayi prARAn#}
+&lt;ls n=&quot;R.&quot;&gt;5,66,10.&lt;/ls&gt; {#mayi sarvARi karmARi saMnyasyADyAtmacetasA#}
+&lt;ls&gt;BHAG. 3,30.&lt;/ls&gt; {#cetasA sarvakarmARi mayi saMnyasya#}
+&lt;ls n=&quot;BHAG.&quot;&gt;18,57.&lt;/ls&gt; {#yogasaMnyastakarman#}
+&lt;ls n=&quot;BHAG.&quot;&gt;4,41.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%aufgeben, sich von Etwas lossagen%}: {#saMnyasya sarvakarmARi#}
+&lt;ls&gt;M. 6,95.&lt;/ls&gt; &lt;ls n=&quot;M. 6,&quot;&gt;96.&lt;/ls&gt; {#sarvakarmARi manasA saMnyasya#}
+&lt;ls&gt;BHAG. 5,13.&lt;/ls&gt; ohne &lt;ab&gt;obj.&lt;/ab&gt; {%allem irdischen Treiben entsagen und sich ganz dem beschaulichen Leben ergeben%}, {#saMnyAsin#} {%werden%}: {#daSalakzaRakaM DarmamanutizWansamAhitaH . vedAntaM viDivacCrutvA saMnyasedanfRo dvijaH ..#}
+&lt;ls&gt;M. 6,94.&lt;/ls&gt; {#saMdfSya kzaRaBaNguraM tadaKilaM Danyastu saMnyasyati#}
+&lt;ls&gt;BHARTṚ. 3,21.&lt;/ls&gt; {#saMnyastaM mayA#}
+&lt;ls&gt;ĀRUṆ. UP.&lt;/ls&gt; in &lt;ls&gt;Ind. St. 2,179.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#nis#}
+&lt;div n=&quot;1&quot;&gt; 1) {%hinauswerfen, wegwerfen, ausstossen, ausreissen%}: {#nira^sta\M rakza^H#}
+&lt;ls&gt;VS. 6,16.&lt;/ls&gt; {#nira^sta\H SaRqa^H#}
+&lt;ls n=&quot;VS.&quot;&gt;7,13.&lt;/ls&gt; &lt;ls n=&quot;VS. 7,&quot;&gt;18.&lt;/ls&gt; {#sa hotfzadanAdekaM tfRaM nirasyati nirastaH parAvasuriti#}
+&lt;ls&gt;ŚAT. BR. 1,5,1,23.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 1,&quot;&gt;6,4,20.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;4,2,1,10.&lt;/ls&gt;
+&lt;ls&gt;ĀŚV. ŚR. 5,12.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 21,3,33.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 21,&quot;&gt;4,4.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;26,6,16.&lt;/ls&gt; {#hastO nirasyati#} oder {#˚te#} {%er streckt die Hände aus%}
+&lt;ls&gt;VOP. 21,17.&lt;/ls&gt; &lt;ls n=&quot;VOP.&quot;&gt;23,15.&lt;/ls&gt; {#sarva uzmARo#} ({%die Laute%} {#Sa, za, sa#} und {#ha#}) {#&apos;grastA nirastA#}
+(&lt;ls&gt;ŚAṂK.&lt;/ls&gt;: {#anirastA abahirAkziptAH#}) {#vivatA vaktavyAH#}
+&lt;ls&gt;CHĀND. UP. 2,22,5.&lt;/ls&gt; {#nirastam#} (Rede) = {#tvarayoditam#}
+&lt;ls&gt;AK. 1,1,5,20.&lt;/ls&gt;
+&lt;ls&gt;H. 267.&lt;/ls&gt; {#nirasyatu pumAn Sukram#}
+&lt;ls&gt;M. 5,63.&lt;/ls&gt;
+&lt;ls&gt;SUŚR. 2,23,9.&lt;/ls&gt; {#(toyaDiM) nirasyantaM taraMgAn#}
+&lt;ls&gt;BHAṬṬ. 7,105.&lt;/ls&gt; {#banDaM nirasyati#} ({%abstreifen%}) oder {#˚te#}
+&lt;ls&gt;P. 1,3,29&lt;/ls&gt;, &lt;is&gt;Vārtt&lt;/is&gt;. 3, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#nirasta#} {%abgeschossen%} (Pfeil)
+&lt;ls&gt;H. 779.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%zurückwerfen, abwehren, verjagen, verscheuchen%}: {#asyA BUmernirasituM BAraM BAgEH pfTakpfTak#}
+&lt;ls&gt;MBH. 1,2502.&lt;/ls&gt; {#nirasya rakzAMsi#}
+&lt;ls&gt;R. 3,75,74.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;4,9,88.&lt;/ls&gt; {#BUyaSca SaravarzeRa nirasto &apos;ham#}
+&lt;ls n=&quot;R.&quot;&gt;3,42,42.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;1,32,18.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;3,75,29.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;4,8,31.&lt;/ls&gt; &lt;ls n=&quot;R. 4,8,&quot;&gt;51.&lt;/ls&gt; &lt;ls n=&quot;R. 4,&quot;&gt;9,88.&lt;/ls&gt; &lt;ls n=&quot;R. 4,&quot;&gt;12,43.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;5,26,32.&lt;/ls&gt; &lt;ls n=&quot;R. 5,&quot;&gt;50,13.&lt;/ls&gt; &lt;ls&gt;ARJ. 9,18.&lt;/ls&gt; {#tasya#} (des Liebesfeuers) {#nirasyamAnakiraRasya#}
+&lt;ls&gt;AMAR. 91.&lt;/ls&gt; {#rakzAMsi — nirAsTat#}
+&lt;ls&gt;BHAṬṬ. 1,12.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ.&quot;&gt;2,36.&lt;/ls&gt; &lt;ls n=&quot;BHAṬṬ.&quot;&gt;15,35.&lt;/ls&gt; {#nirAsU rAkzasA vARAn#}
+&lt;ls n=&quot;BHAṬṬ.&quot;&gt;14,23.&lt;/ls&gt; {#nirAsa BfNgam#}
+&lt;ls n=&quot;BHAṬṬ.&quot;&gt;2,6.&lt;/ls&gt; {#aruRena tamo nirastam#}
+&lt;ls&gt;RAGH. 5,71.&lt;/ls&gt; {#nirastasuKodayA#}
+&lt;ls&gt;AMAR. 96.&lt;/ls&gt; {#nirastApad#}
+&lt;ls&gt;DHŪRTAS. 67,1.&lt;/ls&gt; &lt;ls n=&quot;DHŪRTAS.&quot;&gt;96,11.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%hinausweisen, verbannen, verstossen%}: {#gfhAnnirastA na tena vEdehasutA manastaH#}
+&lt;ls&gt;RAGH. 14,84.&lt;/ls&gt; {#yattvayA — mama bAnDavAH . nirastAH pariDAvanti#}
+&lt;ls&gt;R. 2,61,10.&lt;/ls&gt; &lt;ls n=&quot;R. 2,&quot;&gt;110,26.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;3,40,15.&lt;/ls&gt; &lt;ls n=&quot;R. 3,&quot;&gt;75,62.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;4,14,10.&lt;/ls&gt;
+&lt;ls&gt;DEV. 1,18.&lt;/ls&gt; ein Bewerber
+&lt;ls&gt;R. 6,72,48.&lt;/ls&gt;
+&lt;ls&gt;MṚCCH. 115,25.&lt;/ls&gt;
+&lt;ls&gt;H. 1474.&lt;/ls&gt; {#nirasita#}
+&lt;ls&gt;R. 4,13,45.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%zunichtemachen, vertilgen%}: {#nirastapAdape deSe#}
+&lt;ls&gt;HIT. I,63.&lt;/ls&gt; {#CalaM nirasya#}
+&lt;ls&gt;YĀJÑ. 2,19.&lt;/ls&gt; {#nirasya samayam#}
+&lt;ls&gt;MBH. 3,295.&lt;/ls&gt; {#yaSAMsi sarvezuBftAM nirAsTat#}
+&lt;ls&gt;BHAṬṬ. 1,3.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%zurückweisen, verwerfen%}: {#anukartfgatatvaM ca nirasyati#}
+&lt;ls&gt;SĀH. D. 28,17.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#parA#}
+&lt;div n=&quot;1&quot;&gt; 1) {%wegwerfen, bei Seite werfen%}: {#tanna pfTivyAM parAsyennApsu#}
+&lt;ls&gt;ŚAT. BR. 3,8,5,9.&lt;/ls&gt; {#nABinnAM parAsyet#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;8,7,3,16.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,3,2,8.&lt;/ls&gt; {#tanna parAsyam#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;4,4,5,1.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%verstossen, aussetzen%} (ein neugeborenes Kind): {#parA^ mArtA\RqamA^syat#}
+&lt;ls&gt;ṚV. 10,72,8.&lt;/ls&gt; {#mama^cca\na tvA^ yuva\tiH pa\rAsa^#}
+&lt;ls n=&quot;ṚV.&quot;&gt;4,18,8.&lt;/ls&gt; {#tasmAtstriyaM jAtAM parAsyanti na pumAMsam#}
+&lt;ls&gt;NIR. 3,4.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%zurückweisen, verwerfen%}: {#enena analaMkftI punaH kvApIti yaduktaM tadapi parAstam#}
+&lt;ls&gt;SĀH. D. 4,16.&lt;/ls&gt; &lt;ls n=&quot;SĀH. D. 4,&quot;&gt;20.&lt;/ls&gt;
+[Page1-0543]
+&lt;div n=&quot;p&quot;&gt;— {#pari#}
+&lt;div n=&quot;1&quot;&gt; 1) {%herumwerfen, rings herum anlegen, rings herum stellen, umnehmen%}: {#pucCa^M pa\ryasya^ntI#}
+&lt;ls&gt;AV. 12,5,21.&lt;/ls&gt;
+&lt;ls&gt;AIT. BR. 4,1.&lt;/ls&gt; &lt;ab&gt;med.&lt;/ab&gt;: {#saMtarAM meKalAM paryastAmevEnAmetatsatIM paryAsyanta#}
+&lt;ls&gt;ŚAT. BR. 3,4,3,2.&lt;/ls&gt; {#agnimayIH purastripuraM paryAsyanta#}
+&lt;ls&gt;AIT. BR. 2,11.&lt;/ls&gt; {#a\Bya1^\nyade^ti\ parya\nyada^syate#}
+&lt;ls&gt;AV. 13,2,43.&lt;/ls&gt; {#paryasta iva loko &apos;yaM yuDizWiraniveSane#}
+&lt;ls&gt;MBH. 2,1898.&lt;/ls&gt; (die Augen) {%herumwerfen, herumgehen lassen%}: {#muKena paryastavilocanena#}
+&lt;ls&gt;KUMĀRAS. 3,68.&lt;/ls&gt; {#paryastanetrotpalA#}
+&lt;ls&gt;AMAR. 26.&lt;/ls&gt; {%um Etwas verbreiten%}: {#tAmrozWaparyastarucaH smitasya#}
+&lt;ls&gt;KUMĀRAS. 1,45.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%umgeben, umringen, umstricken%}: {#paryAsizAtAM gAvO vatsena#}
+&lt;ls&gt;P. 3,1,52&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#kAmapASaparyastaH#}
+&lt;ls&gt;R. 2,31,12.&lt;/ls&gt; {#vizayAkzepaparyastabudDeH#}
+&lt;ls&gt;BHARTṚ. 3,29.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%sich umdrehen%}: {#paryasya#} (auf dem Bette)
+&lt;ls&gt;AMAR. 18.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) {%umwerfen, niederwerfen%}: {#aTottAnaM paSuM paryasyanti#}
+&lt;ls&gt;ŚAT. BR. 3,8,2,12.&lt;/ls&gt; {#dAsI GawamapAM pUrRaM paryasyet — padA#}
+&lt;ls&gt;M. 11,183.&lt;/ls&gt; {#pAKaRqAgamAH nirmUlatayA sadAgamArRavapravAheRa paryastAH#}
+(&lt;ab&gt;Sch.&lt;/ab&gt;: = {#dUre prakziptAH#})
+&lt;ls&gt;PRAB. 87,18.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; &lt;ab&gt;reflex.&lt;/ab&gt; {#paryAsTata#}
+&lt;ls&gt;P. 3,1,52&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{%umstürzen, niederfallen, herabsinken%}: {#paryastAH pfTivyAmaSruvindavaH#}
+&lt;ls&gt;RAGH. 10,76.&lt;/ls&gt; {#vidrumezu paryastam — SaNKayUTam#}
+&lt;ls n=&quot;RAGH.&quot;&gt;13,13.&lt;/ls&gt; {#BagnAkzaparyastaraTam#}
+&lt;ls n=&quot;RAGH.&quot;&gt;5,49.&lt;/ls&gt; {#ekAMsaparyastaSirastrajAlam#}
+&lt;ls n=&quot;RAGH.&quot;&gt;7,59.&lt;/ls&gt; — &lt;ab&gt;caus.&lt;/ab&gt; {%fallen zu lassen zwingen%}: {#tena paryAsayatAsravindUn#}
+&lt;ls&gt;RAGH. 13,28.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vipari#} &lt;ab&gt;med.&lt;/ab&gt; {%umkehren, umwechseln, vertauschen%}: {#itaraTA pAtre viparyasyete#}
+&lt;ls&gt;ŚAT. BR. 4,3,1,13.&lt;/ls&gt; {#viparyasya pAtramuKe#}
+&lt;ls&gt;KĀTY. ŚR. 9,13,14.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 9,13,&quot;&gt;22.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 9,13,&quot;&gt;26.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;1,7,27.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;2,6,46.&lt;/ls&gt; {#vipa/ryasta#} {%umgekehrt, verstellt, verkehrt%}
+&lt;ls&gt;AIT. BR. 1,25.&lt;/ls&gt;
+&lt;ls&gt;ŚAT. BR. 2,2,1,13.&lt;/ls&gt;
+&lt;ls&gt;MBH. 3,13487.&lt;/ls&gt;
+&lt;ls&gt;P. 2,3,56&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#viparyastamanaScezwEH#}
+&lt;ls&gt;MṚCCH. 115,4.&lt;/ls&gt; {#viparyA/sam#} &lt;lex&gt;adv.&lt;/lex&gt; {%abwechselnd, wechselsweise%}
+&lt;ls&gt;AIT. BR. 5,28.&lt;/ls&gt; &lt;ls n=&quot;AIT. BR.&quot;&gt;6,19.&lt;/ls&gt;
+&lt;ls&gt;ŚAT. BR. 3,2,4,16.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;7,1,22.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;4,2,2,9.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;6,7,4,17.&lt;/ls&gt; {#a/viparyAsam#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,7,1,22.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pra#} {%fortschleudern, hinschleudern, hinwerfen, werfen%}: {#pra yadi\tTA pa^rA\vata^H So\cirna mAna\masya^Ta#}
+&lt;ls&gt;ṚV. 1,39,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;121,13.&lt;/ls&gt; {#pra yA vAja\M na heza^ntaM pu\rumasya^syarjuni#}
+&lt;ls n=&quot;ṚV.&quot;&gt;5,84,2.&lt;/ls&gt; {#pracCidyodapAtre prAsyati#}
+&lt;ls&gt;ŚAT. BR. 3,1,2,8.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;7,1,8.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,&quot;&gt;8,2,18.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 3,8,&quot;&gt;3,25.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;4,2,1,21.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 6,6,14.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 6,&quot;&gt;8,13.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;18,3,4.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 18,&quot;&gt;5,15.&lt;/ls&gt; {#yaTA sEnDavaKilya udake prAstaH#}
+&lt;ls&gt;BṚH. ĀR. UP. 2,4,12.&lt;/ls&gt;
+&lt;ls&gt;M. 2,64.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;3,76.&lt;/ls&gt; {#prAsyedAtmAnamagnO#}
+&lt;ls n=&quot;M.&quot;&gt;11,73.&lt;/ls&gt; {#pUrRakumBamapAM navam — prAsyeyuH#} ({%umwerfen%})
+&lt;ls n=&quot;M. 11,&quot;&gt;186.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#anupra#} {%nachwerfen%}
+&lt;ls&gt;ŚAT. BR. 3,8,2,28.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;9,3,3,14.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 9,3,&quot;&gt;4,16.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 9,3,4,&quot;&gt;17.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 6,6,28.&lt;/ls&gt;
+&lt;div n=&quot;v&quot;&gt;— &lt;ab&gt;Vgl.&lt;/ab&gt; {#anuprAsa#} .
+&lt;div n=&quot;p&quot;&gt;— {#aBipra#} {%auf Etwas hinwerfen%}: {#tfRaM cAtvAlamaBiprAsyati#}
+&lt;ls&gt;ŚAT. BR. 4,2,5,5.&lt;/ls&gt;
+&lt;ls&gt;KĀTY. ŚR. 6,8,28.&lt;/ls&gt; {%hinwerfen%}: {#aBiprAsyEnat#} (so zu lesen &lt;ab&gt;st.&lt;/ab&gt; {#aBiprASya#})
+&lt;ls&gt;CHĀND. UP. 6,13,2.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pratipra#} {%daraufwerfen%}: {#pratiprAsyolmukam#}
+&lt;ls&gt;KĀTY. ŚR. 6,5,4.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#prati#}
+&lt;div n=&quot;1&quot;&gt; 1) {%zuwerfen, hinwerfen%}: {#pratya^sta\M namu^ce\H Sira^H#}
+&lt;ls&gt;VS. 10,14.&lt;/ls&gt; {#taM pratya^syAmi mf\tyave^#}
+&lt;ls&gt;AV. 5,8,5.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;6,37,3.&lt;/ls&gt; {#yadyaTAhinirvlayanI valmIke mftA pratyastA SayIta#}
+&lt;ls&gt;ŚAT. BR. 14,7,2,10&lt;/ls&gt; = &lt;ls&gt;BṚH. ĀR. UP. 4,4,7.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%umschlagen, einbiegen%}: {#antakamu tarhi paScAtpratyasyet#}
+&lt;ls&gt;ŚAT. BR. 3,2,1,4.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%abwerfen, ablegen, fahren lassen%}: {#pratyastaDEryam#} (das vorangehende {#anu#} {%alsdann%} muss getrennt werden)
+&lt;ls&gt;BHARTṚ. 1,25.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#vi#} {%auseinanderwerfen, zertrennen, zerstücken, zerstreuen, trennen, sondern%}: {#f\tenAdri\M vya^sanBi\danta^H#}
+&lt;ls&gt;ṚV. 4,3,11.&lt;/ls&gt; {#viSvA\ itspfDo^ maruto\ vya^syaTa#}
+&lt;ls n=&quot;ṚV.&quot;&gt;5,55,6.&lt;/ls&gt; {#vyA^sa\#} (&lt;ab&gt;med.&lt;/ab&gt;) {#indra\H pfta^nAH#}
+&lt;ls n=&quot;ṚV.&quot;&gt;7,20,3.&lt;/ls&gt; {#a\Sma\nmayA^ni\ naha^nA\ vyasya^n#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,67,3.&lt;/ls&gt; {#vyasya\nviSvA\ ani^rA\ amI^vA#}
+&lt;ls&gt;VS. 11,47.&lt;/ls&gt; {#aDA^ sa\patnA^nindrA\gnI me^ vizU\cInA\nvya^syatAm#}
+&lt;ls n=&quot;VS.&quot;&gt;17,64.&lt;/ls&gt; {#vya^syE hf\daSci\ttAnya^syatam#}
+&lt;ls&gt;AV. 3,25,6.&lt;/ls&gt; {#ahI\nvya^syatAtpa\TaH#}
+&lt;ls n=&quot;AV.&quot;&gt;10,4,6.&lt;/ls&gt; {#tamo\ vya^sya#}
+&lt;ls n=&quot;AV.&quot;&gt;12,3,18.&lt;/ls&gt; &lt;ls&gt;ṚV. PRĀT. 14,19.&lt;/ls&gt; {#vyasyan — rAkzasAn#}
+&lt;ls&gt;BHAṬṬ. 8,116.&lt;/ls&gt; {#vyAsyat — SastrasaMhatIH#}
+&lt;ls n=&quot;BHAṬṬ.&quot;&gt;9,31.&lt;/ls&gt; {#vyasyannudanyAM#}
+[Page1-0544]
+({%den Durst vertreibend%}) {#payoBiH#}
+&lt;ls n=&quot;BHAṬṬ.&quot;&gt;3,40.&lt;/ls&gt; {#vyasya vedAMScaturaH#}
+&lt;ls&gt;MBH. 1,4236.&lt;/ls&gt; {#vivyAsEkaM#} (&lt;ab&gt;unregelm.&lt;/ab&gt; &lt;ab&gt;redupl.&lt;/ab&gt;, als wenn {#vyas#} die Wurzel wäre) {#caturDA yo vedam#}
+&lt;ls n=&quot;MBH. 1,&quot;&gt;2212.&lt;/ls&gt; {#vivyAsa vedAnyasmAtsa tasmAdvyAsa iti smftaH#}
+&lt;ls n=&quot;MBH. 1,&quot;&gt;2417.&lt;/ls&gt; {#vyasta#} {%zerstückt%}
+&lt;ls&gt;ṚV. 1,32,7.&lt;/ls&gt; {%vertrieben, entfernt%}: {#pravitataGanavyastasUryAtapa#}
+&lt;ls&gt;MEGH. 104.&lt;/ls&gt; {#˚vyAsaNgavyastaDErya#}
+&lt;ls&gt;BHARTṚ. 1,66.&lt;/ls&gt; {%getrennt, verändert%}
+&lt;ls&gt;RAGH. 11,73.&lt;/ls&gt; {%getrennt, gesondert, vereinzelt, einzeln genommen%}: {#vyastAstArAgaRA iva#}
+&lt;ls&gt;MBH. 3,14380.&lt;/ls&gt; {#(upakramEH) vyastEScEva samastESca#}
+&lt;ls&gt;M. 7,159.&lt;/ls&gt;
+&lt;ls&gt;YĀJÑ. 1,366.&lt;/ls&gt;
+&lt;ls&gt;ARJ. 10,64.&lt;/ls&gt;
+&lt;ls&gt;P. 2,3,56&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#caturDA — vyastaH prasavaH#}
+&lt;ls&gt;RAGH. 10,85.&lt;/ls&gt; {#tadasti kiM vyastamapi#} ({%vereinzelt, eins davon%}) {#trilocane#}
+&lt;ls&gt;KUMĀRAS. 5,72.&lt;/ls&gt; {%getrennt, verschieden, mannigfach%}
+&lt;ls&gt;PRAB. 97,19.&lt;/ls&gt; {#vyaste kAle#} {%hin und wieder, bisweilen%}
+&lt;ls&gt;MBH. 3,17052.&lt;/ls&gt; {%verwirrt%}
+&lt;ls&gt;AK. 3,2,21.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#sam#}
+&lt;div n=&quot;1&quot;&gt; 1) {%verbinden, aneinanderreihen, anreihen, zusammenlegen%}: {#u\BAvantO\ sama^syatAm#}
+&lt;ls&gt;AV. 6,89,3.&lt;/ls&gt; {#vizRukramavAtsapre samasyati#}
+&lt;ls&gt;ŚAT. BR. 6,7,4,12.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 6,7,4,&quot;&gt;13.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;14,3,1,1.&lt;/ls&gt; {#rajjuM saptaDA samasyati#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;10,2,3,8.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,3,2,13.&lt;/ls&gt; &lt;ls&gt;KĀTY. ŚR. 3,5,1.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;19,7,8.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 19,&quot;&gt;5,12.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR. 19,5,&quot;&gt;13.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;8,3,16.&lt;/ls&gt; {#samA/sam#} &lt;ab&gt;inf.&lt;/ab&gt;
+&lt;ls&gt;ŚAT. BR. 4,1,2,26.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;12,8,3,14.&lt;/ls&gt; &lt;ab&gt;pass.&lt;/ab&gt; {%zusammengesetzt werden%} (&lt;ab&gt;gramm.&lt;/ab&gt;): {#sarvo &apos;pyavayavo &apos;hnA samasyate#}
+&lt;ls&gt;P. 2,2,1&lt;/ls&gt;, &lt;ab&gt;Sch.&lt;/ab&gt;
+{#samasyamAne — yuzmadasmadI#}
+&lt;ls n=&quot;P.&quot;&gt;7,2,90&lt;/ls&gt;, &lt;is&gt;Kār.&lt;/is&gt; 1. {#sa/masta (samasta/#}
+&lt;ls&gt;P. 4,2,104&lt;/ls&gt;, &lt;is&gt;Vārtt&lt;/is&gt;. 19, &lt;ab&gt;Sch.&lt;/ab&gt;)
+{%verbunden, vereinigt, eine Einheit bildend, ganz, alles, alle insgesammt%}
+&lt;ls&gt;AK. 3,2,14.&lt;/ls&gt;
+&lt;ls&gt;TRIK. 3,3,421.&lt;/ls&gt;
+&lt;ls&gt;H. 1433.&lt;/ls&gt;
+&lt;ls&gt;ŚAT. BR. 2,3,4,7.&lt;/ls&gt;
+&lt;ls&gt;CHĀND. UP. 2,1,1.&lt;/ls&gt; &lt;ls n=&quot;CHĀND. UP.&quot;&gt;8,11,1.&lt;/ls&gt;
+&lt;ls&gt;M. 3,85.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;7,57.&lt;/ls&gt; &lt;ls n=&quot;M. 7,&quot;&gt;159.&lt;/ls&gt; &lt;ls n=&quot;M. 7,&quot;&gt;198.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;8,255.&lt;/ls&gt;
+&lt;ls&gt;YĀJÑ. 1,366.&lt;/ls&gt; &lt;ls n=&quot;YĀJÑ.&quot;&gt;3,191.&lt;/ls&gt;
+&lt;ls&gt;R. 3,41,38.&lt;/ls&gt; &lt;ls n=&quot;R.&quot;&gt;4,8,10&lt;/ls&gt; &lt;ls n=&quot;R. 4,&quot;&gt;56,16.&lt;/ls&gt;
+&lt;ls&gt;PAÑCAT. 236,18.&lt;/ls&gt;
+&lt;ls&gt;AMAR. 79.&lt;/ls&gt;
+&lt;ls&gt;VID. 4.&lt;/ls&gt; {%componirt%} (&lt;ab&gt;gramm.&lt;/ab&gt;)
+&lt;ls&gt;P. 1,1,73&lt;/ls&gt;, &lt;is&gt;Vārtt&lt;/is&gt;. 3.
+&lt;div n=&quot;1&quot;&gt;— 2) {%vermengen%}: {#yada^syA\H palpU^lana\M Sakf^ddA\sI sa\masya^nti#}
+&lt;ls&gt;AV. 12,4,9.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#anusam#} {%noch hinzulegen, vollends beifügen%}: {#barhiranusamasyati pariDIMSca#}
+&lt;ls&gt;ŚAT. BR. 2,6,1,47.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 2,6,1,&quot;&gt;48.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;1,8,3,18.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 1,8,3,&quot;&gt;22.&lt;/ls&gt; {#tadenaM kftsnaM kftvAnusamasyati#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;3,8,3,37.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#upasam#} {%darauflegen%}
+&lt;ls&gt;ŚAT. BR. 6,6,4,9.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-as-mw20354-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">12184</idno>
+        <idno type="line">45857</idno>
+        <idno type="pc">1-143-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;12184&lt;pc&gt;1-143-b&lt;k1&gt;as&lt;k2&gt;as&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; √{#as#}¦, {#a/syati#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%schleudern, werfen, schiessen auf%} [Page1-143-c] (&lt;ab&gt;Loc.&lt;/ab&gt;, &lt;ab&gt;Dat.&lt;/ab&gt; oder &lt;ab&gt;Gen.&lt;/ab&gt;); {%schleudern mit%} (&lt;ab&gt;Instr.&lt;/ab&gt;).
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%vertreiben, verscheuchen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%von sich werfen, ablegen, fahren lassen%}. Nur im &lt;ab&gt;Partic.&lt;/ab&gt; {#asta#} am Anfange eines &lt;ab&gt;adj. Comp.&lt;/ab&gt; &lt;ls n=&quot;Chr.&quot;&gt;104,14&lt;/ls&gt;. &lt;ls n=&quot;Chr. 104,&quot;&gt;21&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {#asta#} *{%beendigt%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ati#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%niederschiessen%}. Vielleicht fehlerhaft für {#aBi#}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 *{#atyasta#} {%über Etwas%} (&lt;ab&gt;Acc.&lt;/ab&gt; oder im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend) {%hinweg gebracht, Etwas hinter sich habend%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vyati#}. &lt;ab&gt;Partic.&lt;/ab&gt; {#˚yatyasta#} {%umgestellt, in eine umgekehrte Lage gebracht%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aDi#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%darüber werfen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%fälschlich übertragen%} &lt;ls&gt;ŚAṂK. zu BĀDAR. 4,1,5. 6&lt;/ls&gt;. {%missverstehen%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; &lt;ab&gt;Partic.&lt;/ab&gt; {#aDyAsita#} {%mit Etwas%} (&lt;ab&gt;Nom. abstr.&lt;/ab&gt; im &lt;ab&gt;Instr.&lt;/ab&gt;) {%gemeint, unter — verstanden%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anu#}, &lt;ab&gt;Partic.&lt;/ab&gt; {#a/nvasta#} {%durchschossen, durchflochten%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#apa#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%wegschleudern, wegstossen, wegwerfen, abwerfen, ablegen%} (Kleid, Schmuck); {%niederlegen auf%} &lt;ls n=&quot;Chr.&quot;&gt;297,1&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%verlassen%} (einen Ort) &lt;ls n=&quot;Chr.&quot;&gt;124,21&lt;/ls&gt;. {%Jmd im Stich lassen%} &lt;ls n=&quot;Chr.&quot;&gt;75,23&lt;/ls&gt;. {%Etwas aufgeben, fahrenlassen%} &lt;ls n=&quot;Chr.&quot;&gt;299,25&lt;/ls&gt;. {%bei Seite lassen%}. {#apAsya#} mit &lt;ab&gt;Acc.&lt;/ab&gt; {%mit Hintansetzung, trotz%} &lt;ls&gt;BĀLAR. 39,14. 102,13&lt;/ls&gt;. {#samaram#} so &lt;ab&gt;v. a.&lt;/ab&gt; {%ausser im Kampf%} &lt;ls&gt;Spr. 5238&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%entziehen, an sich ziehen%} &lt;ls n=&quot;Chr.&quot;&gt;93,5&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%subtrahiren%} &lt;ls&gt;BĪJAG. 34&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%zurückweisen, widerlegen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#udapa#} {%ganz aufgeben, — unterlassen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#api#} {%einfügen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBi#} auch {#asati#} und {#˚te#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%hinwerfen, zuwerfen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%schleudern%} (Pfeile) &lt;ls&gt;MBH. 1,138,41&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%hinzufügen%} &lt;ls&gt;ŚULBAS. 2,9&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%obliegen, betreiben, besorgen, verrichten, studiren%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%wiederholen, verdoppeln%}. {#aByasta#} {%verdoppelt, reduplicirt%} &lt;ls&gt;Spr. 7615&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 6〉 {%multipliciren%}.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%Jmd obliegen lassen, beibringen, lehren%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#samaBi#} {%obliegen, betreiben, üben%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ava#} {%hinwerfen%} &lt;ls&gt;ṚV. 1,140,10&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anvava#} {%Etwas bringen auf%} (&lt;ab&gt;Dat.&lt;/ab&gt;).
+&lt;div n=&quot;p&quot;&gt;— Mit {#aByava#} {%auf Etwas hinwerfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#A#} &lt;ab&gt;Med.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%hingiessen, fliessen lassen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%an sich —, in die Hand nehmen%} &lt;ls&gt;ŚAT. BR. 1,5,2,1&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ud#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%hinaufwerfen, in die Höhe heben%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%hinauswerfen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%sich erheben von%} (&lt;ab&gt;Acc.&lt;/ab&gt;). &lt;ls&gt;ŚĀK. 34,1&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anUd#} {%nach Jmd hinaufwerfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#paryud#} {%beseitigen, ausschliessen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vyud#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%umherstreuen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%aus sich entlassen%} &lt;ls&gt;GAUT. 9,12&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%fahren lassen, aufgeben%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBivyud#} {%vollständig fahren lassen, — aufgeben%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#udvyud#} &lt;ab&gt;dass.&lt;/ab&gt;
+&lt;div n=&quot;p&quot;&gt;— Mit {#upa#} {%unter Etwas werfen, zu Etwas hinwerfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vyupa#} {%dazwischen hinwerfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#ni#} auch {#asati#}.
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%niederwerfen, — setzen, — legen, ablegen%} &lt;ls n=&quot;Chr.&quot;&gt;93,27&lt;/ls&gt;. {#prarohAn#} {%Steckreiser pflanzen%} &lt;ls&gt;BĀLAR. 147,13&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%legen —, setzen —, absetzen —, einsetzen —, aussetzen in, auf%} (&lt;ab&gt;Loc.&lt;/ab&gt;) {%stecken an, in%} &lt;ls n=&quot;Chr.&quot;&gt;113,17&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;218,6&lt;/ls&gt;. {%schütten —, giessen auf,%} in &lt;ls n=&quot;Chr.&quot;&gt;169,11&lt;/ls&gt;. {#manasi cintAtiBAram#} [Page1-144-a] so &lt;ab&gt;v. a.&lt;/ab&gt; {%sich viele Gedanken machen%} &lt;ls n=&quot;Chr.&quot;&gt;311,11&lt;/ls&gt;. {#SirasyAjYAm#} {%aufʼs Haupt legen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%mit Ehrerbietung entgegennehmen%} &lt;ls&gt;Spr. 1876&lt;/ls&gt;. {#paTi#} {%auf die Strasse werfen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%ablegen, aufgeben%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%schleudern%} (eine Fluch) auf (&lt;ab&gt;Loc.&lt;/ab&gt;).
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%auftragen%} (Salbe, Zeichen) auf (&lt;ab&gt;Loc.&lt;/ab&gt;).
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%heften%} (den Blick) auf (&lt;ab&gt;Loc.&lt;/ab&gt;) &lt;ls&gt;Spr. 7758&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 6〉 {%Jmd%} (&lt;ab&gt;Loc.&lt;/ab&gt;) {%Etwas oder Jmd übergeben, übertragen, anvertrauen%} &lt;ls n=&quot;Chr.&quot;&gt;292,4&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;326,33&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 7〉 {%aufgeben, fahren lassen%} ({#prARAn, jIvitam, deham#}).
+&lt;div n=&quot;1&quot;&gt;— 8〉 {%vorbringen, zur Sprache bringen%}.
+&lt;div n=&quot;1&quot;&gt;— 9〉 {#nyasta#}
+&lt;div n=&quot;2&quot;&gt;— a〉 {%hingestreckt, ausgestreckt%}. {#krayAya#} {%zum Verkauf ausgestellt%}.
+&lt;div n=&quot;2&quot;&gt;— b〉 von einem Vocale
+&lt;div n=&quot;3&quot;&gt;— α〉 {%niedrig betont%}. &lt;ab&gt;Compar.&lt;/ab&gt; &lt;ls&gt;ṚV. PRĀT. 3,17&lt;/ls&gt;.
+&lt;div n=&quot;3&quot;&gt;— β〉 {%kurz%} &lt;ls&gt;ŚRUT. 27&lt;/ls&gt;.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%niederlegen —, niedersetzen heissen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBini#} {%niederdrücken%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#upani#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%hinlegen, hinsetzen%} &lt;ls&gt;R. 4,4,17&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%Jmd%} (&lt;ab&gt;Acc.&lt;/ab&gt;) {%Jmd%} (&lt;ab&gt;Dat.&lt;/ab&gt;) {%anmelden%} &lt;ls&gt;MBH. 3,158,28&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 Mit {#samupani#} {%vorbringen, zur Sprache bringen%} &lt;ls n=&quot;Chr.&quot;&gt;250,3&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#parini#}, &lt;ab&gt;Partic.&lt;/ab&gt; {#˚nyasta#} {%ausgestreckt, hingestreckt%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pratini#} {%für Jmd besonders hinlegen%}. &lt;ab&gt;v. l.&lt;/ab&gt; {#pravi#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vini#} auch {#asati#}.
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%auseinanderlegen, ausbreiten, hinlegen, hinstellen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%legen —, setzen auf%} (&lt;ab&gt;Loc.&lt;/ab&gt;) &lt;ls n=&quot;Chr.&quot;&gt;304,32&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;310,4&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;320,8&lt;/ls&gt;. {%stecken in%} &lt;ls n=&quot;Chr.&quot;&gt;175,31&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%auftragen%} (Salbe, Zeichen) auf (&lt;ab&gt;Loc.&lt;/ab&gt;) &lt;ls n=&quot;Chr.&quot;&gt;115,17&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%Etwas durch Etwas bezeichnen%} &lt;ls&gt;MEGH. 84&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%richten, heften%} (den Geist, den Blick) {%auf%} (&lt;ab&gt;Loc.&lt;/ab&gt;)
+&lt;div n=&quot;1&quot;&gt;— 6〉 {%Jmd%} (&lt;ab&gt;Loc.&lt;/ab&gt;) {%Etwas oder Jmd übergeben, anvertrauen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#saMni#} auch {#asati#}.
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%zusammen niederlegen, zusammenlegen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%niederlegen, ablegen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%legen —, setzen auf%} (&lt;ab&gt;Loc.&lt;/ab&gt;) &lt;ls n=&quot;Chr.&quot;&gt;43,21&lt;/ls&gt;. {%Jmd%} (&lt;ab&gt;Loc.&lt;/ab&gt; oder &lt;ab&gt;Gen.&lt;/ab&gt;) {%in Verwahrung geben, anvertrauen%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%Etwas aufgeben, fahren lassen, sich von Etwas lossagen%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%allem irdischen Treiben entsagen und sich ganz dem beschaulichen Leben widmen%}.
+&lt;div n=&quot;1&quot;&gt;— 6〉 {#saMnyasta#} {%hingestreckt, ausgestreckt, ausgebreitet, hingelagert%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#upasaMni#} in {#upasaMnyAsa#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#nis#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%ausreissen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%hinauswerfen, verbannen aus%} (&lt;ab&gt;Abl.&lt;/ab&gt;) &lt;ls n=&quot;Chr.&quot;&gt;128,31&lt;/ls&gt;. {%verstossen, entfernen, verjagen, verscheuchen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%abwehren%}.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%zurückweisen, abweisen%} (einen Bewerber).
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%zu Nichte machen, vertilgen%}.
+&lt;div n=&quot;1&quot;&gt;— 6〉 *{%abschiessen%}.
+&lt;div n=&quot;1&quot;&gt;— 7〉 *{#hastO#} &lt;ab&gt;Act.&lt;/ab&gt; &lt;ab&gt;Med.&lt;/ab&gt; {%ausstrecken%}.
+&lt;div n=&quot;1&quot;&gt;— 8〉 *{%von sich abstreifen,%} &lt;ab&gt;Act.&lt;/ab&gt; &lt;ab&gt;Med.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 9〉 {%zurückweisen, widerlegen%}.
+&lt;div n=&quot;1&quot;&gt;— 10〉 {#nirasta#} {%ausgestossen%}.
+&lt;div n=&quot;2&quot;&gt;— a〉 von der Aussprache der Laute {#Sa, za, sa#} und {#ha#}
+&lt;div n=&quot;2&quot;&gt;— b〉 von einer &lt;ab&gt;best.&lt;/ab&gt; fehlerhaften Aussprache der Vocale.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%ausreissen%}. &lt;ab&gt;Partic.&lt;/ab&gt; {#nirasayant#} (!) zu &lt;ls&gt;Spr. 1171&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBinis#} {%hinwerfen nach%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#parA#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%wegwerfen, bei Seite werfen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%hinwerfen%}. [Page1-144-b]
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%verstossen, aussetzen%} (ein Kind).
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%erlassen%} (einen Ort).
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%zurückweisen, widerlegen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pari#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%hinundher werfen, — bewegen, umhergehen lassen%} (die Augen).
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%umwerfen, niederwerfen%}. {#paryasta#} {%umgeworfen, umgestürzt, niedergefallen auf%} (&lt;ab&gt;Loc.&lt;/ab&gt;)
+&lt;div n=&quot;1&quot;&gt;— 3〉 &lt;ab&gt;Med.&lt;/ab&gt; {%ringsherum anlegen, umlegen%} &lt;ls n=&quot;Chr.&quot;&gt;21,16&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 4〉 {%umringen, umgeben, umstricken%}.
+&lt;div n=&quot;1&quot;&gt;— 5〉 {%sich umdrehen%}. {#paryasya#} &lt;ab&gt;Absol.&lt;/ab&gt; &lt;ls&gt;Spr. 1622&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 6〉 {%sich ausbreiten%}. {#paryasta#} {%ausgebreitet um%} (im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend).
+&lt;div n=&quot;1&quot;&gt;— 7〉 {%aufreihen%}. {#paryasta#} {%aufgereiht auf%} (im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend).
+&lt;div n=&quot;1&quot;&gt;— 8〉 {#paryasta#} {%verkehrt%} &lt;ls&gt;Spr. 5560&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vipari#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%umkehren, umwerfen%} &lt;ls&gt;GAUT. 20,3. 4&lt;/ls&gt;. {%umwechseln, vertauschen%}. {#vipa/ryasta#} {%umgekehrt, verstellt, verkehrt%} &lt;ls n=&quot;Chr.&quot;&gt;236,14&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%eine verkehrte Ansicht haben%} &lt;ls&gt;Spr. 2596&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {#viparyasta#} {%herumstehend%} &lt;ls n=&quot;Chr.&quot;&gt;128,14&lt;/ls&gt;.
+&lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; {%bewirken, dass Etwas%} (&lt;ab&gt;Acc.&lt;/ab&gt;) {%sich verkehrt%} &lt;ls&gt;BĀLAR. 271,4&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#saMpari#} &lt;ab&gt;s.&lt;/ab&gt; {#saMparyAsana#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pra#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%fortschleudern, hinschleudern, hinwerfen, werfen in%} (&lt;ab&gt;Loc.&lt;/ab&gt;) &lt;ls n=&quot;Chr.&quot;&gt;34,23&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;162,1&lt;/ls&gt;. {#amSam#} {%einen Einsatz machen, wetten%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%umwerfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anupra#} {%nachwerfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBipra#} {%hinwerfen auf%} (&lt;ab&gt;Acc.&lt;/ab&gt;).
+&lt;div n=&quot;p&quot;&gt;— Mit {#pratipra#} {%daraufwerfen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#prati#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%zuwerfen, hinwerfen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%umschlagen, einbiegen%}.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {%abwerfen, ablegen, fahren lassen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#vi#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%auseinanderwerfen, zersprengen, zertrennen, zerstreuen, sondern%}. {#vyasta#} {%zerstückt, auseinandergerissen, getrennt, zerlegt, zertheilt, gesondert, vermannichfacht%} &lt;ls n=&quot;Chr.&quot;&gt;251,16&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;259,28&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;263,24&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;293,11&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;304,24&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;321,6&lt;/ls&gt;. {#vyaste kAle#} {%hin und wider, bisweilen%} &lt;ls&gt;MBH. 3,305,6&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {#vyasta#} *{%verwirrt%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#pravi#} {%hinlegen, hinstellen auf%} (&lt;ab&gt;Loc.&lt;/ab&gt;) &lt;ls&gt;R. ed. Bomb. 2,40,15&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#sam#} {%verbinden, aneinanderreihen, zusammenlegen, — fügen, — thun%} &lt;ls&gt;ŚULBAS. 1,50. 2,12. 76&lt;/ls&gt;. &lt;ab&gt;Pass.&lt;/ab&gt; {%zusammengesetzt werden%} (&lt;ab&gt;gramm.&lt;/ab&gt;) {%mit%} (&lt;ab&gt;instr.&lt;/ab&gt;). {#samasta#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%verbunden, vereinigt, eine Einheit bildend%} &lt;ls n=&quot;Chr.&quot;&gt;259,28&lt;/ls&gt;. {%componirt%} (&lt;ab&gt;gramm.&lt;/ab&gt;) &lt;ls n=&quot;Chr.&quot;&gt;251,16&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%ganz, alles, alle insgesammt%} &lt;ls n=&quot;Chr.&quot;&gt;104,8&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;169,4&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;215,25&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;292,4&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;297,1&lt;/ls&gt;.
+&lt;div n=&quot;p&quot;&gt;— Mit {#anusam#} {%noch hinzulegen, vollends beifügen%}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#upasam#}
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%darauflegen%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%hinzufügen%} &lt;ls&gt;ŚULBAS. 1,68&lt;/ls&gt;.
+&lt;div n=&quot;1&quot;&gt;— 3〉 {#upasamasta#} {%mit einem andern Worte componirt%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

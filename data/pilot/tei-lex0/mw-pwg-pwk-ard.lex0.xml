@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-ard">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: ard</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-ard" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">ard</orth>
+        </form>
+        <gramGrp>
+          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="verb-class" cert="high" resp="#source">6P,1P,7</gram>
+        </gramGrp>
+        <etym xml:id="mw-pwg-pwk-ard-etym-root" type="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:fd,15" cert="high" resp="#source">fd,15</ref></etym>
+        <sense xml:id="mw-pwg-pwk-ard-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">to move, be moved, be scattered</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV. iv, 17, 2</abbr></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>vii, 104, 24.</abbr><ref type="inherited-siglum">RV.</ref></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Naigh.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-ard-sense-2" n="2">
+          <def xml:lang="en" cert="high" resp="#machine">to dissolve</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>AV. xii, 4, 3</abbr></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Bhaṭṭ.</abbr></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Pāṇ. vii, 4, 71</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-ard-sense-3" n="3">
+          <def xml:lang="en" cert="high" resp="#machine">to torment, hurt, kill</def>
+          <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-ard-sense-4" n="4">
+          <def xml:lang="en" cert="high" resp="#machine">to ask, beg for</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Ragh. v, 17.</abbr></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>Naigh.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-ard-sense-5" n="5">
+          <def xml:lang="en" cert="high" resp="#machine">to make agitated, stir up, shake vehemently, &amp;</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>AV. iv, 15, 6</abbr></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>11</abbr><ref type="inherited-siglum">AV. iv, 15,</ref></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-ard-sense-6" n="6">
+          <def xml:lang="en" cert="high" resp="#machine">to do harm, torment, distress, etc</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>vi, 49, 2</abbr><ref type="inherited-siglum">AV.</ref></bibl>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+        </sense>
+        <sense xml:id="mw-pwg-pwk-ard-sense-7" n="7">
+          <def xml:lang="en" cert="high" resp="#machine">to strike, hurt, kill, destroy</def>
+          <bibl type="named-source" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 3,18.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NAIGH. 2,19.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 7,4,71</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>VOP. 8,53.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ṚV. 4,17,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>7,104,24.</abbr><ref type="inherited-siglum">ṚV.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AV. 12,4,3.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>NAIGH. 2,14.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚABDAR.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚKDR.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>RAGH. 5,17.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>ṚV.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-ard-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>VIDDH. 82,14</abbr></bibl>
+        <note type="source-record">mw L16095</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-naladika">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case naladika</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-naladika-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Analadika">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">naladika</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-naladika-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-naladika-compound-relation" type="compound">
+      <seg type="component">nala</seg>
+      <seg type="component">dika</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-naladika-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-naladika-record-pwg">
+        <abbr>P. 4,4,53.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-naladika-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">104403.6</idno>
+        <idno type="line">349963</idno>
+        <idno type="pc">530,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;104403.6&lt;pc&gt;530,2&lt;k1&gt;naladika&lt;k2&gt;nala—dika&lt;h&gt;1&lt;e&gt;4
+&lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;nala—dika&lt;/s&gt; ¦ &lt;lex&gt;mf(&lt;s&gt;I&lt;/s&gt;)n.&lt;/lex&gt; dealing in Indian spikenard &lt;ab&gt;g.&lt;/ab&gt; &lt;s&gt;kiSorA&lt;srs/&gt;di&lt;/s&gt;.&lt;info lex=&quot;m:f#I:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-naladika-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">37904</idno>
+        <idno type="line">370544</idno>
+        <idno type="pc">4-0067</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;37904&lt;pc&gt;4-0067&lt;k1&gt;naladika&lt;k2&gt;na/ladika
+{#na/ladika#}¦ &lt;lex&gt;adj.&lt;/lex&gt; &lt;lex&gt;f.&lt;/lex&gt; {#I/#} {%mit Narde Handel treibend%} &lt;is&gt;gaṇa&lt;/is&gt; {#kisarAdi#} zu &lt;ls&gt;P. 4,4,53.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-naladika-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">57026</idno>
+        <idno type="line">234710</idno>
+        <idno type="pc">3-184-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;57026&lt;pc&gt;3-184-c&lt;k1&gt;naladika&lt;k2&gt;*naladika
+*{#naladika#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; {%mit%} &lt;hom&gt;1.&lt;/hom&gt; {#nalada#} 1〉 {%handelnd%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

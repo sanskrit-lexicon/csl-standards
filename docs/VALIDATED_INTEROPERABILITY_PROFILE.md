@@ -4,7 +4,7 @@ Date: 2026-05-29
 
 ## Scope
 
-This profile upgrades the MW-PWG-PWK pilot from stubs to full 50-case machine-reviewed TEI and OntoLex/FrAC validation. The original deterministic 15-case slice is still preserved as the first stricter review subset, but validation now covers all 50 generated hard cases.
+This profile upgrades the MW-PWG-PWK pilot from stubs to full 250-case machine-reviewed TEI and OntoLex/FrAC validation. The original deterministic 15-case slice is still preserved as the first stricter review subset, but validation now covers all 250 generated hard cases.
 
 Selection is deterministic:
 
@@ -55,14 +55,14 @@ Validator: `scripts/validate-tei-profile.mjs`
 
 Project ODD/profile file: `data/schema/tei-archival-profile.odd.xml`
 
-The validator checks all 50 cases for:
+The validator checks all 250 cases for:
 
 - TEI namespace and header.
 - Correct stable `xml:id`.
 - three source-entry citations.
 - escaped raw CDSL tags, not live pseudo-XML.
 - required phenomenon-specific structures: hedge, root, compound, continuation.
-- declared full-50 validation scope.
+- declared full validation scope.
 - project ODD/profile markers.
 
 ## OntoLex/FrAC Profile
@@ -71,8 +71,8 @@ Generator: `scripts/export-ontolex.mjs`
 
 The output is a full OntoLex/FrAC profile:
 
-- 50 JSON-LD graphs in `data/pilot/ontolex/`.
-- 50 RDF/Turtle files in `data/pilot/rdf/`.
+- 250 JSON-LD graphs in `data/pilot/ontolex/`.
+- 250 RDF/Turtle files in `data/pilot/rdf/`.
 - `ontolex:LexicalEntry` + `lexicog:Entry` main node.
 - `ontolex:Form` canonical form node.
 - `ontolex:LexicalSense` nodes where definitions are safely extracted.
@@ -84,7 +84,7 @@ Validator: `scripts/validate-ontolex-profile.mjs`
 
 Project SHACL/profile file: `data/schema/ontolex-frac-profile.shacl.ttl`
 
-The validator checks all 50 cases for:
+The validator checks all 250 cases for:
 
 - required JSON-LD context prefixes;
 - graph size beyond a stub;
@@ -94,7 +94,7 @@ The validator checks all 50 cases for:
 - FrAC attestations with provenance;
 - phenomenon-specific relation nodes;
 - RDF/Turtle presence with required prefixes and entry triples.
-- declared full-50 validation scope.
+- declared full validation scope.
 - project SHACL/profile markers.
 
 ## Commands
@@ -131,15 +131,15 @@ It records three independent hardening checks:
 | Layer | External tool | Behavior |
 |---|---|---|
 | TEI ODD compilation | `teitorelaxng` from the TEI Stylesheets | Compiles `data/schema/tei-archival-profile.odd.xml` to a temporary RELAX NG schema when available. |
-| TEI XML validation | `jing` or `xmllint` | Validates all 50 generated TEI XML files against a compiled RELAX NG schema. Set `CSL_STANDARDS_TEI_RNG` to use a precompiled schema. |
-| SHACL validation | `pyshacl` | Validates all 50 RDF/Turtle files against `data/schema/ontolex-frac-profile.shacl.ttl`. |
+| TEI XML validation | `jing` or `xmllint` | Validates all 250 generated TEI XML files against a compiled RELAX NG schema. Set `CSL_STANDARDS_TEI_RNG` to use a precompiled schema. |
+| SHACL validation | `pyshacl` | Validates all 250 RDF/Turtle files against `data/schema/ontolex-frac-profile.shacl.ttl`. |
 
 The default command records missing external tools as `skipped`; `:strict` turns skipped checks into a failing CI-style result.
 
 ## Remaining Limits
 
-This is full 50-case machine review, not the final complete philological project. Remaining work:
+This is full 250-case machine review, not the final complete philological project. Remaining work:
 
-- Human philological review of all 50 cases.
+- Human philological review of all 250 cases.
 - Running the optional external validation harness in a toolchain-equipped environment and committing the resulting pass report.
 - Expanding from project-profile validation to publication-grade TEI and RDF release QA.

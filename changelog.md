@@ -8,6 +8,20 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Changed
+- **Extended the pilot from 50 to 250 hard cases.** The sampler default is now
+  250 ([scripts/sample-hard-cases.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/sample-hard-cases.mjs)),
+  and it now requires a counterpart in all three dictionaries (drops MW-only
+  candidates that lack PWG/PWK). Hedge detection runs on the stored (compacted)
+  raw so the phenomenon matches the artifacts even for long records. The
+  validators are count-agnostic, and the `full-50-*` scope/status labels are now
+  count-agnostic (`full-machine-review`, `full-tei-odd-profile`,
+  `full-ontolex-shacl-profile`). The review slice stays 15. Regenerated corpus:
+  250 TEI/OntoLex/RDF + 256 Lex-0; 959 loss reports; 2501 named-source citations;
+  224/250 entries with senses; 117 entries / 244 senses sense-linked. Docs updated
+  to the 250-scale figures (legacy/roadmap docs retain their original figures by
+  design).
+
 ### Added
 - Sense-level citation linkage: `extractMwSenses` now carries per-sense
   `citations` (the MW `<ls>` within each `<div>` segment), and the TEI Lex-0

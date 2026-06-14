@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-pratiprasava">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: pratiprasava</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-pratiprasava" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">pratiprasava</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-pratiprasava-sense-1" n="1">
+          <xr type="cf"><ref xml:lang="en" cert="high" resp="#machine">See under prati-pra- √ 1. sU</ref></xr>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KĀTY. ŚR. 831,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>908,3.</abbr><ref type="inherited-siglum">KĀTY. ŚR.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>ŚAṂK.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>BṚH. ĀR. UP. S. 300.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MÜLLER, SL. 179, N. 1.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>KULL.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>M. 2,189.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>3,105.</abbr><ref type="inherited-siglum">M.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>144.</abbr><ref type="inherited-siglum">M. 3,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>5,9.</abbr><ref type="inherited-siglum">M.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>18.</abbr><ref type="inherited-siglum">M. 5,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>8,112.</abbr><ref type="inherited-siglum">M.</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>Comm. zu TS. PRĀT.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>YOGAS. 2,10. 4,34</abbr></bibl>
+        <note type="source-record">mw L131641</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-a-mw1.1">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: a</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
+        <listBibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-a-mw1.1" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">a</orth>
+        </form>
+        <sense xml:id="mw-pwg-pwk-a-mw1.1-sense-1" n="1">
+          <def xml:lang="en" cert="high" resp="#machine">the first short vowel inherent in consonants</def>
+        </sense>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-1" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 2,2,6.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-2" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>AK. 3,5,1.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-3" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>TRIK. 3,3,463.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-4" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>464.</abbr><ref type="inherited-siglum">TRIK. 3,3,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-5" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>H. 1539.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-6" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>an. 7,1.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-7" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>MED. avy . 2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-8" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 6,2,2.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-9" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>116.</abbr><ref type="inherited-siglum">P. 6,2,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-10" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>155</abbr><ref type="inherited-siglum">P. 6,2,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-11" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>161.</abbr><ref type="inherited-siglum">P. 6,2,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-12" type="named-source" source="#dict-pwg" cert="high" resp="#source"><abbr>172</abbr><ref type="inherited-siglum">P. 6,2,</ref></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-13" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>BHĀG. P.</abbr></bibl>
+        <bibl xml:id="mw-pwg-pwk-a-mw1.1-cite-14" type="named-source" source="#dict-pwk" cert="high" resp="#source"><abbr>ŚIŚ. 15,33</abbr></bibl>
+        <note type="source-record">mw L1.1</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

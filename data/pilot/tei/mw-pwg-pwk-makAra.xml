@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-makAra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case makAra</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-makAra-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AmakAra">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">makAra</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-makAra-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-makAra-compound-relation" type="compound">
+      <seg type="component">ma</seg>
+      <seg type="component">kAra</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>ŚĀṄKH. BR. 11,5. 14,3.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>AV. PRĀT. 1,67.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>2,25.</abbr>
+        <ref type="inherited-siglum">AV. PRĀT.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>31.</abbr>
+        <ref type="inherited-siglum">AV. PRĀT. 2,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>M. 2,76.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>Verz. d. Oxf. H. 97,a,37.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>104,b,36.</abbr>
+        <ref type="inherited-siglum">Verz. d. Oxf. H.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>226,b,6.</abbr>
+        <ref type="inherited-siglum">Verz. d. Oxf. H.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>Ind. St. 8,22, N.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>ŚYĀMĀR.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>WILSON, Sel. Works I,256</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-makAra-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-makAra-record-pwg">
+        <abbr>Ind. St. 8,344,3.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-makAra-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">153872</idno>
+        <idno type="line">514992</idno>
+        <idno type="pc">771,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;153872&lt;pc&gt;771,1&lt;k1&gt;makAra&lt;k2&gt;ma—kAra&lt;h&gt;2&lt;e&gt;3
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;ma—kAra&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; the foot called molossus&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-makAra-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">56147</idno>
+        <idno type="line">546676</idno>
+        <idno type="pc">5-0419</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;56147&lt;pc&gt;5-0419&lt;k1&gt;makAra&lt;k2&gt;makAra
+{#makAra#}¦ {#(ma#} + 1. {#kAra)#} &lt;lex&gt;m.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%der Buchstab%} {#ma#}
+&lt;ls&gt;ŚĀṄKH. BR. 11,5. 14,3.&lt;/ls&gt;
+&lt;ls&gt;AV. PRĀT. 1,67.&lt;/ls&gt; &lt;ls n=&quot;AV. PRĀT.&quot;&gt;2,25.&lt;/ls&gt; &lt;ls n=&quot;AV. PRĀT. 2,&quot;&gt;31.&lt;/ls&gt;
+&lt;ls&gt;M. 2,76.&lt;/ls&gt; &lt;ls&gt;Verz. d. Oxf. H. 97,a,37.&lt;/ls&gt; &lt;ls n=&quot;Verz. d. Oxf. H.&quot;&gt;104,b,36.&lt;/ls&gt; &lt;ls n=&quot;Verz. d. Oxf. H.&quot;&gt;226,b,6.&lt;/ls&gt; &lt;ls&gt;Ind. St. 8,22, N.&lt;/ls&gt; {#madyaM mAMsaM ca matsyaM#} (sic) {#ca mudrA mETunameva ca . makArapaYcakaM cEva mahApAtakanASanam ..#}
+&lt;ls&gt;ŚYĀMĀR.&lt;/ls&gt; bei &lt;ls&gt;WILSON, Sel. Works I,256&lt;/ls&gt;; &lt;ab&gt;vgl.&lt;/ab&gt; {#paYcatattva#} 2. und {#paYcamakAra#} .
+&lt;div n=&quot;1&quot;&gt;— 2) {%Molossus%}: {#˚vipulA#} {%ein &lt;ab&gt;best.&lt;/ab&gt; Metrum%}
+&lt;ls&gt;Ind. St. 8,344,3.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-makAra-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">81401</idno>
+        <idno type="line">336381</idno>
+        <idno type="pc">5-001-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;81401&lt;pc&gt;5-001-c&lt;k1&gt;makAra&lt;k2&gt;makAra
+{#makAra#}¦ &lt;lex&gt;m.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%der Laut%} {#ma#}. {#˚paYcaka#} &lt;lex&gt;n.&lt;/lex&gt; = {#madya#}. {#mAMsa#} {#matsya#} {#mudrA#} und {#mETuna#}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%Molossus%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

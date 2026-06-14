@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-av">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case av</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>root</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-av-entry" type="verbal-root" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Aav">
+    <form type="verbal-root">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">av</orth>
+      <gramGrp>
+      <gram type="category">cl.</gram>
+      <gram type="verb-class">1</gram>
+      </gramGrp>
+    </form>
+    <sense xml:id="mw-pwg-pwk-av-sense-1" n="1">
+      <def xml:lang="en">drive, impel, animate (as a car or horse)</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-av-sense-2" n="2">
+      <def xml:lang="en">satisfy, refresh</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-av-sense-3" n="3">
+      <def xml:lang="en">offer (as a hymn to the gods)</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-av-sense-4" n="4">
+      <def xml:lang="en">be pleased with, like, accept favourably (as sacrifices, prayers or hymns)</def>
+    </sense>
+    <sense xml:id="mw-pwg-pwk-av-sense-5" n="5">
+      <def xml:lang="en">consume, devour</def>
+    </sense>
+    <etym xml:id="mw-pwg-pwk-av-root-relation" type="root">
+      <lbl>verbal root</lbl>
+      <note type="root-association">No Whitney root pointer extracted.</note>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-1" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV. viii, 2, 3</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-2" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV. viii, 7, 18</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-3" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV. ii, 17, 8</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-4" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-5" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV. vii, 18, 25</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-6" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV. vii, 33, 1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-7" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV. i, 166, 13</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-8" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-9" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV. iv, 44, 6</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-10" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-11" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-12" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>BhP.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-13" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>Ragh. ix, 1</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-14" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>VarBṛS.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-15" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>RV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-16" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>AV.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-17" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>VS.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-mw-18" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-mw">
+        <abbr>ŚBr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>DHĀTUP. 15,91.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>P. 6,1,116.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>NAIGH. 2,8.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>ṚV. 1,131,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>3,13,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>VS. 20,74.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>ṚV. 7,59,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>3,2.</abbr>
+        <ref type="inherited-siglum">ṚV. 7,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>1,58,2.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>8,36,2.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>10,15,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>120,7.</abbr>
+        <ref type="inherited-siglum">ṚV. 10,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>AV. 8,7,21</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-14" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>ṚV. 5,83,4.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-15" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>VS. 2,16.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-16" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>ṚV. 2,11,11.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-17" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>7,18,19.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-18" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>1,152,6.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-19" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>7,33,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-20" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>ŚAT. BR. 7,2,2,17.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-21" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>1,3,3,16.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-22" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>4,1,4.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-23" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>6,3,37.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-24" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>7,5,1,14.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-25" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>8,2,1,5.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-26" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>10,4,1,3.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-27" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>14.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR. 10,4,1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-28" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>20.</abbr>
+        <ref type="inherited-siglum">ŚAT. BR. 10,4,1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-29" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>TAITT. UP. 3,10,6.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-30" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>3,11.</abbr>
+        <ref type="inherited-siglum">TAITT. UP.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-31" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>RAGH. 11,75.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-32" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>ṚV. 1,168,8.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-33" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>13.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,168,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-34" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>179,3.</abbr>
+        <ref type="inherited-siglum">ṚV. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-35" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>3,48,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-36" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>6,58,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-37" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>7,104,12.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-38" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>RAGH. 1,65.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-39" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>ṚV. 2,40,5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwg-40" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwg">
+        <abbr>8,3,1.</abbr>
+        <ref type="inherited-siglum">ṚV.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-av-record-pwk">
+        <abbr>R. ed. Bomb. 4,60,20</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-av-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">16938</idno>
+        <idno type="line">60872</idno>
+        <idno type="pc">96,1</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;16938&lt;pc&gt;96,1&lt;k1&gt;av&lt;k2&gt;av&lt;e&gt;1
+&lt;s&gt;av&lt;/s&gt; ¦ &lt;ab&gt;cl.&lt;/ab&gt; 1. &lt;ab&gt;P.&lt;/ab&gt; &lt;s&gt;a/vati&lt;/s&gt; (&lt;ab&gt;Imper.&lt;/ab&gt; 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;avatAt&lt;/s&gt;, &lt;ls&gt;RV. viii, 2, 3&lt;/ls&gt;, &lt;ab&gt;p.&lt;/ab&gt; &lt;s&gt;a/vat&lt;/s&gt;; &lt;ab&gt;impf.&lt;/ab&gt; &lt;s&gt;A/vat&lt;/s&gt;, 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;A/vaH&lt;/s&gt; [for &lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;A/vaH&lt;/s&gt; See √ &lt;s&gt;vf&lt;/s&gt;]; &lt;ab&gt;perf.&lt;/ab&gt; 3. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;Ava&lt;/s&gt;, 2. &lt;ab&gt;pl.&lt;/ab&gt; &lt;s&gt;Ava/&lt;/s&gt;, &lt;ls&gt;RV. viii, 7, 18&lt;/ls&gt;, 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;A/viTa&lt;/s&gt;; &lt;ab&gt;aor.&lt;/ab&gt; &lt;s&gt;a/vIt&lt;/s&gt;, 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;a/vIs&lt;/s&gt;, &lt;s&gt;avIs&lt;/s&gt; and &lt;s&gt;avizas&lt;/s&gt;, &lt;ab&gt;Imper.&lt;/ab&gt; &lt;s&gt;avizwu&lt;/s&gt;, 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;aviqQi/&lt;/s&gt; [once, &lt;ls&gt;RV. ii, 17, 8&lt;/ls&gt;] or &lt;s&gt;aviqQi&lt;/s&gt; [six times in &lt;ls&gt;RV.&lt;/ls&gt;], 2. &lt;ab&gt;du.&lt;/ab&gt; &lt;s&gt;avizwam&lt;/s&gt;, 3. &lt;ab&gt;du.&lt;/ab&gt; &lt;s&gt;avizwAm&lt;/s&gt;, 2. &lt;ab&gt;pl.&lt;/ab&gt; &lt;s&gt;avizwa/nA&lt;/s&gt;, &lt;ls&gt;RV. vii, 18, 25&lt;/ls&gt; &lt;ab&gt;Prec.&lt;/ab&gt; 3. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;avyAs&lt;/s&gt;, &lt;ab&gt;Inf.&lt;/ab&gt; &lt;s&gt;a/vitave&lt;/s&gt;, &lt;ls&gt;RV. vii, 33, 1&lt;/ls&gt;; &lt;lang&gt;Ved.&lt;/lang&gt; &lt;ab&gt;ind.p.&lt;/ab&gt; &lt;s&gt;AvyA&lt;/s&gt;, &lt;ls&gt;RV. i, 166, 13&lt;/ls&gt;)
+&lt;div n=&quot;to&quot;/&gt;to drive, impel, animate (as a car or horse), &lt;ls&gt;RV.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt; &lt;lang&gt;Ved.&lt;/lang&gt; to promote, favour, (chiefly &lt;lang&gt;Ved.&lt;/lang&gt;) to satisfy, refresh;
+&lt;div n=&quot;to&quot;/&gt;to offer (as a hymn to the gods), &lt;ls&gt;RV. iv, 44, 6&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt;to lead or bring to (&lt;ab&gt;dat.&lt;/ab&gt;: &lt;s&gt;Uta/ye&lt;/s&gt;, &lt;s&gt;vA/ja-sAtaye&lt;/s&gt;, &lt;s&gt;kzatrA/ya&lt;/s&gt;, &lt;s&gt;svasta/ye&lt;/s&gt;), &lt;ls&gt;RV.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt; (said of the gods) to be pleased with, like, accept favourably (as sacrifices, prayers or hymns), &lt;ls&gt;RV.&lt;/ls&gt;;
+&lt;div n=&quot;to&quot;/&gt; (chiefly said of kings or princes) to guard, defend, protect, govern, &lt;ls&gt;BhP.&lt;/ls&gt;; &lt;ls&gt;Ragh. ix, 1&lt;/ls&gt;; &lt;ls&gt;VarBṛS.&lt;/ls&gt; &amp;c.:
+&lt;div n=&quot;vp&quot;/&gt;&lt;ab&gt;Caus.&lt;/ab&gt; (only &lt;ab&gt;impf.&lt;/ab&gt; &lt;s&gt;Avayat&lt;/s&gt;, 2. &lt;ab&gt;sg.&lt;/ab&gt; &lt;s&gt;Avayas&lt;/s&gt;) to consume, devour, &lt;ls&gt;RV.&lt;/ls&gt;; &lt;ls&gt;AV.&lt;/ls&gt;; &lt;ls&gt;VS.&lt;/ls&gt;; &lt;ls&gt;ŚBr.&lt;/ls&gt; &lt;info whitneyroots=&quot;av,4&quot;/&gt;&lt;info verb=&quot;genuineroot&quot; cp=&quot;1P&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-av-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">6233</idno>
+        <idno type="line">52788</idno>
+        <idno type="pc">1-0465</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6233&lt;pc&gt;1-0465&lt;k1&gt;av&lt;k2&gt;av
+{#av#}¦
+&lt;lang n=&quot;greek&quot;&gt;(ἄω, aueo)&lt;/lang&gt;, {#a/vati#}
+&lt;ls&gt;DHĀTUP. 15,91.&lt;/ls&gt; {#Avizam, AvIt#}; &lt;ab&gt;imperat.&lt;/ab&gt; &lt;ab&gt;ved.&lt;/ab&gt; {#aviqQi/, avizwu/, avizwa/#} ({#avita/#}); {#Ava; avizya/ti#}; &lt;ab&gt;inf.&lt;/ab&gt; &lt;ab&gt;ved.&lt;/ab&gt; {#a/vitave#}; &lt;ab&gt;gerund.&lt;/ab&gt; &lt;ab&gt;ved.&lt;/ab&gt; {#A/vya#}; &lt;ab&gt;partic.&lt;/ab&gt; {#Uta#} (in {#tvota#}) und {#avita#} . Das {#a#} in {#avyAt#} &lt;ab&gt;u.&lt;/ab&gt; {#avantu#} angeblich nicht &lt;ab&gt;elid.&lt;/ab&gt; im &lt;is&gt;Veda&lt;/is&gt;
+&lt;ls&gt;P. 6,1,116.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%Freude haben, sich gütlich thun, sich sättigen an Etwas%} (&lt;ab&gt;loc.&lt;/ab&gt;)
+&lt;ls&gt;NAIGH. 2,8.&lt;/ls&gt; {#made^zu vfzannu\Sijo\ yadAvi^Ta#}
+&lt;ls&gt;ṚV. 1,131,5.&lt;/ls&gt; {#u\ta no\ brahma^nnavizA u\kTezu^#}
+&lt;ls n=&quot;ṚV.&quot;&gt;3,13,6.&lt;/ls&gt; {#karma^su no &apos;vata#}
+&lt;ls&gt;VS. 20,74.&lt;/ls&gt; {#A ca^ no ba\rhiH sada^tAvi\tA ca^ na spA\rhARi\ dAta^ve\ vasu^#}
+&lt;ls&gt;ṚV. 7,59,6.&lt;/ls&gt; {#proTa\daSvo\ na yava^se &apos;vi\zyan#}
+&lt;ls n=&quot;ṚV. 7,&quot;&gt;3,2.&lt;/ls&gt; {#tf\zva^vi\zyanna^ta\sezu^ tizWati#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,58,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,36,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,15,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,&quot;&gt;120,7.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%Jemand wohlthun, gütlich thun, sättigen%}: {#yatpa\rjanya^H pfTi\vIM reta\sAva^ti#} (&lt;ab&gt;vgl.&lt;/ab&gt;
+&lt;ls&gt;AV. 8,7,21&lt;/ls&gt;) &lt;ls&gt;ṚV. 5,83,4.&lt;/ls&gt; {#mi\trAvaru^RO tvA\ vfzwyA^vatAm#}
+&lt;ls&gt;VS. 2,16.&lt;/ls&gt; {#i\tTA su\taH pO\ra indra^mAva#}
+&lt;ls&gt;ṚV. 2,11,11.&lt;/ls&gt; {#Ava\dindra^M ya\munA\ tftsa^vaSca#}
+&lt;ls n=&quot;ṚV.&quot;&gt;7,18,19.&lt;/ls&gt; {#A De\navo^ mAmate\yamava^ntIrbrahma\priya^M pIpayan#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,152,6.&lt;/ls&gt; {#na me^ dU\rAdavi^tave\ vasi^zWAH#} {%mögen die%} &lt;is&gt;Vasiṣṭha&lt;/is&gt; {%nie fern von mir sein, um mir gütlich zu thun%} (&lt;is&gt;Indra&lt;/is&gt; spricht)
+&lt;ls n=&quot;ṚV.&quot;&gt;7,33,1.&lt;/ls&gt; {#(annaM) yadBUyo hinasti tadyatkanIyo na tadavati#} {%zu viel%} (Speise) {%schadet, zu wenig sättigt nicht%}
+&lt;ls&gt;ŚAT. BR. 7,2,2,17.&lt;/ls&gt; {#yadagnO juhvati tadenAnavati#}
+&lt;ls n=&quot;ŚAT. BR.&quot;&gt;1,3,3,16.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 1,&quot;&gt;4,1,4.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 1,&quot;&gt;6,3,37.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;7,5,1,14.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;8,2,1,5.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;10,4,1,3.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 10,4,1,&quot;&gt;14.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR. 10,4,1,&quot;&gt;20.&lt;/ls&gt; {#ahamannam — ahamannAdaH — yo mA dadAti sa ideva mA3vAH#}
+&lt;ls&gt;TAITT. UP. 3,10,6.&lt;/ls&gt; {#saha nAvavatu . saha nO Bunaktu . saha vIryaM karavAvahE#}
+&lt;ls n=&quot;TAITT. UP.&quot;&gt;3,11.&lt;/ls&gt; {#kzatriyAntakaraRo &apos;pi vikramastena mAmavati#} ({%befriedigt%}) {#nAjite tvayi#}
+&lt;ls&gt;RAGH. 11,75.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%gern haben, wünschen, lieben%}: {#taM ra^kzatA maruto\ yamAva^ta#}
+&lt;ls&gt;ṚV. 1,168,8.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,168,&quot;&gt;13.&lt;/ls&gt; {#na mfzA^ SrA\ntaM yadava^nti de\vAH#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;179,3.&lt;/ls&gt; {#sa\dyo ha^ jA\to vf^za\BaH ka\nIna\H praBa^rtumAva\danDa^saH su\tasya^#}
+&lt;ls n=&quot;ṚV.&quot;&gt;3,48,1.&lt;/ls&gt; {#viSvA\ hi mA\yA ava^si#}
+&lt;ls n=&quot;ṚV.&quot;&gt;6,58,1.&lt;/ls&gt; {#yatsa\tyaM ya^ta\radfjI^ya\staditsomo^ &apos;vati\ hantyAsa^t#}
+&lt;ls n=&quot;ṚV.&quot;&gt;7,104,12.&lt;/ls&gt; {#na mAmavati sadvIpA ratnasUrapi medinI ..#}
+&lt;ls&gt;RAGH. 1,65.&lt;/ls&gt; {#avita#} &lt;lex&gt;n.&lt;/lex&gt; {%Gefallen, Freude%}, &lt;ab&gt;s.&lt;/ab&gt; {#adroGAvita#} . —
+[Page1-0466]
+&lt;div n=&quot;1&quot;&gt;— 4) {%an Etwas Gefallen finden, sich Etwas angelegen sein lassen, beachten%}: {#ava^ta\M Diya^M me#}
+&lt;ls&gt;ṚV. 2,40,5.&lt;/ls&gt; {#a\smA~ a^vantu te\ Diya^H#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,3,1.&lt;/ls&gt; {#naro\ yadvA^maSvinA\ stoma\mAva^n#}
+&lt;ls n=&quot;ṚV.&quot;&gt;4,44,7.&lt;/ls&gt; {#a\vi\zwanA^ pEjava\nasya\ keta^m#}
+&lt;ls n=&quot;ṚV.&quot;&gt;7,18,25.&lt;/ls&gt; {#a\yA Di\yA mana^ve Sru\zwimAvyA^ sA\kaM naro^ da\MsanE\rA ci^kitrire#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,166,13.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;129,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;182,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;2,12,14.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;3,8,8.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 3,&quot;&gt;62,8.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;4,33,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,64,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,81,15.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;85,13.&lt;/ls&gt; &lt;ls&gt;VS. 29,8.&lt;/ls&gt; &lt;ls&gt;AV. 5,27,8.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;7,20,5.&lt;/ls&gt; &lt;ls&gt;SV. I,2,1,2,2.&lt;/ls&gt; {#devacittaM tvAvatu mA manuzyacittam#}
+&lt;ls&gt;ŚAT. BR. 11,8,3,9.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;1,7,4,21.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;2,1,3,2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 5) {%begünstigen, fördern, ermuthigen, helfen, schützen%}: {#sa pa^vasva\ ya Avi\Tendra^M vf\trAya\ hanta^ve#}
+&lt;ls&gt;ṚV. 9,61,22.&lt;/ls&gt; {#ya\jYena^ ya\jYama^va ya\jYiya\H sanya\jYaste\ vajra^mahi\hatya^ Avat#}
+&lt;ls n=&quot;ṚV.&quot;&gt;3,32,12.&lt;/ls&gt; {#a\nyA vo^ a\nyAma^vatu#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,97,14.&lt;/ls&gt; {#a\vi\qQI^ndra ci\trayA^ na U\tI#}
+&lt;ls n=&quot;ṚV.&quot;&gt;2,17,8.&lt;/ls&gt; {#a\smA~ a^va maGava\ngoma^ti vra\je#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,59,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;1,23,12.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;24,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;27,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;76,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;110,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;152,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;181,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;185,4.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,185,&quot;&gt;9.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;2,12,14.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 2,&quot;&gt;30,6.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,9,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;9,83,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,80,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,&quot;&gt;108,2.&lt;/ls&gt; &lt;ls&gt;VS. 2,9.&lt;/ls&gt; &lt;ls&gt;AV. 2,13,5.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;3,19,5.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;4,29,3.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;14,1,35.&lt;/ls&gt; &lt;ls n=&quot;AV.&quot;&gt;19,72,1.&lt;/ls&gt; &lt;ls&gt;ŚAT. BR. 1,8,1,28.&lt;/ls&gt; &lt;ls&gt;NIR. 3,9.&lt;/ls&gt; {#satyaM vadizyAmi . tanmAmavatu . tadvaktAramavatu#}
+&lt;ls&gt;TAITT. UP. 1,1. 12.&lt;/ls&gt; {#pratyakzABiH prasannastunaBiravatu vastABirazwABirISaH#}
+&lt;ls&gt;ŚĀK. 1.&lt;/ls&gt; {#yamavatAmavatAM#} ({%der Schützenden, Regierenden%}) {#Duri sTitaH#}
+&lt;ls&gt;RAGH. 9,1.&lt;/ls&gt; {#avita#} {%beschützt, erhalten%}
+&lt;ls&gt;AK. 3,2,55.&lt;/ls&gt;
+&lt;ls&gt;H. 1497.&lt;/ls&gt; Im
+&lt;ls&gt;DHĀTUP.&lt;/ls&gt; werden dieser Wurzel folgende Bedeutungen gegeben: {#rakzaRa, gati#} (&lt;ab&gt;vgl.&lt;/ab&gt;
+&lt;ls&gt;NAIGH. 2,14&lt;/ls&gt;), {#kAnti, prIti, tfpti, avagama, praveSa, SravaRa, svAmyarTa#} (Andere: {#sAmarTya#}), {#yAcana#} (oder {#arTana), kriyA, icCA#} (oder {#kAma#}), {#dIpti, avApti, AliNgana, hiMsA, AdAna#} (Andere: {#dahana), BAva#} (Andere: {#BAga), vfdDi#};
+&lt;ls&gt;KĀTANTRA&lt;/ls&gt; nur: {#pAlana#} . — &lt;ab&gt;caus.&lt;/ab&gt; {#Avayati#} (die Betonung {#Ava^yati#}
+&lt;ls&gt;NAIGH. 2,8&lt;/ls&gt; scheint auf unrichtiger Ableitung von {#vI#} mit {#A#} zu beruhen; die Texte haben nur &lt;ab&gt;imperf.&lt;/ab&gt;-Formen) {%verzehren%}: {#e\vAre^ vfzaBA su\te &apos;si^nva\nBUryA^vayaH#}
+&lt;ls&gt;ṚV. 8,45,38.&lt;/ls&gt; {#a\gnirna jamBE^stf\zvanna^mAvayat#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,113,8.&lt;/ls&gt; {#su\pa\rRastvA^ ga\rutmA\nviza^ praTa\mamA^vayat#}
+&lt;ls&gt;AV. 4,6,3.&lt;/ls&gt; {#avi^sto\kAnyA^vayat#}
+&lt;ls n=&quot;AV.&quot;&gt;5,19,2.&lt;/ls&gt; {#me\zasya^ ha\viza\ Ava^yat#}
+&lt;ls&gt;VS. 21,44.&lt;/ls&gt;
+&lt;ls&gt;ŚAT. BR. 1,6,3,5.&lt;/ls&gt; &lt;ls n=&quot;ŚAT. BR.&quot;&gt;5,5,4,6.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#anu#} {%aufmuntern, ermuthigen%}: {#anu^ tri\tasya\ yuDya^ta\H Suzma^mAvannu\ta kratu^m#}
+&lt;ls&gt;ṚV. 8,7,24.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#ud#}
+&lt;div n=&quot;1&quot;&gt; 1) {%beachten, auf Etwas merken%}: {#Bage\mAM Diya\muda^vA\ dada^nnaH#}
+&lt;ls&gt;ṚV. 7,41,3.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%lauern%}: {#u\dava^ntO\ vfkA^viva#}
+&lt;ls&gt;AV. 7,95,2.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%fördern, antreiben%}: {#a\smAka\maMSa\muda^vA\ Bare^ Bare#}
+&lt;ls&gt;ṚV. 1,102,4.&lt;/ls&gt; {#indra\ udA^vatpati\maGnyA^nAm#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,102,7.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#upa#} {%liebkosen, freundlich thun, ermuthigen%}; mit &lt;ab&gt;dat.&lt;/ab&gt; oder &lt;ab&gt;acc.&lt;/ab&gt;: {#vf\zA\ra\vAya\ vada^te yadu\pAva^ti vicci\kaH#}
+&lt;ls&gt;ṚV. 10,146,2.&lt;/ls&gt; {#kiM svi^tpu\treBya^H pi\tarA\ upA^vatuH#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,161,10.&lt;/ls&gt; {#pu\tro mA\tarA^ vi\cara\nnupA^vasi#}
+&lt;ls n=&quot;ṚV.&quot;&gt;10,140,2.&lt;/ls&gt; {#a\nyAnyasyA\ upA^vata#}
+&lt;ls n=&quot;ṚV. 10,&quot;&gt;97,14.&lt;/ls&gt; {#gAva\ upA^vAtAva\tam#}
+&lt;ls n=&quot;ṚV.&quot;&gt;8,61,12.&lt;/ls&gt; {#sIsA\yADyA^ha\ va^ruRa\H sIsA^yA\gnirupA^vati#}
+&lt;ls&gt;AV. 1,16,2.&lt;/ls&gt; {#upa hi dvitIyo &apos;vati#}
+&lt;ls&gt;ŚAT. BR. 3,7,3,9.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#pra#}
+&lt;div n=&quot;1&quot;&gt; 1) {%beachten, auf Etwas merken%}: {#vi\SvA Diyo^ aSvinA\ prAva^taM naH#}
+&lt;ls&gt;ṚV. 1,117,23.&lt;/ls&gt; {#pra su^nva\ta stu^va\taH SaMsa^mAvaH#}
+&lt;ls n=&quot;ṚV. 1,&quot;&gt;33,7.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;31,8.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,26,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 10,&quot;&gt;97,17.&lt;/ls&gt; {#prAva^ me\ vaca^H#}
+&lt;ls&gt;AV. 13,1,42.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) {%sich Jemandes annehmen, ermuntern, zu Etwas verhelfen%}: {#indra^H sa\matsu\ yaja^mAna\mArya\M prAva^t#}
+&lt;ls&gt;ṚV. 1,130,8.&lt;/ls&gt; {#prAva\nvARI^H puruhU\taM Dama^ntIH#}
+&lt;ls n=&quot;ṚV.&quot;&gt;3,30,10.&lt;/ls&gt; {#prAvI\nnu vI\ro ja^ri\tAramU\tI#}
+&lt;ls n=&quot;ṚV.&quot;&gt;7,20,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;1,4,8.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;33,14.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;36,17.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;47,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;51,5.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;81,1.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;2,15,9.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;7,19,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;8,3,12.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 8,&quot;&gt;49,10.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;10,103,7.&lt;/ls&gt; {#(agniH) yami\mA viSa\H prAva^ntu jU\taye^#}
+&lt;ls n=&quot;ṚV.&quot;&gt;1,127,2.&lt;/ls&gt; &lt;ls n=&quot;ṚV. 1,&quot;&gt;102,3.&lt;/ls&gt; &lt;ls n=&quot;ṚV.&quot;&gt;5,46,7.&lt;/ls&gt; {#ya\jYaM prAva^ntu naH Su\Be#}
+&lt;ls&gt;VS. 18,76.&lt;/ls&gt; {#tAstvA^ putra\vidyA^ya\ dEvI\H prAva\ntvoza^DayaH#}
+&lt;ls&gt;AV. 3,23,6.&lt;/ls&gt; {#i\yamindra\M varu^Ramazwa me\ gIH prAva^tto\ke tana^ye\ tUtu^jAnA#}
+&lt;ls&gt;ṚV. 7,84,5.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 3) {%befriedigen, sättigen%}: {#yaddevAso^ la\lAma^gu\M pra vi^zwI\mina\mAvi^zuH#}
+&lt;ls&gt;VS. 23,29.&lt;/ls&gt; {#me\GAH prAva^ntu pfTi\vImanu^#}
+&lt;ls&gt;AV. 4,15,9.&lt;/ls&gt;
+[Page1-0467]
+&lt;div n=&quot;p&quot;&gt;— {#saMpra#} {%behülflich sein%}: {#Di\ye sama^SvinA\ prAva^taM vaH#}
+&lt;ls&gt;AV. 6,4,3.&lt;/ls&gt;
+&lt;div n=&quot;p&quot;&gt;— {#sam#} {%befriedigen, sättigen%}: {#manu\M SUra^mi\zA sa\mAva^tam#}
+&lt;ls&gt;ṚV. 1,112,18.&lt;/ls&gt; {#saM vo^ &apos;vantu su\dAna^va\ utsA^H#}
+&lt;ls&gt;AV. 4,15,7.&lt;/ls&gt; &lt;ls n=&quot;AV. 4,15,&quot;&gt;9.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-av-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">212914</idno>
+        <idno type="line">610198</idno>
+        <idno type="pc">7-310-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;212914&lt;pc&gt;7-310-b&lt;k1&gt;av&lt;k2&gt;av
+√{#av#}¦ I. {#avita#} &lt;ls&gt;R. ed. Bomb. 4,60,20&lt;/ls&gt; nach dem &lt;ab&gt;Comm.&lt;/ab&gt; = {#jYAta#}.
+&lt;div n=&quot;p&quot;&gt;— Mit {#aBi#} I. 5.&lt;info n=&quot;sup_7&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

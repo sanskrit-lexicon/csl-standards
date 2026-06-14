@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-sahasraDAra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case sahasraDAra</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-sahasraDAra-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3AsahasraDAra">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">sahasraDAra</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-sahasraDAra-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-sahasraDAra-compound-relation" type="compound">
+      <seg type="component">sahasra</seg>
+      <seg type="component">DAra</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-sahasraDAra-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-sahasraDAra-record-pwg">
+        <abbr>DURGOTSAVAPADDHATI</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-sahasraDAra-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-sahasraDAra-record-pwg">
+        <abbr>ŚKDR.</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-sahasraDAra-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">240583</idno>
+        <idno type="line">799086</idno>
+        <idno type="pc">1195,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;240583&lt;pc&gt;1195,3&lt;k1&gt;sahasraDAra&lt;k2&gt;sahasra—DAra&lt;h&gt;2&lt;e&gt;3
+&lt;hom&gt;2.&lt;/hom&gt; &lt;s&gt;sahasra—DAra&lt;/s&gt; ¦ &lt;lex&gt;mfn.&lt;/lex&gt; having a &lt;ab n=&quot;thousand&quot;&gt;th˚&lt;/ab&gt; edges&lt;info lex=&quot;m:f:n&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-sahasraDAra-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">107659</idno>
+        <idno type="line">1001286</idno>
+        <idno type="pc">7-0871</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;107659&lt;pc&gt;7-0871&lt;k1&gt;sahasraDAra&lt;k2&gt;sahasraDAra&lt;h&gt;1
+1. {#sahasraDAra#}¦
+&lt;div n=&quot;1&quot;&gt; 1) &lt;lex&gt;adj.&lt;/lex&gt; &lt;ab&gt;s. u.&lt;/ab&gt; 1. {#DArA#} 1).
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;lex&gt;f.&lt;/lex&gt; {#A#} {%ein aus tausend Oeffnungen eines Gefässes hervordringender Wasserstrahl%}: {#˚DArayA devIM snApayAmi sureSvarIm#}
+&lt;ls&gt;DURGOTSAVAPADDHATI&lt;/ls&gt; im &lt;ls&gt;ŚKDR.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-sahasraDAra-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">123076</idno>
+        <idno type="line">513524</idno>
+        <idno type="pc">7-102-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;123076&lt;pc&gt;7-102-b&lt;k1&gt;sahasraDAra&lt;k2&gt;*sahasraDAra&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; *{#sahasraDAra#}¦
+&lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;Adj.&lt;/lex&gt; {%tausend Schneiden habend%}.
+&lt;div n=&quot;1&quot;&gt;— 2〉 &lt;lex&gt;m.&lt;/lex&gt; &lt;is&gt;Viṣṇu&lt;/is&gt;ʼs {%Discus%}.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

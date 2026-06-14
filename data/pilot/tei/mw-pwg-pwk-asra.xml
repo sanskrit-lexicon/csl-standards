@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-asra">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case asra</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>hedge</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-asra-entry" type="lemma" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Aasra">
+    <form type="lemma">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">asra</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-asra-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-mw-1" type="generic-lexicographer-hedge" corresp="#mw-pwg-pwk-asra-record-mw">
+        <abbr>L.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>AK. 3,4,166.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>H. ś. 117</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>an. 2,393.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>MED. r. 5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>AK. 2,6,2,15.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>TRIK. 3,3,325.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>H. 622.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>an. 2,393.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwg">
+        <abbr>MED. r. 5.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwk">
+        <abbr>RAGH. 16,15</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-asra-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-asra-record-pwk">
+        <abbr>CAṆḌAK. 70,9</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-asra-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">21551</idno>
+        <idno type="line">76915</idno>
+        <idno type="pc">123,3</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;21551&lt;pc&gt;123,3&lt;k1&gt;asra&lt;k2&gt;asra&lt;h&gt;3&lt;e&gt;1
+&lt;hom&gt;3.&lt;/hom&gt; &lt;s&gt;asra&lt;/s&gt; ¦ &lt;lex&gt;m.&lt;/lex&gt; hair of the head, &lt;ls&gt;L.&lt;/ls&gt;&lt;info lex=&quot;m&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-asra-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">7576</idno>
+        <idno type="line">64371</idno>
+        <idno type="pc">1-0565</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7576&lt;pc&gt;1-0565&lt;k1&gt;asra&lt;k2&gt;asra
+{#asra#}¦
+&lt;div n=&quot;1&quot;&gt; 1) &lt;lex&gt;m.&lt;/lex&gt; {%Kopfhaar%}
+&lt;ls&gt;AK. 3,4,166.&lt;/ls&gt;
+&lt;ls&gt;H. ś. 117&lt;/ls&gt; ({#asta#}).
+&lt;ls&gt;an. 2,393.&lt;/ls&gt;
+&lt;ls&gt;MED. r. 5.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2) &lt;lex&gt;m.&lt;/lex&gt; {%Ecke%} &lt;ab&gt;s.&lt;/ab&gt; {#aSra#} 1.
+&lt;div n=&quot;1&quot;&gt;— 3) &lt;lex&gt;n.&lt;/lex&gt; {%Blut%}
+&lt;ls&gt;AK. 2,6,2,15.&lt;/ls&gt;
+&lt;ls&gt;TRIK. 3,3,325.&lt;/ls&gt;
+&lt;ls&gt;H. 622.&lt;/ls&gt;
+&lt;ls&gt;an. 2,393.&lt;/ls&gt;
+&lt;ls&gt;MED. r. 5.&lt;/ls&gt; &lt;ab&gt;Vgl.&lt;/ab&gt; {#asan#} und {#asfj#} und die mit {#asra#} anlautenden &lt;ab&gt;compp.&lt;/ab&gt;
+&lt;div n=&quot;1&quot;&gt;— 4) &lt;lex&gt;n.&lt;/lex&gt; {%Thräne%} &lt;ab&gt;s.&lt;/ab&gt; {#aSra#} 2.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-asra-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">202553</idno>
+        <idno type="line">575585</idno>
+        <idno type="pc">2-293-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;202553&lt;pc&gt;2-293-a&lt;k1&gt;asra&lt;k2&gt;asra&lt;h&gt;1
+&lt;hom&gt;1.&lt;/hom&gt; {#asra#}¦ 2〉b〉 &lt;ls&gt;RAGH. 16,15&lt;/ls&gt;. &lt;ls&gt;CAṆḌAK. 70,9&lt;/ls&gt;.&lt;info n=&quot;sup_2&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

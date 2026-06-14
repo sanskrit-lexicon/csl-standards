@@ -178,8 +178,8 @@ function jsonldFor(model, rawByDict, isReviewCase) {
     "csl:entryType": entryType(model),
     "csl:phenomenon": model.phenomena || [],
     "csl:profileVersion": PROFILE_VERSION,
-    "csl:reviewStatus": isReviewCase ? "validated-slice" : "full-50-machine-review",
-    "csl:validationScope": "full-50-ontolex-shacl-profile"
+    "csl:reviewStatus": isReviewCase ? "validated-slice" : "full-machine-review",
+    "csl:validationScope": "full-ontolex-shacl-profile"
   };
 
   const formNode = {

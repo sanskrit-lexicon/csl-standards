@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-pratiprasava">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>MW-PWG-PWK interoperability case pratiprasava</title>
+        <respStmt>
+          <resp>generated archival TEI profile</resp>
+          <name>scripts/export-tei.mjs</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>tei-archival-profile-v0.1; TEI is used as the archival/textual model. Raw CDSL records are preserved as escaped source-entry quotes, while selected lexical structures are promoted into TEI entry, form, sense, citation, and relation elements.</p>
+      </projectDesc>
+      <classDecl>
+        <taxonomy xml:id="dicts">
+          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
+          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
+          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa-Latn-x-SLP1">Sanskrit in SLP1 transliteration</language>
+        <language ident="en">English</language>
+        <language ident="de">German</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#phenomena">
+          <term>compound</term>
+          <term>tri-dict</term>
+          <term>pwg-rich</term>
+          <term>pwk-abridged</term>
+          <term>mw-uncited-pwg-cited</term>
+          <term>homophone</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-05-29" who="#csl-standards">Included in the full machine-reviewed TEI profile.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="mw-pwg-pwk-pratiprasava-entry" type="compound" corresp="https://sanskrit-lexicon.github.io/csl-standards/case/mw-pwg-pwk%3Apratiprasava">
+    <form type="compound">
+      <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1">pratiprasava</orth>
+    </form>
+    <sense xml:id="mw-pwg-pwk-pratiprasava-sense-unparsed" n="unparsed"><note type="sense-status">No stable machine definition could be extracted; source record is preserved in cit/quote.</note></sense>
+    <etym xml:id="mw-pwg-pwk-pratiprasava-compound-relation" type="compound">
+      <seg type="component">prati</seg>
+      <seg type="component">prasava</seg>
+    </etym>
+    <listBibl type="extracted-source-citations">
+      <head>Machine-extracted citation index; source quotes preserve the archival text.</head>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-1" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>KĀTY. ŚR. 831,2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-2" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>908,3.</abbr>
+        <ref type="inherited-siglum">KĀTY. ŚR.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-3" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>ŚAṂK.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-4" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>BṚH. ĀR. UP. S. 300.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-5" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>MÜLLER, SL. 179, N. 1.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-6" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>KULL.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-7" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>M. 2,189.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-8" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>3,105.</abbr>
+        <ref type="inherited-siglum">M.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-9" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>144.</abbr>
+        <ref type="inherited-siglum">M. 3,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-10" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>5,9.</abbr>
+        <ref type="inherited-siglum">M.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-11" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>18.</abbr>
+        <ref type="inherited-siglum">M. 5,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-12" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>8,112.</abbr>
+        <ref type="inherited-siglum">M.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwg-13" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwg">
+        <abbr>YOGAS. 2,10.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwk-1" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwk">
+        <abbr>Comm. zu TS. PRĀT.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-pratiprasava-cite-pwk-2" type="named-source-citation" corresp="#mw-pwg-pwk-pratiprasava-record-pwk">
+        <abbr>YOGAS. 2,10. 4,34</abbr>
+      </bibl>
+    </listBibl>
+    <cit xml:id="mw-pwg-pwk-pratiprasava-record-mw" type="source-entry" source="#dict-mw">
+      <bibl type="cdsl-record">
+        <title>Monier-Williams 1899</title>
+        <idno type="L">131641</idno>
+        <idno type="line">441806</idno>
+        <idno type="pc">662,2</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;131641&lt;pc&gt;662,2&lt;k1&gt;pratiprasava&lt;k2&gt;prati—prasava&lt;e&gt;3
+&lt;s&gt;prati—prasava&lt;/s&gt; ¦ See under &lt;s&gt;prati-pra-&lt;/s&gt; √ &lt;hom&gt;1.&lt;/hom&gt; &lt;s&gt;sU&lt;/s&gt;.&lt;info hui=&quot;a&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-pratiprasava-record-pwg" type="source-entry" source="#dict-pwg">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk-Roth PWG</title>
+        <idno type="L">48389</idno>
+        <idno type="line">470961</idno>
+        <idno type="pc">4-0963</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;48389&lt;pc&gt;4-0963&lt;k1&gt;pratiprasava&lt;k2&gt;pratiprasava
+{#pratiprasava#}¦ (1. {#pra˚ + pra˚#}) &lt;lex&gt;m.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt; 1) {%Gegenbefehl, Aufhebung eines Verbotes in Betreff von Jmd%} oder {%Etwas%} (geht im &lt;ab&gt;comp.&lt;/ab&gt; voran)
+&lt;ab&gt;Schol.&lt;/ab&gt; zu &lt;ls&gt;KĀTY. ŚR. 831,2.&lt;/ls&gt; &lt;ls n=&quot;KĀTY. ŚR.&quot;&gt;908,3.&lt;/ls&gt; &lt;ls&gt;ŚAṂK.&lt;/ls&gt; zu &lt;ls&gt;BṚH. ĀR. UP. S. 300.&lt;/ls&gt; &lt;ls&gt;MÜLLER, SL. 179, N. 1.&lt;/ls&gt; &lt;ls&gt;KULL.&lt;/ls&gt; zu &lt;ls&gt;M. 2,189.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;3,105.&lt;/ls&gt; &lt;ls n=&quot;M. 3,&quot;&gt;144.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;5,9.&lt;/ls&gt; &lt;ls n=&quot;M. 5,&quot;&gt;18.&lt;/ls&gt; &lt;ls n=&quot;M.&quot;&gt;8,112.&lt;/ls&gt;
+[Page4-0964]
+&lt;div n=&quot;1&quot;&gt;— 2) {%entgegengesetzte Wirkung%} ({#pratilomapariRAma#}
+&lt;ab&gt;Schol.&lt;/ab&gt;) &lt;ls&gt;YOGAS. 2,10.&lt;/ls&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-pratiprasava-record-pwk" type="source-entry" source="#dict-pwk">
+      <bibl type="cdsl-record">
+        <title>Boehtlingk PWK</title>
+        <idno type="L">71236</idno>
+        <idno type="line">293536</idno>
+        <idno type="pc">4-142-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;71236&lt;pc&gt;4-142-b&lt;k1&gt;pratiprasava&lt;k2&gt;pratiprasava
+{#pratiprasava#}¦ &lt;lex&gt;m.&lt;/lex&gt;
+&lt;div n=&quot;1&quot;&gt;— 1〉 {%Gegenbefehl, Aufhebung eines Verbots in Betreff von%} (im &lt;ab&gt;Comp.&lt;/ab&gt; vorangehend), {%eine Ausnahme zu einer Ausnahme%} &lt;ls&gt;Comm. zu TS. PRĀT.&lt;/ls&gt;
+&lt;div n=&quot;1&quot;&gt;— 2〉 {%Rückkehr in den Urzustand%} &lt;ls&gt;YOGAS. 2,10. 4,34&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+        <note type="profile-version">tei-archival-profile-v0.1</note>
+        <note type="review-status">full-machine-review</note>
+        <note type="validation-scope">full-tei-odd-profile</note>
+      </entry>
+    </body>
+  </text>
+</TEI>
