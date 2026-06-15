@@ -60,11 +60,12 @@ Sanskrit dictionaries are not mere edge cases to be normalized away by rigid dig
 
 ## Figures
 
-The data-driven figures (1, 2, 5) are generated as reproducible SVG by
-`npm run build-figures` ([scripts/build-figures.mjs](../scripts/build-figures.mjs))
-into [`data/pilot/figures/`](../data/pilot/figures/), straight from
-`data/pilot/loss-analysis.json`. Figures 3 and 4 are conceptual diagrams and
-remain hand-authored.
+All five figures are generated as reproducible SVG by `npm run build-figures`
+([scripts/build-figures.mjs](../scripts/build-figures.mjs)) into
+[`data/pilot/figures/`](../data/pilot/figures/). Figures 1, 2, 5 are driven by
+`data/pilot/loss-analysis.json`; Figures 3, 4 are concept diagrams grounded in a
+real pilot exemplar (a root with a Whitney pointer; a compound with a
+decomposition).
 
 1. Three-view architecture: CDSL → neutral model → TEI/OntoLex.
    → [`figure-1-architecture.svg`](../data/pilot/figures/figure-1-architecture.svg)
@@ -72,8 +73,12 @@ remain hand-authored.
    are `mw-uncited-pwg-cited` (PWG names a source MW reduces to `L.` or drops).
    → [`figure-2-evidence-collapse.svg`](../data/pilot/figures/figure-2-evidence-collapse.svg);
    data: [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4.
-3. Root modeling diagram. *(hand-authored, pending)*
-4. Compound archival/semantic split. *(hand-authored, pending)*
+3. Root modeling: a root as lexical entry vs derivational base (TEI `<etym type="root">`
+   vs OntoLex `csl:RootRelation`).
+   → [`figure-3-root-modeling.svg`](../data/pilot/figures/figure-3-root-modeling.svg)
+4. Compound archival/semantic split: TEI subentry/adjacency vs OntoLex
+   `decomp:ComponentList`.
+   → [`figure-4-compound-split.svg`](../data/pilot/figures/figure-4-compound-split.svg)
 5. Loss-report distribution: the TEI-never-lossy / OntoLex-never-clean asymmetry
    and the by-cause breakdown.
    → [`figure-5-loss-distribution.svg`](../data/pilot/figures/figure-5-loss-distribution.svg);

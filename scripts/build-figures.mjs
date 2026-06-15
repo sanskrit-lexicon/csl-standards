@@ -4,8 +4,9 @@
 // regenerate with the corpus.
 //
 // Usage: npm run build-figures  ->  data/pilot/figures/*.svg
-// Figures 3 (root modeling) and 4 (compound split) are conceptual diagrams and
-// remain hand-authored.
+// Figures 1, 2, 5 are driven by data/pilot/loss-analysis.json; Figures 3 (root
+// modeling) and 4 (compound split) are concept diagrams grounded in a real pilot
+// exemplar (a root with a Whitney pointer; a compound with a decomposition).
 
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -36,6 +37,21 @@ function title(x, y, text, size = 16) {
 }
 function caption(x, y, text, size = 12) {
   return `<text x="${x}" y="${y}" font-size="${size}" fill="${C.muted}">${esc(text)}</text>`;
+}
+
+// A left-aligned multi-line box: first line is a bold heading, the rest body.
+function panel(x, y, w, h, lines, fill = "#edf5fb", stroke = C.barLight) {
+  const rows = lines.map((ln, i) =>
+    `<text x="${x + 12}" y="${y + 22 + i * 17}" font-size="${i === 0 ? 13 : 11}" font-weight="${i === 0 ? 700 : 400}" fill="${i === 0 ? C.text : C.muted}">${esc(ln)}</text>`
+  ).join("");
+  return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>${rows}`;
+}
+function arrow(x1, y1, x2, y2) {
+  const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1;
+  const ux = dx / len, uy = dy / len, ex = x2 - ux * 9, ey = y2 - uy * 9;
+  const px = -uy, py = ux;
+  return `<line x1="${x1}" y1="${y1}" x2="${ex}" y2="${ey}" stroke="${C.muted}" stroke-width="2"/>` +
+    `<polygon points="${x2},${y2} ${ex + px * 5},${ey + py * 5} ${ex - px * 5},${ey - py * 5}" fill="${C.muted}"/>`;
 }
 
 // ── Figure 1: three-view architecture (CDSL → neutral model → TEI/OntoLex) ──
@@ -140,18 +156,90 @@ function figureLossDistribution(a) {
   return svg(W, H, body);
 }
 
+// ── Figure 3: a root modeled twice (lexical entry vs derivational base) ──
+function figureRootModeling(m) {
+  const W = 760, H = 340;
+  const key = m?.key || "ac";
+  const whitney = m?.relations?.find(r => r.type === "whitney-root-association")?.target || "ac,1";
+  const vc = m?.forms?.[0]?.verbClass;
+  const W2 = 280;
+  const body = [
+    title(24, 34, "Figure 3 — A Sanskrit root, modeled twice"),
+    caption(24, 54, `Example: root √${key}. The same root is a lexical entry and the derivational base of a word family.`),
+    panel(240, 80, W2, 56, [`√ ${key}`, `verbal root${vc ? ` · class ${vc}` : ""}`], "#fff7df", "#ebc169"),
+    arrow(300, 136, 150, 184),
+    arrow(420, 136, 580, 184),
+    panel(24, 184, 300, 96, [
+      "TEI archival profile",
+      "<entry type=\"verbal-root\">",
+      vc ? `  <gramGrp> class ${vc}` : "  <gramGrp> …",
+      `<etym type=\"root\"> → Whitney ${whitney}`
+    ]),
+    panel(436, 184, 300, 96, [
+      "OntoLex / Lexicog",
+      "ontolex:LexicalEntry",
+      "csl:RootRelation",
+      `  csl:whitneyRoot ${whitney}`
+    ], "#edf8ed", "#9bc89b"),
+    caption(24, 312, "§5: modeled as a plain entry the derivational scaffolding is implicit; the explicit root relation"),
+    caption(24, 328, "carries the family/grammatical role that the bare entry loses.")
+  ].join("\n");
+  return svg(W, H, body);
+}
+
+// ── Figure 4: a compound — archival subentry vs semantic decomposition ──
+function figureCompoundSplit(m) {
+  const W = 760, H = 340;
+  const key = m?.key || "annavid";
+  const comps = m?.relations?.find(r => r.type === "lexical-decomposition")?.components || [];
+  const gloss = m?.senses?.find(s => s.def)?.def;
+  const W2 = 280;
+  const body = [
+    title(24, 34, "Figure 4 — A compound: archival subentry vs semantic decomposition"),
+    caption(24, 54, `Example: ${key}${gloss ? ` ‘${gloss.slice(0, 40)}’` : ""}. The two profiles preserve complementary things.`),
+    panel(240, 80, W2, 56, [key, `compound${comps.length ? ` · ${comps.join(" + ")}` : ""}`], "#fff7df", "#ebc169"),
+    arrow(300, 136, 150, 184),
+    arrow(420, 136, 580, 184),
+    panel(24, 184, 300, 96, [
+      "TEI archival profile",
+      "<entry type=\"compound\">",
+      "subentry + adjacency,",
+      "preserved as printed"
+    ]),
+    panel(436, 184, 300, 96, [
+      "OntoLex / decomp",
+      "decomp:ComponentList",
+      comps.length ? `  ${comps.map(c => `decomp:Component ${c}`).slice(0, 2).join(", ")}` : "  decomp:Component …",
+      "ontolex:correspondsTo lexemes"
+    ], "#edf8ed", "#9bc89b"),
+    caption(24, 312, "§6: TEI keeps the printed subentry and adjacency; OntoLex exposes the component graph."),
+    caption(24, 328, "A flat single-entry model loses one or the other.")
+  ].join("\n");
+  return svg(W, H, body);
+}
+
 async function main() {
   const a = JSON.parse(await fs.readFile(path.resolve(root, "data/pilot/loss-analysis.json"), "utf8"));
+  const models = JSON.parse(await fs.readFile(path.resolve(root, "data/pilot/neutral-model.json"), "utf8"));
+  // Deterministic exemplars: first root with a Whitney pointer, first compound
+  // with a ≥2-part decomposition.
+  const rootEx = models.find(m => m.phenomena?.includes("root")
+    && m.relations?.some(r => r.type === "whitney-root-association"));
+  const compoundEx = models.find(m => m.phenomena?.includes("compound")
+    && m.relations?.some(r => r.type === "lexical-decomposition" && r.components?.length > 1));
+
   await fs.mkdir(OUT, { recursive: true });
   const figures = [
     ["figure-1-architecture.svg", figureArchitecture()],
     ["figure-2-evidence-collapse.svg", figureEvidence(a)],
+    ["figure-3-root-modeling.svg", figureRootModeling(rootEx)],
+    ["figure-4-compound-split.svg", figureCompoundSplit(compoundEx)],
     ["figure-5-loss-distribution.svg", figureLossDistribution(a)]
   ];
   for (const [name, content] of figures) {
     await fs.writeFile(path.join(OUT, name), content, "utf8");
   }
-  console.log(`Wrote ${figures.length} figures to ${path.relative(root, OUT)} (Figures 3, 4 remain hand-authored).`);
+  console.log(`Wrote ${figures.length} figures to ${path.relative(root, OUT)} (Figures 1-5, data-driven).`);
 }
 
 main().catch(error => { console.error(error); process.exit(1); });

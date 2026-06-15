@@ -15,9 +15,10 @@ ready for a dated entry.
   [data/pilot/figures/](https://github.com/sanskrit-lexicon/csl-standards/tree/main/data/pilot/figures)
   straight from `loss-analysis.json`: Figure 1 (three-view architecture), Figure 2
   (evidence collapse — named citations by dictionary, 119/250 mw-uncited-pwg-cited),
-  Figure 5 (loss distribution — target×status asymmetry + by-cause). Figures 3–4
-  (root/compound diagrams) remain hand-authored. PAPER_OUTLINE Figures section
-  links them.
+  Figure 5 (loss distribution — target×status asymmetry + by-cause), and Figures
+  3–4 (root modeling, compound archival/semantic split) as concept diagrams
+  grounded in a real pilot exemplar (root √ac with its Whitney pointer; compound
+  *annavid* → anna + vi/d). All five linked from the PAPER_OUTLINE Figures section.
 
 ### Changed
 - **OntoLex export remodeled as OntoLex-Lexicog multi-resource** and made
