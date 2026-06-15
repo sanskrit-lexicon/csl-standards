@@ -8,6 +8,17 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- **Paper figures generator**: [scripts/build-figures.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-figures.mjs)
+  (`npm run build-figures`, wired into `build-pilot`) emits the data-driven paper
+  figures as reproducible, dependency-free SVG into
+  [data/pilot/figures/](https://github.com/sanskrit-lexicon/csl-standards/tree/main/data/pilot/figures)
+  straight from `loss-analysis.json`: Figure 1 (three-view architecture), Figure 2
+  (evidence collapse — named citations by dictionary, 119/250 mw-uncited-pwg-cited),
+  Figure 5 (loss distribution — target×status asymmetry + by-cause). Figures 3–4
+  (root/compound diagrams) remain hand-authored. PAPER_OUTLINE Figures section
+  links them.
+
 ### Changed
 - **OntoLex export remodeled as OntoLex-Lexicog multi-resource** and made
   model-driven ([scripts/export-ontolex.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-ontolex.mjs)):
