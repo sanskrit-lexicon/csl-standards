@@ -16,22 +16,30 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#form-canonical"
       },
-      "ontolex:sense": [],
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#sense-mw-1"
+        }
+      ],
       "frac:attestation": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-mw-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-1"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-2"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-pwg-2"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-3"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#resource-mw"
         }
       ],
       "csl:sourceRecord": [
@@ -68,6 +76,32 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#resource-mw",
+      "@type": "lexicog:Entry",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#sense-mw-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#sense-mw-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya"
+      },
+      "skos:definition": {
+        "@value": "unmeaning, nonsensical",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "mw"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#record-mw",
       "@type": "csl:SourceRecord",
       "dct:source": "Monier-Williams 1899",
@@ -98,10 +132,10 @@
       "rdf:value": "<L>7072<pc>1-083-a<k1>abaDya<k2>*abaDya\n*{#abaDya#}¦ <lex>Adj.</lex> = {#abadDa#} 2〉.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-mw-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#sense-mw-1"
       },
       "frac:evidence": "L.",
       "prov:wasDerivedFrom": {
@@ -111,7 +145,7 @@
       "csl:evidenceType": "generic-lexicographer-hedge"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-pwg-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-2",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya"
@@ -124,7 +158,7 @@
       "csl:evidenceType": "named-source-citation"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-pwg-2",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya#attestation-3",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AabaDya"

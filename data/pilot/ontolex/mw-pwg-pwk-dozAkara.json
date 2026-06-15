@@ -16,22 +16,42 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#form-canonical"
       },
-      "ontolex:sense": [],
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwk-1"
+        }
+      ],
       "frac:attestation": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-1"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-pwg-2"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-2"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-pwg-3"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-3"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#resource-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#resource-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#resource-pwk"
         }
       ],
       "csl:sourceRecord": [
@@ -69,6 +89,84 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#resource-mw",
+      "@type": "lexicog:Entry",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-mw-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#resource-pwg",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwg-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#resource-pwk",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-mw-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+      },
+      "skos:definition": {
+        "@value": "night-maker’, the moon",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "mw"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwg-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+      },
+      "skos:definition": {
+        "@value": "der Mond (Nachtmacher",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+      },
+      "skos:definition": {
+        "@value": "eine Fundgrube von allerlei Mängeln",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#record-mw",
       "@type": "csl:SourceRecord",
       "dct:source": "Monier-Williams 1899",
@@ -99,10 +197,10 @@
       "rdf:value": "<L>53032<pc>3-124-a<k1>dozAkara<k2>dozAkara<h>2\n<hom>2.</hom> {#dozAkara#}¦ <lex>m.</lex> {%eine Fundgrube von allerlei Mängeln%}.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-pwg-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwg-1"
       },
       "frac:evidence": "ŚATR. 10,187.",
       "prov:wasDerivedFrom": {
@@ -112,10 +210,10 @@
       "csl:evidenceType": "named-source-citation"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-pwg-2",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-2",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwg-1"
       },
       "frac:evidence": "JYOTIST.",
       "prov:wasDerivedFrom": {
@@ -125,10 +223,10 @@
       "csl:evidenceType": "named-source-citation"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-pwg-3",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#attestation-3",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdozAkara#sense-pwg-1"
       },
       "frac:evidence": "ŚKDR.",
       "prov:wasDerivedFrom": {

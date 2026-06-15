@@ -16,25 +16,45 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#form-canonical"
       },
-      "ontolex:sense": [],
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwk-1"
+        }
+      ],
       "frac:attestation": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-mw-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-1"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-2"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-pwg-2"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-3"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-pwg-3"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-4"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#resource-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#resource-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#resource-pwk"
         }
       ],
       "csl:sourceRecord": [
@@ -71,6 +91,85 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#resource-mw",
+      "@type": "lexicog:Entry",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-mw-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#resource-pwg",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwg-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#resource-pwk",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-mw-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
+      },
+      "skos:definition": {
+        "@value": "See Danu",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:senseKind": "cross-reference"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwg-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
+      },
+      "skos:definition": {
+        "@value": "ein Vorrath von Korn",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
+      },
+      "skos:definition": {
+        "@value": "Vorrath an Korn",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#record-mw",
       "@type": "csl:SourceRecord",
       "dct:source": "Monier-Williams 1899",
@@ -101,7 +200,46 @@
       "rdf:value": "<L>54529<pc>3-142-b<k1>DanU<k2>*DanU\n*{#DanU#}¦ <lex>f.</lex> {%Vorrath an Korn%}. <ab>Vgl.</ab> auch <hom>1.</hom> und <hom>2.</hom> {#Danu#}.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-mw-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwg-1"
+      },
+      "frac:evidence": "UṆĀDIVṚ.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwg-1"
+      },
+      "frac:evidence": "SAṂKṢIPTAS.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#sense-pwg-1"
+      },
+      "frac:evidence": "ŚKDR.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-4",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
@@ -112,45 +250,6 @@
       },
       "csl:sourceDictionary": "mw",
       "csl:evidenceType": "generic-lexicographer-hedge"
-    },
-    {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-pwg-1",
-      "@type": "frac:Attestation",
-      "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
-      },
-      "frac:evidence": "UṆĀDIVṚ.",
-      "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#record-pwg"
-      },
-      "csl:sourceDictionary": "pwg",
-      "csl:evidenceType": "named-source-citation"
-    },
-    {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-pwg-2",
-      "@type": "frac:Attestation",
-      "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
-      },
-      "frac:evidence": "SAṂKṢIPTAS.",
-      "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#record-pwg"
-      },
-      "csl:sourceDictionary": "pwg",
-      "csl:evidenceType": "named-source-citation"
-    },
-    {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#attestation-pwg-3",
-      "@type": "frac:Attestation",
-      "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU"
-      },
-      "frac:evidence": "ŚKDR.",
-      "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADanU#record-pwg"
-      },
-      "csl:sourceDictionary": "pwg",
-      "csl:evidenceType": "named-source-citation"
     }
   ]
 }

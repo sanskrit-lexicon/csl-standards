@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix csl: <https://sanskrit-lexicon.github.io/csl-standards/ns#> .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> a ontolex:LexicalEntry, lexicog:Entry ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> a ontolex:LexicalEntry ;
   ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#form-canonical> ;
   csl:caseId "mw-pwg-pwk:apaSuc" ;
   csl:key "apaSuc" ;
@@ -22,16 +22,55 @@
   csl:phenomenon "pwg-rich" ;
   csl:phenomenon "pwk-abridged" ;
   csl:phenomenon "homophone" ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-mw-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwg-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwk-1> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#resource-mw> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#resource-pwg> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#resource-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-pwk> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-mw-1> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-pwg-1> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-pwg-2> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-pwg-3> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-2> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-3> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-4> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "apaSuc"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-mw-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+  csl:sourceDictionary "mw" ;
+  skos:definition "without sorrow’, the soul"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwg-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "Seele; Thiertödter"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwk-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "die Seele"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#resource-mw> a lexicog:Entry ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-mw-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#resource-pwg> a lexicog:Entry ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwg-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#resource-pwk> a lexicog:Entry ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwk-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
@@ -54,26 +93,26 @@
   csl:lineNumber "23225" ;
   csl:pageColumn "1-074-a" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-mw-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-mw-1> ;
   frac:evidence "L." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-mw> ;
   csl:evidenceType "generic-lexicographer-hedge" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-pwg-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwg-1> ;
   frac:evidence "ŚKDR." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-pwg-2> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-3> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwg-1> ;
   frac:evidence "BHĀG. P." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-pwg-3> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#attestation-4> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#sense-pwg-1> ;
   frac:evidence "WILSON" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AapaSuc#record-pwg> ;
   csl:evidenceType "named-source-citation" .

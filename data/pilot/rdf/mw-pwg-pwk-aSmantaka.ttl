@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix csl: <https://sanskrit-lexicon.github.io/csl-standards/ns#> .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> a ontolex:LexicalEntry, lexicog:Entry ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> a ontolex:LexicalEntry ;
   ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#form-canonical> ;
   csl:caseId "mw-pwg-pwk:aSmantaka" ;
   csl:key "aSmantaka" ;
@@ -22,25 +22,82 @@
   csl:phenomenon "pwg-rich" ;
   csl:phenomenon "pwk-abridged" ;
   csl:phenomenon "homophone" ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-mw-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-3> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#resource-mw> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#resource-pwg> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#resource-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwk> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-mw-1> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-1> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-2> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-3> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-4> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-5> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-6> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-7> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-8> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-9> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-10> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwk-1> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwk-2> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-2> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-3> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-4> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-5> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-6> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-7> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-8> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-9> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-10> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-11> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-12> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-13> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "aSmantaka"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-mw-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  csl:sourceDictionary "mw" ;
+  skos:definition "a fireplace"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "Ofen"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "Lampenschirm"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "Bauhinia tomentosa; Oxalis corniculata"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "Ofen"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-3> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "Lampenschirm"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#resource-mw> a lexicog:Entry ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-mw-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#resource-pwg> a lexicog:Entry ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-2> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#resource-pwk> a lexicog:Entry ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-3> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
@@ -63,81 +120,81 @@
   csl:lineNumber "43990" ;
   csl:pageColumn "1-137-c" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-mw-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-mw-1> ;
   frac:evidence "L." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-mw> ;
   csl:evidenceType "generic-lexicographer-hedge" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-1> ;
   frac:evidence "TRIK. 3,3,4." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-2> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-3> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-1> ;
   frac:evidence "H. 1018." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-3> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-4> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-1> ;
   frac:evidence "MED. k. 175." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-4> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-5> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-1> ;
   frac:evidence "H. an. 4,3." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-5> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-6> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-2> ;
   frac:evidence "MED. m." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-6> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-7> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwg-2> ;
   frac:evidence "H. an. 4,2." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-7> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-8> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-1> ;
+  frac:evidence "RĀJAN. 9,39" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwk> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-9> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-1> ;
+  frac:evidence "BHĀVAPR. 2,67" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwk> ;
+  csl:evidenceType "named-source-citation" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-10> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
   frac:evidence "RATNAM." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-8> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-11> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
   frac:evidence "ŚKDR." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-9> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-12> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
   frac:evidence "RĀJAN. ebend." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwg-10> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-13> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
   frac:evidence "SUŚR. 1,93,15. 376,11. 377,13. 2,52,19." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg> ;
-  csl:evidenceType "named-source-citation" .
-
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwk-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
-  frac:evidence "RĀJAN. 9,39" ;
-  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwk> ;
-  csl:evidenceType "named-source-citation" .
-
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-pwk-2> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka> ;
-  frac:evidence "BHĀVAPR. 2,67" ;
-  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwk> ;
   csl:evidenceType "named-source-citation" .
 

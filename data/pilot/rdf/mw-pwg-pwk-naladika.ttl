@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix csl: <https://sanskrit-lexicon.github.io/csl-standards/ns#> .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> a ontolex:LexicalEntry, lexicog:Entry ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> a ontolex:LexicalEntry ;
   ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#form-canonical> ;
   csl:caseId "mw-pwg-pwk:naladika" ;
   csl:key "naladika" ;
@@ -23,13 +23,52 @@
   csl:phenomenon "pwk-abridged" ;
   csl:phenomenon "mw-uncited-pwg-cited" ;
   csl:phenomenon "homophone" ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-mw-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-pwg-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-pwk-1> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#resource-mw> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#resource-pwg> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#resource-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#record-pwk> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#attestation-pwg-1> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#attestation-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "naladika"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-mw-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> ;
+  csl:sourceDictionary "mw" ;
+  skos:definition "mfn. dealing in Indian spikenard g"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-pwg-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "mit Narde Handel treibend"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-pwk-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "mit; handelnd"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#resource-mw> a lexicog:Entry ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-mw-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#resource-pwg> a lexicog:Entry ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-pwg-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#resource-pwk> a lexicog:Entry ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-pwk-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
@@ -52,8 +91,8 @@
   csl:lineNumber "234710" ;
   csl:pageColumn "3-184-c" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#attestation-pwg-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#attestation-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#sense-pwg-1> ;
   frac:evidence "P. 4,4,53." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Analadika#record-pwg> ;
   csl:evidenceType "named-source-citation" .

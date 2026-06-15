@@ -16,16 +16,36 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#form-canonical"
       },
-      "ontolex:sense": [],
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-pwk-1"
+        }
+      ],
       "frac:attestation": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#attestation-1"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#resource-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#resource-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#resource-pwk"
         }
       ],
       "csl:sourceRecord": [
@@ -63,6 +83,85 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#resource-mw",
+      "@type": "lexicog:Entry",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-mw-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#resource-pwg",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-pwg-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#resource-pwk",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-mw-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi"
+      },
+      "skos:definition": {
+        "@value": "See under pra-jYA",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:senseKind": "cross-reference"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-pwg-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi"
+      },
+      "skos:definition": {
+        "@value": "kundig",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi"
+      },
+      "skos:definition": {
+        "@value": "kundig",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#record-mw",
       "@type": "csl:SourceRecord",
       "dct:source": "Monier-Williams 1899",
@@ -93,10 +192,10 @@
       "rdf:value": "<L>70590<pc>4-133-a<k1>prajajYi<k2>praja/jYi<h>2\n<hom>2.</hom> {#praja/jYi#}¦ <lex>Adj.</lex> {%kundig%} <ab>Vgl.</ab> <hom>2.</hom> {#a/prajajYi#}.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#attestation-pwg-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AprajajYi#sense-pwg-1"
       },
       "frac:evidence": "ŚAT. BR. 5,1,1,10.",
       "prov:wasDerivedFrom": {

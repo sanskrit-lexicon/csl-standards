@@ -16,22 +16,48 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#form-canonical"
       },
-      "ontolex:sense": [],
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwk-2"
+        }
+      ],
       "frac:attestation": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-1"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-pwg-2"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-2"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-pwk-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-3"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#resource-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#resource-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#resource-pwk"
         }
       ],
       "csl:sourceRecord": [
@@ -69,6 +95,114 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#resource-mw",
+      "@type": "lexicog:Entry",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-mw-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#resource-pwg",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-2"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#resource-pwk",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwk-2"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-mw-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "skos:definition": {
+        "@value": "wiping off ( cf. add. )",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "mw"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "skos:definition": {
+        "@value": "das Abstreifen",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "skos:definition": {
+        "@value": "was abgestreift —, abgewischt wird, Abfall",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "skos:definition": {
+        "@value": "Verwischung",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwk-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+      },
+      "skos:definition": {
+        "@value": "was abgestreift —, abgewischt wird, Abfall",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#record-mw",
       "@type": "csl:SourceRecord",
       "dct:source": "Monier-Williams 1899",
@@ -99,10 +233,10 @@
       "rdf:value": "<L>59476<pc>3-217-b<k1>nirmArga<k2>nirmArga/<h>1\n<hom>1.</hom> {#nirmArga/#}¦ <lex>m.</lex>\n<div n=\"1\">— 1〉 {%Verwischung%} in {#a/nirmArga#} (<ls>Nachtr. 1</ls>).\n<div n=\"1\">— 2〉 {%was abgestreift —, abgewischt wird, Abfall%}.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-pwg-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-1"
       },
       "frac:evidence": "KĀṬH. 12,5. 8. 24,10.",
       "prov:wasDerivedFrom": {
@@ -112,10 +246,10 @@
       "csl:evidenceType": "named-source-citation"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-pwg-2",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-2",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwg-2"
       },
       "frac:evidence": "TBR. 1,5,3,1. fg.",
       "prov:wasDerivedFrom": {
@@ -125,10 +259,10 @@
       "csl:evidenceType": "named-source-citation"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-pwk-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#attestation-3",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AnirmArga#sense-pwk-1"
       },
       "frac:evidence": "Nachtr. 1",
       "prov:wasDerivedFrom": {

@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix csl: <https://sanskrit-lexicon.github.io/csl-standards/ns#> .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> a ontolex:LexicalEntry, lexicog:Entry ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> a ontolex:LexicalEntry ;
   ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#form-canonical> ;
   csl:caseId "mw-pwg-pwk:uttAra-mw31391.1" ;
   csl:key "uttAra" ;
@@ -23,18 +23,81 @@
   csl:phenomenon "pwk-abridged" ;
   csl:phenomenon "mw-uncited-pwg-cited" ;
   csl:phenomenon "homophone" ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-mw-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-3> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-3> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#resource-mw> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#resource-pwg> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#resource-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwk> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-1> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-2> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-3> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-4> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-5> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwk-1> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-2> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-3> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-4> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-5> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-6> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "uttAra"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-mw-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  csl:sourceDictionary "mw" ;
+  skos:definition "See ut-tF"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "Durchschiffung"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "das Brechen, Vonsichgeben"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-3> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "ausgezeichnet"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "das Hinübersetzen über"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "Rettung"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-3> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "das Brechen, Vomiren"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#resource-mw> a lexicog:Entry ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-mw-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#resource-pwg> a lexicog:Entry ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-3> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#resource-pwk> a lexicog:Entry ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-3> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
@@ -57,38 +120,38 @@
   csl:lineNumber "70584" ;
   csl:pageColumn "1-223-c" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-1> ;
   frac:evidence "PRAB. 83,10." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-2> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-2> ;
   frac:evidence "PRĀYAŚCITTAV." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-3> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-3> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-2> ;
   frac:evidence "ŚKDR." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-4> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-4> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-3> ;
   frac:evidence "JAṬĀDH." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwg-5> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-5> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwg-3> ;
   frac:evidence "ŚKDR." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-pwk-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-6> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#sense-pwk-2> ;
   frac:evidence "Spr. 4888" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwk> ;
   csl:evidenceType "named-source-citation" .

@@ -16,19 +16,39 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#form-canonical"
       },
-      "ontolex:sense": [],
-      "frac:attestation": [
+      "ontolex:sense": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-1"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-pwg-2"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwk-2"
+        }
+      ],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-2"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#resource-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#resource-pwk"
         }
       ],
       "csl:sourceRecord": [
@@ -66,6 +86,88 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#resource-pwg",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-2"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#resource-pwk",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwk-2"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+      },
+      "skos:definition": {
+        "@value": "Kochtopf, Bratpfanne",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+      },
+      "skos:definition": {
+        "@value": "eine best. Hölle",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+      },
+      "skos:definition": {
+        "@value": "Bratpfanne",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwk-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+      },
+      "skos:definition": {
+        "@value": "eine best. Hölle",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#record-mw",
       "@type": "csl:SourceRecord",
       "dct:source": "Monier-Williams 1899",
@@ -96,10 +198,10 @@
       "rdf:value": "<L>21343<pc>1-261-a<k1>fcIza<k2>*fcIza\n*{#fcIza#}¦ <lex>n.</lex> = {#fjIza#}\n<div n=\"1\">— 1〉 {%Bratpfanne%}.\n<div n=\"1\">— 2〉 {%eine <ab>best.</ab> Hölle%}.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-pwg-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-1"
       },
       "frac:evidence": "H. 1020.",
       "prov:wasDerivedFrom": {
@@ -109,10 +211,10 @@
       "csl:evidenceType": "named-source-citation"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-pwg-2",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#attestation-2",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AfcIza#sense-pwg-2"
       },
       "frac:evidence": "WILS.",
       "prov:wasDerivedFrom": {

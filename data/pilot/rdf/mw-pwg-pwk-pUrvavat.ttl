@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix csl: <https://sanskrit-lexicon.github.io/csl-standards/ns#> .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> a ontolex:LexicalEntry, lexicog:Entry ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> a ontolex:LexicalEntry ;
   ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#form-canonical> ;
   csl:caseId "mw-pwg-pwk:pUrvavat" ;
   csl:key "pUrvavat" ;
@@ -23,28 +23,67 @@
   csl:phenomenon "pwk-abridged" ;
   csl:phenomenon "mw-uncited-pwg-cited" ;
   csl:phenomenon "homophone" ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-mw-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwk-1> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#resource-mw> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#resource-pwg> ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#resource-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwk> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-1> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-2> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-3> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-4> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-5> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-6> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-7> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-8> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-9> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-10> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-11> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-12> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-13> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-14> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-15> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-16> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-1> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-2> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-3> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-4> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-5> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-6> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-7> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-8> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-9> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-10> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-11> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-12> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-13> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-14> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-15> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-16> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "pUrvavat"@sa-Latn-x-SLP1 .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-mw-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+  csl:sourceDictionary "mw" ;
+  skos:definition "as before, as hitherto, as heretofore, as aforesaid"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+  csl:sourceDictionary "pwg" ;
+  skos:definition "wie früher, wie bisher, wie zuvor, wie oben gesagt"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwk-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+  csl:sourceDictionary "pwk" ;
+  skos:definition "wie früher, wie bisher, wie zuvor, wie oben gesagt"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#resource-mw> a lexicog:Entry ;
+  dct:source "Monier-Williams 1899" ;
+  csl:dictionary "mw" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-mw-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#resource-pwg> a lexicog:Entry ;
+  dct:source "Boehtlingk-Roth PWG" ;
+  csl:dictionary "pwg" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#resource-pwk> a lexicog:Entry ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwk-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
@@ -67,98 +106,98 @@
   csl:lineNumber "285409" ;
   csl:pageColumn "4-114-b" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-1> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-1> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "ṚV. 1,31,17." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-2> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-2> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "3,2,12." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-3> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-3> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "KĀTY. ŚR. 2,5,2." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-4> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-4> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "6,31." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-5> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-5> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "3,4,10." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-6> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-6> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "M. 11,213." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-7> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-7> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "SUŚR. 1,159,18." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-8> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-8> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "SŪRYAS. 3,35. 4,5." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-9> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-9> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "VID. 264." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-10> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-10> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "Spr. 2237." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-11> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-11> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "KATHĀS. 7,84." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-12> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-12> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "31,78." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-13> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-13> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "49,133." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-14> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-14> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "RĀJA-TAR. 1,185." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-15> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-15> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "4,454." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-pwg-16> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat> ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#attestation-16> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#sense-pwg-1> ;
   frac:evidence "BHĀG. P. 5,10,6." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApUrvavat#record-pwg> ;
   csl:evidenceType "named-source-citation" .

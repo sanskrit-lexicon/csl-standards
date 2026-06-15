@@ -16,23 +16,33 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#form-canonical"
       },
       "ontolex:sense": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-pwk-1"
         }
       ],
       "frac:attestation": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-mw-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-1"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-2"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#resource-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#resource-pwk"
         }
       ],
       "csl:sourceRecord": [
@@ -70,15 +80,56 @@
       "csl:verbClass": "1P,1Ā"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#resource-pwg",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-pwg-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#resource-pwk",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-pwg-1",
       "@type": "ontolex:LexicalSense",
       "ontolex:isSenseOf": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383"
       },
       "skos:definition": {
-        "@value": "go",
-        "@language": "en"
-      }
+        "@value": "gehen",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383"
+      },
+      "skos:definition": {
+        "@value": "gehen",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#record-mw",
@@ -111,7 +162,20 @@
       "rdf:value": "<L>1512<pc>1-018-c<k1>aW<k2>*aW\n*√{#aW#}¦ {#aWati#} und {#˚te#} {%gehen%}.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-mw-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#sense-pwg-1"
+      },
+      "frac:evidence": "DHĀTUP. 8,8",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-2",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383"
@@ -122,19 +186,6 @@
       },
       "csl:sourceDictionary": "mw",
       "csl:evidenceType": "generic-lexicographer-hedge"
-    },
-    {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#attestation-pwg-1",
-      "@type": "frac:Attestation",
-      "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383"
-      },
-      "frac:evidence": "DHĀTUP. 8,8",
-      "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#record-pwg"
-      },
-      "csl:sourceDictionary": "pwg",
-      "csl:evidenceType": "named-source-citation"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaW-mw2383#root-relation",

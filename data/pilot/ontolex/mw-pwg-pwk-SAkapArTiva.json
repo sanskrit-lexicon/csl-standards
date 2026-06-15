@@ -16,22 +16,36 @@
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva",
       "@type": [
-        "ontolex:LexicalEntry",
-        "lexicog:Entry"
+        "ontolex:LexicalEntry"
       ],
       "ontolex:canonicalForm": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#form-canonical"
       },
-      "ontolex:sense": [],
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#sense-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#sense-pwk-1"
+        }
+      ],
       "frac:attestation": [
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-pwg-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-1"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-pwg-2"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-2"
         },
         {
-          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-pwk-1"
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-3"
+        }
+      ],
+      "lexicog:entry": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#resource-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#resource-pwk"
         }
       ],
       "csl:sourceRecord": [
@@ -69,6 +83,59 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#resource-mw",
+      "@type": "lexicog:Entry",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#sense-mw-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#resource-pwk",
+      "@type": "lexicog:Entry",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#sense-mw-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva"
+      },
+      "skos:definition": {
+        "@value": "See under 2. SAka",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:senseKind": "cross-reference"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva"
+      },
+      "skos:definition": {
+        "@value": "ein Fürst der gern Gemüse isst",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#record-mw",
       "@type": "csl:SourceRecord",
       "dct:source": "Monier-Williams 1899",
@@ -99,7 +166,20 @@
       "rdf:value": "<L>111192<pc>6-218-a<k1>SAkapArTiva<k2>SAkapArTiva\n{#SAkapArTiva#}¦ <lex>m.</lex> {%ein Fürst der gern Gemüse isst%}. [Page6-218-b] Ein <ab>Comp.</ab> dieser Art wird als {#maDyamapadalopin#} aufgefasst <ls>NĪLAK. zu MBH. 3,45,8</ls>.\n<LEND>"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-pwg-1",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#sense-pwk-1"
+      },
+      "frac:evidence": "NĪLAK. zu MBH. 3,45,8",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-2",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva"
@@ -112,7 +192,7 @@
       "csl:evidenceType": "named-source-citation"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-pwg-2",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-3",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva"
@@ -122,19 +202,6 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#record-pwg"
       },
       "csl:sourceDictionary": "pwg",
-      "csl:evidenceType": "named-source-citation"
-    },
-    {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#attestation-pwk-1",
-      "@type": "frac:Attestation",
-      "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva"
-      },
-      "frac:evidence": "NĪLAK. zu MBH. 3,45,8",
-      "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ASAkapArTiva#record-pwk"
-      },
-      "csl:sourceDictionary": "pwk",
       "csl:evidenceType": "named-source-citation"
     },
     {

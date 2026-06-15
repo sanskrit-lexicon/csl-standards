@@ -1,6 +1,5 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { stripPseudoMarkup, extractLabeledSources } from "./lib/citations.mjs";
 
 const DICTS = ["mw", "pwg", "pwk"];
 const DICT_LABEL = {
@@ -32,25 +31,6 @@ function ttlIri(value) {
   return `<${value}>`;
 }
 
-function extractDefinitions(raw, phenomena) {
-  const plain = stripPseudoMarkup(raw);
-  const defs = [];
-  if (phenomena.includes("root")) {
-    for (const match of plain.matchAll(/\bto\s+([^;:.]+?)(?=,?\s+(?:L\.|RV\.|TS\.|AV\.|VS\.|Dharma|See)|;|:|$)/g)) {
-      const def = match[1].replace(/\s+/g, " ").trim();
-      if (def && def.length <= 120 && !defs.includes(def)) defs.push(def);
-      if (defs.length >= 8) break;
-    }
-  }
-  if (defs.length === 0) {
-    for (const match of String(raw || "").matchAll(/\{%([^%]+)%\}/g)) {
-      const def = stripPseudoMarkup(match[1]);
-      if (def && def.length <= 120 && !defs.includes(def)) defs.push(def);
-      if (defs.length >= 6) break;
-    }
-  }
-  return defs;
-}
 
 function entryType(model) {
   if (model.phenomena?.includes("root")) return "verbal-root";
@@ -85,15 +65,27 @@ function jsonldFor(model, rawByDict, isReviewCase) {
   const caseIri = iriForCase(model.id);
   const formIri = iriFor(model.id, "form-canonical");
   const sourceRecordIds = DICTS.map(dict => iriFor(model.id, `record-${dict}`));
-  const definitions = extractDefinitions(rawByDict.mw, model.phenomena || []);
   const attestationNodes = [];
   const sourceRecordNodes = [];
-  const senseNodes = definitions.map((definition, index) => ({
-    "@id": iriFor(model.id, `sense-${index + 1}`),
-    "@type": "ontolex:LexicalSense",
-    "ontolex:isSenseOf": {"@id": caseIri},
-    "skos:definition": {"@value": definition, "@language": "en"}
-  }));
+  // Multi-resource senses: MW (English, model.senses) plus the German Petersburg
+  // dictionaries (records.{pwg,pwk}.senses). Each sense keeps its source
+  // dictionary and (internally) its sense-linked citations for the attestations.
+  const langByDict = {mw: "en", pwg: "de", pwk: "de"};
+  const senseNodes = [];
+  for (const dict of DICTS) {
+    const senses = dict === "mw" ? (model.senses || []) : (model.records?.[dict]?.senses || []);
+    senses.forEach((sense, index) => {
+      senseNodes.push({
+        "@id": iriFor(model.id, `sense-${dict}-${index + 1}`),
+        "@type": "ontolex:LexicalSense",
+        "ontolex:isSenseOf": {"@id": caseIri},
+        "skos:definition": {"@value": sense.def, "@language": langByDict[dict]},
+        "csl:sourceDictionary": dict,
+        ...(sense.kind === "cross-reference" ? {"csl:senseKind": "cross-reference"} : {}),
+        _citations: sense.citations || []
+      });
+    });
+  }
 
   for (const dict of DICTS) {
     const rec = model.records?.[dict] || {};
@@ -108,21 +100,60 @@ function jsonldFor(model, rawByDict, isReviewCase) {
       "csl:pageColumn": rec.pc,
       "rdf:value": rawByDict[dict]
     });
+  }
 
-    extractLabeledSources(rawByDict[dict]).forEach((citation, index) => {
-      const attId = iriFor(model.id, `attestation-${dict}-${index + 1}`);
+  // Attestations are model-driven: a sense-linked citation attests its sense; a
+  // remaining entry-level citation (not represented by any sense) attests the
+  // entry. This is the OntoLex side of sense-level citation linkage.
+  const recordIri = dict => iriFor(model.id, `record-${dict}`);
+  let attSeq = 0;
+  const senseLinked = new Set();
+  for (const sense of senseNodes) {
+    for (const c of sense._citations) {
+      senseLinked.add(`${c.dictionary}:${c.source}`);
       attestationNodes.push({
-        "@id": attId,
+        "@id": iriFor(model.id, `attestation-${++attSeq}`),
         "@type": "frac:Attestation",
-        "frac:attests": {"@id": caseIri},
-        "frac:evidence": citation.source,
-        "prov:wasDerivedFrom": {"@id": recordId},
-        "csl:sourceDictionary": dict,
-        "csl:evidenceType": citation.type,
-        ...(citation.inheritedFrom ? {"csl:inheritedSiglum": citation.inheritedFrom} : {})
+        "frac:attests": {"@id": sense["@id"]},
+        "frac:evidence": c.source,
+        "prov:wasDerivedFrom": {"@id": recordIri(c.dictionary)},
+        "csl:sourceDictionary": c.dictionary,
+        "csl:evidenceType": c.type,
+        ...(c.inheritedFrom ? {"csl:inheritedSiglum": c.inheritedFrom} : {})
       });
+    }
+  }
+  for (const c of model.citations || []) {
+    if (senseLinked.has(`${c.dictionary}:${c.source}`)) continue;
+    attestationNodes.push({
+      "@id": iriFor(model.id, `attestation-${++attSeq}`),
+      "@type": "frac:Attestation",
+      "frac:attests": {"@id": caseIri},
+      "frac:evidence": c.source,
+      "prov:wasDerivedFrom": {"@id": recordIri(c.dictionary)},
+      "csl:sourceDictionary": c.dictionary,
+      "csl:evidenceType": c.type,
+      ...(c.inheritedFrom ? {"csl:inheritedSiglum": c.inheritedFrom} : {})
     });
   }
+
+  // One lexicog:Entry per source dictionary that has senses — the multi-resource
+  // (OntoLex-Lexicog) view: each dictionary's article for this lemma.
+  const resourceNodes = [];
+  for (const dict of DICTS) {
+    const dictSenses = senseNodes.filter(s => s["csl:sourceDictionary"] === dict);
+    if (!dictSenses.length) continue;
+    resourceNodes.push({
+      "@id": iriFor(model.id, `resource-${dict}`),
+      "@type": "lexicog:Entry",
+      "dct:source": DICT_LABEL[dict],
+      "csl:dictionary": dict,
+      "lexicog:describes": {"@id": caseIri},
+      "lexicog:component": dictSenses.map(s => ({"@id": s["@id"]}))
+    });
+  }
+
+  for (const sense of senseNodes) delete sense._citations;
 
   const relationNodes = [];
   if (model.phenomena?.includes("root")) {
@@ -168,10 +199,11 @@ function jsonldFor(model, rawByDict, isReviewCase) {
   const form = model.forms?.[0] || {orth: model.key, type: entryType(model)};
   const entry = {
     "@id": caseIri,
-    "@type": ["ontolex:LexicalEntry", "lexicog:Entry"],
+    "@type": ["ontolex:LexicalEntry"],
     "ontolex:canonicalForm": {"@id": formIri},
     "ontolex:sense": senseNodes.map(sense => ({"@id": sense["@id"]})),
     "frac:attestation": attestationNodes.map(att => ({"@id": att["@id"]})),
+    "lexicog:entry": resourceNodes.map(resource => ({"@id": resource["@id"]})),
     "csl:sourceRecord": sourceRecordIds.map(id => ({"@id": id})),
     "csl:caseId": model.id,
     "csl:key": model.key,
@@ -204,7 +236,7 @@ function jsonldFor(model, rawByDict, isReviewCase) {
       "csl": "https://sanskrit-lexicon.github.io/csl-standards/ns#"
     },
     "@id": caseIri,
-    "@graph": [entry, formNode, ...senseNodes, ...sourceRecordNodes, ...attestationNodes, ...relationNodes]
+    "@graph": [entry, formNode, ...resourceNodes, ...senseNodes, ...sourceRecordNodes, ...attestationNodes, ...relationNodes]
   };
 }
 
@@ -216,6 +248,7 @@ function turtleFor(jsonld) {
   const records = graph.filter(node => node["@type"] === "csl:SourceRecord");
   const attestations = graph.filter(node => node["@type"] === "frac:Attestation");
   const relations = graph.filter(node => String(node["@type"]).startsWith("csl:") || node["@type"] === "decomp:ComponentList");
+  const resources = graph.filter(node => node["@type"] === "lexicog:Entry");
 
   const lines = [
     "@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .",
@@ -231,7 +264,7 @@ function turtleFor(jsonld) {
     ""
   ];
 
-  lines.push(`${ttlIri(entry["@id"])} a ontolex:LexicalEntry, lexicog:Entry ;`);
+  lines.push(`${ttlIri(entry["@id"])} a ontolex:LexicalEntry ;`);
   lines.push(`  ontolex:canonicalForm ${ttlIri(form["@id"])} ;`);
   lines.push(`  csl:caseId ${ttlString(entry["csl:caseId"])} ;`);
   lines.push(`  csl:key ${ttlString(entry["csl:key"])} ;`);
@@ -243,6 +276,7 @@ function turtleFor(jsonld) {
     lines.push(`  csl:phenomenon ${ttlString(phenomenon)} ;`);
   }
   for (const sense of senses) lines.push(`  ontolex:sense ${ttlIri(sense["@id"])} ;`);
+  for (const resource of resources) lines.push(`  lexicog:entry ${ttlIri(resource["@id"])} ;`);
   for (const record of records) lines.push(`  csl:sourceRecord ${ttlIri(record["@id"])} ;`);
   for (const att of attestations) lines.push(`  frac:attestation ${ttlIri(att["@id"])} ;`);
   lines[lines.length - 1] = lines[lines.length - 1].replace(/ ;$/, " .");
@@ -255,7 +289,17 @@ function turtleFor(jsonld) {
   for (const sense of senses) {
     lines.push(`${ttlIri(sense["@id"])} a ontolex:LexicalSense ;`);
     lines.push(`  ontolex:isSenseOf ${ttlIri(entry["@id"])} ;`);
-    lines.push(`  skos:definition ${ttlString(sense["skos:definition"]["@value"])}@en .`);
+    lines.push(`  csl:sourceDictionary ${ttlString(sense["csl:sourceDictionary"])} ;`);
+    lines.push(`  skos:definition ${ttlString(sense["skos:definition"]["@value"])}@${sense["skos:definition"]["@language"]} .`);
+    lines.push("");
+  }
+
+  for (const resource of resources) {
+    lines.push(`${ttlIri(resource["@id"])} a lexicog:Entry ;`);
+    lines.push(`  dct:source ${ttlString(resource["dct:source"])} ;`);
+    lines.push(`  csl:dictionary ${ttlString(resource["csl:dictionary"])} ;`);
+    lines.push(`  lexicog:describes ${ttlIri(entry["@id"])} ;`);
+    lines.push(`  lexicog:component ${resource["lexicog:component"].map(c => ttlIri(c["@id"])).join(", ")} .`);
     lines.push("");
   }
 
@@ -271,7 +315,7 @@ function turtleFor(jsonld) {
 
   for (const att of attestations) {
     lines.push(`${ttlIri(att["@id"])} a frac:Attestation ;`);
-    lines.push(`  frac:attests ${ttlIri(entry["@id"])} ;`);
+    lines.push(`  frac:attests ${ttlIri(att["frac:attests"]["@id"])} ;`);
     lines.push(`  frac:evidence ${ttlString(att["frac:evidence"])} ;`);
     lines.push(`  prov:wasDerivedFrom ${ttlIri(att["prov:wasDerivedFrom"]["@id"])} ;`);
     lines.push(`  csl:evidenceType ${ttlString(att["csl:evidenceType"])} .`);

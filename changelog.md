@@ -8,6 +8,20 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Changed
+- **OntoLex export remodeled as OntoLex-Lexicog multi-resource** and made
+  model-driven ([scripts/export-ontolex.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-ontolex.mjs)):
+  the lemma is `ontolex:LexicalEntry`; each source dictionary that has senses
+  becomes a `lexicog:Entry` (`lexicog:describes` the lemma, lists `lexicog:component`
+  senses). Senses now come from the neutral model for all three dictionaries — MW
+  (`@en`) and PWG/PWK (`@de`), tagged `csl:sourceDictionary` — and each
+  `frac:Attestation` attests the specific sense it belongs to (sense-level linkage),
+  falling back to the entry for non-sense citations. The export no longer
+  re-extracts senses/citations from raw (model is the single source). Validator,
+  Turtle serializer, and SHACL profile (`csl:LexicographicResourceShape`) updated;
+  e.g. *ac* → lexicog:Entry for mw(6)/pwg(3)/pwk(17) senses, 44/45 attestations
+  sense-linked. All 250 graphs pass.
+
 ### Added
 - **PWG/PWK sense modeling**: [scripts/lib/pw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/pw-senses.mjs)
   extracts German senses from the Petersburg dictionaries (explicit `<div>` +

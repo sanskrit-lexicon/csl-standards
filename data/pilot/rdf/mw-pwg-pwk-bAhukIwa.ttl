@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix csl: <https://sanskrit-lexicon.github.io/csl-standards/ns#> .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa> a ontolex:LexicalEntry, lexicog:Entry ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa> a ontolex:LexicalEntry ;
   ontolex:canonicalForm <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#form-canonical> ;
   csl:caseId "mw-pwg-pwk:bAhukIwa" ;
   csl:key "bAhukIwa" ;
@@ -26,7 +26,7 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwk> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#attestation-pwg-1> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#attestation-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "bAhukIwa"@sa-Latn-x-SLP1 .
@@ -52,7 +52,7 @@
   csl:lineNumber "316768" ;
   csl:pageColumn "4-223-c" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#attestation-pwg-1> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa> ;
   frac:evidence "P. 4,2,110." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhukIwa#record-pwg> ;

@@ -151,9 +151,11 @@ of the phenomena (the roadmap's "do not hide model failures").
   entry, §6) and the German Petersburg dictionaries via their explicit `<div>` +
   `{%…%}` structure — PWG (214/250, 455 senses, 431 linked) and PWK (203/250, 939
   senses, 216 linked), carried on each source record (`records.{pwg,pwk}.senses`).
-  PWG/PWK senses are not yet folded into the single TEI Lex-0 entry (a tri-source
+  PWG/PWK senses are not folded into the single TEI Lex-0 entry (a tri-source
   merge is OntoLex-Lexicog's job, not the Lex-0 baseline's), so those citations
-  stay entry-level in the Lex-0 export while being sense-linked in the model.
+  stay entry-level in the Lex-0 export while being sense-linked in the model — and
+  the **OntoLex export now surfaces the full multi-resource view**: a `lexicog:Entry`
+  per source dictionary with `frac:Attestation`s attesting the specific sense.
 - **Schema *phenomena* not yet emitted:** `named-kosha-citation`,
   `citation-coordinate`, `editorial-reference` (defined in
   [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) as loss-report phenomena but

@@ -73,11 +73,17 @@ The output is a full OntoLex/FrAC profile:
 
 - 250 JSON-LD graphs in `data/pilot/ontolex/`.
 - 250 RDF/Turtle files in `data/pilot/rdf/`.
-- `ontolex:LexicalEntry` + `lexicog:Entry` main node.
+- `ontolex:LexicalEntry` lemma node (dictionary-neutral).
+- **`lexicog:Entry` per source dictionary** (OntoLex-Lexicog multi-resource view):
+  each `lexicog:describes` the lemma and lists its `lexicog:component` senses, one
+  resource per dictionary that has senses.
 - `ontolex:Form` canonical form node.
-- `ontolex:LexicalSense` nodes where definitions are safely extracted.
+- `ontolex:LexicalSense` nodes from all three dictionaries — MW (`@en`) plus the
+  German Petersburg dictionaries PWG/PWK (`@de`), each tagged `csl:sourceDictionary`.
 - `csl:SourceRecord` nodes for MW/PWG/PWK provenance.
-- `frac:Attestation` nodes linked with `prov:wasDerivedFrom`.
+- `frac:Attestation` nodes linked with `prov:wasDerivedFrom`, **attesting the
+  specific sense** they belong to (sense-level linkage), or the entry for
+  citations not tied to a sense.
 - `csl:RootRelation`, `decomp:ComponentList`, or `csl:ContinuationRelation` nodes where applicable.
 
 Validator: `scripts/validate-ontolex-profile.mjs`
