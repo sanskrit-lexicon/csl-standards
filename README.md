@@ -46,3 +46,4 @@ The atlas-side removal and pointer update merged in
 - [docs/SALT_API_PROFILE.md](docs/SALT_API_PROFILE.md) — normative C-SALT-compatible REST + GraphQL profile.
 - [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](docs/VALIDATED_INTEROPERABILITY_PROFILE.md) — 250-case TEI + OntoLex/FrAC validation.
 - [docs/LOSS_ANALYSIS.md](docs/LOSS_ANALYSIS.md) — Month-3 quantitative analysis of the 959 loss reports: the TEI-vs-OntoLex target asymmetry, the PWG→PWK→MW source-collapse family (369 lineage losses), the indigenous *kośa* sense/citation fusion (6), and by-cause breakdown; regenerate with `npm run analyze-loss`.
+- [docs/EXTENSION_PROPOSAL.md](docs/EXTENSION_PROPOSAL.md) — proposed Sanskrit lexicographic extension layer for TEI + OntoLex (evidence class, root/compound/continuation relations, source-collapse lineage, kośa sense-boundary), each prototyped in the `csl:` namespace and tied to the loss it answers.

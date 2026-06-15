@@ -9,6 +9,14 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- **Sanskrit lexicographic extension proposal** ([docs/EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)):
+  the Month-3 milestone deliverable discharging PAPER_OUTLINE §8. Maps each
+  documented loss-cause to a concrete TEI/OntoLex construct already prototyped in
+  the `csl:` namespace — evidence-type vocabulary, root/derivational-base relation,
+  decomposition-status flag, adjacency-parent recovery status, cross-resource
+  lineage (source-collapse) relation, and the kośa sense-boundary ODD
+  customisation — with a standardize-vs-project-local disposition for each. Linked
+  from PAPER_OUTLINE §8 and the README.
 - **Paper figures generator**: [scripts/build-figures.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-figures.mjs)
   (`npm run build-figures`, wired into `build-pilot`) emits the data-driven paper
   figures as reproducible, dependency-free SVG into
