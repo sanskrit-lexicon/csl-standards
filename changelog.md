@@ -8,6 +8,19 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Fixed
+- Code-review findings from the multi-angle review:
+  - **Figure 5 clipping**: the by-cause panel overflowed the fixed 420px SVG
+    height at 6 failure causes, cutting off the last rows; the height now derives
+    from the cause count (`build-figures.mjs`).
+  - **OntoLex domain violation**: the `ontolex:LexicalEntry` lemma asserted
+    `lexicog:entry` (whose subject is a `lexicog:LexicographicResource`); removed,
+    so the lemma no longer mis-types — the per-dictionary `lexicog:Entry` nodes
+    still reach the lemma via `lexicog:describes` (`export-ontolex.mjs`). (A full
+    `lexicog:LexicographicResource` container is a noted refinement.)
+  - **Sampler double-compaction**: `compactRaw` is now computed once per record
+    and reused for both `hasHedge` and the stored raw (`sample-hard-cases.mjs`).
+
 ### Added
 - **Sanskrit lexicographic extension proposal** ([docs/EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)):
   the Month-3 milestone deliverable discharging PAPER_OUTLINE §8. Maps each
