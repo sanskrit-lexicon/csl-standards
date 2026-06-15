@@ -6,6 +6,24 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Fixed
+- **Three TEI-conformance bugs the real RNG validation exposed** (the structural
+  validators only substring-check and had passed them): the TEI Lex-0 lemma's
+  `<entry>` shared its `xml:id` with the `<TEI>` root (duplicate ID) → now
+  `…-entry`; the Lex-0 `<sourceDesc>` mixed `<p>` + `<listBibl>` (illegal content
+  model) → prose moved into the `<listBibl>` `<head>`; the archival continuation
+  `<xr>` carried `@target` (not permitted there) → moved to the inner `<ref>`. All
+  250 archival + 256 Lex-0 files now validate against the compiled TEI RELAX NG.
+
+### Added
+- **Portable external-validation toolchain** so `validate-external-profiles` runs
+  the real RNG instead of skipping: [scripts/setup-external-tools.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/setup-external-tools.mjs)
+  (`npm run setup-external-tools`) assembles a no-admin JRE + Saxon-HE + jing + TEI
+  Stylesheets + p5subset under `tools/` (gitignored) and compiles both ODDs to RNG;
+  [scripts/validate-external.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-external.mjs)
+  (`npm run validate-external`) runs the harness against it. Documented (incl. a
+  WSL/apt route) in [docs/EXTERNAL_VALIDATION.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTERNAL_VALIDATION.md).
+
 ## [0.2.0] - 2026-06-15
 
 Month-3 milestone — **public research demo + paper skeleton + extension

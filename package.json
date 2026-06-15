@@ -26,7 +26,9 @@
     "validate-ontolex-profile": "node scripts/validate-ontolex-profile.mjs",
     "validate-ontolex-shacl": "node scripts/validate-ontolex-profile.mjs",
     "validate-external-profiles": "node scripts/validate-external-profiles.mjs",
-    "validate-external-profiles:strict": "node scripts/validate-external-profiles.mjs --strict"
+    "validate-external-profiles:strict": "node scripts/validate-external-profiles.mjs --strict",
+    "setup-external-tools": "node scripts/setup-external-tools.mjs",
+    "validate-external": "node scripts/validate-external.mjs"
   },
   "devDependencies": {
     "@observablehq/framework": "^1.13.0"
