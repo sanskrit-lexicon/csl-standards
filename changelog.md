@@ -1,177 +1,71 @@
 # Changelog
 
-All notable changes to csl-standards are documented here.
-
-This repository does not currently publish versioned release notes. Entries use
-dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
-ready for a dated entry.
+All notable changes to csl-standards are documented here. Releases are dated,
+semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
+into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
-### Fixed
-- Code-review findings from the multi-angle review:
-  - **Figure 5 clipping**: the by-cause panel overflowed the fixed 420px SVG
-    height at 6 failure causes, cutting off the last rows; the height now derives
-    from the cause count (`build-figures.mjs`).
-  - **OntoLex domain violation**: the `ontolex:LexicalEntry` lemma asserted
-    `lexicog:entry` (whose subject is a `lexicog:LexicographicResource`); removed,
-    so the lemma no longer mis-types — the per-dictionary `lexicog:Entry` nodes
-    still reach the lemma via `lexicog:describes` (`export-ontolex.mjs`). (A full
-    `lexicog:LexicographicResource` container is a noted refinement.)
-  - **Sampler double-compaction**: `compactRaw` is now computed once per record
-    and reused for both `hasHedge` and the stored raw (`sample-hard-cases.mjs`).
+## [0.2.0] - 2026-06-15
+
+Month-3 milestone — **public research demo + paper skeleton + extension
+proposal**. The MW-PWG-PWK interoperability pilot is now an end-to-end,
+reproducible instrument at **250-case** scale: CDSL source → neutral model → TEI
+archival + TEI Lex-0 + OntoLex-Lexicog exports, all machine-validated, with a
+**959-report** loss corpus, quantitative analysis, a public bilingual page, the
+extension proposal, and all five paper figures.
 
 ### Added
-- **Sanskrit lexicographic extension proposal** ([docs/EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)):
-  the Month-3 milestone deliverable discharging PAPER_OUTLINE §8. Maps each
-  documented loss-cause to a concrete TEI/OntoLex construct already prototyped in
-  the `csl:` namespace — evidence-type vocabulary, root/derivational-base relation,
-  decomposition-status flag, adjacency-parent recovery status, cross-resource
-  lineage (source-collapse) relation, and the kośa sense-boundary ODD
-  customisation — with a standardize-vs-project-local disposition for each. Linked
-  from PAPER_OUTLINE §8 and the README.
-- **Paper figures generator**: [scripts/build-figures.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-figures.mjs)
-  (`npm run build-figures`, wired into `build-pilot`) emits the data-driven paper
-  figures as reproducible, dependency-free SVG into
-  [data/pilot/figures/](https://github.com/sanskrit-lexicon/csl-standards/tree/main/data/pilot/figures)
-  straight from `loss-analysis.json`: Figure 1 (three-view architecture), Figure 2
-  (evidence collapse — named citations by dictionary, 119/250 mw-uncited-pwg-cited),
-  Figure 5 (loss distribution — target×status asymmetry + by-cause), and Figures
-  3–4 (root modeling, compound archival/semantic split) as concept diagrams
-  grounded in a real pilot exemplar (root √ac with its Whitney pointer; compound
-  *annavid* → anna + vi/d). All five linked from the PAPER_OUTLINE Figures section.
+- **Extension proposal** ([docs/EXTENSION_PROPOSAL.md](docs/EXTENSION_PROPOSAL.md)) —
+  each documented loss-cause mapped to a concrete TEI/OntoLex construct already
+  prototyped in the `csl:` namespace (evidence-type vocabulary, root/derivational
+  relation, decomposition-status, adjacency-parent recovery, cross-resource
+  lineage, kośa sense-boundary), with a standardize-vs-project-local disposition.
+  Discharges PAPER_OUTLINE §8.
+- **Paper figures** ([scripts/build-figures.mjs](scripts/build-figures.mjs),
+  `npm run build-figures`) — all five figures as reproducible, dependency-free SVG
+  into [data/pilot/figures/](data/pilot/figures), from the analysis artifact and
+  neutral model.
+- **TEI Lex-0 ODD** ([data/schema/tei-lex0-profile.odd.xml](data/schema/tei-lex0-profile.odd.xml))
+  + RNG validation wired into `validate-external-profiles` (gated on the
+  Java/TEI-Stylesheets toolchain; recorded as `skipped` when absent), encoding the
+  Lex-0 baseline shape and the kośa sense-boundary customisation.
+- **Senses across all three dictionaries** — MW segmenter
+  ([scripts/lib/mw-senses.mjs](scripts/lib/mw-senses.mjs)) and PWG/PWK extractor
+  ([scripts/lib/pw-senses.mjs](scripts/lib/pw-senses.mjs)) — with **sense-level
+  citation linkage** in TEI Lex-0 (MW) and OntoLex (all three).
+- **Named-source citation layer** in the neutral model — every `<ls>` across
+  MW/PWG/PWK, tagged by dictionary, materialized once and shared.
+- **Loss-report families**: PWG → PWK → MW source-collapse (`editorial-compression`)
+  and the indigenous kośa sense/citation fusion (`sanskrit-convention`).
+- **Month-3 loss-report analysis** ([scripts/analyze-loss-reports.mjs](scripts/analyze-loss-reports.mjs),
+  [docs/LOSS_ANALYSIS.md](docs/LOSS_ANALYSIS.md)) and a **public bilingual Loss
+  Analysis page** on the Observable site.
+- Broadened the **SKD kośa parser** to six records with SLP1→IAST transliteration
+  and a work-vs-person `<title>`/`<author>` split.
 
 ### Changed
-- **OntoLex export remodeled as OntoLex-Lexicog multi-resource** and made
-  model-driven ([scripts/export-ontolex.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-ontolex.mjs)):
-  the lemma is `ontolex:LexicalEntry`; each source dictionary that has senses
-  becomes a `lexicog:Entry` (`lexicog:describes` the lemma, lists `lexicog:component`
-  senses). Senses now come from the neutral model for all three dictionaries — MW
-  (`@en`) and PWG/PWK (`@de`), tagged `csl:sourceDictionary` — and each
-  `frac:Attestation` attests the specific sense it belongs to (sense-level linkage),
-  falling back to the entry for non-sense citations. The export no longer
-  re-extracts senses/citations from raw (model is the single source). Validator,
-  Turtle serializer, and SHACL profile (`csl:LexicographicResourceShape`) updated;
-  e.g. *ac* → lexicog:Entry for mw(6)/pwg(3)/pwk(17) senses, 44/45 attestations
-  sense-linked. All 250 graphs pass.
-
-### Added
-- **PWG/PWK sense modeling**: [scripts/lib/pw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/pw-senses.mjs)
-  extracts German senses from the Petersburg dictionaries (explicit `<div>` +
-  `{%…%}` gloss structure) with their `<ls>` citations sense-linked, carried on
-  each source record (`records.{pwg,pwk}.senses`): PWG 214/250 entries (455
-  senses, 431 linked), PWK 203/250 (939 senses, 216 linked). `analyze-loss`
-  reports `crossDictionary.sensesByDictionary`. Senses now exist and are
-  sense-linked for all three dictionaries in the neutral model; folding the German
-  divisions into the single TEI Lex-0 entry is left to OntoLex-Lexicog. Exporters
-  unchanged (byte-identical tei/ontolex/rdf/tei-lex0).
-- Project **TEI Lex-0 ODD** ([data/schema/tei-lex0-profile.odd.xml](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml))
-  and RNG validation wired into `validate-external-profiles`: it compiles the ODD
-  with `teitorelaxng` (or uses `CSL_STANDARDS_LEX0_RNG`) and validates every
-  `*.lex0.xml` with `jing`/`xmllint`, recording a `skipped` check where the Java
-  toolchain is absent. The ODD encodes the Lex-0 baseline shape and the *kośa*
-  sense-boundary customisation (TEI_LEX0_PILOT §5) as Schematron constraints.
-  Generalised the harness's RNG resolver/validator so TEI-archival and Lex-0 share
-  one path. Completes TEI_LEX0_PILOT §7.1 (authoring + wiring; running it still
-  needs the local toolchain).
-
-### Changed
-- **Extended the pilot from 50 to 250 hard cases.** The sampler default is now
-  250 ([scripts/sample-hard-cases.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/sample-hard-cases.mjs)),
-  and it now requires a counterpart in all three dictionaries (drops MW-only
-  candidates that lack PWG/PWK). Hedge detection runs on the stored (compacted)
-  raw so the phenomenon matches the artifacts even for long records. The
-  validators are count-agnostic, and the `full-50-*` scope/status labels are now
-  count-agnostic (`full-machine-review`, `full-tei-odd-profile`,
-  `full-ontolex-shacl-profile`). The review slice stays 15. Regenerated corpus:
-  250 TEI/OntoLex/RDF + 256 Lex-0; 959 loss reports; 2501 named-source citations;
-  224/250 entries with senses; 117 entries / 244 senses sense-linked. Docs updated
-  to the 250-scale figures (legacy/roadmap docs retain their original figures by
-  design).
-
-### Added
-- Sense-level citation linkage: `extractMwSenses` now carries per-sense
-  `citations` (the MW `<ls>` within each `<div>` segment), and the TEI Lex-0
-  export renders them inside the `<sense>` — named sources as
-  `<bibl type="named-source" source="#dict-mw">`, the hedge as `<usg type="hint">`.
-  MW sources are no longer duplicated at entry level (the entry index keeps the
-  cross-dictionary PWG/PWK sources). 25 entries / 52 senses carry linked citations
-  (e.g. *ac* "to adorn" → `Dharmaś.`). Completes TEI_LEX0_PILOT §7.4; archival
-  TEI/OntoLex unchanged.
-- MW sense segmenter ([scripts/lib/mw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/mw-senses.mjs)):
-  populates `model.senses` from the MW record — splitting on `;`/`<div>`, glossing
-  verbal roots as "to …" phrases, and recognising cross-references (`See …`, `= X`,
-  `(for … See …)`). TEI Lex-0 entries carrying a real sense rose from **11 to 44**
-  of 50 (the other 6 are genuine grammatical stubs); cross-references render as
-  `<xr type="cf"><ref>`. Archival TEI and OntoLex outputs are unchanged (they keep
-  their own definition extraction); this unblocks sense-level citation linkage.
-
-### Changed
-- Centralised the `<ls>` labeled-source parser into
-  [scripts/lib/citations.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/citations.mjs);
-  `build-neutral-model`, `export-tei`, and `export-ontolex` now share it instead
-  of each re-implementing `stripPseudoMarkup` + `extractCitations`. Output is
-  byte-identical (verified: no data churn); net −17 lines. Documented that
-  sense-level citation linkage is blocked upstream on MW sense extraction (only
-  11/50 Western Lex-0 entries yield a machine sense).
-
-### Added
-- Public **Loss Analysis** page on the Observable site
-  ([src/tools/loss-analysis.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/src/tools/loss-analysis.md)):
-  renders the target×status asymmetry, by-cause and by-phenomenon breakdowns, the
-  cross-dictionary citation layer, and the coverage gaps from
-  `loss-analysis.json` — bilingual (EN/RU). `analyze-loss` now mirrors its artifact
-  into `src/data/pilot/` so the site can load it; locales gained the
-  `editorial-compression`, `sanskrit-convention`, `source-collapse`, and
-  `sense-citation-fusion` labels.
-- Indigenous *kośa* sense/citation-fusion loss-report family: [scripts/build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
-  now emits one `sense-citation-fusion` report per SKD entry (6 total, `target:
-  tei`, `sourceDictionary: skd`, cause `sanskrit-convention`), recording the
-  authority groups the Lex-0 baseline had to split into `<def>` + `<bibl>`. Adds
-  `skd` and `sanskrit-convention` to the loss-report schema; `validate-pilot`
-  accepts fixture caseIds; `build-pilot` reordered so `parse-skd-kosa` precedes
-  `build-loss-reports`. Corpus 197 → 203. This refines the central finding: the
-  only `tei`-lossy reports are the 6 indigenous fusions, not the Western cases.
+- **Pilot extended 50 → 250 hard cases** (review slice fixed at 15); the
+  tri-dictionary requirement (a counterpart in all of MW/PWG/PWK) is enforced;
+  validators and scope/status labels are now count-agnostic.
+- **OntoLex export remodeled as OntoLex-Lexicog multi-resource** — a `lexicog:Entry`
+  per source dictionary, multilingual senses, sense-level `frac:Attestation`s — and
+  made fully model-driven (no re-extraction from raw).
+- Centralised the `<ls>` citation parser
+  ([scripts/lib/citations.mjs](scripts/lib/citations.mjs)) shared by the neutral
+  model and both exporters.
 
 ### Fixed
-- Generated artifacts are now byte-reproducible: the six generators no longer
-  stamp a wallclock `generatedAt`. A shared helper
-  [scripts/lib/provenance.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/provenance.mjs)
-  honours `SOURCE_DATE_EPOCH` (reproducible-builds standard) and otherwise omits
-  the field, so re-running `build-pilot` produces no diff. Removed the stale
-  timestamps from the committed review/sample artifacts.
+- Generated artifacts are **byte-reproducible**: generators honour
+  `SOURCE_DATE_EPOCH` and otherwise omit `generatedAt`
+  ([scripts/lib/provenance.mjs](scripts/lib/provenance.mjs)).
+- Code-review findings: Figure 5 height clipping; OntoLex `lexicog:entry` domain
+  violation on the lemma; sampler double-compaction.
 
-### Added
-- Named-source citation layer in the neutral model: [scripts/build-neutral-model.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-neutral-model.mjs)
-  now extracts every `<ls>` labeled source across MW/PWG/PWK (519
-  `named-source-citation` objects + 25 hedges, tagged with `dictionary`, capped
-  at 12/dict). The TEI Lex-0 export carries them as entry-level
-  `<bibl type="named-source" source="#dict-…">` with the source dictionaries
-  declared in the header, so a Western lemma uncited in MW (e.g. *arcya*) now
-  carries PWG's named apparatus. `analyze-loss` reports
-  `namedSourceCitationsMaterialized` (was 0) and citation counts by dictionary.
-- PWG/PWK source-collapse loss-report family: [scripts/build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
-  now emits 73 `target: neutral` reports for evidence dropped along the PWG → PWK
-  → MW lineage (23 PWG→MW collapses + 50 PWK abridgements), each evidence-bound
-  with `<ls>` citation counts and a `sourceEvidence` sample. New
-  `editorial-compression` failure cause (loss is upstream, `extensionNeeded:
-  false`); `neutral` target now accepted by `validate-pilot`. Corpus 124 → 197;
-  source-collapse is the largest phenomenon (37%). PAPER_OUTLINE §7 and
-  LOSS_ANALYSIS.md updated with the lineage measurements.
-- Month-3 loss-report analysis: [scripts/analyze-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/analyze-loss-reports.mjs)
-  (`npm run analyze-loss`) quantifies the 124 loss reports into the regenerable
-  artifact [data/pilot/loss-analysis.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-analysis.json),
-  with the narrative in [docs/LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md):
-  the TEI-never-lossy / OntoLex-never-clean asymmetry, the by-cause breakdown
-  (53% model-vocabulary gaps), the MW/PWG/PWK signal (23/50 mw-uncited-pwg-cited),
-  and the instrument's coverage gaps. Wired into `build-pilot` and PAPER_OUTLINE §8.
-- Broadened the SKD *kośa* parser ([scripts/parse-skd-kosa.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs))
-  from one record (*Darmma*) to six, with SLP1→IAST transliteration of glosses,
-  a wider authority/work vocabulary, and a kośa-work-vs-person split rendered as
-  TEI `<bibl><title>` vs `<bibl><author>`. The Lex-0 corpus now has 56 entries
-  (50 MW/PWG/PWK + 6 SKD); `validate-tei-lex0` passes 56/56.
+## [0.1.0] - 2026-06-13
 
-## [1.0.0] - 2026-06-13
+Initial public changelog (was labelled "1.0.0" for the changelog file itself;
+relabelled to track the project's `package.json` version at the time).
 
 ### Added
 - Added this changelog so repository-level changes have a stable home.
