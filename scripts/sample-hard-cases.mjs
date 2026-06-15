@@ -55,16 +55,18 @@ function parseRecords(filePath, dictionaryCode) {
     const raw = current.lines.join("\n").trim();
     const header = current.lines[0] || "";
     const parsed = parseHeader(header);
+    // Compact once: the stored raw, and the form hasHedge must test against (so
+    // the "hedge" phenomenon matches the generated artifacts even when a long
+    // record's L. siglum falls past the truncation point). summarize() reuses it.
+    const compacted = compactRaw(raw);
     records.push({
       dictionary: dictionaryCode,
       line: current.line,
       raw,
+      compacted,
       ...parsed,
       citationCount: countMatches(raw, /<ls\b/g),
-      // Detect the hedge on the COMPACTED raw that is actually stored, so the
-      // "hedge" phenomenon matches the generated artifacts even when a long
-      // record's L. siglum falls past the truncation point.
-      hasHedge: /<ls\b[^>]*>L\.<\/ls>/.test(compactRaw(raw)),
+      hasHedge: /<ls\b[^>]*>L\.<\/ls>/.test(compacted),
       hasHom: /<hom>/.test(raw),
       hasInfo: /<info\b/.test(raw),
       hasRootMarker: /<info\b[^>]*verb="genuineroot"/.test(raw),
@@ -179,7 +181,7 @@ function summarize(record) {
     hasRootMarker: record.hasRootMarker,
     isCompound: isCompound(record),
     isContinuation: isContinuation(record),
-    raw: compactRaw(record.raw)
+    raw: record.compacted ?? compactRaw(record.raw)
   };
 }
 

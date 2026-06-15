@@ -110,7 +110,7 @@ function figureLossDistribution(a) {
   const statuses = ["clean", "partial", "lossy"];
   const total = t => statuses.reduce((s, k) => s + (tbs[t][k] || 0), 0);
   const maxTotal = Math.max(...targets.map(total));
-  const W = 760, H = 420, x0 = 90, barW = 560, top = 100, rowH = 46;
+  const W = 760, x0 = 90, barW = 560, top = 100, rowH = 46;
 
   const stacked = targets.map((t, i) => {
     const y = top + i * rowH;
@@ -144,6 +144,9 @@ function figureLossDistribution(a) {
       `<rect x="${x0 + 158}" y="${y + 2}" width="${w}" height="14" rx="2" fill="${C.barLight}"/>` +
       `<text x="${x0 + 158 + w + 6}" y="${y + 13}" font-size="11" fill="${C.muted}">${n}</text>`;
   }).join("\n");
+
+  // Height derives from the cause count so the by-cause panel never clips.
+  const H = cTop + causes.length * cRowH + 24;
 
   const body = [
     title(24, 34, "Figure 5 — How TEI and OntoLex fail"),

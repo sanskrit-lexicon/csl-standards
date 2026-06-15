@@ -203,7 +203,6 @@ function jsonldFor(model, rawByDict, isReviewCase) {
     "ontolex:canonicalForm": {"@id": formIri},
     "ontolex:sense": senseNodes.map(sense => ({"@id": sense["@id"]})),
     "frac:attestation": attestationNodes.map(att => ({"@id": att["@id"]})),
-    "lexicog:entry": resourceNodes.map(resource => ({"@id": resource["@id"]})),
     "csl:sourceRecord": sourceRecordIds.map(id => ({"@id": id})),
     "csl:caseId": model.id,
     "csl:key": model.key,
@@ -276,7 +275,6 @@ function turtleFor(jsonld) {
     lines.push(`  csl:phenomenon ${ttlString(phenomenon)} ;`);
   }
   for (const sense of senses) lines.push(`  ontolex:sense ${ttlIri(sense["@id"])} ;`);
-  for (const resource of resources) lines.push(`  lexicog:entry ${ttlIri(resource["@id"])} ;`);
   for (const record of records) lines.push(`  csl:sourceRecord ${ttlIri(record["@id"])} ;`);
   for (const att of attestations) lines.push(`  frac:attestation ${ttlIri(att["@id"])} ;`);
   lines[lines.length - 1] = lines[lines.length - 1].replace(/ ;$/, " .");
