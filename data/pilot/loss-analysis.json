@@ -1,48 +1,53 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 959,
+    "total": 1277,
     "cases": 256,
     "byStatus": {
-      "partial": 536,
+      "partial": 854,
       "lossy": 348,
       "clean": 75
     },
     "byTarget": {
-      "neutral": 369,
-      "tei": 298,
-      "ontolex": 292
+      "ontolex": 609,
+      "neutral": 370,
+      "tei": 298
     },
     "byPhenomenon": {
       "source-collapse": 369,
       "generic-lexicographer-hedge": 234,
+      "citation-coordinate": 222,
       "continuation-parent": 80,
+      "named-kosha-citation": 79,
       "compound-subentry": 75,
       "compound-decomposition": 75,
       "root-as-entry": 60,
       "root-as-derivational-base": 60,
-      "sense-citation-fusion": 6
+      "editorial-reference": 16,
+      "sense-citation-fusion": 6,
+      "source-anomaly": 1
     },
     "byFailureClassification": {
+      "model-vocabulary-gap": 629,
       "editorial-compression": 369,
-      "model-vocabulary-gap": 312,
       "cdsl-markup-gap": 117,
       "print-compression": 80,
       "none": 75,
-      "sanskrit-convention": 6
+      "sanskrit-convention": 6,
+      "data-quality": 1
     },
     "byExtensionNeeded": {
-      "extensionNeeded=false": 544,
-      "extensionNeeded=true": 415
+      "extensionNeeded=true": 732,
+      "extensionNeeded=false": 545
     },
     "byReviewStatus": {
-      "machine": 863,
+      "machine": 1181,
       "reviewed": 96
     },
     "bySourceDictionary": {
-      "mw": 584,
-      "pwk": 250,
-      "pwg": 119,
+      "mw": 615,
+      "pwg": 405,
+      "pwk": 251,
       "skd": 6
     },
     "targetByStatus": {
@@ -52,11 +57,11 @@
         "lossy": 6
       },
       "ontolex": {
-        "partial": 192,
+        "partial": 509,
         "lossy": 100
       },
       "neutral": {
-        "partial": 127,
+        "partial": 128,
         "lossy": 242
       }
     }
@@ -112,21 +117,15 @@
   "coverageGaps": {
     "sourceDictionariesInstrumented": [
       "mw",
-      "pwk",
       "pwg",
+      "pwk",
       "skd"
     ],
-    "schemaPhenomenaNotEmitted": [
-      "named-kosha-citation",
-      "citation-coordinate",
-      "editorial-reference"
-    ],
+    "schemaPhenomenaNotEmitted": [],
     "schemaStatusesNotEmitted": [
       "failure"
     ],
-    "roadmapCausesNotEmitted": [
-      "data-quality"
-    ],
+    "roadmapCausesNotEmitted": [],
     "namedSourceCitationsMaterialized": 2501
   }
 }

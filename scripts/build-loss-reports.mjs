@@ -218,6 +218,54 @@ async function main() {
     });
   }
 
+  // Evidence-class sub-typing that the sense/citation-separating standards flatten
+  // (closes the remaining schema phenomena) plus a source data-quality marker.
+  // Detected (heuristically) from the materialized citations and source raw; one
+  // report per case per applicable phenomenon, target ontolex (the semantic model
+  // that should carry the evidence class), cause model-vocabulary-gap.
+  const KOSHA = /^(AK\.|H\.|Medin|Trik|Hal[aā]y|Vaij|Vi[sś]va|[SŚ]abdar|[SŚ]abdac|H[aā]r[aā]v|N[aā]n[aā]rth|Amar)/;
+  const EDITORIAL = /^(ib\.|W\.|MW\.|Verz|l\.c\.)/i;
+  const COORD = /\d+\s*[,.]\s*\d+/;
+  const sample = list => [...new Set(list)].slice(0, 5);
+  const evidenceReport = (model, phenomenon, cites, claim, loss) => ({
+    caseId: model.id,
+    target: "ontolex",
+    status: "partial",
+    phenomenon,
+    sourceDictionary: cites[0].dictionary,
+    sourcePointer: { L: model.records?.[cites[0].dictionary]?.L ?? null, line: null },
+    claim,
+    loss,
+    failureClassification: "model-vocabulary-gap",
+    extensionNeeded: true,
+    reviewStatus: "machine",
+    sourceEvidence: { count: cites.length, sample: sample(cites.map(c => c.source)) }
+  });
+  for (const model of models) {
+    const cites = model.citations || [];
+    const kosha = cites.filter(c => KOSHA.test(c.source));
+    if (kosha.length) reports.push(evidenceReport(model, "named-kosha-citation", kosha,
+      "Named indigenous kośa (lexicon) sources, distinct from textual attestations.",
+      "The kośa evidence class is modeled as an ordinary named-source citation; the indigenous-lexicon distinction is lost."));
+    const editorial = cites.filter(c => EDITORIAL.test(c.source));
+    if (editorial.length) reports.push(evidenceReport(model, "editorial-reference", editorial,
+      "Editorial / self references (ib., W., MW., catalogue) point within the lexicographic tradition, not to external texts.",
+      "Editorial references are modeled as named-source citations; their non-attestation role is not distinguished."));
+    const coord = cites.filter(c => COORD.test(c.source));
+    if (coord.length) reports.push(evidenceReport(model, "citation-coordinate", coord,
+      "Named citations carry textual coordinates (book / hymn / verse).",
+      "The coordinate is kept as a flat string in the citation abbr / evidence, not parsed into a structured locus or citedRange."));
+    const sicDict = ["mw", "pwg", "pwk"].find(d => /\[sic\]/i.test(model.records?.[d]?.raw || ""));
+    if (sicDict) reports.push({
+      caseId: model.id, target: "neutral", status: "partial", phenomenon: "source-anomaly",
+      sourceDictionary: sicDict, sourcePointer: { L: model.records?.[sicDict]?.L ?? null, line: null },
+      claim: "The source record carries an editorial [sic] anomaly marker.",
+      loss: "An unresolved source data-quality flag ([sic]) is carried through verbatim, not modeled as a quality assertion.",
+      failureClassification: "data-quality", extensionNeeded: false, reviewStatus: "machine",
+      sourceEvidence: { marker: "[sic]", dictionary: sicDict }
+    });
+  }
+
   for (const outputPath of outputPaths) {
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
     await fs.writeFile(outputPath, `${JSON.stringify(reports, null, 2)}\n`, "utf-8");

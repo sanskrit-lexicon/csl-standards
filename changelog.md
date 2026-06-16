@@ -28,6 +28,17 @@ into a dated version. Versions track `package.json`.
   250 archival + 256 Lex-0 files now validate against the compiled TEI RELAX NG.
 
 ### Added
+- **Evidence-class sub-typing loss family** closes every remaining loss-report
+  coverage gap. [build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
+  now emits the three previously-defined-but-unused schema phenomena —
+  `named-kosha-citation` (79), `citation-coordinate` (222), `editorial-reference`
+  (16), all `target: ontolex`, cause `model-vocabulary-gap`, `extensionNeeded:
+  true` — plus a `data-quality` `source-anomaly` report for `[sic]` markers (1).
+  `analyze-loss` now reports `schemaPhenomenaNotEmitted: []` and
+  `roadmapCausesNotEmitted: []`; corpus grows 959 → **1277** reports.
+  `data-quality` added to the schema's `failureClassification` enum; see
+  [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md)
+  §4b. Model-vocabulary-gap is now the leading cause (49%).
 - **Portable external-validation toolchain** so `validate-external-profiles` runs
   the real RNG instead of skipping: [scripts/setup-external-tools.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/setup-external-tools.mjs)
   (`npm run setup-external-tools`) assembles a no-admin JRE + Saxon-HE + jing + TEI
