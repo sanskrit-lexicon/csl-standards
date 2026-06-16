@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -180,6 +181,21 @@
         <abbr>R. 2,45,21.</abbr>
         <citedRange>2,45,21</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-brAhmaRya-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-brAhmaRya-record-ap90">
+        <abbr>Mk. 5</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-brAhmaRya-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-brAhmaRya-record-ap90">
+        <abbr>Pt. 1. 66</abbr>
+        <citedRange>1.66</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-brAhmaRya-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-brAhmaRya-record-ap90">
+        <abbr>Ms. 3. 17</abbr>
+        <citedRange>3.17</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-brAhmaRya-cite-ap90-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-brAhmaRya-record-ap90">
+        <abbr>7. 42.</abbr>
+        <ref type="inherited-siglum">Ms.</ref>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-brAhmaRya-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -233,6 +249,23 @@
 &lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;n.&lt;/lex&gt;
 &lt;div n=&quot;2&quot;&gt;— a〉 {%Brahmanenstand, Brahmanenwürde%}.
 &lt;div n=&quot;2&quot;&gt;— b〉 {%eine Gesellschaft von Brahmanen%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-brAhmaRya-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">21882</idno>
+        <idno type="line">187322</idno>
+        <idno type="pc">0804-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;21882&lt;pc&gt;0804-b&lt;k1&gt;brAhmaRya&lt;k2&gt;brAhmaRya
+{#brAhmaRya#}¦ {%&lt;ab&gt;a.&lt;/ab&gt;%} Befitting a Brāhmaṇa.
+{#--RyaH#} An epithet of the planet &lt;lbinfo n=&quot;Sa+turn&quot;/&gt;
+Saturn. {#--RyaM#} {@1@} The station or rank of
+a Brāhmaṇa, priestly or sacerdotal
+character; {#satyaM Sape brAhmaRyena#} &lt;ls&gt;Mk. 5&lt;/ls&gt;;
+&lt;ls&gt;Pt. 1. 66&lt;/ls&gt;; &lt;ls&gt;Ms. 3. 17&lt;/ls&gt;; &lt;ls n=&quot;Ms.&quot;&gt;7. 42.&lt;/ls&gt; {@--2@} A
+collection of Brāhmaṇas.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

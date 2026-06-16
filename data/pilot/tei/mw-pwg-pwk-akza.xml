@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -237,6 +238,9 @@
         <abbr>Ind. St. 14,382</abbr>
         <citedRange>14,382</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-akza-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-akza-record-gra">
+        <abbr>Benfey (S. V. glo.)</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-akza-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -353,6 +357,22 @@
 &lt;div n=&quot;2&quot;&gt;— a〉 {%Auge%} &lt;ls n=&quot;Chr.&quot;&gt;163,2&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;174,5&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;175,25&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;184,1&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;186,6&lt;/ls&gt;.
 &lt;div n=&quot;2&quot;&gt;— b〉 {%Masche%}.
 &lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;m.&lt;/lex&gt; {%Seele%} &lt;ls&gt;Ind. St. 14,382&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-akza-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">44</idno>
+        <idno type="line">227</idno>
+        <idno type="pc">0006</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;44&lt;pc&gt;0006&lt;k1&gt;akza&lt;k2&gt;a/kza
+{@ákṣa,@}¦ &lt;ab&gt;m.&lt;/ab&gt;, {%Achse am Wagen%}. Die genaue Uebereinstimmung in der Form mit akṣa, Auge (&lt;ab n=&quot;siehe&quot;&gt;s.&lt;/ab&gt; das folgende und &lt;ab&gt;vgl.&lt;/ab&gt; ákṣi, Auge mit &lt;lang&gt;lat.&lt;/lang&gt; axi-s) lässt noch immer die von &lt;ls&gt;Benfey (S. V. glo.)&lt;/ls&gt; angegebene Erklärung, wonach die durch das Rad gesteckte Achse als Auge des Rades aufgefasst wurde, als die wahrscheinlichste erscheinen. &lt;ab&gt;Vgl.&lt;/ab&gt; die Genetiven ráthasya, cakríos und die Zusammensetzung sam-akṣá.
+&lt;div n=&quot;TS&quot;&gt;-a [&lt;ab&gt;V.&lt;/ab&gt;] {287,19} (vīḍo vīḍita).
+&lt;div n=&quot;TS&quot;&gt;-as {164,13}; {166,9}; {287,17}; {465,3}; {625,29}; {911,12} (ā́hatas).
+&lt;div n=&quot;TS&quot;&gt;-am {30,14}. _{30,15}; {549,4}.
+&lt;div n=&quot;TS&quot;&gt;-ena {915,4} (neben cakríyā).
+&lt;div n=&quot;TS&quot;&gt;-e [&lt;ab&gt;L.&lt;/ab&gt;] {666,27} (araṭvé).
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

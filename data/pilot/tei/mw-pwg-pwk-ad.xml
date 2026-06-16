@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -255,6 +257,16 @@
         <abbr>225,31</abbr>
         <ref type="inherited-siglum">Chr.</ref>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-ad-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-ap90">
+        <abbr>Sk.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ad-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-ap90">
+        <abbr>Bk. 18. 12.</abbr>
+        <citedRange>18.12</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ad-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-gra">
+        <abbr>Cu. 〔279〕</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ad-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -351,6 +363,69 @@
 &lt;div n=&quot;p&quot;&gt;— Mit {#prati#} {%dagegen —, zur Vergeltung —, zur Ausgleichung essen%}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#vi#} {%zerfressen, benagen%}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#sam#} {%verzehren, aufzehren%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ad-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">809</idno>
+        <idno type="line">8878</idno>
+        <idno type="pc">0040-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;809&lt;pc&gt;0040-a&lt;k1&gt;ad&lt;k2&gt;ad
+{#ad#}¦ {c2c} &lt;ab&gt;P.&lt;/ab&gt; [{#atti, Ada, --jaGAsa, aGasat#},
+{#atsyati, attuM, anna, -jagDa, jagDvA#}] {@1@} To
+eat, devour. {@--2@} To destroy. {@--3@} = {#aMd#}, &lt;ab&gt;q. v.&lt;/ab&gt;
+{%--&lt;ab&gt;Caus.&lt;/ab&gt;%} To feed with, cause to eat;
+{#AdayatyannaM bawunA#} &lt;ls&gt;Sk.&lt;/ls&gt; {%--&lt;ab&gt;Desid.&lt;/ab&gt;%} {#jiGatsati#}
+To wish to eat. [&lt;ab&gt;cf.&lt;/ab&gt; &lt;ab&gt;L.&lt;/ab&gt; {%edo%}, &lt;ab&gt;Gr.&lt;/ab&gt;
+{%edo%}, &lt;ab&gt;Germ.&lt;/ab&gt; {%essen%}, &lt;ab&gt;Eng.&lt;/ab&gt; {%eat%}; Lith.
+{%edmi%}, Sans. {%admi%}, &lt;ab&gt;Goth.&lt;/ab&gt; {%at%}, Zend
+{%ad%}]. With {#ava#} to satisfy by food, get
+rid of with feeding; (&lt;ab&gt;fig.&lt;/ab&gt;) stop the
+mouth of. {#--A#} to eat &amp;c. {#--pra --saM#}
+to use up, consume, devour;  &lt;lbinfo n=&quot;samadaMtyA#mizaM&quot;/&gt;
+{#samadaMtyAmizaM KagAH#} &lt;ls&gt;Bk. 18. 12.&lt;/ls&gt; {#--vi#} to gnaw.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ad-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">267</idno>
+        <idno type="line">1546</idno>
+        <idno type="pc">0033</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;267&lt;pc&gt;0033&lt;k1&gt;ad&lt;k2&gt;ad
+{@√ad@}¦ [&lt;ls&gt;Cu. 〔279〕&lt;/ls&gt;], 1〉 {%essen, verzehren%} [&lt;ab&gt;A.&lt;/ab&gt;, &lt;ab&gt;G.&lt;/ab&gt;]; 2〉 {%essen, fressen,%} ohne Object.
+&lt;div n=&quot;Pf&quot;&gt;Mit {@ví@}, {%zerfressen, benagen%} [&lt;ab&gt;A.&lt;/ab&gt;].
+&lt;div n=&quot;Pf&quot;&gt;{@sám,@} {%verzehren, ganz aufzehren%} [&lt;ab&gt;A.&lt;/ab&gt;].
+&lt;div n=&quot;H&quot;&gt;Stamm {@ád:@}
+&lt;div n=&quot;TS&quot;&gt;-tsi 1〉 téṣām (vṛṣabhā́nām) {854,3}.
+&lt;div n=&quot;TS&quot;&gt;-tti 1〉 píppalam {164,20}; yád {711,21} (upajíhvikā).
+&lt;div n=&quot;H&quot;&gt;{@ad:@}
+&lt;div n=&quot;TS&quot;&gt;-dmi 1〉 pī́vas {912,14}.
+&lt;div n=&quot;TS&quot;&gt;-tti 1〉 vánāni {65,7}; {905,2}; bhójanam {204,4}; ánnam {226,7};&lt;chg type=&quot;del&quot; n=&quot;5&quot; src=&quot;gra&quot;&gt;&lt;old&gt;{445,5};&lt;/old&gt;&lt;/chg&gt; {951,4}; pratiáñcam {853,13}; mātárā {905,4}. — 2〉 agnís {143,5} (jámbhais); gárbhas {853,14}. — {@sám@} bhū́ri ánnā {520,2}.
+&lt;div n=&quot;TS&quot;&gt;-ttas 1〉 bhū́ri {905,1}.
+&lt;div n=&quot;TS&quot;&gt;-danti 1〉 havís {94,3}; {192,13}. _{192,14}; ukṣṇás {854,11}. — 2〉 gā́vas iva {972,3}. — ví mā ādhías (mū́ṣas ná śiśnā́) {105,8}; {859,3}.
+&lt;div n=&quot;TS&quot;&gt;-dát 1〉 ā́śitam {863,11}.
+&lt;div n=&quot;TS&quot;&gt;-dyús 1〉 enam {921,14} (vṛ́kās).
+&lt;div n=&quot;TS&quot;&gt;-ddhí 1〉 tṛ́ṇam {164,40}; havī́ṃṣi {841,12}; {942,8}; prásthitasya {942,7}.
+&lt;div n=&quot;TS&quot;&gt;-ddhi 1〉 dhānā́s {269,3}; apūpám {286,7}.
+&lt;div n=&quot;TS&quot;&gt;-ttu 1〉 havī́ṃṣi {841,8}.
+&lt;div n=&quot;TS&quot;&gt;-ttá [-ttā́] 1〉 havī́ṃṣi {841,11}.
+&lt;div n=&quot;TS&quot;&gt;-ttana 1〉 ū́rjam pī́vas {926,10}.
+&lt;div n=&quot;TS&quot;&gt;-dantu 1〉 tám (yātudhā́nam) {913,7} (kṣvíṅkās); havís {936,11}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Imperf.&lt;/ab&gt; {@ā́da:@}
+&lt;div n=&quot;TS&quot;&gt;-at páriviṣṭam {894,6} (dadbhís).
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Part.&lt;/ab&gt; {@adát@} (&lt;ab&gt;vgl.&lt;/ab&gt; a-dát, zahnlos, und án-adat).
+&lt;div n=&quot;TS&quot;&gt;-án 2〉 (agnís) {830,4} (jihváyā).
+&lt;div n=&quot;H&quot;&gt;{@adāná:@}
+&lt;div n=&quot;TS&quot;&gt;-ám 2〉 vamrī́bhis {315,9}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Part.&lt;/ab&gt; II. {@ánna@} (&lt;ab n=&quot;siehe&quot;&gt;s.&lt;/ab&gt; für sich).
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Inf.&lt;/ab&gt; {@áttu:@}
+&lt;div n=&quot;TS&quot;&gt;-ave 1〉 kṛtā́s dhānā́s 〰 te háribhyām {269,7}; dhāsím hinvanti 〰 {663,29}; havíṣe 〰 {842,12}; ná‿etád 〰 {911,34}; vayā́s asya práhutās āsus 〰 {918,3}. — 2〉 {905,6}; nṛ́bhyas nā́ribhyas 〰 {686,8}.
+&lt;div n=&quot;H&quot;&gt;Verbale {@ád:@}
+&lt;div n=&quot;P&quot;&gt;in madhu-ád &lt;ab&gt;u. s. w.&lt;/ab&gt;
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

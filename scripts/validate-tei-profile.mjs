@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { generatedAt } from "./lib/provenance.mjs";
+import { ALL_DICTS, CORE_DICTS } from "./lib/dictionaries.mjs";
 
 const root = process.cwd();
 const errors = [];
@@ -97,6 +98,10 @@ function validateTeiCase(model, reviewIds) {
   const status = textForNote(xml, "review-status");
   const expectedStatus = reviewIds.has(model.id) ? "validated-slice" : "full-machine-review";
   const sourceEntryCount = (xml.match(/<cit\b[^>]*type="source-entry"/g) || []).length;
+  // The archival profile carries one source-entry per present dictionary: the
+  // mw/pwg/pwk backbone plus any optional dictionary (ap90/gra) that has a record.
+  const presentDicts = ALL_DICTS.filter(dict => model.records?.[dict]);
+  const expectedSources = presentDicts.length;
 
   wellFormedEnough(xml, relative);
   caseCheck(xml.includes(`<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="${stem}"`), "missing TEI namespace or case xml:id");
@@ -109,15 +114,16 @@ function validateTeiCase(model, reviewIds) {
   caseCheck(textForNote(xml, "profile-version") === TEI_PROFILE, "profile-version note mismatch");
   caseCheck(textForNote(xml, "validation-scope") === VALIDATION_SCOPE, "validation-scope note mismatch");
   caseCheck(status === expectedStatus, `review-status expected ${expectedStatus}, found ${status || "none"}`);
-  caseCheck(sourceEntryCount === 3, `expected 3 source-entry citations, found ${sourceEntryCount}`);
+  caseCheck(sourceEntryCount === expectedSources, `expected ${expectedSources} source-entry citations (${presentDicts.join("/")}), found ${sourceEntryCount}`);
+  caseCheck(CORE_DICTS.every(dict => presentDicts.includes(dict)), `archival case must carry the ${CORE_DICTS.join("/")} backbone`);
 
-  for (const dict of ["mw", "pwg", "pwk"]) {
+  for (const dict of presentDicts) {
     caseCheck(xml.includes(`source="#dict-${dict}"`), `missing source-entry pointer for ${dict}`);
     caseCheck(xml.includes(`<idno type="L">${model.records?.[dict]?.L}</idno>`), `missing CDSL L number for ${dict}`);
   }
 
   caseCheck(xml.includes("&lt;L&gt;") && !xml.includes("<L>"), "raw CDSL tags must be escaped, not live pseudo-XML");
-  caseCheck((xml.match(/<quote xml:space="preserve">/g) || []).length === 3, "expected 3 preserved source quotes");
+  caseCheck((xml.match(/<quote xml:space="preserve">/g) || []).length === expectedSources, `expected ${expectedSources} preserved source quotes`);
   caseWarn(xml.includes("<listBibl") || !model.phenomena.includes("hedge"), "hedge case lacks extracted citation index");
 
   // csl: evidence-class extension — every citation <bibl> carries a sub-typed

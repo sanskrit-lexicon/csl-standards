@@ -44,6 +44,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-4"
         }
       ],
       "csl:sourceRecord": [
@@ -58,6 +61,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:jri",
@@ -239,6 +245,16 @@
       "rdf:value": "<L>14117<pc>0520-b<k1>jri<k2>jri\n{#jri#}¦ {vI.v} {c1c} <ab>P.</ab> ({#jrayati#}) {@1@} To <lbinfo n=\"over+power\"/>\noverpower, conquer. {@--2@} To go. {vII.v} {9}\n{c10c} <ab>P.</ab> ({#jriRAti, jrAyayati#}) To grow old.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "3603",
+      "csl:lineNumber": 23119,
+      "csl:pageColumn": "0506",
+      "rdf:value": "<L>3603<pc>0506<k1>jri<k2>jri\r\n{@√jri,@}¦ {%gehen, schreiten%} [gatikarma <ls>Naigh. 〔II,14〕</ls>.], wahrscheinlich mit <hom>2.</hom> jar, also weiter mit car zusammenhängend. In Bezug auf die Bedeutungsentwickelung, wie sie in jráyas hervortritt, <ab>vgl.</ab> cirá von car und uru-gāyá.\r\n<div n=\"Pf\">Mit {@upa,@} {%hinzuschreiten%} zu [<ab>A.</ab>].\r\n<div n=\"Pf\">{@pári,@} {%herumlaufen,%} enthalten in parijrí.\r\n<div n=\"H\">Stamm {@jraya:@}\r\n<div n=\"TS\">-ati úpa {783,5} jígāt úpa jrayati gós apīcíam padám.\r\n<div n=\"P\">Mehrstämmiges Particip {@jrayasāná@} [aus den Stämmen jraya und s (von as)] (<ab n=\"siehe\">s.</ab> für sich).\r\n<div n=\"H\">Verbale {@jrí@}\r\n<div n=\"P\">enthalten in uru-jrí und mit pari in pari-jrí.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -285,6 +301,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "ṚV.",
       "csl:citedRange": "9,71,5"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri"
+      },
+      "frac:evidence": "Naigh. 〔II,14〕",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#decomposition",

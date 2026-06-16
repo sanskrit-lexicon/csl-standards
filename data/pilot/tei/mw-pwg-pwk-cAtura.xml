@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -108,6 +109,10 @@
         <abbr>VIKRAMĀṄKAC. 6,12</abbr>
         <citedRange>6,12</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-cAtura-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-cAtura-record-ap90">
+        <abbr>N. 1. 12.</abbr>
+        <citedRange>1.12</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-cAtura-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -167,6 +172,26 @@
 &lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;f.&lt;/lex&gt; {#I#}
 &lt;div n=&quot;2&quot;&gt;— a〉 {%Geschicklichkeit%} &lt;ls&gt;PRASANNAR. 32,21. 53,6&lt;/ls&gt;. &lt;ls&gt;VIKRAMĀṄKAC. 6,12&lt;/ls&gt;.
 &lt;div n=&quot;2&quot;&gt;— b〉 {%Liebreiz%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-cAtura-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">13207</idno>
+        <idno type="line">113873</idno>
+        <idno type="pc">0489-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;13207&lt;pc&gt;0489-b&lt;k1&gt;cAtura&lt;k2&gt;cAtura
+{#cAtura#}¦ {%&lt;ab&gt;a.&lt;/ab&gt;%} ({#rI#} {%&lt;ab&gt;f.&lt;/ab&gt;%}) [{#catura eva svArTe#}
+{#aR#}] {@1@} Relating to four. {@--2@} Clever,
+able, shrewd. {@--3@} Speaking well,
+flattering. {@--4@} Drawn by four
+(as a carriage). {@--5@} Governing,
+ruling. {@--6@} Visible, perceptible. {#--raH#}
+A small round pillow. {#--raM#} A
+four-wheeled carriage. {#--rI#} Skill,
+dexterity, ability; {#tadBawacAturIturI#}
+&lt;ls&gt;N. 1. 12.&lt;/ls&gt;
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

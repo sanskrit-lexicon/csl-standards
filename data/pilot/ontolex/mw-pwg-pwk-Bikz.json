@@ -152,6 +152,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-35"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-36"
         }
       ],
       "csl:sourceRecord": [
@@ -166,6 +169,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Bikz",
@@ -405,6 +411,16 @@
       "csl:lineNumber": 190000,
       "csl:pageColumn": "0816-b",
       "rdf:value": "<L>22167<pc>0816-b<k1>Bikz<k2>Bikz\n{#Bikz#}¦ {c1c} <ab>A.</ab> ({#Bikzate, Bikzita#}) {@1@} To\nask, beg or ask for (with two\n<ab>acc.</ab>), {#BikzamARo vanaM priyAM#} <ls>Bk. 6. 9.</ls>\n{@--2@} To beg (as alms); {#na yajYArTaM DanaM#}\n{#SUdrAdvipro Bikzeta karhicit#} <ls>Ms. 11. 24</ls>,\n<ls n=\"Ms. 11.\">25.</ls> {@--3@} To ask without obtaining.\n{@--4@} To be weary or distressed. {@--5@}\nTo obtain.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "6368",
+      "csl:lineNumber": 42103,
+      "csl:pageColumn": "0934",
+      "rdf:value": "<L>6368<pc>0934<k1>Bikz<k2>Bikz\r\n{@√bhikṣ@}¦ (altes <ab>Desid.</ab> von bhaj), {%zu erlangen wünschen,%} daher 1〉 etwas [<ab>A.</ab> <ab>G.</ab>] {%erbitten;%} 2〉 etwas [<ab>A.</ab> <ab>G.</ab>] {%erwünschen,%} danach {%verlangen%} (von Göttern).\r\n<div n=\"H\">Stamm {@bhikṣa:@}\r\n<div n=\"TS\">-e [<per>1.</per> <ab>s.</ab> <ab>me.</ab>] 1〉 sumatím {171,1}; sukīrtím váruṇasya {219,1}.\r\n<div n=\"TS\">-ate 1〉 táva nā́ma {548,17} (avasyús).\r\n<div n=\"TS\">-anta [<ab>Co.</ab>] 1〉 rátnam {290,7}.\r\n<div n=\"TS\">-eta [<ab>Opt.</ab>] 1〉 sumnám {627,15}; {638,1}; pitvás {152,6}.\r\n<div n=\"H\"><ab>Part.</ab> {@bhíkṣamāṇa:@}\r\n<div n=\"TS\">-as 1〉 dráviṇam {295,6}. 2〉 amṛ́tasya cā́ruṇas {782,2} (<ls>SV.</ls> falsch bhákṣamāṇas).\r\n<div n=\"TS\">-ās [<ab>m.</ab>] 1〉 sumatím {73,7}; sumnám {522,6}; śrávasas {606,7}. — 2〉 stutím jaritúr {857,5}.\r\n<div n=\"TS\">-e [<ab>d.</ab> <ab>f.</ab>] 1〉 prasavám {267,2} (vípāṭ śutudrī́).\r\n<div n=\"TS\">-ās [<ab>N.</ab> <ab>p.</ab> <ab>f.</ab>] 1〉 sumatím {73,6} (síndhavas); dráviṇam {526,3} (matáyas); {337,9} (manīṣā́s).\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-1",
@@ -932,6 +948,20 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "Ms. 11."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-36",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz"
+      },
+      "frac:evidence": "SV.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#root-relation",

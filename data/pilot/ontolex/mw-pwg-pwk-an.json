@@ -200,6 +200,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-32"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-33"
         }
       ],
       "csl:sourceRecord": [
@@ -214,6 +217,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:an",
@@ -741,6 +747,16 @@
       "rdf:value": "<L>1130<pc>0054-c<k1>an<k2>an\n{#an#}¦ {c2c} <ab>P.</ab> [{#aniti, Ana-nI-t, Ana, anituM#},\n{#anita#}] {@1@} To breathe; {#AnIdavAtaM#} <lbinfo n=\"sva#DayA\"/>\n{#svaDayA tadekaM#} <ls>Rv. 10. 129. 2.</ls> {@--2@} To move,\ngo about, live; {#ko hyevAnyAt yadyeza#}\n{#AkASa AnaMdo na syAt#} <ls>T. Up.</ls> {@--3@}\nTo gasp, pant with thirst (<ab>Ved.</ab>)\n{%--<ab>Caus.</ab>%} {#Anayati#}; {%<ab>desid.</ab>%} {#aninizati#}. -- (4\nA.) To live.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "392",
+      "csl:lineNumber": 2261,
+      "csl:pageColumn": "0050",
+      "rdf:value": "<L>392<pc>0050<k1>an<k2>an\r\n{@√an@}¦ [<ls>Cu. 〔419〕</ls>], {%athmen%}.\r\n<div n=\"Pf\">Mit {@ápa,@} {%aushauchen, den letzten Athemzug thun%}.\r\n<div n=\"Pf\">{@prá@} 1〉 {%zu athmen beginnen,%} <ab>vgl.</ab> prāṇā; 2〉 <ab>part.</ab> <ab>n.</ab>, {%das Beseelte%}.\r\n<div n=\"Pf\">{@sám,@} {%athmen, leben%}.\r\n<div n=\"H\">Stamm {@án:@}\r\n<div n=\"TS\">-niti {@pra@} 1〉 yás pra‿áṇiti {951,4}.\r\n<div n=\"H\"><ab>Imperf.</ab> {@ā́n@} (tonlos {858,8}):\r\n<div n=\"TS\">-nīt avātám tád ékam {955,2}. — {@prá@} 1〉 adyá‿íd {858,8}.\r\n<div n=\"H\"><ab>Perf.</ab> {@ān:@}\r\n<div n=\"TS\">-na [<per>3.</per> <ab>s.</ab>] {@sám@} {881,5} adyā́ mamāra sá hiás 〰.\r\n<div n=\"H\"><ab>Part.</ab> {@anát:@}\r\n<div n=\"TS\">-át [<ab>n.</ab>] {164,30} turágātu jīvám.\r\n<div n=\"TS\">-atás [<ab>G.</ab>] {@pra@}‿ [prāṇatás]; 2〉 rā́jā {947,3} (neben nimiṣatás, jágatas).\r\n<div n=\"TS\">-atī́ [<ab>N.</ab> <ab>s.</ab> <ab>f.</ab>] {@apa@} (uṣā́s) {1015,2} asyá (sū́ryasya) prāṇā́t 〰.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1237,6 +1253,20 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-ap90"
       },
       "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-33",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan"
+      },
+      "frac:evidence": "Cu. 〔419〕",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

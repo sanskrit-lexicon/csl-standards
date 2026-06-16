@@ -33,6 +33,7 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#record-pwk> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#record-gra> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-1> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-2> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-3> ;
@@ -59,7 +60,8 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-24> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-25> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-26> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-27> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-27> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-28> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "antika"@sa-Latn-x-SLP1 .
@@ -151,6 +153,13 @@
   csl:recordNumber "5444" ;
   csl:lineNumber "20168" ;
   csl:pageColumn "1-064-b" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#record-gra> a csl:SourceRecord ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  csl:recordNumber "586" ;
+  csl:lineNumber "3228" ;
+  csl:pageColumn "0066" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#sense-mw-1> ;
@@ -370,6 +379,13 @@
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332> ;
   frac:evidence "GAL." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#record-pwk> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#attestation-28> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332> ;
+  frac:evidence "RV" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aantika-mw8332#record-gra> ;
   csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "textual" .
 

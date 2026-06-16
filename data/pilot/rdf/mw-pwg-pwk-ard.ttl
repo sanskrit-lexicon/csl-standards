@@ -57,6 +57,7 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#record-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#record-ap90> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#record-gra> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-1> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-2> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-3> ;
@@ -108,7 +109,8 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-49> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-50> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-51> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-52> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-52> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-53> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "ard"@sa-Latn-x-SLP1 .
@@ -322,6 +324,13 @@
   csl:recordNumber "4174" ;
   csl:lineNumber "38826" ;
   csl:pageColumn "0168-b" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#record-gra> a csl:SourceRecord ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  csl:recordNumber "1059" ;
+  csl:lineNumber "5857" ;
+  csl:pageColumn "0114" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#sense-mw-1> ;
@@ -743,6 +752,15 @@
   csl:evidenceType "named-source-citation" ;
   csl:citedWork "Bk." ;
   csl:citedRange "15.115" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#attestation-53> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard> ;
+  frac:evidence "AV. 4,15,6" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "AV." ;
+  csl:citedRange "4,15,6" ;
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aard#root-relation> a csl:RootRelation ;

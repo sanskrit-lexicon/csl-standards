@@ -2,17 +2,13 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 import { extractLabeledSources } from "./lib/citations.mjs";
+import { ALL_DICTS, DICT_LABEL } from "./lib/dictionaries.mjs";
 
-// mw/pwg/pwk are the tri-dict backbone; ap90 (Apte 1890) is an optional fourth
-// source attached per case. Senses are only modeled for the first three; ap90
-// contributes a source record and evidence (its named citations).
-const DICTS = ["mw", "pwg", "pwk", "ap90"];
-const DICT_LABEL = {
-  mw: "Monier-Williams 1899",
-  pwg: "Boehtlingk-Roth PWG",
-  pwk: "Boehtlingk PWK",
-  ap90: "Apte 1890"
-};
+// mw/pwg/pwk are the tri-dict backbone; optional dictionaries are attached per case
+// (see scripts/lib/dictionaries.mjs). Senses are only modeled for the dictionaries
+// that have a sense extractor; the rest contribute a source record and evidence
+// (their named citations).
+const DICTS = ALL_DICTS;
 
 const BASE = "https://sanskrit-lexicon.github.io/csl-standards/id";
 const PROFILE_VERSION = "ontolex-frac-profile-v0.1";

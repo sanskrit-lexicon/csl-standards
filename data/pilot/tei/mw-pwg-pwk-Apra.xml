@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -69,6 +71,9 @@
         <abbr>Ind. St. 7,470, N.</abbr>
         <citedRange>7,470,N</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-Apra-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Apra-record-ap90">
+        <abbr>Sāy.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-Apra-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -102,6 +107,31 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;15007&lt;pc&gt;1-178-a&lt;k1&gt;Apra&lt;k2&gt;Apra/&lt;h&gt;1
 &lt;hom&gt;1.&lt;/hom&gt; {#Apra/#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; {%thätig, eifrig%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Apra-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">6453</idno>
+        <idno type="line">57184</idno>
+        <idno type="pc">0246-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6453&lt;pc&gt;0246-a&lt;k1&gt;Apra&lt;k2&gt;Apra
+{#Apra#}¦ {%&lt;ab&gt;a.&lt;/ab&gt;%} &lt;ab&gt;Ved.&lt;/ab&gt; [{#A-pf-mUla˚ ka#}] {@1@}
+Filling. {@--2@} Able to reach (&lt;ls&gt;Sāy.&lt;/ls&gt;).
+{@--3@} Busy, zealous.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Apra-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">1545</idno>
+        <idno type="line">8857</idno>
+        <idno type="pc">0180</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1545&lt;pc&gt;0180&lt;k1&gt;Apra&lt;k2&gt;Apra/
+{@āprá,@}¦ &lt;ab&gt;a.&lt;/ab&gt;, {%thätig, eifrig%} [von pṛ mit ā́]; parallel krāṇá.
+&lt;div n=&quot;TS&quot;&gt;-ásya {132,2}.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

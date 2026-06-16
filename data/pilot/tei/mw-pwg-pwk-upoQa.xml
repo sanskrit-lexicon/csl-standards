@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -68,6 +69,30 @@
       <bibl xml:id="mw-pwg-pwk-upoQa-cite-pwg-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-upoQa-record-pwg">
         <abbr>ŚKDR.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-upoQa-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-upoQa-record-ap90">
+        <abbr>Ś. 5. 7</abbr>
+        <citedRange>5.7</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-upoQa-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-upoQa-record-ap90">
+        <abbr>M. 5. 1</abbr>
+        <citedRange>5.1</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-upoQa-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-upoQa-record-ap90">
+        <abbr>V. 2. 7</abbr>
+        <citedRange>2.7</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-upoQa-cite-ap90-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-upoQa-record-ap90">
+        <abbr>Ki. 17. 54</abbr>
+        <citedRange>17.54</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-upoQa-cite-ap90-5" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-upoQa-record-ap90">
+        <abbr>13. 23.</abbr>
+        <ref type="inherited-siglum">Ki.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-upoQa-cite-ap90-6" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-upoQa-record-ap90">
+        <abbr>Ś. 7. 10</abbr>
+        <citedRange>7.10</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-upoQa-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -106,6 +131,26 @@
 &lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;Adj.&lt;/lex&gt; &lt;ab&gt;Partic.&lt;/ab&gt; von {#Uh#} oder {#vah#} mit {#upa#}.
 &lt;div n=&quot;1&quot;&gt;— 2〉 *&lt;lex&gt;m.&lt;/lex&gt; {%Schlachtordnung%}.
 &lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;f.&lt;/lex&gt; {#A#} {%eine Hinzugeheirathete, Nebengattin%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-upoQa-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">8867</idno>
+        <idno type="line">76841</idno>
+        <idno type="pc">0330-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;8867&lt;pc&gt;0330-b&lt;k1&gt;upoQa&lt;k2&gt;upoQa
+{#upoQa#}¦ {%&lt;ab&gt;p. p.&lt;/ab&gt;%} {@1@} Collected, &lt;lbinfo n=&quot;accumu+lated&quot;/&gt;
+accumulated, increased, stored up;  &lt;lbinfo n=&quot;upoQa#tapasAM&quot;/&gt;
+{#upoQatapasAM#} &lt;ls&gt;Ś. 5. 7&lt;/ls&gt;; {#˚balasya te#} &lt;ls&gt;M. 5. 1&lt;/ls&gt;;
+&lt;ls&gt;V. 2. 7&lt;/ls&gt;; so {#˚madaH, ˚harzaH#} &amp;c. {@--2@} Brought
+near, proximate, near; &lt;ls&gt;Ki. 17. 54&lt;/ls&gt;,
+&lt;ls n=&quot;Ki.&quot;&gt;13. 23.&lt;/ls&gt; {@--3@} Arrayed for battle (as an
+army). {@--4@} Begun, commenced;
+{#upoQaSabdA na raTAMganemayaH#} &lt;ls&gt;Ś. 7. 10&lt;/ls&gt; &lt;lbinfo n=&quot;caus+ing&quot;/&gt;
+causing sound. {@--5@} Married. {@--6@} A &lt;lbinfo n=&quot;bat+tle&quot;/&gt;
+battle-array. 
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

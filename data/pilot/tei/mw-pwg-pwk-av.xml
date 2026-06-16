@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -307,6 +309,28 @@
         <abbr>R. ed. Bomb. 4,60,20</abbr>
         <citedRange>4,60,20</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-av-record-ap90">
+        <abbr>R. 9. 1</abbr>
+        <citedRange>9.1</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-av-record-ap90">
+        <abbr>Ś. 1. 1.</abbr>
+        <citedRange>1.1</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-av-record-ap90">
+        <abbr>R. 11. 75</abbr>
+        <citedRange>11.75</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-ap90-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-av-record-ap90">
+        <abbr>1. 65.</abbr>
+        <ref type="inherited-siglum">R.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-av-record-gra">
+        <abbr>Text</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-av-cite-gra-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-av-record-gra">
+        <abbr>Pada</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-av-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -446,6 +470,144 @@
       <quote xml:space="preserve">&lt;L&gt;212914&lt;pc&gt;7-310-b&lt;k1&gt;av&lt;k2&gt;av
 √{#av#}¦ I. {#avita#} &lt;ls&gt;R. ed. Bomb. 4,60,20&lt;/ls&gt; nach dem &lt;ab&gt;Comm.&lt;/ab&gt; = {#jYAta#}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#aBi#} I. 5.&lt;info n=&quot;sup_7&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-av-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">4340</idno>
+        <idno type="line">40387</idno>
+        <idno type="pc">0175-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4340&lt;pc&gt;0175-b&lt;k1&gt;av&lt;k2&gt;av
+{#av#}¦ {c1c} &lt;ab&gt;P.&lt;/ab&gt; [{#avati, Ava, AvIt#}, &lt;lbinfo n=&quot;avi#zyati&quot;/&gt;
+{#avizyati, avituM, avita#} or {#Uta#}] {@1@} To &lt;lbinfo n=&quot;pro+tect&quot;/&gt;
+protect, defend; {#yamavatAmavatAM ca Duri#} &lt;lbinfo n=&quot;sTi#taH&quot;/&gt;
+{#sTitaH#} &lt;ls&gt;R. 9. 1&lt;/ls&gt;; {#pratyakzABiH#} &lt;lbinfo n=&quot;prapannastanuBirava#tu&quot;/&gt;
+{#prapannastanuBiravatu vastABirazwABirISaH#} &lt;ls&gt;Ś. 1. 1.&lt;/ls&gt; {@--2@} To
+please, satisfy, give pleasure to; do
+good to; {#vikramastena mAmavati nAjite tvayi#}
+&lt;ls&gt;R. 11. 75&lt;/ls&gt;; {#na mAmavati sadvIpA#} &lt;lbinfo n=&quot;ratnasUra#pi&quot;/&gt;
+{#ratnasUrapi medinI#}. &lt;ls n=&quot;R.&quot;&gt;1. 65.&lt;/ls&gt; {@--3@} To like, wish, &lt;lbinfo n=&quot;de+sire&quot;/&gt;
+desire, love. {@--4@} To favour, promote,
+animate. (In the Dhātupāṭha &lt;lbinfo n=&quot;se+veral&quot;/&gt;
+several other meanings are assigned
+to this root, but they are very
+rarely used in classical literature;
+{%&lt;ab&gt;e. g.&lt;/ab&gt;%} {#gati, kAMti, avagama, praveSa, SravaRa#}, &lt;lbinfo n=&quot;svA#myarTa&quot;/&gt;
+{#svAmyarTa#} or {#sAmarTya, yAcana, kriyA, dIpti, avApti#},
+{#grahaRa, vyApti, AliMgana, hiMsA, AdAna, dahana#},
+{#BAva, BAga#} and {#vfdDi#}). {%--&lt;ab&gt;Caus.&lt;/ab&gt;%} To &lt;lbinfo n=&quot;con+sume&quot;/&gt;
+consume, devour. --WITH {#anu#} to &lt;lbinfo n=&quot;en+courage&quot;/&gt;
+encourage, inspire. {#--ud#} {1} to regard,
+attend to. {2} to wait for. {3} to &lt;lbinfo n=&quot;pro+mote&quot;/&gt;
+promote, impel. {#--upa#} {1} to cherish,
+behave friendly towards. {2} to &lt;lbinfo n=&quot;en+courage&quot;/&gt;
+encourage. {#--saM#} {1} to satisfy, satiate. {2}
+to protect, maintain. [&lt;ab&gt;cf.&lt;/ab&gt; &lt;ab&gt;L.&lt;/ab&gt; {%aveo%}].
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-av-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">1101</idno>
+        <idno type="line">6149</idno>
+        <idno type="pc">0121</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1101&lt;pc&gt;0121&lt;k1&gt;av&lt;k2&gt;av
+{@√av,@}¦ stets mit dem &lt;ab&gt;Acc.&lt;/ab&gt;, der jedoch an einzelnen wenigen Stellen ({502,6}; {231,6}; {655,11}; {441,7}; {600,5}; {451,6}; {600,5}; {946,7}; {562,2}; {185,4}) aus dem Zusammenhange zu ergänzen ist. Die sinnliche Grundbedeutung, soweit sie sich noch nachweisen lässt, ist „fördern“, genauer: etwas, was sich bewegt oder zu bewegen strebt, in den rechten (gewünschten, oder der Sache angemessenen) Zustand der Bewegung versetzen. In dieser sinnlichen Bedeutung erscheint es mit dem Objecte Wagen ({389,7}. _{389,8}; {689,6}; {222,1}; {112,12}. _{112,22}; {622,35}) oder Ross ({112,21}. _{112,22}; {269,3}), ähnlich in Verbindung mit prá ({102,3}; {689,4}; {928,1}; {326,6}), úd ({222,2}); dann auf geistiges [Page122] Gebiet übertragen „jemand fördern, unterstützen, begünstigen, ermuthigen, laben, erquicken“, und auf Dinge bezogen „etwas gern haben, lieben, etwas (Dargebotenes) gern annehmen, sich munden lassen“. Das &lt;ab&gt;Caus.&lt;/ab&gt; bedeutet „essen, geniessen“, Also 1〉 {%fördern, antreiben%} (Rosse, Wagen, Wogen, Götter zur Eile); 2〉 jemand {%fördern, begünstigen, laben, erquicken, unterstützen,%} ihm {%hold sein,%} besonders von dem Beistande im Kampfe, und zwar Götter als Subject, Menschen als Object; 3〉 ebenso in der Beziehung der Götter auf Götter oder Gegenstände; 4〉 jemandem [&lt;ab&gt;A.&lt;/ab&gt;] wozu [&lt;ab&gt;D.&lt;/ab&gt;, &lt;ab&gt;L.&lt;/ab&gt;] {%verhelfen;%} 5〉 {%laben, erquicken,%} Subject: Lieder, Speisen &lt;ab&gt;u. s. w.&lt;/ab&gt;, Object: Götter &lt;ab&gt;u. s. w.&lt;/ab&gt;; 6〉 etwas [&lt;ab&gt;A.&lt;/ab&gt;] {%gern haben, lieben%} (von Göttern); 7〉 {%gern annehmen, sich wohl gefallen lassen,%} &lt;ab&gt;Subj.&lt;/ab&gt;: Götter, &lt;ab&gt;Obj.&lt;/ab&gt;: Opfer, Gebete, Lieder; 8〉 den Göttern [&lt;ab&gt;D.&lt;/ab&gt;] Loblied [&lt;ab&gt;A.&lt;/ab&gt;] {%zusenden;%} 9〉 &lt;ab&gt;Caus.&lt;/ab&gt;, {%essen, verzehren%}.
+&lt;div n=&quot;Pf&quot;&gt;Mit {@ánu,@} {%erlaben, auffrischen%} (die Kraft).
+&lt;div n=&quot;Pf&quot;&gt;{@abhí,@} erquicken [&lt;ab&gt;A.&lt;/ab&gt;].
+&lt;div n=&quot;Pf&quot;&gt;{@úd@} 1〉 {%fördern, antreiben%} (Wagen); 2〉 {%fördern, unterstützen%} (Götter die Menschen); 3〉 {%gnädig annehmen%} (Gebete).
+&lt;div n=&quot;Pf&quot;&gt;{@úpa,@} mit &lt;ab&gt;Dat.&lt;/ab&gt; oder &lt;ab&gt;Acc.&lt;/ab&gt; 1〉 {%liebkosen;%} 2〉 {%erfrischen%}.
+&lt;div n=&quot;Pf&quot;&gt;{@prá@} 1〉 {%fördern, antreiben%} (Rosse, Wagen &lt;ab&gt;u. s. w.&lt;/ab&gt;); 2〉 {%fördern, unterstützen%} (Götter die Menschen oder andere Götter); 3〉 {%gern annehmen%} (Gebete); 4〉 {%laben%} (Lieder die Götter).
+&lt;div n=&quot;Pf&quot;&gt;{@sám@} 1〉 {%erlaben%} (mit Speise); 2〉 {%zusammentreiben%} (zum Kampfe).
+&lt;div n=&quot;H&quot;&gt;Stamm {@áva:@}
+&lt;div n=&quot;TS&quot;&gt;-asi 2〉 súṣvim {464,2}. — 3〉 devā́n {656,3}. — 4〉 kṣatrā́ya tvam {657,6}. — 6〉 māyā́s {499,1}.
+&lt;div n=&quot;TS&quot;&gt;-ati 1〉 {622,35}. — 3〉 pṛthivī́m {437,4} (rétasā). — {@upa@} 1〉 vṛsāravā́ya vádate {972,2} (ciccikás).
+&lt;div n=&quot;TS&quot;&gt;-athas 1〉 {112,22}. — 2〉 {112,17}. _{112,20}; {417,1}; {440,1}; {585,4}. — 7〉 dhíyas {112,2}.
+&lt;div n=&quot;TS&quot;&gt;-atha [-athā] 2〉 {332,5}; {333,6}; {507,8}; {861,14}; {889,14}; {893,11}. — 3〉 síndhum {640,24} (marutas).
+&lt;div n=&quot;TS&quot;&gt;-anti 2〉 {179,3}; {795,2}. — 6〉 yád {214,19}.
+&lt;div n=&quot;TS&quot;&gt;-ās 2〉 yám {27,7}.
+&lt;div n=&quot;TS&quot;&gt;-āthas 7〉 yásya bráhmāṇi {577,2}.
+&lt;div n=&quot;TS&quot;&gt;-ātha 2〉 yám {556,3}.
+&lt;div n=&quot;TS&quot;&gt;-es {@prá@} 3〉 dhíyas {641,12}.
+&lt;div n=&quot;TS&quot;&gt;-et 2〉 ugrám {488,15}. — {@sám@} 2〉 jánau {388,8}.
+&lt;div n=&quot;TS&quot;&gt;-a [-ā] 1〉 {689,6}. — 2〉 {79,7}; {456,15}; {489,19}; {502,6}; {633,25}; {701,9}; {876,5}. — 3〉 tuā́m {656,2}.
+&lt;div n=&quot;TS&quot;&gt;-atu 2〉 (&lt;ab&gt;erg.&lt;/ab&gt; nas) {231,6}.
+&lt;div n=&quot;TS&quot;&gt;-atam 7〉 dhíyam {231,5}; {493,16}.
+&lt;div n=&quot;TS&quot;&gt;-atām 3〉 tvā {76,2}. — 7〉 hávam {896,10}.
+&lt;div n=&quot;TS&quot;&gt;-antu 2〉 {106,3}; {396,5}; {493,4}. — 7〉 hávanam {1023,4}.
+&lt;div n=&quot;H&quot;&gt;{@ava:@}
+&lt;div n=&quot;TS&quot;&gt;-āmi 6〉 tád {950,4}.
+&lt;div n=&quot;TS&quot;&gt;-asi {@úpa@} 1〉 putrás mātárā {966,2}.
+&lt;div n=&quot;TS&quot;&gt;-ati 2〉 {684,14}. — 6〉 tád {620,12}.
+&lt;div n=&quot;TS&quot;&gt;-atha 2〉 {408,14}.
+&lt;div n=&quot;TS&quot;&gt;-anti 2〉 {346,9}.
+&lt;div n=&quot;TS&quot;&gt;-a [-ā] 1〉 {269,3}; {389,7}. _{389,8}. — 2〉 {7,4}; {387,7}; {487,11}; {684,15}; {928,1}. — 4〉 asmā́n gómati vrajé {679,6}. — 7〉 yajñám {266,12}; dhíyam {296,8}. — {@ánu@} [Page123] svadhā́m {348,6}. — úd 2〉 {102,4}; {328,4}; {359,9}. — 3〉 dhíyam {557,3}. — {@prá@} 1〉 {102,3}; {689,4}. — 2〉 {49,2}; {482,5}; {656,2}; {669,10}; {864,1}; {906,7}.
+&lt;div n=&quot;TS&quot;&gt;-atāt [&lt;per&gt;2.&lt;/per&gt; &lt;ab&gt;s.&lt;/ab&gt;] 2〉 {623,2}.
+&lt;div n=&quot;TS&quot;&gt;-atu 1〉 ūrmím {563,2}. — 2〉 {491,13}; {564,2}; {1008,2}. — 3〉 śávas {441,6}; anyā́ anyā́m {923,14}. — 4〉 nas ūtáye {450,7}. — {@prá@} 1〉 {928,1}. — 2〉 nas carátham {918,13}; sénās {929,7}; śrutám {926,1}. — 4〉 úpastutis tvā {621,16}.
+&lt;div n=&quot;TS&quot;&gt;-atam 1〉 {222,1}. — 2〉 {109,7}. _{109,8}; {181,7}; {394,7}; {599,1}. _{599,5}; {628,20}; {1028,3}. _{1028,5}. — 7〉 dhíyas {34,5}. — {@prá@} 2〉 {31,8}; {628,21}; {781,10}; {1026,4}; {655,11}. — 3〉 dhíyas {117,23}; gíras {694,9}.
+&lt;div n=&quot;TS&quot;&gt;-ata [-atā] 2〉 {650,3}; {929,11}; {554,8}. — 3〉 yajñám {861,11}; bhojám {933,11}. — {@úd@} 1〉 {222,2}. — {@úpa@} 1〉 anyā́ anyásyai {923,14}. — 2〉 avatám {681,12}. — {@prá@} 2〉 {573,5}. — 3〉 vácas {923,14}.
+&lt;div n=&quot;TS&quot;&gt;-antu 2〉 {22,16}; {23,12}; {242,10}; {296,3}; {327,10} [&lt;ab&gt;Subj.&lt;/ab&gt; ūtáyas]; {395,11}; {400,7}; {441,7}; {491,14}; {565,1}; {623,1} [&lt;ab&gt;Subj.&lt;/ab&gt; dhíyas]; {672,12}; {841,1}. _{841,5}. — 4〉 dhíyam tokám ca {552,7}. — 5〉 nas suastáye {405,13}. — 7〉 yajñám {242,8}; {329,3}; manīṣā́m {903,8}. — {@prá@} 1〉 agním jūtáye {127,2}. — 2〉 {400,7}. — 4〉 vām {510,2} (gíras).
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Imperf.&lt;/ab&gt; {@ā́va:@}
+&lt;div n=&quot;TS&quot;&gt;-am 2〉 {322,3}.
+&lt;div n=&quot;TS&quot;&gt;-as [&lt;ab&gt;vgl.&lt;/ab&gt; āvar von vṛ] 2〉 {33,14}. _{33,15}; {176,5}; {467,4}; {931,11}. — {@ánu@} śruṣṭím {284,2}. — {@prá@} 2〉 {623,12}; {1018,9}; {1019,9}.
+&lt;div n=&quot;TS&quot;&gt;-at 3〉 {85,7}; {461,3}. — 5〉 {534,19}.
+&lt;div n=&quot;TS&quot;&gt;-atam 1〉 {112,12}. _{112,21}. — 2〉 {112,5}. _{112,7}. _{112,9}—_{112,11}. _{112,13}. _{112,23}; {625,25}; {628,20}. _{628,21}. — {@prá@} 2〉 {47,5}; {112,13}. _{112,23}; {599,6}. — {@sam@} 1〉 mánum iṣā́ {112,18}.
+&lt;div n=&quot;TS&quot;&gt;-ata 2〉 {64,13}; {166,8}. _{166,13}.
+&lt;div n=&quot;TS&quot;&gt;-an 8〉 vām stómam {340,6}.
+&lt;div n=&quot;H&quot;&gt;{@āva:@}
+&lt;div n=&quot;TS&quot;&gt;-am 2〉 {875,3}.
+&lt;div n=&quot;TS&quot;&gt;-as 2〉 {535,2}. — {@prá@} 1〉 étaśam {326,6}; śáṃsam {33,7}; cakrásya vartaním {672,8}. — 2〉 {33,14}; {176,5}; {206,9}; {467,5}; {535,3}; {880,1}.
+&lt;div n=&quot;TS&quot;&gt;-at 5〉 {934,2} (tád nas); yajñás te vájram {266,12}. — 7〉 prábhartum {282,1};&lt;chg type=&quot;del&quot; n=&quot;13&quot; src=&quot;gra&quot;&gt;&lt;old&gt;tám (drapsám) {705,13};&lt;/old&gt;&lt;/chg&gt; vā́cam {956,4}. — {@úd@} 2〉 {928,7}. — {@prá@} 2〉 {36,17}; {61,15}; {130,8}; {804,5}; {976,5}. — 4〉 (gī́r váruṇam) {600,5}.
+&lt;div n=&quot;TS&quot;&gt;-atam 4〉 ráṇāya váśam {116,21}. — {@prá@} 2〉 {599,4}.
+&lt;div n=&quot;TS&quot;&gt;-atām {@ánu@} {939,1}.
+&lt;div n=&quot;TS&quot;&gt;-an 1〉 ū́rjam {1023,1}. — {@ánu@} {627,24}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Perf.&lt;/ab&gt; {@ā́v:@}
+&lt;div n=&quot;TS&quot;&gt;-vitha [-vithā] 1〉 índram vṛtrā́ya hántave {773,22}. — 2〉 {131,5}; {204,9}; {623,9}. _{623,12}; {677,10}; {946,7}. — 3〉 samudrám {632,2}. — 4〉 nas vā́jasātaye {689,2}.
+&lt;div n=&quot;H&quot;&gt;{@āv:@}
+&lt;div n=&quot;TS&quot;&gt;-vitha 2〉 {53,10}; {54,6}. — 4〉 (kṣatrā́ya) tvam {657,6}. — dhíyas {666,11}. — {@prá@} 2〉 {51,5}. _{51,6}; {656,7}; {657,7}. — 3〉 {657,1}.
+&lt;div n=&quot;TS&quot;&gt;-va [&lt;per&gt;3.&lt;/per&gt; &lt;ab&gt;s.&lt;/ab&gt;] 3〉 járatas kárnam {906,3}. — 5〉 sutás índram {202,11}.
+&lt;div n=&quot;TS&quot;&gt;-áthus 2〉 putrám iva pitárau {957,5}.
+&lt;div n=&quot;TS&quot;&gt;-atus {@úpa@} 1〉 putrébhyas pitárā {161,10}.
+&lt;div n=&quot;TS&quot;&gt;-á [&lt;per&gt;2.&lt;/per&gt; &lt;ab&gt;pl.&lt;/ab&gt;] 2〉 {627,18}. [Page124]
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Aor.&lt;/ab&gt; {@ā́vís, āvī@} (betont nur {332,6}):
+&lt;div n=&quot;TS&quot;&gt;-īt {@abhí@} nas jyótiṣā {809,39}. — {@prá@} 2〉 {536,2}.
+&lt;div n=&quot;TS&quot;&gt;-iṣus 2〉 {332,6}. — 3〉 tuā́m devā́s {11,5}.
+&lt;div n=&quot;H&quot;&gt;{@ávis, ávī:@}
+&lt;div n=&quot;TS&quot;&gt;-īs 2〉 {451,6} (&lt;ab&gt;erg.&lt;/ab&gt; tā́n).
+&lt;div n=&quot;TS&quot;&gt;-īt 2〉 {550,14}.
+&lt;div n=&quot;TS&quot;&gt;-iṣṭa 2〉 ásmān {550,12}.
+&lt;div n=&quot;H&quot;&gt;{@avís, avī:@}
+&lt;div n=&quot;TS&quot;&gt;-īs 2〉 {466,1}.
+&lt;div n=&quot;TS&quot;&gt;-iṣas 2〉 nas {247,6}.
+&lt;div n=&quot;TS&quot;&gt;-iḍḍhí 2〉 {208,8}.
+&lt;div n=&quot;TS&quot;&gt;-iḍḍhi 2〉 {110,9}; {221,8}; {327,12}; {485,9}; {701,15}. — 7〉 prábhṛtim {215,1}.
+&lt;div n=&quot;TS&quot;&gt;-iṣṭu 1〉 rátham {852,9}. — {@prá@} 2〉 dasrā́ {852,1}.
+&lt;div n=&quot;TS&quot;&gt;-iṣṭám 2〉 {583,6}. — 7〉 dhíyas {346,11}; {580,5}; {613,9}.
+&lt;div n=&quot;TS&quot;&gt;-iṣṭam 2〉 {221,6}; {416,9}; {629,5}. — 7〉 púraṃdhīs {583,5}.
+&lt;div n=&quot;TS&quot;&gt;-iṣṭām 2〉 {185,9}; {397,2}.
+&lt;div n=&quot;TS&quot;&gt;-iṣṭána [-iṣṭánā] 1〉 paijavanásya kétam {534,25}.
+&lt;div n=&quot;TS&quot;&gt;-itā́ [&lt;per&gt;2.&lt;/per&gt; &lt;ab&gt;pl.&lt;/ab&gt;, für iṣṭá?] 2〉 {575,6}.
+&lt;div n=&quot;H&quot;&gt;Precativ {@avyās:@}
+&lt;div n=&quot;TS&quot;&gt;-ās [&lt;per&gt;3.&lt;/per&gt; &lt;ab&gt;s.&lt;/ab&gt;] 2〉 {229,10}. — 7〉 dhíyas {965,5}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Imperf.&lt;/ab&gt; &lt;ab n=&quot;des&quot;&gt;d.&lt;/ab&gt; &lt;ab&gt;Caus.&lt;/ab&gt; {@āvaya:@}
+&lt;div n=&quot;TS&quot;&gt;-as 9〉 bhū́ri {665,38}.
+&lt;div n=&quot;TS&quot;&gt;-at ánnam {939,8}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Part.&lt;/ab&gt; {@ávat:@}
+&lt;div n=&quot;TS&quot;&gt;-an 6〉 {562,2} ávantīs.
+&lt;div n=&quot;TS&quot;&gt;-antam 5〉 {682,7}.
+&lt;div n=&quot;TS&quot;&gt;-atā {@ud@} 1〉 ohne &lt;ab&gt;Obj.&lt;/ab&gt; tvákṣasā {459,9} (&lt;ls&gt;Text&lt;/ls&gt; udā́vatā, &lt;ls&gt;Pada&lt;/ls&gt; udávatā).
+&lt;div n=&quot;TS&quot;&gt;-antī [&lt;ab&gt;du.&lt;/ab&gt; &lt;ab&gt;f.&lt;/ab&gt;] 2〉 ródasī {185,4}.
+&lt;div n=&quot;TS&quot;&gt;-antīs [&lt;ab&gt;N.&lt;/ab&gt;] 5〉 {152,6}.
+&lt;div n=&quot;TS&quot;&gt;-antīs [&lt;ab&gt;A.&lt;/ab&gt;] 6〉 {562,2}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Part.&lt;/ab&gt; II. {@ūta@} [siehe tvóta, yuṣmóta &lt;ab&gt;u. s. w.&lt;/ab&gt;].
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Inf.&lt;/ab&gt; {@ávitu:@}
+&lt;div n=&quot;TS&quot;&gt;-ave 5〉 {549,1}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Absol.&lt;/ab&gt; {@ā́via:@}
+&lt;div n=&quot;TS&quot;&gt;-ia 6〉 śruṣṭím {166,13}.
+&lt;div n=&quot;H&quot;&gt;Verbale {@áv@} [siehe áviṣṭha].
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

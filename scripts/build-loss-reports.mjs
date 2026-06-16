@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { KOSHA_SIGLUM, EDITORIAL_SIGLUM, COORDINATE } from "./lib/evidence.mjs";
+import { OPTIONAL_DICTS } from "./lib/dictionaries.mjs";
 
 // Top 15 highest-stress cases by rank / score in hard-cases
 const HIGH_STRESS_KEYS = new Set([
@@ -252,10 +253,10 @@ async function main() {
   });
   for (const model of models) {
     // Evidence-class loss reports are scoped to the tri-dict backbone (mw/pwg/pwk),
-    // so the published loss corpus stays stable as optional dictionaries (ap90) are
-    // added to the semantic model. ap90 evidence still enters the OntoLex graph and
-    // the cross-dictionary analysis.
-    const cites = (model.citations || []).filter(c => c.dictionary !== "ap90");
+    // so the published loss corpus stays stable as optional dictionaries are added
+    // to the semantic model. Their evidence still enters the OntoLex graph and the
+    // cross-dictionary analysis.
+    const cites = (model.citations || []).filter(c => !OPTIONAL_DICTS.includes(c.dictionary));
     const kosha = cites.filter(c => KOSHA_SIGLUM.test(c.source));
     if (kosha.length) reports.push(evidenceReport(model, "named-kosha-citation", kosha,
       "Named indigenous kośa (lexicon) sources, distinct from textual attestations.",

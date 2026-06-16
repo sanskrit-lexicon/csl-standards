@@ -62,6 +62,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#attestation-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#attestation-11"
         }
       ],
       "csl:sourceRecord": [
@@ -76,6 +79,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:can",
@@ -221,6 +227,16 @@
       "csl:lineNumber": 112663,
       "csl:pageColumn": "0484-a",
       "rdf:value": "<L>13070<pc>0484-a<k1>can<k2>can\n{#can#}¦ {c1c} {c6c} <ab>P.</ab> [{#canati#}] {@1@} To sound,\n{@--2@} To hurt, injure, kill.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "3221",
+      "csl:lineNumber": 20076,
+      "csl:pageColumn": "0434",
+      "rdf:value": "<L>3221<pc>0434<k1>can<k2>can\r\n{@√can,@}¦ Nebenform von kan, {%Gefallen finden, sich erfreuen%} an [<ab>Loc.</ab>]. Dazu die seltsame Aoristform cániṣṭhat in causativem Sinne: jemanden {%erfreuen,%} wozu die Parallelstelle im <ls>SV.</ls> die eben so seltsame Form janiṣṭhat [von jan] bietet [<ab>vgl.</ab> cánas, cániṣṭha].\r\n<div n=\"H\"><ab>Aor.</ab> {@canis:@}\r\n<div n=\"TS\">-iṣṭám [<per>2.</per> <ab>d.</ab> <ab>C.</ab>] ósadhīṣu, apsú {586,4}.\r\n<div n=\"H\"><ab>Aor.</ab> {@cániṣṭha(?):@}\r\n<div n=\"TS\">-at tvā (agne) girā́ {683,11}.\r\n<div n=\"H\">Grundform {@cán@}\r\n<div n=\"P\">enthalten im <ab>Superl.</ab> cániṣṭha.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#attestation-1",
@@ -369,6 +385,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "DHĀTUP.",
       "csl:citedRange": "1,840"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#attestation-11",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan"
+      },
+      "frac:evidence": "SV.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Acan#lineage-pwk",

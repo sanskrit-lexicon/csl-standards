@@ -48,6 +48,7 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#record-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#record-ap90> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#record-gra> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-1> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-2> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-3> ;
@@ -105,7 +106,8 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-55> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-56> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-57> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-58> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-58> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-59> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "As"@sa-Latn-x-SLP1 .
@@ -274,6 +276,13 @@
   csl:recordNumber "7112" ;
   csl:lineNumber "62267" ;
   csl:pageColumn "0267-b" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#record-gra> a csl:SourceRecord ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  csl:recordNumber "1647" ;
+  csl:lineNumber "9369" ;
+  csl:pageColumn "0188" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#sense-mw-1> ;
@@ -734,6 +743,13 @@
   csl:citedWork "H." ;
   csl:citedRange "1.212" ;
   csl:evidenceClass "kosha" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#attestation-59> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851> ;
+  frac:evidence "Cu. 〔568〕" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851#root-relation> a csl:RootRelation ;
   csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAs-mw27851> ;

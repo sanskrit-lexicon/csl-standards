@@ -149,6 +149,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#attestation-31"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#attestation-32"
         }
       ],
       "csl:sourceRecord": [
@@ -160,6 +163,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:akza",
@@ -432,6 +438,16 @@
       "csl:lineNumber": 936,
       "csl:pageColumn": "1-004-a",
       "rdf:value": "<L>252<pc>1-004-a<k1>akza<k2>akza<h>3\n<hom>3.</hom> {#akza#}¦\n<div n=\"1\">— 1〉 <lex>m.</lex> <lex>n.</lex> {%Sinnesorgan%}.\n<div n=\"1\">— 2〉 am Ende eines <ab>adj. Comp.</ab> (<lex>f.</lex> {#I#}) = {#akzi#}\n<div n=\"2\">— a〉 {%Auge%} <ls n=\"Chr.\">163,2</ls>. <ls n=\"Chr.\">174,5</ls>. <ls n=\"Chr.\">175,25</ls>. <ls n=\"Chr.\">184,1</ls>. <ls n=\"Chr.\">186,6</ls>.\n<div n=\"2\">— b〉 {%Masche%}.\n<div n=\"1\">— 3〉 <lex>m.</lex> {%Seele%} <ls>Ind. St. 14,382</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "44",
+      "csl:lineNumber": 227,
+      "csl:pageColumn": "0006",
+      "rdf:value": "<L>44<pc>0006<k1>akza<k2>a/kza\r\n{@ákṣa,@}¦ <ab>m.</ab>, {%Achse am Wagen%}. Die genaue Uebereinstimmung in der Form mit akṣa, Auge (<ab n=\"siehe\">s.</ab> das folgende und <ab>vgl.</ab> ákṣi, Auge mit <lang>lat.</lang> axi-s) lässt noch immer die von <ls>Benfey (S. V. glo.)</ls> angegebene Erklärung, wonach die durch das Rad gesteckte Achse als Auge des Rades aufgefasst wurde, als die wahrscheinlichste erscheinen. <ab>Vgl.</ab> die Genetiven ráthasya, cakríos und die Zusammensetzung sam-akṣá.\r\n<div n=\"TS\">-a [<ab>V.</ab>] {287,19} (vīḍo vīḍita).\r\n<div n=\"TS\">-as {164,13}; {166,9}; {287,17}; {465,3}; {625,29}; {911,12} (ā́hatas).\r\n<div n=\"TS\">-am {30,14}. _{30,15}; {549,4}.\r\n<div n=\"TS\">-ena {915,4} (neben cakríyā).\r\n<div n=\"TS\">-e [<ab>L.</ab>] {666,27} (araṭvé).\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#attestation-1",
@@ -908,6 +924,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "ŚĀNT.",
       "csl:citedRange": "2,12"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#attestation-32",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza"
+      },
+      "frac:evidence": "Benfey (S. V. glo.)",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aakza#lineage-pwk",

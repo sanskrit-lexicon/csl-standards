@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -98,6 +100,9 @@
         <abbr>DHĀTUP. 1,840</abbr>
         <citedRange>1,840</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-can-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-can-record-gra">
+        <abbr>SV.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-can-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -136,6 +141,35 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;217197&lt;pc&gt;7-340-c&lt;k1&gt;can&lt;k2&gt;can
 √{#can#}¦ II. {#ca/nati#} ({#hiMsArTa#}) &lt;ls&gt;DHĀTUP. 1,840&lt;/ls&gt;.&lt;info n=&quot;sup_7&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-can-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">13070</idno>
+        <idno type="line">112663</idno>
+        <idno type="pc">0484-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;13070&lt;pc&gt;0484-a&lt;k1&gt;can&lt;k2&gt;can
+{#can#}¦ {c1c} {c6c} &lt;ab&gt;P.&lt;/ab&gt; [{#canati#}] {@1@} To sound,
+{@--2@} To hurt, injure, kill.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-can-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">3221</idno>
+        <idno type="line">20076</idno>
+        <idno type="pc">0434</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;3221&lt;pc&gt;0434&lt;k1&gt;can&lt;k2&gt;can
+{@√can,@}¦ Nebenform von kan, {%Gefallen finden, sich erfreuen%} an [&lt;ab&gt;Loc.&lt;/ab&gt;]. Dazu die seltsame Aoristform cániṣṭhat in causativem Sinne: jemanden {%erfreuen,%} wozu die Parallelstelle im &lt;ls&gt;SV.&lt;/ls&gt; die eben so seltsame Form janiṣṭhat [von jan] bietet [&lt;ab&gt;vgl.&lt;/ab&gt; cánas, cániṣṭha].
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Aor.&lt;/ab&gt; {@canis:@}
+&lt;div n=&quot;TS&quot;&gt;-iṣṭám [&lt;per&gt;2.&lt;/per&gt; &lt;ab&gt;d.&lt;/ab&gt; &lt;ab&gt;C.&lt;/ab&gt;] ósadhīṣu, apsú {586,4}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Aor.&lt;/ab&gt; {@cániṣṭha(?):@}
+&lt;div n=&quot;TS&quot;&gt;-at tvā (agne) girā́ {683,11}.
+&lt;div n=&quot;H&quot;&gt;Grundform {@cán@}
+&lt;div n=&quot;P&quot;&gt;enthalten im &lt;ab&gt;Superl.&lt;/ab&gt; cániṣṭha.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

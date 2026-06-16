@@ -211,14 +211,16 @@ Honest limits of the current pilot, recorded so they are not mistaken for absenc
 of the phenomena (the roadmap's "do not hide model failures").
 
 - **Named citations are now materialized in the neutral model** (done). The model
-  carries 3002 citation objects — 116 `generic-lexicographer-hedge` and **2886
-  `named-source-citation`** (PWG 1872, MW 379, PWK 366, and **AP90 385** from the
-  optional fourth dictionary, capped at 12 per dictionary), each tagged with its
-  `dictionary`. **A fourth dictionary, Apte 1890 (AP90), is now attached** to the
-  133 of 250 cases whose headword it shares: it enters the neutral model and the
-  OntoLex graph as a fourth `csl:SourceRecord` with evidence-class-typed
-  attestations (the TEI archival profile and the published loss corpus stay a
-  tri-dict backbone). The TEI Lex-0 export emits them
+  carries 3066 citation objects — 116 `generic-lexicographer-hedge` and **2950
+  `named-source-citation`** (PWG 1872, MW 379, PWK 366, plus **AP90 385** and
+  **GRA 64** from the optional dictionaries, capped at 12 per dictionary), each
+  tagged with its `dictionary`. **Optional dictionaries beyond the tri-dict backbone
+  are now attached** via a registry ([scripts/lib/dictionaries.mjs](../scripts/lib/dictionaries.mjs)):
+  Apte 1890 (AP90, 133 of 250 cases) and Grassmann's Rig-Veda Wörterbuch (GRA, 109
+  of 250) each enter the neutral model and the OntoLex graph as an extra
+  `csl:SourceRecord` with evidence-class-typed attestations on the cases whose
+  headword they share. The TEI archival/Lex-0 profiles and the published loss corpus
+  stay a tri-dict backbone. The TEI Lex-0 export emits the tri-dict citations
   as entry-level `<bibl type="named-source" source="#dict-…">`, so a lemma like
   *arcya* — uncited in MW — carries PWG's named sources. **Senses are extracted
   and sense-linked for all three dictionaries** in the neutral model: MW (English,

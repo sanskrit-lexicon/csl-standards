@@ -10,6 +10,7 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { ALL_DICTS } from "./lib/dictionaries.mjs";
 
 // Loss-report phenomena defined in docs/LOSS_REPORT_SCHEMA.md, to detect which
 // the current generator does and does not yet emit.
@@ -71,7 +72,8 @@ async function main() {
 
   // --- neutral-model cross-dictionary signal ---
   const phen = {};
-  let mw = 0, pwg = 0, pwk = 0, ap90 = 0, citTotal = 0;
+  let citTotal = 0;
+  const recordsPresent = Object.fromEntries(ALL_DICTS.map(d => [d, 0]));
   const citTypes = {};
   const citByDict = {};
   // Per-dictionary sense coverage: MW senses live in model.senses; PWG/PWK senses
@@ -88,7 +90,7 @@ async function main() {
     acc.linked += arr.filter(s => s.citations && s.citations.length).length;
   };
   for (const m of models) {
-    if (m.records?.mw) mw++; if (m.records?.pwg) pwg++; if (m.records?.pwk) pwk++; if (m.records?.ap90) ap90++;
+    for (const d of ALL_DICTS) if (m.records?.[d]) recordsPresent[d]++;
     for (const p of m.phenomena || []) phen[p] = (phen[p] || 0) + 1;
     for (const c of m.citations || []) {
       citTotal++;
@@ -152,7 +154,7 @@ async function main() {
     },
     crossDictionary: {
       cases: models.length,
-      recordsPresent: { mw, pwg, pwk, ap90 },
+      recordsPresent,
       phenomena: phen,
       citations: { total: citTotal, byType: citTypes, byDictionary: citByDict },
       sensesByDictionary: senseCov
@@ -182,7 +184,7 @@ async function main() {
   out.push("\n" + mdTable("failureClassification", byClass, n) + "\n");
   out.push(mdTable("phenomenon", byPhenomenon, n) + "\n");
   out.push("## cross-dictionary (neutral model)\n");
-  out.push(`records present: mw=${mw} pwg=${pwg} pwk=${pwk} of ${models.length}`);
+  out.push(`records present (of ${models.length}): ${ALL_DICTS.map(d => `${d}=${recordsPresent[d]}`).join(" ")}`);
   out.push(mdTable("phenomenon", phen, models.length) + "\n");
   out.push("## coverage gaps");
   out.push("```json\n" + JSON.stringify(gaps, null, 2) + "\n```");

@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -299,6 +301,21 @@
       <bibl xml:id="mw-pwg-pwk-dih-cite-pwk-9" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dih-record-pwk">
         <abbr>DHŪRTAN. 14</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-dih-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dih-record-ap90">
+        <abbr>Bk. 3. 21</abbr>
+        <citedRange>3.21</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dih-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dih-record-ap90">
+        <abbr>17. 54.</abbr>
+        <ref type="inherited-siglum">Bk.</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dih-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dih-record-ap90">
+        <abbr>R. 16. 15.</abbr>
+        <citedRange>16.15</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dih-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dih-record-gra">
+        <abbr>Cu. 〔145〕</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-dih-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -480,6 +497,40 @@
 &lt;div n=&quot;1&quot;&gt;— 2〉 &lt;ab&gt;Med.&lt;/ab&gt; {%in Zweifel —, in Ungewissheit sein%}. {#sadehamAna#} &lt;ab&gt;v. l.&lt;/ab&gt; für {#saMdehayAna#}.
 &lt;div n=&quot;1&quot;&gt;— 3〉 {#saMdehita#} {%in Frage gestellt, bedroht%} &lt;ls&gt;DHŪRTAN. 14&lt;/ls&gt;.
 &lt;div n=&quot;p&quot;&gt;— Mit {#aBisam#} in {#aBsaMdeha#}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-dih-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">15448</idno>
+        <idno type="line">132037</idno>
+        <idno type="pc">0567-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;15448&lt;pc&gt;0567-a&lt;k1&gt;dih&lt;k2&gt;dih
+{#dih#}¦ {c2c} &lt;ab&gt;U.&lt;/ab&gt; ({#degDi, digDe, digDa#}; {%&lt;ab&gt;desid.&lt;/ab&gt;%}
+{#diDikzati#}) {@1@} To anoint, smear, &lt;lbinfo n=&quot;pla+ster&quot;/&gt;
+plaster spread over; &lt;ls&gt;Bk. 3. 21&lt;/ls&gt;, &lt;ls n=&quot;Bk.&quot;&gt;17. 54.&lt;/ls&gt;
+{@--2@} To soil, defile, pollute;  &lt;lbinfo n=&quot;ls:R. 16.+ 15.&quot;/&gt;
+&lt;ls&gt;R. 16. 15.&lt;/ls&gt; {@--3@} To increase, augment.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-dih-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">4253</idno>
+        <idno type="line">27814</idno>
+        <idno type="pc">0608</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4253&lt;pc&gt;0608&lt;k1&gt;dih&lt;k2&gt;dih
+{@√dih@}¦ [&lt;ls&gt;Cu. 〔145〕&lt;/ls&gt;], {%bestreichen, verkitten%}.
+&lt;div n=&quot;Pf&quot;&gt;Mit {@pári,@} {%überziehen, bedecken%}.
+&lt;div n=&quot;Pf&quot;&gt;{@sám,@} {%beschmieren, beflecken,%} in samdíh.
+&lt;div n=&quot;H&quot;&gt;Stamm {@dih,@} stark {@déh@} [&lt;ab n=&quot;siehe&quot;&gt;s.&lt;/ab&gt; &lt;ab&gt;Part.&lt;/ab&gt;]:
+&lt;div n=&quot;TS&quot;&gt;-éhat [&lt;ab&gt;Co.&lt;/ab&gt;] {@pári:@} kulphaú {566,2}.
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Part.&lt;/ab&gt; {@dihāná:@}
+&lt;div n=&quot;TS&quot;&gt;-ás vācā́ śalyā́n aśánibhis 〰 {913,4}.
+&lt;div n=&quot;H&quot;&gt;Verbale {@díh@}
+&lt;div n=&quot;P&quot;&gt;enthalten in saṃ-díh.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

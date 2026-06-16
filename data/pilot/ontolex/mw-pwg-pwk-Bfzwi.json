@@ -77,6 +77,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-15"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-16"
         }
       ],
       "csl:sourceRecord": [
@@ -88,6 +91,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Bfzwi",
@@ -241,6 +247,16 @@
       "csl:lineNumber": 333868,
       "csl:pageColumn": "4-282-c",
       "rdf:value": "<L>80852<pc>4-282-c<k1>Bfzwi<k2>Bfzwi/<h>1\n<hom>1.</hom> {#Bfzwi/#}¦ <lex>f.</lex> {%Zacke, Spitze; Kante, Ecke%}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "6447",
+      "csl:lineNumber": 43121,
+      "csl:pageColumn": "0964",
+      "rdf:value": "<L>6447<pc>0964<k1>Bfzwi<k2>Bfzwi/\r\n{@bhṛṣṭí,@}¦ [von *bhṛṣ = hṛṣ, <ls>Ku. 〔11,372 fg.〕</ls>], 1〉 {%Spitze, Zacke;%} <ab>vgl.</ab> sahásra-, piśáṅga-bhṛṣṭī 2〉 {%Ecke%} in cátur-bhṛṣṭī.\r\n<div n=\"TS\">-ís girés {56,3}.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-1",
@@ -471,6 +487,22 @@
       "csl:sourceDictionary": "mw",
       "csl:evidenceType": "generic-lexicographer-hedge",
       "csl:evidenceClass": "hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-16",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi"
+      },
+      "frac:evidence": "Ku. 〔11,372 fg.〕",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Ku. 〔",
+      "csl:citedRange": "11,372fg.〕"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#lineage-pwk",

@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -169,6 +171,38 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;204999&lt;pc&gt;4-291-b&lt;k1&gt;at&lt;k2&gt;at
 √{#at#}¦ mit {#anu#} in {#anvatya#} (= {#anugamayya#} &lt;ab&gt;Comm.&lt;/ab&gt;) &lt;ls&gt;ĀPAST. ŚR. 9,10,15&lt;/ls&gt;. Schon nach der Betonung &lt;ls&gt;TBR. 1,4,3,6&lt;/ls&gt; ist diese Trennung in {#anvatyAva/rtayet#} nicht denkbar.&lt;info n=&quot;sup_4&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-at-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">489</idno>
+        <idno type="line">6186</idno>
+        <idno type="pc">0028-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;489&lt;pc&gt;0028-c&lt;k1&gt;at&lt;k2&gt;at
+{#at#}¦ {c1c} &lt;ab&gt;P.&lt;/ab&gt; {#(ati), atati, atituM#}, &lt;lbinfo n=&quot;atta-a#tita&quot;/&gt;
+{#atta-atita#} {@1@} To go, walk; wander, to go &lt;lbinfo n=&quot;con+stantly&quot;/&gt;
+constantly. {@--2@} To obtain (mostly &lt;ab&gt;Ved.&lt;/ab&gt;)
+{@--3@} To bind. {@--4@} ({#aMtati#}) To bind.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-at-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">217</idno>
+        <idno type="line">1281</idno>
+        <idno type="pc">0026</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;217&lt;pc&gt;0026&lt;k1&gt;at&lt;k2&gt;at
+{@√at,@}¦ {%gehen, wandern%} (&lt;ab&gt;vgl.&lt;/ab&gt; atasí und atasā́yia). Mit {@sám,@} {%worauf losgehen,%} ví, {%rennen%} in viáti.
+&lt;div n=&quot;H&quot;&gt;Stamm {@ata:@}
+&lt;div n=&quot;TS&quot;&gt;-asi {@sám@} {30,4} sám atasi kapótas iva garbhadím, du (Indra) gehst (auf den bereiteten Somatrunk) los, wie der Täuberich auf den Begattungsort.
+&lt;div n=&quot;H&quot;&gt;&lt;chg type=&quot;del&quot; n=&quot;4&quot; src=&quot;gra&quot;&gt;&lt;old&gt;&lt;ab&gt;Part.&lt;/ab&gt; {@átat:@}&lt;/old&gt;&lt;/chg&gt;
+&lt;div n=&quot;TS&quot;&gt;&lt;chg type=&quot;del&quot; n=&quot;4&quot; src=&quot;gra&quot;&gt;&lt;old&gt;-an sū́rias {502,9}.&lt;/old&gt;&lt;/chg&gt;
+&lt;div n=&quot;H&quot;&gt;{@átamāna:@}
+&lt;div n=&quot;TS&quot;&gt;-am [&lt;ab&gt;m.&lt;/ab&gt;] {229,3} (den Wanderer).
+&lt;div n=&quot;TS&quot;&gt;-ās [&lt;ab&gt;m.&lt;/ab&gt;] {450,2} samaré. in Wetteifer gehend = wetteifernd.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

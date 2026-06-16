@@ -137,6 +137,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#attestation-30"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#attestation-31"
         }
       ],
       "csl:sourceRecord": [
@@ -151,6 +154,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:pruz",
@@ -391,6 +397,16 @@
       "csl:lineNumber": 181581,
       "csl:pageColumn": "0778-c",
       "rdf:value": "<L>21301<pc>0778-c<k1>pruz<k2>pruz\n{#pruz#}¦ {vI.v} {c1c} <ab>P.</ab> ({#prozati, pruzwa#}) {@1@} To burn\nconsume. {@--2@} To reduce to ashes.\n{vII.v} {c9c} <ab>P.</ab> ({#pruzRAti#}) {@1@} To become wet\nor moist. {@--2@} To pour out, sprinkle.\n{@--3@} To fill.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "6089",
+      "csl:lineNumber": 40297,
+      "csl:pageColumn": "0893",
+      "rdf:value": "<L>6089<pc>0893<k1>pruz<k2>pruz\r\n{@√pruṣ,@}¦ „spritzen“ [aus pru erweitert <ls>Fi. 〔130〕</ls>], 1〉 etwas [<ab>A.</ab>] {%ausspritzen,%} auch bildlich Güter, Gesänge; 2〉 jemandem [<ab>D.</ab>] etwas [<ab>A.</ab>] {%zuspritzen%} oder {%zusprühen%} (bildlich: Güter); 3〉 jemand [<ab>A.</ab>] {%bespritzen%}.\r\n<div n=\"Pf\">Mit {@abhí@} etwas [<ab>A.</ab>] {%bespritzen, benetzen%}.\r\n<div n=\"Pf\">{@pári@} {%rings spritzen%}.\r\n<div n=\"H\">Stamm <chg type=\"chg\" n=\"158\" src=\"gra\"><old>{@pruṣ:@}</old><new>{@pruṣa:@}</new></chg>\r\n<div n=\"TS\">-ṣa (-ṣā) 1〉 vásu {903,1} (abhraprúṣas ná vācā́).\r\n<div n=\"H\">Stamm {@pruṣṇu,@} stark {@pruṣṇó:@}\r\n<div n=\"TS\">-uvánti 1〉 ghṛtám {168,8}.\r\n<div n=\"TS\">-ávat 2〉 vásu kṣitíbhyas {247,4}.\r\n<div n=\"TS\">-ute {@abhí@} śmáśrūṇi {849,4} (índras); pāṇī́ ghṛténa {512,1} (savitā́).\r\n<div n=\"H\"><ab>Part.</ab> II. {@pruṣitá:@}\r\n<div n=\"TS\">-ásya 3〉 agnés {58,2}.\r\n<div n=\"H\">Verbale {@prúṣ.@}\r\n<div n=\"P\">in pari-prúṣ; ferner in abhra-, ghṛta-prúṣ.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#attestation-1",
@@ -836,6 +852,20 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#record-mw"
       },
       "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#attestation-31",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz"
+      },
+      "frac:evidence": "Fi. 〔130〕",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Apruz#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

@@ -242,6 +242,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#attestation-54"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#attestation-55"
         }
       ],
       "csl:sourceRecord": [
@@ -256,6 +259,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:dih",
@@ -661,6 +667,16 @@
       "csl:lineNumber": 132037,
       "csl:pageColumn": "0567-a",
       "rdf:value": "<L>15448<pc>0567-a<k1>dih<k2>dih\n{#dih#}¦ {c2c} <ab>U.</ab> ({#degDi, digDe, digDa#}; {%<ab>desid.</ab>%}\n{#diDikzati#}) {@1@} To anoint, smear, <lbinfo n=\"pla+ster\"/>\nplaster spread over; <ls>Bk. 3. 21</ls>, <ls n=\"Bk.\">17. 54.</ls>\n{@--2@} To soil, defile, pollute;  <lbinfo n=\"ls:R. 16.+ 15.\"/>\n<ls>R. 16. 15.</ls> {@--3@} To increase, augment.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "4253",
+      "csl:lineNumber": 27814,
+      "csl:pageColumn": "0608",
+      "rdf:value": "<L>4253<pc>0608<k1>dih<k2>dih\r\n{@√dih@}¦ [<ls>Cu. 〔145〕</ls>], {%bestreichen, verkitten%}.\r\n<div n=\"Pf\">Mit {@pári,@} {%überziehen, bedecken%}.\r\n<div n=\"Pf\">{@sám,@} {%beschmieren, beflecken,%} in samdíh.\r\n<div n=\"H\">Stamm {@dih,@} stark {@déh@} [<ab n=\"siehe\">s.</ab> <ab>Part.</ab>]:\r\n<div n=\"TS\">-éhat [<ab>Co.</ab>] {@pári:@} kulphaú {566,2}.\r\n<div n=\"H\"><ab>Part.</ab> {@dihāná:@}\r\n<div n=\"TS\">-ás vācā́ śalyā́n aśánibhis 〰 {913,4}.\r\n<div n=\"H\">Verbale {@díh@}\r\n<div n=\"P\">enthalten in saṃ-díh.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#attestation-1",
@@ -1487,6 +1503,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "R.",
       "csl:citedRange": "16.15"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#attestation-55",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih"
+      },
+      "frac:evidence": "Cu. 〔145〕",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Adih#root-relation",

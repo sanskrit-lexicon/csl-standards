@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -237,6 +239,9 @@
         <abbr>37,29</abbr>
         <ref type="inherited-siglum">Chr.</ref>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-ah-mw21630-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ah-mw21630-record-gra">
+        <abbr>Cu. 〔611〕</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ah-mw21630-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -411,6 +416,44 @@
 &lt;div n=&quot;1&quot;&gt;— 1〉 {%Jmd%} (&lt;ab&gt;Acc.&lt;/ab&gt;) {%gegenüber Etwas%} (&lt;ab&gt;Acc.&lt;/ab&gt;) {%aussprechen, zu Jmd sagen%}.
 &lt;div n=&quot;1&quot;&gt;— 2〉 {%erwiedern, antworten%} (mit &lt;ab&gt;Acc.&lt;/ab&gt; der Person).
 &lt;div n=&quot;p&quot;&gt;— Mit {#vi#} {%eine abweichende Ansicht Kund geben, streiten, disputiren%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ah-mw21630-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">5669</idno>
+        <idno type="line">50449</idno>
+        <idno type="pc">0217-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5669&lt;pc&gt;0217-b&lt;k1&gt;ah&lt;k2&gt;ah
+{#ah#}¦ {vI.v} {c1c} &lt;ab&gt;A.&lt;/ab&gt; or {c10c} &lt;ab&gt;U.&lt;/ab&gt; = {#aMh#} &lt;ab&gt;q. v.&lt;/ab&gt;
+{vII.v} {c1c} &lt;ab&gt;P.&lt;/ab&gt; To sing together, compose,
+celebrate, prepare. {vIII.v} {c5c} &lt;ab&gt;P.&lt;/ab&gt; ({#ahnoti#},
+{#AhIt, Aha#}) To pervade. {vIV.v} (a &lt;lbinfo n=&quot;defec+tive&quot;/&gt;
+defective verb preserved only in five
+forms {#AtTa, AhaTuH, Aha, AhatuH, AhuH#})
+{@1@} To say, speak, mention. {@--2@} To &lt;lbinfo n=&quot;ac+knowledge&quot;/&gt;
+acknowledge, accept, state. {@--3@} To
+declare, express, signify. {@--4@} To hold,
+consider, regard. {@--5@} To call.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ah-mw21630-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">1397</idno>
+        <idno type="line">8036</idno>
+        <idno type="pc">0161</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1397&lt;pc&gt;0161&lt;k1&gt;ah&lt;k2&gt;ah&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {@√ah@}¦ [&lt;ls&gt;Cu. 〔611〕&lt;/ls&gt;], {%sagen, sprechen,%} und zwar sowol wenn die Rede wörtlich, als wenn sie dem Inhalte nach angeführt oder blos angedeutet wird. Im erstern Falle folgt auf die Rede gewöhnlich íti und zwar entweder 1〉 ohne weiteres Object oder mit dem &lt;ab&gt;Dat.&lt;/ab&gt; dessen, zu dem man spricht; 2〉 mit Bezeichnung dessen, von dem man redet (im &lt;ab&gt;Acc.&lt;/ab&gt;), &lt;ab&gt;z. B.&lt;/ab&gt; {203,5}: utá‿īm āhus ná‿eṣás asti‿íti enam „und sie {%sprachen%} von ihm: Er ist nicht vorhanden“; 3〉 in gleicher Weise auch ohne íti, &lt;ab&gt;z. B.&lt;/ab&gt; {860,4}: … enam āhus ná jānīmas nayatā baddhám etám „sie {%sprachen%} von ihm: Wir kennen ihn nicht, führt ihn gebunden“. In beiden Fällen kann der (im &lt;ab&gt;A.&lt;/ab&gt; stehende) Gegenstand der Rede auch der Angeredete sein ({620,16}; {921,18}. — {398,14}. _{398,15}); 4〉 ebenso ohne Object oder mit dem Dativ dessen, zu dem man spricht, &lt;ab&gt;z. B.&lt;/ab&gt; {384,2}: utá té me āhus „und sie {%sagten%} zu mir“, worauf nun die Rede wörtlich (ohne íti) folgt; 5〉 die Rede wird nur dem Inhalte nach angegeben, jedoch nur, wenn in der wörtlichen Rede das Subject mit dem Ausgesagten durch das Verb „sein“ verbunden sein würde; alsdann wird dies Verb ausgelassen, das Subject (der wörtlichen Rede) und ebenso der Nominativ der Aussage (wenn ein solcher bei der wörtlichen Rede vorhanden sein würde) in den Accusativ gestellt, &lt;ab&gt;z. B.&lt;/ab&gt; {164,22}: tásya‿íd āhus píppalam svādú ágre „an seiner Spitze, {%sagen%} sie, sei die süsse Feige“; 6〉 insbesondere, wenn die wörtliche Rede nur aus Subject, Copula und Prädicatsnomen bestehen würde, wo man es dann durch {%nennen%} übersetzen kann, &lt;ab&gt;z. B.&lt;/ab&gt; {365,6}: tuā́m āhus sáhasas putrám „dich {%nennen%} sie den Sohn der Kraft“. — 7〉 Der Inhalt der Rede wird nur angedeutet durch einen &lt;ab&gt;Acc.&lt;/ab&gt;, sei es durch ein Pronom (tád {24,12}; {853,18}) oder durch ein Merkmal der Rede, wie Wahrheit (ṛtám {238,7}), Schrecken (bhayám {219,10}), wobei die Person, zu der man spricht, stets im &lt;ab&gt;Dat.&lt;/ab&gt; steht, &lt;ab&gt;z. B.&lt;/ab&gt; {24,12}: tád ‥ máhyam āhus „das {%sagten%} sie zu mir“; 8〉 jemandem [&lt;ab&gt;Dat.&lt;/ab&gt;] etwas [&lt;ab&gt;A.&lt;/ab&gt;] {%nennen, anzeigen%}.
+&lt;div n=&quot;Pf&quot;&gt;Mit {@prá,@} jemandem [&lt;ab&gt;D.&lt;/ab&gt;] etwas [&lt;ab&gt;A.&lt;/ab&gt;] {%verkünden%}.
+&lt;div n=&quot;Pf&quot;&gt;{@práti,@} zu jemand {%sagen%} (mit wörtlich angeführter Rede).
+&lt;div n=&quot;H&quot;&gt;&lt;ab&gt;Perf.&lt;/ab&gt; {@ā́h:@}
+&lt;div n=&quot;TS&quot;&gt;-ha [&lt;per&gt;3.&lt;/per&gt; &lt;ab&gt;s.&lt;/ab&gt;] 1〉 {321,4}; {391,1}; {557,2}. — 2〉 {620,15}. _{620,16}. — 7〉 {219,10}. — 8〉 {782,9}; {875,7}(?). [Page162]
+&lt;div n=&quot;TS&quot;&gt;-ha [&lt;per&gt;3.&lt;/per&gt; &lt;ab&gt;s.&lt;/ab&gt;] 1〉 {329,5}; {709,3}. — 3〉 {398,14}. _{398,15}. — 4〉 {621,34}. — 6〉 {534,4}. — 7〉 {853,18}. — {@prá@} {315,10}.
+&lt;div n=&quot;TS&quot;&gt;-hús 5〉 {163,3}; {908,2}. — 6〉 {118,3}; {292,3}; {880,2}.
+&lt;div n=&quot;TS&quot;&gt;-hus 1〉 {407,3}. — 1〉 &lt;ab&gt;u.&lt;/ab&gt; 6〉 {164,15}. — 2〉 {203,5}; {826,1}; {921,18}. — 3〉 {334,9}; {542,4}; {860,4}. — 4〉 {384,2}; {602,3}. — 5〉 {164,12}. _{164,22}. _{164,25}; {319,3}. — 6〉 {74,5}; {104,9}; {164,15}. _{164,16}. _{164,19}. _{164,46}; {339,2}; {365,6}; {427,9}; {485,10}; {493,3}; {639,29}; {836,12}; {846,7}; {857,11}; {865,3}; {897,5}; {933,6}; {938,9}; {940,9}; {950,9}. — 7〉 {24,12}; {238,7}. — {@práti@} {705,19} práti íd anyám āhus (sprachen sie zueinander).
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

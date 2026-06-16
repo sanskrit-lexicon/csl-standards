@@ -92,6 +92,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#attestation-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#attestation-11"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#attestation-12"
         }
       ],
       "csl:sourceRecord": [
@@ -106,6 +112,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:mIv",
@@ -423,6 +432,16 @@
       "rdf:value": "<L>23207<pc>0867-c<k1>mIv<k2>mIv\n{#mIv#}¦ {c1c} <ab>P.</ab> ({#mIvati#}) {@1@} To go, move.\n{@--2@} To grow fat.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "6866",
+      "csl:lineNumber": 46156,
+      "csl:pageColumn": "1047",
+      "rdf:value": "<L>6866<pc>1047<k1>mIv<k2>mIv\r\n{@(√mīv),@}¦ {%bewegen, schieben%} <ls>VS.</ls>, <ls>AV.</ls>\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -580,6 +599,34 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "ŚAT. BR.",
       "csl:citedRange": "13,8,1,9"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#attestation-11",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv"
+      },
+      "frac:evidence": "VS.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#attestation-12",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv"
+      },
+      "frac:evidence": "AV.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmIv#root-relation",

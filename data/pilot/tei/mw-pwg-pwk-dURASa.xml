@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -110,6 +111,9 @@
       <bibl xml:id="mw-pwg-pwk-dURASa-cite-pwk-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dURASa-record-pwk">
         <abbr>AUFRECHT</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-dURASa-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dURASa-record-gra">
+        <abbr>Pad.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-dURASa-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -151,6 +155,19 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;207444&lt;pc&gt;5-256-b&lt;k1&gt;dURASa&lt;k2&gt;dURA/Sa&lt;h&gt;2
 &lt;hom&gt;2.&lt;/hom&gt; {#dURA/Sa#}¦, für &lt;ls&gt;ṚV. 1,176,4&lt;/ls&gt;. &lt;ls n=&quot;ṚV.&quot;&gt;7,32,7&lt;/ls&gt; nimmt &lt;ls&gt;AUFRECHT&lt;/ls&gt; ein Thema {#dURA/S#} an und erklärt dieses mit {#duzwena viDinA prAptaDanaH#}.&lt;info n=&quot;sup_5&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-dURASa-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">4384</idno>
+        <idno type="line">28694</idno>
+        <idno type="pc">0623</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4384&lt;pc&gt;0623&lt;k1&gt;dURASa&lt;k2&gt;dU-RA/Sa&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {@dū-ṇā́śa,@}¦ &lt;ab&gt;a.&lt;/ab&gt;, {%schwer%} [dus] {%zu vertilgen%} [nā́śa, &lt;ls&gt;Pad.&lt;/ls&gt; náśa von &lt;hom&gt;1.&lt;/hom&gt; naś], {%unvergänglich, unzerstörbar%}.
+&lt;div n=&quot;TS&quot;&gt;-as índras (?) {548,7}, &lt;ab n=&quot;siehe&quot;&gt;s.&lt;/ab&gt; die Bemerkung unter dūḍā́ś.
+&lt;div n=&quot;TS&quot;&gt;-am [&lt;ab&gt;n.&lt;/ab&gt;] sakhiám {486,26}; kṣatrám {534,25} (neben ajáram). — In {176,4} könnte es adverbial gefasst werden; &lt;ab n=&quot;siehe&quot;&gt;s.&lt;/ab&gt; jedoch dūḍā́ś.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>
