@@ -6,6 +6,21 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Added
+- **Lex-0 Schematron now runs with a real SVRL engine** — closes the last
+  validation-hardening item. `setup-external-tools` fetches the ISO Schematron
+  skeleton, extracts the Lex-0 ODD's `<sch:pattern>` blocks, and compiles them
+  (3-stage Saxon pipeline) into `tools/schematron/csl-tei-lex0.svrl.xsl`;
+  [validate-external-profiles](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-external-profiles.mjs)
+  applies it with Saxon over all 256 `*.lex0.xml` and treats any
+  `svrl:failed-assert` as a failure. Both the baseline-shape and the kośa
+  sense-boundary (§5) rules now pass under a real engine, **0 failed assertions**.
+  The harness records it as `skipped` without the toolchain (`--strict` to fail);
+  env hooks `CSL_STANDARDS_LEX0_SVRL` + `CSL_STANDARDS_SAXON_JAR`. Documented in
+  [docs/EXTERNAL_VALIDATION.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTERNAL_VALIDATION.md).
+  With this, all three schema languages (RELAX NG, Schematron, SHACL) are checked
+  by real external engines.
+
 ## [0.6.0] - 2026-06-16
 
 **The write-up.** With every extension construct implemented and validated

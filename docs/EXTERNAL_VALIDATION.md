@@ -1,11 +1,12 @@
-# External RELAX NG / SHACL Validation
+# External RELAX NG / Schematron / SHACL Validation
 
 `npm run validate-pilot` / `validate-tei-profile` / `validate-tei-lex0` are
 *structural* checks (substring/shape assertions). They are fast and run in CI, but
-they do **not** validate against the actual TEI RELAX NG schema — so they can pass
-while the XML is not schema-valid. `validate-external-profiles` closes that gap by
-running the real RNG (and, if available, SHACL). It needs external tooling and, by
-default, records missing tools as `skipped` (only `--strict` fails on skips).
+they do **not** validate against the actual TEI RELAX NG schema, the Lex-0 ODD's
+Schematron, or the SHACL profile with real engines — so they can pass while the XML
+is not schema-valid. `validate-external-profiles` closes that gap by running the
+real RNG, the Schematron via an SVRL engine, and SHACL (when each tool is
+available). It records missing tools as `skipped` (only `--strict` fails on skips).
 
 This doc gives two ways to get the tooling: a portable, no-admin toolchain (set up
 by a script in this repo) and the apt route for Linux/WSL.
@@ -17,6 +18,11 @@ by a script in this repo) and the apt route for Linux/WSL.
   `p5subset.xml`).
 - Validates all 250 `data/pilot/tei/*.xml` and 256 `data/pilot/tei-lex0/*.lex0.xml`
   against those schemas with `jing` (or `xmllint`).
+- Runs the Lex-0 ODD's Schematron over the 256 `*.lex0.xml` with a real **SVRL
+  engine** (Saxon + the ISO Schematron skeleton): the ODD's `<sch:pattern>` blocks
+  are extracted and compiled to an SVRL-emitting XSLT, and any `svrl:failed-assert`
+  is a failure. This enforces the kośa sense-boundary customisation (§5) and the
+  baseline-shape rules with the real engine, not only the in-pipeline validator.
 - Validates `data/pilot/rdf/*.ttl` against the SHACL profile with `pyshacl` (if
   installed).
 
@@ -41,10 +47,15 @@ What `setup-external-tools` assembles under `tools/`:
 | Tool | Version | Role |
 |---|---|---|
 | Temurin JRE | 21 | runs Saxon + jing |
-| Saxon-HE | 10.9 | runs the ODD→RNG XSLTs |
+| Saxon-HE | 10.9 | runs the ODD→RNG XSLTs; compiles + runs the Schematron SVRL |
 | TEI Stylesheets | 7.60.0 | `odd2odd` + `odd2relax` |
 | p5subset.xml | P5 current | TEI source for module expansion |
 | jing | 20091111 | RELAX NG validator |
+| ISO Schematron skeleton | Schematron/schematron | compiles the ODD's Schematron to an SVRL XSLT |
+
+The setup extracts the Lex-0 ODD's `<sch:pattern>` into a standalone schema and
+compiles it to `tools/schematron/csl-tei-lex0.svrl.xsl` (the 3-stage ISO skeleton
+pipeline); the harness then applies it with Saxon.
 
 ## Option B — Linux / WSL (apt)
 
@@ -66,6 +77,15 @@ harness at it (then only a validator is needed):
 ```bash
 CSL_STANDARDS_TEI_RNG=path/to/archival.rng \
 CSL_STANDARDS_LEX0_RNG=path/to/lex0.rng \
+  node scripts/validate-external-profiles.mjs
+```
+
+Likewise, point the Schematron layer at a precompiled SVRL transform and a Saxon
+jar (else it is `skipped`):
+
+```bash
+CSL_STANDARDS_LEX0_SVRL=path/to/csl-tei-lex0.svrl.xsl \
+CSL_STANDARDS_SAXON_JAR=path/to/saxon-he.jar \
   node scripts/validate-external-profiles.mjs
 ```
 

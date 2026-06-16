@@ -270,16 +270,20 @@ against a SHACL profile
 with shapes for the lexical entry, source records, attestations (with an `sh:in`
 constraint on the evidence class), the Lexicog multi-resource structure, the
 continuation relation, and the lineage relation. The TEI is checked against a
-RELAX NG schema compiled from project ODDs
-([data/schema/](../data/schema/)). Both are run by the project validators in
-`build-pilot` and, independently, by an external harness using real engines —
-**jing** for RELAX NG and **pySHACL** for SHACL — assembled by a portable,
+RELAX NG schema compiled from project ODDs ([data/schema/](../data/schema/)), and
+the Lex-0 ODD's Schematron (the kośa sense-boundary §9 and baseline-shape rules) is
+compiled to an SVRL transform with the ISO Schematron skeleton. All are run by the
+project validators in `build-pilot` and, independently, by an external harness
+using real engines — **jing** for RELAX NG, a **Saxon + ISO Schematron skeleton**
+SVRL engine for the Schematron, and **pySHACL** for SHACL — assembled by a portable,
 no-admin toolchain ([docs/EXTERNAL_VALIDATION.md](EXTERNAL_VALIDATION.md)). The
-external harness validates all 250 archival + 256 Lex-0 XML files and all 250 RDF
-graphs: **758 checks, 0 failed**. Running real RNG validation was not cosmetic — it
-exposed and we fixed three genuine TEI-conformance bugs (a duplicate `xml:id`, an
-illegal `<sourceDesc>` content model, and a misplaced `@target`) that the
-substring-level structural validators had passed.
+external harness validates all 250 archival + 256 Lex-0 XML files (RELAX NG), runs
+the Schematron over all 256 Lex-0 entries with **zero failed assertions**, and
+validates all 250 RDF graphs (SHACL), with no failures. Running the real engines
+was not cosmetic: real RNG validation exposed and we fixed three genuine
+TEI-conformance bugs (a duplicate `xml:id`, an illegal `<sourceDesc>` content
+model, and a misplaced `@target`) that the substring-level structural validators
+had passed.
 
 Reproducibility is built in. Generators honour `SOURCE_DATE_EPOCH` and otherwise
 omit timestamps, so `build-pilot` is byte-stable; the five figures are deterministic
@@ -299,9 +303,9 @@ textual. Sense extraction is machine-derived and marked as such. The loss report
 record loss against the *standards*; where a remedy is the `csl:` extension, the
 gap against vanilla TEI/OntoLex is still recorded, and "implemented" means a
 working, schema-validated reference construct, not adoption by TEI or the OntoLex
-community group. One validation-hardening step remains open: executing the Lex-0
-ODD's Schematron with an external SVRL engine (its rule is enforced in-pipeline by
-the project validator today).
+community group — though each is validated by a real engine (jing for RELAX NG, a
+Saxon + ISO Schematron skeleton SVRL engine for the Lex-0 Schematron, and pySHACL
+for SHACL), not only by the project's own validators.
 
 ## 13. Conclusion
 
