@@ -13,10 +13,10 @@ Each is tied to the loss it addresses — by `failureClassification` cause and
 
 ## Motivation
 
-The 1277 loss reports split by cause into: **model-vocabulary-gap (49%)** — the
+The 1361 loss reports split by cause into: **model-vocabulary-gap (52%)** — the
 target standards lack a concept, chiefly an *evidence class* (kośa vs textual vs
 editorial citation, and unparsed citation coordinates; see
-[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b); **editorial-compression (29%)** — the
+[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b); **editorial-compression (27%)** — the
 19th-century lineage already dropped evidence; **cdsl-markup-gap (9%)**,
 **print-compression (6%)**, **sanskrit-convention (<1%)**, and a single
 **data-quality** anomaly. Only the model-vocabulary and sanskrit-convention causes
@@ -182,7 +182,7 @@ and validated** — OntoLex (`csl:evidenceClass` + `csl:citedWork`/`csl:citedRan
 SHACL/pySHACL) and TEI (`@subtype` + `<citedRange>` on every citation `<bibl>` in
 the archival and Lex-0 profiles, RELAX NG/jing) — closing the loop from measured
 loss to working remedy: every OntoLex `model-vocabulary-gap` loss that needs an
-extension (569 of 569) names a concrete, implemented `csl:` construct, and all 250
+extension (653 of 653) names a concrete, implemented `csl:` construct, and all 250
 graphs conform to the SHACL profile under pySHACL (`extensionCoverage` in
 [loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2) and
 decomposition (§3) constructs were already implemented; the **source-collapse

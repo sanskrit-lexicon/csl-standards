@@ -1,24 +1,24 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 1277,
+    "total": 1361,
     "cases": 256,
     "byStatus": {
-      "partial": 854,
+      "partial": 938,
       "lossy": 348,
       "clean": 75
     },
     "byTarget": {
-      "ontolex": 609,
+      "ontolex": 693,
       "neutral": 370,
       "tei": 298
     },
     "byPhenomenon": {
       "source-collapse": 369,
+      "citation-coordinate": 297,
       "generic-lexicographer-hedge": 234,
-      "citation-coordinate": 222,
+      "named-kosha-citation": 88,
       "continuation-parent": 80,
-      "named-kosha-citation": 79,
       "compound-subentry": 75,
       "compound-decomposition": 75,
       "root-as-entry": 60,
@@ -28,7 +28,7 @@
       "source-anomaly": 1
     },
     "byFailureClassification": {
-      "model-vocabulary-gap": 629,
+      "model-vocabulary-gap": 713,
       "editorial-compression": 369,
       "cdsl-markup-gap": 117,
       "print-compression": 80,
@@ -37,17 +37,19 @@
       "data-quality": 1
     },
     "byExtensionNeeded": {
-      "extensionNeeded=true": 732,
+      "extensionNeeded=true": 816,
       "extensionNeeded=false": 545
     },
     "byReviewStatus": {
-      "machine": 1181,
+      "machine": 1265,
       "reviewed": 96
     },
     "bySourceDictionary": {
       "mw": 615,
       "pwg": 405,
       "pwk": 251,
+      "ap90": 73,
+      "gra": 11,
       "skd": 6
     },
     "targetByStatus": {
@@ -57,7 +59,7 @@
         "lossy": 6
       },
       "ontolex": {
-        "partial": 509,
+        "partial": 593,
         "lossy": 100
       },
       "neutral": {
@@ -123,6 +125,8 @@
       "mw",
       "pwg",
       "pwk",
+      "ap90",
+      "gra",
       "skd"
     ],
     "schemaPhenomenaNotEmitted": [],
@@ -133,13 +137,13 @@
     "namedSourceCitationsMaterialized": 2950
   },
   "extensionCoverage": {
-    "ontolexModelVocabularyGapsNeedingExtension": 569,
-    "coveredByImplementedConstruct": 569,
+    "ontolexModelVocabularyGapsNeedingExtension": 653,
+    "coveredByImplementedConstruct": 653,
     "uncovered": 0,
     "byConstruct": {
-      "frac:Attestation with csl:citedWork + csl:citedRange": 222,
+      "frac:Attestation with csl:citedWork + csl:citedRange": 297,
       "frac:Attestation with csl:evidenceClass \"hedge\"": 117,
-      "frac:Attestation with csl:evidenceClass \"kosha\"": 79,
+      "frac:Attestation with csl:evidenceClass \"kosha\"": 88,
       "decomp:ComponentList of decomp:Component": 75,
       "csl:RootRelation with csl:whitneyRoot": 60,
       "frac:Attestation with csl:evidenceClass \"editorial\"": 16

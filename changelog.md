@@ -18,11 +18,22 @@ into a dated version. Versions track `package.json`.
   `csl:SourceRecord` with evidence-class-typed attestations from its named citations
   (AP90 385 + GRA 64 materialised). The SHACL `csl:sourceRecord` shape and the
   validator relax from "exactly 3" to "≥ 3"; a five-source graph conforms under
-  pySHACL. The TEI archival/Lex-0 profiles and the published loss corpus (1277) stay
-  a tri-dict backbone — optional dictionaries are additive on the semantic layer
-  (evidence-class detection scoped to mw/pwg/pwk). `analyze-loss` reports
-  `recordsPresent` and citation counts per dictionary. See
+  pySHACL. `analyze-loss` reports `recordsPresent` and citation counts per
+  dictionary. See
   [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §5.
+- **Optional dictionaries woven into the archival TEI and the loss corpus.** The
+  archival TEI exporter now emits one source-entry, taxonomy category, and citation
+  block per dictionary *present* for a case (`presentDicts`, mirroring the OntoLex
+  exporter) — 165 cases (AP90 ∪ GRA) gain a 4th/5th source-entry; tri-dict-only
+  files stay byte-identical. `validate-tei-profile` relaxes from "exactly 3" to one
+  source-entry/quote per present dictionary, with the mw/pwg/pwk backbone required.
+  The published loss corpus now also includes the optional dictionaries' evidence:
+  their named citations generate the same evidence-class (kośa / editorial /
+  coordinate) `model-vocabulary-gap` reports, added as an additive family that
+  leaves the tri-dict reports byte-identical — corpus **1277 → 1361** (AP90 73,
+  GRA 11); `extensionCoverage` **569 → 653 of 653** (still fully covered). **TEI
+  Lex-0** stays the normalized tri-dict baseline by design, and the **PWG→PWK→MW
+  lineage** family is unchanged.
 
 ## [0.7.0] - 2026-06-16
 
