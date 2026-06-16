@@ -45,9 +45,9 @@ A loss report records what happens when a CDSL dictionary record is mapped into 
 | `claim` | yes | Scholarly claim being tested |
 | `mappedAs` | no | Target-model representation |
 | `loss` | yes unless `status=clean` | What is not preserved |
-| `failureClassification` | no | Cause: `none`, `cdsl-markup-gap`, `model-vocabulary-gap`, `print-compression`, `editorial-compression` (upstream lineage loss), or `sanskrit-convention` (tradition-bound, e.g. the kośa fusion) |
+| `failureClassification` | no | Cause: `none`, `cdsl-markup-gap`, `model-vocabulary-gap`, `print-compression`, `editorial-compression` (upstream lineage loss), `sanskrit-convention` (tradition-bound, e.g. the kośa fusion), or `data-quality` (unresolved source anomaly, e.g. an `[sic]` marker) |
 | `extensionNeeded` | yes | Whether the model needs an extension. `false` for `editorial-compression` (the loss is upstream, not a standards gap) |
-| `sourceEvidence` | no | For `source-collapse`: `<ls>` named-citation counts per dictionary (`pwg`/`pwk`/`mw`) plus a `sample` of dropped sources |
+| `sourceEvidence` | no | For `source-collapse`: `<ls>` named-citation counts per dictionary (`pwg`/`pwk`/`mw`) plus a `sample` of dropped sources. For the evidence-class reports (`named-kosha-citation`, `citation-coordinate`, `editorial-reference`): a `count` and deduplicated `sample` of the flattened citation strings. For `source-anomaly`: the `marker` and source `dictionary` |
 | `reviewStatus` | yes | `machine`, `reviewed`, or `published` |
 
 ## Phenomenon Vocabulary
@@ -63,8 +63,9 @@ A loss report records what happens when a CDSL dictionary record is mapped into 
 | `compound-subentry` | Compound preserved as dictionary subentry |
 | `compound-decomposition` | Compound modeled as component graph |
 | `continuation-parent` | Parent reconstruction for suppressed-headword entries |
-| `citation-coordinate` | Source coordinate parsing |
+| `citation-coordinate` | Citation textual coordinate (book/hymn/verse) kept as a flat string, not a structured locus |
 | `editorial-reference` | `ib.`, `W.`, `MW.`, catalogue or editor references |
+| `source-anomaly` | Unresolved source data-quality marker (e.g. `[sic]`) |
 
 ## Review Status
 
