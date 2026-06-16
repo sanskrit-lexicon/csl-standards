@@ -6,6 +6,17 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Added
+- **Full paper draft** ([docs/PAPER.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER.md))
+  — *Sanskrit Lexicography Between TEI and OntoLex: Evidence, Derivation, and
+  Compression in MW, PWG, and PWK*. Elaborates [PAPER_OUTLINE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER_OUTLINE.md)
+  into a complete article: the TEI-never-lossy / OntoLex-never-clean asymmetry, the
+  evidence-centred diagnosis (72% of the corpus), the PWG→PWK→MW lineage, the
+  indigenous *kośa* fusion, and a Results section reporting the **implemented and
+  validated** `csl:` extension layer (every construct, `extensionCoverage` 569/569,
+  `lineageCoverage` 369/369, external harness 758 checks / 0 failed). All numbers
+  regenerable from the workbench.
+
 ## [0.5.0] - 2026-06-16
 
 **The extension proposal is complete.** v0.4.0 implemented the first batch of

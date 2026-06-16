@@ -39,6 +39,7 @@ The atlas-side removal and pointer update merged in
 
 ## Key documents
 
+- [docs/PAPER.md](docs/PAPER.md) — the full prose draft: *Sanskrit Lexicography Between TEI and OntoLex*. The TEI-vs-OntoLex asymmetry, the evidence/derivation/compression findings, and the implemented + validated `csl:` extension layer (every proposal construct, `extensionCoverage` 569/569, `lineageCoverage` 369/369). [docs/PAPER_OUTLINE.md](docs/PAPER_OUTLINE.md) is the planning outline.
 - [docs/BOUNDARY_RULES.md](docs/BOUNDARY_RULES.md) — what belongs here vs. delegates.
 - [docs/INTEROPERABILITY_MODEL.md](docs/INTEROPERABILITY_MODEL.md) — neutral JSON layer between CDSL source, TEI, and OntoLex.
 - [docs/EVIDENCE_LABEL_CROSSWALK.md](docs/EVIDENCE_LABEL_CROSSWALK.md) — maps the `csl-atlas` evidence labels and review statuses to W3C PROV-O and TEI `@cert`/`@resp` (FAIR interoperability).
@@ -46,4 +47,4 @@ The atlas-side removal and pointer update merged in
 - [docs/SALT_API_PROFILE.md](docs/SALT_API_PROFILE.md) — normative C-SALT-compatible REST + GraphQL profile.
 - [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](docs/VALIDATED_INTEROPERABILITY_PROFILE.md) — 250-case TEI + OntoLex/FrAC validation.
 - [docs/LOSS_ANALYSIS.md](docs/LOSS_ANALYSIS.md) — Month-3 quantitative analysis of the 1277 loss reports: the TEI-vs-OntoLex target asymmetry, the PWG→PWK→MW source-collapse family (369 lineage losses), the evidence-class sub-typing family (317: kośa/coordinate/editorial citations the flat model can't type), the indigenous *kośa* sense/citation fusion (6), and by-cause breakdown; regenerate with `npm run analyze-loss`.
-- [docs/EXTENSION_PROPOSAL.md](docs/EXTENSION_PROPOSAL.md) — proposed Sanskrit lexicographic extension layer for TEI + OntoLex (evidence class, root/compound/continuation relations, source-collapse lineage, kośa sense-boundary), each prototyped in the `csl:` namespace and tied to the loss it answers.
+- [docs/EXTENSION_PROPOSAL.md](docs/EXTENSION_PROPOSAL.md) — the Sanskrit lexicographic extension layer for TEI + OntoLex (evidence class, root/compound/continuation relations, source-collapse lineage, kośa sense-boundary). Every construct (§1–§5, §4a) is now implemented in the `csl:` namespace and validated in-pipeline (pySHACL + jing), each tied to the loss it answers.

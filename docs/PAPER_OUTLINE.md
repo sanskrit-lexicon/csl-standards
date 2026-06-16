@@ -1,5 +1,10 @@
 # Paper Outline
 
+> The full prose draft is now in [PAPER.md](PAPER.md). This file remains the
+> planning outline (section skeleton, figure list, abstract sketch); the draft
+> elaborates it into a complete article reporting the implemented + validated
+> extension layer.
+
 Working title:
 
 **Sanskrit Lexicography Between TEI and OntoLex: Evidence, Derivation, and Compression in MW, PWG, and PWK**

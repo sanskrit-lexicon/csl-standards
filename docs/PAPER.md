@@ -1,0 +1,358 @@
+# Sanskrit Lexicography Between TEI and OntoLex: Evidence, Derivation, and Compression in MW, PWG, and PWK
+
+*Working draft. The numbers, tables, and figures in this paper are regenerable
+from the workbench (`npm run build-pilot`); see [§14 Availability](#14-availability-and-reproducibility).
+This draft is generated from [docs/PAPER_OUTLINE.md](PAPER_OUTLINE.md) and the
+machine artefacts it cites.*
+
+## Abstract
+
+This paper uses three related CDSL Sanskrit dictionaries — Monier-Williams 1899
+(MW), the large Petersburg dictionary (PWG), and the shorter Petersburg dictionary
+(PWK) — as a stress test for lexicographic interoperability. Rather than converting
+dictionary XML mechanically, we ask whether the *lexicographic meaning* of these
+works survives mapping into two complementary standard models: TEI as an archival
+representation of dictionary text and OntoLex-Lemon as a semantic graph of lexical
+knowledge. From a 250-case deterministic sample of deliberately hard cases we
+generate a dictionary-neutral model and, from it, parallel TEI and OntoLex
+profiles, recording every degradation as an evidence-bound *loss report*. The
+resulting corpus of 1,277 reports shows that the two models fail **asymmetrically**:
+TEI is never lossy for the Western cases but never reaches the semantic graph;
+OntoLex is never a clean transcription but exposes reusable relations. The single
+largest difficulty is not derivation or compounding but **evidence** — the class of
+a citation (a textual attestation, an indigenous *kośa* authority, an editorial
+reference, or the lexicographer-only hedge) and its degradation along the
+PWG → PWK → MW lineage. We then take the diagnosis to its conclusion: we specify a
+small Sanskrit-lexicographic extension layer in a `csl:` namespace, **implement it
+in both target standards, and validate it** against a SHACL profile (pySHACL) and a
+compiled TEI RELAX NG schema (jing). Every model-vocabulary loss that needs an
+extension maps to an implemented, schema-validated construct (569 of 569), and the
+upstream lineage collapse is made an explicit, queryable relation (369 of 369). The
+accompanying public workbench publishes the raw CDSL snippets, the neutral model,
+the TEI/OntoLex views, the loss reports, and the validators.
+
+## 1. Introduction
+
+Historical Sanskrit dictionaries are dense, highly compressed knowledge systems
+that evolved through a complex textual lineage. Among them, MW, PWG, and PWK stand
+as monumental achievements of 19th-century lexicography. They make an excellent
+test group for digital lexicographic interoperability: they share a direct
+intellectual lineage yet employ very different representational strategies for
+derivation, evidence, and abbreviation. This paper asks whether the lexicographic
+meaning encoded in these works can be robustly preserved across two complementary
+standard models — the Text Encoding Initiative (TEI) guidelines for archival
+representation of dictionary text, and the OntoLex-Lemon model (with its Lexicog
+and FrAC modules) for semantic graph representation of lexical knowledge. We argue
+that true interoperability must preserve not just structural tags but the
+underlying lexicographic *assertions* these dictionaries make — above all their
+evidential and derivational claims.
+
+Our contribution is in three parts. First, an **instrument**: a reproducible
+pipeline that samples hard cases, maps them through both standards, and records
+every loss as a structured, evidence-bound report. Second, a **diagnosis**: a
+quantitative account of where and why each standard loses meaning, which shows the
+failures to be systematic and asymmetric rather than incidental. Third, a
+**remedy**: a small extension layer, implemented and schema-validated in both
+standards, that closes the model-vocabulary gaps the diagnosis identifies and makes
+the upstream editorial collapse an explicit relation. The remedy is the part that
+distinguishes this work from a survey of difficulties: the proposed constructs are
+not sketches but running, validated code over the full sample.
+
+## 2. Data and Prior Work
+
+The primary data derive from the digitized editions maintained by the Cologne
+Digital Sanskrit Dictionaries (CDSL) project. CDSL provides invaluable digitized
+XML, but its encoding schemas remain highly project-specific. Prior microanalysis
+of MW has highlighted structural idioms such as the `L.` (*lexicographer-only*)
+hedge, which functions as an evidential marker rather than a bibliographic
+citation. Studies of the MW–PWG–PWK lineage have shown how PWG's expansive named
+apparatus of *kośa* citations was systematically compressed in PWK and
+re-interpreted in MW.
+
+On the standards side we evaluate the TEI dictionaries module, which models the
+physical and editorial structure of the text, alongside OntoLex-Lemon — including
+OntoLex-Lexicog (multi-resource lexicographic structure) and the Frequency,
+Attestation and Corpus (FrAC) module — which models conceptual and semantic
+relations. The TEI Lex-0 baseline serves as a normalised interchange target
+distinct from a full archival profile. We treat all of these as fixed targets and
+ask what they can and cannot hold; where they cannot, we extend them rather than
+abandon them.
+
+## 3. Method
+
+To test the limits of TEI and OntoLex systematically, we built an automated
+pipeline that targets hard cases of interoperability ([scripts/](../scripts/),
+run with `npm run build-pilot`). The stages are:
+
+1. **Sample.** A deterministic 250-case slice of MW/PWG/PWK lemmas, selected to
+   over-represent difficulty: the `L.` hedge, named *kośa* citations, verbal
+   roots, compounds, continuation (suppressed-headword) entries, and
+   citation-compression between the three dictionaries. Selection is reproducible
+   and resizable (`--max N`), and a fixed 15-case slice is reserved for the
+   stricter, human-reviewable review tier.
+2. **Neutral model.** For each case we extract a dictionary-neutral JSON model
+   that suspends commitment to either standard: the lemma, materialised `<ls>`
+   citations tagged by dictionary, senses for all three dictionaries, and the raw
+   source records. This is the canonical layer from which both profiles and the
+   loss reports are derived, so the two profiles are commensurable.
+3. **Dual profiles.** From the neutral model we generate a **TEI archival** mapping
+   (editorial structure plus the full CDSL records preserved as escaped quotes), a
+   **TEI Lex-0** baseline, and an **OntoLex/FrAC** mapping (a linked-data graph of
+   entries, senses, attestations, and relations, emitted as JSON-LD and Turtle).
+4. **Loss reports.** Every case is mapped against each target and each phenomenon
+   is classified `clean`, `partial`, or `lossy`, with a cause
+   (`model-vocabulary-gap`, `editorial-compression`, `cdsl-markup-gap`,
+   `print-compression`, `sanskrit-convention`, `data-quality`, or `none`), an
+   `extensionNeeded` flag, and an evidence payload. The loss report is the unit of
+   analysis: *no lossy mapping silently passes as clean*.
+
+The schema for a loss report is given in
+[docs/LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md); the full quantitative analysis
+is in [docs/LOSS_ANALYSIS.md](LOSS_ANALYSIS.md), regenerable with
+`npm run analyze-loss`.
+
+## 4. The Loss Corpus: An Asymmetry of Success
+
+The 250-case pilot yields **1,277 loss reports**. Overall, 854 are `partial`
+(67%), 348 `lossy` (27%), and 75 `clean` (6%). The central finding is in the
+cross-tabulation of target against status:
+
+| target | clean | partial | lossy |
+|---|--:|--:|--:|
+| TEI (archival) | 75 | 217 | 6 |
+| OntoLex | 0 | 509 | 100 |
+| neutral (lineage) | 0 | 128 | 242 |
+
+The two models do not fail; they **succeed differently**. For the Western cases
+the TEI archival profile is *never* lossy (75 clean, 217 partial): TEI can always
+at least preserve the dictionary as an edition. OntoLex is *never* clean (509
+partial, 100 lossy): it never merely transcribes, so it either relates the data or
+drops what it cannot relate. The only TEI-lossy reports (6) are not Western at all —
+they are the indigenous *kośa* sense/citation fusion in the Lex-0 baseline (§9), a
+different profile and a different lexicographic tradition.
+
+A third lane, `neutral`, measures loss in the dictionary *lineage itself*, before
+any model choice. It is the most lossy of the three (242 lossy, 128 partial, 0
+clean): much of what looks like "interoperability loss" is in fact loss that
+already happened in the 19th-century editorial chain, recoverable only by reading
+across PWG, PWK, and MW together (§8).
+
+By cause, the corpus splits as: **model-vocabulary-gap 49%** (the target standard
+lacks a concept), **editorial-compression 29%** (upstream lineage loss the
+standards could have held), CDSL-markup-gap 9%, print-compression 6%, clean 6%, and
+the small but qualitatively distinct `sanskrit-convention` and `data-quality`
+(<1% each). By phenomenon, the leaders are `source-collapse` (29%), the MW `L.`
+hedge (18%), and the unparsed `citation-coordinate` (17%); the five
+evidence-related phenomena together are **72%** of the corpus. The centre of
+gravity is evidence, not derivation or compounding.
+
+## 5. Evidence and Provenance
+
+The treatment of evidence is the primary stress point. A named *kośa* citation in
+PWG is an explicit attestation in the indigenous lexicographic tradition; the MW
+`L.` hedge is a generalized marker that a word is known only from native
+lexicographers and lacks textual attestation; an editorial reference (*ib.*, *W.*,
+*MW.*, a catalogue) points within the lexicographic tradition rather than at a
+text; and a textual citation carries a coordinate (book, hymn, verse). Mapped to
+the standards' default vocabulary, all of these flatten to a generic bibliographic
+link, and the coordinate is locked inside a string.
+
+We claim the evidence *class* is not decoration but a component of lexical meaning:
+an interoperable model must distinguish a direct textual attestation from a
+secondary lexicographic hedge, an indigenous *kośa* authority, and an editorial
+reference, and must expose the citation's coordinate as structured data. This is
+the single largest source of model-vocabulary loss, and §10 reports the construct
+that closes it.
+
+## 6. Roots and Derivation
+
+Sanskrit lexicography is deeply structured around verbal roots (*dhātu*). In the
+MW–PWG–PWK lineage a root functions simultaneously as a standalone entry and as the
+derivational scaffolding for a family of words. Modelled as a plain
+`ontolex:LexicalEntry`, the derivational role is lost; modelled only as text, the
+grammatical function is lost. A faithful model must carry the root *as* an entry
+*and* as a derivational base, with its grammatical class and a pointer into the
+established root inventory.
+
+## 7. Compounds and Continuations
+
+The compression of MW, PWG, and PWK relies on nested subentries for compounds and
+on continuation (suppressed-headword) entries recovered from page adjacency.
+Compounds expose a tension between the printed layout and the semantic ontology:
+TEI excels at preserving the subentry and adjacency as printed, while OntoLex is
+suited to exposing the component decomposition and parent–child relations. Forcing
+these into a single flat entry — as simplified pipelines do — loses both archival
+fidelity and semantic relation. Continuation entries raise a distinct hazard: the
+parent must be *reconstructed* from adjacency, and must therefore never be asserted
+as if it were printed.
+
+## 8. The PWG → PWK → MW Lineage
+
+Tracing entries across the three dictionaries shows that compression and
+translation are not semantically neutral. PWK abridges and reinterprets PWG, often
+discarding specific *kośa* citations for generalized summaries; MW recomposes the
+Petersburg dictionaries in English, further simplifying the evidential apparatus
+(collapsing specific references into `L.`). We measure this directly: of the 250
+cases, PWK abridges PWG's named apparatus in **all 250** (123 drop it entirely, 127
+retain a subset — e.g. *ac*: PWG 35 → PWK 8 → MW 3), and in **119 cases** MW
+carries no citation where PWG named a textual source.
+
+These 369 `source-collapse` losses are recorded with `target: neutral` and cause
+`editorial-compression`, with an evidence payload of per-dictionary `<ls>` counts
+and a sample of the dropped sources, because the loss is upstream of any model
+choice — TEI and OntoLex can both represent named citations. The degradation of
+evidential certainty along the lineage is the largest single cause-family, and §10
+reports the relation that makes it explicit.
+
+## 9. The Indigenous *Kośa*: A Tradition-Bound Construct
+
+A qualitatively different loss appears in the indigenous *kośa* (here the SKD
+register, six entries). A *kośa* binds a run of synonyms to its closing authority
+formula (*iti amaraḥ*, *iti medinī*) as one indivisible *iti*-unit: sense
+enumeration and source attestation are a *single construction*. The
+sense/citation-separating standards cannot express this; the TEI Lex-0 baseline can
+only split it into a `<def>` and a separate `<bibl>`. These are the only
+TEI-`lossy` reports in the corpus (cause `sanskrit-convention`). Unlike the Western
+losses, this is neither a model-vocabulary gap nor an editorial artefact but a
+property of a lexicographic tradition — addressable only by a tradition-specific
+customisation, not a generic extension (§10).
+
+## 10. From Measured Loss to Validated Remedy
+
+The diagnosis above is actionable: each loss cause points to a concrete construct.
+We specify these in a `csl:` namespace, tie each to the loss it answers, and — the
+step that distinguishes this work — **implement and validate** all of them over the
+full sample ([docs/EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md)). The constructs
+fall into two kinds: *target extensions* (new TEI/OntoLex vocabulary for
+model-vocabulary gaps) and *modeling constructs* (which make an upstream loss
+explicit without claiming to recover it).
+
+- **Evidence class (§1 of the proposal).** Every OntoLex `frac:Attestation`
+  carries a sub-typed `csl:evidenceClass` ∈ {`textual`, `hedge`, `kosha`,
+  `editorial`}, and a coordinate-bearing citation parses into `csl:citedWork` +
+  `csl:citedRange` (`AV. 6,116,1.` → `AV.` / `6,116,1`). The construct is
+  **symmetric across both standards**: every TEI citation `<bibl>` in the archival
+  and Lex-0 profiles carries the same class as `@subtype` plus a `<citedRange>`.
+- **Root relation (§2).** `csl:RootRelation` (with a pointer into the root
+  inventory) models the root as a derivational base, distinct from a plain entry.
+- **Decomposition (§3).** `decomp:ComponentList` exposes the compound's components
+  with a status flag recording whether the segmentation is asserted or
+  machine-derived.
+- **Continuation recovery status (§4).** `csl:ContinuationRelation` carries
+  `csl:recoveryStatus` ∈ {`recovered`, `conjectured`, `unresolved`} (TEI: the same
+  on the continuation `<xr>` `@subtype`), so a parent reconstructed from adjacency
+  is never asserted as if printed.
+- **Source-collapse lineage (§4a).** A `csl:LineageRelation` per transition —
+  PWG → PWK (`abridgement`) and PWG → MW (`recomposition`) — carries the
+  source/retained/dropped citation counts, making the lineage collapse a
+  first-class, queryable assertion rather than an inference from counts.
+- **Kośa sense-boundary (§5).** A TEI Lex-0 ODD customisation treats the authority
+  formula as the boundary of the *iti*-unit: each *kośa* entry declares the
+  convention, the authority is emitted as a typed `<bibl type="kosa-authority">`,
+  and every *iti*-unit carries a `<note type="model-loss">` witnessing the fusion,
+  so the convention is *declared*, not silently flattened.
+
+The remedy is **measured**. Every loss report names the construct that answers it
+in a `mappedAs` field, so coverage is regenerable, not asserted. Of the OntoLex
+`model-vocabulary-gap` losses that need an extension, **569 of 569** map to an
+implemented construct (`extensionCoverage`); of the upstream source-collapse
+losses, **369 of 369** are now modeled by a lineage relation (`lineageCoverage`,
+250 abridgement + 119 recomposition). The distinction matters: the evidence-class
+work *closes* a downstream gap (the standard now carries the class), whereas the
+lineage relation *records* an upstream loss (the evidence is genuinely gone from the
+lineage; we make its disappearance explicit, not recovered).
+
+## 11. Validation and Reproducibility
+
+Every construct is validated, not merely emitted. The OntoLex graphs are checked
+against a SHACL profile
+([data/schema/ontolex-frac-profile.shacl.ttl](../data/schema/ontolex-frac-profile.shacl.ttl))
+with shapes for the lexical entry, source records, attestations (with an `sh:in`
+constraint on the evidence class), the Lexicog multi-resource structure, the
+continuation relation, and the lineage relation. The TEI is checked against a
+RELAX NG schema compiled from project ODDs
+([data/schema/](../data/schema/)). Both are run by the project validators in
+`build-pilot` and, independently, by an external harness using real engines —
+**jing** for RELAX NG and **pySHACL** for SHACL — assembled by a portable,
+no-admin toolchain ([docs/EXTERNAL_VALIDATION.md](EXTERNAL_VALIDATION.md)). The
+external harness validates all 250 archival + 256 Lex-0 XML files and all 250 RDF
+graphs: **758 checks, 0 failed**. Running real RNG validation was not cosmetic — it
+exposed and we fixed three genuine TEI-conformance bugs (a duplicate `xml:id`, an
+illegal `<sourceDesc>` content model, and a misplaced `@target`) that the
+substring-level structural validators had passed.
+
+Reproducibility is built in. Generators honour `SOURCE_DATE_EPOCH` and otherwise
+omit timestamps, so `build-pilot` is byte-stable; the five figures are deterministic
+SVG ([scripts/build-figures.mjs](../scripts/build-figures.mjs)). The honest limits
+of the instrument are recorded in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §5 rather
+than hidden.
+
+## 12. Limitations
+
+The sample is 250 cases drawn from three dictionaries of one lineage; the
+asymmetry findings are strong within it but their generality across other
+dictionaries (e.g. Apte, Grassmann) is future work. The evidence-class and lineage
+detectors are curated heuristics (kośa sigla, editorial abbreviations, a coordinate
+regex, a literal `[sic]`), so per-class counts are a **lower bound**, not a
+philological census — for example, all-caps *kośa* sigla are currently read as
+textual. Sense extraction is machine-derived and marked as such. The loss reports
+record loss against the *standards*; where a remedy is the `csl:` extension, the
+gap against vanilla TEI/OntoLex is still recorded, and "implemented" means a
+working, schema-validated reference construct, not adoption by TEI or the OntoLex
+community group. One validation-hardening step remains open: executing the Lex-0
+ODD's Schematron with an external SVRL engine (its rule is enforced in-pipeline by
+the project validator today).
+
+## 13. Conclusion
+
+Sanskrit dictionaries are not edge cases to be normalized away by rigid standards.
+The complexities of MW, PWG, and PWK reveal where dictionary interoperability needs
+finer, more expressive concepts of evidence, derivation, and editorial
+compression. Using TEI for archival preservation and OntoLex for semantic mapping,
+and adding a small, validated extension layer, we can build digital lexicographic
+models that respect the deep intellectual architecture of the originals. The
+contribution is not a list of difficulties but a closed loop: every difficulty we
+measured is answered by a construct we implemented and validated over the whole
+sample.
+
+## Figures
+
+All five figures are reproducible SVG, generated by `npm run build-figures`
+([scripts/build-figures.mjs](../scripts/build-figures.mjs)) into
+[data/pilot/figures/](../data/pilot/figures/). Figures 1, 2, and 5 are driven by
+[data/pilot/loss-analysis.json](../data/pilot/loss-analysis.json); Figures 3 and 4
+are concept diagrams grounded in real pilot exemplars.
+
+1. **Three-view architecture**: CDSL → neutral model → TEI/OntoLex.
+   [figure-1-architecture.svg](../data/pilot/figures/figure-1-architecture.svg)
+2. **Evidence-class collapse**: PWG named *kośa* citations vs the MW `L.` hedge —
+   119/250 cases are `mw-uncited-pwg-cited`.
+   [figure-2-evidence-collapse.svg](../data/pilot/figures/figure-2-evidence-collapse.svg)
+3. **Root modeling**: a root as lexical entry vs derivational base (TEI
+   `<etym type="root">` vs OntoLex `csl:RootRelation`).
+   [figure-3-root-modeling.svg](../data/pilot/figures/figure-3-root-modeling.svg)
+4. **Compound split**: TEI subentry/adjacency vs OntoLex `decomp:ComponentList`.
+   [figure-4-compound-split.svg](../data/pilot/figures/figure-4-compound-split.svg)
+5. **Loss-report distribution**: the TEI-never-lossy / OntoLex-never-clean
+   asymmetry and the by-cause breakdown.
+   [figure-5-loss-distribution.svg](../data/pilot/figures/figure-5-loss-distribution.svg)
+
+## 14. Availability and Reproducibility
+
+The CSL Standards workbench publishes the generated hard-case samples and the raw
+JSON, TEI, and RDF/Turtle outputs, with an interactive view tracing the pipeline
+from the original CDSL records through the neutral model to the final XML and RDF.
+Everything in this paper is regenerable:
+
+```sh
+npm run build-pilot          # sample → neutral model → exports → validators → analysis → figures
+npm run analyze-loss         # regenerate the loss-analysis tables
+npm run validate-external    # real RNG (jing) + SHACL (pySHACL) over the full corpus
+```
+
+Key artefacts: the loss corpus
+([data/pilot/loss-reports.json](../data/pilot/loss-reports.json)), the analysis
+([data/pilot/loss-analysis.json](../data/pilot/loss-analysis.json)), the SHACL
+profile and ODDs ([data/schema/](../data/schema/)), and the extension proposal
+([docs/EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md)). The validated-profile summary
+is in [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](VALIDATED_INTEROPERABILITY_PROFILE.md).
