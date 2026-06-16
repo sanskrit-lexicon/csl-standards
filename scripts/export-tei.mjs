@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { stripPseudoMarkup, extractLabeledSources } from "./lib/citations.mjs";
+import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 
 const DICTS = ["mw", "pwg", "pwk"];
 const DICT_LABEL = {
@@ -160,9 +161,15 @@ function citationIndexXml(model, rawByDict) {
   for (const dict of DICTS) {
     const citations = extractLabeledSources(rawByDict[dict]);
     citations.forEach((citation, index) => {
+      // csl: evidence-class extension — the @subtype sub-types the citation
+      // (textual / hedge / kosha / editorial), and a coordinate-bearing one
+      // carries a structured <citedRange>. Mirrors OntoLex csl:evidenceClass.
+      const cls = evidenceClass(citation.source, citation.type);
+      const coord = parseCoordinate(citation.source);
       rows.push([
-        `      <bibl xml:id="${id}-cite-${dict}-${index + 1}" type="${escapeXml(citation.type)}" corresp="#${id}-record-${dict}">`,
+        `      <bibl xml:id="${id}-cite-${dict}-${index + 1}" type="${escapeXml(citation.type)}" subtype="${escapeXml(cls)}" corresp="#${id}-record-${dict}">`,
         `        <abbr>${escapeXml(citation.source)}</abbr>`,
+        coord ? `        <citedRange>${escapeXml(coord.locus)}</citedRange>` : "",
         citation.inheritedFrom ? `        <ref type="inherited-siglum">${escapeXml(citation.inheritedFrom)}</ref>` : "",
         "      </bibl>"
       ].filter(Boolean).join("\n"));

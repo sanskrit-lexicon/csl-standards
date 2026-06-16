@@ -61,6 +61,14 @@ function main() {
     check(/<orth\b[^>]*\bcert="/.test(xml), "lemma orth lacks @cert (evidence binding)");
     check(/<sense\b/.test(xml) || /<gramGrp>/.test(xml), "entry has neither sense nor gramGrp");
     check(!xml.includes('type="source-entry"'), "contains archival source-entry cit (not Lex-0 baseline)");
+    // csl: evidence-class extension — named-source bibls carry a valid @subtype
+    // (textual/kosha/editorial; the hedge is a <usg type="hint">), and no
+    // <citedRange> is emitted empty.
+    const NAMED_CLASSES = ["textual", "kosha", "editorial"];
+    const subtypes = [...xml.matchAll(/<bibl\b[^>]*\bsubtype="([^"]*)"/g)].map(s => s[1]);
+    check(subtypes.every(s => NAMED_CLASSES.includes(s)),
+      `named-source bibl has an invalid evidence-class @subtype (${subtypes.filter(s => !NAMED_CLASSES.includes(s)).join(", ") || "none"})`);
+    check(!xml.includes("<citedRange></citedRange>"), "empty <citedRange> emitted");
     check(xml.includes(`<note type="profile-version">${PROFILE_VERSION}</note>`), "missing/incorrect profile-version note");
 
     if (errors.length) failed += 1;

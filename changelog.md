@@ -6,6 +6,20 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Added
+- **TEI side of the evidence-class extension** — makes the headline construct
+  symmetric across both target standards (the OntoLex side shipped in v0.3.0).
+  Every citation `<bibl>` in the [archival profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei.mjs)
+  and the [TEI Lex-0 baseline](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei-lex0.mjs)
+  now carries the evidence class as **`@subtype`** ∈ {`textual`, `hedge`, `kosha`,
+  `editorial`}, and a coordinate-bearing citation a structured **`<citedRange>`**
+  (`AV. 6,116,1.` → `6,116,1`). Same shared classifier/parser
+  ([scripts/lib/evidence.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/evidence.mjs))
+  as the OntoLex export. Both TEI validators check the `@subtype` is in the
+  allowed set; the elements/attributes validate against the compiled TEI RELAX NG
+  (jing) — no ODD change needed (`@subtype` and `<citedRange>` come from the `core`
+  module both ODDs already import).
+
 ## [0.3.0] - 2026-06-16
 
 **Validation hardening + interoperability-modeling depth.** The pilot's external

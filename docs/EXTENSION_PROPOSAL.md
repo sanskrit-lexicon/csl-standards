@@ -49,8 +49,13 @@ proposal is to promote the stable subset below into a published vocabulary
   [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl) constrains
   `csl:evidenceClass` with `sh:in`, and all 250 graphs pass pySHACL. The coarse
   `csl:evidenceType` ∈ {`named-source-citation`, `generic-lexicographer-hedge`}
-  is retained for back-compatibility. TEI side (prototype): `@cert`/`@resp` +
-  `<usg type="hint">` / `<bibl type="named-source">`, mapped to PROV-O in
+  is retained for back-compatibility. **TEI side** (symmetric, also implemented):
+  every citation `<bibl>` in the archival profile and the Lex-0 baseline carries
+  the same evidence class as **`@subtype`** ∈ {`textual`, `hedge`, `kosha`,
+  `editorial`} (the hedge additionally as `<usg type="hint">` in Lex-0), and a
+  coordinate-bearing citation a structured **`<citedRange>`** — all validated
+  against the compiled TEI RELAX NG (jing). Per-statement `@cert`/`@resp` carries
+  certainty, mapped to PROV-O in
   [EVIDENCE_LABEL_CROSSWALK.md](EVIDENCE_LABEL_CROSSWALK.md).
 - **Proposal:** standardize this **evidence-class vocabulary** as a first-class
   attestation property (textual · hedge · kośa · editorial · catalogue ·
@@ -134,7 +139,7 @@ value is that an assertion's *epistemic status* travels with it across both mode
 
 | Construct | Disposition |
 |---|---|
-| Evidence-class vocabulary + cited-locus (§1) | **Implemented** (`csl:evidenceClass`, `csl:citedWork`/`csl:citedRange`); **standardize** — broadly useful beyond Sanskrit |
+| Evidence-class vocabulary + cited-locus (§1) | **Implemented in both standards** (OntoLex `csl:evidenceClass` + `csl:citedWork`/`csl:citedRange`; TEI `@subtype` + `<citedRange>`); **standardize** — broadly useful beyond Sanskrit |
 | Derivational-base / root relation (§2) | Align with `ontolex-morph`; standardize the binding |
 | Decomposition-status flag (§3) | **Standardize** on `decomp` |
 | Adjacency-parent recovery status (§4) | Project-local; propose as a TEI dictionaries pattern |
@@ -149,11 +154,13 @@ construct here is claimed as adopted by TEI or the OntoLex community group. The
 ([ontolex-frac-profile.shacl.ttl](../data/schema/ontolex-frac-profile.shacl.ttl))
 and the two ODDs are the machine-checkable form.
 
-The evidence-class construct (§1) is now **implemented in the OntoLex export and
-SHACL-validated**, closing the loop from measured loss to working remedy: every
-OntoLex `model-vocabulary-gap` loss that needs an extension (569 of 569) names a
-concrete, implemented `csl:` construct, and all 250 graphs conform to the SHACL
-profile under pySHACL (`extensionCoverage` in
+The evidence-class construct (§1) is now **implemented in both target standards
+and validated** — OntoLex (`csl:evidenceClass` + `csl:citedWork`/`csl:citedRange`,
+SHACL/pySHACL) and TEI (`@subtype` + `<citedRange>` on every citation `<bibl>` in
+the archival and Lex-0 profiles, RELAX NG/jing) — closing the loop from measured
+loss to working remedy: every OntoLex `model-vocabulary-gap` loss that needs an
+extension (569 of 569) names a concrete, implemented `csl:` construct, and all 250
+graphs conform to the SHACL profile under pySHACL (`extensionCoverage` in
 [loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2),
 decomposition (§3) and lineage (§4a) constructs were already implemented; §4
 (continuation) and §5 (kośa ODD) remain prototype/customisation.

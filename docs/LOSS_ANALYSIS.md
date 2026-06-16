@@ -172,12 +172,15 @@ sub-types attestations (text vs *kośa* vs editorial) and parses citation
 coordinates. This is the concrete content of the §2 model-vocabulary-gap that now
 leads the corpus, and the §8 extension layer's primary target.
 
-**The remedy is now implemented and validated.** The OntoLex export emits a
-sub-typed `csl:evidenceClass` ∈ {`textual`, `hedge`, `kosha`, `editorial`} on
-every `frac:Attestation`, and parses a coordinate-bearing citation into
+**The remedy is now implemented in both target standards and validated.** OntoLex
+emits a sub-typed `csl:evidenceClass` ∈ {`textual`, `hedge`, `kosha`, `editorial`}
+on every `frac:Attestation`, parsing a coordinate-bearing citation into
 `csl:citedWork` + `csl:citedRange` ([scripts/lib/evidence.mjs](../scripts/lib/evidence.mjs),
-[export-ontolex.mjs](../scripts/export-ontolex.mjs)). The [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl)
-constrains the class with `sh:in`, and all 250 graphs conform under pySHACL. Each
+[export-ontolex.mjs](../scripts/export-ontolex.mjs)); the [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl)
+constrains the class with `sh:in`, and all 250 graphs conform under pySHACL. The
+TEI archival and Lex-0 exports carry the same class as `@subtype` (plus a
+`<citedRange>`) on every citation `<bibl>`, validated against the compiled TEI
+RELAX NG with jing — so the construct is symmetric across both standards. Each
 loss report names its remedy in `mappedAs`, so the closure is measurable:
 `analyze-loss`'s `extensionCoverage` shows **569 of 569** OntoLex
 model-vocabulary-gap losses needing an extension map to an implemented `csl:`
