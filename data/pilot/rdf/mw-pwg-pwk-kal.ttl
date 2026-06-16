@@ -580,3 +580,23 @@
   csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akal> ;
   csl:modelingNote "Root is modeled as lexical entry plus derivational/grammatical relation." .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akal#lineage-pwk> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akal> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "pwk" ;
+  csl:transition "abridgement" ;
+  csl:sourceCitationCount 20 ;
+  csl:retainedCitationCount 14 ;
+  csl:droppedCitationCount 6 ;
+  csl:modelingNote "PWK abridges PWG's named apparatus; dropped citations are upstream editorial loss, not a model gap." .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akal#lineage-mw> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akal> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "mw" ;
+  csl:transition "recomposition" ;
+  csl:sourceCitationCount 20 ;
+  csl:retainedCitationCount 5 ;
+  csl:droppedCitationCount 15 ;
+  csl:modelingNote "MW recomposes the Petersburg dictionaries in English, collapsing named sources to the L. hedge or dropping them." .
+

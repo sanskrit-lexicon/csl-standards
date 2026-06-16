@@ -426,3 +426,23 @@
   csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AjYA> ;
   csl:modelingNote "Compound recognized, but component segmentation requires philological review." .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AjYA#lineage-pwk> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AjYA> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "pwk" ;
+  csl:transition "abridgement" ;
+  csl:sourceCitationCount 26 ;
+  csl:retainedCitationCount 6 ;
+  csl:droppedCitationCount 20 ;
+  csl:modelingNote "PWK abridges PWG's named apparatus; dropped citations are upstream editorial loss, not a model gap." .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AjYA#lineage-mw> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AjYA> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "mw" ;
+  csl:transition "recomposition" ;
+  csl:sourceCitationCount 26 ;
+  csl:retainedCitationCount 0 ;
+  csl:droppedCitationCount 26 ;
+  csl:modelingNote "MW recomposes the Petersburg dictionaries in English, collapsing named sources to the L. hedge or dropping them." .
+

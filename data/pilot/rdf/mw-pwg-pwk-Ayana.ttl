@@ -130,3 +130,23 @@
   csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAyana> ;
   csl:modelingNote "Continuation parent must be recovered from MW adjacency before semantic assertion." .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAyana#lineage-pwk> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAyana> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "pwk" ;
+  csl:transition "abridgement" ;
+  csl:sourceCitationCount 3 ;
+  csl:retainedCitationCount 0 ;
+  csl:droppedCitationCount 3 ;
+  csl:modelingNote "PWK abridges PWG's named apparatus; dropped citations are upstream editorial loss, not a model gap." .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAyana#lineage-mw> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAyana> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "mw" ;
+  csl:transition "recomposition" ;
+  csl:sourceCitationCount 3 ;
+  csl:retainedCitationCount 0 ;
+  csl:droppedCitationCount 3 ;
+  csl:modelingNote "MW recomposes the Petersburg dictionaries in English, collapsing named sources to the L. hedge or dropping them." .
+

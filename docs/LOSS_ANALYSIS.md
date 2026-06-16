@@ -137,6 +137,20 @@ This matches the neutral-model phenomenon labels (all 250 cases have all three
 records; 119 are `mw-uncited-pwg-cited`; all 250 are `pwk-abridged`), now lifted
 from labels into evidence-bound reports.
 
+**The collapse is now an explicit modeled relation.** Because this loss is
+upstream (the standards *could* hold the evidence; the 19th-century editorial chain
+dropped it), the remedy is a *modeling* construct rather than a target extension:
+the OntoLex export emits a **`csl:LineageRelation`** per transition — PWG → PWK
+(`abridgement`) and PWG → MW (`recomposition`) — carrying
+`csl:sourceCitationCount` / `csl:retainedCitationCount` /
+`csl:droppedCitationCount` (e.g. *ac*: 35 → 8 = 27 dropped; 35 → 3 = 32 dropped),
+SHACL-validated via `csl:LineageRelationShape` (EXTENSION_PROPOSAL.md §4a). Each
+source-collapse report names this remedy in `mappedAs`; `analyze-loss`'s
+`lineageCoverage` shows **369 of 369** source-collapse losses modeled (250
+abridgement + 119 recomposition). The degradation of evidential certainty along
+the lineage is now a first-class, queryable assertion, not only an inference from
+counts.
+
 ### 4a. The indigenous *kośa* sense/citation fusion (§5 of the Lex-0 pilot)
 
 The 6 SKD *kośa* entries contribute 6 `sense-citation-fusion` reports

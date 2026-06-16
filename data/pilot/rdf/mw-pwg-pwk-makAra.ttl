@@ -218,3 +218,23 @@
   csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmakAra> ;
   csl:modelingNote "Machine segmentation exported for review." .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmakAra#lineage-pwk> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmakAra> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "pwk" ;
+  csl:transition "abridgement" ;
+  csl:sourceCitationCount 12 ;
+  csl:retainedCitationCount 0 ;
+  csl:droppedCitationCount 12 ;
+  csl:modelingNote "PWK abridges PWG's named apparatus; dropped citations are upstream editorial loss, not a model gap." .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmakAra#lineage-mw> a csl:LineageRelation ;
+  csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmakAra> ;
+  csl:lineageFrom "pwg" ;
+  csl:lineageTo "mw" ;
+  csl:transition "recomposition" ;
+  csl:sourceCitationCount 12 ;
+  csl:retainedCitationCount 0 ;
+  csl:droppedCitationCount 12 ;
+  csl:modelingNote "MW recomposes the Petersburg dictionaries in English, collapsing named sources to the L. hedge or dropping them." .
+

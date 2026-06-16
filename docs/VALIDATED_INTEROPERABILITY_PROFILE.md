@@ -90,6 +90,7 @@ The output is a full OntoLex/FrAC profile:
   evidence-class extension), and a coordinate-bearing citation parses into
   **`csl:citedWork`** + **`csl:citedRange`**.
 - `csl:RootRelation`, `decomp:ComponentList`, or `csl:ContinuationRelation` nodes where applicable.
+- **`csl:LineageRelation`** nodes making the PWG → PWK → MW source-collapse explicit (`csl:transition` `abridgement`/`recomposition` with retained/dropped citation counts).
 
 Validator: `scripts/validate-ontolex-profile.mjs`
 
@@ -104,6 +105,7 @@ The validator checks all 250 cases for:
 - three source records;
 - FrAC attestations with provenance and a valid `csl:evidenceClass`;
 - phenomenon-specific relation nodes;
+- a well-formed `csl:LineageRelation` wherever PWG citations are abridged/recomposed downstream;
 - RDF/Turtle presence with required prefixes and entry triples.
 - declared full validation scope.
 - project SHACL/profile markers.

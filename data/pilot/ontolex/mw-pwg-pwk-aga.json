@@ -539,6 +539,34 @@
       "csl:sourceDictionary": "pwg",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaga#lineage-pwk",
+      "@type": "csl:LineageRelation",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaga"
+      },
+      "csl:lineageFrom": "pwg",
+      "csl:lineageTo": "pwk",
+      "csl:transition": "abridgement",
+      "csl:sourceCitationCount": 13,
+      "csl:retainedCitationCount": 0,
+      "csl:droppedCitationCount": 13,
+      "csl:modelingNote": "PWK abridges PWG's named apparatus; dropped citations are upstream editorial loss, not a model gap."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaga#lineage-mw",
+      "@type": "csl:LineageRelation",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaga"
+      },
+      "csl:lineageFrom": "pwg",
+      "csl:lineageTo": "mw",
+      "csl:transition": "recomposition",
+      "csl:sourceCitationCount": 13,
+      "csl:retainedCitationCount": 1,
+      "csl:droppedCitationCount": 12,
+      "csl:modelingNote": "MW recomposes the Petersburg dictionaries in English, collapsing named sources to the L. hedge or dropping them."
     }
   ]
 }

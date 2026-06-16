@@ -97,18 +97,25 @@ proposal is to promote the stable subset below into a published vocabulary
   status* (recovered · conjectured · unresolved), so a reconstructed parent is
   never asserted as if printed.
 
-## 4a. Source-collapse / lineage relation — *editorial compression*
+## 4a. Source-collapse / lineage relation — *editorial compression* — **IMPLEMENTED**
 
-- **Loss:** `source-collapse`; cause *editorial-compression* (38% of reports —
-  the largest). PWG names a source; PWK abridges it; MW collapses it to `L.` or
-  drops it (§4). This is upstream loss, so the fix is a **modeling** construct, not
-  a target-schema gap.
-- **Prototype:** the OntoLex-Lexicog multi-resource graph — one **`lexicog:Entry`
-  per source dictionary** (`lexicog:describes` the lemma) — plus the
-  `target: neutral` `source-collapse` loss reports with an evidence-bound
-  `sourceEvidence` payload (per-dictionary `<ls>` counts).
-- **Proposal:** a **cross-resource lineage relation** between the `lexicog:Entry`
-  nodes (derived-from / abridges) carrying *retained* vs *dropped* evidence, so the
+- **Loss:** `source-collapse`; cause *editorial-compression* (29% of reports —
+  the largest single cause-family). PWG names a source; PWK abridges it; MW
+  collapses it to `L.` or drops it (§4). This is upstream loss, so the fix is a
+  **modeling** construct, not a target-schema gap.
+- **Implemented:** OntoLex now emits a **`csl:LineageRelation`** per transition —
+  PWG → PWK (`csl:transition "abridgement"`) and PWG → MW (`"recomposition"`) —
+  carrying `csl:lineageFrom` / `csl:lineageTo` and the
+  `csl:sourceCitationCount` / `csl:retainedCitationCount` /
+  `csl:droppedCitationCount` (e.g. *ac*: PWG 35 → PWK 8 = 27 dropped; PWG 35 →
+  MW 3 = 32 dropped). The [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl)
+  adds `csl:LineageRelationShape` (constraining `csl:transition` with `sh:in`),
+  and all 250 graphs conform under pySHACL. This sits alongside the existing
+  OntoLex-Lexicog multi-resource graph (one `lexicog:Entry` per source dictionary)
+  and the `target: neutral` `source-collapse` loss reports, each of which now names
+  its `csl:LineageRelation` remedy in `mappedAs`. `analyze-loss`'s `lineageCoverage`
+  reports **369 of 369** source-collapse losses modeled.
+- **Proposal:** standardize a **cross-resource lineage relation** so the
   degradation of evidential certainty along PWG → PWK → MW is a first-class,
   queryable assertion rather than an inference from counts.
 
@@ -143,7 +150,7 @@ value is that an assertion's *epistemic status* travels with it across both mode
 | Derivational-base / root relation (§2) | Align with `ontolex-morph`; standardize the binding |
 | Decomposition-status flag (§3) | **Standardize** on `decomp` |
 | Adjacency-parent recovery status (§4) | Project-local; propose as a TEI dictionaries pattern |
-| Cross-resource lineage relation (§4a) | Propose on `lexicog`; lineage is general to dictionary families |
+| Cross-resource lineage relation (§4a) | **Implemented** (`csl:LineageRelation` with retained/dropped counts); propose on `lexicog` — lineage is general to dictionary families |
 | Kośa sense-boundary (§5) | TEI Lex-0 **ODD customisation**, not a core change |
 
 ## Status
@@ -161,9 +168,11 @@ the archival and Lex-0 profiles, RELAX NG/jing) — closing the loop from measur
 loss to working remedy: every OntoLex `model-vocabulary-gap` loss that needs an
 extension (569 of 569) names a concrete, implemented `csl:` construct, and all 250
 graphs conform to the SHACL profile under pySHACL (`extensionCoverage` in
-[loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2),
-decomposition (§3) and lineage (§4a) constructs were already implemented; §4
-(continuation) and §5 (kośa ODD) remain prototype/customisation.
+[loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2) and
+decomposition (§3) constructs were already implemented; the **source-collapse
+lineage relation (§4a)** is now implemented too (`csl:LineageRelation`,
+`lineageCoverage` 369/369). §4 (continuation) and §5 (kośa ODD) remain
+prototype/customisation.
 
 ## References
 
