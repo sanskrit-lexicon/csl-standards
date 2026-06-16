@@ -152,6 +152,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-36"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-37"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-38"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-39"
         }
       ],
       "csl:sourceRecord": [
@@ -163,6 +172,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aw-mw2337",
@@ -377,6 +389,16 @@
       "csl:lineNumber": 5687,
       "csl:pageColumn": "1-018-b",
       "rdf:value": "<L>1476<pc>1-018-b<k1>aw<k2>aw\n√{#aw#}¦ {#awati#} {%einen Streifzug unternehmen, herumschweifen, umherlaufen, durchirren%}. {#BikzAm#} {%betteln gehen%}.\n<div n=\"m\">— <ab>Intens.</ab> {#awAwyate#} {%hinundher irren, durchirren%}.\n<div n=\"p\">— Mit {#pari#} {%herumschweifen, umhergehen, lustwandeln, durchirren%} <ls n=\"Chr.\">107,27</ls>. <ls>GAUT. 9,35</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "449",
+      "csl:lineNumber": 5859,
+      "csl:pageColumn": "0027-b",
+      "rdf:value": "<L>449<pc>0027-b<k1>aw<k2>aw\n{#aw#}¦ {c1c} <ab>P.</ab> (rarely Ā.) ({#awati, Awa#},\n{#awituM, awita#}). To wander or roam\nabout (with <ab>loc.</ab>); roam over <lbinfo n=\"(some+times\"/>\n(sometimes with <ab>acc.</ab>); {#Bo bawo BikzAmawa#} <ls>Sk.</ls>\ngo to beg alms; {#Awa nEkawikASramAn#}  <lbinfo n=\"ls:Bk.+ 4. 12\"/>\n<ls>Bk. 4. 12</ls>; {#mahImawan#} <ls>Dk. 38</ls> {%--<ab>desid.</ab>%} {#awiwizati#};\n{%--<ab>freq.</ab>%} {#awAwyate#} to wander about <lbinfo n=\"habi+tually\"/>\nhabitually, as a religious mendicant.\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-1",
@@ -934,6 +956,50 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "GAUT.",
       "csl:citedRange": "9,35"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-37",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337"
+      },
+      "frac:evidence": "Sk.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-38",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337"
+      },
+      "frac:evidence": "Bk. 4. 12",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Bk.",
+      "csl:citedRange": "4.12"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-39",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337"
+      },
+      "frac:evidence": "Dk. 38",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#root-relation",

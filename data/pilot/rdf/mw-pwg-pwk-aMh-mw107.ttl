@@ -35,6 +35,7 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-pwk> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-1> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-2> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-3> ;
@@ -49,7 +50,13 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-12> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-13> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-14> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-15> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-15> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-16> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-17> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-18> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-19> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-20> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-21> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "aMh"@sa-Latn-x-SLP1 .
@@ -146,6 +153,13 @@
   csl:recordNumber "48" ;
   csl:lineNumber "188" ;
   csl:pageColumn "1-001-c" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> a csl:SourceRecord ;
+  dct:source "Apte 1890" ;
+  csl:dictionary "ap90" ;
+  csl:recordNumber "19" ;
+  csl:lineNumber "293" ;
+  csl:pageColumn "0002-c" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#sense-mw-1> ;
@@ -251,6 +265,52 @@
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#sense-pwg-1> ;
   frac:evidence "14,15." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-pwg> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-16> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107> ;
+  frac:evidence "Bk. 3. 25" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "Bk." ;
+  csl:citedRange "3.25" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-17> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107> ;
+  frac:evidence "46" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-18> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107> ;
+  frac:evidence "14. 51" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-19> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107> ;
+  frac:evidence "4. 4" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-20> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107> ;
+  frac:evidence "Bk. 2. 40" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "Bk." ;
+  csl:citedRange "2.40" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#attestation-21> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107> ;
+  frac:evidence "15. 75." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaMh-mw107#record-ap90> ;
   csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "textual" .
 

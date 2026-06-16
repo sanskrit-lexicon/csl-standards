@@ -44,6 +44,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#attestation-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#attestation-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#attestation-6"
         }
       ],
       "csl:sourceRecord": [
@@ -55,6 +61,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:prasahya",
@@ -210,6 +219,16 @@
       "rdf:value": "<L>73509<pc>4-175-a<k1>prasahya<k2>prasahya<h>2\n<hom>2.</hom> {#prasahya#}¦ <lex>Adj.</lex> {%bezwingbar%} <ab>u. s. w.</ab> Mit einem <ab>Infin.</ab> {%der%} — (durch einen <ab>Infin.</ab> <ab>pass.</ab> wiederzugeben) {%kann%}. <ab>Vgl.</ab> {#aprasahya#}.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "20879",
+      "csl:lineNumber": 178277,
+      "csl:pageColumn": "0765-a",
+      "rdf:value": "<L>20879<pc>0765-a<k1>prasahya<k2>prasahya\n{#prasahya#}¦ {%<ab>ind.</ab>%} {@1@} Forcibly, violently,\nby force; {#prasahya#} <lbinfo n=\"maRimudDarenmakarava#ktradaMzwrAMkurAt\"/>\n{#maRimudDarenmakaravaktradaMzwrAMkurAt#} <ls>Bh. 2. 4</ls>; <ls>Śi. 1. 27.</ls>\n{@--2@} Exceedingly, much. {@--Comp.@}\n{#--cOraH#} a plunderer, highwayman.\n{#--haraRaM#} violent or forcible seizure,\nplundering.\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -271,6 +290,38 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "MBH.",
       "csl:citedRange": "7,2024"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#attestation-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya"
+      },
+      "frac:evidence": "Bh. 2. 4",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Bh.",
+      "csl:citedRange": "2.4"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#attestation-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya"
+      },
+      "frac:evidence": "Śi. 1. 27.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Śi.",
+      "csl:citedRange": "1.27"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aprasahya#decomposition",

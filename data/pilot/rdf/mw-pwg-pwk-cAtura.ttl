@@ -39,6 +39,7 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#record-pwk> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#record-ap90> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-1> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-2> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-3> ;
@@ -52,7 +53,8 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-11> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-12> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-13> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-14> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-14> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-15> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "cAtura"@sa-Latn-x-SLP1 .
@@ -175,6 +177,13 @@
   csl:lineNumber "160094" ;
   csl:pageColumn "2-222-a" .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#record-ap90> a csl:SourceRecord ;
+  dct:source "Apte 1890" ;
+  csl:dictionary "ap90" ;
+  csl:recordNumber "13207" ;
+  csl:lineNumber "113873" ;
+  csl:pageColumn "0489-b" .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#sense-mw-1> ;
   frac:evidence "L." ;
@@ -281,6 +290,15 @@
   csl:evidenceType "named-source-citation" ;
   csl:citedWork "VIKRAMĀṄKAC." ;
   csl:citedRange "6,12" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#attestation-15> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura> ;
+  frac:evidence "N. 1. 12." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "N." ;
+  csl:citedRange "1.12" ;
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcAtura#lineage-pwk> a csl:LineageRelation ;

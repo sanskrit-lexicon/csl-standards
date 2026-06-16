@@ -74,6 +74,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-14"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-15"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-16"
         }
       ],
       "csl:sourceRecord": [
@@ -85,6 +91,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Barita",
@@ -237,6 +246,16 @@
       "csl:lineNumber": 325170,
       "csl:pageColumn": "4-252-b",
       "rdf:value": "<L>78920<pc>4-252-b<k1>Barita<k2>Barita<h>1\n<hom>1.</hom> {#Barita#}¦ <lex>Adj.</lex> {%voll, gefüllt, voll von, — gefüllt mit%} (<ab>Gen.</ab> oder im <ab>Comp.</ab> vorangehend).\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "21986",
+      "csl:lineNumber": 188398,
+      "csl:pageColumn": "0809-b",
+      "rdf:value": "<L>21986<pc>0809-b<k1>Barita<k2>Barita\n{#Barita#}¦ {%<ab>a.</ab>%} {@1@} Nourished, maintained. \n[Page0809-c+ 56]\n{@--2@} Filled with, full of; {#jagajjAlaM#} <lbinfo n=\"ka#rtA\"/>\n{#kartA kusumaBarasOraByaBaritaM#} <ls>Bv. 1. 54</ls>; <ls n=\"Bv. 1.\">33.</ls>\n{@--3@} Green. {#--taH#} The green colour.\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-1",
@@ -451,6 +470,37 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "Journ. of the Am. Or. S.",
       "csl:citedRange": "6,508,Śl.33"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-15",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita"
+      },
+      "frac:evidence": "Bv. 1. 54",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Bv.",
+      "csl:citedRange": "1.54"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-16",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita"
+      },
+      "frac:evidence": "33.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:inheritedSiglum": "Bv. 1."
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#lineage-pwk",

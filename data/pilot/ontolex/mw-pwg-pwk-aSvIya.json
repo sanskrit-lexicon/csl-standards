@@ -71,6 +71,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-11"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-12"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-13"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-14"
         }
       ],
       "csl:sourceRecord": [
@@ -82,6 +91,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aSvIya",
@@ -266,6 +278,16 @@
       "rdf:value": "<L>12001<pc>1-141-a<k1>aSvIya<k2>aSvIya\n{#aSvIya#}¦\n<div n=\"1\">— 1〉 *<lex>Adj.</lex> {%dem Pferde zuträglich%}.\n<div n=\"1\">— 2〉 <lex>n.</lex> {%Reiterschaar%} <ls>PRIY. 9,18</ls>. <ls>KĀD. 91,15. fgg.</ls>\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "5350",
+      "csl:lineNumber": 47732,
+      "csl:pageColumn": "0205-c",
+      "rdf:value": "<L>5350<pc>0205-c<k1>aSvIya<k2>aSvIya\n{#aSvIya#}¦ {%<ab>a.</ab>%} [{#aSva-Ca#}]  Belonging\nor relating to a horse, agreeable to\nhorses. {#--yaM#} [{#aSvAnAM samUhaH#}  <lbinfo n=\"ls:P. IV. 2.+48\"/>\n<ls>P. IV. 2.  48</ls>] A number of horses, cavalry;\n<ls>Śi. 18. 5</ls>; <ls>K. 222.</ls>\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -430,6 +452,52 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "KĀD.",
       "csl:citedRange": "91,15.fgg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-12",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya"
+      },
+      "frac:evidence": "P. IV. 2. 48",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "P. IV.",
+      "csl:citedRange": "2.48"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-13",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya"
+      },
+      "frac:evidence": "Śi. 18. 5",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Śi.",
+      "csl:citedRange": "18.5"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#attestation-14",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya"
+      },
+      "frac:evidence": "K. 222.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSvIya#lineage-pwk",

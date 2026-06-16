@@ -164,6 +164,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#attestation-42"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#attestation-43"
         }
       ],
       "csl:sourceRecord": [
@@ -175,6 +178,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Urj",
@@ -359,6 +365,16 @@
       "csl:lineNumber": 81414,
       "csl:pageColumn": "1-256-c",
       "rdf:value": "<L>21031<pc>1-256-c<k1>Urj<k2>U/rj\n{#U/rj#}¦ <lex>f.</lex> {%Nahrung, Stärkung; Kraftfülle, Saft und Kraft%}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "9362",
+      "csl:lineNumber": 80416,
+      "csl:pageColumn": "0345-a",
+      "rdf:value": "<L>9362<pc>0345-a<k1>Urj<k2>Urj\n{#Urj#}¦ {%<ab>f.</ab>%} [<ab>cf.</ab> <ls>P. III. 2. 177</ls>] {@1@}\nStrength, vigour. {@--2@} Sap, juice. {@--3@}\nWater. {@--4@} Food; <ab>oft.</ab> with {#iz#}; {#ize#}\n{#tvA Urje, izamUrjaM sukzitiM#} &c.\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#attestation-1",
@@ -997,6 +1013,22 @@
       "csl:sourceDictionary": "mw",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#attestation-43",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj"
+      },
+      "frac:evidence": "P. III. 2. 177",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "P. III.",
+      "csl:citedRange": "2.177"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AUrj#root-relation",

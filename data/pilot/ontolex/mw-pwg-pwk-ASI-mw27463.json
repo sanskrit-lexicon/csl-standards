@@ -37,6 +37,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#attestation-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#attestation-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#attestation-7"
         }
       ],
       "csl:sourceRecord": [
@@ -48,6 +54,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:ASI-mw27463",
@@ -101,6 +110,16 @@
       "csl:lineNumber": 61145,
       "csl:pageColumn": "1-191-a",
       "rdf:value": "<L>16132.1<pc>1-191-a<k1>ASI<k2>*ASI\n{{Lbody=16132}}\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "7043",
+      "csl:lineNumber": 61610,
+      "csl:pageColumn": "0264-b",
+      "rdf:value": "<L>7043<pc>0264-b<k1>ASI<k2>ASI\n{#ASI#}¦ [{#ASIryate'nayA, A-SF-kvip pf˚#}]\n{@1@} A serpent's fang. {@--2@} A kind of\nvenom. {@--3@} A blessing, benediction.\n{@--Comp.@} {#--vizaH#} [{#ASyAM vizamasya#}] {1} a\nsnake; {#garutmadASIvizaBImadarSanEH#} <ls>R. 3. 57.</ls>\n{2} a particular kind of snake;  <lbinfo n=\"ka#rRASIvizaBoginipraSamite\"/>\n{#karRASIvizaBoginipraSamite#} <ls>Ve. 6. 1.</ls>\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#attestation-1",
@@ -171,6 +190,38 @@
       "csl:sourceDictionary": "pwg",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#attestation-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463"
+      },
+      "frac:evidence": "R. 3. 57.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "R.",
+      "csl:citedRange": "3.57"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#attestation-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463"
+      },
+      "frac:evidence": "Ve. 6. 1.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Ve.",
+      "csl:citedRange": "6.1"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASI-mw27463#lineage-pwk",

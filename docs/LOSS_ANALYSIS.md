@@ -211,9 +211,14 @@ Honest limits of the current pilot, recorded so they are not mistaken for absenc
 of the phenomena (the roadmap's "do not hide model failures").
 
 - **Named citations are now materialized in the neutral model** (done). The model
-  carries 2617 citation objects — 116 `generic-lexicographer-hedge` and **2501
-  `named-source-citation`** (PWG 1872, MW 379, PWK 366, capped at 12 per
-  dictionary), each tagged with its `dictionary`. The TEI Lex-0 export emits them
+  carries 3002 citation objects — 116 `generic-lexicographer-hedge` and **2886
+  `named-source-citation`** (PWG 1872, MW 379, PWK 366, and **AP90 385** from the
+  optional fourth dictionary, capped at 12 per dictionary), each tagged with its
+  `dictionary`. **A fourth dictionary, Apte 1890 (AP90), is now attached** to the
+  133 of 250 cases whose headword it shares: it enters the neutral model and the
+  OntoLex graph as a fourth `csl:SourceRecord` with evidence-class-typed
+  attestations (the TEI archival profile and the published loss corpus stay a
+  tri-dict backbone). The TEI Lex-0 export emits them
   as entry-level `<bibl type="named-source" source="#dict-…">`, so a lemma like
   *arcya* — uncited in MW — carries PWG's named sources. **Senses are extracted
   and sense-linked for all three dictionaries** in the neutral model: MW (English,

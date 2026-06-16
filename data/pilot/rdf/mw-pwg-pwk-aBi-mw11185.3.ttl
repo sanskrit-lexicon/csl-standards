@@ -42,6 +42,7 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-pwk> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-1> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-2> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-3> ;
@@ -61,7 +62,13 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-17> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-18> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-19> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-20> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-20> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-21> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-22> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-23> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-24> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-25> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-26> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "aBi"@sa-Latn-x-SLP1 .
@@ -198,6 +205,13 @@
   csl:recordNumber "7252" ;
   csl:lineNumber "26794" ;
   csl:pageColumn "1-084-c" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> a csl:SourceRecord ;
+  dct:source "Apte 1890" ;
+  csl:dictionary "ap90" ;
+  csl:recordNumber "2991" ;
+  csl:lineNumber "28840" ;
+  csl:pageColumn "0126-c" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#sense-pwg-1> ;
@@ -354,6 +368,54 @@
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#sense-pwk-10> ;
   frac:evidence "Spr. 3573" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-pwk> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-21> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3> ;
+  frac:evidence "Sk." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-22> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3> ;
+  frac:evidence "Śi. 9. 56" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "Śi." ;
+  csl:citedRange "9.56" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-23> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3> ;
+  frac:evidence "7. 40" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-24> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3> ;
+  frac:evidence "Ś. 7. 11." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "Ś." ;
+  csl:citedRange "7.11" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-25> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3> ;
+  frac:evidence "Śi. 7. 32" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "Śi." ;
+  csl:citedRange "7.32" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#attestation-26> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3> ;
+  frac:evidence "15. 58." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.3#record-ap90> ;
   csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "textual" .
 

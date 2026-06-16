@@ -82,7 +82,7 @@ The output is a full OntoLex/FrAC profile:
 - `ontolex:Form` canonical form node.
 - `ontolex:LexicalSense` nodes from all three dictionaries — MW (`@en`) plus the
   German Petersburg dictionaries PWG/PWK (`@de`), each tagged `csl:sourceDictionary`.
-- `csl:SourceRecord` nodes for MW/PWG/PWK provenance.
+- `csl:SourceRecord` nodes for MW/PWG/PWK provenance, plus an optional fourth — **Apte 1890 (AP90)** — on cases that share its headword, with evidence-class-typed attestations from its named citations.
 - `frac:Attestation` nodes linked with `prov:wasDerivedFrom`, **attesting the
   specific sense** they belong to (sense-level linkage), or the entry for
   citations not tied to a sense. Each attestation carries a sub-typed
@@ -102,7 +102,7 @@ The validator checks all 250 cases for:
 - graph size beyond a stub;
 - OntoLex and Lexicog entry typing;
 - canonical form;
-- three source records;
+- at least three source records (mw/pwg/pwk, plus ap90 when attached);
 - FrAC attestations with provenance and a valid `csl:evidenceClass`;
 - phenomenon-specific relation nodes;
 - a well-formed `csl:LineageRelation` wherever PWG citations are abridged/recomposed downstream;

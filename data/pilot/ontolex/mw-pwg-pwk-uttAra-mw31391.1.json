@@ -62,6 +62,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-7"
         }
       ],
       "csl:sourceRecord": [
@@ -73,6 +76,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:uttAra-mw31391.1",
@@ -289,6 +295,16 @@
       "rdf:value": "<L>18311<pc>1-223-c<k1>uttAra<k2>uttAra<h>1\n<hom>1.</hom> {#uttAra#}¦ <lex>m.</lex>\n<div n=\"1\">— 1〉 {%das Hinübersetzen über%} (im <ab>Comp.</ab> vorangehend).\n<div n=\"1\">— 2〉 {%Rettung%} <ls>Spr. 4888</ls>.\n<div n=\"1\">— 3〉 {%das Brechen, Vomiren%}.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "7856",
+      "csl:lineNumber": 68776,
+      "csl:pageColumn": "0295-c",
+      "rdf:value": "<L>7856<pc>0295-c<k1>uttAra<k2>uttAra\n{#uttAra#}¦ {%<ab>a.</ab>%} {@1@} Surpassing others, <lbinfo n=\"ex+ceilent\"/>\nexceilent, pre-eminent. {@--2@} Having\nthe eye balls turned up (as eyes).\n{#--raH#} {@1@} Transporting over, <lbinfo n=\"convey+ing\"/>\nconveying. {@--2@} Fording, crossing;  <lbinfo n=\"suKo#ttAratAM\"/>\n{#suKottAratAM#} <ls>K. 326.</ls> {@--3@} Landing, <lbinfo n=\"disem+barking\"/>\ndisembarking. {@--4@} Delivering, rescuing.\n{@--5@} Getting rid of. {@--6@} Vomiting.\n{@--7@} Instability.\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -371,6 +387,20 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-pwk"
       },
       "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#attestation-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1"
+      },
+      "frac:evidence": "K. 326.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AuttAra-mw31391.1#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

@@ -95,6 +95,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#attestation-20"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#attestation-21"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#attestation-22"
         }
       ],
       "csl:sourceRecord": [
@@ -106,6 +112,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:ASrava",
@@ -273,6 +282,16 @@
       "csl:lineNumber": 615479,
       "csl:pageColumn": "7-320-b",
       "rdf:value": "<L>214431<pc>7-320-b<k1>ASrava<k2>ASrava<h>2\n<hom>2.</hom> {#ASrava#}¦ I. {%eine unreine Neigung%} <ls>MAHĀVY. 109</ls>. <ls n=\"MAHĀVY.\">129</ls>. <ls n=\"MAHĀVY.\">255</ls>. {#˚kzaya#} <lex>m.</lex> <ls n=\"MAHĀVY.\">7</ls>. <ls n=\"MAHĀVY.\">14</ls>.<info n=\"sup_7\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "7077",
+      "csl:lineNumber": 62013,
+      "csl:pageColumn": "0266-a",
+      "rdf:value": "<L>7077<pc>0266-a<k1>ASrava<k2>ASrava\n{#ASrava#}¦ {%<ab>a.</ab>%} [{#A-Sru-ac#}] Obedient,\ncompliant; {#BizajAmanASravaH#}  <lbinfo n=\"ls:R. 19.+ 49\"/>\n<ls>R. 19. 49</ls>; <ls>N. 3. 84.</ls> {#--vaH#} {@1@} A promise,\nengagement. {@--2@} Fault, <lbinfo n=\"transgres+sion\"/>\ntransgression. {@--3@} One of the categories <lbinfo n=\"ac+cording\"/>\naccording to the Jainas; see {#Asrava#}. \n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#attestation-1",
@@ -569,6 +588,38 @@
       "csl:sourceDictionary": "mw",
       "csl:evidenceType": "generic-lexicographer-hedge",
       "csl:evidenceClass": "hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#attestation-21",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava"
+      },
+      "frac:evidence": "R. 19. 49",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "R.",
+      "csl:citedRange": "19.49"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#attestation-22",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava"
+      },
+      "frac:evidence": "N. 3. 84.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "N.",
+      "csl:citedRange": "3.84"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASrava#lineage-pwk",

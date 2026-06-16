@@ -56,6 +56,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#attestation-7"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#attestation-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#attestation-9"
         }
       ],
       "csl:sourceRecord": [
@@ -67,6 +73,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:anvakza",
@@ -236,6 +245,16 @@
       "rdf:value": "<L>5718<pc>1-067-c<k1>anvakza<k2>anvakza\n{#anvakza#}¦\n<div n=\"1\">— 1〉 *<lex>Adj.</lex> {%nachfolgend%}.\n<div n=\"1\">— 2〉 {#˚m#} <lex>Adv.</lex> {%hinterher, unmittelbar darnach%} <ls>GAUT. 14,9</ls>.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "2188",
+      "csl:lineNumber": 22575,
+      "csl:pageColumn": "0100-c",
+      "rdf:value": "<L>2188<pc>0100-c<k1>anvakza<k2>anvakza\n{#anvakza#}¦ {%<ab>a.</ab>%} [{#anugataHakzaM iMdriyaM gatisamA#}.]\n{@1@} Visible, perceptible. {@--2@} Following,\nclose on the heels of, immediately\nfollowing. {#--kzaM#} {%<ab>ind.</ab>%} {@1@} Afterwards,\nafter; {#Aroha tvaM… sItAM cAropayAnvakzaM#}\n<ls>Rām.</ls> {@--2@} Immediately after, <lbinfo n=\"forth+with\"/>\nforthwith, directly; <ls>Y. 3. 21.</ls>\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -342,6 +361,36 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "GAUT.",
       "csl:citedRange": "14,9"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#attestation-8",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#attestation-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza"
+      },
+      "frac:evidence": "Y. 3. 21.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Y.",
+      "csl:citedRange": "3.21"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanvakza#lineage-pwk",
