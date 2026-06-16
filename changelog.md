@@ -4,7 +4,12 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
-## [Unreleased]
+## [0.7.0] - 2026-06-16
+
+**Validation complete.** All three schema languages now validate the corpus with
+real external engines: RELAX NG (jing), Schematron (Saxon + the ISO Schematron
+skeleton, new here), and SHACL (pySHACL). The external harness reports 1014 checks,
+0 failed, 0 skipped. This closes the last validation-hardening item.
 
 ### Added
 - **Lex-0 Schematron now runs with a real SVRL engine** — closes the last
