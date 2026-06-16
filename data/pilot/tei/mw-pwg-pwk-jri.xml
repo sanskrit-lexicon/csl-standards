@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -76,6 +78,9 @@
         <abbr>ṚV. 9,71,5.</abbr>
         <citedRange>9,71,5</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-jri-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-jri-record-gra">
+        <abbr>Naigh. 〔II,14〕</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-jri-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -117,6 +122,37 @@
 &lt;div n=&quot;1&quot;&gt;— 2〉 *{#aBiBave#}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#upa#} {%hingehen zu%} (&lt;ab&gt;Acc.&lt;/ab&gt;).
 &lt;div n=&quot;p&quot;&gt;— Mit {#pari#} in {#parijri/#}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-jri-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">14117</idno>
+        <idno type="line">121194</idno>
+        <idno type="pc">0520-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;14117&lt;pc&gt;0520-b&lt;k1&gt;jri&lt;k2&gt;jri
+{#jri#}¦ {vI.v} {c1c} &lt;ab&gt;P.&lt;/ab&gt; ({#jrayati#}) {@1@} To &lt;lbinfo n=&quot;over+power&quot;/&gt;
+overpower, conquer. {@--2@} To go. {vII.v} {9}
+{c10c} &lt;ab&gt;P.&lt;/ab&gt; ({#jriRAti, jrAyayati#}) To grow old.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-jri-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">3603</idno>
+        <idno type="line">23119</idno>
+        <idno type="pc">0506</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;3603&lt;pc&gt;0506&lt;k1&gt;jri&lt;k2&gt;jri
+{@√jri,@}¦ {%gehen, schreiten%} [gatikarma &lt;ls&gt;Naigh. 〔II,14〕&lt;/ls&gt;.], wahrscheinlich mit &lt;hom&gt;2.&lt;/hom&gt; jar, also weiter mit car zusammenhängend. In Bezug auf die Bedeutungsentwickelung, wie sie in jráyas hervortritt, &lt;ab&gt;vgl.&lt;/ab&gt; cirá von car und uru-gāyá.
+&lt;div n=&quot;Pf&quot;&gt;Mit {@upa,@} {%hinzuschreiten%} zu [&lt;ab&gt;A.&lt;/ab&gt;].
+&lt;div n=&quot;Pf&quot;&gt;{@pári,@} {%herumlaufen,%} enthalten in parijrí.
+&lt;div n=&quot;H&quot;&gt;Stamm {@jraya:@}
+&lt;div n=&quot;TS&quot;&gt;-ati úpa {783,5} jígāt úpa jrayati gós apīcíam padám.
+&lt;div n=&quot;P&quot;&gt;Mehrstämmiges Particip {@jrayasāná@} [aus den Stämmen jraya und s (von as)] (&lt;ab n=&quot;siehe&quot;&gt;s.&lt;/ab&gt; für sich).
+&lt;div n=&quot;H&quot;&gt;Verbale {@jrí@}
+&lt;div n=&quot;P&quot;&gt;enthalten in uru-jrí und mit pari in pari-jrí.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

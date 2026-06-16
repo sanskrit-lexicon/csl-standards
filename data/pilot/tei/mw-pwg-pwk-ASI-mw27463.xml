@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -76,6 +77,14 @@
       <bibl xml:id="mw-pwg-pwk-ASI-mw27463-cite-pwg-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ASI-mw27463-record-pwg">
         <abbr>Ind. 153.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-ASI-mw27463-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ASI-mw27463-record-ap90">
+        <abbr>R. 3. 57.</abbr>
+        <citedRange>3.57</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ASI-mw27463-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ASI-mw27463-record-ap90">
+        <abbr>Ve. 6. 1.</abbr>
+        <citedRange>6.1</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ASI-mw27463-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -109,6 +118,23 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;16132.1&lt;pc&gt;1-191-a&lt;k1&gt;ASI&lt;k2&gt;*ASI
 {{Lbody=16132}}
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ASI-mw27463-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">7043</idno>
+        <idno type="line">61610</idno>
+        <idno type="pc">0264-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7043&lt;pc&gt;0264-b&lt;k1&gt;ASI&lt;k2&gt;ASI
+{#ASI#}¦ [{#ASIryate&apos;nayA, A-SF-kvip pf˚#}]
+{@1@} A serpent&apos;s fang. {@--2@} A kind of
+venom. {@--3@} A blessing, benediction.
+{@--Comp.@} {#--vizaH#} [{#ASyAM vizamasya#}] {1} a
+snake; {#garutmadASIvizaBImadarSanEH#} &lt;ls&gt;R. 3. 57.&lt;/ls&gt;
+{2} a particular kind of snake;  &lt;lbinfo n=&quot;ka#rRASIvizaBoginipraSamite&quot;/&gt;
+{#karRASIvizaBoginipraSamite#} &lt;ls&gt;Ve. 6. 1.&lt;/ls&gt;
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

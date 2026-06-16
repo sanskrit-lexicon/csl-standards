@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -109,6 +111,12 @@
         <abbr>ŚAT. BR. 13,8,1,9.</abbr>
         <citedRange>13,8,1,9</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-mIv-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-mIv-record-gra">
+        <abbr>VS.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-mIv-cite-gra-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-mIv-record-gra">
+        <abbr>AV.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-mIv-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -165,6 +173,29 @@
 &lt;div n=&quot;p&quot;&gt;— Mit {#prati#}
 &lt;div n=&quot;1&quot;&gt;— 1〉 {%zurückschieben, -drängen%}.
 &lt;div n=&quot;1&quot;&gt;— 2〉 {%zudrücken, zuschliessen%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-mIv-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">23207</idno>
+        <idno type="line">201165</idno>
+        <idno type="pc">0867-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;23207&lt;pc&gt;0867-c&lt;k1&gt;mIv&lt;k2&gt;mIv
+{#mIv#}¦ {c1c} &lt;ab&gt;P.&lt;/ab&gt; ({#mIvati#}) {@1@} To go, move.
+{@--2@} To grow fat.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-mIv-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">6866</idno>
+        <idno type="line">46156</idno>
+        <idno type="pc">1047</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6866&lt;pc&gt;1047&lt;k1&gt;mIv&lt;k2&gt;mIv
+{@(√mīv),@}¦ {%bewegen, schieben%} &lt;ls&gt;VS.&lt;/ls&gt;, &lt;ls&gt;AV.&lt;/ls&gt;
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

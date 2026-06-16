@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -237,6 +238,16 @@
         <abbr>GAUT. 9,35</abbr>
         <citedRange>9,35</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ap90">
+        <abbr>Sk.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ap90">
+        <abbr>Bk. 4. 12</abbr>
+        <citedRange>4.12</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ap90">
+        <abbr>Dk. 38</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-aw-mw2337-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -311,6 +322,24 @@
 √{#aw#}¦ {#awati#} {%einen Streifzug unternehmen, herumschweifen, umherlaufen, durchirren%}. {#BikzAm#} {%betteln gehen%}.
 &lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Intens.&lt;/ab&gt; {#awAwyate#} {%hinundher irren, durchirren%}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#pari#} {%herumschweifen, umhergehen, lustwandeln, durchirren%} &lt;ls n=&quot;Chr.&quot;&gt;107,27&lt;/ls&gt;. &lt;ls&gt;GAUT. 9,35&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aw-mw2337-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">449</idno>
+        <idno type="line">5859</idno>
+        <idno type="pc">0027-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;449&lt;pc&gt;0027-b&lt;k1&gt;aw&lt;k2&gt;aw
+{#aw#}¦ {c1c} &lt;ab&gt;P.&lt;/ab&gt; (rarely Ā.) ({#awati, Awa#},
+{#awituM, awita#}). To wander or roam
+about (with &lt;ab&gt;loc.&lt;/ab&gt;); roam over &lt;lbinfo n=&quot;(some+times&quot;/&gt;
+(sometimes with &lt;ab&gt;acc.&lt;/ab&gt;); {#Bo bawo BikzAmawa#} &lt;ls&gt;Sk.&lt;/ls&gt;
+go to beg alms; {#Awa nEkawikASramAn#}  &lt;lbinfo n=&quot;ls:Bk.+ 4. 12&quot;/&gt;
+&lt;ls&gt;Bk. 4. 12&lt;/ls&gt;; {#mahImawan#} &lt;ls&gt;Dk. 38&lt;/ls&gt; {%--&lt;ab&gt;desid.&lt;/ab&gt;%} {#awiwizati#};
+{%--&lt;ab&gt;freq.&lt;/ab&gt;%} {#awAwyate#} to wander about &lt;lbinfo n=&quot;habi+tually&quot;/&gt;
+habitually, as a religious mendicant.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

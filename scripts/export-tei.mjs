@@ -2,13 +2,13 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { stripPseudoMarkup, extractLabeledSources } from "./lib/citations.mjs";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
+import { ALL_DICTS, DICT_LABEL } from "./lib/dictionaries.mjs";
 
-const DICTS = ["mw", "pwg", "pwk"];
-const DICT_LABEL = {
-  mw: "Monier-Williams 1899",
-  pwg: "Boehtlingk-Roth PWG",
-  pwk: "Boehtlingk PWK"
-};
+// The archival TEI profile carries every source record present for a case: the
+// mw/pwg/pwk tri-dict backbone plus any optional dictionary (ap90/gra) that shares
+// the headword. Presence is decided per case from model.records, mirroring the
+// OntoLex exporter's presentDicts. Adding a dictionary is a one-line registry edit.
+const DICTS = ALL_DICTS;
 
 const PROFILE_VERSION = "tei-archival-profile-v0.1";
 
@@ -27,6 +27,12 @@ function escapeXml(value) {
 
 function safeCaseId(id) {
   return id.replace(/:/g, "-");
+}
+
+function oxfordJoin(items) {
+  if (items.length <= 1) return items.join("");
+  if (items.length === 2) return items.join(" and ");
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
 }
 
 function caseUrl(id) {
@@ -158,10 +164,10 @@ function sourceRecordXml(model, dict, raw) {
   ].join("\n");
 }
 
-function citationIndexXml(model, rawByDict) {
+function citationIndexXml(model, rawByDict, presentDicts) {
   const id = safeCaseId(model.id);
   const rows = [];
-  for (const dict of DICTS) {
+  for (const dict of presentDicts) {
     const citations = extractLabeledSources(rawByDict[dict]);
     citations.forEach((citation, index) => {
       // csl: evidence-class extension — the @subtype sub-types the citation
@@ -189,10 +195,17 @@ function citationIndexXml(model, rawByDict) {
 
 function teiDocument(model, rawByDict, isReviewCase) {
   const id = safeCaseId(model.id);
+  // Present dictionaries for this case: always the mw/pwg/pwk backbone, plus any
+  // optional dictionary that supplied a record. Drives source records + taxonomy.
+  const presentDicts = DICTS.filter(dict => model.records?.[dict]);
   const phenomenaTerms = (model.phenomena || []).map(p => `          <term>${escapeXml(p)}</term>`).join("\n");
-  const sourceRecords = DICTS.map(dict => sourceRecordXml(model, dict, rawByDict[dict])).join("\n");
+  const sourceRecords = presentDicts.map(dict => sourceRecordXml(model, dict, rawByDict[dict])).join("\n");
+  const dictCategories = presentDicts.map(dict => `          <category xml:id="dict-${dict}"><catDesc>${escapeXml(DICT_LABEL[dict])}</catDesc></category>`).join("\n");
+  // Oxford-comma join so the tri-dict baseline reads "MW, PWG, and PWK" (unchanged)
+  // and a 4th/5th source extends it as "…, AP90, and GRA".
+  const sourceList = oxfordJoin(presentDicts.map(dict => dict.toUpperCase()));
   const relations = relationXml(model);
-  const citationIndex = citationIndexXml(model, rawByDict);
+  const citationIndex = citationIndexXml(model, rawByDict, presentDicts);
   return `<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="${id}">
   <teiHeader>
@@ -211,7 +224,7 @@ function teiDocument(model, rawByDict, isReviewCase) {
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL ${escapeXml(sourceList)} source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -220,9 +233,7 @@ function teiDocument(model, rawByDict, isReviewCase) {
       </projectDesc>
       <classDecl>
         <taxonomy xml:id="dicts">
-          <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
-          <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
-          <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+${dictCategories}
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -276,7 +287,7 @@ async function main() {
   const indexes = await loadSourceIndexes(hardCases);
 
   for (const model of models) {
-    const rawByDict = Object.fromEntries(DICTS.map(dict => [dict, fullRaw(model, dict, indexes)]));
+    const rawByDict = Object.fromEntries(DICTS.filter(dict => model.records?.[dict]).map(dict => [dict, fullRaw(model, dict, indexes)]));
     const xml = teiDocument(model, rawByDict, reviewIds.has(model.id));
     await fs.writeFile(path.join(outputDir, `${safeCaseId(model.id)}.xml`), xml, "utf8");
   }

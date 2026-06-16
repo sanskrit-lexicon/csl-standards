@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,8 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -273,6 +275,14 @@
         <abbr>BHĀVAPR. 3,30</abbr>
         <citedRange>3,30</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-arj-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-arj-record-ap90">
+        <abbr>Y. 2. 118.</abbr>
+        <citedRange>2.118</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-arj-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-arj-record-ap90">
+        <abbr>Bk. 14. 74.</abbr>
+        <citedRange>14.74</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-arj-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -401,6 +411,50 @@
 &lt;div n=&quot;m&quot;&gt;— &lt;ab&gt;Caus.&lt;/ab&gt; &lt;ab&gt;Act.&lt;/ab&gt; &lt;ab&gt;Med.&lt;/ab&gt; {%sich verschaffen, erwerben, erlangen%}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#samupa#} &lt;ab&gt;Caus.&lt;/ab&gt; {%verschaffen%} &lt;ls&gt;BHĀVAPR. 3,30&lt;/ls&gt;.
 &lt;div n=&quot;p&quot;&gt;— Mit {#pra#} &lt;ab&gt;Caus.&lt;/ab&gt; {%verschaffen%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-arj-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">4145</idno>
+        <idno type="line">38113</idno>
+        <idno type="pc">0164-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4145&lt;pc&gt;0164-c&lt;k1&gt;arj&lt;k2&gt;arj
+{#arj#}¦ {c1c} &lt;ab&gt;P.&lt;/ab&gt; [{#arjati, Anarja, arjizyati#},
+{#ArjIt, arjituM, ArjIta#}] {@1@} To procure,
+secure, gain, earn, usually in the
+{%&lt;ab&gt;caus.&lt;/ab&gt;%} in this sense; {#pitfdravyAviroDena#}
+{#yadanyatsvayamarjitaM#} &lt;ls&gt;Y. 2. 118.&lt;/ls&gt; {@--2@} To
+take up; {#AnarjurnfBujostrARi#} &lt;ls&gt;Bk. 14. 74.&lt;/ls&gt;
+--{c10c} &lt;ab&gt;P.&lt;/ab&gt; or {%&lt;ab&gt;caus.&lt;/ab&gt;%} {@1@} To procure, acquire,
+obtain; {#svayamarjita, svArjita#} obtained
+by one&apos;s own exertions, self-acquired.
+{@--2@} To work or manufacture make,
+prepare ({#satoguRAMtarADAnaM#}). --WITH
+{#ati#} {1} to allow, permit, let go.
+{2} to remove, despatch, make away
+with. {#--anu#} to let go, set free, &lt;lbinfo n=&quot;de+liver&quot;/&gt;
+deliver. {#--api#} to add to. {#--anvava#}
+{1} to cause to go after or in a &lt;lbinfo n=&quot;parti+cular&quot;/&gt;
+particular direction. {2} to visit with
+any thing, overcome. {#--apyati#} to
+add, append; say something in &lt;lbinfo n=&quot;ad+dition&quot;/&gt;
+addition to what is already said. {#--ava#}
+to permit to leave, release, let go.
+{#--ud#} to drive out, remove. {#--pra#}
+{%&lt;ab&gt;caus.&lt;/ab&gt;%} to furnish, supply, procure.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-arj-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">1047</idno>
+        <idno type="line">5783</idno>
+        <idno type="pc">0112</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1047&lt;pc&gt;0112&lt;k1&gt;arj&lt;k2&gt;arj&lt;h&gt;2
+&lt;hom&gt;2.&lt;/hom&gt; {@(√arj),@}¦ strahlen, aus ar erweitert, wie arc; liegt zu Grunde für árjuna, ṛjrá &lt;ab&gt;u. s. w.&lt;/ab&gt;
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

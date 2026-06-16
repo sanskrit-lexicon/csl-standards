@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -107,6 +108,9 @@
         <abbr>5.</abbr>
         <ref type="inherited-siglum">ŚAT. BR. 3,4,3,</ref>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-aNg-mw1492-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aNg-mw1492-record-gra">
+        <abbr>Śat. Br.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-aNg-mw1492-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -152,6 +156,17 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;920&lt;pc&gt;1-011-b&lt;k1&gt;aNg&lt;k2&gt;aNg
 √{#aNg#}¦ {#aNgati#} {%gehen%}. &lt;ab&gt;Vgl.&lt;/ab&gt; {#palyaNg#}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aNg-mw1492-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">132</idno>
+        <idno type="line">691</idno>
+        <idno type="pc">0013</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;132&lt;pc&gt;0013&lt;k1&gt;aNg&lt;k2&gt;aNg
+{@[√aṅg],@}¦ {%gehen, sich bewegen,%} &lt;ab&gt;Caus.&lt;/ab&gt; &lt;ab&gt;m.&lt;/ab&gt; pali, {%umrühren,%} im &lt;ab&gt;pass.&lt;/ab&gt; {%sich drehen%} (&lt;ls&gt;Śat. Br.&lt;/ls&gt;). Davon áṅga, áṅgiras; und Wurzel iṅg.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

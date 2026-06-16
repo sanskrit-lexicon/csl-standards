@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -230,6 +231,9 @@
       <bibl xml:id="mw-pwg-pwk-paYcadaSa-cite-pwk-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-paYcadaSa-record-pwk">
         <abbr>OPP. CAT. 1</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-paYcadaSa-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-paYcadaSa-record-gra">
+        <abbr>AV.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-paYcadaSa-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -305,6 +309,19 @@
 &lt;div n=&quot;1&quot;&gt;— 2〉 &lt;lex&gt;f.&lt;/lex&gt; {#I/#}
 &lt;div n=&quot;2&quot;&gt;— a〉 {%der 15te Tag in einem Halbmonat%}.
 &lt;div n=&quot;2&quot;&gt;— b〉 Titel eines Werkes. {#˚vyAKyA#} &lt;lex&gt;f.&lt;/lex&gt; &lt;ls&gt;OPP. CAT. 1&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-paYcadaSa-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">5171</idno>
+        <idno type="line">34405</idno>
+        <idno type="pc">0759</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5171&lt;pc&gt;0759&lt;k1&gt;paYcadaSa&lt;k2&gt;paYcadaSa/
+{@pañcadaśá,@}¦ &lt;ab&gt;a.&lt;/ab&gt; [von páñcadaśan], 1〉 der {%{{funfzehn-&gt;fünfzehn||20160606|Unknown, Jim Funderburk||The &apos;funf&apos; spelling occurs in two other headwords also, and was similarly changed.}}te%} &lt;ls&gt;AV.&lt;/ls&gt;; 2〉 {%aus {{funfzehn-&gt;fünfzehn||20160606|Unknown, Jim Funderburk||The &apos;funf&apos; spelling occurs in two other headwords also, and was similarly changed.}} bestehend, {{funfzehn-&gt;fünfzehn||20160606|Unknown, Jim Funderburk||The &apos;funf&apos; spelling occurs in two other headwords also, and was similarly changed.}} Bestandtheile enthaltend%}.
+&lt;div n=&quot;TS&quot;&gt;-ám 2〉 sutám {853,2}.
+&lt;div n=&quot;TS&quot;&gt;-ā́ni 2〉 ukthā́ {940,8}.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

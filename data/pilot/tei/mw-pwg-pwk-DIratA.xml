@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -98,6 +99,16 @@
       <bibl xml:id="mw-pwg-pwk-DIratA-cite-pwk-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-DIratA-record-pwk">
         <abbr>Spr. 2713</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-ap90-1" type="named-source-citation" subtype="kosha" corresp="#mw-pwg-pwk-DIratA-record-ap90">
+        <abbr>H. 3. 44</abbr>
+        <citedRange>3.44</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-DIratA-record-ap90">
+        <abbr>V. 2.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DIratA-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-DIratA-record-ap90">
+        <abbr>Me. 114.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-DIratA-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -135,6 +146,25 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;55440&lt;pc&gt;3-161-c&lt;k1&gt;DIratA&lt;k2&gt;DIratA&lt;h&gt;2
 &lt;hom&gt;2.&lt;/hom&gt; {#DIratA#}¦ &lt;lex&gt;f.&lt;/lex&gt; {%Klugheit%} &lt;ls&gt;Spr. 2713&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-DIratA-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">16078</idno>
+        <idno type="line">138864</idno>
+        <idno type="pc">0598-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;16078&lt;pc&gt;0598-a&lt;k1&gt;DIratA&lt;k2&gt;DIratA
+{#DIratA#}¦ {@1@} Fortitude, courage,
+strength of mind; {#vipattO ca mahAl~loke#}
+{#DIratAmanugacCati#} &lt;ls&gt;H. 3. 44&lt;/ls&gt;; &lt;ls&gt;V. 2.&lt;/ls&gt; {@--2@} &lt;lbinfo n=&quot;Sup+pression&quot;/&gt;
+Suppression of jealousy &amp;c. {@--3@} Gravity,
+solemnity (as shown by silence &amp;c.);
+{#pratyAdeSAnna Kalu Bavato DIratAM kalpayAmi#}
+&lt;ls&gt;Me. 114.&lt;/ls&gt; {@--4@} Steadiness, firmness. {@--5@}
+Wisdom, cleverness. {@--6@} Refusal.
+(For other meanings see {#DErya#}).
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

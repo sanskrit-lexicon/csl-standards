@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -72,6 +73,10 @@
       <bibl xml:id="mw-pwg-pwk-nicita-cite-pwg-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-nicita-record-pwg">
         <abbr>VP. 182).</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-nicita-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-nicita-record-ap90">
+        <abbr>Śi. 17. 14.</abbr>
+        <citedRange>17.14</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-nicita-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -111,6 +116,20 @@
 &lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;Adj.&lt;/lex&gt; &lt;ab&gt;s. u.&lt;/ab&gt; &lt;hom&gt;1.&lt;/hom&gt; {#ci#} mit {#ni#}.
 &lt;div n=&quot;1&quot;&gt;— 2〉 *&lt;lex&gt;m.&lt;/lex&gt; &lt;ab&gt;Pl.&lt;/ab&gt; &lt;ab&gt;N. pr.&lt;/ab&gt; eines Kriegerstammes.
 &lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;f.&lt;/lex&gt; {#A#} &lt;ab&gt;N. pr.&lt;/ab&gt; eines Flusses.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-nicita-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">16685</idno>
+        <idno type="line">144017</idno>
+        <idno type="pc">0620-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;16685&lt;pc&gt;0620-a&lt;k1&gt;nicita&lt;k2&gt;nicita
+{#nicita#}¦ {%&lt;ab&gt;p. p.&lt;/ab&gt;%} {@1@} Covered, overcast,
+overspread; &lt;ls&gt;Śi. 17. 14.&lt;/ls&gt; {@--2@} Full of,
+filled. {@--3@} Raised up. {@--4@} Piled or
+heaped up.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

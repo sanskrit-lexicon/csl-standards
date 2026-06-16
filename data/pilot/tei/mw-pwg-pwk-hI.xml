@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -125,6 +126,14 @@
         <abbr>Chr. 300,7</abbr>
         <citedRange>300,7</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-hI-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-hI-record-ap90">
+        <abbr>Śi. 11. 64</abbr>
+        <citedRange>11.64</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-hI-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-hI-record-ap90">
+        <abbr>Bk. 14. 39</abbr>
+        <citedRange>14.39</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-hI-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -166,6 +175,24 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;134926&lt;pc&gt;7-277-c&lt;k1&gt;hI&lt;k2&gt;hI
 {#hI#}¦ &lt;ab&gt;Interj.&lt;/ab&gt; {%des Staunens, Entsetzens, Scherzes, Lachens%} und {%Behagens%} &lt;ls&gt;Spr. 868&lt;/ls&gt; (wo {#hI na#} zu lesen ist; &lt;ab&gt;vgl.&lt;/ab&gt; &lt;ls&gt;GAṆAR. S. 7, Z. 10&lt;/ls&gt;). &lt;ls&gt;ŚIŚ. 11,64&lt;/ls&gt; ({#hI#} &lt;ab&gt;st.&lt;/ab&gt; {#hi#} zu lesen, wie schon das Metrum zeigt; &lt;ab&gt;vgl.&lt;/ab&gt; auch &lt;ls&gt;GAṆAR. S. 7, Z. 10&lt;/ls&gt;). &lt;ls&gt;BĀLAR. 202,4&lt;/ls&gt;. &lt;ls&gt;HEM. PAR. 1,350. 409&lt;/ls&gt;. &lt;ls&gt;JĀTAKAM. 31,44&lt;/ls&gt;. Auch wiederholt &lt;ls&gt;Chr. 300,7&lt;/ls&gt;. (im &lt;lang&gt;Prākrit&lt;/lang&gt;).
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-hI-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">31453</idno>
+        <idno type="line">271596</idno>
+        <idno type="pc">1172-c</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;31453&lt;pc&gt;1172-c&lt;k1&gt;hI&lt;k2&gt;hI
+{#hI#}¦ {%&lt;ab&gt;ind.&lt;/ab&gt;%} An interjection of {@1@} &lt;lbinfo n=&quot;Sur+prise&quot;/&gt;
+Surprise (ah!); {#hatIvIDalasitAnAM hI#}
+{#vicitro vipAkaH#} &lt;ls&gt;Śi. 11. 64&lt;/ls&gt;; or {#hI#}
+{#citraM lakzmaRenoce#} &lt;ls&gt;Bk. 14. 39&lt;/ls&gt;; (often
+repeated in theatrical language in
+this sense). {@--2@} Fatigue, &lt;lbinfo n=&quot;despon+dency&quot;/&gt;
+despondency or sorrow. {@--3@} Reason
+(&lt;ab&gt;cf.&lt;/ab&gt; {#hi#}). 
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

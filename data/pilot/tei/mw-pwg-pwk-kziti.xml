@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -226,6 +227,9 @@
       <bibl xml:id="mw-pwg-pwk-kziti-cite-pwk-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-kziti-record-pwk">
         <abbr>BĪJAG. 144</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-kziti-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-kziti-record-gra">
+        <abbr>AV.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-kziti-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -301,6 +305,17 @@
 &lt;div n=&quot;1&quot;&gt;— 2〉 {%die Erde, Erdboden, Erde als Stoff%} (&lt;ls n=&quot;Chr.&quot;&gt;104,5&lt;/ls&gt;). &lt;ab&gt;Pl.&lt;/ab&gt; {%Ländereien%}.
 &lt;div n=&quot;1&quot;&gt;— 3〉 &lt;ab&gt;Pl.&lt;/ab&gt; {%die Niederlassungen,%} so &lt;ab&gt;v. a.&lt;/ab&gt; {%Stämme, Völkerschaften, Völker, Menschen%} &lt;ab&gt;überh.&lt;/ab&gt; Uebertragen auch von {%Göttergeschlechtern%}.
 &lt;div n=&quot;1&quot;&gt;— 4〉 &lt;ab&gt;Bez.&lt;/ab&gt; {%der Zahl Eins%} &lt;ls&gt;BĪJAG. 144&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kziti-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">2799</idno>
+        <idno type="line">17074</idno>
+        <idno type="pc">0368</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;2799&lt;pc&gt;0368&lt;k1&gt;kziti&lt;k2&gt;kzi/ti
+{@(kṣíti),@}¦ &lt;ab&gt;f.&lt;/ab&gt;, {%Untergang,%} das {%Dahinschwinden, Vergehen%} (&lt;ls&gt;AV.&lt;/ls&gt;) [von &lt;hom&gt;2.&lt;/hom&gt; kṣi], enthalten in á-kṣiti.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

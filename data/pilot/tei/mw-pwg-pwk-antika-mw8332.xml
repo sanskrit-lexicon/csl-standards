@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -227,6 +228,9 @@
         <abbr>199,5</abbr>
         <ref type="inherited-siglum">Chr.</ref>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-antika-mw8332-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-antika-mw8332-record-gra">
+        <abbr>RV</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-antika-mw8332-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -362,6 +366,19 @@ mit dem &lt;ab&gt;acc.&lt;/ab&gt;: {#ime ca puruzA divyA yAntyasya raTamantikAt#
 &lt;div n=&quot;2&quot;&gt;— b〉 {%eine &lt;ab&gt;best.&lt;/ab&gt; Pflanze%}.
 &lt;div n=&quot;2&quot;&gt;— c〉 Ofen &lt;ls&gt;GAL.&lt;/ls&gt;
 &lt;div n=&quot;1&quot;&gt;— 3〉 &lt;lex&gt;n.&lt;/lex&gt; {%Nähe%}. {#antika/m#} {%in die Nähe, herbei; zu — hin, auf — zu, vor — hin;%} mit &lt;ab&gt;Gen.&lt;/ab&gt; und *&lt;ab&gt;Abl.&lt;/ab&gt; oder am Ende eines &lt;ab&gt;Comp.&lt;/ab&gt; (so auch bei den folgenden Casus). {#antikena#} {%nahe bei%}. {#antikA/t#} {%aus der Nähe; in der (die) Nähe bei%} &lt;ls n=&quot;Chr.&quot;&gt;54,7&lt;/ls&gt;. &lt;ls n=&quot;Chr.&quot;&gt;78,25&lt;/ls&gt;. von (&lt;ab&gt;z. B.&lt;/ab&gt; kaufen) &lt;ls n=&quot;Chr.&quot;&gt;199,5&lt;/ls&gt;. {#antike/#} {%in der Nähe, dicht an; in Gegenwart von%}. {#antika˚#} {%in der Nähe%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-antika-mw8332-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">586</idno>
+        <idno type="line">3228</idno>
+        <idno type="pc">0066</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;586&lt;pc&gt;0066&lt;k1&gt;antika&lt;k2&gt;antika/
+{@antiká,@}¦ &lt;ab&gt;a.&lt;/ab&gt;, nahe [von ánti]; im &lt;ls&gt;RV&lt;/ls&gt; nur &lt;ab&gt;n.&lt;/ab&gt;, {%Nähe,%} -ám, {%in die Nähe,%} -é, {%in der Nähe%}.
+&lt;div n=&quot;TS&quot;&gt;-ám mṛtyós {987,2}.
+&lt;div n=&quot;TS&quot;&gt;-é {790,5} &lt;ab&gt;Gegens.&lt;/ab&gt; dūraké.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

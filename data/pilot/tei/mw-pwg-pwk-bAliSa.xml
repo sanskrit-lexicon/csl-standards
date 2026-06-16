@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -218,6 +219,10 @@
         <abbr>MBH. 5,91.</abbr>
         <citedRange>5,91</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-bAliSa-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-bAliSa-record-ap90">
+        <abbr>Ms. 3. 176.</abbr>
+        <citedRange>3.176</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-bAliSa-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -267,6 +272,21 @@
 &lt;hom&gt;1.&lt;/hom&gt; {#bAliSa#}¦
 &lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;Adj.&lt;/lex&gt; (&lt;lex&gt;f.&lt;/lex&gt; {#A#}) {%jung, kindisch, dumm, einfältig%}.
 &lt;div n=&quot;1&quot;&gt;— 2〉 &lt;lex&gt;m.&lt;/lex&gt; {%Thor, Schwachkopf%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-bAliSa-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">21708</idno>
+        <idno type="line">185351</idno>
+        <idno type="pc">0795-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;21708&lt;pc&gt;0795-b&lt;k1&gt;bAliSa&lt;k2&gt;bAliSa
+{#bAliSa#}¦ {%&lt;ab&gt;a.&lt;/ab&gt;%} {@1@} Childish, puerile,
+silly. {@--2@} Young. {@--3@} Foolish, &lt;lbinfo n=&quot;ignor+ant&quot;/&gt;
+ignorant; &lt;ls&gt;Ms. 3. 176.&lt;/ls&gt; {@--4@} Careless. {#--SaH#}
+{@1@} A fool, blockhead. {@--2@} A child, boy.
+{#--SaM#} A pillow.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

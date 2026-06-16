@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -118,6 +119,10 @@
         <abbr>Z. f. vgl. Spr. 11,372. fgg.</abbr>
         <citedRange>11,372.fgg</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bfzwi-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Bfzwi-record-gra">
+        <abbr>Ku. 〔11,372 fg.〕</abbr>
+        <citedRange>11,372fg.〕</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-Bfzwi-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -159,6 +164,18 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;80852&lt;pc&gt;4-282-c&lt;k1&gt;Bfzwi&lt;k2&gt;Bfzwi/&lt;h&gt;1
 &lt;hom&gt;1.&lt;/hom&gt; {#Bfzwi/#}¦ &lt;lex&gt;f.&lt;/lex&gt; {%Zacke, Spitze; Kante, Ecke%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Bfzwi-record-gra" type="source-entry" source="#dict-gra">
+      <bibl type="cdsl-record">
+        <title>Grassmann Wörterbuch zum Rig-Veda</title>
+        <idno type="L">6447</idno>
+        <idno type="line">43121</idno>
+        <idno type="pc">0964</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6447&lt;pc&gt;0964&lt;k1&gt;Bfzwi&lt;k2&gt;Bfzwi/
+{@bhṛṣṭí,@}¦ [von *bhṛṣ = hṛṣ, &lt;ls&gt;Ku. 〔11,372 fg.〕&lt;/ls&gt;], 1〉 {%Spitze, Zacke;%} &lt;ab&gt;vgl.&lt;/ab&gt; sahásra-, piśáṅga-bhṛṣṭī 2〉 {%Ecke%} in cátur-bhṛṣṭī.
+&lt;div n=&quot;TS&quot;&gt;-ís girés {56,3}.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

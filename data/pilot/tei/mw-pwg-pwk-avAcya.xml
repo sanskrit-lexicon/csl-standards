@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -91,6 +92,17 @@
         <abbr>126,10</abbr>
         <ref type="inherited-siglum">Chr.</ref>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-avAcya-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-avAcya-record-ap90">
+        <abbr>Ms. 2. 128.</abbr>
+        <citedRange>2.128</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-avAcya-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-avAcya-record-ap90">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-avAcya-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-avAcya-record-ap90">
+        <abbr>Bg. 2. 36.</abbr>
+        <citedRange>2.36</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-avAcya-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -135,6 +147,27 @@
 &lt;div n=&quot;1&quot;&gt;— 1〉 {%nicht anzureden%}.
 &lt;div n=&quot;1&quot;&gt;— 2〉 {%nicht zu sagen, — auszusprechen%} &lt;ls n=&quot;Chr.&quot;&gt;126,10&lt;/ls&gt;.
 &lt;div n=&quot;1&quot;&gt;— 3〉 {%nicht unmittelbar ausgedrückt%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-avAcya-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">4953</idno>
+        <idno type="line">44744</idno>
+        <idno type="pc">0193-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4953&lt;pc&gt;0193-a&lt;k1&gt;avAcya&lt;k2&gt;avAcya
+{#avAcya#}¦ {%&lt;ab&gt;a.&lt;/ab&gt;%} {@1@} Not proper to be &lt;lbinfo n=&quot;ad+dressed&quot;/&gt;
+addressed; {#avAcyo dIkzito nAmnA#} &lt;lbinfo n=&quot;yavI#yAnapi&quot;/&gt;
+{#yavIyAnapi yo Bavet#} &lt;ls&gt;Ms. 2. 128.&lt;/ls&gt; {@--2@} &lt;lbinfo n=&quot;Impro+per&quot;/&gt;
+Improper to be uttered; vile, bad; {#avAcyaM#}
+{#vadato jihvA kaTaM na patitA tava#} &lt;ls&gt;Rām.&lt;/ls&gt;;
+{#˚vAdAMSca bahUn vadizyaMti tavAhitAH#}  &lt;lbinfo n=&quot;ls:Bg. 2.+ 36.&quot;/&gt;
+&lt;ls&gt;Bg. 2. 36.&lt;/ls&gt; {@--3@} Not distinctly expressed, not
+expressible in words; {#˚tA, ˚tvaM#} &lt;lbinfo n=&quot;impro+priety&quot;/&gt;
+impropriety; reproach, calumny. {@--Comp.@}
+{#--deSaH#} ‘the unspeakable place,’ the
+vulva ({#yoni#}).
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

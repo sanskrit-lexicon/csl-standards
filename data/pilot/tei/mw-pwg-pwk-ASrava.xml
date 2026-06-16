@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -131,6 +132,14 @@
         <abbr>14</abbr>
         <ref type="inherited-siglum">MAHĀVY.</ref>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-ASrava-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ASrava-record-ap90">
+        <abbr>R. 19. 49</abbr>
+        <citedRange>19.49</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ASrava-cite-ap90-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ASrava-record-ap90">
+        <abbr>N. 3. 84.</abbr>
+        <citedRange>3.84</citedRange>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ASrava-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -178,6 +187,22 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;214431&lt;pc&gt;7-320-b&lt;k1&gt;ASrava&lt;k2&gt;ASrava&lt;h&gt;2
 &lt;hom&gt;2.&lt;/hom&gt; {#ASrava#}¦ I. {%eine unreine Neigung%} &lt;ls&gt;MAHĀVY. 109&lt;/ls&gt;. &lt;ls n=&quot;MAHĀVY.&quot;&gt;129&lt;/ls&gt;. &lt;ls n=&quot;MAHĀVY.&quot;&gt;255&lt;/ls&gt;. {#˚kzaya#} &lt;lex&gt;m.&lt;/lex&gt; &lt;ls n=&quot;MAHĀVY.&quot;&gt;7&lt;/ls&gt;. &lt;ls n=&quot;MAHĀVY.&quot;&gt;14&lt;/ls&gt;.&lt;info n=&quot;sup_7&quot;/&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ASrava-record-ap90" type="source-entry" source="#dict-ap90">
+      <bibl type="cdsl-record">
+        <title>Apte 1890</title>
+        <idno type="L">7077</idno>
+        <idno type="line">62013</idno>
+        <idno type="pc">0266-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;7077&lt;pc&gt;0266-a&lt;k1&gt;ASrava&lt;k2&gt;ASrava
+{#ASrava#}¦ {%&lt;ab&gt;a.&lt;/ab&gt;%} [{#A-Sru-ac#}] Obedient,
+compliant; {#BizajAmanASravaH#}  &lt;lbinfo n=&quot;ls:R. 19.+ 49&quot;/&gt;
+&lt;ls&gt;R. 19. 49&lt;/ls&gt;; &lt;ls&gt;N. 3. 84.&lt;/ls&gt; {#--vaH#} {@1@} A promise,
+engagement. {@--2@} Fault, &lt;lbinfo n=&quot;transgres+sion&quot;/&gt;
+transgression. {@--3@} One of the categories &lt;lbinfo n=&quot;ac+cording&quot;/&gt;
+according to the Jainas; see {#Asrava#}. 
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>
