@@ -47,7 +47,7 @@ The output is a full TEI archival profile:
 - `form/orth` preserving SLP1 lemma form.
 - `sense/def` where a safe machine gloss can be extracted.
 - `etym` or `xr` relations for roots, compounds, and continuations.
-- `listBibl` citation index for extracted `<ls>` signals.
+- `listBibl` citation index for extracted `<ls>` signals, each `<bibl>` carrying a sub-typed evidence class as **`@subtype`** ∈ {`textual`, `hedge`, `kosha`, `editorial`} and, for a coordinate-bearing citation, a structured **`<citedRange>`** (the TEI side of the evidence-class extension).
 - Three `cit type="source-entry"` blocks preserving full CDSL MW/PWG/PWK records as escaped archival quotes.
 - Explicit `review-status` and `profile-version` notes.
 
@@ -62,6 +62,7 @@ The validator checks all 250 cases for:
 - three source-entry citations.
 - escaped raw CDSL tags, not live pseudo-XML.
 - required phenomenon-specific structures: hedge, root, compound, continuation.
+- a valid evidence-class `@subtype` on every citation `<bibl>`.
 - declared full validation scope.
 - project ODD/profile markers.
 

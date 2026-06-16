@@ -17,8 +17,19 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 
 const PROFILE_VERSION = "tei-lex0-pilot-v0.1";
+
+// csl: evidence-class extension on a named-source <bibl>: the @subtype sub-types
+// the citation and a coordinate-bearing one carries a structured <citedRange>.
+// (Hedges are emitted as <usg type="hint">, so only textual/kosha/editorial
+// appear here.) Mirrors OntoLex csl:evidenceClass.
+function biblExtension(c) {
+  const cls = evidenceClass(c.source, c.type);
+  const coord = parseCoordinate(c.source);
+  return { subtype: ` subtype="${escapeXml(cls)}"`, citedRange: coord ? `<citedRange>${escapeXml(coord.locus)}</citedRange>` : "" };
+}
 
 function escapeXml(value) {
   return String(value ?? "").replace(/[<>&'"]/g, char => ({
@@ -120,7 +131,8 @@ function senseXml(sense, id, index) {
     } else {
       const prov = c.dictionary ? ` source="#dict-${escapeXml(c.dictionary)}"` : "";
       const inh = c.inheritedFrom ? `<ref type="inherited-siglum">${escapeXml(c.inheritedFrom)}</ref>` : "";
-      lines.push(`  <bibl type="named-source"${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${inh}</bibl>`);
+      const ext = biblExtension(c);
+      lines.push(`  <bibl type="named-source"${ext.subtype}${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${ext.citedRange}${inh}</bibl>`);
     }
   }
   if (sense.example) {
@@ -157,7 +169,8 @@ function citationsXml(model, id) {
   named.forEach((c, i) => {
     const prov = c.dictionary ? ` source="#dict-${escapeXml(c.dictionary)}"` : "";
     const inh = c.inheritedFrom ? `<ref type="inherited-siglum">${escapeXml(c.inheritedFrom)}</ref>` : "";
-    rows.push(`<bibl xml:id="${id}-cite-${i + 1}" type="named-source"${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${inh}</bibl>`);
+    const ext = biblExtension(c);
+    rows.push(`<bibl xml:id="${id}-cite-${i + 1}" type="named-source"${ext.subtype}${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${ext.citedRange}${inh}</bibl>`);
   });
   return rows;
 }

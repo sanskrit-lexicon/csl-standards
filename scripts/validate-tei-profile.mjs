@@ -120,8 +120,17 @@ function validateTeiCase(model, reviewIds) {
   caseCheck((xml.match(/<quote xml:space="preserve">/g) || []).length === 3, "expected 3 preserved source quotes");
   caseWarn(xml.includes("<listBibl") || !model.phenomena.includes("hedge"), "hedge case lacks extracted citation index");
 
+  // csl: evidence-class extension — every citation <bibl> carries a sub-typed
+  // @subtype evidence class, and any <citedRange> has a value.
+  const TEI_EVIDENCE_CLASSES = ["textual", "hedge", "kosha", "editorial"];
+  const subtypes = [...xml.matchAll(/<bibl\b[^>]*\bsubtype="([^"]*)"/g)].map(m => m[1]);
+  caseCheck(subtypes.every(s => TEI_EVIDENCE_CLASSES.includes(s)),
+    `citation bibl has an invalid evidence-class @subtype (${subtypes.filter(s => !TEI_EVIDENCE_CLASSES.includes(s)).join(", ") || "none"})`);
+  caseCheck(!xml.includes("<citedRange></citedRange>"), "empty <citedRange> emitted");
+
   if (model.phenomena.includes("hedge")) {
     caseCheck(xml.includes("generic-lexicographer-hedge"), "missing hedge evidence class");
+    caseCheck(xml.includes('subtype="hedge"'), "hedge case lacks subtype=\"hedge\" on its citation");
   }
   if (model.phenomena.includes("root")) {
     caseCheck(xml.includes('type="verbal-root"'), "missing verbal-root entry type");
