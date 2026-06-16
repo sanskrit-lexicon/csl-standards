@@ -6,6 +6,15 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-06-16
+
+**The write-up.** With every extension construct implemented and validated
+(v0.5.0), this release adds the full prose paper that reports the work end to end —
+the diagnosis (the TEI-vs-OntoLex asymmetry, the evidence-centred findings, the
+PWG→PWK→MW lineage, the indigenous *kośa* fusion) and the remedy (the implemented,
+schema-validated `csl:` extension layer, with regenerable coverage and validation
+numbers). Documentation only; no pipeline or schema changes.
+
 ### Added
 - **Full paper draft** ([docs/PAPER.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER.md))
   — *Sanskrit Lexicography Between TEI and OntoLex: Evidence, Derivation, and
