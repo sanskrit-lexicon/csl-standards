@@ -6,6 +6,21 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-06-16
+
+**The extension proposal is complete.** v0.4.0 implemented the first batch of
+`csl:` constructs; this release closes the remaining two, so **every construct in
+EXTENSION_PROPOSAL (§1 evidence class, §2 root, §3 decomposition, §4 continuation
+recovery-status, §4a source-collapse lineage, §5 kośa sense-boundary) is now
+implemented and validated in-pipeline** — OntoLex against the SHACL profile
+(pySHACL) and TEI against the compiled RELAX NG (jing). Added here: the
+**continuation recovery-status** (`csl:recoveryStatus` / TEI `@subtype`, so a
+parent reconstructed from page adjacency is never asserted as if printed) and the
+**kośa sense-boundary customisation** (the indigenous *iti*-unit recorded as a
+declared, enforced Lex-0 ODD customisation rather than a silent flattening). The
+one open hardening is executing the Lex-0 ODD's Schematron with an external SVRL
+engine (enforced in-pipeline today).
+
 ### Added
 - **Kośa sense-boundary customisation implemented** (EXTENSION_PROPOSAL §5) — the
   **last unimplemented construct**; the whole proposal (§1–§5, §4a) is now
