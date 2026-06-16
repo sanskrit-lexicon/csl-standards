@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { generatedAt } from "./lib/provenance.mjs";
+import { extractLabeledSources } from "./lib/citations.mjs";
 
 const root = process.cwd();
 const errors = [];
@@ -40,7 +41,7 @@ function validateShaclShapes() {
   for (const prefix of ["@prefix sh:", "@prefix ontolex:", "@prefix lexicog:", "@prefix frac:", "@prefix prov:", "@prefix csl:"]) {
     check(shapes.includes(prefix), `${relative}: missing ${prefix}`);
   }
-  for (const shape of ["csl:LexicalEntryShape", "csl:SourceRecordShape", "csl:AttestationShape", "csl:LexicographicResourceShape", "csl:LexicographicEntryShape"]) {
+  for (const shape of ["csl:LexicalEntryShape", "csl:SourceRecordShape", "csl:AttestationShape", "csl:LexicographicResourceShape", "csl:LexicographicEntryShape", "csl:LineageRelationShape"]) {
     check(shapes.includes(shape), `${relative}: missing ${shape}`);
   }
   for (const required of [PROFILE_VERSION, VALIDATION_SCOPE, "ontolex:canonicalForm", "frac:attestation", "prov:wasDerivedFrom", "csl:evidenceClass"]) {
@@ -161,6 +162,21 @@ function validateCase(model, reviewIds) {
     caseCheck(graph.some(node => node["@type"] === "csl:ContinuationRelation"), "missing continuation relation");
   }
 
+  // Source-collapse lineage (§4a): when PWG names sources that PWK abridges or MW
+  // does not fully carry, the graph must hold a well-formed csl:LineageRelation.
+  const lsN = dict => extractLabeledSources(model.records?.[dict]?.raw || "", {max: 9999}).length;
+  const pwgN = lsN("pwg"), pwkN = lsN("pwk"), mwN = lsN("mw");
+  const lineages = graph.filter(node => node["@type"] === "csl:LineageRelation");
+  caseCheck(!(pwgN > 0 && pwkN < pwgN) || lineages.some(l => l["csl:lineageTo"] === "pwk"),
+    "missing PWG→PWK abridgement lineage relation");
+  caseCheck(!(pwgN > 0 && mwN < pwgN) || lineages.some(l => l["csl:lineageTo"] === "mw"),
+    "missing PWG→MW recomposition lineage relation");
+  for (const lineage of lineages) {
+    caseCheck(lineage["csl:relatesEntry"]?.["@id"] === entry["@id"], `lineage ${lineage["@id"]} does not relate the entry`);
+    caseCheck(["abridgement", "recomposition"].includes(lineage["csl:transition"]), `lineage ${lineage["@id"]} has an invalid transition`);
+    caseCheck(Number.isInteger(lineage["csl:droppedCitationCount"]), `lineage ${lineage["@id"]} lacks a dropped-citation count`);
+  }
+
   for (const prefix of ["@prefix ontolex:", "@prefix lexicog:", "@prefix frac:", "@prefix prov:", "@prefix rdf:", "@prefix csl:"]) {
     caseCheck(ttl.includes(prefix), `${ttlRelative}: missing ${prefix}`);
   }
@@ -171,6 +187,7 @@ function validateCase(model, reviewIds) {
   caseCheck(ttl.includes(`csl:validationScope "${VALIDATION_SCOPE}"`), `${ttlRelative}: missing validation scope triple`);
   caseCheck(ttl.includes("frac:Attestation"), `${ttlRelative}: missing FrAC attestation triples`);
   caseCheck(!attestations.length || ttl.includes("csl:evidenceClass"), `${ttlRelative}: missing csl:evidenceClass triples`);
+  caseCheck(!lineages.length || ttl.includes("a csl:LineageRelation"), `${ttlRelative}: missing csl:LineageRelation triples`);
   caseCheck((ttl.match(/a csl:SourceRecord/g) || []).length === 3, `${ttlRelative}: expected 3 csl:SourceRecord triples`);
   caseWarn(ttl.includes("ontolex:sense") || !entry["ontolex:sense"]?.length, `${ttlRelative}: JSON-LD senses are not mirrored in Turtle`);
 

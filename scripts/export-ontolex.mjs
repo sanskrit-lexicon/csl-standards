@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
+import { extractLabeledSources } from "./lib/citations.mjs";
 
 const DICTS = ["mw", "pwg", "pwk"];
 const DICT_LABEL = {
@@ -164,6 +165,29 @@ function jsonldFor(model, rawByDict, isReviewCase) {
 
   for (const sense of senseNodes) delete sense._citations;
 
+  // Source-collapse lineage (EXTENSION_PROPOSAL §4a): make the PWG → PWK → MW
+  // evidence collapse an explicit, queryable relation, not only a loss report.
+  // Counts use the same <ls> basis (record raw) as the source-collapse reports.
+  const lsCount = dict => extractLabeledSources(model.records?.[dict]?.raw || "", {max: 9999}).length;
+  const pwgN = lsCount("pwg"), pwkN = lsCount("pwk"), mwN = lsCount("mw");
+  const lineageNodes = [];
+  const lineageRelation = (to, toN, transition, note) => ({
+    "@id": iriFor(model.id, `lineage-${to}`),
+    "@type": "csl:LineageRelation",
+    "csl:relatesEntry": {"@id": caseIri},
+    "csl:lineageFrom": "pwg",
+    "csl:lineageTo": to,
+    "csl:transition": transition,
+    "csl:sourceCitationCount": pwgN,
+    "csl:retainedCitationCount": toN,
+    "csl:droppedCitationCount": pwgN - toN,
+    "csl:modelingNote": note
+  });
+  if (pwgN > 0 && pwkN < pwgN) lineageNodes.push(lineageRelation("pwk", pwkN, "abridgement",
+    "PWK abridges PWG's named apparatus; dropped citations are upstream editorial loss, not a model gap."));
+  if (pwgN > 0 && mwN < pwgN) lineageNodes.push(lineageRelation("mw", mwN, "recomposition",
+    "MW recomposes the Petersburg dictionaries in English, collapsing named sources to the L. hedge or dropping them."));
+
   const relationNodes = [];
   if (model.phenomena?.includes("root")) {
     const whitney = model.relations?.find(rel => rel.type === "whitney-root-association")?.target;
@@ -244,7 +268,7 @@ function jsonldFor(model, rawByDict, isReviewCase) {
       "csl": "https://sanskrit-lexicon.github.io/csl-standards/ns#"
     },
     "@id": caseIri,
-    "@graph": [entry, formNode, ...resourceNodes, ...lexEntryNodes, ...senseNodes, ...sourceRecordNodes, ...attestationNodes, ...relationNodes]
+    "@graph": [entry, formNode, ...resourceNodes, ...lexEntryNodes, ...senseNodes, ...sourceRecordNodes, ...attestationNodes, ...relationNodes, ...lineageNodes]
   };
 }
 
@@ -255,7 +279,8 @@ function turtleFor(jsonld) {
   const senses = graph.filter(node => node["@type"] === "ontolex:LexicalSense");
   const records = graph.filter(node => node["@type"] === "csl:SourceRecord");
   const attestations = graph.filter(node => node["@type"] === "frac:Attestation");
-  const relations = graph.filter(node => String(node["@type"]).startsWith("csl:") || node["@type"] === "decomp:ComponentList");
+  const relations = graph.filter(node => (String(node["@type"]).startsWith("csl:") || node["@type"] === "decomp:ComponentList") && node["@type"] !== "csl:LineageRelation");
+  const lineages = graph.filter(node => node["@type"] === "csl:LineageRelation");
   const resources = graph.filter(node => node["@type"] === "lexicog:LexicographicResource");
   const lexEntries = graph.filter(node => node["@type"] === "lexicog:Entry");
 
@@ -346,6 +371,19 @@ function turtleFor(jsonld) {
     lines.push(`${ttlIri(relation["@id"])} a ${relation["@type"]} ;`);
     lines.push(`  csl:relatesEntry ${ttlIri(entry["@id"])} ;`);
     lines.push(`  csl:modelingNote ${ttlString(relation["csl:modelingNote"] || "relation exported for review")} .`);
+    lines.push("");
+  }
+
+  for (const lineage of lineages) {
+    lines.push(`${ttlIri(lineage["@id"])} a csl:LineageRelation ;`);
+    lines.push(`  csl:relatesEntry ${ttlIri(entry["@id"])} ;`);
+    lines.push(`  csl:lineageFrom ${ttlString(lineage["csl:lineageFrom"])} ;`);
+    lines.push(`  csl:lineageTo ${ttlString(lineage["csl:lineageTo"])} ;`);
+    lines.push(`  csl:transition ${ttlString(lineage["csl:transition"])} ;`);
+    lines.push(`  csl:sourceCitationCount ${lineage["csl:sourceCitationCount"]} ;`);
+    lines.push(`  csl:retainedCitationCount ${lineage["csl:retainedCitationCount"]} ;`);
+    lines.push(`  csl:droppedCitationCount ${lineage["csl:droppedCitationCount"]} ;`);
+    lines.push(`  csl:modelingNote ${ttlString(lineage["csl:modelingNote"])} .`);
     lines.push("");
   }
 

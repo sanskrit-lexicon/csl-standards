@@ -129,6 +129,19 @@ async function main() {
     }, {})
   };
 
+  // --- lineage coverage: the editorial-compression source-collapse losses are
+  // upstream (extensionNeeded: false), so the remedy is a *modeling* construct,
+  // not a target extension. A loss is "modeled" when it names the csl:LineageRelation
+  // that makes the PWG → PWK → MW collapse explicit in the graph (§4a).
+  const sourceCollapse = reports.filter(r => r.phenomenon === "source-collapse");
+  const modeled = sourceCollapse.filter(r => r.mappedAs);
+  const lineage = {
+    sourceCollapseReports: sourceCollapse.length,
+    modeledByLineageRelation: modeled.length,
+    unmodeled: sourceCollapse.length - modeled.length,
+    byConstruct: tally(modeled, "mappedAs")
+  };
+
   const analysis = {
     generatedBy: "scripts/analyze-loss-reports.mjs",
     lossReports: {
@@ -145,7 +158,8 @@ async function main() {
       sensesByDictionary: senseCov
     },
     coverageGaps: gaps,
-    extensionCoverage: coverage
+    extensionCoverage: coverage,
+    lineageCoverage: lineage
   };
 
   // Write to data/ and mirror into src/ so the Observable site can load it.
@@ -174,6 +188,8 @@ async function main() {
   out.push("```json\n" + JSON.stringify(gaps, null, 2) + "\n```");
   out.push("## extension coverage");
   out.push("```json\n" + JSON.stringify(coverage, null, 2) + "\n```");
+  out.push("## lineage coverage");
+  out.push("```json\n" + JSON.stringify(lineage, null, 2) + "\n```");
   console.log(out.join("\n"));
   console.log(`\nWrote data/pilot/loss-analysis.json`);
 }

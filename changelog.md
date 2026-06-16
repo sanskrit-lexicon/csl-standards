@@ -7,6 +7,20 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 
 ### Added
+- **Source-collapse lineage relation implemented** (EXTENSION_PROPOSAL §4a) —
+  closes the largest loss family's construct. The OntoLex export emits a
+  [`csl:LineageRelation`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-ontolex.mjs)
+  per transition — PWG → PWK (`csl:transition "abridgement"`) and PWG → MW
+  (`"recomposition"`) — carrying `csl:sourceCitationCount` /
+  `csl:retainedCitationCount` / `csl:droppedCitationCount` (e.g. *ac*: 35 → 8 → 3).
+  The [SHACL profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl)
+  adds `csl:LineageRelationShape`; all 250 graphs conform under pySHACL. Each
+  `source-collapse` loss report names the remedy in `mappedAs`; `analyze-loss`
+  gains a `lineageCoverage` block showing **369/369** source-collapse losses
+  modeled (250 abridgement + 119 recomposition). Unlike the evidence-class gap,
+  this is a *modeling* construct for an upstream editorial loss, not a target
+  extension — the evidence is still gone, but the collapse is now explicit and
+  queryable. See [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4.
 - **TEI side of the evidence-class extension** — makes the headline construct
   symmetric across both target standards (the OntoLex side shipped in v0.3.0).
   Every citation `<bibl>` in the [archival profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei.mjs)

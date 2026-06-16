@@ -75,3 +75,19 @@ csl:LexicographicEntryShape
   sh:targetClass lexicog:Entry ;
   sh:property [ sh:path lexicog:describes ; sh:minCount 1 ; sh:maxCount 1 ] ;
   sh:property [ sh:path lexicog:component ; sh:minCount 1 ] .
+
+# Source-collapse lineage (EXTENSION_PROPOSAL §4a): an explicit, queryable edge
+# for the PWG → PWK → MW evidence collapse, carrying retained/dropped counts.
+csl:LineageRelationShape
+  a sh:NodeShape ;
+  sh:targetClass csl:LineageRelation ;
+  sh:property [ sh:path csl:relatesEntry ; sh:minCount 1 ] ;
+  sh:property [ sh:path csl:lineageFrom ; sh:minCount 1 ] ;
+  sh:property [ sh:path csl:lineageTo ; sh:minCount 1 ] ;
+  sh:property [
+    sh:path csl:transition ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "abridgement" "recomposition" )
+  ] ;
+  sh:property [ sh:path csl:droppedCitationCount ; sh:minCount 1 ; sh:maxCount 1 ] .

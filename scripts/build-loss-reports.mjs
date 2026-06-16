@@ -162,6 +162,7 @@ async function main() {
         sourceDictionary: "pwg",
         sourcePointer: { L: model.records.pwg.L, line: model.records.pwg.line },
         claim: `PWG attests this lemma with ${pwgLs.length} named citation(s); MW carries none.`,
+        mappedAs: "csl:LineageRelation (recomposition)",
         loss: `PWG's named sources (e.g. ${sample(pwgLs).join("; ")}) are reduced to the MW lexicographer hedge or dropped; the lemma becomes textually unattested at the MW endpoint.`,
         failureClassification: "editorial-compression",
         extensionNeeded: false,
@@ -181,6 +182,7 @@ async function main() {
         sourceDictionary: "pwk",
         sourcePointer: { L: model.records.pwk.L, line: model.records.pwk.line },
         claim: `PWK abridges PWG: PWG has ${pwgLs.length} named citation(s), PWK retains ${pwkLs.length}.`,
+        mappedAs: "csl:LineageRelation (abridgement)",
         loss: droppedAll
           ? `PWK drops PWG's entire named apparatus (e.g. ${sample(pwgLs).join("; ")}).`
           : `PWK keeps ${pwkLs.length} of ${pwgLs.length} PWG citation(s) and drops the rest.`,
