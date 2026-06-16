@@ -73,8 +73,15 @@
         <constraintSpec ident="csl-lex0-kosa-sense-boundary" scheme="schematron">
           <constraint>
             <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-              <sch:rule context="tei:entry[starts-with(@xml:id,'skd-')]/tei:sense">
-                <sch:assert test="tei:bibl or tei:note[@type='model-loss']">Each kośa sense carries its closing authority (bibl) or a model-loss note witnessing the sense/citation fusion.</sch:assert>
+              <!-- A kośa entry declares the iti-unit convention explicitly. -->
+              <sch:rule context="tei:entry[tei:note[@type='entry-convention'] = 'kosa-iti-unit']">
+                <sch:assert test="tei:sense/tei:bibl[@type='kosa-authority']">A kośa entry has at least one sense closed by an authority formula (bibl type="kosa-authority").</sch:assert>
+              </sch:rule>
+              <!-- The closing authority formula is the sense boundary: the iti-unit
+                   it bounds must witness the sense/citation fusion as a model-loss. -->
+              <sch:rule context="tei:sense[tei:bibl[@type='kosa-authority']]">
+                <sch:assert test="tei:note[@type='model-loss']">A kośa sense closed by an authority formula (iti X) records the sense/citation-fusion as a model-loss, so the fusion is declared rather than silently flattened.</sch:assert>
+                <sch:assert test="tei:def">A kośa iti-unit carries its synonym run as a def.</sch:assert>
               </sch:rule>
             </sch:pattern>
           </constraint>

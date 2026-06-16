@@ -7,6 +7,17 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 
 ### Added
+- **Kośa sense-boundary customisation implemented** (EXTENSION_PROPOSAL §5) — the
+  **last unimplemented construct**; the whole proposal (§1–§5, §4a) is now
+  implemented. The TEI Lex-0 export marks each indigenous *kośa* entry with
+  `<note type="entry-convention">kosa-iti-unit</note>`, emits the closing authority
+  as a typed **`<bibl type="kosa-authority">`** (the sense boundary, distinct from an
+  example citation) and a `<note type="model-loss">` witnessing the sense/citation
+  fusion on every iti-unit. The Lex-0 ODD's `csl-lex0-kosa-sense-boundary`
+  Schematron asserts the pairing, and [validate-tei-lex0](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-lex0.mjs)
+  now **enforces** it in `build-pilot` (previously only declared); all 6 kośa
+  entries validate against the compiled TEI RELAX NG (jing). The
+  `sense-citation-fusion` loss reports name the remedy in `mappedAs`.
 - **Continuation-parent recovery status implemented** (EXTENSION_PROPOSAL §4) —
   the second-to-last unimplemented construct. `csl:ContinuationRelation` now carries
   an explicit **`csl:recoveryStatus`** ∈ {`recovered`, `conjectured`, `unresolved`}

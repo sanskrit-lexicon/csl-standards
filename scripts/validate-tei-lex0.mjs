@@ -69,7 +69,21 @@ function main() {
     check(subtypes.every(s => NAMED_CLASSES.includes(s)),
       `named-source bibl has an invalid evidence-class @subtype (${subtypes.filter(s => !NAMED_CLASSES.includes(s)).join(", ") || "none"})`);
     check(!xml.includes("<citedRange></citedRange>"), "empty <citedRange> emitted");
-    check(xml.includes(`<note type="profile-version">${PROFILE_VERSION}</note>`), "missing/incorrect profile-version note");
+    // §5 kośa sense-boundary customisation (EXTENSION_PROPOSAL §5, ODD
+    // csl-lex0-kosa-sense-boundary): a kośa entry declares the iti-unit
+    // convention, and every sense closed by an authority formula
+    // (bibl[@type="kosa-authority"]) witnesses the sense/citation fusion as a
+    // model-loss — enforced here, not only declared in the ODD.
+    const isKosa = xml.includes('<note type="entry-convention" resp="#source">kosa-iti-unit</note>');
+    if (isKosa) {
+      check(/<bibl\b[^>]*type="kosa-authority"/.test(xml), "kośa entry has no authority-bounded (kosa-authority) sense");
+    }
+    for (const m of xml.matchAll(/<sense\b[\s\S]*?<\/sense>/g)) {
+      if (/<bibl\b[^>]*type="kosa-authority"/.test(m[0])) {
+        check(/<note type="model-loss"/.test(m[0]), "kośa authority sense lacks the model-loss fusion witness");
+        check(/<def\b/.test(m[0]), "kośa iti-unit sense lacks a def (synonym run)");
+      }
+    }
 
     if (errors.length) failed += 1;
     cases.push({ file, ok: errors.length === 0, errors });

@@ -125,20 +125,29 @@ proposal is to promote the stable subset below into a published vocabulary
   degradation of evidential certainty along PWG → PWK → MW is a first-class,
   queryable assertion rather than an inference from counts.
 
-## 5. Kośa sense/citation fusion — *a tradition-bound construct*
+## 5. Kośa sense/citation fusion — *a tradition-bound construct* — **IMPLEMENTED**
 
 - **Loss:** `sense-citation-fusion`; cause *sanskrit-convention* (the only cause
   not fixable by a generic extension). The indigenous *kośa* binds a synonym run
   to its closing authority as one indivisible *iti*-unit (§5); the sense/
   citation-separating standards cannot express it.
-- **Prototype:** the project **TEI Lex-0 ODD**
-  ([tei-lex0-profile.odd.xml](../data/schema/tei-lex0-profile.odd.xml)) declares a
-  *kośa sense-boundary customisation* (authority formula = sense boundary) as a
-  Schematron constraint; the parsed kośa senses carry their authority inline.
+- **Implemented:** the project **TEI Lex-0 ODD**
+  ([tei-lex0-profile.odd.xml](../data/schema/tei-lex0-profile.odd.xml)) carries a
+  *kośa sense-boundary customisation* (`constraintSpec` `csl-lex0-kosa-sense-boundary`,
+  Schematron). A kośa entry declares the convention with
+  `<note type="entry-convention">kosa-iti-unit</note>`; each sense closed by an
+  authority formula carries it as a typed **`<bibl type="kosa-authority">`** (the
+  sense boundary, distinguishable from an example citation) and a
+  `<note type="model-loss">` witnessing the fusion. The Schematron asserts the
+  pairing; [validate-tei-lex0](../scripts/validate-tei-lex0.mjs) **enforces** it in
+  `build-pilot` (not only declares it), and the markup validates against the
+  compiled TEI RELAX NG (jing). The `sense-citation-fusion` loss reports name this
+  remedy in `mappedAs`.
 - **Proposal:** a TEI Lex-0 **ODD customisation** (not a core change) treating the
   authority formula as a sense boundary, with a documented model-loss note when a
   baseline consumer flattens it — i.e. make the convention declarable, not silently
-  lost.
+  lost. (Executing the ODD's Schematron with an external SVRL engine is the one
+  remaining validation-hardening step; the constraint is enforced in-pipeline today.)
 
 ## Provenance / trust spine
 
@@ -157,7 +166,7 @@ value is that an assertion's *epistemic status* travels with it across both mode
 | Decomposition-status flag (§3) | **Standardize** on `decomp` |
 | Adjacency-parent recovery status (§4) | **Implemented** (`csl:recoveryStatus`; TEI `@subtype`); project-local, propose as a TEI dictionaries pattern |
 | Cross-resource lineage relation (§4a) | **Implemented** (`csl:LineageRelation` with retained/dropped counts); propose on `lexicog` — lineage is general to dictionary families |
-| Kośa sense-boundary (§5) | TEI Lex-0 **ODD customisation**, not a core change |
+| Kośa sense-boundary (§5) | **Implemented** (Lex-0 ODD Schematron + `bibl[@type="kosa-authority"]`, enforced in-pipeline); TEI Lex-0 **ODD customisation**, not a core change |
 
 ## Status
 
@@ -176,10 +185,13 @@ extension (569 of 569) names a concrete, implemented `csl:` construct, and all 2
 graphs conform to the SHACL profile under pySHACL (`extensionCoverage` in
 [loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2) and
 decomposition (§3) constructs were already implemented; the **source-collapse
-lineage relation (§4a)** (`csl:LineageRelation`, `lineageCoverage` 369/369) and the
-**continuation recovery-status (§4)** (`csl:recoveryStatus` / TEI `@subtype`) are
-now implemented too. Only §5 (kośa ODD customisation) remains — and is a TEI Lex-0
-ODD/Schematron customisation rather than a target-vocabulary addition.
+lineage relation (§4a)** (`csl:LineageRelation`, `lineageCoverage` 369/369), the
+**continuation recovery-status (§4)** (`csl:recoveryStatus` / TEI `@subtype`), and
+the **kośa sense-boundary customisation (§5)** (Lex-0 ODD Schematron +
+`bibl[@type="kosa-authority"]`) are now implemented too. **Every construct in this
+proposal (§1–§5, §4a) is now implemented and validated in-pipeline**; the only
+open hardening is executing the Lex-0 ODD's Schematron with an external SVRL engine
+(its rule is enforced by the project validator today).
 
 ## References
 

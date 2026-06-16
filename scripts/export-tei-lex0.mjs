@@ -142,12 +142,22 @@ function senseXml(sense, id, index) {
     lines.push(`  </cit>`);
   }
   if (sense.authority) {
+    // §5 kośa sense boundary: the closing authority formula ("iti <authority>") is
+    // the boundary of the iti-unit, not detachable apparatus — typed
+    // bibl[@type="kosa-authority"] so it is distinguishable from an example
+    // citation, paired with the model-loss note below witnessing the fusion.
     const a = sense.authority;
     const inner = a.author ? `<author>${escapeXml(a.author)}</author>` : `<title>${escapeXml(a.title)}</title>`;
-    lines.push(`  <bibl>${inner}${a.cited ? `<citedRange>${escapeXml(a.cited)}</citedRange>` : ""}</bibl>`);
+    lines.push(`  <bibl type="kosa-authority">${inner}${a.cited ? `<citedRange>${escapeXml(a.cited)}</citedRange>` : ""}</bibl>`);
   }
-  if (sense.loss) {
-    lines.push(`  <note type="model-loss" resp="#source">${escapeXml(sense.loss)}</note>`);
+  // §5: every kośa iti-unit (a sense closed by an authority formula) witnesses the
+  // sense/citation fusion as a model-loss — the explicit fixture note when given,
+  // else a default, so the convention is declared uniformly, not per chance.
+  const fusionNote = sense.loss || (sense.authority
+    ? `Sense and its closing authority (iti ${sense.authority.author || sense.authority.title}) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.`
+    : null);
+  if (fusionNote) {
+    lines.push(`  <note type="model-loss" resp="#source">${escapeXml(fusionNote)}</note>`);
   }
   lines.push(`</sense>`);
   return lines.join("\n");
@@ -215,6 +225,12 @@ function entryXml(model) {
   }
   for (const c of citationsXml(model, id)) body.push("  " + c);
   for (const note of model.loss || []) body.push(`  <note type="model-loss" resp="#source">${escapeXml(note)}</note>`);
+  // §5: declare the indigenous-kośa convention so the iti-unit customisation is
+  // self-describing (and the Schematron/validator can target it) rather than
+  // inferred from the xml:id.
+  if ((model.phenomena || []).some(p => p === "indigenous-kosa" || p === "sense-citation-fusion")) {
+    body.push(`  <note type="entry-convention" resp="#source">kosa-iti-unit</note>`);
+  }
   body.push(`  <note type="source-record">${escapeXml(dict)} L${escapeXml(rec.L)}</note>`);
   body.push(`  <note type="profile-version">${PROFILE_VERSION}</note>`);
   body.push(`</entry>`);
