@@ -76,6 +76,19 @@ csl:LexicographicEntryShape
   sh:property [ sh:path lexicog:describes ; sh:minCount 1 ; sh:maxCount 1 ] ;
   sh:property [ sh:path lexicog:component ; sh:minCount 1 ] .
 
+# Continuation-parent recovery status (EXTENSION_PROPOSAL §4): a reconstructed
+# parent carries an explicit recovery status, never asserted as if printed.
+csl:ContinuationRelationShape
+  a sh:NodeShape ;
+  sh:targetClass csl:ContinuationRelation ;
+  sh:property [ sh:path csl:relatesEntry ; sh:minCount 1 ] ;
+  sh:property [
+    sh:path csl:recoveryStatus ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "recovered" "conjectured" "unresolved" )
+  ] .
+
 # Source-collapse lineage (EXTENSION_PROPOSAL §4a): an explicit, queryable edge
 # for the PWG → PWK → MW evidence collapse, carrying retained/dropped counts.
 csl:LineageRelationShape

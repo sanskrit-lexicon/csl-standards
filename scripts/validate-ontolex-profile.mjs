@@ -41,7 +41,7 @@ function validateShaclShapes() {
   for (const prefix of ["@prefix sh:", "@prefix ontolex:", "@prefix lexicog:", "@prefix frac:", "@prefix prov:", "@prefix csl:"]) {
     check(shapes.includes(prefix), `${relative}: missing ${prefix}`);
   }
-  for (const shape of ["csl:LexicalEntryShape", "csl:SourceRecordShape", "csl:AttestationShape", "csl:LexicographicResourceShape", "csl:LexicographicEntryShape", "csl:LineageRelationShape"]) {
+  for (const shape of ["csl:LexicalEntryShape", "csl:SourceRecordShape", "csl:AttestationShape", "csl:LexicographicResourceShape", "csl:LexicographicEntryShape", "csl:ContinuationRelationShape", "csl:LineageRelationShape"]) {
     check(shapes.includes(shape), `${relative}: missing ${shape}`);
   }
   for (const required of [PROFILE_VERSION, VALIDATION_SCOPE, "ontolex:canonicalForm", "frac:attestation", "prov:wasDerivedFrom", "csl:evidenceClass"]) {
@@ -159,7 +159,10 @@ function validateCase(model, reviewIds) {
     caseCheck(graph.some(node => node["@type"] === "decomp:ComponentList"), "missing decomp component list");
   }
   if (model.phenomena.includes("continuation")) {
-    caseCheck(graph.some(node => node["@type"] === "csl:ContinuationRelation"), "missing continuation relation");
+    const cont = graph.find(node => node["@type"] === "csl:ContinuationRelation");
+    caseCheck(Boolean(cont), "missing continuation relation");
+    caseCheck(!cont || ["recovered", "conjectured", "unresolved"].includes(cont["csl:recoveryStatus"]),
+      `continuation relation has missing/invalid csl:recoveryStatus (${cont?.["csl:recoveryStatus"] || "none"})`);
   }
 
   // Source-collapse lineage (§4a): when PWG names sources that PWK abridges or MW

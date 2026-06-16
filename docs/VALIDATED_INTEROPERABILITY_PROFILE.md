@@ -89,7 +89,7 @@ The output is a full OntoLex/FrAC profile:
   **`csl:evidenceClass`** ∈ {`textual`, `hedge`, `kosha`, `editorial`} (the
   evidence-class extension), and a coordinate-bearing citation parses into
   **`csl:citedWork`** + **`csl:citedRange`**.
-- `csl:RootRelation`, `decomp:ComponentList`, or `csl:ContinuationRelation` nodes where applicable.
+- `csl:RootRelation`, `decomp:ComponentList`, or `csl:ContinuationRelation` (with `csl:recoveryStatus` — recovered/conjectured/unresolved) nodes where applicable.
 - **`csl:LineageRelation`** nodes making the PWG → PWK → MW source-collapse explicit (`csl:transition` `abridgement`/`recomposition` with retained/dropped citation counts).
 
 Validator: `scripts/validate-ontolex-profile.mjs`

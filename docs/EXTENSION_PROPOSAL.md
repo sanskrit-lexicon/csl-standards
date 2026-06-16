@@ -87,15 +87,21 @@ proposal is to promote the stable subset below into a published vocabulary
   machine-segmented · unresolved) on `decomp:ComponentList`, so a component graph
   carries its own confidence rather than being silently asserted.
 
-## 4. Continuation-parent status — *suppressed-headword recovery*
+## 4. Continuation-parent status — *suppressed-headword recovery* — **IMPLEMENTED**
 
 - **Loss:** `continuation-parent`; cause *print-compression* (the parent must be
-  recovered from page adjacency). 
-- **Prototype:** OntoLex — **`csl:ContinuationRelation`** with **`csl:mwECode`**
-  (the MW `<e>` adjacency code); TEI — `<xr type="adjacency-continuation-parent">`.
-- **Proposal:** an **adjacency-parent relation** with an explicit *recovery
-  status* (recovered · conjectured · unresolved), so a reconstructed parent is
-  never asserted as if printed.
+  recovered from page adjacency).
+- **Implemented:** OntoLex — **`csl:ContinuationRelation`** with **`csl:mwECode`**
+  (the MW `<e>` adjacency code) and an explicit **`csl:recoveryStatus`** ∈
+  {`recovered`, `conjectured`, `unresolved`}; TEI — `<xr
+  type="adjacency-continuation-parent" subtype="<status>">`. The status is
+  `conjectured` whenever only the adjacency pointer is known (the current pilot
+  state — the parent lemma is never asserted as if printed), `unresolved` without a
+  pointer, and `recovered` reserved for an actually-asserted parent. SHACL adds
+  `csl:ContinuationRelationShape` (`sh:in` on `csl:recoveryStatus`); validated
+  under pySHACL and against the compiled TEI RELAX NG (jing).
+- **Proposal:** standardize the **recovery-status** vocabulary on an adjacency-parent
+  relation, so a reconstructed parent is never asserted as if printed.
 
 ## 4a. Source-collapse / lineage relation — *editorial compression* — **IMPLEMENTED**
 
@@ -149,7 +155,7 @@ value is that an assertion's *epistemic status* travels with it across both mode
 | Evidence-class vocabulary + cited-locus (§1) | **Implemented in both standards** (OntoLex `csl:evidenceClass` + `csl:citedWork`/`csl:citedRange`; TEI `@subtype` + `<citedRange>`); **standardize** — broadly useful beyond Sanskrit |
 | Derivational-base / root relation (§2) | Align with `ontolex-morph`; standardize the binding |
 | Decomposition-status flag (§3) | **Standardize** on `decomp` |
-| Adjacency-parent recovery status (§4) | Project-local; propose as a TEI dictionaries pattern |
+| Adjacency-parent recovery status (§4) | **Implemented** (`csl:recoveryStatus`; TEI `@subtype`); project-local, propose as a TEI dictionaries pattern |
 | Cross-resource lineage relation (§4a) | **Implemented** (`csl:LineageRelation` with retained/dropped counts); propose on `lexicog` — lineage is general to dictionary families |
 | Kośa sense-boundary (§5) | TEI Lex-0 **ODD customisation**, not a core change |
 
@@ -170,9 +176,10 @@ extension (569 of 569) names a concrete, implemented `csl:` construct, and all 2
 graphs conform to the SHACL profile under pySHACL (`extensionCoverage` in
 [loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2) and
 decomposition (§3) constructs were already implemented; the **source-collapse
-lineage relation (§4a)** is now implemented too (`csl:LineageRelation`,
-`lineageCoverage` 369/369). §4 (continuation) and §5 (kośa ODD) remain
-prototype/customisation.
+lineage relation (§4a)** (`csl:LineageRelation`, `lineageCoverage` 369/369) and the
+**continuation recovery-status (§4)** (`csl:recoveryStatus` / TEI `@subtype`) are
+now implemented too. Only §5 (kośa ODD customisation) remains — and is a TEI Lex-0
+ODD/Schematron customisation rather than a target-vocabulary addition.
 
 ## References
 

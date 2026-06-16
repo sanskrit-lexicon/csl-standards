@@ -220,11 +220,17 @@ function jsonldFor(model, rawByDict, isReviewCase) {
   }
   if (model.phenomena?.includes("continuation")) {
     const eCode = model.relations?.find(rel => rel.type === "adjacency-continuation-parent")?.eCode || "unknown";
+    // §4 recovery status: the MW adjacency code is a pointer to recover the parent
+    // from, not the parent itself — so a reconstructed parent is never asserted as
+    // if printed. "conjectured" when we have the pointer, "unresolved" without it,
+    // "recovered" reserved for an actually-asserted parent lemma.
+    const recoveryStatus = eCode !== "unknown" ? "conjectured" : "unresolved";
     relationNodes.push({
       "@id": iriFor(model.id, "continuation-relation"),
       "@type": "csl:ContinuationRelation",
       "csl:relatesEntry": {"@id": caseIri},
       "csl:mwECode": eCode,
+      "csl:recoveryStatus": recoveryStatus,
       "csl:modelingNote": "Continuation parent must be recovered from MW adjacency before semantic assertion."
     });
   }
@@ -370,6 +376,7 @@ function turtleFor(jsonld) {
     if (relation["@type"] === "csl:SourceRecord") continue;
     lines.push(`${ttlIri(relation["@id"])} a ${relation["@type"]} ;`);
     lines.push(`  csl:relatesEntry ${ttlIri(entry["@id"])} ;`);
+    if (relation["csl:recoveryStatus"]) lines.push(`  csl:recoveryStatus ${ttlString(relation["csl:recoveryStatus"])} ;`);
     lines.push(`  csl:modelingNote ${ttlString(relation["csl:modelingNote"] || "relation exported for review")} .`);
     lines.push("");
   }

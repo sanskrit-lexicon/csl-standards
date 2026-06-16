@@ -141,6 +141,10 @@ function validateTeiCase(model, reviewIds) {
   }
   if (model.phenomena.includes("continuation")) {
     caseCheck(xml.includes("adjacency-continuation-parent"), "missing continuation relation");
+    // §4 recovery status on the continuation <xr> @subtype.
+    const recovery = xml.match(/<xr\b[^>]*type="adjacency-continuation-parent"[^>]*\bsubtype="([^"]*)"/)?.[1];
+    caseCheck(["recovered", "conjectured", "unresolved"].includes(recovery),
+      `continuation <xr> has missing/invalid recovery-status @subtype (${recovery || "none"})`);
   }
 
   return {
