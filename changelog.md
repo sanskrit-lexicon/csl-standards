@@ -28,6 +28,20 @@ into a dated version. Versions track `package.json`.
   250 archival + 256 Lex-0 files now validate against the compiled TEI RELAX NG.
 
 ### Added
+- **Evidence-class extension implemented + validated** — turns the proposal into a
+  working artefact. Every `frac:Attestation` now carries a sub-typed
+  [`csl:evidenceClass`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/evidence.mjs)
+  ∈ {`textual`, `hedge`, `kosha`, `editorial`}, and a coordinate-bearing citation
+  parses into `csl:citedWork` + `csl:citedRange` (`AV. 6,116,1.` → `AV.` / `6,116,1`).
+  The [SHACL profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl)
+  constrains the class with `sh:in`; all 250 graphs conform under pySHACL.
+  `analyze-loss` gains an `extensionCoverage` block showing **569/569** OntoLex
+  model-vocabulary-gap losses now map to an implemented `csl:` construct (each loss
+  report names its remedy in `mappedAs`). Classification/parsing shared via
+  [scripts/lib/evidence.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/evidence.mjs)
+  (single source of truth for export + loss detection). See
+  [EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)
+  §1 and [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4b.
 - **Evidence-class sub-typing loss family** closes every remaining loss-report
   coverage gap. [build-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
   now emits the three previously-defined-but-unused schema phenomena —

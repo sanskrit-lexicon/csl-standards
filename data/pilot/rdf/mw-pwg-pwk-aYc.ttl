@@ -125,13 +125,17 @@
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#sense-mw-4> ;
   frac:evidence "L." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-mw> ;
-  csl:evidenceType "generic-lexicographer-hedge" .
+  csl:evidenceType "generic-lexicographer-hedge" ;
+  csl:evidenceClass "hedge" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-2> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#sense-pwg-1> ;
   frac:evidence "P. 3,2,59" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-pwg> ;
-  csl:evidenceType "named-source-citation" .
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "P." ;
+  csl:citedRange "3,2,59" ;
+  csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#root-relation> a csl:RootRelation ;
   csl:relatesEntry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc> ;

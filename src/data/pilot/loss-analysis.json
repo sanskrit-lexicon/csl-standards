@@ -127,5 +127,26 @@
     ],
     "roadmapCausesNotEmitted": [],
     "namedSourceCitationsMaterialized": 2501
+  },
+  "extensionCoverage": {
+    "ontolexModelVocabularyGapsNeedingExtension": 569,
+    "coveredByImplementedConstruct": 569,
+    "uncovered": 0,
+    "byConstruct": {
+      "frac:Attestation with csl:citedWork + csl:citedRange": 222,
+      "frac:Attestation with csl:evidenceClass \"hedge\"": 117,
+      "frac:Attestation with csl:evidenceClass \"kosha\"": 79,
+      "decomp:ComponentList of decomp:Component": 75,
+      "csl:RootRelation with csl:whitneyRoot": 60,
+      "frac:Attestation with csl:evidenceClass \"editorial\"": 16
+    },
+    "constructByPhenomenon": {
+      "citation-coordinate": "frac:Attestation with csl:citedWork + csl:citedRange",
+      "compound-decomposition": "decomp:ComponentList of decomp:Component",
+      "editorial-reference": "frac:Attestation with csl:evidenceClass \"editorial\"",
+      "generic-lexicographer-hedge": "frac:Attestation with csl:evidenceClass \"hedge\"",
+      "named-kosha-citation": "frac:Attestation with csl:evidenceClass \"kosha\"",
+      "root-as-derivational-base": "csl:RootRelation with csl:whitneyRoot"
+    }
   }
 }

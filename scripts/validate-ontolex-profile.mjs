@@ -43,7 +43,7 @@ function validateShaclShapes() {
   for (const shape of ["csl:LexicalEntryShape", "csl:SourceRecordShape", "csl:AttestationShape", "csl:LexicographicResourceShape", "csl:LexicographicEntryShape"]) {
     check(shapes.includes(shape), `${relative}: missing ${shape}`);
   }
-  for (const required of [PROFILE_VERSION, VALIDATION_SCOPE, "ontolex:canonicalForm", "frac:attestation", "prov:wasDerivedFrom"]) {
+  for (const required of [PROFILE_VERSION, VALIDATION_SCOPE, "ontolex:canonicalForm", "frac:attestation", "prov:wasDerivedFrom", "csl:evidenceClass"]) {
     check(shapes.includes(required), `${relative}: missing required shape marker ${required}`);
   }
 }
@@ -128,6 +128,7 @@ function validateCase(model, reviewIds) {
   // sense (sense-level citation linkage); both targets live in this graph.
   const senseIds = new Set(graph.filter(node => node["@type"] === "ontolex:LexicalSense").map(node => node["@id"]));
   const attestTargets = new Set([entry["@id"], ...senseIds]);
+  const EVIDENCE_CLASSES = ["textual", "hedge", "kosha", "editorial"];
   const attestations = graph.filter(node => node["@type"] === "frac:Attestation");
   caseCheck(attestations.length > 0, "expected at least one FrAC attestation");
   for (const attestation of attestations) {
@@ -136,6 +137,12 @@ function validateCase(model, reviewIds) {
     caseCheck(attestTargets.has(target), `attestation ${attestation["@id"]} attests neither the entry nor one of its senses`);
     caseCheck(Boolean(attestation["prov:wasDerivedFrom"]?.["@id"]), `attestation ${attestation["@id"]} lacks provenance link`);
     caseCheck(Boolean(attestation["csl:evidenceType"]), `attestation ${attestation["@id"]} lacks evidence type`);
+    // csl: evidence-class extension: every attestation is sub-typed, and a
+    // coordinate-bearing one carries both a work and a parsed range.
+    caseCheck(EVIDENCE_CLASSES.includes(attestation["csl:evidenceClass"]),
+      `attestation ${attestation["@id"]} has missing/invalid csl:evidenceClass (${attestation["csl:evidenceClass"] || "none"})`);
+    caseCheck(!attestation["csl:citedRange"] || Boolean(attestation["csl:citedWork"]),
+      `attestation ${attestation["@id"]} has a citedRange without a citedWork`);
   }
 
   if (model.phenomena.includes("hedge")) {
@@ -163,6 +170,7 @@ function validateCase(model, reviewIds) {
   caseCheck(ttl.includes(`csl:profileVersion "${PROFILE_VERSION}"`), `${ttlRelative}: missing profile version triple`);
   caseCheck(ttl.includes(`csl:validationScope "${VALIDATION_SCOPE}"`), `${ttlRelative}: missing validation scope triple`);
   caseCheck(ttl.includes("frac:Attestation"), `${ttlRelative}: missing FrAC attestation triples`);
+  caseCheck(!attestations.length || ttl.includes("csl:evidenceClass"), `${ttlRelative}: missing csl:evidenceClass triples`);
   caseCheck((ttl.match(/a csl:SourceRecord/g) || []).length === 3, `${ttlRelative}: expected 3 csl:SourceRecord triples`);
   caseWarn(ttl.includes("ontolex:sense") || !entry["ontolex:sense"]?.length, `${ttlRelative}: JSON-LD senses are not mirrored in Turtle`);
 
@@ -176,6 +184,9 @@ function validateCase(model, reviewIds) {
     graphNodes: graph.length,
     sourceRecords: sourceRecords.length,
     attestations: attestations.length,
+    evidenceClasses: attestations.reduce((acc, a) => {
+      const c = a["csl:evidenceClass"]; if (c) acc[c] = (acc[c] || 0) + 1; return acc;
+    }, {}),
     phenomena: model.phenomena || [],
     errors: caseErrors,
     warnings: caseWarnings

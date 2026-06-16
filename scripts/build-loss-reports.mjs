@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import { KOSHA_SIGLUM, EDITORIAL_SIGLUM, COORDINATE } from "./lib/evidence.mjs";
 
 // Top 15 highest-stress cases by rank / score in hard-cases
 const HIGH_STRESS_KEYS = new Set([
@@ -50,6 +51,7 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "MW L. evidence preservation",
+          mappedAs: "frac:Attestation with csl:evidenceClass \"hedge\"",
           loss: "Needs explicit evidence/provenance node (OntoLex-FrAC)",
           failureClassification: "model-vocabulary-gap",
           extensionNeeded: true,
@@ -77,6 +79,7 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Root modeling",
+          mappedAs: "csl:RootRelation with csl:whitneyRoot",
           loss: "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
           failureClassification: "model-vocabulary-gap",
           extensionNeeded: true,
@@ -103,6 +106,7 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Compound modeling",
+          mappedAs: "decomp:ComponentList of decomp:Component",
           loss: "Decomposition needs explicit component graphs",
           failureClassification: "model-vocabulary-gap",
           extensionNeeded: true,
@@ -223,11 +227,11 @@ async function main() {
   // Detected (heuristically) from the materialized citations and source raw; one
   // report per case per applicable phenomenon, target ontolex (the semantic model
   // that should carry the evidence class), cause model-vocabulary-gap.
-  const KOSHA = /^(AK\.|H\.|Medin|Trik|Hal[aā]y|Vaij|Vi[sś]va|[SŚ]abdar|[SŚ]abdac|H[aā]r[aā]v|N[aā]n[aā]rth|Amar)/;
-  const EDITORIAL = /^(ib\.|W\.|MW\.|Verz|l\.c\.)/i;
-  const COORD = /\d+\s*[,.]\s*\d+/;
   const sample = list => [...new Set(list)].slice(0, 5);
-  const evidenceReport = (model, phenomenon, cites, claim, loss) => ({
+  // The csl: extension construct that now answers each evidence-class loss
+  // (implemented in export-ontolex, SHACL-validated) — recorded as mappedAs so the
+  // report points at its own remedy and analyze-loss can measure coverage.
+  const evidenceReport = (model, phenomenon, cites, claim, loss, mappedAs) => ({
     caseId: model.id,
     target: "ontolex",
     status: "partial",
@@ -235,6 +239,7 @@ async function main() {
     sourceDictionary: cites[0].dictionary,
     sourcePointer: { L: model.records?.[cites[0].dictionary]?.L ?? null, line: null },
     claim,
+    mappedAs,
     loss,
     failureClassification: "model-vocabulary-gap",
     extensionNeeded: true,
@@ -243,18 +248,21 @@ async function main() {
   });
   for (const model of models) {
     const cites = model.citations || [];
-    const kosha = cites.filter(c => KOSHA.test(c.source));
+    const kosha = cites.filter(c => KOSHA_SIGLUM.test(c.source));
     if (kosha.length) reports.push(evidenceReport(model, "named-kosha-citation", kosha,
       "Named indigenous kośa (lexicon) sources, distinct from textual attestations.",
-      "The kośa evidence class is modeled as an ordinary named-source citation; the indigenous-lexicon distinction is lost."));
-    const editorial = cites.filter(c => EDITORIAL.test(c.source));
+      "The kośa evidence class is modeled as an ordinary named-source citation; the indigenous-lexicon distinction is lost.",
+      "frac:Attestation with csl:evidenceClass \"kosha\""));
+    const editorial = cites.filter(c => EDITORIAL_SIGLUM.test(c.source));
     if (editorial.length) reports.push(evidenceReport(model, "editorial-reference", editorial,
       "Editorial / self references (ib., W., MW., catalogue) point within the lexicographic tradition, not to external texts.",
-      "Editorial references are modeled as named-source citations; their non-attestation role is not distinguished."));
-    const coord = cites.filter(c => COORD.test(c.source));
+      "Editorial references are modeled as named-source citations; their non-attestation role is not distinguished.",
+      "frac:Attestation with csl:evidenceClass \"editorial\""));
+    const coord = cites.filter(c => COORDINATE.test(c.source));
     if (coord.length) reports.push(evidenceReport(model, "citation-coordinate", coord,
       "Named citations carry textual coordinates (book / hymn / verse).",
-      "The coordinate is kept as a flat string in the citation abbr / evidence, not parsed into a structured locus or citedRange."));
+      "The coordinate is kept as a flat string in the citation abbr / evidence, not parsed into a structured locus or citedRange.",
+      "frac:Attestation with csl:citedWork + csl:citedRange"));
     const sicDict = ["mw", "pwg", "pwk"].find(d => /\[sic\]/i.test(model.records?.[d]?.raw || ""));
     if (sicDict) reports.push({
       caseId: model.id, target: "neutral", status: "partial", phenomenon: "source-anomaly",
