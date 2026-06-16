@@ -118,15 +118,21 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "Eilfzahl"@de .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#resource-pwg> a lexicog:Entry ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#resource-pwg> a lexicog:LexicographicResource ;
   dct:source "Boehtlingk-Roth PWG" ;
   csl:dictionary "pwg" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#lexentry-pwg> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#resource-pwk> a lexicog:LexicographicResource ;
+  dct:source "Boehtlingk PWK" ;
+  csl:dictionary "pwk" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#lexentry-pwk> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#lexentry-pwg> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwg-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwg-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwg-3>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwg-4> .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#resource-pwk> a lexicog:Entry ;
-  dct:source "Boehtlingk PWK" ;
-  csl:dictionary "pwk" ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwk-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwk-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwk-3>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwk-4>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-pwk-5> .
 

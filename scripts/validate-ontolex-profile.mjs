@@ -40,7 +40,7 @@ function validateShaclShapes() {
   for (const prefix of ["@prefix sh:", "@prefix ontolex:", "@prefix lexicog:", "@prefix frac:", "@prefix prov:", "@prefix csl:"]) {
     check(shapes.includes(prefix), `${relative}: missing ${prefix}`);
   }
-  for (const shape of ["csl:LexicalEntryShape", "csl:SourceRecordShape", "csl:AttestationShape"]) {
+  for (const shape of ["csl:LexicalEntryShape", "csl:SourceRecordShape", "csl:AttestationShape", "csl:LexicographicResourceShape", "csl:LexicographicEntryShape"]) {
     check(shapes.includes(shape), `${relative}: missing ${shape}`);
   }
   for (const required of [PROFILE_VERSION, VALIDATION_SCOPE, "ontolex:canonicalForm", "frac:attestation", "prov:wasDerivedFrom"]) {
@@ -86,15 +86,22 @@ function validateCase(model, reviewIds) {
     return {id: model.id, key: model.key, status: "fail", errors: caseErrors, warnings: caseWarnings};
   }
 
-  // Multi-resource (OntoLex-Lexicog): a lexicog:Entry per source dictionary that
-  // has senses, each describing the lexical entry. (The lemma node itself is
-  // ontolex:LexicalEntry.) A sense-less stub legitimately has no resource.
+  // Multi-resource (OntoLex-Lexicog): per source dictionary that has senses, a
+  // lexicog:LexicographicResource containing a lexicog:Entry that describes the
+  // lemma. (The lemma node itself is ontolex:LexicalEntry.) A sense-less stub
+  // legitimately has neither.
   const hasSenses = graph.some(node => node["@type"] === "ontolex:LexicalSense");
-  const resources = graph.filter(node => nodeTypes(node).includes("lexicog:Entry"));
-  caseCheck(!hasSenses || resources.length > 0, "entry has senses but no lexicog:Entry resource (multi-resource view)");
-  for (const resource of resources) {
-    caseCheck(resource["lexicog:describes"]?.["@id"] === entry["@id"],
-      `lexicog:Entry ${resource["@id"]} does not describe the lexical entry`);
+  const lexEntries = graph.filter(node => nodeTypes(node).includes("lexicog:Entry"));
+  const lexResources = graph.filter(node => nodeTypes(node).includes("lexicog:LexicographicResource"));
+  caseCheck(!hasSenses || lexEntries.length > 0, "entry has senses but no lexicog:Entry (multi-resource view)");
+  caseCheck(!hasSenses || lexResources.length > 0, "entry has senses but no lexicog:LexicographicResource");
+  for (const lexEntry of lexEntries) {
+    caseCheck(lexEntry["lexicog:describes"]?.["@id"] === entry["@id"],
+      `lexicog:Entry ${lexEntry["@id"]} does not describe the lexical entry`);
+  }
+  for (const resource of lexResources) {
+    caseCheck(Boolean(resource["lexicog:entry"]?.["@id"]),
+      `lexicog:LexicographicResource ${resource["@id"]} has no lexicog:entry`);
   }
   caseCheck(Boolean(entry["ontolex:canonicalForm"]?.["@id"]), "missing canonical form link");
   caseCheck(entry["csl:profileVersion"] === PROFILE_VERSION, "profile version mismatch");
@@ -151,7 +158,8 @@ function validateCase(model, reviewIds) {
     caseCheck(ttl.includes(prefix), `${ttlRelative}: missing ${prefix}`);
   }
   caseCheck(ttl.includes(`<${entry["@id"]}> a ontolex:LexicalEntry`), `${ttlRelative}: missing entry type triple`);
-  caseCheck(!hasSenses || ttl.includes("a lexicog:Entry"), `${ttlRelative}: missing lexicog:Entry resource triple`);
+  caseCheck(!hasSenses || ttl.includes("a lexicog:Entry"), `${ttlRelative}: missing lexicog:Entry triple`);
+  caseCheck(!hasSenses || ttl.includes("a lexicog:LexicographicResource"), `${ttlRelative}: missing lexicog:LexicographicResource triple`);
   caseCheck(ttl.includes(`csl:profileVersion "${PROFILE_VERSION}"`), `${ttlRelative}: missing profile version triple`);
   caseCheck(ttl.includes(`csl:validationScope "${VALIDATION_SCOPE}"`), `${ttlRelative}: missing validation scope triple`);
   caseCheck(ttl.includes("frac:Attestation"), `${ttlRelative}: missing FrAC attestation triples`);

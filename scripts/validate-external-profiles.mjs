@@ -206,11 +206,24 @@ function lex0Files() {
     .map(name => ({id: name.replace(/\.lex0\.xml$/, ""), path: path.join(dir, name)}));
 }
 
+// Resolve a pySHACL runner: a `pyshacl` command on PATH, or `python -m pyshacl`
+// (pip --user installs the script outside PATH, so the module fallback matters).
+function shaclRunner() {
+  const direct = commandPath("pyshacl");
+  if (direct) return { cmd: direct, pre: [] };
+  for (const py of ["python", "python3", "py"]) {
+    if (commandPath(py) && run(py, ["-m", "pyshacl", "--version"]).status === 0) {
+      return { cmd: py, pre: ["-m", "pyshacl"] };
+    }
+  }
+  return null;
+}
+
 function runShaclValidation(models) {
-  const pyshacl = commandPath("pyshacl");
+  const runner = shaclRunner();
   const shapesPath = path.join(root, "data/schema/ontolex-frac-profile.shacl.ttl");
-  if (!pyshacl) {
-    skipped("shacl-engine", "pySHACL is not available; install pyshacl to run an external SHACL engine.");
+  if (!runner) {
+    skipped("shacl-engine", "pySHACL is not available; install pyshacl (pip install pyshacl) to run an external SHACL engine.");
     return;
   }
 
@@ -221,7 +234,7 @@ function runShaclValidation(models) {
       continue;
     }
 
-    const result = run(pyshacl, ["-s", shapesPath, "-f", "human", ttlPath]);
+    const result = run(runner.cmd, [...runner.pre, "-s", shapesPath, "-f", "human", ttlPath]);
     if (result.status === 0) {
       passed("shacl", `External SHACL validation passed for ${model.id}.`, {
         id: model.id,

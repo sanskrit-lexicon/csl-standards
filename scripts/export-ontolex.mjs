@@ -137,19 +137,27 @@ function jsonldFor(model, rawByDict, isReviewCase) {
     });
   }
 
-  // One lexicog:Entry per source dictionary that has senses — the multi-resource
-  // (OntoLex-Lexicog) view: each dictionary's article for this lemma.
-  const resourceNodes = [];
+  // OntoLex-Lexicog multi-resource view: per source dictionary that has senses, a
+  // lexicog:LexicographicResource (the dictionary) containing one lexicog:Entry
+  // (its article for this lemma) that describes the lemma and lists its senses.
+  const resourceNodes = [];   // lexicog:LexicographicResource (the dictionary)
+  const lexEntryNodes = [];   // lexicog:Entry (the article in that dictionary)
   for (const dict of DICTS) {
     const dictSenses = senseNodes.filter(s => s["csl:sourceDictionary"] === dict);
     if (!dictSenses.length) continue;
-    resourceNodes.push({
-      "@id": iriFor(model.id, `resource-${dict}`),
+    const lexEntryId = iriFor(model.id, `lexentry-${dict}`);
+    lexEntryNodes.push({
+      "@id": lexEntryId,
       "@type": "lexicog:Entry",
-      "dct:source": DICT_LABEL[dict],
-      "csl:dictionary": dict,
       "lexicog:describes": {"@id": caseIri},
       "lexicog:component": dictSenses.map(s => ({"@id": s["@id"]}))
+    });
+    resourceNodes.push({
+      "@id": iriFor(model.id, `resource-${dict}`),
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": DICT_LABEL[dict],
+      "csl:dictionary": dict,
+      "lexicog:entry": {"@id": lexEntryId}
     });
   }
 
@@ -235,7 +243,7 @@ function jsonldFor(model, rawByDict, isReviewCase) {
       "csl": "https://sanskrit-lexicon.github.io/csl-standards/ns#"
     },
     "@id": caseIri,
-    "@graph": [entry, formNode, ...resourceNodes, ...senseNodes, ...sourceRecordNodes, ...attestationNodes, ...relationNodes]
+    "@graph": [entry, formNode, ...resourceNodes, ...lexEntryNodes, ...senseNodes, ...sourceRecordNodes, ...attestationNodes, ...relationNodes]
   };
 }
 
@@ -247,7 +255,8 @@ function turtleFor(jsonld) {
   const records = graph.filter(node => node["@type"] === "csl:SourceRecord");
   const attestations = graph.filter(node => node["@type"] === "frac:Attestation");
   const relations = graph.filter(node => String(node["@type"]).startsWith("csl:") || node["@type"] === "decomp:ComponentList");
-  const resources = graph.filter(node => node["@type"] === "lexicog:Entry");
+  const resources = graph.filter(node => node["@type"] === "lexicog:LexicographicResource");
+  const lexEntries = graph.filter(node => node["@type"] === "lexicog:Entry");
 
   const lines = [
     "@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .",
@@ -293,11 +302,17 @@ function turtleFor(jsonld) {
   }
 
   for (const resource of resources) {
-    lines.push(`${ttlIri(resource["@id"])} a lexicog:Entry ;`);
+    lines.push(`${ttlIri(resource["@id"])} a lexicog:LexicographicResource ;`);
     lines.push(`  dct:source ${ttlString(resource["dct:source"])} ;`);
     lines.push(`  csl:dictionary ${ttlString(resource["csl:dictionary"])} ;`);
+    lines.push(`  lexicog:entry ${ttlIri(resource["lexicog:entry"]["@id"])} .`);
+    lines.push("");
+  }
+
+  for (const lexEntry of lexEntries) {
+    lines.push(`${ttlIri(lexEntry["@id"])} a lexicog:Entry ;`);
     lines.push(`  lexicog:describes ${ttlIri(entry["@id"])} ;`);
-    lines.push(`  lexicog:component ${resource["lexicog:component"].map(c => ttlIri(c["@id"])).join(", ")} .`);
+    lines.push(`  lexicog:component ${lexEntry["lexicog:component"].map(c => ttlIri(c["@id"])).join(", ")} .`);
     lines.push("");
   }
 

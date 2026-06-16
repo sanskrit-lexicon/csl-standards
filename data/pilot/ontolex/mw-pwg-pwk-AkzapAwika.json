@@ -75,9 +75,25 @@
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika#resource-mw",
-      "@type": "lexicog:Entry",
+      "@type": "lexicog:LexicographicResource",
       "dct:source": "Monier-Williams 1899",
       "csl:dictionary": "mw",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika#lexentry-mw"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika#resource-pwk",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika#lexentry-pwk"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika#lexentry-mw",
+      "@type": "lexicog:Entry",
       "lexicog:describes": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika"
       },
@@ -88,10 +104,8 @@
       ]
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika#resource-pwk",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika#lexentry-pwk",
       "@type": "lexicog:Entry",
-      "dct:source": "Boehtlingk PWK",
-      "csl:dictionary": "pwk",
       "lexicog:describes": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAwika"
       },

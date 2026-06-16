@@ -6,6 +6,18 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Changed
+- **OntoLex-Lexicog container refinement**: each source dictionary is now a
+  `lexicog:LexicographicResource` (with `dct:source`/`csl:dictionary`) whose
+  `lexicog:entry` is the `lexicog:Entry` that `lexicog:describes` the lemma — the
+  complete multi-resource structure, replacing the bare `lexicog:Entry` carrying
+  source metadata directly. SHACL profile split into
+  `csl:LexicographicResourceShape` + `csl:LexicographicEntryShape`; validator and
+  Turtle updated; 250 graphs regenerated and pass.
+- **SHACL layer lit up**: `validate-external-profiles` now finds pySHACL via
+  `python -m pyshacl` as well as on PATH (so `pip install --user pyshacl` works
+  without PATH changes). pySHACL validates all 250 RDF graphs against the profile.
+
 ### Fixed
 - **Three TEI-conformance bugs the real RNG validation exposed** (the structural
   validators only substring-check and had passed them): the TEI Lex-0 lemma's

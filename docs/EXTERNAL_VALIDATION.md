@@ -31,9 +31,10 @@ npm run setup-external-tools      # downloads JRE + Saxon + jing + TEI Styleshee
 npm run validate-external         # runs the harness against the local toolchain; add  -- --strict  to fail on skips
 ```
 `tools/` is git-ignored and self-contained; delete it to reset. The setup is
-idempotent (re-run to repair). `pyshacl` is still optional — without it the SHACL
-checks are recorded as `skipped`; install it (`pip install pyshacl`) for the RDF
-layer.
+idempotent (re-run to repair). For the RDF/SHACL layer, `pip install --user
+pyshacl` — the harness finds it on PATH **or** via `python -m pyshacl`, so the
+`pip --user` script location does not need to be on PATH. Without pyshacl the
+SHACL checks are recorded as `skipped`.
 
 What `setup-external-tools` assembles under `tools/`:
 

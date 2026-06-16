@@ -153,9 +153,25 @@
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda#resource-mw",
-      "@type": "lexicog:Entry",
+      "@type": "lexicog:LexicographicResource",
       "dct:source": "Monier-Williams 1899",
       "csl:dictionary": "mw",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda#lexentry-mw"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda#resource-pwg",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda#lexentry-pwg"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda#lexentry-mw",
+      "@type": "lexicog:Entry",
       "lexicog:describes": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda"
       },
@@ -166,10 +182,8 @@
       ]
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda#resource-pwg",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda#lexentry-pwg",
       "@type": "lexicog:Entry",
-      "dct:source": "Boehtlingk-Roth PWG",
-      "csl:dictionary": "pwg",
       "lexicog:describes": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACanda"
       },

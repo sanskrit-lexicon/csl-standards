@@ -78,9 +78,25 @@
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura#resource-pwg",
-      "@type": "lexicog:Entry",
+      "@type": "lexicog:LexicographicResource",
       "dct:source": "Boehtlingk-Roth PWG",
       "csl:dictionary": "pwg",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura#lexentry-pwg"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura#resource-pwk",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura#lexentry-pwk"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura#lexentry-pwg",
+      "@type": "lexicog:Entry",
       "lexicog:describes": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura"
       },
@@ -91,10 +107,8 @@
       ]
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura#resource-pwk",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura#lexentry-pwk",
       "@type": "lexicog:Entry",
-      "dct:source": "Boehtlingk PWK",
-      "csl:dictionary": "pwk",
       "lexicog:describes": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AcaYcura"
       },

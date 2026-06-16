@@ -74,9 +74,10 @@ The output is a full OntoLex/FrAC profile:
 - 250 JSON-LD graphs in `data/pilot/ontolex/`.
 - 250 RDF/Turtle files in `data/pilot/rdf/`.
 - `ontolex:LexicalEntry` lemma node (dictionary-neutral).
-- **`lexicog:Entry` per source dictionary** (OntoLex-Lexicog multi-resource view):
-  each `lexicog:describes` the lemma and lists its `lexicog:component` senses, one
-  resource per dictionary that has senses.
+- **OntoLex-Lexicog multi-resource view**: per source dictionary that has senses, a
+  `lexicog:LexicographicResource` (the dictionary) whose `lexicog:entry` is a
+  `lexicog:Entry` (its article for this lemma) that `lexicog:describes` the lemma and
+  lists its `lexicog:component` senses.
 - `ontolex:Form` canonical form node.
 - `ontolex:LexicalSense` nodes from all three dictionaries — MW (`@en`) plus the
   German Petersburg dictionaries PWG/PWK (`@de`), each tagged `csl:sourceDictionary`.
