@@ -65,6 +65,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-12"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-13"
         }
       ],
       "csl:sourceRecord": [
@@ -76,6 +79,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:dURASa",
@@ -196,6 +202,16 @@
       "csl:lineNumber": 591667,
       "csl:pageColumn": "5-256-b",
       "rdf:value": "<L>207444<pc>5-256-b<k1>dURASa<k2>dURA/Sa<h>2\n<hom>2.</hom> {#dURA/Sa#}¦, für <ls>ṚV. 1,176,4</ls>. <ls n=\"ṚV.\">7,32,7</ls> nimmt <ls>AUFRECHT</ls> ein Thema {#dURA/S#} an und erklärt dieses mit {#duzwena viDinA prAptaDanaH#}.<info n=\"sup_5\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "4384",
+      "csl:lineNumber": 28694,
+      "csl:pageColumn": "0623",
+      "rdf:value": "<L>4384<pc>0623<k1>dURASa<k2>dU-RA/Sa<h>2\r\n<hom>2.</hom> {@dū-ṇā́śa,@}¦ <ab>a.</ab>, {%schwer%} [dus] {%zu vertilgen%} [nā́śa, <ls>Pad.</ls> náśa von <hom>1.</hom> naś], {%unvergänglich, unzerstörbar%}.\r\n<div n=\"TS\">-as índras (?) {548,7}, <ab n=\"siehe\">s.</ab> die Bemerkung unter dūḍā́ś.\r\n<div n=\"TS\">-am [<ab>n.</ab>] sakhiám {486,26}; kṣatrám {534,25} (neben ajáram). — In {176,4} könnte es adverbial gefasst werden; <ab n=\"siehe\">s.</ab> jedoch dūḍā́ś.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-1",
@@ -378,6 +394,20 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwk"
       },
       "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-13",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa"
+      },
+      "frac:evidence": "Pad.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

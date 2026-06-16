@@ -161,6 +161,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#attestation-43"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#attestation-44"
         }
       ],
       "csl:sourceRecord": [
@@ -172,6 +175,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:dAna-mw91473",
@@ -324,6 +330,16 @@
       "csl:lineNumber": 591565,
       "csl:pageColumn": "5-256-a",
       "rdf:value": "<L>207412<pc>5-256-a<k1>dAna<k2>dAna/<h>5\n<hom>5.</hom> {#dAna/#}¦ <lex>n.</lex> {%Brunst des Thieres, Liebesdrang%}. <ab>Pl.</ab> <ls>ṚV. 5,52,14</ls>. <ls n=\"ṚV.\">8,33,8</ls>.<info n=\"sup_5\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "4178",
+      "csl:lineNumber": 27260,
+      "csl:pageColumn": "0594",
+      "rdf:value": "<L>4178<pc>0594<k1>dAna<k2>dA/na<h>1\r\n<hom>1.</hom> {@dā́na,@}¦ <ab>n.</ab>, das {%Geben,%} die {%Gabe%} [von <hom>1.</hom> da].\r\n<div n=\"TS\">-am {387,6}; {534,22}; {666,6}; {670,6}; {764,3}; {1020,7}; als Object zu inv {128,5}; {384,7}.\r\n<div n=\"TS\">-āya índram 〰 codaya {967,5}. _{967,6}; {494,3}.\r\n<div n=\"TS\">-e {204,7} (<ls>BR.</ls> „Weide“).\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#attestation-1",
@@ -984,6 +1000,20 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "ṚV."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#attestation-44",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473"
+      },
+      "frac:evidence": "BR.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAna-mw91473#lineage-pwk",

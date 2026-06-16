@@ -101,6 +101,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#attestation-18"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#attestation-19"
         }
       ],
       "csl:sourceRecord": [
@@ -112,6 +115,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:anti",
@@ -339,6 +345,16 @@
       "csl:lineNumber": 20158,
       "csl:pageColumn": "1-064-b",
       "rdf:value": "<L>5442<pc>1-064-b<k1>anti<k2>a/nti<h>1\n<hom>1.</hom> {#a/nti#}¦\n<div n=\"1\">— 1〉 <lex>Adv.</lex>\n<div n=\"2\">— a〉 {%gegenüber, davor%}.\n<div n=\"2\">— b〉 {%Angesichts, in Gegenwart, nahe%}.\n<div n=\"1\">— 2〉 <ab>Praep.</ab> mit <ab>Gen.</ab> oder am Ende eines <ab>Comp.</ab> {%in der (die) Nähe von, zu%}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "585",
+      "csl:lineNumber": 3224,
+      "csl:pageColumn": "0066",
+      "rdf:value": "<L>585<pc>0066<k1>anti<k2>a/n-ti\r\n{@án-ti.@}¦ Grundbegriff: {%gegenüber%} (<ls>Cu. 〔404〕</ls>), {%vor Augen, in der Nähe,%} in letzterer Bedeutung mit dem Gegensatze dūré ({79,11}; {94,9}; {300,3}; {731,7}), dūraké ({779,21}); oder mit anderer Construction: dūrā́t ({803,4}); ārā́ttāt ({167,9}); paramā́ ({218,3}). Auch mit sát (seiend) {301,10}; {631,4}; {682,1}; {731,7}; oder mit vid (vind) {176,1}; {398,11}; {779,21} lose verbunden; oft in dem Sinne, dass as (sein) hinzuzudenken ist ({94,9}; {298,18}; {300,3}; {803,4}; — {84,17}; {89,9}; {167,9}; {218,3}).\r\n<div n=\"P\">1〉 {%gegenüber%} (feindlich) {84,17}; {176,1}. 2〉 {%vor Augen%} {298,18}. 3〉 {%vor Augen%} = bevorstehend {89,9}. 4〉 {%in der Nähe,%} mit ausgedrücktem Gegensatze der Ferne {79,11}; {94,9}; {167,9}; {218,3}; {300,3}; {301,10}; {731,7}; {779,21}; {803,4}; 5〉 ohne solchen Gegensatz {398,11}; {430,2}; {631,4}; {682,1}.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#attestation-1",
@@ -608,6 +624,20 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#record-pwg"
       },
       "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#attestation-19",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti"
+      },
+      "frac:evidence": "Cu. 〔404〕",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanti#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

@@ -82,7 +82,7 @@ The output is a full OntoLex/FrAC profile:
 - `ontolex:Form` canonical form node.
 - `ontolex:LexicalSense` nodes from all three dictionaries — MW (`@en`) plus the
   German Petersburg dictionaries PWG/PWK (`@de`), each tagged `csl:sourceDictionary`.
-- `csl:SourceRecord` nodes for MW/PWG/PWK provenance, plus an optional fourth — **Apte 1890 (AP90)** — on cases that share its headword, with evidence-class-typed attestations from its named citations.
+- `csl:SourceRecord` nodes for MW/PWG/PWK provenance, plus **optional dictionaries** — **Apte 1890 (AP90)** and **Grassmann (GRA)** — on cases that share their headword, each with evidence-class-typed attestations from its named citations (registry: [scripts/lib/dictionaries.mjs](../scripts/lib/dictionaries.mjs)).
 - `frac:Attestation` nodes linked with `prov:wasDerivedFrom`, **attesting the
   specific sense** they belong to (sense-level linkage), or the entry for
   citations not tied to a sense. Each attestation carries a sub-typed

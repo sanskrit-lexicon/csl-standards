@@ -3,6 +3,7 @@ import path from "path";
 import { extractLabeledSources } from "./lib/citations.mjs";
 import { extractMwSenses } from "./lib/mw-senses.mjs";
 import { extractPwSenses } from "./lib/pw-senses.mjs";
+import { ALL_DICTS, OPTIONAL_DICTS } from "./lib/dictionaries.mjs";
 
 function parseGenderOrGrammar(raw) {
   if (!raw) return null;
@@ -35,9 +36,9 @@ function stripMarkup(value) {
 // evidence from the neutral model rather than re-deriving it. Shares the <ls>
 // parser with the exporters (scripts/lib/citations.mjs); deduped and capped per
 // dictionary for a compact canonical layer.
-// mw/pwg/pwk are always present (the tri-dict backbone); ap90 is an optional
-// fourth dictionary attached to cases that share its headword.
-const CITATION_DICTS = ["mw", "pwg", "pwk", "ap90"];
+// mw/pwg/pwk are always present (the tri-dict backbone); optional dictionaries are
+// attached to cases that share their headword (see scripts/lib/dictionaries.mjs).
+const CITATION_DICTS = ALL_DICTS;
 
 function extractCitations(item) {
   const citations = [];
@@ -173,17 +174,19 @@ async function main() {
           raw: item.records.pwk?.raw || null,
           senses: extractPwSenses(item.records.pwk?.raw, "pwk")
         },
-        // Optional fourth dictionary (Apte 1890): carried when the sampler
-        // attached an AP90 counterpart. No format-specific sense extractor yet,
-        // so it contributes its raw record and its named citations (above).
-        ...(item.records.ap90 ? {
-          ap90: {
-            L: item.records.ap90.L || null,
-            line: item.records.ap90.line || null,
-            pc: item.records.ap90.pc || null,
-            raw: item.records.ap90.raw || null
-          }
-        } : {})
+        // Optional dictionaries (e.g. Apte 1890, Grassmann): carried when the
+        // sampler attached a counterpart. No format-specific sense extractor yet,
+        // so each contributes its raw record and its named citations (above).
+        ...Object.fromEntries(
+          OPTIONAL_DICTS
+            .filter(code => item.records[code])
+            .map(code => [code, {
+              L: item.records[code].L || null,
+              line: item.records[code].line || null,
+              pc: item.records[code].pc || null,
+              raw: item.records[code].raw || null
+            }])
+        )
       },
       forms,
       senses: extractMwSenses(item.records.mw?.raw, item.phenomena || []),

@@ -18,6 +18,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
+import { OPTIONAL_DICTS } from "./lib/dictionaries.mjs";
 
 const PROFILE_VERSION = "tei-lex0-pilot-v0.1";
 
@@ -169,10 +170,10 @@ function citationsXml(model, id) {
   // (sense-level linkage), MW sources are shown there, not duplicated here; an
   // entry with no sense-linked citations (a stub) still lists everything.
   const senseLinked = (model.senses || []).some(s => (s.citations || []).length);
-  // The TEI Lex-0 baseline stays the tri-dict backbone; the optional fourth
-  // dictionary (ap90) is carried only on the OntoLex/semantic side.
+  // The TEI Lex-0 baseline stays the tri-dict backbone; optional dictionaries are
+  // carried only on the OntoLex/semantic side.
   const eligible = (model.citations || [])
-    .filter(c => c.dictionary !== "ap90" && !(senseLinked && c.dictionary === "mw"));
+    .filter(c => !OPTIONAL_DICTS.includes(c.dictionary) && !(senseLinked && c.dictionary === "mw"));
   const named = eligible.filter(c => c.type !== "generic-lexicographer-hedge");
   const hedges = eligible.filter(c => c.type === "generic-lexicographer-hedge");
   const rows = [];

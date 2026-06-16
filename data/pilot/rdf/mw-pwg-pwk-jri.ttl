@@ -31,9 +31,11 @@
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-pwk> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-ap90> ;
+  csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-gra> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-1> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-2> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-3> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-3> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-4> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "jri"@sa-Latn-x-SLP1 .
@@ -113,6 +115,13 @@
   csl:lineNumber "121194" ;
   csl:pageColumn "0520-b" .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-gra> a csl:SourceRecord ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  csl:recordNumber "3603" ;
+  csl:lineNumber "23119" ;
+  csl:pageColumn "0506" .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-1> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#sense-pwg-1> ;
   frac:evidence "NAIGH. 2,14." ;
@@ -138,6 +147,13 @@
   csl:evidenceType "named-source-citation" ;
   csl:citedWork "ṚV." ;
   csl:citedRange "9,71,5" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#attestation-4> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri> ;
+  frac:evidence "Naigh. 〔II,14〕" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ajri#decomposition> a decomp:ComponentList ;

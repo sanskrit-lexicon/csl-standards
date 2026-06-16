@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { generatedAt } from "./lib/provenance.mjs";
+import { CORE_DICTS, OPTIONAL_DICTS, DICT_DIR, DICT_FILE } from "./lib/dictionaries.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -26,24 +27,20 @@ const cslV02 = path.basename(cslOrigArg).toLowerCase() === "v02"
   ? cslOrigArg
   : path.join(cslOrigArg, "v02");
 
-const sources = {
-  mw: path.join(cslV02, "mw", "mw.txt"),
-  pwg: path.join(cslV02, "pwg", "pwg.txt"),
-  pwk: path.join(cslV02, "pw", "pw.txt"),
-  // AP90 (Apte 1890) is an OPTIONAL fourth dictionary, attached as an extra
-  // evidence source on cases whose headword it shares (it is not part of the
-  // tri-dict selection invariant, so adding it does not change which cases are
-  // chosen). Skipped cleanly when its source file is absent.
-  ap90: path.join(cslV02, "ap90", "ap90.txt")
-};
-const REQUIRED = ["mw", "pwg", "pwk"];
+// Core (mw/pwg/pwk) is the tri-dict selection invariant. Optional dictionaries are
+// attached as extra evidence sources on cases whose headword they share — they do
+// not change which cases are chosen, and are skipped cleanly when absent.
+const sources = Object.fromEntries(
+  [...CORE_DICTS, ...OPTIONAL_DICTS].map(code => [code, path.join(cslV02, DICT_DIR[code], DICT_FILE[code])])
+);
 
 const haveSource = Object.fromEntries(
   Object.entries(sources).map(([code, filePath]) => [code, fs.existsSync(filePath)])
 );
-for (const code of REQUIRED) {
+for (const code of CORE_DICTS) {
   if (!haveSource[code]) throw new Error(`Missing required source file: ${sources[code]}`);
 }
+const attachedOptional = OPTIONAL_DICTS.filter(code => haveSource[code]);
 
 const publicSources = Object.fromEntries(
   Object.entries(sources)
@@ -220,11 +217,12 @@ function preliminaryLossHints(phenomena) {
 const mwRecords = parseRecords(sources.mw, "mw");
 const pwgRecords = parseRecords(sources.pwg, "pwg");
 const pwkRecords = parseRecords(sources.pwk, "pwk");
-const ap90Records = haveSource.ap90 ? parseRecords(sources.ap90, "ap90") : [];
 
 const pwgIndex = indexByKey(pwgRecords);
 const pwkIndex = indexByKey(pwkRecords);
-const ap90Index = indexByKey(ap90Records);
+// Parse + index each available optional dictionary once, keyed by code.
+const optionalRecords = Object.fromEntries(attachedOptional.map(code => [code, parseRecords(sources[code], code)]));
+const optionalIndex = Object.fromEntries(attachedOptional.map(code => [code, indexByKey(optionalRecords[code])]));
 
 const candidates = [];
 for (const mw of mwRecords) {
@@ -316,7 +314,7 @@ const output = {
     mw: mwRecords.length,
     pwg: pwgRecords.length,
     pwk: pwkRecords.length,
-    ...(haveSource.ap90 ? { ap90: ap90Records.length } : {})
+    ...Object.fromEntries(attachedOptional.map(code => [code, optionalRecords[code].length]))
   },
   method: {
     description: "MW-led hard-case sample for TEI/OntoLex interoperability stress testing.",
@@ -333,11 +331,13 @@ const output = {
       mw: summarize(candidate.mw),
       pwg: summarize(candidate.pwg),
       pwk: summarize(candidate.pwk),
-      // Optional fourth dictionary, attached when AP90 shares the headword.
-      ...(() => {
-        const ap90 = chooseCounterpart(ap90Index.get(candidate.key));
-        return ap90 ? { ap90: summarize(ap90) } : {};
-      })()
+      // Optional dictionaries, each attached when it shares the headword.
+      ...Object.fromEntries(
+        attachedOptional
+          .map(code => [code, chooseCounterpart(optionalIndex[code].get(candidate.key))])
+          .filter(([, rec]) => rec)
+          .map(([code, rec]) => [code, summarize(rec)])
+      )
     }
   }))
 };
@@ -353,8 +353,12 @@ for (const outputPath of outputPaths) {
 }
 
 console.log(`Wrote ${output.items.length} hard cases to ${outputPaths.join(", ")}`);
-const ap90Attached = output.items.filter(item => item.records.ap90).length;
-console.log(`Parsed MW=${mwRecords.length}, PWG=${pwgRecords.length}, PWK=${pwkRecords.length}, AP90=${ap90Records.length}; AP90 attached to ${ap90Attached}/${output.items.length} cases`);
+console.log(`Parsed MW=${mwRecords.length}, PWG=${pwgRecords.length}, PWK=${pwkRecords.length}` +
+  attachedOptional.map(code => `, ${code.toUpperCase()}=${optionalRecords[code].length}`).join(""));
+for (const code of attachedOptional) {
+  const n = output.items.filter(item => item.records[code]).length;
+  console.log(`  ${code} attached to ${n}/${output.items.length} cases`);
+}
 
 function isPreferredForQuota(candidate, phenomenon) {
   if (!candidate.phenomena.includes(phenomenon)) return false;

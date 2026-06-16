@@ -68,6 +68,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-11"
         }
       ],
       "csl:sourceRecord": [
@@ -79,6 +82,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-gra"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aNg-mw1492",
@@ -265,6 +271,16 @@
       "rdf:value": "<L>920<pc>1-011-b<k1>aNg<k2>aNg\n√{#aNg#}¦ {#aNgati#} {%gehen%}. <ab>Vgl.</ab> {#palyaNg#}.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-gra",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "csl:recordNumber": "132",
+      "csl:lineNumber": 691,
+      "csl:pageColumn": "0013",
+      "rdf:value": "<L>132<pc>0013<k1>aNg<k2>aNg\r\n{@[√aṅg],@}¦ {%gehen, sich bewegen,%} <ab>Caus.</ab> <ab>m.</ab> pali, {%umrühren,%} im <ab>pass.</ab> {%sich drehen%} (<ls>Śat. Br.</ls>). Davon áṅga, áṅgiras; und Wurzel iṅg.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -419,6 +435,20 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "ŚAT. BR. 3,4,3,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-11",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492"
+      },
+      "frac:evidence": "Śat. Br.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#root-relation",
