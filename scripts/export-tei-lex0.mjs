@@ -188,7 +188,7 @@ function entryXml(model) {
   }
 
   const body = [];
-  body.push(`<entry xml:id="${id}" xml:lang="sa">`);
+  body.push(`<entry xml:id="${id}-entry" xml:lang="sa">`);
   body.push(`  <form type="lemma">`);
   body.push(`    <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1"${cert("observed")}>${escapeXml(form.orth || model.key)}</orth>`);
   body.push(`  </form>`);
@@ -224,8 +224,8 @@ function teiDocument(model) {
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</p>
         <listBibl>
+          <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
           <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
           <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>

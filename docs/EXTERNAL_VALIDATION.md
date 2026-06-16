@@ -1,0 +1,78 @@
+# External RELAX NG / SHACL Validation
+
+`npm run validate-pilot` / `validate-tei-profile` / `validate-tei-lex0` are
+*structural* checks (substring/shape assertions). They are fast and run in CI, but
+they do **not** validate against the actual TEI RELAX NG schema — so they can pass
+while the XML is not schema-valid. `validate-external-profiles` closes that gap by
+running the real RNG (and, if available, SHACL). It needs external tooling and, by
+default, records missing tools as `skipped` (only `--strict` fails on skips).
+
+This doc gives two ways to get the tooling: a portable, no-admin toolchain (set up
+by a script in this repo) and the apt route for Linux/WSL.
+
+## What it checks
+
+- Compiles `data/schema/tei-archival-profile.odd.xml` and
+  `data/schema/tei-lex0-profile.odd.xml` to RELAX NG (TEI Stylesheets +
+  `p5subset.xml`).
+- Validates all 250 `data/pilot/tei/*.xml` and 256 `data/pilot/tei-lex0/*.lex0.xml`
+  against those schemas with `jing` (or `xmllint`).
+- Validates `data/pilot/rdf/*.ttl` against the SHACL profile with `pyshacl` (if
+  installed).
+
+> The first real RNG run found bugs the structural validators missed (a duplicate
+> `xml:id`, a `sourceDesc` content-model violation, a misplaced `@target`), now
+> fixed. Re-run it after any change to the exporters or the ODDs.
+
+## Option A — portable toolchain (Windows, no admin)
+
+```
+npm run setup-external-tools      # downloads JRE + Saxon + jing + TEI Stylesheets + p5subset into tools/ (gitignored), compiles both RNGs
+npm run validate-external         # runs the harness against the local toolchain; add  -- --strict  to fail on skips
+```
+`tools/` is git-ignored and self-contained; delete it to reset. The setup is
+idempotent (re-run to repair). `pyshacl` is still optional — without it the SHACL
+checks are recorded as `skipped`; install it (`pip install pyshacl`) for the RDF
+layer.
+
+What `setup-external-tools` assembles under `tools/`:
+
+| Tool | Version | Role |
+|---|---|---|
+| Temurin JRE | 21 | runs Saxon + jing |
+| Saxon-HE | 10.9 | runs the ODD→RNG XSLTs |
+| TEI Stylesheets | 7.60.0 | `odd2odd` + `odd2relax` |
+| p5subset.xml | P5 current | TEI source for module expansion |
+| jing | 20091111 | RELAX NG validator |
+
+## Option B — Linux / WSL (apt)
+
+Simpler where apt is available (these ship `teitorelaxng`, so the harness compiles
+the ODDs itself — no `setup-external-tools` needed):
+
+```bash
+sudo apt-get update
+sudo apt-get install -y default-jre-headless tei-xsl jing libxml2-utils
+# optional, for the RDF layer:  pip install pyshacl
+node scripts/validate-external-profiles.mjs
+```
+
+## Precompiled-schema escape hatch
+
+If you have a `.rng` from elsewhere, skip the compiler entirely and point the
+harness at it (then only a validator is needed):
+
+```bash
+CSL_STANDARDS_TEI_RNG=path/to/archival.rng \
+CSL_STANDARDS_LEX0_RNG=path/to/lex0.rng \
+  node scripts/validate-external-profiles.mjs
+```
+
+## Output
+
+Results land in `data/pilot/external-validation-review.json` (and its `src/`
+mirror). Check the totals:
+
+```bash
+node -e "console.log(require('./data/pilot/external-validation-review.json').totals)"
+```
