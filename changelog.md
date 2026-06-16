@@ -6,6 +6,20 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-06-16
+
+**The extension proposal, made real.** v0.3.0 measured the interoperability gaps
+and validated the toolchain; this release turns the proposed `csl:` constructs
+into implemented, schema-validated artefacts. The evidence-class extension is now
+symmetric across both target standards (OntoLex `csl:evidenceClass` shipped in
+0.3.0; **TEI `@subtype` + `<citedRange>`** added here, RELAX NG/jing-validated),
+and the **source-collapse lineage relation** (`csl:LineageRelation`) makes the
+PWG → PWK → MW evidence collapse — the largest loss family — explicit and
+queryable, SHACL-validated. EXTENSION_PROPOSAL §1/§2/§3/§4a are now implemented
+and validated; §4 (continuation recovery-status) and §5 (kośa ODD) remain
+prototype/customisation. Coverage is measured: `extensionCoverage` 569/569
+(model-vocabulary-gap) and `lineageCoverage` 369/369 (source-collapse).
+
 ### Added
 - **Source-collapse lineage relation implemented** (EXTENSION_PROPOSAL §4a) —
   closes the largest loss family's construct. The OntoLex export emits a
