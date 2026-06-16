@@ -68,6 +68,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-11"
         }
       ],
       "csl:sourceRecord": [
@@ -79,6 +88,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:avAcya",
@@ -293,6 +305,16 @@
       "rdf:value": "<L>10842<pc>1-127-c<k1>avAcya<k2>avAcya\n{#avAcya#}¦ <lex>Adj.</lex>\n<div n=\"1\">— 1〉 {%nicht anzureden%}.\n<div n=\"1\">— 2〉 {%nicht zu sagen, — auszusprechen%} <ls n=\"Chr.\">126,10</ls>.\n<div n=\"1\">— 3〉 {%nicht unmittelbar ausgedrückt%}.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "4953",
+      "csl:lineNumber": 44744,
+      "csl:pageColumn": "0193-a",
+      "rdf:value": "<L>4953<pc>0193-a<k1>avAcya<k2>avAcya\n{#avAcya#}¦ {%<ab>a.</ab>%} {@1@} Not proper to be <lbinfo n=\"ad+dressed\"/>\naddressed; {#avAcyo dIkzito nAmnA#} <lbinfo n=\"yavI#yAnapi\"/>\n{#yavIyAnapi yo Bavet#} <ls>Ms. 2. 128.</ls> {@--2@} <lbinfo n=\"Impro+per\"/>\nImproper to be uttered; vile, bad; {#avAcyaM#}\n{#vadato jihvA kaTaM na patitA tava#} <ls>Rām.</ls>;\n{#˚vAdAMSca bahUn vadizyaMti tavAhitAH#}  <lbinfo n=\"ls:Bg. 2.+ 36.\"/>\n<ls>Bg. 2. 36.</ls> {@--3@} Not distinctly expressed, not\nexpressible in words; {#˚tA, ˚tvaM#} <lbinfo n=\"impro+priety\"/>\nimpropriety; reproach, calumny. {@--Comp.@}\n{#--deSaH#} ‘the unspeakable place,’ the\nvulva ({#yoni#}).\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -413,6 +435,52 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "Chr."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya"
+      },
+      "frac:evidence": "Ms. 2. 128.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Ms.",
+      "csl:citedRange": "2.128"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-10",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#attestation-11",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya"
+      },
+      "frac:evidence": "Bg. 2. 36.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Bg.",
+      "csl:citedRange": "2.36"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AavAcya#lineage-pwk",

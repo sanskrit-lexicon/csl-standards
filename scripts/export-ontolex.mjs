@@ -3,11 +3,15 @@ import path from "node:path";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 import { extractLabeledSources } from "./lib/citations.mjs";
 
-const DICTS = ["mw", "pwg", "pwk"];
+// mw/pwg/pwk are the tri-dict backbone; ap90 (Apte 1890) is an optional fourth
+// source attached per case. Senses are only modeled for the first three; ap90
+// contributes a source record and evidence (its named citations).
+const DICTS = ["mw", "pwg", "pwk", "ap90"];
 const DICT_LABEL = {
   mw: "Monier-Williams 1899",
   pwg: "Boehtlingk-Roth PWG",
-  pwk: "Boehtlingk PWK"
+  pwk: "Boehtlingk PWK",
+  ap90: "Apte 1890"
 };
 
 const BASE = "https://sanskrit-lexicon.github.io/csl-standards/id";
@@ -66,7 +70,10 @@ function fullRaw(model, dict, indexes) {
 function jsonldFor(model, rawByDict, isReviewCase) {
   const caseIri = iriForCase(model.id);
   const formIri = iriFor(model.id, "form-canonical");
-  const sourceRecordIds = DICTS.map(dict => iriFor(model.id, `record-${dict}`));
+  // The dictionaries actually present for this case (always mw/pwg/pwk; ap90 when
+  // attached). Source records and their entry links follow the present set.
+  const presentDicts = DICTS.filter(dict => model.records?.[dict]);
+  const sourceRecordIds = presentDicts.map(dict => iriFor(model.id, `record-${dict}`));
   const attestationNodes = [];
   const sourceRecordNodes = [];
   // Multi-resource senses: MW (English, model.senses) plus the German Petersburg
@@ -89,7 +96,7 @@ function jsonldFor(model, rawByDict, isReviewCase) {
     });
   }
 
-  for (const dict of DICTS) {
+  for (const dict of presentDicts) {
     const rec = model.records?.[dict] || {};
     const recordId = iriFor(model.id, `record-${dict}`);
     sourceRecordNodes.push({

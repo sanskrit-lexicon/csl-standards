@@ -56,6 +56,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-11"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-12"
         }
       ],
       "csl:sourceRecord": [
@@ -67,6 +76,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:DIratA",
@@ -187,6 +199,16 @@
       "csl:lineNumber": 227855,
       "csl:pageColumn": "3-161-c",
       "rdf:value": "<L>55440<pc>3-161-c<k1>DIratA<k2>DIratA<h>2\n<hom>2.</hom> {#DIratA#}¦ <lex>f.</lex> {%Klugheit%} <ls>Spr. 2713</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "16078",
+      "csl:lineNumber": 138864,
+      "csl:pageColumn": "0598-a",
+      "rdf:value": "<L>16078<pc>0598-a<k1>DIratA<k2>DIratA\n{#DIratA#}¦ {@1@} Fortitude, courage,\nstrength of mind; {#vipattO ca mahAl~loke#}\n{#DIratAmanugacCati#} <ls>H. 3. 44</ls>; <ls>V. 2.</ls> {@--2@} <lbinfo n=\"Sup+pression\"/>\nSuppression of jealousy &c. {@--3@} Gravity,\nsolemnity (as shown by silence &c.);\n{#pratyAdeSAnna Kalu Bavato DIratAM kalpayAmi#}\n<ls>Me. 114.</ls> {@--4@} Steadiness, firmness. {@--5@}\nWisdom, cleverness. {@--6@} Refusal.\n(For other meanings see {#DErya#}).\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-1",
@@ -323,6 +345,50 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-pwk"
       },
       "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-10",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA"
+      },
+      "frac:evidence": "H. 3. 44",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "kosha",
+      "csl:citedWork": "H.",
+      "csl:citedRange": "3.44"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-11",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA"
+      },
+      "frac:evidence": "V. 2.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-12",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA"
+      },
+      "frac:evidence": "Me. 114.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

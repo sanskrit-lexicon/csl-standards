@@ -4,6 +4,23 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
+## [Unreleased]
+
+### Added
+- **A fourth dictionary — Apte 1890 (AP90) — on the OntoLex/semantic side.** First
+  step beyond the MW/PWG/PWK tri-dict backbone. [sample-hard-cases](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/sample-hard-cases.mjs)
+  attaches an AP90 counterpart to each case whose headword it shares (optional — it
+  is not part of the tri-dict selection invariant, so the 250 selected cases are
+  unchanged); AP90 reaches **133/250** cases. AP90 enters the neutral model and the
+  OntoLex graph as a fourth `csl:SourceRecord` with evidence-class-typed
+  attestations from its named citations (**385** materialised). The SHACL
+  `csl:sourceRecord` shape and the validator relax from "exactly 3" to "≥ 3"; a
+  four-source graph conforms under pySHACL. The TEI archival/Lex-0 profiles and the
+  published loss corpus (1277) stay a tri-dict backbone — AP90 is additive on the
+  semantic layer (evidence-class detection is scoped to mw/pwg/pwk). `analyze-loss`
+  now reports `recordsPresent.ap90` and AP90 citation counts. See
+  [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §5.
+
 ## [0.7.0] - 2026-06-16
 
 **Validation complete.** All three schema languages now validate the corpus with

@@ -29,21 +29,27 @@ const cslV02 = path.basename(cslOrigArg).toLowerCase() === "v02"
 const sources = {
   mw: path.join(cslV02, "mw", "mw.txt"),
   pwg: path.join(cslV02, "pwg", "pwg.txt"),
-  pwk: path.join(cslV02, "pw", "pw.txt")
+  pwk: path.join(cslV02, "pw", "pw.txt"),
+  // AP90 (Apte 1890) is an OPTIONAL fourth dictionary, attached as an extra
+  // evidence source on cases whose headword it shares (it is not part of the
+  // tri-dict selection invariant, so adding it does not change which cases are
+  // chosen). Skipped cleanly when its source file is absent.
+  ap90: path.join(cslV02, "ap90", "ap90.txt")
 };
+const REQUIRED = ["mw", "pwg", "pwk"];
+
+const haveSource = Object.fromEntries(
+  Object.entries(sources).map(([code, filePath]) => [code, fs.existsSync(filePath)])
+);
+for (const code of REQUIRED) {
+  if (!haveSource[code]) throw new Error(`Missing required source file: ${sources[code]}`);
+}
 
 const publicSources = Object.fromEntries(
-  Object.entries(sources).map(([code, filePath]) => [
-    code,
-    path.relative(repoRoot, filePath).split(path.sep).join("/")
-  ])
+  Object.entries(sources)
+    .filter(([code]) => haveSource[code])
+    .map(([code, filePath]) => [code, path.relative(repoRoot, filePath).split(path.sep).join("/")])
 );
-
-for (const filePath of Object.values(sources)) {
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`Missing source file: ${filePath}`);
-  }
-}
 
 function parseRecords(filePath, dictionaryCode) {
   const lines = fs.readFileSync(filePath, "utf8").split(/\r?\n/);
@@ -214,9 +220,11 @@ function preliminaryLossHints(phenomena) {
 const mwRecords = parseRecords(sources.mw, "mw");
 const pwgRecords = parseRecords(sources.pwg, "pwg");
 const pwkRecords = parseRecords(sources.pwk, "pwk");
+const ap90Records = haveSource.ap90 ? parseRecords(sources.ap90, "ap90") : [];
 
 const pwgIndex = indexByKey(pwgRecords);
 const pwkIndex = indexByKey(pwkRecords);
+const ap90Index = indexByKey(ap90Records);
 
 const candidates = [];
 for (const mw of mwRecords) {
@@ -307,7 +315,8 @@ const output = {
   recordCounts: {
     mw: mwRecords.length,
     pwg: pwgRecords.length,
-    pwk: pwkRecords.length
+    pwk: pwkRecords.length,
+    ...(haveSource.ap90 ? { ap90: ap90Records.length } : {})
   },
   method: {
     description: "MW-led hard-case sample for TEI/OntoLex interoperability stress testing.",
@@ -323,7 +332,12 @@ const output = {
     records: {
       mw: summarize(candidate.mw),
       pwg: summarize(candidate.pwg),
-      pwk: summarize(candidate.pwk)
+      pwk: summarize(candidate.pwk),
+      // Optional fourth dictionary, attached when AP90 shares the headword.
+      ...(() => {
+        const ap90 = chooseCounterpart(ap90Index.get(candidate.key));
+        return ap90 ? { ap90: summarize(ap90) } : {};
+      })()
     }
   }))
 };
@@ -339,7 +353,8 @@ for (const outputPath of outputPaths) {
 }
 
 console.log(`Wrote ${output.items.length} hard cases to ${outputPaths.join(", ")}`);
-console.log(`Parsed MW=${mwRecords.length}, PWG=${pwgRecords.length}, PWK=${pwkRecords.length}`);
+const ap90Attached = output.items.filter(item => item.records.ap90).length;
+console.log(`Parsed MW=${mwRecords.length}, PWG=${pwgRecords.length}, PWK=${pwkRecords.length}, AP90=${ap90Records.length}; AP90 attached to ${ap90Attached}/${output.items.length} cases`);
 
 function isPreferredForQuota(candidate, phenomenon) {
   if (!candidate.phenomena.includes(phenomenon)) return false;

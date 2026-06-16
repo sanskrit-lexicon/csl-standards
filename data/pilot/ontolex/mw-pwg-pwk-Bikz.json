@@ -143,6 +143,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-32"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-33"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-34"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-35"
         }
       ],
       "csl:sourceRecord": [
@@ -154,6 +163,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Bikz",
@@ -383,6 +395,16 @@
       "csl:lineNumber": 329027,
       "csl:pageColumn": "4-265-b",
       "rdf:value": "<L>79756<pc>4-265-b<k1>Bikz<k2>Bikz\n√{#Bikz#}¦, {#Bi/kzate#} (ganz ausnahmsweise auch <ab>Act.</ab>) {%sich Etwas%} (<ab>Acc.</ab> oder <ab>Gen.</ab>) {%wünschen, erwünschen; erbetteln, betteln um%} (<ab>Acc.</ab>), {%Jmd um Etwas bitten%} (mit doppeltem <ab>Acc.</ab>), {%um Nahrung bitten, betteln, anbetteln%}.\n<div n=\"m\">— <ab>Caus.</ab> {#Bikzayati#} {%Jmd betteln machen, zum Bettler machen%}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "22167",
+      "csl:lineNumber": 190000,
+      "csl:pageColumn": "0816-b",
+      "rdf:value": "<L>22167<pc>0816-b<k1>Bikz<k2>Bikz\n{#Bikz#}¦ {c1c} <ab>A.</ab> ({#Bikzate, Bikzita#}) {@1@} To\nask, beg or ask for (with two\n<ab>acc.</ab>), {#BikzamARo vanaM priyAM#} <ls>Bk. 6. 9.</ls>\n{@--2@} To beg (as alms); {#na yajYArTaM DanaM#}\n{#SUdrAdvipro Bikzeta karhicit#} <ls>Ms. 11. 24</ls>,\n<ls n=\"Ms. 11.\">25.</ls> {@--3@} To ask without obtaining.\n{@--4@} To be weary or distressed. {@--5@}\nTo obtain.\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-1",
@@ -863,6 +885,53 @@
       "csl:sourceDictionary": "mw",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "editorial"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-33",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz"
+      },
+      "frac:evidence": "Bk. 6. 9.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Bk.",
+      "csl:citedRange": "6.9"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-34",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz"
+      },
+      "frac:evidence": "Ms. 11. 24",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Ms.",
+      "csl:citedRange": "11.24"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#attestation-35",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz"
+      },
+      "frac:evidence": "25.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:inheritedSiglum": "Ms. 11."
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABikz#root-relation",

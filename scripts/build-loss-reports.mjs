@@ -251,7 +251,11 @@ async function main() {
     sourceEvidence: { count: cites.length, sample: sample(cites.map(c => c.source)) }
   });
   for (const model of models) {
-    const cites = model.citations || [];
+    // Evidence-class loss reports are scoped to the tri-dict backbone (mw/pwg/pwk),
+    // so the published loss corpus stays stable as optional dictionaries (ap90) are
+    // added to the semantic model. ap90 evidence still enters the OntoLex graph and
+    // the cross-dictionary analysis.
+    const cites = (model.citations || []).filter(c => c.dictionary !== "ap90");
     const kosha = cites.filter(c => KOSHA_SIGLUM.test(c.source));
     if (kosha.length) reports.push(evidenceReport(model, "named-kosha-citation", kosha,
       "Named indigenous kośa (lexicon) sources, distinct from textual attestations.",

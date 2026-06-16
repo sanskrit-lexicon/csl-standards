@@ -32,6 +32,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#attestation-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#attestation-3"
         }
       ],
       "csl:sourceRecord": [
@@ -43,6 +46,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:nicita",
@@ -132,6 +138,16 @@
       "rdf:value": "<L>58390<pc>3-202-b<k1>nicita<k2>nicita\n{#nicita#}¦\n<div n=\"1\">— 1〉 <lex>Adj.</lex> <ab>s. u.</ab> <hom>1.</hom> {#ci#} mit {#ni#}.\n<div n=\"1\">— 2〉 *<lex>m.</lex> <ab>Pl.</ab> <ab>N. pr.</ab> eines Kriegerstammes.\n<div n=\"1\">— 3〉 <lex>f.</lex> {#A#} <ab>N. pr.</ab> eines Flusses.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "16685",
+      "csl:lineNumber": 144017,
+      "csl:pageColumn": "0620-a",
+      "rdf:value": "<L>16685<pc>0620-a<k1>nicita<k2>nicita\n{#nicita#}¦ {%<ab>p. p.</ab>%} {@1@} Covered, overcast,\noverspread; <ls>Śi. 17. 14.</ls> {@--2@} Full of,\nfilled. {@--3@} Raised up. {@--4@} Piled or\nheaped up.\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -160,6 +176,22 @@
       "csl:sourceDictionary": "pwg",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#attestation-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita"
+      },
+      "frac:evidence": "Śi. 17. 14.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Śi.",
+      "csl:citedRange": "17.14"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anicita#decomposition",

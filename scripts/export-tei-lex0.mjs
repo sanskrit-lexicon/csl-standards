@@ -169,7 +169,10 @@ function citationsXml(model, id) {
   // (sense-level linkage), MW sources are shown there, not duplicated here; an
   // entry with no sense-linked citations (a stub) still lists everything.
   const senseLinked = (model.senses || []).some(s => (s.citations || []).length);
-  const eligible = (model.citations || []).filter(c => !(senseLinked && c.dictionary === "mw"));
+  // The TEI Lex-0 baseline stays the tri-dict backbone; the optional fourth
+  // dictionary (ap90) is carried only on the OntoLex/semantic side.
+  const eligible = (model.citations || [])
+    .filter(c => c.dictionary !== "ap90" && !(senseLinked && c.dictionary === "mw"));
   const named = eligible.filter(c => c.type !== "generic-lexicographer-hedge");
   const hedges = eligible.filter(c => c.type === "generic-lexicographer-hedge");
   const rows = [];

@@ -117,12 +117,19 @@ function validateCase(model, reviewIds) {
   caseCheck(Boolean(form?.["ontolex:writtenRep"]?.["@value"]), "canonical writtenRep missing");
 
   const sourceRecords = graph.filter(node => node["@type"] === "csl:SourceRecord");
-  caseCheck(sourceRecords.length === 3, `expected 3 source records, found ${sourceRecords.length}`);
+  // The tri-dict backbone (mw/pwg/pwk) is always present; an optional fourth
+  // dictionary (ap90) adds a source record when attached, so >= 3, not exactly 3.
+  caseCheck(sourceRecords.length >= 3, `expected at least 3 source records, found ${sourceRecords.length}`);
   for (const dict of ["mw", "pwg", "pwk"]) {
     const record = sourceRecords.find(node => node["csl:dictionary"] === dict);
     caseCheck(Boolean(record), `missing source record for ${dict}`);
     caseCheck(Boolean(record?.["rdf:value"]), `source record for ${dict} lacks raw value`);
     caseCheck(String(record?.["csl:recordNumber"] || "") === String(model.records?.[dict]?.L || ""), `source record number mismatch for ${dict}`);
+  }
+  // Any extra (fourth-dictionary) source record must still be well-formed.
+  for (const record of sourceRecords.filter(n => !["mw", "pwg", "pwk"].includes(n["csl:dictionary"]))) {
+    caseCheck(Boolean(record["csl:dictionary"]), `extra source record ${record["@id"]} lacks a dictionary`);
+    caseCheck(Boolean(record["rdf:value"]), `extra source record ${record["@id"]} lacks raw value`);
   }
 
   // An attestation may attest the entry (entry-level evidence) or a specific
@@ -191,7 +198,7 @@ function validateCase(model, reviewIds) {
   caseCheck(ttl.includes("frac:Attestation"), `${ttlRelative}: missing FrAC attestation triples`);
   caseCheck(!attestations.length || ttl.includes("csl:evidenceClass"), `${ttlRelative}: missing csl:evidenceClass triples`);
   caseCheck(!lineages.length || ttl.includes("a csl:LineageRelation"), `${ttlRelative}: missing csl:LineageRelation triples`);
-  caseCheck((ttl.match(/a csl:SourceRecord/g) || []).length === 3, `${ttlRelative}: expected 3 csl:SourceRecord triples`);
+  caseCheck((ttl.match(/a csl:SourceRecord/g) || []).length >= 3, `${ttlRelative}: expected at least 3 csl:SourceRecord triples`);
   caseWarn(ttl.includes("ontolex:sense") || !entry["ontolex:sense"]?.length, `${ttlRelative}: JSON-LD senses are not mirrored in Turtle`);
 
   return {

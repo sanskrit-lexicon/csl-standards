@@ -35,9 +35,14 @@ function stripMarkup(value) {
 // evidence from the neutral model rather than re-deriving it. Shares the <ls>
 // parser with the exporters (scripts/lib/citations.mjs); deduped and capped per
 // dictionary for a compact canonical layer.
+// mw/pwg/pwk are always present (the tri-dict backbone); ap90 is an optional
+// fourth dictionary attached to cases that share its headword.
+const CITATION_DICTS = ["mw", "pwg", "pwk", "ap90"];
+
 function extractCitations(item) {
   const citations = [];
-  for (const dict of ["mw", "pwg", "pwk"]) {
+  for (const dict of CITATION_DICTS) {
+    if (!item.records[dict]?.raw) continue;
     const seen = new Set();
     for (const c of extractLabeledSources(item.records[dict]?.raw, { strip: stripMarkup, max: Infinity })) {
       if (seen.has(c.source)) continue;
@@ -167,7 +172,18 @@ async function main() {
           pc: item.records.pwk?.pc || null,
           raw: item.records.pwk?.raw || null,
           senses: extractPwSenses(item.records.pwk?.raw, "pwk")
-        }
+        },
+        // Optional fourth dictionary (Apte 1890): carried when the sampler
+        // attached an AP90 counterpart. No format-specific sense extractor yet,
+        // so it contributes its raw record and its named citations (above).
+        ...(item.records.ap90 ? {
+          ap90: {
+            L: item.records.ap90.L || null,
+            line: item.records.ap90.line || null,
+            pc: item.records.ap90.pc || null,
+            raw: item.records.ap90.raw || null
+          }
+        } : {})
       },
       forms,
       senses: extractMwSenses(item.records.mw?.raw, item.phenomena || []),

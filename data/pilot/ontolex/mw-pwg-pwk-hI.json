@@ -86,6 +86,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#attestation-18"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#attestation-19"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#attestation-20"
         }
       ],
       "csl:sourceRecord": [
@@ -97,6 +103,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:hI",
@@ -250,6 +259,16 @@
       "csl:lineNumber": 564071,
       "csl:pageColumn": "7-277-c",
       "rdf:value": "<L>134926<pc>7-277-c<k1>hI<k2>hI\n{#hI#}¦ <ab>Interj.</ab> {%des Staunens, Entsetzens, Scherzes, Lachens%} und {%Behagens%} <ls>Spr. 868</ls> (wo {#hI na#} zu lesen ist; <ab>vgl.</ab> <ls>GAṆAR. S. 7, Z. 10</ls>). <ls>ŚIŚ. 11,64</ls> ({#hI#} <ab>st.</ab> {#hi#} zu lesen, wie schon das Metrum zeigt; <ab>vgl.</ab> auch <ls>GAṆAR. S. 7, Z. 10</ls>). <ls>BĀLAR. 202,4</ls>. <ls>HEM. PAR. 1,350. 409</ls>. <ls>JĀTAKAM. 31,44</ls>. Auch wiederholt <ls>Chr. 300,7</ls>. (im <lang>Prākrit</lang>).\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "31453",
+      "csl:lineNumber": 271596,
+      "csl:pageColumn": "1172-c",
+      "rdf:value": "<L>31453<pc>1172-c<k1>hI<k2>hI\n{#hI#}¦ {%<ab>ind.</ab>%} An interjection of {@1@} <lbinfo n=\"Sur+prise\"/>\nSurprise (ah!); {#hatIvIDalasitAnAM hI#}\n{#vicitro vipAkaH#} <ls>Śi. 11. 64</ls>; or {#hI#}\n{#citraM lakzmaRenoce#} <ls>Bk. 14. 39</ls>; (often\nrepeated in theatrical language in\nthis sense). {@--2@} Fatigue, <lbinfo n=\"despon+dency\"/>\ndespondency or sorrow. {@--3@} Reason\n(<ab>cf.</ab> {#hi#}). \n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#attestation-1",
@@ -520,6 +539,38 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "Chr.",
       "csl:citedRange": "300,7"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#attestation-19",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI"
+      },
+      "frac:evidence": "Śi. 11. 64",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Śi.",
+      "csl:citedRange": "11.64"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#attestation-20",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI"
+      },
+      "frac:evidence": "Bk. 14. 39",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Bk.",
+      "csl:citedRange": "14.39"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AhI#continuation-relation",

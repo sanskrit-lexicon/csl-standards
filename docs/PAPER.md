@@ -295,7 +295,12 @@ than hidden.
 
 The sample is 250 cases drawn from three dictionaries of one lineage; the
 asymmetry findings are strong within it but their generality across other
-dictionaries (e.g. Apte, Grassmann) is future work. The evidence-class and lineage
+dictionaries is only partially tested. As a first step beyond the tri-dict
+backbone, a fourth dictionary — Apte 1890 (AP90) — is now attached on the
+semantic (OntoLex) side to the 133 of 250 cases that share its headword, entering
+the graph as a fourth source record with evidence-class-typed attestations; fuller
+generalisation (AP90/Grassmann woven into the archival profile and the loss corpus)
+remains future work. The evidence-class and lineage
 detectors are curated heuristics (kośa sigla, editorial abbreviations, a coordinate
 regex, a literal `[sic]`), so per-class counts are a **lower bound**, not a
 philological census — for example, all-caps *kośa* sigla are currently read as

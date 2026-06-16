@@ -200,6 +200,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#attestation-46"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#attestation-47"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#attestation-48"
         }
       ],
       "csl:sourceRecord": [
@@ -211,6 +217,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#record-ap90"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:ad",
@@ -515,6 +524,16 @@
       "csl:lineNumber": 8907,
       "csl:pageColumn": "1-028-b",
       "rdf:value": "<L>2386<pc>1-028-b<k1>ad<k2>ad<h>1\n<hom>1.</hom> √{#ad#}¦ {#a/tti#} ({#adasva#} ausnahmsweise) {%essen, verzehren%} (auch <ab>uneig.</ab>), {%geniessen%} <ls n=\"Chr.\">30,13</ls>. <ls n=\"Chr.\">108,2</ls>. <ls n=\"Chr.\">245,1</ls>. <ls>NYĀYAM. 3,5,35</ls>.\n<div n=\"m\">— <ab>Caus.</ab> {#Ada/yati#} und {#˚te#} {%essen lassen%} <ls n=\"Chr.\">225,31</ls>. {%füttern, auffüttern%}.\n<div n=\"p\">— Mit {#api#} {%abfressen%}.\n<div n=\"m\">— <ab>Caus.</ab> {%mehr zu fressen geben%}.\n<div n=\"p\">— Mit {#ava#} {%speisen%}.\n<div n=\"p\">— Mit {#A#} {%essen%}.\n<div n=\"p\">— Mit {#pra#} {%verzehren%}.\n<div n=\"p\">— Mit {#prati#} {%dagegen —, zur Vergeltung —, zur Ausgleichung essen%}.\n<div n=\"p\">— Mit {#vi#} {%zerfressen, benagen%}.\n<div n=\"p\">— Mit {#sam#} {%verzehren, aufzehren%}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "809",
+      "csl:lineNumber": 8878,
+      "csl:pageColumn": "0040-a",
+      "rdf:value": "<L>809<pc>0040-a<k1>ad<k2>ad\n{#ad#}¦ {c2c} <ab>P.</ab> [{#atti, Ada, --jaGAsa, aGasat#},\n{#atsyati, attuM, anna, -jagDa, jagDvA#}] {@1@} To\neat, devour. {@--2@} To destroy. {@--3@} = {#aMd#}, <ab>q. v.</ab>\n{%--<ab>Caus.</ab>%} To feed with, cause to eat;\n{#AdayatyannaM bawunA#} <ls>Sk.</ls> {%--<ab>Desid.</ab>%} {#jiGatsati#}\nTo wish to eat. [<ab>cf.</ab> <ab>L.</ab> {%edo%}, <ab>Gr.</ab>\n{%edo%}, <ab>Germ.</ab> {%essen%}, <ab>Eng.</ab> {%eat%}; Lith.\n{%edmi%}, Sans. {%admi%}, <ab>Goth.</ab> {%at%}, Zend\n{%ad%}]. With {#ava#} to satisfy by food, get\nrid of with feeding; (<ab>fig.</ab>) stop the\nmouth of. {#--A#} to eat &c. {#--pra --saM#}\nto use up, consume, devour;  <lbinfo n=\"samadaMtyA#mizaM\"/>\n{#samadaMtyAmizaM KagAH#} <ls>Bk. 18. 12.</ls> {#--vi#} to gnaw.\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#attestation-1",
@@ -1233,6 +1252,36 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "Chr."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#attestation-47",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad"
+      },
+      "frac:evidence": "Sk.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#attestation-48",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad"
+      },
+      "frac:evidence": "Bk. 18. 12.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#record-ap90"
+      },
+      "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "Bk.",
+      "csl:citedRange": "18.12"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aad#root-relation",
