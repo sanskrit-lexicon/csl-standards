@@ -48,7 +48,17 @@ csl:AttestationShape
   sh:property [ sh:path frac:attests ; sh:minCount 1 ] ;
   sh:property [ sh:path frac:evidence ; sh:minCount 1 ] ;
   sh:property [ sh:path prov:wasDerivedFrom ; sh:minCount 1 ] ;
-  sh:property [ sh:path csl:evidenceType ; sh:minCount 1 ] .
+  sh:property [ sh:path csl:evidenceType ; sh:minCount 1 ] ;
+  # csl: evidence-class extension (EXTENSION_PROPOSAL.md §1): every attestation
+  # carries a sub-typed evidence class; a coordinate-bearing one parses it.
+  sh:property [
+    sh:path csl:evidenceClass ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "textual" "hedge" "kosha" "editorial" )
+  ] ;
+  sh:property [ sh:path csl:citedRange ; sh:maxCount 1 ] ;
+  sh:property [ sh:path csl:citedWork ; sh:maxCount 1 ] .
 
 # Multi-resource (OntoLex-Lexicog): per source dictionary that has senses, a
 # lexicog:LexicographicResource (the dictionary) containing a lexicog:Entry (its

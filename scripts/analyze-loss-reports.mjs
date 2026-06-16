@@ -112,6 +112,23 @@ async function main() {
     namedSourceCitationsMaterialized: citTypes["named-source-citation"] || 0
   };
 
+  // --- extension coverage: the proposed csl: layer, now implemented + SHACL-
+  // validated, measured against the gap it answers. A model-vocabulary-gap loss
+  // that needs an OntoLex extension is "covered" when it carries a mappedAs
+  // pointing at the concrete csl: construct that resolves it (export-ontolex).
+  const needsExtension = reports.filter(r =>
+    r.failureClassification === "model-vocabulary-gap" && r.extensionNeeded && r.target === "ontolex");
+  const covered = needsExtension.filter(r => r.mappedAs);
+  const coverage = {
+    ontolexModelVocabularyGapsNeedingExtension: needsExtension.length,
+    coveredByImplementedConstruct: covered.length,
+    uncovered: needsExtension.length - covered.length,
+    byConstruct: tally(covered, "mappedAs"),
+    constructByPhenomenon: [...new Set(covered.map(r => r.phenomenon))].sort().reduce((acc, p) => {
+      acc[p] = covered.find(r => r.phenomenon === p).mappedAs; return acc;
+    }, {})
+  };
+
   const analysis = {
     generatedBy: "scripts/analyze-loss-reports.mjs",
     lossReports: {
@@ -127,7 +144,8 @@ async function main() {
       citations: { total: citTotal, byType: citTypes, byDictionary: citByDict },
       sensesByDictionary: senseCov
     },
-    coverageGaps: gaps
+    coverageGaps: gaps,
+    extensionCoverage: coverage
   };
 
   // Write to data/ and mirror into src/ so the Observable site can load it.
@@ -154,6 +172,8 @@ async function main() {
   out.push(mdTable("phenomenon", phen, models.length) + "\n");
   out.push("## coverage gaps");
   out.push("```json\n" + JSON.stringify(gaps, null, 2) + "\n```");
+  out.push("## extension coverage");
+  out.push("```json\n" + JSON.stringify(coverage, null, 2) + "\n```");
   console.log(out.join("\n"));
   console.log(`\nWrote data/pilot/loss-analysis.json`);
 }

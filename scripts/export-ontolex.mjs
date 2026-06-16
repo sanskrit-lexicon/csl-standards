@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 
 const DICTS = ["mw", "pwg", "pwk"];
 const DICT_LABEL = {
@@ -108,33 +109,33 @@ function jsonldFor(model, rawByDict, isReviewCase) {
   const recordIri = dict => iriFor(model.id, `record-${dict}`);
   let attSeq = 0;
   const senseLinked = new Set();
-  for (const sense of senseNodes) {
-    for (const c of sense._citations) {
-      senseLinked.add(`${c.dictionary}:${c.source}`);
-      attestationNodes.push({
-        "@id": iriFor(model.id, `attestation-${++attSeq}`),
-        "@type": "frac:Attestation",
-        "frac:attests": {"@id": sense["@id"]},
-        "frac:evidence": c.source,
-        "prov:wasDerivedFrom": {"@id": recordIri(c.dictionary)},
-        "csl:sourceDictionary": c.dictionary,
-        "csl:evidenceType": c.type,
-        ...(c.inheritedFrom ? {"csl:inheritedSiglum": c.inheritedFrom} : {})
-      });
-    }
-  }
-  for (const c of model.citations || []) {
-    if (senseLinked.has(`${c.dictionary}:${c.source}`)) continue;
-    attestationNodes.push({
+  // The csl: evidence-class extension: sub-type each attestation (textual / kośa
+  // / editorial / hedge) and parse its textual coordinate, so the flat
+  // frac:Attestation carries the evidence class it would otherwise lose (§4b).
+  const attestationFor = (c, attestsId) => {
+    const coord = parseCoordinate(c.source);
+    return {
       "@id": iriFor(model.id, `attestation-${++attSeq}`),
       "@type": "frac:Attestation",
-      "frac:attests": {"@id": caseIri},
+      "frac:attests": {"@id": attestsId},
       "frac:evidence": c.source,
       "prov:wasDerivedFrom": {"@id": recordIri(c.dictionary)},
       "csl:sourceDictionary": c.dictionary,
       "csl:evidenceType": c.type,
+      "csl:evidenceClass": evidenceClass(c.source, c.type),
+      ...(coord ? {"csl:citedWork": coord.work, "csl:citedRange": coord.locus} : {}),
       ...(c.inheritedFrom ? {"csl:inheritedSiglum": c.inheritedFrom} : {})
-    });
+    };
+  };
+  for (const sense of senseNodes) {
+    for (const c of sense._citations) {
+      senseLinked.add(`${c.dictionary}:${c.source}`);
+      attestationNodes.push(attestationFor(c, sense["@id"]));
+    }
+  }
+  for (const c of model.citations || []) {
+    if (senseLinked.has(`${c.dictionary}:${c.source}`)) continue;
+    attestationNodes.push(attestationFor(c, caseIri));
   }
 
   // OntoLex-Lexicog multi-resource view: per source dictionary that has senses, a
@@ -331,7 +332,12 @@ function turtleFor(jsonld) {
     lines.push(`  frac:attests ${ttlIri(att["frac:attests"]["@id"])} ;`);
     lines.push(`  frac:evidence ${ttlString(att["frac:evidence"])} ;`);
     lines.push(`  prov:wasDerivedFrom ${ttlIri(att["prov:wasDerivedFrom"]["@id"])} ;`);
-    lines.push(`  csl:evidenceType ${ttlString(att["csl:evidenceType"])} .`);
+    lines.push(`  csl:evidenceType ${ttlString(att["csl:evidenceType"])} ;`);
+    if (att["csl:citedWork"]) {
+      lines.push(`  csl:citedWork ${ttlString(att["csl:citedWork"])} ;`);
+      lines.push(`  csl:citedRange ${ttlString(att["csl:citedRange"])} ;`);
+    }
+    lines.push(`  csl:evidenceClass ${ttlString(att["csl:evidenceClass"])} .`);
     lines.push("");
   }
 

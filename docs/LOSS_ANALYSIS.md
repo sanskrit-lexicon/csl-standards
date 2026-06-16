@@ -172,6 +172,22 @@ sub-types attestations (text vs *kośa* vs editorial) and parses citation
 coordinates. This is the concrete content of the §2 model-vocabulary-gap that now
 leads the corpus, and the §8 extension layer's primary target.
 
+**The remedy is now implemented and validated.** The OntoLex export emits a
+sub-typed `csl:evidenceClass` ∈ {`textual`, `hedge`, `kosha`, `editorial`} on
+every `frac:Attestation`, and parses a coordinate-bearing citation into
+`csl:citedWork` + `csl:citedRange` ([scripts/lib/evidence.mjs](../scripts/lib/evidence.mjs),
+[export-ontolex.mjs](../scripts/export-ontolex.mjs)). The [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl)
+constrains the class with `sh:in`, and all 250 graphs conform under pySHACL. Each
+loss report names its remedy in `mappedAs`, so the closure is measurable:
+`analyze-loss`'s `extensionCoverage` shows **569 of 569** OntoLex
+model-vocabulary-gap losses needing an extension map to an implemented `csl:`
+construct (the four evidence classes, plus the already-implemented
+`csl:RootRelation` and `decomp:ComponentList`). This is *not* a claim that the
+loss vanished from the base standards — the gap against vanilla OntoLex/FrAC is
+still recorded — but that the proposed extension exists as a working, validated
+artefact, not only as prose (the detectors are heuristic, so the counts remain a
+lower bound on each evidence class).
+
 ## 5. Coverage gaps — what the instrument does not yet measure
 
 Honest limits of the current pilot, recorded so they are not mistaken for absence

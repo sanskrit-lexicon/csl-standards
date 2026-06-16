@@ -32,21 +32,31 @@ TEI notes/attributes and the OntoLex graph so the two views share one spine. The
 proposal is to promote the stable subset below into a published vocabulary
 (`csl-lex`), keeping TEI and OntoLex bindings aligned.
 
-## 1. Evidence class — *named attestation vs lexicographer hedge*
+## 1. Evidence class — *named attestation vs lexicographer hedge* — **IMPLEMENTED**
 
-- **Loss:** `generic-lexicographer-hedge`, `named-source-citation`; cause
-  *model-vocabulary-gap*. The MW `L.` siglum is not a citation but an evidential
-  hedge (lexicographer-only); flattening it to a generic bibl loses the
-  distinction (§4 of the paper).
-- **Prototype:** TEI — `@cert`/`@resp` on every statement + `<usg type="hint">`
-  for the hedge and `<bibl type="named-source">` for sources, mapped to PROV-O in
-  [EVIDENCE_LABEL_CROSSWALK.md](EVIDENCE_LABEL_CROSSWALK.md). OntoLex —
-  `frac:Attestation` with **`csl:evidenceType`** ∈ {`named-source-citation`,
-  `generic-lexicographer-hedge`} and `prov:wasDerivedFrom` the source record.
-- **Proposal:** standardize a small **evidence-type vocabulary** as a first-class
-  attestation property (textual attestation · lexicographer hedge · named kośa ·
-  editorial self-reference · catalogue reference · unresolved), with a defined
-  certainty mapping to TEI `@cert` and PROV-O.
+- **Loss:** `generic-lexicographer-hedge`, `named-kosha-citation`,
+  `editorial-reference`, `citation-coordinate`; cause *model-vocabulary-gap*
+  (49% of the corpus — the largest; see [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b).
+  The MW `L.` siglum is an evidential hedge, not a citation; an indigenous *kośa*
+  source is not a textual attestation; an editorial reference points within the
+  tradition; and a citation's textual coordinate is locked in a flat string.
+  Flattening all of these to a generic bibl loses the distinction.
+- **Implemented:** OntoLex — every `frac:Attestation` now carries a sub-typed
+  **`csl:evidenceClass`** ∈ {`textual`, `hedge`, `kosha`, `editorial`}, and a
+  coordinate-bearing one parses into **`csl:citedWork`** + **`csl:citedRange`**
+  (e.g. `AV. 6,116,1.` → work `AV.`, range `6,116,1`). Classification and parsing
+  live in [scripts/lib/evidence.mjs](../scripts/lib/evidence.mjs); the
+  [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl) constrains
+  `csl:evidenceClass` with `sh:in`, and all 250 graphs pass pySHACL. The coarse
+  `csl:evidenceType` ∈ {`named-source-citation`, `generic-lexicographer-hedge`}
+  is retained for back-compatibility. TEI side (prototype): `@cert`/`@resp` +
+  `<usg type="hint">` / `<bibl type="named-source">`, mapped to PROV-O in
+  [EVIDENCE_LABEL_CROSSWALK.md](EVIDENCE_LABEL_CROSSWALK.md).
+- **Proposal:** standardize this **evidence-class vocabulary** as a first-class
+  attestation property (textual · hedge · kośa · editorial · catalogue ·
+  unresolved) plus a structured cited-locus, with a defined certainty mapping to
+  TEI `@cert` and PROV-O. The four implemented classes are the detectable subset;
+  `catalogue`/`unresolved` remain proposed.
 
 ## 2. Root relation — *entry that is also a derivational base*
 
@@ -124,7 +134,7 @@ value is that an assertion's *epistemic status* travels with it across both mode
 
 | Construct | Disposition |
 |---|---|
-| Evidence-type vocabulary (§1) | **Standardize** — broadly useful beyond Sanskrit |
+| Evidence-class vocabulary + cited-locus (§1) | **Implemented** (`csl:evidenceClass`, `csl:citedWork`/`csl:citedRange`); **standardize** — broadly useful beyond Sanskrit |
 | Derivational-base / root relation (§2) | Align with `ontolex-morph`; standardize the binding |
 | Decomposition-status flag (§3) | **Standardize** on `decomp` |
 | Adjacency-parent recovery status (§4) | Project-local; propose as a TEI dictionaries pattern |
@@ -138,6 +148,15 @@ construct here is claimed as adopted by TEI or the OntoLex community group. The
 `csl:` terms are the working reference implementation; the SHACL profile
 ([ontolex-frac-profile.shacl.ttl](../data/schema/ontolex-frac-profile.shacl.ttl))
 and the two ODDs are the machine-checkable form.
+
+The evidence-class construct (§1) is now **implemented in the OntoLex export and
+SHACL-validated**, closing the loop from measured loss to working remedy: every
+OntoLex `model-vocabulary-gap` loss that needs an extension (569 of 569) names a
+concrete, implemented `csl:` construct, and all 250 graphs conform to the SHACL
+profile under pySHACL (`extensionCoverage` in
+[loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2),
+decomposition (§3) and lineage (§4a) constructs were already implemented; §4
+(continuation) and §5 (kośa ODD) remain prototype/customisation.
 
 ## References
 

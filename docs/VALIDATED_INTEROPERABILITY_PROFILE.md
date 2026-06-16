@@ -84,7 +84,10 @@ The output is a full OntoLex/FrAC profile:
 - `csl:SourceRecord` nodes for MW/PWG/PWK provenance.
 - `frac:Attestation` nodes linked with `prov:wasDerivedFrom`, **attesting the
   specific sense** they belong to (sense-level linkage), or the entry for
-  citations not tied to a sense.
+  citations not tied to a sense. Each attestation carries a sub-typed
+  **`csl:evidenceClass`** ∈ {`textual`, `hedge`, `kosha`, `editorial`} (the
+  evidence-class extension), and a coordinate-bearing citation parses into
+  **`csl:citedWork`** + **`csl:citedRange`**.
 - `csl:RootRelation`, `decomp:ComponentList`, or `csl:ContinuationRelation` nodes where applicable.
 
 Validator: `scripts/validate-ontolex-profile.mjs`
@@ -98,7 +101,7 @@ The validator checks all 250 cases for:
 - OntoLex and Lexicog entry typing;
 - canonical form;
 - three source records;
-- FrAC attestations with provenance;
+- FrAC attestations with provenance and a valid `csl:evidenceClass`;
 - phenomenon-specific relation nodes;
 - RDF/Turtle presence with required prefixes and entry triples.
 - declared full validation scope.
