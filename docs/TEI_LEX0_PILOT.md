@@ -140,8 +140,14 @@ records for the SKD register: the two Sanskrit lexicographic civilisations diffe
 not only in citation style but in **whether sense and citation are separable
 categories at all**. A faithful indigenous Lex-0 export therefore needs a local
 convention — treating the authority formula as a *boundary* of the sense unit
-rather than as detachable apparatus — which is a candidate Lex-0 customisation
-(ODD extension), not a defect to be silently flattened.
+rather than as detachable apparatus — not a defect to be silently flattened.
+
+This convention is now **implemented** (EXTENSION_PROPOSAL §5): each kośa entry
+declares it with `<note type="entry-convention">kosa-iti-unit</note>`, every sense
+closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus a
+`<note type="model-loss">` witnessing the fusion, the ODD's
+`csl-lex0-kosa-sense-boundary` Schematron asserts the pairing, and
+[`validate-tei-lex0`](../scripts/validate-tei-lex0.mjs) enforces it in `build-pilot`.
 
 ## 6. Validation status
 
