@@ -6,6 +6,20 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-06-16
+
+**Validation hardening + interoperability-modeling depth.** The pilot's external
+validation is now real, not skipped — a portable, no-admin Java/TEI toolchain
+compiles both ODDs to RELAX NG and runs jing + pySHACL over all 250 archival /
+256 Lex-0 / 250 RDF artefacts (it surfaced and we fixed three real
+TEI-conformance bugs). On the modeling side the OntoLex-Lexicog container is
+completed (`LexicographicResource → entry → Entry`), the loss-report corpus closes
+every coverage gap (all schema phenomena + every roadmap cause now emitted; 959 →
+**1277** reports, model-vocabulary-gap now the leading cause at 49%), and the
+proposal's headline construct — the **evidence-class extension** — is implemented
+and SHACL-validated, with `extensionCoverage` measuring **569/569** OntoLex
+model-vocabulary-gap losses mapped to a concrete `csl:` construct.
+
 ### Changed
 - **OntoLex-Lexicog container refinement**: each source dictionary is now a
   `lexicog:LexicographicResource` (with `dct:source`/`csl:dictionary`) whose
