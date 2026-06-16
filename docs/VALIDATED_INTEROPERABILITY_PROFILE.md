@@ -139,7 +139,7 @@ The external harness writes:
 - `data/pilot/external-validation-review.json`
 - `src/data/pilot/external-validation-review.json`
 
-It records three independent hardening checks:
+It records these independent hardening checks:
 
 | Layer | External tool | Behavior |
 |---|---|---|
@@ -147,6 +147,7 @@ It records three independent hardening checks:
 | TEI XML validation | `jing` or `xmllint` | Validates all 250 generated TEI XML files against a compiled RELAX NG schema. Set `CSL_STANDARDS_TEI_RNG` to use a precompiled schema. |
 | Lex-0 ODD compilation | `teitorelaxng` from the TEI Stylesheets | Compiles `data/schema/tei-lex0-profile.odd.xml` to a temporary RELAX NG schema when available. |
 | Lex-0 XML validation | `jing` or `xmllint` | Validates all 256 generated `*.lex0.xml` files against the compiled RELAX NG schema. Set `CSL_STANDARDS_LEX0_RNG` to use a precompiled schema. |
+| Lex-0 Schematron | Saxon + ISO Schematron skeleton (SVRL) | Runs the Lex-0 ODD's Schematron (baseline shape + kośa sense-boundary §5) over all 256 `*.lex0.xml` via a compiled SVRL transform; any `svrl:failed-assert` fails. Set `CSL_STANDARDS_LEX0_SVRL` + `CSL_STANDARDS_SAXON_JAR`. |
 | SHACL validation | `pyshacl` | Validates all 250 RDF/Turtle files against `data/schema/ontolex-frac-profile.shacl.ttl`. |
 
 The default command records missing external tools as `skipped`; `:strict` turns skipped checks into a failing CI-style result.

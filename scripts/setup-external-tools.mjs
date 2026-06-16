@@ -24,6 +24,9 @@ const SAXON = path.join(T, "saxon", "saxon-he.jar");
 const JING = path.join(T, "jing", "jing.jar");
 const SS = path.join(T, "tei-stylesheets", "xml", "tei", "stylesheet", "odds");
 const P5 = path.join(T, "p5subset.xml");
+const SCHE = path.join(T, "schematron");
+const SCH_BASE = "https://raw.githubusercontent.com/Schematron/schematron/master/trunk/schematron/code";
+const SCH_FILES = ["iso_dsdl_include.xsl", "iso_abstract_expand.xsl", "iso_svrl_for_xslt2.xsl", "iso_schematron_skeleton_for_saxon.xsl"];
 
 const SAXON_URL = "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/10.9/Saxon-HE-10.9.jar";
 const JING_URL = "https://repo1.maven.org/maven2/com/thaiopensource/jing/20091111/jing-20091111.jar";
@@ -80,9 +83,33 @@ function compileOdd(oddRel, rngName) {
   run([`-s:${expanded}`, `-xsl:${path.join(SS, "odd2relax.xsl")}`, `-o:${path.join(T, "rng", "_main.out")}`, `outputDir=${outUri}`]);
 }
 
+// Extract the ODD's Schematron (its <sch:pattern> blocks), then compile it to an
+// SVRL-emitting XSLT with the ISO Schematron skeleton (3 Saxon stages), so the
+// harness can run the constraints with a real engine.
+async function compileSchematron(oddRel, schName) {
+  const out = path.join(SCHE, `${schName}.svrl.xsl`);
+  if (existsSync(out)) { console.log(`  have ${path.relative(root, out)}`); return; }
+  const odd = await fs.readFile(path.join(root, oddRel), "utf8");
+  const patterns = [...odd.matchAll(/<sch:pattern[\s\S]*?<\/sch:pattern>/g)].map(m => m[0]);
+  if (!patterns.length) { console.log(`  no <sch:pattern> in ${oddRel}; skipping`); return; }
+  const sch = `<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">\n  <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>\n${patterns.join("\n")}\n</sch:schema>\n`;
+  const schFile = path.join(SCHE, `${schName}.sch`);
+  await fs.writeFile(schFile, sch, "utf8");
+  const run = (src, xsl, dst) => {
+    const r = spawnSync(JAVA, ["-jar", SAXON, `-s:${src}`, `-xsl:${xsl}`, `-o:${dst}`], { encoding: "utf8" });
+    if (r.status !== 0) throw new Error(`saxon failed: ${r.stderr || r.stdout}`);
+  };
+  const s1 = path.join(SCHE, `${schName}._1.sch`);
+  const s2 = path.join(SCHE, `${schName}._2.sch`);
+  run(schFile, path.join(SCHE, "iso_dsdl_include.xsl"), s1);
+  run(s1, path.join(SCHE, "iso_abstract_expand.xsl"), s2);
+  run(s2, path.join(SCHE, "iso_svrl_for_xslt2.xsl"), out);
+}
+
 async function main() {
   await fs.mkdir(path.join(T, "rng"), { recursive: true });
   await fs.mkdir(path.join(T, "bin"), { recursive: true });
+  await fs.mkdir(SCHE, { recursive: true });
 
   console.log("Java (Temurin JRE 21):");
   await unzipSingle(await resolveJreUrl(), path.join(T, "jre.zip"), path.join(T, "jdk"));
@@ -100,6 +127,10 @@ async function main() {
   console.log("Compiling ODD -> RNG:");
   compileOdd("data/schema/tei-archival-profile.odd.xml", "csl-tei-archival-profile-v0.1");
   compileOdd("data/schema/tei-lex0-profile.odd.xml", "csl-tei-lex0-profile-v0.1");
+
+  console.log("Schematron skeleton + Lex-0 SVRL transform:");
+  for (const f of SCH_FILES) await download(`${SCH_BASE}/${f}`, path.join(SCHE, f));
+  await compileSchematron("data/schema/tei-lex0-profile.odd.xml", "csl-tei-lex0");
 
   console.log("Done. tools/ ready. Run: npm run validate-external");
 }

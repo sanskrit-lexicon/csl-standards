@@ -219,6 +219,53 @@ function shaclRunner() {
   return null;
 }
 
+// Run the Lex-0 ODD's Schematron with a real SVRL engine: Saxon applies the
+// precompiled SVRL transform (built by setup-external-tools from the ISO
+// Schematron skeleton) to each Lex-0 file, and any <svrl:failed-assert> is a
+// failure. Skipped unless a compiled transform and Saxon are available.
+function runSchematronValidation(files) {
+  const svrlRel = process.env.CSL_STANDARDS_LEX0_SVRL;
+  if (!svrlRel) {
+    skipped("schematron", "No compiled Lex-0 Schematron SVRL transform; set CSL_STANDARDS_LEX0_SVRL or run setup-external-tools.");
+    return;
+  }
+  const svrlPath = path.resolve(root, svrlRel);
+  if (!fs.existsSync(svrlPath)) {
+    failed("schematron", `CSL_STANDARDS_LEX0_SVRL points to a missing file: ${svrlPath}`);
+    return;
+  }
+  const saxonRel = process.env.CSL_STANDARDS_SAXON_JAR;
+  const saxon = saxonRel ? path.resolve(root, saxonRel) : "";
+  if (!saxon || !fs.existsSync(saxon)) {
+    skipped("schematron", "Saxon jar not found for the SVRL engine; set CSL_STANDARDS_SAXON_JAR.");
+    return;
+  }
+  const java = commandPath("java");
+  if (!java) {
+    skipped("schematron", "No java on PATH for the Schematron SVRL engine.");
+    return;
+  }
+
+  for (const {id, path: xmlPath} of files) {
+    if (!fs.existsSync(xmlPath)) {
+      failed("schematron", `Missing Lex-0 XML file for ${id}.`, {id, file: rel(xmlPath)});
+      continue;
+    }
+    const result = run(java, ["-jar", saxon, `-s:${xmlPath}`, `-xsl:${svrlPath}`]);
+    const svrl = result.stdout || "";
+    const asserts = [...svrl.matchAll(/<svrl:failed-assert\b[\s\S]*?<svrl:text>([\s\S]*?)<\/svrl:text>/g)]
+      .map(m => m[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
+    if (result.status === 0 && asserts.length === 0) {
+      passed("schematron", `Lex-0 Schematron passed for ${id}.`, {id, tool: "saxon-svrl", file: rel(xmlPath)});
+    } else {
+      failed("schematron", `Lex-0 Schematron failed for ${id}.`, {
+        id, tool: "saxon-svrl", file: rel(xmlPath),
+        asserts: asserts.slice(0, 5), stderr: tail(result.stderr)
+      });
+    }
+  }
+}
+
 function runShaclValidation(models) {
   const runner = shaclRunner();
   const shapesPath = path.join(root, "data/schema/ontolex-frac-profile.shacl.ttl");
@@ -270,7 +317,10 @@ const lex0Rng = resolveRng({
   envVar: "CSL_STANDARDS_LEX0_RNG",
   rngName: "csl-tei-lex0-profile.rng"
 });
-runRngValidation({type: "lex0", rngPath: lex0Rng, validator, files: lex0Files()});
+const lex0FileList = lex0Files();
+runRngValidation({type: "lex0", rngPath: lex0Rng, validator, files: lex0FileList});
+
+runSchematronValidation(lex0FileList);
 
 runShaclValidation(models);
 
@@ -284,7 +334,8 @@ const report = {
   tools: {
     teiOddCompiler: commandPath("teitorelaxng") || null,
     teiXmlValidator: commandPath("jing") || commandPath("xmllint") || null,
-    shaclValidator: commandPath("pyshacl") || null
+    shaclValidator: commandPath("pyshacl") || null,
+    schematronEngine: process.env.CSL_STANDARDS_LEX0_SVRL ? "saxon-svrl" : null
   },
   totals: {
     checks: checks.length,

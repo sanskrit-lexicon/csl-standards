@@ -146,8 +146,9 @@ proposal is to promote the stable subset below into a published vocabulary
 - **Proposal:** a TEI Lex-0 **ODD customisation** (not a core change) treating the
   authority formula as a sense boundary, with a documented model-loss note when a
   baseline consumer flattens it — i.e. make the convention declarable, not silently
-  lost. (Executing the ODD's Schematron with an external SVRL engine is the one
-  remaining validation-hardening step; the constraint is enforced in-pipeline today.)
+  lost. The ODD's Schematron is enforced both in-pipeline (validate-tei-lex0) and
+  by a real SVRL engine in the external harness (Saxon + ISO Schematron skeleton),
+  passing over all 256 Lex-0 entries with zero failed assertions.
 
 ## Provenance / trust spine
 
@@ -166,7 +167,7 @@ value is that an assertion's *epistemic status* travels with it across both mode
 | Decomposition-status flag (§3) | **Standardize** on `decomp` |
 | Adjacency-parent recovery status (§4) | **Implemented** (`csl:recoveryStatus`; TEI `@subtype`); project-local, propose as a TEI dictionaries pattern |
 | Cross-resource lineage relation (§4a) | **Implemented** (`csl:LineageRelation` with retained/dropped counts); propose on `lexicog` — lineage is general to dictionary families |
-| Kośa sense-boundary (§5) | **Implemented** (Lex-0 ODD Schematron + `bibl[@type="kosa-authority"]`, enforced in-pipeline); TEI Lex-0 **ODD customisation**, not a core change |
+| Kośa sense-boundary (§5) | **Implemented** (Lex-0 ODD Schematron + `bibl[@type="kosa-authority"]`, enforced in-pipeline *and* by a real SVRL engine in the external harness); TEI Lex-0 **ODD customisation**, not a core change |
 
 ## Status
 
@@ -189,9 +190,10 @@ lineage relation (§4a)** (`csl:LineageRelation`, `lineageCoverage` 369/369), th
 **continuation recovery-status (§4)** (`csl:recoveryStatus` / TEI `@subtype`), and
 the **kośa sense-boundary customisation (§5)** (Lex-0 ODD Schematron +
 `bibl[@type="kosa-authority"]`) are now implemented too. **Every construct in this
-proposal (§1–§5, §4a) is now implemented and validated in-pipeline**; the only
-open hardening is executing the Lex-0 ODD's Schematron with an external SVRL engine
-(its rule is enforced by the project validator today).
+proposal (§1–§5, §4a) is implemented and validated** — OntoLex against the SHACL
+profile (pySHACL), TEI against the compiled RELAX NG (jing), and the Lex-0 ODD's
+Schematron against a real SVRL engine (Saxon + ISO Schematron skeleton), both
+in-pipeline and in the external harness.
 
 ## References
 
