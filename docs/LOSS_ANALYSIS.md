@@ -12,7 +12,7 @@ which reads [`data/pilot/loss-reports.json`](../data/pilot/loss-reports.json) an
 machine artifact [`data/pilot/loss-analysis.json`](../data/pilot/loss-analysis.json).
 Do not hand-edit the tables below — re-run the script.
 
-Corpus: **1277 loss reports** across the 250 Western cases and 6 indigenous *kośa*
+Corpus: **1361 loss reports** across the 250 Western cases and 6 indigenous *kośa*
 entries. Four families are present:
 
 - **Target-model losses** (584): what TEI / OntoLex cannot hold when mapping a
@@ -21,12 +21,16 @@ entries. Four families are present:
   drops along PWG → PWK → MW. These are `target: "neutral"` because TEI and
   OntoLex can both hold named citations — the loss is editorial, upstream of any
   model choice, so `extensionNeeded` is `false`.
-- **Evidence-class sub-typing losses** (317): named citations the flat
+- **Evidence-class sub-typing losses** (401): named citations the flat
   `frac:Attestation` model carries but cannot *type* — indigenous *kośa* sources
   (`named-kosha-citation`), editorial/self references (`editorial-reference`), and
   the unparsed textual coordinates inside a citation (`citation-coordinate`). All
   are `target: "ontolex"`, cause `model-vocabulary-gap`, `extensionNeeded: true`:
   the information survives as a flat string but its evidence class is lost (§4b).
+  This family now also covers the optional dictionaries' citations (AP90 73,
+  GRA 11 reports): an optional dictionary's named evidence enters the OntoLex graph
+  and is flattened by the same gap, so it is recorded by the same construct rather
+  than silently excluded.
 - **Sense/citation-fusion losses** (6): the indigenous *kośa* (SKD) structures
   sense and source authority as one indivisible *iti*-unit that the Lex-0 baseline
   must split into `<def>` + `<bibl>` — a `sanskrit-convention` loss with no
@@ -40,12 +44,12 @@ a source record carrying an unresolved editorial `[sic]` marker.
 | target | clean | partial | lossy | failure |
 |---|--:|--:|--:|--:|
 | tei | 75 | 217 | 6 | 0 |
-| ontolex | 0 | 509 | 100 | 0 |
+| ontolex | 0 | 593 | 100 | 0 |
 | neutral | 0 | 128 | 242 | 0 |
 
 **Target asymmetry (Western cases).** For the 250 MW/PWG/PWK cases the TEI
 archival profile is never `lossy` (75 clean, 217 partial); OntoLex is never
-`clean` (509 partial, 100 lossy). TEI can always at least preserve the dictionary
+`clean` (593 partial, 100 lossy). TEI can always at least preserve the dictionary
 *as an edition*; OntoLex never merely transcribes, so it either relates the data
 or drops what it cannot relate. The models do not fail — they **succeed
 differently** ([PAPER_OUTLINE.md](PAPER_OUTLINE.md) §3). The only `tei`-lossy
@@ -59,25 +63,25 @@ what looks like "interoperability loss" is in fact loss that already happened in
 the 19th-century editorial chain, recoverable only by reading across PWG, PWK, and
 MW together (see §4).
 
-Overall status: 854 partial (67%), 348 lossy (27%), 75 clean (6%).
+Overall status: 938 partial (69%), 348 lossy (26%), 75 clean (6%).
 
 ## 2. Failure classification (by cause)
 
 | failureClassification | n | % |
 |---|--:|--:|
-| model-vocabulary-gap | 629 | 49% |
-| editorial-compression | 369 | 29% |
+| model-vocabulary-gap | 713 | 52% |
+| editorial-compression | 369 | 27% |
 | cdsl-markup-gap | 117 | 9% |
 | print-compression | 80 | 6% |
 | none (clean) | 75 | 6% |
 | sanskrit-convention | 6 | <1% |
 | data-quality | 1 | <1% |
 
-The two leading causes tell different stories. **Model-vocabulary-gap (49%)** is
+The two leading causes tell different stories. **Model-vocabulary-gap (52%)** is
 now the largest: downstream losses where the target standard lacks a concept — a
-derivational-base relation, and above all an *evidence class* (the 317
+derivational-base relation, and above all an *evidence class* (the 401
 evidence-class sub-typing reports, §4b, all fall here, alongside the root and
-relation gaps). **Editorial-compression (29%)** is upstream lineage loss — the
+relation gaps). **Editorial-compression (27%)** is upstream lineage loss — the
 standards could hold the evidence, but MW/PWK already discarded it. Only 9% is a
 CDSL-markup gap and 6% print-layout compression. The qualitatively distinct small
 causes are **sanskrit-convention (<1%, 6 reports)** — losses inherent to a
@@ -88,30 +92,30 @@ extension layer** for the model-vocabulary gaps (§8), **cross-dictionary lineag
 modeling** for the editorial-compression losses (§7), and a
 **tradition-specific ODD customisation** for the sanskrit-convention losses. The
 369 editorial-compression reports all carry `extensionNeeded: false` (the
-standards are not at fault); the 317 evidence-class and 6 sanskrit-convention
+standards are not at fault); the 401 evidence-class and 6 sanskrit-convention
 reports carry `true` (they need a model extension or the kośa Lex-0 customisation).
 
 ## 3. Where the stress concentrates (phenomenon)
 
 | phenomenon | n | % |
 |---|--:|--:|
-| source-collapse | 369 | 29% |
-| generic-lexicographer-hedge | 234 | 18% |
-| citation-coordinate | 222 | 17% |
+| source-collapse | 369 | 27% |
+| citation-coordinate | 297 | 22% |
+| generic-lexicographer-hedge | 234 | 17% |
+| named-kosha-citation | 88 | 6% |
 | continuation-parent | 80 | 6% |
-| named-kosha-citation | 79 | 6% |
 | compound-subentry | 75 | 6% |
 | compound-decomposition | 75 | 6% |
-| root-as-entry | 60 | 5% |
-| root-as-derivational-base | 60 | 5% |
+| root-as-entry | 60 | 4% |
+| root-as-derivational-base | 60 | 4% |
 | editorial-reference | 16 | 1% |
 | sense-citation-fusion | 6 | <1% |
 | source-anomaly | 1 | <1% |
 
-`source-collapse` is the single largest phenomenon (29%), ahead of the MW
-`L.` hedge (18%) and the unparsed `citation-coordinate` (17%). The five
+`source-collapse` is the single largest phenomenon (27%), ahead of the unparsed
+`citation-coordinate` (22%) and the MW `L.` hedge (17%). The five
 evidence-related phenomena — source-collapse, hedge, coordinate, kośa citation
-and editorial reference — together are **72%** of the corpus: the evidence
+and editorial reference — together are **74%** of the corpus: the evidence
 problem, not derivation or compounding, is the centre of gravity (§4, §4b).
 
 ## 4. The PWG → PWK → MW lineage, as loss reports (§7)
@@ -168,14 +172,14 @@ separable categories at all*.
 
 ### 4b. Evidence-class sub-typing — the model-vocabulary gap, measured
 
-The 317 evidence-class reports make precise *what kind* of concept the semantic
+The 401 evidence-class reports make precise *what kind* of concept the semantic
 model lacks. The flat `frac:Attestation` carries every named citation as a string,
 but cannot say what it *is*:
 
 | phenomenon | reports | what is flattened |
 |---|--:|---|
-| citation-coordinate | 222 | a citation's textual coordinate (`AV. 6,116,1.`) kept as a flat abbr string, not parsed into a structured `locus` / `citedRange`. |
-| named-kosha-citation | 79 | indigenous *kośa* sources (Amara, Medinī, Hemacandra, …) modeled identically to textual attestations — the lexicon-vs-text distinction is lost. |
+| citation-coordinate | 297 | a citation's textual coordinate (`AV. 6,116,1.`) kept as a flat abbr string, not parsed into a structured `locus` / `citedRange`. |
+| named-kosha-citation | 88 | indigenous *kośa* sources (Amara, Medinī, Hemacandra, …) modeled identically to textual attestations — the lexicon-vs-text distinction is lost. |
 | editorial-reference | 16 | self / catalogue references (`ib.`, `W.`, `MW.`, `Verz`) modeled as named-source citations — their non-attestation role is not distinguished. |
 
 Each report carries `sourceEvidence.count` and a deduplicated `sample` of the
@@ -196,7 +200,7 @@ TEI archival and Lex-0 exports carry the same class as `@subtype` (plus a
 `<citedRange>`) on every citation `<bibl>`, validated against the compiled TEI
 RELAX NG with jing — so the construct is symmetric across both standards. Each
 loss report names its remedy in `mappedAs`, so the closure is measurable:
-`analyze-loss`'s `extensionCoverage` shows **569 of 569** OntoLex
+`analyze-loss`'s `extensionCoverage` shows **653 of 653** OntoLex
 model-vocabulary-gap losses needing an extension map to an implemented `csl:`
 construct (the four evidence classes, plus the already-implemented
 `csl:RootRelation` and `decomp:ComponentList`). This is *not* a claim that the
@@ -250,7 +254,7 @@ of the phenomena (the roadmap's "do not hide model failures").
 
 ## 6. Reviewer-trust note
 
-Of the 1277 reports, 96 (the 15 high-stress review-slice keys) are marked
+Of the 1361 reports, 96 (the 15 high-stress review-slice keys) are marked
 `reviewed`; the rest are `machine` (the §4b evidence-class and §4a kośa reports
 are all `machine`). The **target** asymmetry of §1 holds within
 the reviewed slice — TEI is never lossy there (0 of 33) and OntoLex is never

@@ -251,12 +251,10 @@ async function main() {
     reviewStatus: "machine",
     sourceEvidence: { count: cites.length, sample: sample(cites.map(c => c.source)) }
   });
-  for (const model of models) {
-    // Evidence-class loss reports are scoped to the tri-dict backbone (mw/pwg/pwk),
-    // so the published loss corpus stays stable as optional dictionaries are added
-    // to the semantic model. Their evidence still enters the OntoLex graph and the
-    // cross-dictionary analysis.
-    const cites = (model.citations || []).filter(c => !OPTIONAL_DICTS.includes(c.dictionary));
+  // Emit the kośa / editorial / coordinate evidence-class reports for one set of
+  // citations (all from a single dictionary). Shared by the tri-dict backbone and
+  // the optional-dictionary pass so both families stay in lockstep.
+  const emitEvidenceClasses = (model, cites) => {
     const kosha = cites.filter(c => KOSHA_SIGLUM.test(c.source));
     if (kosha.length) reports.push(evidenceReport(model, "named-kosha-citation", kosha,
       "Named indigenous kośa (lexicon) sources, distinct from textual attestations.",
@@ -272,15 +270,37 @@ async function main() {
       "Named citations carry textual coordinates (book / hymn / verse).",
       "The coordinate is kept as a flat string in the citation abbr / evidence, not parsed into a structured locus or citedRange.",
       "frac:Attestation with csl:citedWork + csl:citedRange"));
+  };
+  const sicReport = (model, dict) => ({
+    caseId: model.id, target: "neutral", status: "partial", phenomenon: "source-anomaly",
+    sourceDictionary: dict, sourcePointer: { L: model.records?.[dict]?.L ?? null, line: null },
+    claim: "The source record carries an editorial [sic] anomaly marker.",
+    loss: "An unresolved source data-quality flag ([sic]) is carried through verbatim, not modeled as a quality assertion.",
+    failureClassification: "data-quality", extensionNeeded: false, reviewStatus: "machine",
+    sourceEvidence: { marker: "[sic]", dictionary: dict }
+  });
+  for (const model of models) {
+    // Tri-dict backbone (mw/pwg/pwk) evidence-class reports.
+    const cites = (model.citations || []).filter(c => !OPTIONAL_DICTS.includes(c.dictionary));
+    emitEvidenceClasses(model, cites);
     const sicDict = ["mw", "pwg", "pwk"].find(d => /\[sic\]/i.test(model.records?.[d]?.raw || ""));
-    if (sicDict) reports.push({
-      caseId: model.id, target: "neutral", status: "partial", phenomenon: "source-anomaly",
-      sourceDictionary: sicDict, sourcePointer: { L: model.records?.[sicDict]?.L ?? null, line: null },
-      claim: "The source record carries an editorial [sic] anomaly marker.",
-      loss: "An unresolved source data-quality flag ([sic]) is carried through verbatim, not modeled as a quality assertion.",
-      failureClassification: "data-quality", extensionNeeded: false, reviewStatus: "machine",
-      sourceEvidence: { marker: "[sic]", dictionary: sicDict }
-    });
+    if (sicDict) reports.push(sicReport(model, sicDict));
+  }
+
+  // Optional dictionaries (ap90/gra) are independent witnesses layered onto the
+  // tri-dict backbone on the OntoLex side (scripts/lib/dictionaries.mjs). Their
+  // named citations carry the same evidence-class distinctions the sense/citation-
+  // separating standards flatten, so they yield the same model-vocabulary-gap loss
+  // reports — emitted here as an additive family (the tri-dict reports above are
+  // byte-for-byte untouched), keyed by the optional dictionary that supplied the
+  // evidence. The corpus thus grows additively as dictionaries are registered.
+  for (const model of models) {
+    for (const dict of OPTIONAL_DICTS) {
+      const cites = (model.citations || []).filter(c => c.dictionary === dict);
+      if (cites.length) emitEvidenceClasses(model, cites);
+    }
+    const optSic = OPTIONAL_DICTS.find(d => /\[sic\]/i.test(model.records?.[d]?.raw || ""));
+    if (optSic) reports.push(sicReport(model, optSic));
   }
 
   for (const outputPath of outputPaths) {

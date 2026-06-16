@@ -26,7 +26,7 @@ PWG → PWK → MW lineage. We then take the diagnosis to its conclusion: we spe
 small Sanskrit-lexicographic extension layer in a `csl:` namespace, **implement it
 in both target standards, and validate it** against a SHACL profile (pySHACL) and a
 compiled TEI RELAX NG schema (jing). Every model-vocabulary loss that needs an
-extension maps to an implemented, schema-validated construct (569 of 569), and the
+extension maps to an implemented, schema-validated construct (653 of 653), and the
 upstream lineage collapse is made an explicit, queryable relation (369 of 369). The
 accompanying public workbench publishes the raw CDSL snippets, the neutral model,
 the TEI/OntoLex views, the loss reports, and the validators.
@@ -113,19 +113,19 @@ is in [docs/LOSS_ANALYSIS.md](LOSS_ANALYSIS.md), regenerable with
 
 ## 4. The Loss Corpus: An Asymmetry of Success
 
-The 250-case pilot yields **1,277 loss reports**. Overall, 854 are `partial`
-(67%), 348 `lossy` (27%), and 75 `clean` (6%). The central finding is in the
+The 250-case pilot yields **1,361 loss reports**. Overall, 938 are `partial`
+(69%), 348 `lossy` (26%), and 75 `clean` (6%). The central finding is in the
 cross-tabulation of target against status:
 
 | target | clean | partial | lossy |
 |---|--:|--:|--:|
 | TEI (archival) | 75 | 217 | 6 |
-| OntoLex | 0 | 509 | 100 |
+| OntoLex | 0 | 593 | 100 |
 | neutral (lineage) | 0 | 128 | 242 |
 
 The two models do not fail; they **succeed differently**. For the Western cases
 the TEI archival profile is *never* lossy (75 clean, 217 partial): TEI can always
-at least preserve the dictionary as an edition. OntoLex is *never* clean (509
+at least preserve the dictionary as an edition. OntoLex is *never* clean (593
 partial, 100 lossy): it never merely transcribes, so it either relates the data or
 drops what it cannot relate. The only TEI-lossy reports (6) are not Western at all —
 they are the indigenous *kośa* sense/citation fusion in the Lex-0 baseline (§9), a
@@ -137,13 +137,13 @@ clean): much of what looks like "interoperability loss" is in fact loss that
 already happened in the 19th-century editorial chain, recoverable only by reading
 across PWG, PWK, and MW together (§8).
 
-By cause, the corpus splits as: **model-vocabulary-gap 49%** (the target standard
-lacks a concept), **editorial-compression 29%** (upstream lineage loss the
+By cause, the corpus splits as: **model-vocabulary-gap 52%** (the target standard
+lacks a concept), **editorial-compression 27%** (upstream lineage loss the
 standards could have held), CDSL-markup-gap 9%, print-compression 6%, clean 6%, and
 the small but qualitatively distinct `sanskrit-convention` and `data-quality`
-(<1% each). By phenomenon, the leaders are `source-collapse` (29%), the MW `L.`
-hedge (18%), and the unparsed `citation-coordinate` (17%); the five
-evidence-related phenomena together are **72%** of the corpus. The centre of
+(<1% each). By phenomenon, the leaders are `source-collapse` (27%), the unparsed
+`citation-coordinate` (22%), and the MW `L.` hedge (17%); the five
+evidence-related phenomena together are **74%** of the corpus. The centre of
 gravity is evidence, not derivation or compounding.
 
 ## 5. Evidence and Provenance
@@ -254,7 +254,7 @@ explicit without claiming to recover it).
 
 The remedy is **measured**. Every loss report names the construct that answers it
 in a `mappedAs` field, so coverage is regenerable, not asserted. Of the OntoLex
-`model-vocabulary-gap` losses that need an extension, **569 of 569** map to an
+`model-vocabulary-gap` losses that need an extension, **653 of 653** map to an
 implemented construct (`extensionCoverage`); of the upstream source-collapse
 losses, **369 of 369** are now modeled by a lineage relation (`lineageCoverage`,
 250 abridgement + 119 recomposition). The distinction matters: the evidence-class
