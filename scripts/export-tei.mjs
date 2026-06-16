@@ -134,7 +134,10 @@ function relationXml(model) {
   }
   if (model.phenomena?.includes("continuation")) {
     const eCode = model.relations?.find(rel => rel.type === "adjacency-continuation-parent")?.eCode || "unknown";
-    chunks.push(`    <xr xml:id="${id}-continuation-relation" type="adjacency-continuation-parent"><ref target="#e-${escapeXml(eCode)}">MW e=${escapeXml(eCode)}</ref></xr>`);
+    // §4 recovery status as @subtype: the parent is recovered from MW adjacency,
+    // never asserted as if printed (conjectured with a pointer, else unresolved).
+    const recoveryStatus = eCode !== "unknown" ? "conjectured" : "unresolved";
+    chunks.push(`    <xr xml:id="${id}-continuation-relation" type="adjacency-continuation-parent" subtype="${recoveryStatus}"><ref target="#e-${escapeXml(eCode)}">MW e=${escapeXml(eCode)}</ref></xr>`);
   }
   return chunks.join("\n");
 }

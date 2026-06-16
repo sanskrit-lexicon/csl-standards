@@ -135,6 +135,7 @@ async function main() {
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Continuation modeling",
+          mappedAs: "csl:ContinuationRelation (csl:recoveryStatus)",
           loss: "Suppressed headword needs explicit parent relation mapped in OntoLex",
           failureClassification: "print-compression",
           extensionNeeded: true,

@@ -6,6 +6,18 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Added
+- **Continuation-parent recovery status implemented** (EXTENSION_PROPOSAL §4) —
+  the second-to-last unimplemented construct. `csl:ContinuationRelation` now carries
+  an explicit **`csl:recoveryStatus`** ∈ {`recovered`, `conjectured`, `unresolved`}
+  (OntoLex), and the TEI archival continuation `<xr>` the same as **`@subtype`**, so
+  a parent reconstructed from MW adjacency is never asserted as if printed
+  (`conjectured` in the current pilot — only the adjacency pointer is known). SHACL
+  adds `csl:ContinuationRelationShape` (`sh:in` on the status); validated under
+  pySHACL and against the compiled TEI RELAX NG (jing). The continuation loss report
+  names the remedy in `mappedAs`. With this, EXTENSION_PROPOSAL §1/§2/§3/§4/§4a are
+  all implemented; only §5 (kośa ODD customisation) remains.
+
 ## [0.4.0] - 2026-06-16
 
 **The extension proposal, made real.** v0.3.0 measured the interoperability gaps
