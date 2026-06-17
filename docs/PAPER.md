@@ -16,7 +16,7 @@ representation of dictionary text and OntoLex-Lemon as a semantic graph of lexic
 knowledge. From a 250-case deterministic sample of deliberately hard cases we
 generate a dictionary-neutral model and, from it, parallel TEI and OntoLex
 profiles, recording every degradation as an evidence-bound *loss report*. The
-resulting corpus of 1,277 reports shows that the two models fail **asymmetrically**:
+resulting corpus of 1,361 reports shows that the two models fail **asymmetrically**:
 TEI is never lossy for the Western cases but never reaches the semantic graph;
 OntoLex is never a clean transcription but exposes reusable relations. The single
 largest difficulty is not derivation or compounding but **evidence** — the class of
