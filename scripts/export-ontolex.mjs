@@ -75,7 +75,7 @@ function jsonldFor(model, rawByDict, isReviewCase) {
   // Multi-resource senses: MW (English, model.senses) plus the German Petersburg
   // dictionaries (records.{pwg,pwk}.senses). Each sense keeps its source
   // dictionary and (internally) its sense-linked citations for the attestations.
-  const langByDict = {mw: "en", pwg: "de", pwk: "de"};
+  const langByDict = {mw: "en", pwg: "de", pwk: "de", fri: "en"};
   const senseNodes = [];
   for (const dict of DICTS) {
     const senses = dict === "mw" ? (model.senses || []) : (model.records?.[dict]?.senses || []);

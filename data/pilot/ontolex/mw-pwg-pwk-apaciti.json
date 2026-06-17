@@ -57,6 +57,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#sense-pwk-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#sense-fri-1"
         }
       ],
       "frac:attestation": [
@@ -218,6 +221,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#resource-fri",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Frish Sanskrit Reader (Cologne 2015)",
+      "csl:dictionary": "fri",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#lexentry-fri"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -277,6 +289,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#sense-pwk-5"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#lexentry-fri",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#sense-fri-1"
         }
       ]
     },
@@ -423,6 +447,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#sense-fri-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti"
+      },
+      "skos:definition": {
+        "@value": "honour, reverence",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "fri"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aapaciti#record-mw",

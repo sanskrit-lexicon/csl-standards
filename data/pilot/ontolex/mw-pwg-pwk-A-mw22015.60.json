@@ -72,6 +72,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#sense-pwk-13"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#sense-fri-1"
         }
       ],
       "frac:attestation": [
@@ -224,6 +227,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#resource-fri",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Frish Sanskrit Reader (Cologne 2015)",
+      "csl:dictionary": "fri",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#lexentry-fri"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -298,6 +310,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#sense-pwk-13"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#lexentry-fri",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#sense-fri-1"
         }
       ]
     },
@@ -504,6 +528,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#sense-fri-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60"
+      },
+      "skos:definition": {
+        "@value": "implies limit, approximation, diminution",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "fri"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AA-mw22015.60#record-mw",

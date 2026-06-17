@@ -3,6 +3,7 @@ import path from "path";
 import { extractLabeledSources } from "./lib/citations.mjs";
 import { extractMwSenses } from "./lib/mw-senses.mjs";
 import { extractPwSenses } from "./lib/pw-senses.mjs";
+import { extractFriSenses } from "./lib/fri-senses.mjs";
 import { ALL_DICTS, OPTIONAL_DICTS } from "./lib/dictionaries.mjs";
 
 function parseGenderOrGrammar(raw) {
@@ -175,8 +176,9 @@ async function main() {
           senses: extractPwSenses(item.records.pwk?.raw, "pwk")
         },
         // Optional dictionaries (e.g. Apte 1890, Grassmann): carried when the
-        // sampler attached a counterpart. No format-specific sense extractor yet,
-        // so each contributes its raw record and its named citations (above).
+        // sampler attached a counterpart. Each contributes its raw record and its
+        // named citations (above); FRI also has a format-specific sense extractor
+        // (trilingual glosses), while ap90/gra carry records only for now.
         ...Object.fromEntries(
           OPTIONAL_DICTS
             .filter(code => item.records[code])
@@ -184,7 +186,8 @@ async function main() {
               L: item.records[code].L || null,
               line: item.records[code].line || null,
               pc: item.records[code].pc || null,
-              raw: item.records[code].raw || null
+              raw: item.records[code].raw || null,
+              ...(code === "fri" ? { senses: extractFriSenses(item.records[code].raw) } : {})
             }])
         )
       },
