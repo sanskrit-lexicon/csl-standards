@@ -82,7 +82,8 @@ abandon them.
 
 To test the limits of TEI and OntoLex systematically, we built an automated
 pipeline that targets hard cases of interoperability ([scripts/](../scripts/),
-run with `npm run build-pilot`). The stages are:
+run with `npm run build-pilot`; the architecture is sketched in Figure 1). The
+stages are:
 
 1. **Sample.** A deterministic 250-case slice of MW/PWG/PWK lemmas, selected to
    over-represent difficulty: the `L.` hedge, named *kośa* citations, verbal
@@ -115,7 +116,7 @@ is in [docs/LOSS_ANALYSIS.md](LOSS_ANALYSIS.md), regenerable with
 
 The 250-case pilot yields **1,361 loss reports**. Overall, 938 are `partial`
 (69%), 348 `lossy` (26%), and 75 `clean` (6%). The central finding is in the
-cross-tabulation of target against status:
+cross-tabulation of target against status (Figure 5):
 
 | target | clean | partial | lossy |
 |---|--:|--:|--:|
@@ -366,3 +367,38 @@ Key artefacts: the loss corpus
 profile and ODDs ([data/schema/](../data/schema/)), and the extension proposal
 ([docs/EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md)). The validated-profile summary
 is in [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](VALIDATED_INTEROPERABILITY_PROFILE.md).
+
+## References
+
+This draft is an instrument-grounded study rather than a literature survey; the
+references below are the **standards, tools, and primary sources** the workbench
+actually builds on, each verifiable and used in the pipeline.
+
+**Standards and specifications**
+
+- TEI Consortium. *TEI P5: Guidelines for Electronic Text Encoding and Interchange* — the dictionaries (`ch. 9`) and ODD/customisation chapters. <https://tei-c.org/guidelines/>
+- TEI Lex-0: A baseline encoding for lexicographic resources (DARIAH Working Group). <https://dariah-eric.github.io/lexical-resources/pages/TEILex0/TEILex0.html>
+- OntoLex-Lemon: *Lexicon Model for Ontologies* (W3C OntoLex Community Group Final Report). <https://www.w3.org/2016/05/ontolex/>
+- OntoLex-Lexicog: *A Lemon Extension for Modeling Lexicographic Resources*. <https://www.w3.org/2019/09/lexicog/>
+- OntoLex-FrAC: *Frequency, Attestation and Corpus Information* module. <https://www.w3.org/community/ontolex/wiki/Frequency,_Attestation_and_Corpus_Information>
+- W3C. *Shapes Constraint Language (SHACL)*. <https://www.w3.org/TR/shacl/>
+- *RELAX NG Specification* (OASIS). <https://relaxng.org/spec-20011203.html>
+- ISO/IEC 19757-3: *Schematron*. <http://schematron.com/>
+- W3C. *PROV-O: The PROV Ontology*. <https://www.w3.org/TR/prov-o/>
+
+**Tools**
+
+- Jing — RELAX NG validator (Thai Open Source Software Center). <https://relaxng.org/jclark/jing.html>
+- Saxon — XSLT 2.0/3.0 processor (Saxonica), used with the ISO Schematron skeleton.
+- pySHACL — SHACL processor for RDF graphs. <https://github.com/RDFLib/pySHACL>
+
+**Primary sources (dictionaries and indexes)**
+
+- Monier-Williams, M. *A Sanskrit–English Dictionary*. Oxford, 1899. (MW)
+- Böhtlingk, O. & Roth, R. *Sanskrit-Wörterbuch*. St Petersburg, 1855–1875. (PWG)
+- Böhtlingk, O. *Sanskrit-Wörterbuch in kürzerer Fassung*. St Petersburg, 1879–1889. (PWK)
+- Apte, V. S. *The Practical Sanskrit–English Dictionary*. Poona, 1890. (AP90)
+- Grassmann, H. *Wörterbuch zum Rig-Veda*. Leipzig, 1873. (GRA)
+- Whitney, W. D. *The Roots, Verb-Forms and Primary Derivatives of the Sanskrit Language*. Leipzig, 1885. (the root index referenced by `csl:whitneyRoot`)
+- Amarasiṃha. *Amarakośa* (Nāmaliṅgānuśāsana) — representative of the indigenous *kośa* authorities (cited as AK.).
+- Cologne Digital Sanskrit Dictionaries (CDSL), Universität zu Köln — the digitised editions and project-specific XML this study consumes. <https://www.sanskrit-lexicon.uni-koeln.de/>
