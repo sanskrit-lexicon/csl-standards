@@ -80,11 +80,18 @@ function jsonldFor(model, rawByDict, isReviewCase) {
   for (const dict of DICTS) {
     const senses = dict === "mw" ? (model.senses || []) : (model.records?.[dict]?.senses || []);
     senses.forEach((sense, index) => {
+      // A sense with `translations` (FRI's trilingual glosses) emits one
+      // skos:definition literal per language; a single-language sense emits one
+      // object (so mw/pwg/pwk output is unchanged).
+      const primary = {"@value": sense.def, "@language": langByDict[dict]};
+      const definition = sense.translations
+        ? [primary, ...Object.entries(sense.translations).map(([lang, value]) => ({"@value": value, "@language": lang}))]
+        : primary;
       senseNodes.push({
         "@id": iriFor(model.id, `sense-${dict}-${index + 1}`),
         "@type": "ontolex:LexicalSense",
         "ontolex:isSenseOf": {"@id": caseIri},
-        "skos:definition": {"@value": sense.def, "@language": langByDict[dict]},
+        "skos:definition": definition,
         "csl:sourceDictionary": dict,
         ...(sense.kind === "cross-reference" ? {"csl:senseKind": "cross-reference"} : {}),
         _citations: sense.citations || []
@@ -332,7 +339,10 @@ function turtleFor(jsonld) {
     lines.push(`${ttlIri(sense["@id"])} a ontolex:LexicalSense ;`);
     lines.push(`  ontolex:isSenseOf ${ttlIri(entry["@id"])} ;`);
     lines.push(`  csl:sourceDictionary ${ttlString(sense["csl:sourceDictionary"])} ;`);
-    lines.push(`  skos:definition ${ttlString(sense["skos:definition"]["@value"])}@${sense["skos:definition"]["@language"]} .`);
+    const defs = [].concat(sense["skos:definition"]);
+    defs.forEach((d, i) => {
+      lines.push(`  skos:definition ${ttlString(d["@value"])}@${d["@language"]}${i === defs.length - 1 ? " ." : " ;"}`);
+    });
     lines.push("");
   }
 
