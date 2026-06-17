@@ -18,7 +18,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
-import { OPTIONAL_DICTS } from "./lib/dictionaries.mjs";
+import { OPTIONAL_DICTS, DICT_LABEL } from "./lib/dictionaries.mjs";
 
 const PROFILE_VERSION = "tei-lex0-pilot-v0.1";
 
@@ -170,10 +170,12 @@ function citationsXml(model, id) {
   // (sense-level linkage), MW sources are shown there, not duplicated here; an
   // entry with no sense-linked citations (a stub) still lists everything.
   const senseLinked = (model.senses || []).some(s => (s.citations || []).length);
-  // The TEI Lex-0 baseline stays the tri-dict backbone; optional dictionaries are
-  // carried only on the OntoLex/semantic side.
+  // Entry-level citations cover the tri-dict backbone and any optional dictionary
+  // (ap90/gra) that carries named sources for this lemma; each optional dictionary
+  // referenced here is declared in the sourceDesc listBibl (see teiDocument) so its
+  // #dict-… pointer resolves. MW sense-linked sources are shown on the sense instead.
   const eligible = (model.citations || [])
-    .filter(c => !OPTIONAL_DICTS.includes(c.dictionary) && !(senseLinked && c.dictionary === "mw"));
+    .filter(c => !(senseLinked && c.dictionary === "mw"));
   const named = eligible.filter(c => c.type !== "generic-lexicographer-hedge");
   const hedges = eligible.filter(c => c.type === "generic-lexicographer-hedge");
   const rows = [];
@@ -243,6 +245,14 @@ function entryXml(model) {
 
 function teiDocument(model) {
   const id = safeCaseId(model.id);
+  // Optional dictionaries that supply a named citation for this entry are declared
+  // alongside the mw/pwg/pwk backbone so their #dict-… provenance pointers resolve.
+  // A present-but-uncited optional dictionary (e.g. FRI, a reader) is not declared.
+  const citedOptional = OPTIONAL_DICTS.filter(dict =>
+    (model.citations || []).some(c => c.dictionary === dict && c.type !== "generic-lexicographer-hedge"));
+  const optionalBibls = citedOptional
+    .map(dict => `\n          <bibl xml:id="dict-${dict}"><abbr>${escapeXml(dict.toUpperCase())}</abbr> <title>${escapeXml(DICT_LABEL[dict])}</title></bibl>`)
+    .join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="${id}">
   <teiHeader>
@@ -261,7 +271,7 @@ function teiDocument(model) {
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
           <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
-          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>${optionalBibls}
         </listBibl>
       </sourceDesc>
     </fileDesc>
