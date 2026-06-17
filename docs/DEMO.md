@@ -1,9 +1,13 @@
-# Demo: one hard case, end to end — the verbal root √ac
+# Demo: two hard cases, end to end
 
-This is a guided walkthrough of a **single** entry as it moves through the whole
-workbench: five raw CDSL dictionary records → the dictionary-neutral model → the
+This is a guided walkthrough of single entries as they move through the whole
+workbench: the raw CDSL dictionary records → the dictionary-neutral model → the
 TEI archival and OntoLex/FrAC profiles → the loss reports that record what each
 standard cannot hold → the `csl:` extension constructs that answer them.
+
+Two contrasting cases are traced in full: a **verbal root** (√ac) and a
+**compound** (*annavid*). Read the first for the complete stage-by-stage tour; the
+second is tighter and highlights what is *different* about a compound.
 
 Everything below is quoted from regenerable artifacts (`npm run build-pilot`); the
 file links point at the exact outputs. The case is
@@ -167,16 +171,99 @@ The full extension layer and its standardise-vs-project-local disposition are in
 
 ---
 
+# A second case — the compound *annavid*
+
+Where √ac stressed *evidence*, the compound **annavid** ("food-knowing") stresses
+*derivation* and *editorial divergence*. It is a tri-dict case
+([`mw-pwg-pwk:annavid`](../data/pilot/neutral-model.json)); no optional dictionary
+shares the headword. Three raw records, one per backbone dictionary:
+
+```
+[mw  L=8540] annavid <k2>anna—vi/d (√ 1. vid), knowing food. <info lex="inh"/>
+[pwg L=3514] annavi/d ({#anna + vid#}) <lex>adj.</lex> {%Speise besitzend%} <ls>AV. 6,116,1.</ls>
+[pwk L=5576] annavi/d <lex>Adj.</lex> {%Speise erwerbend%}.
+```
+
+Two things are visible already. First, the headword is a **compound**, `anna`
+("food") + `vi/d`. Second — the payoff of this case — the three dictionaries
+**disagree on the meaning**: MW reads `vid` as √vid₁ "to know" (*knowing food*);
+PWG reads it as √vid₂ "to find / possess" (*Speise besitzend*, "food-possessing");
+PWK as "food-acquiring" (*Speise erwerbend*). The compound's second member is
+itself ambiguous, and each editor resolved it differently.
+
+## What the neutral model captures
+
+```jsonc
+{
+  "id": "mw-pwg-pwk:annavid", "key": "annavid",
+  "phenomena": ["compound", "tri-dict", "pwg-rich", "pwk-abridged",
+                "mw-uncited-pwg-cited", "homophone"],
+  "forms": [{ "orth": "annavid", "type": "compound" }],
+  "relations": [{ "type": "lexical-decomposition", "components": ["anna", "vi/d"] }],
+  "senses": [{ "def": "knowing food", "kind": "gloss" }],
+  "citations": [{ "source": "AV. 6,116,1.", "dictionary": "pwg" }]
+}
+```
+
+The `mw-uncited-pwg-cited` tag is the editorial story in one phrase: only **PWG**
+carries the textual attestation (*Atharvaveda* 6,116,1); MW gives the gloss with no
+source, and PWK drops the citation entirely.
+
+## Compound in TEI, decomposition in OntoLex
+
+TEI holds the compound as an editorial structure — `compound-subentry` is the one
+loss report classified **`clean`** in this case, because the archival profile can
+carry it directly:
+
+```xml
+<etym xml:id="mw-pwg-pwk-annavid-compound-relation" type="compound">
+  <seg type="component">anna</seg>
+  <seg type="component">vi/d</seg>
+</etym>
+```
+
+OntoLex makes the segmentation an explicit, linkable graph — each component
+*corresponds to* its own lexeme, the construct the flat model lacks:
+
+```jsonc
+{ "@type": "decomp:ComponentList", "csl:modelingNote": "Machine segmentation exported for review.",
+  "decomp:constituent": [
+    { "@type": "decomp:Component", "rdfs:label": "anna",  "ontolex:correspondsTo": { "@id": ".../lexeme/anna" } },
+    { "@type": "decomp:Component", "rdfs:label": "vi/d", "ontolex:correspondsTo": { "@id": ".../lexeme/vi%2Fd" } }
+  ] }
+```
+
+## The five loss reports
+
+| target | phenomenon | cause | answered by |
+|---|---|---|---|
+| tei | compound-subentry | none (**clean**) | — TEI holds it as a subentry |
+| ontolex | compound-decomposition | model-vocabulary-gap | `decomp:ComponentList` of `decomp:Component` |
+| neutral | source-collapse | editorial-compression | `csl:LineageRelation (recomposition)` — PWG attests, MW carries none |
+| neutral | source-collapse | editorial-compression | `csl:LineageRelation (abridgement)` — PWG 1 citation → PWK 0 |
+| ontolex | citation-coordinate | model-vocabulary-gap | `csl:citedWork` + `csl:citedRange` (`AV.` / `6,116,1`) |
+
+The contrast with √ac is the lesson. The compound itself maps *cleanly* into TEI —
+derivation is the **easy** part. The losses cluster instead around (a) the semantic
+graph that OntoLex needs and vanilla `frac:Attestation` cannot type, and (b) the
+same PWG → PWK → MW editorial collapse, here visible as MW silently dropping the
+one *Atharvaveda* attestation PWG recorded. Two `csl:LineageRelation`s make both
+halves of that collapse explicit and queryable — and the three dictionaries'
+divergent glosses survive side by side in the neutral model rather than being
+flattened to one "winner".
+
+---
+
 ## Reproduce it
 
 ```sh
 npm run build-pilot          # regenerate every artifact below
 
-# then inspect this one case:
+# then inspect either case (swap the id):
 node -e "console.log(require('./data/pilot/neutral-model.json').find(x=>x.id==='mw-pwg-pwk:ac'))"
 cat data/pilot/tei/mw-pwg-pwk-ac.xml
 cat data/pilot/ontolex/mw-pwg-pwk-ac.json
-node -e "console.log(require('./data/pilot/loss-reports.json').filter(x=>x.caseId==='mw-pwg-pwk:ac'))"
+node -e "console.log(require('./data/pilot/loss-reports.json').filter(x=>x.caseId==='mw-pwg-pwk:annavid'))"
 ```
 
-Every number and fragment in this walkthrough comes straight from those files.
+Every number and fragment in both walkthroughs comes straight from those files.
