@@ -132,9 +132,19 @@ function validateCase(model, reviewIds) {
     caseCheck(Boolean(record["rdf:value"]), `extra source record ${record["@id"]} lacks raw value`);
   }
 
+  // Each lexical sense carries at least one definition and a source dictionary, and
+  // points back at its entry (mirrors csl:LexicalSenseShape in the SHACL profile).
+  const senseNodes = graph.filter(node => node["@type"] === "ontolex:LexicalSense");
+  for (const sense of senseNodes) {
+    const defs = [].concat(sense["skos:definition"] || []).filter(d => d && d["@value"]);
+    caseCheck(defs.length > 0, `sense ${sense["@id"]} lacks a skos:definition`);
+    caseCheck(Boolean(sense["csl:sourceDictionary"]), `sense ${sense["@id"]} lacks csl:sourceDictionary`);
+    caseCheck(Boolean(sense["ontolex:isSenseOf"]?.["@id"]), `sense ${sense["@id"]} lacks ontolex:isSenseOf`);
+  }
+
   // An attestation may attest the entry (entry-level evidence) or a specific
   // sense (sense-level citation linkage); both targets live in this graph.
-  const senseIds = new Set(graph.filter(node => node["@type"] === "ontolex:LexicalSense").map(node => node["@id"]));
+  const senseIds = new Set(senseNodes.map(node => node["@id"]));
   const attestTargets = new Set([entry["@id"], ...senseIds]);
   const EVIDENCE_CLASSES = ["textual", "hedge", "kosha", "editorial"];
   const attestations = graph.filter(node => node["@type"] === "frac:Attestation");

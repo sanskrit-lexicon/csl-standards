@@ -5,6 +5,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix csl: <https://sanskrit-lexicon.github.io/csl-standards/ns#> .
 
 csl:LexicalEntryShape
@@ -103,3 +104,32 @@ csl:LineageRelationShape
     sh:in ( "abridgement" "recomposition" )
   ] ;
   sh:property [ sh:path csl:droppedCitationCount ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+# Lexical sense (added in v0.8.0): each sense carries at least one definition (a
+# language-tagged literal — one per language for the trilingual FRI senses), a
+# single source dictionary, and a back-pointer to the entry. csl:senseKind, when
+# present, is "cross-reference". The source dictionary is intentionally left an open
+# string so the dictionary registry can add a dictionary without touching this profile.
+csl:LexicalSenseShape
+  a sh:NodeShape ;
+  sh:targetClass ontolex:LexicalSense ;
+  sh:property [
+    sh:path skos:definition ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal
+  ] ;
+  sh:property [
+    sh:path csl:sourceDictionary ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path ontolex:isSenseOf ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path csl:senseKind ;
+    sh:maxCount 1 ;
+    sh:in ( "cross-reference" )
+  ] .
