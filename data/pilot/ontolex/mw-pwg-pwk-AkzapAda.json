@@ -30,6 +30,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#sense-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#sense-ap90-1"
         }
       ],
       "frac:attestation": [
@@ -119,6 +122,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#resource-ap90",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#lexentry-ap90"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -151,6 +163,18 @@
       "lexicog:component": [
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#lexentry-ap90",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#sense-ap90-1"
         }
       ]
     },
@@ -189,6 +213,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#sense-ap90-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda"
+      },
+      "skos:definition": {
+        "@value": "Taught by Akṣapāda or Gautama. A follower of the Nyāya system of philosophy, a logician. The Nyāya system of philosophy",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkzapAda#record-mw",

@@ -38,6 +38,21 @@
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-pwk-3"
         },
         {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-5"
+        },
+        {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-fri-1"
         }
       ],
@@ -203,6 +218,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#resource-ap90",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#lexentry-ap90"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#resource-fri",
       "@type": "lexicog:LexicographicResource",
       "dct:source": "Frish Sanskrit Reader (Cologne 2015)",
@@ -250,6 +274,30 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-pwk-3"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#lexentry-ap90",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-5"
         }
       ]
     },
@@ -324,6 +372,66 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654"
+      },
+      "skos:definition": {
+        "@value": "Breaking, tearing, splitting",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654"
+      },
+      "skos:definition": {
+        "@value": "A boy, a son",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-3",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654"
+      },
+      "skos:definition": {
+        "@value": "A child, infant",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-4",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654"
+      },
+      "skos:definition": {
+        "@value": "Any young animal",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-ap90-5",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654"
+      },
+      "skos:definition": {
+        "@value": "A village hog. a schoolmaster",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAraka-mw91654#sense-fri-1",

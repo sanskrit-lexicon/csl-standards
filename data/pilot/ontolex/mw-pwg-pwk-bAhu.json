@@ -62,6 +62,9 @@
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-pwk-10"
         },
         {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-gra-1"
+        },
+        {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-fri-1"
         }
       ],
@@ -260,6 +263,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#resource-gra",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#lexentry-gra"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#resource-fri",
       "@type": "lexicog:LexicographicResource",
       "dct:source": "Frish Sanskrit Reader (Cologne 2015)",
@@ -331,6 +343,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-pwk-10"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#lexentry-gra",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-gra-1"
         }
       ]
     },
@@ -501,6 +525,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-gra-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
+      },
+      "skos:definition": {
+        "@value": "Arm,; Unterarm; Vorderfüsse",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "gra"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-fri-1",
@@ -1115,6 +1151,20 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-36",
       "@type": "frac:Attestation",
       "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#sense-gra-1"
+      },
+      "frac:evidence": "Cu. 〔176〕",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#record-gra"
+      },
+      "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-37",
+      "@type": "frac:Attestation",
+      "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
       },
       "frac:evidence": "L.",
@@ -1126,7 +1176,7 @@
       "csl:evidenceClass": "hedge"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-37",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-38",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
@@ -1142,7 +1192,7 @@
       "csl:citedRange": "3,8"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-38",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-39",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
@@ -1156,7 +1206,7 @@
       "csl:evidenceClass": "textual"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-39",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-40",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
@@ -1172,7 +1222,7 @@
       "csl:citedRange": "1,28"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-40",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-41",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
@@ -1188,7 +1238,7 @@
       "csl:citedRange": "3,5,17"
     },
     {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-41",
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-42",
       "@type": "frac:Attestation",
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
@@ -1198,20 +1248,6 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#record-pwg"
       },
       "csl:sourceDictionary": "pwg",
-      "csl:evidenceType": "named-source-citation",
-      "csl:evidenceClass": "textual"
-    },
-    {
-      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#attestation-42",
-      "@type": "frac:Attestation",
-      "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu"
-      },
-      "frac:evidence": "Cu. 〔176〕",
-      "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAhu#record-gra"
-      },
-      "csl:sourceDictionary": "gra",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

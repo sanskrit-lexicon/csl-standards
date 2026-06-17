@@ -30,6 +30,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#sense-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#sense-ap90-1"
         }
       ],
       "frac:attestation": [
@@ -123,6 +126,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#resource-ap90",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#lexentry-ap90"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -155,6 +167,18 @@
       "lexicog:component": [
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#lexentry-ap90",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#sense-ap90-1"
         }
       ]
     },
@@ -194,6 +218,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#sense-ap90-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya"
+      },
+      "skos:definition": {
+        "@value": "4136.1 0164-b arcya arcya }",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarcya#record-mw",

@@ -34,6 +34,7 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-4> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-5> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-6> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-gra-1> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-fri-1> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#record-pwg> ;
@@ -122,6 +123,11 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "Gewerbe"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-gra-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa> ;
+  csl:sourceDictionary "gra" ;
+  skos:definition "Haus, Familie;; Hausgenosse;"@de .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-fri-1> a ontolex:LexicalSense ;
   ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa> ;
   csl:sourceDictionary "fri" ;
@@ -144,6 +150,11 @@
   csl:dictionary "pwk" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#lexentry-pwk> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#resource-gra> a lexicog:LexicographicResource ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#lexentry-gra> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#resource-fri> a lexicog:LexicographicResource ;
   dct:source "Frish Sanskrit Reader (Cologne 2015)" ;
   csl:dictionary "fri" ;
@@ -160,6 +171,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-3>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-4>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-5>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-pwk-6> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#lexentry-gra> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#sense-gra-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa#lexentry-fri> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AveSa> ;

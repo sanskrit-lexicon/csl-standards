@@ -27,6 +27,7 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-pwg-2> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-pwg-3> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-pwk-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-gra-1> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-pwk> ;
@@ -71,6 +72,11 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "gehen"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-gra-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492> ;
+  csl:sourceDictionary "gra" ;
+  skos:definition "gehen, sich bewegen,; umrühren,; sich drehen"@de .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#resource-mw> a lexicog:LexicographicResource ;
   dct:source "Monier-Williams 1899" ;
   csl:dictionary "mw" ;
@@ -86,6 +92,11 @@
   csl:dictionary "pwk" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#lexentry-pwk> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#resource-gra> a lexicog:LexicographicResource ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#lexentry-gra> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#lexentry-mw> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-mw-1> .
@@ -97,6 +108,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-pwk-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#lexentry-gra> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-gra-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
@@ -211,7 +226,7 @@
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-11> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492> ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#sense-gra-1> ;
   frac:evidence "Śat. Br." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-gra> ;
   csl:evidenceType "named-source-citation" ;

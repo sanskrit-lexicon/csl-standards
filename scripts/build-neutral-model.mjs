@@ -4,6 +4,17 @@ import { extractLabeledSources } from "./lib/citations.mjs";
 import { extractMwSenses } from "./lib/mw-senses.mjs";
 import { extractPwSenses } from "./lib/pw-senses.mjs";
 import { extractFriSenses } from "./lib/fri-senses.mjs";
+import { extractAp90Senses } from "./lib/ap90-senses.mjs";
+
+// Per-dictionary sense extractor for the optional dictionaries. GRA (Grassmann)
+// glosses in German {%…%} blocks like the Petersburg dictionaries, so it reuses
+// that extractor; AP90 (Apte) and FRI have their own; ap90/gra/fri are the only
+// optional dicts with a sense extractor.
+const OPTIONAL_SENSE_EXTRACTOR = {
+  ap90: raw => extractAp90Senses(raw),
+  gra: raw => extractPwSenses(raw, "gra"),
+  fri: raw => extractFriSenses(raw)
+};
 import { ALL_DICTS, OPTIONAL_DICTS } from "./lib/dictionaries.mjs";
 
 function parseGenderOrGrammar(raw) {
@@ -175,10 +186,10 @@ async function main() {
           raw: item.records.pwk?.raw || null,
           senses: extractPwSenses(item.records.pwk?.raw, "pwk")
         },
-        // Optional dictionaries (e.g. Apte 1890, Grassmann): carried when the
-        // sampler attached a counterpart. Each contributes its raw record and its
-        // named citations (above); FRI also has a format-specific sense extractor
-        // (trilingual glosses), while ap90/gra carry records only for now.
+        // Optional dictionaries (Apte 1890, Grassmann, Frish Reader): carried when
+        // the sampler attached a counterpart. Each contributes its raw record, its
+        // named citations (above), and — for the dicts with a format-specific
+        // extractor (ap90/gra/fri) — its senses.
         ...Object.fromEntries(
           OPTIONAL_DICTS
             .filter(code => item.records[code])
@@ -187,7 +198,7 @@ async function main() {
               line: item.records[code].line || null,
               pc: item.records[code].pc || null,
               raw: item.records[code].raw || null,
-              ...(code === "fri" ? { senses: extractFriSenses(item.records[code].raw) } : {})
+              ...(OPTIONAL_SENSE_EXTRACTOR[code] ? { senses: OPTIONAL_SENSE_EXTRACTOR[code](item.records[code].raw) } : {})
             }])
         )
       },

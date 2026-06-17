@@ -53,6 +53,9 @@
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-pwk-5"
         },
         {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1"
+        },
+        {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-fri-1"
         }
       ],
@@ -231,6 +234,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#resource-gra",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Grassmann Wörterbuch zum Rig-Veda",
+      "csl:dictionary": "gra",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#lexentry-gra"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#resource-fri",
       "@type": "lexicog:LexicographicResource",
       "dct:source": "Frish Sanskrit Reader (Cologne 2015)",
@@ -293,6 +305,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-pwk-5"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#lexentry-gra",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1"
         }
       ]
     },
@@ -427,6 +451,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa"
+      },
+      "skos:definition": {
+        "@value": "{{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}}te; aus {{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}} bestehend, {{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}} Bestandtheile enthaltend",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "gra"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-fri-1",
@@ -1016,13 +1052,13 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#attestation-34",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1"
       },
-      "frac:evidence": "OPP. CAT. 1",
+      "frac:evidence": "AV.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#record-pwk"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#record-gra"
       },
-      "csl:sourceDictionary": "pwk",
+      "csl:sourceDictionary": "gra",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },
@@ -1032,11 +1068,11 @@
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa"
       },
-      "frac:evidence": "AV.",
+      "frac:evidence": "OPP. CAT. 1",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#record-gra"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#record-pwk"
       },
-      "csl:sourceDictionary": "gra",
+      "csl:sourceDictionary": "pwk",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

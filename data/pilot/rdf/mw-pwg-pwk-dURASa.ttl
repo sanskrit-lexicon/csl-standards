@@ -25,6 +25,7 @@
   csl:phenomenon "homophone" ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-mw-1> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-pwg-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-gra-1> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
@@ -56,6 +57,11 @@
   csl:sourceDictionary "pwg" ;
   skos:definition "Erreichung"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-gra-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
+  csl:sourceDictionary "gra" ;
+  skos:definition "schwer; zu vertilgen; unvergänglich, unzerstörbar"@de .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#resource-mw> a lexicog:LexicographicResource ;
   dct:source "Monier-Williams 1899" ;
   csl:dictionary "mw" ;
@@ -66,6 +72,11 @@
   csl:dictionary "pwg" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#lexentry-pwg> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#resource-gra> a lexicog:LexicographicResource ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#lexentry-gra> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#lexentry-mw> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-mw-1> .
@@ -73,6 +84,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#lexentry-pwg> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-pwg-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#lexentry-gra> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-gra-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
@@ -146,6 +161,13 @@
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-6> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#sense-gra-1> ;
+  frac:evidence "Pad." ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-7> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   frac:evidence "KĀTY. ŚR. 22,8,26." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
@@ -154,7 +176,7 @@
   csl:citedRange "22,8,26" ;
   csl:evidenceClass "textual" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-7> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-8> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   frac:evidence "ŚĀṄKH. ŚR. 14,32,3" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
@@ -163,21 +185,21 @@
   csl:citedRange "14,32,3" ;
   csl:evidenceClass "textual" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-8> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-9> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   frac:evidence "MAŚ." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
   csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "textual" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-9> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-10> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   frac:evidence "Verz. d. B. H. 72 (IV,7)" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwg> ;
   csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "editorial" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-10> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-11> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   frac:evidence "ṚV. 1,176,4" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
@@ -186,24 +208,17 @@
   csl:citedRange "1,176,4" ;
   csl:evidenceClass "textual" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-11> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-12> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   frac:evidence "7,32,7" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
   csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "textual" .
 
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-12> a frac:Attestation ;
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-13> a frac:Attestation ;
   frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
   frac:evidence "AUFRECHT" ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-pwk> ;
-  csl:evidenceType "named-source-citation" ;
-  csl:evidenceClass "textual" .
-
-<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#attestation-13> a frac:Attestation ;
-  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa> ;
-  frac:evidence "Pad." ;
-  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdURASa#record-gra> ;
   csl:evidenceType "named-source-citation" ;
   csl:evidenceClass "textual" .
 

@@ -25,6 +25,9 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-mw-1> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-pwg-1> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-pwk-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-3> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-pwk> ;
@@ -64,6 +67,21 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "voll, gefüllt, voll von, — gefüllt mit"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "Nourished, maintained"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "Filled with, full of"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-3> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "Green. The green colour"@en .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#resource-mw> a lexicog:LexicographicResource ;
   dct:source "Monier-Williams 1899" ;
   csl:dictionary "mw" ;
@@ -79,6 +97,11 @@
   csl:dictionary "pwk" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#lexentry-pwk> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#resource-ap90> a lexicog:LexicographicResource ;
+  dct:source "Apte 1890" ;
+  csl:dictionary "ap90" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#lexentry-ap90> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#lexentry-mw> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-mw-1> .
@@ -90,6 +113,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-pwk-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#lexentry-ap90> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#sense-ap90-3> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;

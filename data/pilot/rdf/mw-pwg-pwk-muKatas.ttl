@@ -27,6 +27,7 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-pwg-1> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-pwk-1> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-pwk-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-gra-1> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-pwk> ;
@@ -71,6 +72,11 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "vorn, an der Spitze, von vorn"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-gra-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas> ;
+  csl:sourceDictionary "gra" ;
+  skos:definition "vom Munde her, am Munde"@de .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#resource-mw> a lexicog:LexicographicResource ;
   dct:source "Monier-Williams 1899" ;
   csl:dictionary "mw" ;
@@ -86,6 +92,11 @@
   csl:dictionary "pwk" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#lexentry-pwk> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#resource-gra> a lexicog:LexicographicResource ;
+  dct:source "Grassmann Wörterbuch zum Rig-Veda" ;
+  csl:dictionary "gra" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#lexentry-gra> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#lexentry-mw> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-mw-1> .
@@ -97,6 +108,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-pwk-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-pwk-2> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#lexentry-gra> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#sense-gra-1> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;

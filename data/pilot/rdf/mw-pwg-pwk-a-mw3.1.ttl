@@ -26,6 +26,9 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-pwg-1> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-pwg-2> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-pwk-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-3> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#record-pwg> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#record-pwk> ;
@@ -84,6 +87,21 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "kein Brahman,; kein Lesen,; schweisslos,; körperlos,; unrein,; unwürdig,; nicht gethan habend,; nicht ehren,; sie begehren nicht"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "The first letter of the Nāgarī Alphabet"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "of Viṣṇu, the first of the three sounds constituting the sacred syllable; for more explanation of the three syllables see"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-3> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "of Śiva, Brahmā, Vāyu, or Vaiśvānara"@en .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#resource-mw> a lexicog:LexicographicResource ;
   dct:source "Monier-Williams 1899" ;
   csl:dictionary "mw" ;
@@ -99,6 +117,11 @@
   csl:dictionary "pwk" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#lexentry-pwk> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#resource-ap90> a lexicog:LexicographicResource ;
+  dct:source "Apte 1890" ;
+  csl:dictionary "ap90" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#lexentry-ap90> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#lexentry-mw> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-mw-1> .
@@ -110,6 +133,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-pwk-1> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#lexentry-ap90> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#sense-ap90-3> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aa-mw3.1#record-mw> a csl:SourceRecord ;
   dct:source "Monier-Williams 1899" ;
