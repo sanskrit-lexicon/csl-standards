@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -197,6 +198,15 @@
         <abbr>7. 42.</abbr>
         <ref type="inherited-siglum">Ms.</ref>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-brAhmaRya-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-brAhmaRya-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-brAhmaRya-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-brAhmaRya-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-brAhmaRya-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-brAhmaRya-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-brAhmaRya-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -281,6 +291,24 @@ brāhmaṇya n.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;bráhmanská hodnost nebo stav&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;брахманская должность или сословие&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;the rank or state of a brāhman&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-brAhmaRya-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">10379</idno>
+        <idno type="line">73785</idno>
+        <idno type="pc">0637-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;10379&lt;pc&gt;0637-b&lt;k1&gt;brAhmaRya&lt;k2&gt;brAhmaRya
+{#brAhmaRya#}¦ {%brāhmaṇya,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%brāhmaṇa%}
+(cr {%brahman%}), {%+ ya,%} {@I.@} &lt;ab&gt;m.&lt;/ab&gt; The planet
+Saturn. {@II.@} n. Brahmanhood, priestly
+character, &lt;ls&gt;Man.&lt;/ls&gt; 11, 97; the dignity of
+a Brāhmaṇa, &lt;ls&gt;Pañc.&lt;/ls&gt; i. &lt;ab&gt;d.&lt;/ab&gt; 76 {@ -- &lt;ab&gt;Comp.&lt;/ab&gt;@} 
+[Page0638-a+ 40]
+{%Sva-brāhmaṇyā,%} &lt;ab&gt;f.&lt;/ab&gt; a sort of text,
+&lt;ls&gt;Man.&lt;/ls&gt; 9, 126.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

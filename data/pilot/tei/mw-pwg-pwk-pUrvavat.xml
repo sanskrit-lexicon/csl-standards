@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -130,6 +131,9 @@
         <abbr>BHĀG. P. 5,10,6.</abbr>
         <citedRange>5,10,6</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-pUrvavat-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-pUrvavat-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-pUrvavat-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -214,6 +218,18 @@ pūrvavat adv.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;jako dříve&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;как раньше&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;as before&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-pUrvavat-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">9108</idno>
+        <idno type="line">65590</idno>
+        <idno type="pc">0569-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;9108&lt;pc&gt;0569-b&lt;k1&gt;pUrvavat&lt;k2&gt;pUrvavat
+{#pUrvavat#}¦ {%pūrva + vat,%} &lt;ab&gt;adv.&lt;/ab&gt; As before,
+&lt;ls&gt;Man.&lt;/ls&gt; 11, 213.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

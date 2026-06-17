@@ -170,6 +170,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-26"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-27"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-28"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-29"
         }
       ],
       "csl:sourceRecord": [
@@ -190,6 +199,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:anu",
@@ -721,6 +733,16 @@
       "rdf:value": "<L>1047<pc>048<k1>anu<k2>anu\n +anu (anveti)\n<div n=\"1\"/>1 <lang n=\"czech\">jíti za někým, následovati, napodobovati; hledati</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">итти за кем-нибудь, следовать, подражать; искать</lang>\n<div n=\"1\"/>3 <lang n=\"english\">to go after, follow, imitate; seek</lang>\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "358",
+      "csl:lineNumber": 2322,
+      "csl:pageColumn": "0020-a",
+      "rdf:value": "<L>358<pc>0020-a<k1>anu<k2>anu\r\n{#anu#}¦ {%anu.%} {@I.@} <ab>adv.</ab> Afterwards, then,\r\n<ls>Rām.</ls> 2, 84, 4. {@II.@} <ab>prep.</ab> {@1.@} with <ab>acc.</ab>\r\n{@a.@} Along, <ls>Rām.</ls> 2, 83, 6. {@b.@} After, <ls>Pañc.</ls>\r\n165, 5. {@c.@} According to, like, <ls>Vikr.</ls> <ab>d.</ab>\r\n110. {@2.@} with <ab>abl.</ab> In consequence of, \r\n[Page0020-b+ 40]\r\n<ls>Rām.</ls> 6, 10, 23. {@III.@} combined and\r\ncompounded with verbs and their de-\r\nrivatives. {@IV.@} former part of com-\r\npounded nouns and adverbs, implying.\r\nAfter, according to, along, again se-\r\ncondary, every. -- <ab>Cf.</ab> <lang n=\"greek\">ἀνά</lang>; <ab>Goth.</ab> ana,\r\n<ab>N.H.G.</ab> an.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1125,6 +1147,48 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "ṚV."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-27",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-28",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu"
+      },
+      "frac:evidence": "Pañc.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#attestation-29",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu"
+      },
+      "frac:evidence": "Vikr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#lineage-pwk",

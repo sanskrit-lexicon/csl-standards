@@ -83,6 +83,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-12"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-13"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-14"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-15"
         }
       ],
       "csl:sourceRecord": [
@@ -97,6 +106,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:DIratA",
@@ -337,6 +349,16 @@
       "rdf:value": "<L>16078<pc>0598-a<k1>DIratA<k2>DIratA\n{#DIratA#}¦ {@1@} Fortitude, courage,\nstrength of mind; {#vipattO ca mahAl~loke#}\n{#DIratAmanugacCati#} <ls>H. 3. 44</ls>; <ls>V. 2.</ls> {@--2@} <lbinfo n=\"Sup+pression\"/>\nSuppression of jealousy &c. {@--3@} Gravity,\nsolemnity (as shown by silence &c.);\n{#pratyAdeSAnna Kalu Bavato DIratAM kalpayAmi#}\n<ls>Me. 114.</ls> {@--4@} Steadiness, firmness. {@--5@}\nWisdom, cleverness. {@--6@} Refusal.\n(For other meanings see {#DErya#}).\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "7036",
+      "csl:lineNumber": 50872,
+      "csl:pageColumn": "0442-b",
+      "rdf:value": "<L>7036<pc>0442-b<k1>DIratA<k2>DIratA\r\n{#DIratA#}¦ {%dhīra + tā,%} <ab>f.</ab> (and {#DIratva#}\r\n{%dhīra + tva,%} <ab>n.</ab>), {@1.@} Firmness, <ls>Ragh.</ls> 8,\r\n43. {@2.@} Courage, <ls>Pañc.</ls> 129, 22. {@ -- <ab>Comp.</ab>@}\r\n{%A-,%} <ab>f.</ab> pusillanimity, <ls>Prab.</ls> 15, 8.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -515,6 +537,48 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ap90"
       },
       "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-13",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA"
+      },
+      "frac:evidence": "Ragh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-14",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA"
+      },
+      "frac:evidence": "Pañc.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#attestation-15",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA"
+      },
+      "frac:evidence": "Prab.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADIratA#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

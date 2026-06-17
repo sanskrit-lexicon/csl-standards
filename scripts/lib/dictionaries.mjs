@@ -5,7 +5,7 @@
 // published loss corpus stay the tri-dict backbone.
 
 export const CORE_DICTS = ["mw", "pwg", "pwk"];
-export const OPTIONAL_DICTS = ["ap90", "gra", "fri"];
+export const OPTIONAL_DICTS = ["ap90", "gra", "fri", "ben"];
 export const ALL_DICTS = [...CORE_DICTS, ...OPTIONAL_DICTS];
 
 export const DICT_LABEL = {
@@ -14,9 +14,10 @@ export const DICT_LABEL = {
   pwk: "Boehtlingk PWK",
   ap90: "Apte 1890",
   gra: "Grassmann Wörterbuch zum Rig-Veda",
-  fri: "Frish Sanskrit Reader (Cologne 2015)"
+  fri: "Frish Sanskrit Reader (Cologne 2015)",
+  ben: "Benfey Sanskrit-English 1866"
 };
 
 // Source location relative to the csl-orig v02 directory (CDSL layout).
-export const DICT_DIR = { mw: "mw", pwg: "pwg", pwk: "pw", ap90: "ap90", gra: "gra", fri: "fri" };
-export const DICT_FILE = { mw: "mw.txt", pwg: "pwg.txt", pwk: "pw.txt", ap90: "ap90.txt", gra: "gra.txt", fri: "fri.txt" };
+export const DICT_DIR = { mw: "mw", pwg: "pwg", pwk: "pw", ap90: "ap90", gra: "gra", fri: "fri", ben: "ben" };
+export const DICT_FILE = { mw: "mw.txt", pwg: "pwg.txt", pwk: "pw.txt", ap90: "ap90.txt", gra: "gra.txt", fri: "fri.txt", ben: "ben.txt" };

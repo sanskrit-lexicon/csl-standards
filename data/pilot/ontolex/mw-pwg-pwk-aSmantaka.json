@@ -80,6 +80,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-13"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-14"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-15"
         }
       ],
       "csl:sourceRecord": [
@@ -91,6 +97,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aSmantaka",
@@ -290,6 +299,16 @@
       "rdf:value": "<L>11686<pc>1-137-c<k1>aSmantaka<k2>aSmantaka\n{#aSmantaka#}¦\n<div n=\"1\">— 1〉 <lex>m.</lex> {%<bot>Bauhinia tomentosa</bot>%} (<ls>RĀJAN. 9,39</ls>) und {%<bot>Oxalis corniculata</bot>%} (<ls>BHĀVAPR. 2,67</ls>).\n<div n=\"1\">— 2〉 <lex>m.</lex> <lex>n.</lex>\n<div n=\"2\">— a〉 {%Ofen%}.\n<div n=\"2\">— b〉 *{%Lampenschirm%}.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1251",
+      "csl:lineNumber": 7531,
+      "csl:pageColumn": "0062-a",
+      "rdf:value": "<L>1251<pc>0062-a<k1>aSmantaka<k2>aSmantaka\r\n{#aSmantaka#}¦ {%aś + mant + aka%} (see the\r\nlast), <ab>n.</ab> A stove, <ls>Daśak.</ls> in <ls>Chr.</ls> 192, 19.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -482,6 +501,34 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "SUŚR.",
       "csl:citedRange": "1,93,15.376,11.377,13.2,52,19"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-14",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
+      },
+      "frac:evidence": "Daśak.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-15",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#lineage-pwk",

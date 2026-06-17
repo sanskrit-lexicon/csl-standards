@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -29,6 +29,7 @@
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -84,6 +85,9 @@
       </bibl>
       <bibl xml:id="mw-pwg-pwk-uttAra-mw31391.1-cite-ap90-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-uttAra-mw31391.1-record-ap90">
         <abbr>K. 326.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-uttAra-mw31391.1-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-uttAra-mw31391.1-record-ben">
+        <abbr>Prab.</abbr>
       </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-uttAra-mw31391.1-record-mw" type="source-entry" source="#dict-mw">
@@ -145,6 +149,18 @@ conveying. {@--2@} Fording, crossing;  &lt;lbinfo n=&quot;suKo#ttAratAM&quot;/&g
 disembarking. {@--4@} Delivering, rescuing.
 {@--5@} Getting rid of. {@--6@} Vomiting.
 {@--7@} Instability.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-uttAra-mw31391.1-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">2040</idno>
+        <idno type="line">13411</idno>
+        <idno type="pc">0112-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;2040&lt;pc&gt;0112-b&lt;k1&gt;uttAra&lt;k2&gt;uttAra
+{#uttAra#}¦ {%uttāra,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%ud-tṝ + a,%} &lt;ab&gt;m.&lt;/ab&gt;
+Crossing, passing over, &lt;ls&gt;Prab.&lt;/ls&gt; 83, 10.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

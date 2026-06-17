@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -250,6 +251,27 @@
         <abbr>Ś. 4. 1.</abbr>
         <citedRange>4.1</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-daSA-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-daSA-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-daSA-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-daSA-record-ben">
+        <abbr>Mṛcch.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-daSA-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-daSA-record-ben">
+        <abbr>Bhartṛ.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-daSA-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-daSA-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-daSA-cite-ben-5" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-daSA-record-ben">
+        <abbr>Kathās.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-daSA-cite-ben-6" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-daSA-record-ben">
+        <abbr>Hit.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-daSA-cite-ben-7" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-daSA-record-ben">
+        <abbr>Hariv.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-daSA-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -400,6 +422,23 @@ daśā f.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;třáseň, lem; knot; období života, okolnosti&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;бахрома, кайма; фитиль; период жизни, обстоятельства&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;the fringe of a garment, hem; a wick; period of life, circumstances&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-daSA-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">6352</idno>
+        <idno type="line">45111</idno>
+        <idno type="pc">0390-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6352&lt;pc&gt;0390-b&lt;k1&gt;daSA&lt;k2&gt;daSA
+{#daSA#}¦ {%daśā,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%daṃś + a,%} &lt;ab&gt;f.&lt;/ab&gt; {@1.@} The
+skirt, or the ends of a garment, &lt;ls&gt;Man.&lt;/ls&gt;
+3, 44; &lt;ls&gt;Mṛcch.&lt;/ls&gt; 26, 17. {@2.@} The wick
+of a lamp, &lt;ls&gt;Bhartṛ.&lt;/ls&gt; 3, 1. {@3.@} Condition,
+state of life, &lt;ls&gt;Rām.&lt;/ls&gt; 3, 75, 59. {@4.@} State,
+&lt;ls&gt;Kathās.&lt;/ls&gt; 7, 113. {@5.@} Period, age, &lt;ls&gt;Hit.&lt;/ls&gt;
+10, 19; &lt;ls&gt;Hariv.&lt;/ls&gt; 4394.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

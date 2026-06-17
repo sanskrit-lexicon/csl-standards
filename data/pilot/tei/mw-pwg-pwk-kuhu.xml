@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -79,6 +80,9 @@
         <abbr>HEMĀDRI 1,117,8</abbr>
         <citedRange>1,117,8</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-kuhu-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-kuhu-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-kuhu-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -120,6 +124,18 @@
 &lt;hom&gt;1.&lt;/hom&gt; {#kuhu#}¦
 &lt;div n=&quot;1&quot;&gt;— 1〉 &lt;lex&gt;m.&lt;/lex&gt; {%ein &lt;ab&gt;best.&lt;/ab&gt; Gewicht%} &lt;ls&gt;HEMĀDRI 1,117,8&lt;/ls&gt;.
 &lt;div n=&quot;1&quot;&gt;— 2〉 *&lt;lex&gt;f.&lt;/lex&gt; {%Neumond%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kuhu-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">3649</idno>
+        <idno type="line">23902</idno>
+        <idno type="pc">0200-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;3649&lt;pc&gt;0200-b&lt;k1&gt;kuhu&lt;k2&gt;kuhu
+{#kuhu#}¦ {%kuhu,%} The cry of the cuckoo,
+&lt;ls&gt;MBh.&lt;/ls&gt; 15, 724.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

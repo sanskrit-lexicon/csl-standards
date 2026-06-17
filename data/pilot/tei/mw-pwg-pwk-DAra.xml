@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -97,6 +98,15 @@
       <bibl xml:id="mw-pwg-pwk-DAra-cite-pwk-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-DAra-record-pwk">
         <abbr>11</abbr>
         <ref type="inherited-siglum">MĀN. GṚHY. 1,</ref>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DAra-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-DAra-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DAra-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-DAra-record-ben">
+        <abbr>Rājat.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-DAra-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-DAra-record-ben">
+        <abbr>Suśr.</abbr>
       </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-DAra-record-mw" type="source-entry" source="#dict-mw">
@@ -170,6 +180,25 @@ dhāra (f. -ī)
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;držící, udržující&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;держащий, удерживающий&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;holding, supporting&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-DAra-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">6999</idno>
+        <idno type="line">50502</idno>
+        <idno type="pc">0439-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6999&lt;pc&gt;0439-a&lt;k1&gt;DAra&lt;k2&gt;DAra
+{#DAra#}¦ {%dhāra,%} &lt;ab&gt;i. e.&lt;/ab&gt; {@I.@} {%dhṛ + a,%} latter
+part of &lt;ab&gt;comp.&lt;/ab&gt; words, Holding, bearing,
+e. g. {%chattra-,%} &lt;ab&gt;m.&lt;/ab&gt; The bearer of the
+royal parasol, &lt;ls&gt;Pañc.&lt;/ls&gt; 156, 22; {%daṇḍa-,%}
+&lt;ab&gt;adj.&lt;/ab&gt; Holding the staff, as symbol of
+judicature, &lt;ls&gt;Rājat.&lt;/ls&gt; 4, 108. {@II.@} {%dhārā%}
+{%+ a.%} {@1.@} &lt;ab&gt;adj.&lt;/ab&gt; Coming down in a shower,
+&lt;ls&gt;Suśr.&lt;/ls&gt; 1, 170, 1. {@2.@} &lt;ab&gt;m.&lt;/ab&gt; A shower, Ha-
+riv. 6333. -- &lt;ab&gt;Cf.&lt;/ab&gt; {%dhārā.%}
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

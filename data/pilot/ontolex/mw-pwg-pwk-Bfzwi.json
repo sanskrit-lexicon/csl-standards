@@ -83,6 +83,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-16"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-17"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-18"
         }
       ],
       "csl:sourceRecord": [
@@ -97,6 +103,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Bfzwi",
@@ -293,6 +302,16 @@
       "csl:lineNumber": 43121,
       "csl:pageColumn": "0964",
       "rdf:value": "<L>6447<pc>0964<k1>Bfzwi<k2>Bfzwi/\r\n{@bhṛṣṭí,@}¦ [von *bhṛṣ = hṛṣ, <ls>Ku. 〔11,372 fg.〕</ls>], 1〉 {%Spitze, Zacke;%} <ab>vgl.</ab> sahásra-, piśáṅga-bhṛṣṭī 2〉 {%Ecke%} in cátur-bhṛṣṭī.\r\n<div n=\"TS\">-ís girés {56,3}.\r\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "10685",
+      "csl:lineNumber": 76850,
+      "csl:pageColumn": "0666-b",
+      "rdf:value": "<L>10685<pc>0666-b<k1>Bfzwi<k2>Bfzwi\r\n{#Bfzwi#}¦ {%bhṛṣṭi,%} <ab>f.</ab>, <ab>i. e.</ab> {%bhrajj + ti,%}\r\n{@1.@} Frying. {@2.@} A lonely garden. {@ --@}\r\n{@<ab>Comp.</ab>@} {%Sahasra-,%} <ab>adj.</ab> having a thousand\r\npoints (<ab>vb.</ab> {%hṛṣ + ti%}), <ls>Chr.</ls> 292, 9 =\r\n<ls>Rigv.</ls> i. 85, 9.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-1",
@@ -539,6 +558,34 @@
       "csl:sourceDictionary": "mw",
       "csl:evidenceType": "generic-lexicographer-hedge",
       "csl:evidenceClass": "hedge"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-17",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#attestation-18",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi"
+      },
+      "frac:evidence": "Rigv.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABfzwi#lineage-pwk",

@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -106,6 +107,12 @@
         <abbr>BHĀVAPR. 2,67</abbr>
         <citedRange>2,67</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-aSmantaka-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aSmantaka-record-ben">
+        <abbr>Daśak.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aSmantaka-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aSmantaka-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-aSmantaka-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -151,6 +158,18 @@
 &lt;div n=&quot;1&quot;&gt;— 2〉 &lt;lex&gt;m.&lt;/lex&gt; &lt;lex&gt;n.&lt;/lex&gt;
 &lt;div n=&quot;2&quot;&gt;— a〉 {%Ofen%}.
 &lt;div n=&quot;2&quot;&gt;— b〉 *{%Lampenschirm%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aSmantaka-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">1251</idno>
+        <idno type="line">7531</idno>
+        <idno type="pc">0062-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1251&lt;pc&gt;0062-a&lt;k1&gt;aSmantaka&lt;k2&gt;aSmantaka
+{#aSmantaka#}¦ {%aś + mant + aka%} (see the
+last), &lt;ab&gt;n.&lt;/ab&gt; A stove, &lt;ls&gt;Daśak.&lt;/ls&gt; in &lt;ls&gt;Chr.&lt;/ls&gt; 192, 19.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

@@ -203,6 +203,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#attestation-40"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#attestation-41"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#attestation-42"
         }
       ],
       "csl:sourceRecord": [
@@ -220,6 +226,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Ama",
@@ -683,6 +692,16 @@
       "csl:lineNumber": 8906,
       "csl:pageColumn": "0181",
       "rdf:value": "<L>1556<pc>0181<k1>Ama<k2>Ama/\r\n{@āmá,@}¦ <ab>a.</ab>, ursprünglich wol „herbe, sauer“ (<ab>vgl.</ab> amla, <lang>lat.</lang> amārus), von der Wurzel am „bedrängen, plagen“; <ab>vgl.</ab> <ls>Cu. 〔486〕</ls>; dann aber wie das gleiche <lang>gr.</lang> <gk>ὠμός</gk> „roh, unreif“. — Im <ls>RV</ls> {%roh, ungekocht%} mit dem Gegensatze pakvá, insbesondere 2〉 wird die Kuh als die {%rohe%} bezeichnet im Gegensatze zu der warmen, garen Milch, welche als pakvá bezeichnet wird; ähnlich 3〉 die Wolke im Gegensatze zu dem aus ihr erzeugten agní.\r\n<div n=\"TS\">-ás {795,1}, parallel átaptatanūs.\r\n<div n=\"TS\">-ásya kravíṣas {162,10}.\r\n<div n=\"TS\">-ā́ [<ab>f.</ab>] 2〉 gaús {264,14}; {299,9}.\r\n<div n=\"TS\">-ā́yām 2〉 usríyāyām {180,3}.\r\n<div n=\"TS\">-ā́su 2〉 {62,9}; {698,7}; usríyāsu {231,2}; {458,6}; gávām vakṣáṇāsu {513,4}. — 3〉 pūrṣú {226,6}.\r\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1601",
+      "csl:lineNumber": 9967,
+      "csl:pageColumn": "0082-b",
+      "rdf:value": "<L>1601<pc>0082-b<k1>Ama<k2>Ama\r\n{#Ama#}¦ {%āma,%} <ab>i. e.</ab> {%am + a,%} <ab>adj.</ab>, <ab>f.</ab> {%mā.%}\r\n{@1.@} Raw, undressed, <ls>Man.</ls> 4, 223. {@2.@}\r\nUnbaked (as a pot), <ls>Pañc.</ls> iii. <ab>d.</ab> 13. --\r\n<ab>Cf.</ab> <lang n=\"greek\">ὠμός</lang>.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#attestation-1",
@@ -1296,6 +1315,34 @@
       "csl:evidenceClass": "kosha",
       "csl:citedWork": "H.",
       "csl:citedRange": "4.66"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#attestation-41",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma"
+      },
+      "frac:evidence": "Man.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#attestation-42",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma"
+      },
+      "frac:evidence": "Pañc.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAma#lineage-pwk",

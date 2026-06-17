@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -325,6 +326,15 @@
       <bibl xml:id="mw-pwg-pwk-ka-cite-pwk-27" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ka-record-pwk">
         <abbr>M. 2,24</abbr>
         <citedRange>2,24</citedRange>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ka-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ka-record-ben">
+        <abbr>Bhāg. P.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ka-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ka-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ka-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ka-record-ben">
+        <abbr>Yājñ.</abbr>
       </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ka-record-mw" type="source-entry" source="#dict-mw">
@@ -717,6 +727,22 @@ ka pron. interrog. (kas, kā, kim)
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;kdo?, co?, který?&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;кто?, что?, который?&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;who?, what?, which?&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ka-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">2754</idno>
+        <idno type="line">17767</idno>
+        <idno type="pc">0148-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;2754&lt;pc&gt;0148-b&lt;k1&gt;ka&lt;k2&gt;ka
+{#ka#}¦ {%ka,%} {@I.@} see {%kim.%} {@II.@} m. (properly
+&lt;ab&gt;nom.&lt;/ab&gt; &lt;ab&gt;sing.&lt;/ab&gt; of {%kim%}), A name of the
+highest deities, viz. Prajāpati, 
+&lt;ls&gt;Bhāg. P.&lt;/ls&gt; 6, 6, 2; Brahman, &lt;ls&gt;MBh.&lt;/ls&gt; 1, 32;
+Viṣṇu, 13, 7027. {@III.@} &lt;ab&gt;n.&lt;/ab&gt; Water, &lt;ls&gt;Yājñ.&lt;/ls&gt;
+2, 108.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

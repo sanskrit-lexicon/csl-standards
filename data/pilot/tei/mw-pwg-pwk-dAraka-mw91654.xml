@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -178,6 +179,15 @@
       <bibl xml:id="mw-pwg-pwk-dAraka-mw91654-cite-pwk-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAraka-mw91654-record-pwk">
         <abbr>BHĀG. P.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAraka-mw91654-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAraka-mw91654-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAraka-mw91654-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAraka-mw91654-record-ben">
+        <abbr>Suśr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAraka-mw91654-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAraka-mw91654-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-dAraka-mw91654-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -255,6 +265,21 @@ dāraka m.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;chlapec, dítě, syn&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;мальчик, ребенок, сын&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;a boy, child, son&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-dAraka-mw91654-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">6412</idno>
+        <idno type="line">45717</idno>
+        <idno type="pc">0396-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6412&lt;pc&gt;0396-a&lt;k1&gt;dAraka&lt;k2&gt;dAraka
+1. {#dAraka#}¦ {%dāraka,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%dṝ + aka,%} {@I.@}
+&lt;ab&gt;adj.&lt;/ab&gt;, &lt;ab&gt;f.&lt;/ab&gt; {%rikā,%} Splitting, &lt;ls&gt;MBh.&lt;/ls&gt; 7, 6871.
+{@II.@} &lt;ab&gt;f.&lt;/ab&gt; {%rikā,%} A chap, &lt;ls&gt;Suśr.&lt;/ls&gt; 1, 292, 10. {@ --@}
+{@&lt;ab&gt;Comp.&lt;/ab&gt;@} {%Loha-,%} &lt;ab&gt;n.&lt;/ab&gt; the name of a hell,
+&lt;ls&gt;Man.&lt;/ls&gt; 4, 90.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

@@ -29,6 +29,9 @@
       "frac:attestation": [
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#attestation-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#attestation-2"
         }
       ],
       "csl:sourceRecord": [
@@ -40,6 +43,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:karaprada",
@@ -129,6 +135,16 @@
       "rdf:value": "<L>24634<pc>2-022-c<k1>karaprada<k2>karaprada\n{#karaprada#}¦ <lex>Adj.</lex> = {#karada#} 1〉.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "2967",
+      "csl:lineNumber": 19213,
+      "csl:pageColumn": "0160-b",
+      "rdf:value": "<L>2967<pc>0160-b<k1>karaprada<k2>karaprada\r\n{#karaprada#}¦ {%kara-pra-da%} (<ab>vb.</ab> {%dā%}), <ab>adj.</ab>\r\nTributary, <ls>MBh.</ls> 3, 14774.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -143,6 +159,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "MBH.",
       "csl:citedRange": "3,14774"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#attestation-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akaraprada#decomposition",

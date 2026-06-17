@@ -173,6 +173,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-39"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-40"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-41"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-42"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-43"
         }
       ],
       "csl:sourceRecord": [
@@ -184,6 +196,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:maRq",
@@ -458,6 +473,16 @@
       "csl:lineNumber": 338156,
       "csl:pageColumn": "5-007-b",
       "rdf:value": "<L>81845<pc>5-007-b<k1>maRq<k2>maRq\n√{#maRq#}¦ *{#maRqati#} ({#BUzAyAm#}), *{#maRqate#} ({#viBAjane, vezwane#}).\n<div n=\"m\">— <ab>Caus.</ab> {#maRqayati#}\n<div n=\"1\">— 1〉 {%schmücken;%} <ab>Med.</ab> {%sich schmücken%}. {#maRqita#} {%geschmückt%}.\n<div n=\"1\">— 2〉 {%mit Worten ausschmücken,%} so <ab>v. a.</ab> {%in den Himmel erheben%} [Page5-007-c] <ls>PRASANNAR. 77,16</ls>.\n<div n=\"1\">— 3〉 *{#harze#}.\n<div n=\"p\">— Mit {#pari#}, {#˚maRqita#} {%rings herum geschmückt%}.\n<div n=\"p\">— Mit {#prati#}. {#˚maRqita#} {%geschmückt%}.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "10843",
+      "csl:lineNumber": 77985,
+      "csl:pageColumn": "0676-b",
+      "rdf:value": "<L>10843<pc>0676-b<k1>maRq<k2>maRq\r\n{#maRq#}¦ {%MAṆḌ%} (akin to {%mad, mand,%}\r\nprobably a <ab>denomin.</ab> based on a lost\r\nsignification of {%mandra%}), † i. 1, <ab>Ātm.</ab>\r\n{@1.@} To dress. {@2.@} To divide. † i. 1,\r\n<ab>Par.</ab> To adorn one's self. i. 10, <ab>Par.</ab>\r\n(in epic poetry also <ab>Ātm.</ab>, <ls>MBh.</ls> 1,\r\n7572), {@1.@} To adorn, <ls>Pañc.</ls> 255, 16.\r\n{@2.@} † To exhilarate. <ab>Ptcple.</ab> of the <ab>pf.</ab>\r\n<ab>pass.</ab> {%maṇḍita,%} Adorned, <ls>Chr.</ls> 29, 31;\r\n<ls>Pañc.</ls> 51, 15. {@<ab>Comp.</ab>@} {%A-,%} <ab>adj.</ab> not\r\nadorned, <ls>Nal.</ls> 16, 17.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-1",
@@ -1055,6 +1080,62 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-mw"
       },
       "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-40",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-41",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq"
+      },
+      "frac:evidence": "Pañc.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-42",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#attestation-43",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq"
+      },
+      "frac:evidence": "Nal.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmaRq#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

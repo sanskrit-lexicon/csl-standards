@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -381,6 +382,21 @@
       <bibl xml:id="mw-pwg-pwk-anu-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-anu-record-gra">
         <abbr>BR.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-anu-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-anu-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anu-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-anu-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anu-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-anu-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anu-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-anu-record-ben">
+        <abbr>Vikr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-anu-cite-ben-5" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-anu-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-anu-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -730,6 +746,29 @@ are: {#--anu#} &lt;lbinfo n=&quot;vedADyayanAnuzWAnasAmIpyapaScAdBAvA#nubaMDasAm
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;jíti za někým, následovati, napodobovati; hledati&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;итти за кем-нибудь, следовать, подражать; искать&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;to go after, follow, imitate; seek&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-anu-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">358</idno>
+        <idno type="line">2322</idno>
+        <idno type="pc">0020-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;358&lt;pc&gt;0020-a&lt;k1&gt;anu&lt;k2&gt;anu
+{#anu#}¦ {%anu.%} {@I.@} &lt;ab&gt;adv.&lt;/ab&gt; Afterwards, then,
+&lt;ls&gt;Rām.&lt;/ls&gt; 2, 84, 4. {@II.@} &lt;ab&gt;prep.&lt;/ab&gt; {@1.@} with &lt;ab&gt;acc.&lt;/ab&gt;
+{@a.@} Along, &lt;ls&gt;Rām.&lt;/ls&gt; 2, 83, 6. {@b.@} After, &lt;ls&gt;Pañc.&lt;/ls&gt;
+165, 5. {@c.@} According to, like, &lt;ls&gt;Vikr.&lt;/ls&gt; &lt;ab&gt;d.&lt;/ab&gt;
+110. {@2.@} with &lt;ab&gt;abl.&lt;/ab&gt; In consequence of, 
+[Page0020-b+ 40]
+&lt;ls&gt;Rām.&lt;/ls&gt; 6, 10, 23. {@III.@} combined and
+compounded with verbs and their de-
+rivatives. {@IV.@} former part of com-
+pounded nouns and adverbs, implying.
+After, according to, along, again se-
+condary, every. -- &lt;ab&gt;Cf.&lt;/ab&gt; &lt;lang n=&quot;greek&quot;&gt;ἀνά&lt;/lang&gt;; &lt;ab&gt;Goth.&lt;/ab&gt; ana,
+&lt;ab&gt;N.H.G.&lt;/ab&gt; an.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

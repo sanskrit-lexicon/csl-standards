@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -271,6 +272,15 @@
       <bibl xml:id="mw-pwg-pwk-Bikz-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Bikz-record-gra">
         <abbr>SV.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bikz-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Bikz-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bikz-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Bikz-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Bikz-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Bikz-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-Bikz-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -403,6 +413,25 @@ To obtain.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;toužiti, žádati, žebrati&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;страстно желать, требовать, нищенствовать&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;to wish, request, go begging&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Bikz-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">10568</idno>
+        <idno type="line">75436</idno>
+        <idno type="pc">0652-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;10568&lt;pc&gt;0652-b&lt;k1&gt;Bikz&lt;k2&gt;Bikz
+{#Bikz#}¦ {%BHIKṢ%} (for {%bibhakṣ,%} de-
+sider. of {%bhaj%}), i. 1, &lt;ab&gt;Ātm.&lt;/ab&gt; (in epic
+poetry also &lt;ab&gt;Par.&lt;/ab&gt;, &lt;ls&gt;MBh.&lt;/ls&gt; 3, 16986). {@1.@}
+To beg, &lt;ls&gt;Man.&lt;/ls&gt; 2, 184. {@2.@} To solicit
+from, &lt;ls&gt;Man.&lt;/ls&gt; 2, 50 (&lt;ab&gt;acc.&lt;/ab&gt;); 11, 24 (&lt;ab&gt;abl.&lt;/ab&gt;).
+{@3.@} † To obtain. {@4.@} † To fail of ob-
+taining. {@5.@} † To be distressed. {@6.@} †
+To solicit anything through covetous-
+ness(?).
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

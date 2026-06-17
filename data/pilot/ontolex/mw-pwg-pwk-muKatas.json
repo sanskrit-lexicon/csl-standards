@@ -86,6 +86,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#attestation-16"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#attestation-17"
         }
       ],
       "csl:sourceRecord": [
@@ -100,6 +103,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:muKatas",
@@ -311,6 +317,16 @@
       "csl:lineNumber": 46170,
       "csl:pageColumn": "1047",
       "rdf:value": "<L>6869<pc>1047<k1>muKatas<k2>muKata/s\r\n{@mukhatás,@}¦ {%vom Munde her, am Munde%} [múkha]. — yád ‥ (sáptes) rātím gṛbhītā́m 〰 náyanti {162,2}.\r\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "11353",
+      "csl:lineNumber": 81979,
+      "csl:pageColumn": "0711-b",
+      "rdf:value": "<L>11353<pc>0711-b<k1>muKatas<k2>muKatas\r\n{#muKatas#}¦ {%mukha + tas,%} <ab>adv.</ab> From the\r\nmouth, <ls>Nal.</ls> 11, 28.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#attestation-1",
@@ -560,6 +576,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "P.",
       "csl:citedRange": "3,4,61"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#attestation-17",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas"
+      },
+      "frac:evidence": "Nal.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AmuKatas#decomposition",

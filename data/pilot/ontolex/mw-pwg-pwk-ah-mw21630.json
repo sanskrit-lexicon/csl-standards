@@ -200,6 +200,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-33"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-34"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-35"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-36"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-37"
         }
       ],
       "csl:sourceRecord": [
@@ -220,6 +232,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:ah-mw21630",
@@ -816,6 +831,16 @@
       "rdf:value": "<L>808<pc>039<k1>ah<k2>ah\n√ah (pf. āha) \n<div n=\"1\"/>1 <lang n=\"czech\">říkati, mluviti, znamenati, nazývati, pokládati</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">говорить, значить, называть, считать</lang>\n<div n=\"1\"/>3 <lang n=\"english\">to say, speak, signify, call, consider</lang>\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1318",
+      "csl:lineNumber": 8062,
+      "csl:pageColumn": "0066-b",
+      "rdf:value": "<L>1318<pc>0066-b<k1>ah<k2>ah\r\n1. {#ah#}¦ {%AH%} ({%h%} for {%gh;%} <ab>cf.</ab> <ab>Lat.</ab> ad-\r\nag + ium, ajo for agjo, nego; <ab>Goth.</ab>\r\naikan), forms only 2. <ab>sing.</ab> and <ab>du.</ab>, and\r\n3. <ab>sing.</ab> <ab>du.</ab>, and <ab>plur.</ab> of the redupl. <ab>pf.</ab>\r\n{@1.@} To say, speak, <ls>Man.</ls> 9, 47. {@2.@} To\r\nspecify, <ls>Man.</ls> 8, 122. {@3.@} To call, <ls>MBh.</ls>\r\n3, 16065. {@4.@} To pronounce, <ls>Man.</ls> 9, 44.\r\n -- With the <ab>prep.</ab> {#pra#} {%pra,%} {@1.@} To pro-\r\nnounce, <ls>Man.</ls> 9, 45. {@2.@} To say, Ve-\r\ndāntas. in <ls>Chr.</ls> 204, 8. -- With {#prati#}\r\n{%prati,%} To answer. <ls>Hit.</ls> 10, 2. -- <ab>Cf.</ab> <lang n=\"greek\">ἦ</lang> = {%āha.%}\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1325,6 +1350,62 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "VOP. 9,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-34",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630"
+      },
+      "frac:evidence": "Man.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-35",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-36",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#attestation-37",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630"
+      },
+      "frac:evidence": "Hit.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aah-mw21630#root-relation",

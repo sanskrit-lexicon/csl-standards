@@ -203,6 +203,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-48"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-49"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-50"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-51"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-52"
         }
       ],
       "csl:sourceRecord": [
@@ -220,6 +232,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:dAman",
@@ -563,6 +578,16 @@
       "csl:lineNumber": 27337,
       "csl:pageColumn": "0595",
       "rdf:value": "<L>4192<pc>0595<k1>dAman<k2>dAma/n\r\n{@dāmán,@}¦ <ab>m.</ab>, <ab>Instr.</ab> dānā́ für dāmnā́ (wie mahinā́ von mahimán) [von <hom>1.</hom> dā], 1〉 {%Gabe, Freigebigkeit;%} 2〉 persönlich: {%Geber%}.\r\n<div n=\"TS\">-mā́ 2〉 rāyás, matīnáam {485,2}.\r\n<div n=\"TS\">-mā́nam 1〉 {350,2}; {868,8}. — 2〉 {643,2} (agním).\r\n<div n=\"TS\">-nā́ [<ab>I.</ab>] 1〉 {406,14}. _{406,15}; {441,2}; {640,14}; {653,8}(?).\r\n<div n=\"TS\">-mā́nas {641,16}.\r\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "6396",
+      "csl:lineNumber": 45616,
+      "csl:pageColumn": "0395-a",
+      "rdf:value": "<L>6396<pc>0395-a<k1>dAman<k2>dAman\r\n{#dAman#}¦ 3. {%dā + man,%} <ab>n.</ab> A rope,\r\n<ls>MBh.</ls> 1, 6678. {@2.@} A string, <ls>Rām.</ls> 2, \r\n[Page0395-b+ 41]\r\n78, 7. {@3.@} A garland, <ls>Megh.</ls> 89. {@4.@} A\r\nlarge bandage to support parts, <ls>Suśr.</ls>\r\n1, 65, 17. {@ -- <ab>Comp.</ab>@} {%Puṣpa-dāman,%} <ab>n.</ab> a\r\ngarland, Criṅgārat. 10. -- <ab>Cf.</ab> <lang n=\"greek\">δέμα, κρήδεμνον</lang>.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-1",
@@ -1291,6 +1316,62 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "TRIK.",
       "csl:citedRange": "3,5,20"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-49",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-50",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-51",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman"
+      },
+      "frac:evidence": "Megh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#attestation-52",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman"
+      },
+      "frac:evidence": "Suśr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AdAman#lineage-pwk",

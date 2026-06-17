@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -224,6 +225,18 @@
         <abbr>RAGH. 2,53.</abbr>
         <citedRange>2,53</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-trA-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-trA-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-trA-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-trA-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-trA-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-trA-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-trA-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-trA-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-trA-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -384,6 +397,24 @@ also {#trE#}.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;chrániti, přivésti v bezpečí&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;беречь, привести в безопасность&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;to protect, rescue&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-trA-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">6132</idno>
+        <idno type="line">43617</idno>
+        <idno type="pc">0377-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6132&lt;pc&gt;0377-b&lt;k1&gt;trA&lt;k2&gt;trA
+{#trA#}¦ {%TRĀ,%} ii. 2, &lt;ab&gt;Par.&lt;/ab&gt; &lt;ab&gt;Ātm.&lt;/ab&gt;, and {#trE#}
+{%TRAI,%} i. 1, {%trāya%} (&lt;ab&gt;i. e.&lt;/ab&gt; properly {%trā,%} i.
+4), &lt;ab&gt;Ātm.&lt;/ab&gt; To protect, to preserve (with
+the &lt;ab&gt;abl.&lt;/ab&gt;), &lt;ls&gt;MBh.&lt;/ls&gt; 2, 2606. -- With the &lt;ab&gt;prep.&lt;/ab&gt;
+{#pari#} {%pari,%} To protect, &lt;ls&gt;MBh.&lt;/ls&gt; 13, 3600;
+{%paritrāta,%} &lt;ls&gt;Rām.&lt;/ls&gt; 6, 6, 10. -- With {#sam#}
+{%sam,%} To protect, &lt;ls&gt;MBh.&lt;/ls&gt; 1, 6819. -- Akin
+to {%tṝ,%} and for original {%tar + ā.%} 
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

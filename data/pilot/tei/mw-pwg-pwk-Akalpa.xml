@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -120,6 +121,12 @@
         <abbr>KĀD. II,46,19</abbr>
         <citedRange>46,19</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Akalpa-record-ben">
+        <abbr>Daśak.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Akalpa-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Akalpa-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-Akalpa-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -167,6 +174,18 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;13372&lt;pc&gt;1-158-b&lt;k1&gt;Akalpa&lt;k2&gt;Akalpa˚&lt;h&gt;2
 &lt;hom&gt;2.&lt;/hom&gt; {#Akalpa˚#}¦ &lt;lex&gt;Adv.&lt;/lex&gt; = {#Akalpam, ˚sTAyin#} {%bis zum Ende der Welt dauernd%} &lt;ls&gt;KĀD. II,46,19&lt;/ls&gt;.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Akalpa-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">1348</idno>
+        <idno type="line">8280</idno>
+        <idno type="pc">0068-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1348&lt;pc&gt;0068-b&lt;k1&gt;Akalpa&lt;k2&gt;Akalpa
+{#Akalpa#}¦ {%ākalpa,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%ā-kḷp + a,%} &lt;ab&gt;m.&lt;/ab&gt;
+Ornament, &lt;ls&gt;Daśak.&lt;/ls&gt; in &lt;ls&gt;Chr.&lt;/ls&gt; 195, 5.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

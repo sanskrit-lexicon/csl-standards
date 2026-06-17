@@ -59,6 +59,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#attestation-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#attestation-6"
         }
       ],
       "csl:sourceRecord": [
@@ -73,6 +76,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:nirdara",
@@ -298,6 +304,16 @@
       "rdf:value": "<L>16952<pc>0633-a<k1>nirdara<k2>nirdara\n{#nirdara#}¦ {%<ab>a.</ab>%} {@1@} Hard. {@--2@} Pitiless. {@--3@}\nShameless. {#--raH, --nirdariH#} {@1@} A cave,\ncavern. {@--2@} A waterfall, spring. {#--raM#}\nEssence ({#sAra#}).\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "7585",
+      "csl:lineNumber": 55017,
+      "csl:pageColumn": "0479-a",
+      "rdf:value": "<L>7585<pc>0479-a<k1>nirdara<k2>nirdara\r\n{#nirdara#}¦ {%nirdara,%} <ab>i. e.</ab> {%nis-dṝ + a,%} <ab>m.</ab>\r\nA cave, <ls>Rām.</ls> 2, 28, 7.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -372,6 +388,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "R. ed. Bomb.",
       "csl:citedRange": "3,67,5"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#attestation-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirdara#decomposition",

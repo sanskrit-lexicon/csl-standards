@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -87,6 +88,18 @@
       <bibl xml:id="mw-pwg-pwk-aNk-cite-pwg-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aNk-record-pwg">
         <abbr>WEST.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-aNk-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aNk-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aNk-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aNk-record-ben">
+        <abbr>Rājat.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aNk-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aNk-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aNk-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aNk-record-ben">
+        <abbr>Bhartṛ.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-aNk-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -127,6 +140,22 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;867&lt;pc&gt;1-010-c&lt;k1&gt;aNk&lt;k2&gt;*aNk
 *√{#aNk#}¦ {#aNkate#} ({#lakzaRe, gatyAM lakzmaRi#}).
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aNk-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">75</idno>
+        <idno type="line">481</idno>
+        <idno type="pc">0005-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;75&lt;pc&gt;0005-a&lt;k1&gt;aNk&lt;k2&gt;aNk
+{#aNk#}¦ {%AṄK,%} i, 10 (rather a deno-
+minat. derived from {%aṅka%}), &lt;ab&gt;Par.&lt;/ab&gt; and
+i. 1, &lt;ab&gt;Ātm.&lt;/ab&gt; {@1.@} To mark, &lt;ls&gt;Pañc.&lt;/ls&gt; 46, 8.
+{@2.@} To adorn, &lt;ls&gt;Rājat.&lt;/ls&gt; 5, 230. {@3.@} To
+brand, &lt;ls&gt;Man.&lt;/ls&gt; 9, 240. {@4.@} To stigmatise,
+&lt;ls&gt;Bhartṛ.&lt;/ls&gt; 2, 44. {@5.@} † To go.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

@@ -176,6 +176,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#attestation-28"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#attestation-29"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#attestation-30"
         }
       ],
       "csl:sourceRecord": [
@@ -193,6 +199,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:anUpa",
@@ -703,6 +712,16 @@
       "rdf:value": "<L>552<pc>0061<k1>anUpa<k2>anUpa/\r\n{@anūpá,@}¦ <ab>a.</ab>, längs des Wassers gelegen [von ánu und áp]; <ab>m.</ab>, Ufer, {%Wasserbecken%}. [Page62]\r\n<div n=\"TS\">-é {819,9} von der Somakufe.\r\n<div n=\"TS\">-ā́s {853,23}.\r\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "503",
+      "csl:lineNumber": 3065,
+      "csl:pageColumn": "0026-a",
+      "rdf:value": "<L>503<pc>0026-a<k1>anUpa<k2>anUpa\r\n{#anUpa#}¦ {%anūpa,%} <ab>i. e.</ab> {%anu-ap + a,%} {@I.@} <ab>adj.</ab>,\r\n<ab>f.</ab> {%pā,%} Watery, <ls>Man.</ls> 7, 192. {@II.@} <ab>m.</ab> A\r\nshore, <ls>Rām.</ls> 5, 15, 55.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1129,6 +1148,34 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#record-ap90"
       },
       "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#attestation-29",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa"
+      },
+      "frac:evidence": "Man.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#attestation-30",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AanUpa#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

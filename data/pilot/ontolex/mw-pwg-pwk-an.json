@@ -227,6 +227,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-33"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-34"
         }
       ],
       "csl:sourceRecord": [
@@ -247,6 +250,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:an",
@@ -978,6 +984,16 @@
       "rdf:value": "<L>241<pc>019<k1>an<k2>an\n√an aniti, anati\n<div n=\"1\"/>1 <lang n=\"czech\">dýchati</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">дышать</lang>\n<div n=\"1\"/>3 <lang n=\"english\">to breathe</lang>\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "314",
+      "csl:lineNumber": 2062,
+      "csl:pageColumn": "0018-a",
+      "rdf:value": "<L>314<pc>0018-a<k1>an<k2>an\r\n{#an'#}¦ {%an-,%} before consonants {#a'#}\r\n{%a-,%} an inseparable prefix, implying {@I.@}\r\nnegation, e. g. {%a-brāhmaṇa,%} <ab>m.</ab> One who\r\nis not a Brāhmaṇa, <ls>Man.</ls> 7, 85. {%a-jñāna,%}\r\n<ab>n.</ab> Ignorance, <ls>Man.</ls> 11, 145. {%an-anta,%}\r\n<ab>adj.</ab> Endless, <ls>Man.</ls> 4, 149. In this\r\nuse it produces very often the opposite\r\nsignification, e. g. {%a-gada,%} <ab>m.</ab> Health,\r\n<ls>Man.</ls> 11, 237. {%a-krūra,%} <ab>adj.</ab> Soft, <ls>Man.</ls>\r\n2, 34. {%a-sakrit,%} <ab>adv.</ab> Often, <ls>Man.</ls> 3,\r\n233. {@II.@} deterioration. {@1.@} Wrong, e. g.\r\n{%a-kāla,%} <ab>m.</ab> Unseasonable time, <ls>Man.</ls> \r\n[Page0018-b+ 43]\r\n3, 105. {@2.@} Bad, {%a-ksketra,%} <ab>n.</ab> A bad field,\r\n<ls>Man.</ls> 10, 71. -- <ab>Cf.</ab> <ab>Lat.</ab> in-, <ab>Goth.</ab> and\r\n<ab>A.S.</ab> un-, <lang n=\"greek\">ἀν-</lang> and <lang n=\"greek\">ἀ-</lang>.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1490,6 +1506,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "AIT. BR.",
       "csl:citedRange": "4,30"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#attestation-34",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan"
+      },
+      "frac:evidence": "Man.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aan#root-relation",

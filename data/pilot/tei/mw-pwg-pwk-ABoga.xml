@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, GRA, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -29,6 +29,7 @@
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -201,6 +202,21 @@
       <bibl xml:id="mw-pwg-pwk-ABoga-cite-pwk-12" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ABoga-record-pwk">
         <abbr>S. S. S. 120</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-ABoga-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ABoga-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ABoga-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ABoga-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ABoga-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ABoga-record-ben">
+        <abbr>Megh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ABoga-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ABoga-record-ben">
+        <abbr>Śāk.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ABoga-cite-ben-5" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ABoga-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ABoga-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -280,6 +296,23 @@
       <quote xml:space="preserve">&lt;L&gt;1553&lt;pc&gt;0180&lt;k1&gt;ABoga&lt;k2&gt;ABoga/
 {@ābhogá,@}¦ &lt;ab&gt;m.&lt;/ab&gt;, {%Schlange%} [von bhuj, biegen, mit ā́, &lt;ab&gt;vgl.&lt;/ab&gt; bhogá, Windung der Schlange].
 &lt;div n=&quot;TS&quot;&gt;-ám {610,12}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ABoga-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">1596</idno>
+        <idno type="line">9935</idno>
+        <idno type="pc">0082-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1596&lt;pc&gt;0082-a&lt;k1&gt;ABoga&lt;k2&gt;ABoga
+{#ABoga#}¦ {%ābhoga,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%ā-bhuj + a,%} &lt;ab&gt;m.&lt;/ab&gt;
+{@1.@} Crookedness, &lt;ls&gt;MBh.&lt;/ls&gt; 3, 9957; vault,
+&lt;ls&gt;Rām.&lt;/ls&gt; 2, 65, 3; roundness, &lt;ls&gt;Megh.&lt;/ls&gt; 89.
+{@2.@} Fullness, plenty, &lt;ls&gt;Śāk.&lt;/ls&gt; 8, 1. {@3.@} The
+expanded hood of the Cobra capella,
+&lt;ls&gt;MBh.&lt;/ls&gt; 16, 118. {@ -- &lt;ab&gt;Comp.&lt;/ab&gt;@} {%Stana-,%} &lt;ab&gt;m.&lt;/ab&gt; a man
+with a breast like a woman&apos;s.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

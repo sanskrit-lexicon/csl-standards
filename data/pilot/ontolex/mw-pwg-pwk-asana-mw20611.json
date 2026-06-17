@@ -53,6 +53,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-6"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-7"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-8"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-9"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-10"
         }
       ],
       "csl:sourceRecord": [
@@ -67,6 +79,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:asana-mw20611",
@@ -247,6 +262,16 @@
       "rdf:value": "<L>1315<pc>0153<k1>asana<k2>a/sana\r\n{@ásana,@}¦ <ab>n.</ab>, das {%Schleudern, Schiessen%} [von <hom>2.</hom> as].\r\n<div n=\"TS\">-āya {130,4}.\r\n<div n=\"TS\">-e {112,21}.\r\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1290",
+      "csl:lineNumber": 7877,
+      "csl:pageColumn": "0065-a",
+      "rdf:value": "<L>1290<pc>0065-a<k1>asana<k2>asana\r\n{#asana#}¦ 2. {%as + ana.%} {@I.@} <ab>n.</ab> Discharging\r\n(as arrows), <ls>Chr.</ls> 297, 21 = <ls>Rigv.</ls> i. 112, 21.\r\n{@II.@} <ab>m.</ab> The name of a tree, Terminalia\r\nalata tomentosa, <ls>Rām.</ls> 2, 94, 8. {@ -- <ab>Comp.</ab>@}\r\n{%Iṣu-,%} <ab>n.</ab> a bow, <ls>Ragh.</ls> 11, 37. {%Śara-,%}\r\n<ab>n.</ab> a bow.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -336,6 +361,62 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "SUŚR.",
       "csl:citedRange": "1,138,4.2,64,13.68,2"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-7",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-8",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611"
+      },
+      "frac:evidence": "Rigv.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-9",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-10",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611"
+      },
+      "frac:evidence": "Ragh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#continuation-relation",

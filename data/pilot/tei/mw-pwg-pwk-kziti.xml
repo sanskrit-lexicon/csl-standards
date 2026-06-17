@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -231,6 +232,15 @@
       <bibl xml:id="mw-pwg-pwk-kziti-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-kziti-record-gra">
         <abbr>AV.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-kziti-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-kziti-record-ben">
+        <abbr>Bhāg. P.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kziti-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-kziti-record-ben">
+        <abbr>Bhartṛ.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-kziti-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-kziti-record-ben">
+        <abbr>Rājat.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-kziti-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -331,6 +341,19 @@ I kṣiti f.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;sídlo, země; pl. osady, lidé, kmen&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;место жительства, земля; pl. поселки, люди, племя&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;an abode, earth; pl. settlements, men, tribe&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-kziti-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">4056</idno>
+        <idno type="line">27766</idno>
+        <idno type="pc">0237-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4056&lt;pc&gt;0237-a&lt;k1&gt;kziti&lt;k2&gt;kziti
+{#kziti#}¦ 1. {%kṣi + ti,%} &lt;ab&gt;f.&lt;/ab&gt; {@1.@} An abode,
+&lt;ls&gt;Bhāg. P.&lt;/ls&gt; 4, 9, 5. {@2.@} The earth,
+&lt;ls&gt;Bhartṛ.&lt;/ls&gt; 3, 5. {@3.@} Land, &lt;ls&gt;Rājat.&lt;/ls&gt; 5, 109.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

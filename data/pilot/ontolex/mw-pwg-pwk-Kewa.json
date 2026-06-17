@@ -215,6 +215,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#attestation-36"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#attestation-37"
         }
       ],
       "csl:sourceRecord": [
@@ -229,6 +232,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Kewa",
@@ -787,6 +793,16 @@
       "rdf:value": "<L>12198<pc>0445-b<k1>Kewa<k2>Kewa\n{#Kewa#}¦ {%<ab>a.</ab>%} [{#Ke awati, aw ac; Kiw-ac#}\n{#vA#}] Having a weapon, armed. {#--waH#}\n{@1@} A village, small town or hamlet.\n{@--2@} Phlegm. {@--3@} The club of <lbinfo n=\"Bala+rāma\"/>\nBalarāma. {@--4@} A horse. {#--waH, --waM#} {@1@} <lbinfo n=\"Hunt+ing\"/>\nHunting, chase. {@--2@} A shield. {#--waM#} {@1@}\nGrass. {@--2@} Hide, skin. ({%<ab>N. B.</ab>%} At the\nend of <ab>comp.</ab> {#Kewa#} expresses <lbinfo n=\"‘de+fectiveness\"/>\n‘defectiveness’ or ‘deterioration’, & may\nbe rendered by ‘miserable’, ‘low’,\n‘vile’, ‘wretched’ &c.; {#nagaraKewaM#} a\nmiserable town.)\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "4246",
+      "csl:lineNumber": 28961,
+      "csl:pageColumn": "0247-a",
+      "rdf:value": "<L>4246<pc>0247-a<k1>Kewa<k2>Kewa\r\n{#Kewa#}¦ {%kheṭa,%} <ab>m.</ab> A village, <ls>MBh.</ls> 3,\r\n13220.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1322,6 +1338,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "BHĀR. NĀṬYAŚ.",
       "csl:citedRange": "34,109"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#attestation-37",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AKewa#decomposition",

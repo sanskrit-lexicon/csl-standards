@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -227,6 +228,21 @@
         <abbr>PRASANNAR. 77,16</abbr>
         <citedRange>77,16</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-maRq-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-maRq-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-maRq-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-maRq-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-maRq-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-maRq-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-maRq-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-maRq-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-maRq-cite-ben-5" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-maRq-record-ben">
+        <abbr>Nal.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-maRq-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -301,6 +317,27 @@
 &lt;div n=&quot;1&quot;&gt;— 3〉 *{#harze#}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#pari#}, {#˚maRqita#} {%rings herum geschmückt%}.
 &lt;div n=&quot;p&quot;&gt;— Mit {#prati#}. {#˚maRqita#} {%geschmückt%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-maRq-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">10843</idno>
+        <idno type="line">77985</idno>
+        <idno type="pc">0676-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;10843&lt;pc&gt;0676-b&lt;k1&gt;maRq&lt;k2&gt;maRq
+{#maRq#}¦ {%MAṆḌ%} (akin to {%mad, mand,%}
+probably a &lt;ab&gt;denomin.&lt;/ab&gt; based on a lost
+signification of {%mandra%}), † i. 1, &lt;ab&gt;Ātm.&lt;/ab&gt;
+{@1.@} To dress. {@2.@} To divide. † i. 1,
+&lt;ab&gt;Par.&lt;/ab&gt; To adorn one&apos;s self. i. 10, &lt;ab&gt;Par.&lt;/ab&gt;
+(in epic poetry also &lt;ab&gt;Ātm.&lt;/ab&gt;, &lt;ls&gt;MBh.&lt;/ls&gt; 1,
+7572), {@1.@} To adorn, &lt;ls&gt;Pañc.&lt;/ls&gt; 255, 16.
+{@2.@} † To exhilarate. &lt;ab&gt;Ptcple.&lt;/ab&gt; of the &lt;ab&gt;pf.&lt;/ab&gt;
+&lt;ab&gt;pass.&lt;/ab&gt; {%maṇḍita,%} Adorned, &lt;ls&gt;Chr.&lt;/ls&gt; 29, 31;
+&lt;ls&gt;Pañc.&lt;/ls&gt; 51, 15. {@&lt;ab&gt;Comp.&lt;/ab&gt;@} {%A-,%} &lt;ab&gt;adj.&lt;/ab&gt; not
+adorned, &lt;ls&gt;Nal.&lt;/ls&gt; 16, 17.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

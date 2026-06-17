@@ -74,6 +74,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-11"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-12"
         }
       ],
       "csl:sourceRecord": [
@@ -88,6 +91,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aNg-mw1492",
@@ -317,6 +323,16 @@
       "rdf:value": "<L>132<pc>0013<k1>aNg<k2>aNg\r\n{@[√aṅg],@}¦ {%gehen, sich bewegen,%} <ab>Caus.</ab> <ab>m.</ab> pali, {%umrühren,%} im <ab>pass.</ab> {%sich drehen%} (<ls>Śat. Br.</ls>). Davon áṅga, áṅgiras; und Wurzel iṅg.\r\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "83",
+      "csl:lineNumber": 546,
+      "csl:pageColumn": "0005-b",
+      "rdf:value": "<L>83<pc>0005-b<k1>aNg<k2>aNg\r\n{#aNg#}¦ {%AṄG,%} i. 1, <ab>Par.</ab> and † i. 10,\r\n<ab>Par.</ab> {@1.@} To go, <ls>Nalod.</ls> 1, 23. {@2.@} † i.\r\n10, To mark. -- With the prepos. {#pali#}\r\n{%pali%} for {#pari#} {%pari,%} <ab>Caus.</ab> To stir up.\r\n<ab>Pass.</ab> To go round. -- With {#vipali#}\r\n{%vi-pali,%} <ab>Caus.</ab> <ab>Ātm.</ab> To cover one's self.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -483,6 +499,20 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-gra"
       },
       "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#attestation-12",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492"
+      },
+      "frac:evidence": "Nalod.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaNg-mw1492#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -249,6 +250,24 @@
       <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ap90-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ap90">
         <abbr>Dk. 38</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ben">
+        <abbr>Daśak.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ben-5" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aw-mw2337-cite-ben-6" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aw-mw2337-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-aw-mw2337-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -355,6 +374,23 @@ habitually, as a religious mendicant.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;choditi sem tam, potulovati se&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;ходить туда-сюда, бродить&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;to wander about, roam&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aw-mw2337-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">143</idno>
+        <idno type="line">988</idno>
+        <idno type="pc">0009-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;143&lt;pc&gt;0009-b&lt;k1&gt;aw&lt;k2&gt;aw
+{#aw#}¦ {%AṬ,%} i. 1, &lt;ab&gt;Par.&lt;/ab&gt; (in epic poetry
+also &lt;ab&gt;Ātm.&lt;/ab&gt;, &lt;ls&gt;MBh.&lt;/ls&gt; 3, 1586), To roam,
+with the &lt;ab&gt;loc.&lt;/ab&gt; and &lt;ab&gt;acc.&lt;/ab&gt; &lt;ls&gt;MBh.&lt;/ls&gt; 1, 1031;
+&lt;ls&gt;Daśak.&lt;/ls&gt; in &lt;ls&gt;Chr.&lt;/ls&gt; 179, 6. -- With the pre-
+position {#pari#} {%pari,%} To wander about,
+&lt;ls&gt;Pañc.&lt;/ls&gt; 55, 1. {%Puryaṭita,%} &lt;ab&gt;n.&lt;/ab&gt; Wander-
+ing about, &lt;ls&gt;Pañc.&lt;/ls&gt; 70, 12.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

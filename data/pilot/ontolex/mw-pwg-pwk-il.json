@@ -149,6 +149,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#attestation-28"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#attestation-29"
         }
       ],
       "csl:sourceRecord": [
@@ -163,6 +166,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:il",
@@ -510,6 +516,16 @@
       "csl:lineNumber": 65215,
       "csl:pageColumn": "0280-b",
       "rdf:value": "<L>7420<pc>0280-b<k1>il<k2>il\n{#il#}¦ {c6c} <ab>P.</ab> ({#ilati, iyela, ElIt, elituM#},\n{#ilita#}) or {c10c} <ab>U.</ab> ({#ilayati#} or {#elayati#}, <lbinfo n=\"Ela#yIt\"/>\n{#ElayIt#} or {#Elilat#}). {@1@} To go, to move. {@--2@}\nTo sleep. {@--3@} To throw, send, cast. {@--4@}\nTo keep still, not to move. {@--5@} To\nbecome quiet. [<ab>cf.</ab> <ab>Germ.</ab> {%Eile%}, <ab>Gr.</ab>\n{%elao%}].\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1883",
+      "csl:lineNumber": 12137,
+      "csl:pageColumn": "0101-a",
+      "rdf:value": "<L>1883<pc>0101-a<k1>il<k2>il\r\n{#il#}¦ {%IL,%} i. 6, <ab>Par.</ab> {@1.@} To sleep. {@2.@} \r\n[Page0101-b+ 44]\r\nTo go, <ls>Hariv.</ls> 620. † {@3.@} To throw; in\r\nthis signification also i. 10, <ab>Par.</ab>\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#attestation-1",
@@ -932,6 +948,20 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#record-mw"
       },
       "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#attestation-29",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail"
+      },
+      "frac:evidence": "Hariv.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Ail#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

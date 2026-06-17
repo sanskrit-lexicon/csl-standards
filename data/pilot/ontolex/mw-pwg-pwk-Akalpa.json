@@ -86,6 +86,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#attestation-16"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#attestation-17"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#attestation-18"
         }
       ],
       "csl:sourceRecord": [
@@ -97,6 +103,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Akalpa",
@@ -280,6 +289,16 @@
       "csl:lineNumber": 50446,
       "csl:pageColumn": "1-158-b",
       "rdf:value": "<L>13372<pc>1-158-b<k1>Akalpa<k2>Akalpa˚<h>2\n<hom>2.</hom> {#Akalpa˚#}¦ <lex>Adv.</lex> = {#Akalpam, ˚sTAyin#} {%bis zum Ende der Welt dauernd%} <ls>KĀD. II,46,19</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1348",
+      "csl:lineNumber": 8280,
+      "csl:pageColumn": "0068-b",
+      "rdf:value": "<L>1348<pc>0068-b<k1>Akalpa<k2>Akalpa\r\n{#Akalpa#}¦ {%ākalpa,%} <ab>i. e.</ab> {%ā-kḷp + a,%} <ab>m.</ab>\r\nOrnament, <ls>Daśak.</ls> in <ls>Chr.</ls> 195, 5.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#attestation-1",
@@ -524,6 +543,34 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "KĀD. II",
       "csl:citedRange": "46,19"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#attestation-17",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa"
+      },
+      "frac:evidence": "Daśak.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#attestation-18",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAkalpa#lineage-pwk",

@@ -50,6 +50,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-6"
         }
       ],
       "csl:sourceRecord": [
@@ -61,6 +73,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aYc",
@@ -277,6 +292,16 @@
       "rdf:value": "<L>1424<pc>1-017-b<k1>aYc<k2>˚aYc<h>2\n<hom>2.</hom> {#˚aYc#}¦ <lex>Adj.</lex> ({%gebogen%}) {%gerichtet nach, zu%}.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "135",
+      "csl:lineNumber": 888,
+      "csl:pageColumn": "0008-b",
+      "rdf:value": "<L>135<pc>0008-b<k1>aYc<k2>aYc\r\n{#aYc#}¦ {%AÑC%} (<ab>cf.</ab> {%aṅka%}), i. 1, <ab>Par.</ab>\r\n<ab>Ātm.</ab> {@1.@} To go. {@2.@} To ask. {@3.@} To speak\r\nindistiṅctly. {@4.@} To bend, to curve,\r\n<ls>Nal.</ls> 12, 45. {@5.@} To honour, <ls>Ragh.</ls> 9,\r\n24. {@6.@} i. 10 (rather <ab>Caus.</ab>). To make\r\nclear, to manifest, <ls>Gīt.</ls> 10, 11. -- With\r\nthe <ab>prep.</ab> {#ud#} {%ud,%} To rise, <ls>Rājat.</ls> 5, 362.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -305,6 +330,62 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "P.",
       "csl:citedRange": "3,2,59"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc"
+      },
+      "frac:evidence": "Nal.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc"
+      },
+      "frac:evidence": "Ragh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc"
+      },
+      "frac:evidence": "Gīt.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#attestation-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc"
+      },
+      "frac:evidence": "Rājat.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaYc#root-relation",
