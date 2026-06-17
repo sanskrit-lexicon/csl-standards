@@ -4,36 +4,65 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
-## [Unreleased]
+## [0.8.0] - 2026-06-17
+
+**The optional-dictionary layer.** A registry makes adding a dictionary beyond the
+MW/PWG/PWK tri-dict a one-line change; three optional dictionaries — **Apte 1890
+(AP90)**, **Grassmann's Rig-Veda Wörterbuch (GRA)**, and the **Frish Sanskrit Reader
+(FRI)** — are now woven across **all four profiles** (OntoLex, archival TEI, TEI
+Lex-0, and the loss corpus), with sense extraction and sense-level citation linkage.
+This release also adds the project's first test suite, three worked end-to-end
+demos, a referenced paper draft, and a license.
 
 ### Added
-- **Dictionaries beyond the MW/PWG/PWK tri-dict, via a registry.** A new
+- **Dictionary registry + three optional dictionaries.** A new
   [scripts/lib/dictionaries.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/dictionaries.mjs)
-  registry makes adding a dictionary a one-line change. Two optional dictionaries
-  are now attached on the OntoLex/semantic side: **Apte 1890 (AP90, 133/250 cases)**
-  and **Grassmann's Rig-Veda Wörterbuch (GRA, 109/250)**. Each is attached by
-  [sample-hard-cases](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/sample-hard-cases.mjs)
-  to cases whose headword it shares — *after* selection, so the 250 chosen cases are
-  unchanged — and enters the neutral model and the OntoLex graph as an extra
-  `csl:SourceRecord` with evidence-class-typed attestations from its named citations
-  (AP90 385 + GRA 64 materialised). The SHACL `csl:sourceRecord` shape and the
-  validator relax from "exactly 3" to "≥ 3"; a five-source graph conforms under
-  pySHACL. `analyze-loss` reports `recordsPresent` and citation counts per
-  dictionary. See
-  [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §5.
-- **Optional dictionaries woven into the archival TEI and the loss corpus.** The
-  archival TEI exporter now emits one source-entry, taxonomy category, and citation
-  block per dictionary *present* for a case (`presentDicts`, mirroring the OntoLex
-  exporter) — 165 cases (AP90 ∪ GRA) gain a 4th/5th source-entry; tri-dict-only
-  files stay byte-identical. `validate-tei-profile` relaxes from "exactly 3" to one
-  source-entry/quote per present dictionary, with the mw/pwg/pwk backbone required.
-  The published loss corpus now also includes the optional dictionaries' evidence:
-  their named citations generate the same evidence-class (kośa / editorial /
-  coordinate) `model-vocabulary-gap` reports, added as an additive family that
-  leaves the tri-dict reports byte-identical — corpus **1277 → 1361** (AP90 73,
-  GRA 11); `extensionCoverage` **569 → 653 of 653** (still fully covered). **TEI
-  Lex-0** stays the normalized tri-dict baseline by design, and the **PWG→PWK→MW
-  lineage** family is unchanged.
+  makes adding a dictionary a one-line edit (`OPTIONAL_DICTS` + label/dir/file). The
+  sampler attaches an optional dictionary to cases that share its `<k1>` headword
+  *after* selection, so the 250 chosen cases never change. Attach coverage: **AP90
+  133/250, GRA 109/250, FRI 87/250**.
+- **Woven across all four profiles.** Each optional dictionary enters the **OntoLex**
+  graph (a `csl:SourceRecord` + evidence-class-typed `frac:Attestation`s), the
+  **archival TEI** (a per-present-dict source-entry, taxonomy category, and citation
+  block via `presentDicts`; tri-dict-only files stay byte-identical), **TEI Lex-0**
+  (entry-level `<bibl>` citations with a `sourceDesc` `listBibl` declaration so the
+  `#dict-…` pointers resolve), and the **loss corpus** (their named citations
+  generate the same evidence-class reports as the backbone, added additively). The
+  SHACL shape and validators relax from "exactly 3" to one-per-present-dict with the
+  mw/pwg/pwk backbone required; five- and six-source graphs conform under pySHACL.
+  Corpus **1277 → 1361** reports; `extensionCoverage` **569 → 653 of 653** (still
+  fully covered). The **PWG→PWK→MW lineage** family is unchanged.
+- **Senses for the optional dictionaries.** New extractors give each optional
+  dictionary its senses: **FRI** is trilingual (Czech / Russian / English), surfaced
+  in OntoLex as one `skos:definition` literal per language
+  ([fri-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/fri-senses.mjs));
+  **AP90** parses Apte's dense English glosses
+  ([ap90-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/ap90-senses.mjs));
+  **GRA** reuses the German `{%…%}` Petersburg extractor. Sense coverage: AP90
+  126/133, GRA 91/109, FRI 80/87. AP90 and GRA citations link to the specific sense
+  they attest (sense-level attestations in OntoLex).
+- **First test suite.** `npm test` runs a zero-dependency `node:test` suite over the
+  shared parsers (citations, evidence, dictionaries, mw/pw/fri/ap90 sense
+  extractors): **46 tests**.
+- **Three worked end-to-end demos.**
+  [docs/DEMO.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/DEMO.md)
+  traces three contrasting cases through every pipeline stage, spanning the three
+  loss axes: **√ac** (evidence — a 5-source verbal root), **annavid** (derivation —
+  a compound), and **āyana** (print compression — a suppressed-headword
+  continuation).
+- **License and citation.** `LICENSE` (the full CC-BY-SA-4.0 legal code, matching
+  the `package.json` declaration) and a `CITATION.cff`.
+
+### Changed
+- **PAPER.md gains a verified bibliography.** A References section lists the
+  standards, tools, and secondary literature the work builds on — each verified
+  against its publisher/repository, none fabricated — including OntoLex-Lemon
+  (McCrae et al. 2011), OntoLex-FrAC (Chiarcos et al. 2022), TEI Lex-0 Etym, and,
+  for the §2 Sanskrit prior-work claims, Steiner (2020, ZDMG) on the MW–Petersburg
+  lineage and Funderburk & Malten (2008) on MW's markup.
+- **Docs consistency hardening.** All current-state figures regenerated to the 1361
+  corpus across LOSS_ANALYSIS / EXTENSION_PROPOSAL / PAPER / README; dead links
+  fixed (a relative-link audit confirms all resolve); stale counts corrected.
 
 ## [0.7.0] - 2026-06-16
 
