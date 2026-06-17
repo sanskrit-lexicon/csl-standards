@@ -34,6 +34,7 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-pwk-4> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-pwk-5> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-2> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-fri-1> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#record-pwg> ;
@@ -132,7 +133,12 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1> a ontolex:LexicalSense ;
   ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa> ;
   csl:sourceDictionary "gra" ;
-  skos:definition "{{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}}te; aus {{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}} bestehend, {{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}} Bestandtheile enthaltend"@de .
+  skos:definition "{{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}}te"@de .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa> ;
+  csl:sourceDictionary "gra" ;
+  skos:definition "aus {{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}} bestehend, {{funfzehn->fünfzehn||20160606|Unknown, Jim Funderburk||The 'funf' spelling occurs in two other headwords also, and was similarly changed.}} Bestandtheile enthaltend"@de .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-fri-1> a ontolex:LexicalSense ;
   ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa> ;
@@ -180,7 +186,7 @@
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#lexentry-gra> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa> ;
-  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1> .
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#sense-gra-2> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa#lexentry-fri> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ApaYcadaSa> ;
