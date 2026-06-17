@@ -39,6 +39,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-ben-1"
         }
       ],
       "frac:attestation": [
@@ -152,6 +155,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#resource-ben",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#lexentry-ben"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -193,6 +205,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-pwk-3"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#lexentry-ben",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-ben-1"
         }
       ]
     },
@@ -267,6 +291,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-ben-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
+      },
+      "skos:definition": {
+        "@value": "A stove, in",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-mw",
@@ -448,13 +484,13 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-10",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-ben-1"
       },
-      "frac:evidence": "RATNAM.",
+      "frac:evidence": "Daśak.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben"
       },
-      "csl:sourceDictionary": "pwg",
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },
@@ -462,13 +498,13 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-11",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#sense-ben-1"
       },
-      "frac:evidence": "ŚKDR.",
+      "frac:evidence": "Chr.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben"
       },
-      "csl:sourceDictionary": "pwg",
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },
@@ -478,7 +514,7 @@
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
       },
-      "frac:evidence": "RĀJAN. ebend.",
+      "frac:evidence": "RATNAM.",
       "prov:wasDerivedFrom": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg"
       },
@@ -492,15 +528,13 @@
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
       },
-      "frac:evidence": "SUŚR. 1,93,15. 376,11. 377,13. 2,52,19.",
+      "frac:evidence": "ŚKDR.",
       "prov:wasDerivedFrom": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg"
       },
       "csl:sourceDictionary": "pwg",
       "csl:evidenceType": "named-source-citation",
-      "csl:evidenceClass": "textual",
-      "csl:citedWork": "SUŚR.",
-      "csl:citedRange": "1,93,15.376,11.377,13.2,52,19"
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#attestation-14",
@@ -508,11 +542,11 @@
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
       },
-      "frac:evidence": "Daśak.",
+      "frac:evidence": "RĀJAN. ebend.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg"
       },
-      "csl:sourceDictionary": "ben",
+      "csl:sourceDictionary": "pwg",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },
@@ -522,13 +556,15 @@
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka"
       },
-      "frac:evidence": "Chr.",
+      "frac:evidence": "SUŚR. 1,93,15. 376,11. 377,13. 2,52,19.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-ben"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#record-pwg"
       },
-      "csl:sourceDictionary": "ben",
+      "csl:sourceDictionary": "pwg",
       "csl:evidenceType": "named-source-citation",
-      "csl:evidenceClass": "textual"
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "SUŚR.",
+      "csl:citedRange": "1,93,15.376,11.377,13.2,52,19"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaSmantaka#lineage-pwk",
