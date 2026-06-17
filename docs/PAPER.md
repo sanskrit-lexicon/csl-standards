@@ -62,12 +62,18 @@ not sketches but running, validated code over the full sample.
 
 The primary data derive from the digitized editions maintained by the Cologne
 Digital Sanskrit Dictionaries (CDSL) project. CDSL provides invaluable digitized
-XML, but its encoding schemas remain highly project-specific. Prior microanalysis
-of MW has highlighted structural idioms such as the `L.` (*lexicographer-only*)
-hedge, which functions as an evidential marker rather than a bibliographic
-citation. Studies of the MW–PWG–PWK lineage have shown how PWG's expansive named
-apparatus of *kośa* citations was systematically compressed in PWK and
-re-interpreted in MW.
+XML, but its encoding schemas remain highly project-specific; the digitization of
+MW analysed its markup of literary sources and lexical apparatus in detail
+(Funderburk & Malten, 2008). Among MW's structural idioms, the `L.` marker is
+explicitly evidential rather than bibliographic: Monier-Williams glosses it as
+*"lexicographers"* — "a word or meaning which, although given in native lexicons,
+has not yet been met with in any published text" (Monier-Williams, 1899) — so it
+records that a word's only attestation is the indigenous lexicon tradition. The
+MW–Petersburg lineage is likewise well established: Steiner (2020) demonstrates
+Monier-Williams's substantial reliance on Böhtlingk–Roth for meanings, revising
+earlier assessments of MW's semantic independence. The compression of PWG's
+expansive named *kośa* apparatus through PWK into MW is thus an editorial lineage
+this paper measures directly.
 
 On the standards side we evaluate the TEI dictionaries module, which models the
 physical and editorial structure of the text, alongside OntoLex-Lemon (McCrae,
@@ -380,6 +386,8 @@ specification.
 - McCrae, J., Spohr, D. & Cimiano, P. (2011). Linking Lexical Resources and Ontologies on the Semantic Web with Lemon. In *The Semantic Web: Research and Applications (ESWC 2011)*, LNCS 6643, pp. 245–259. <https://doi.org/10.1007/978-3-642-21034-1_17>
 - Chiarcos, C., Apostol, E.-S., Kabashi, B. & Truică, C.-O. (2022). Modelling Frequency, Attestation, and Corpus-Based Information with OntoLex-FrAC. In *Proceedings of COLING 2022*, pp. 4018–4027. <https://aclanthology.org/2022.coling-1.353/>
 - Bowers, J., Herold, A. & Romary, L. TEI Lex-0 Etym: Toward Terse Recommendations for the Encoding of Etymological Information (DARIAH-EU / ELEXIS "Lexical Resources" Working Group). <https://www.researchgate.net/publication/363754091>
+- Steiner, R. (2020). On the character of Monier-Williams' Sanskrit-English Dictionary. *Zeitschrift der Deutschen Morgenländischen Gesellschaft* 170(1), pp. 107–117.
+- Funderburk, J. & Malten, T. (2008). Marking Monier: Current state of the digitized Monier-Williams Dictionary. Cologne Digital Sanskrit Dictionaries. <https://www.sanskrit-lexicon.uni-koeln.de/talkMay2008/markingMonier.html>
 
 **Standards and specifications**
 
