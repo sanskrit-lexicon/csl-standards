@@ -27,6 +27,16 @@ test("Sanskrit forms, class markers, and citations do not leak into the gloss", 
   assert.ok(!/acati|c1c|q\. v\.|aMc/.test(def));
 });
 
+test("a sense carries the <ls> citations within its segment, tagged ap90", () => {
+  const raw = '<L>1<k1>x<k2>x {#x#}¦ <ab>P.</ab> {@1@} To bend <ls>Bk. 3. 25</ls>, <ls n="Bk.">4. 4</ls>. {@--2@} To send. <LEND>';
+  const senses = extractAp90Senses(raw);
+  assert.equal(senses[0].def, "To bend");
+  assert.equal(senses[0].citations[0].source, "Bk. 3. 25");
+  assert.equal(senses[0].citations[0].dictionary, "ap90");
+  assert.equal(senses[0].citations[1].inheritedFrom, "Bk.");
+  assert.ok(!("citations" in senses[1]), "a sense with no <ls> carries no citations key");
+});
+
 test("empty input yields no senses", () => {
   assert.deepEqual(extractAp90Senses(""), []);
   assert.deepEqual(extractAp90Senses(null), []);
