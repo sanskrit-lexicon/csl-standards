@@ -5,14 +5,16 @@ import { extractMwSenses } from "./lib/mw-senses.mjs";
 import { extractPwSenses } from "./lib/pw-senses.mjs";
 import { extractFriSenses } from "./lib/fri-senses.mjs";
 import { extractAp90Senses } from "./lib/ap90-senses.mjs";
+import { extractGraSenses } from "./lib/gra-senses.mjs";
 
 // Per-dictionary sense extractor for the optional dictionaries. GRA (Grassmann)
-// glosses in German {%…%} blocks like the Petersburg dictionaries, so it reuses
-// that extractor; AP90 (Apte) and FRI have their own; ap90/gra/fri are the only
-// optional dicts with a sense extractor.
+// glosses in German {%…%} blocks like the Petersburg dictionaries, but numbers
+// his sub-senses inline (1〉/2〉) — extractGraSenses splits on that run and falls
+// back to the Petersburg extractor for un-numbered entries. AP90 (Apte) and FRI
+// have their own; ap90/gra/fri are the only optional dicts with a sense extractor.
 const OPTIONAL_SENSE_EXTRACTOR = {
   ap90: raw => extractAp90Senses(raw),
-  gra: raw => extractPwSenses(raw, "gra"),
+  gra: raw => extractGraSenses(raw),
   fri: raw => extractFriSenses(raw)
 };
 import { ALL_DICTS, OPTIONAL_DICTS } from "./lib/dictionaries.mjs";
