@@ -192,7 +192,7 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
    [`LOSS_ANALYSIS.md`](LOSS_ANALYSIS.md) §4a.
 4. **Partly done:** the neutral model now materializes every `<ls>` named source
    across MW/PWG/PWK as `named-source-citation` objects tagged with their
-   dictionary (2501 of them, capped at 12 per dictionary), and the Lex-0 export
+   dictionary (2617 of them, capped at 12 per dictionary), and the Lex-0 export
    emits them as entry-level `<bibl type="named-source" source="#dict-…">` — so a
    Western lemma uncited in MW (e.g. *arcya*) now carries PWG's named apparatus.
    The `<ls>` parser is now shared across the three generators
