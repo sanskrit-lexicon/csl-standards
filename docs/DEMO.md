@@ -1,13 +1,14 @@
-# Demo: two hard cases, end to end
+# Demo: three hard cases, end to end
 
 This is a guided walkthrough of single entries as they move through the whole
 workbench: the raw CDSL dictionary records → the dictionary-neutral model → the
 TEI archival and OntoLex/FrAC profiles → the loss reports that record what each
 standard cannot hold → the `csl:` extension constructs that answer them.
 
-Two contrasting cases are traced in full: a **verbal root** (√ac) and a
-**compound** (*annavid*). Read the first for the complete stage-by-stage tour; the
-second is tighter and highlights what is *different* about a compound.
+Three contrasting cases are traced: a **verbal root** (√ac), a **compound**
+(*annavid*), and a **continuation / suppressed-headword entry** (*āyana*). Read the
+first for the complete stage-by-stage tour; the second and third are tighter and
+highlight what is *different* about a compound and about print compression.
 
 Everything below is quoted from regenerable artifacts (`npm run build-pilot`); the
 file links point at the exact outputs. The case is
@@ -254,16 +255,88 @@ flattened to one "winner".
 
 ---
 
+# A third case — the suppressed headword *āyana*
+
+The third loss family is **print compression**: a dictionary that, to save column
+space, *suppresses* an entry, leaving its content to be recovered from its
+neighbours. The case is the tri-dict (plus GRA) entry
+[`mw-pwg-pwk:Ayana`](../data/pilot/neutral-model.json). What MW prints for *āyana*
+is not an entry at all — it is a bare pointer:
+
+```
+[mw  L=25763] Ayana <k2>Ayana <e>1A ¦ (for 1. Āyana See under Aya.)  <info lex="inh"/>
+[pwg L=9024 ] Ā/yana (von i mit ā) n. {%das Kommen%}  <ls>ṚV. 10,142,8.</ls> <ls>VS. 22,7.</ls> <ls>AV. 6,122,2.</ls>
+[pwk L=15295] 2. Āyana Adj. {%zum Solstitium in Beziehung stehend%}.
+```
+
+MW gives no gloss and no citation — only *"for 1. Āyana, see under Aya"* and an
+`<info lex="inh"/>` flag marking the headword as **inherited** (a run-on
+continuation in the printed page). PWG, by contrast, carries the full entry: the
+derivation (√i with the prefix *ā-*, "to come"), the gloss *das Kommen* ("the
+coming"), and three Vedic attestations. PWK records a different homonym entirely —
+*āyana* "relating to the solstice" (the sun's *ayana*, its course). Three
+dictionaries, three resolutions, and the one that "owns" the headword in the
+Cologne keying (MW) is the one that says the least.
+
+## How the suppression is modeled
+
+The neutral model records the continuation as a relation, not a fact:
+
+```jsonc
+"relations": [{ "type": "adjacency-continuation-parent", "eCode": "1A" }]
+```
+
+TEI preserves MW's pointer as a cross-reference whose `@subtype` is honest about
+its epistemic status — the parent is **conjectured** (the entry-code is known, the
+parent lemma is *not* asserted as if printed):
+
+```xml
+<xr xml:id="mw-pwg-pwk-Ayana-continuation-relation"
+    type="adjacency-continuation-parent" subtype="conjectured">
+  <ref target="#e-1A">MW e=1A</ref>
+</xr>
+```
+
+OntoLex makes the recovery status a first-class, queryable property — the §4
+construct of the extension proposal:
+
+```jsonc
+{ "@type": "csl:ContinuationRelation", "csl:mwECode": "1A",
+  "csl:recoveryStatus": "conjectured",
+  "csl:modelingNote": "Continuation parent must be recovered from MW adjacency before semantic assertion." }
+```
+
+## The five loss reports
+
+| target | phenomenon | cause | status | answered by |
+|---|---|---|---|---|
+| tei | continuation-parent | print-compression | partial | `<xr>` `@subtype="conjectured"` (pointer kept, parent layout-derived) |
+| ontolex | continuation-parent | print-compression | **lossy** | `csl:ContinuationRelation` + `csl:recoveryStatus` |
+| neutral | source-collapse | editorial-compression | lossy | `csl:LineageRelation (recomposition)` — PWG attests, MW carries none |
+| neutral | source-collapse | editorial-compression | lossy | `csl:LineageRelation (abridgement)` — PWG 3 citations → PWK 0 |
+| ontolex | citation-coordinate | model-vocabulary-gap | partial | `csl:citedWork` + `csl:citedRange` (ṚV. / VS. / AV.) |
+
+The lesson of this case is *epistemic honesty under compression*. A naive
+conversion would either drop MW's contentless entry or silently invent a parent;
+the workbench does neither. It keeps the pointer, **marks the recovery as
+`conjectured`** rather than asserted, and records the three Vedic attestations PWG
+preserved (`ṚV. 10,142,8`, `VS. 22,7`, `AV. 6,122,2`) that MW's suppression and
+PWK's homonym both lost. Print compression is not a modelling gap in the standards
+— TEI and OntoLex *can* hold the entry — so the remedy is a relation that states
+exactly how much was recovered and how much remains conjecture.
+
+---
+
 ## Reproduce it
 
 ```sh
 npm run build-pilot          # regenerate every artifact below
 
-# then inspect either case (swap the id):
-node -e "console.log(require('./data/pilot/neutral-model.json').find(x=>x.id==='mw-pwg-pwk:ac'))"
-cat data/pilot/tei/mw-pwg-pwk-ac.xml
-cat data/pilot/ontolex/mw-pwg-pwk-ac.json
-node -e "console.log(require('./data/pilot/loss-reports.json').filter(x=>x.caseId==='mw-pwg-pwk:annavid'))"
+# then inspect any case (swap the id: ac / annavid / Ayana):
+node -e "console.log(require('./data/pilot/neutral-model.json').find(x=>x.id==='mw-pwg-pwk:Ayana'))"
+cat data/pilot/tei/mw-pwg-pwk-Ayana.xml
+cat data/pilot/ontolex/mw-pwg-pwk-Ayana.json
+node -e "console.log(require('./data/pilot/loss-reports.json').filter(x=>x.caseId==='mw-pwg-pwk:Ayana'))"
 ```
 
-Every number and fragment in both walkthroughs comes straight from those files.
+Every number and fragment in all three walkthroughs comes straight from those files.
