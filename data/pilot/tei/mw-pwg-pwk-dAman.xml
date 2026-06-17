@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -257,6 +258,18 @@
         <abbr>Śi. 5. 61.</abbr>
         <citedRange>5.61</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAman-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAman-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAman-record-ben">
+        <abbr>Megh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-dAman-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-dAman-record-ben">
+        <abbr>Suśr.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-dAman-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -374,6 +387,23 @@ lightning); {#vidyuddAmnA hemarAjIva viMDyaM#}  &lt;lbinfo n=&quot;ls:M.+ 3. 20&
 &lt;div n=&quot;TS&quot;&gt;-mā́nam 1〉 {350,2}; {868,8}. — 2〉 {643,2} (agním).
 &lt;div n=&quot;TS&quot;&gt;-nā́ [&lt;ab&gt;I.&lt;/ab&gt;] 1〉 {406,14}. _{406,15}; {441,2}; {640,14}; {653,8}(?).
 &lt;div n=&quot;TS&quot;&gt;-mā́nas {641,16}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-dAman-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">6396</idno>
+        <idno type="line">45616</idno>
+        <idno type="pc">0395-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;6396&lt;pc&gt;0395-a&lt;k1&gt;dAman&lt;k2&gt;dAman
+{#dAman#}¦ 3. {%dā + man,%} &lt;ab&gt;n.&lt;/ab&gt; A rope,
+&lt;ls&gt;MBh.&lt;/ls&gt; 1, 6678. {@2.@} A string, &lt;ls&gt;Rām.&lt;/ls&gt; 2, 
+[Page0395-b+ 41]
+78, 7. {@3.@} A garland, &lt;ls&gt;Megh.&lt;/ls&gt; 89. {@4.@} A
+large bandage to support parts, &lt;ls&gt;Suśr.&lt;/ls&gt;
+1, 65, 17. {@ -- &lt;ab&gt;Comp.&lt;/ab&gt;@} {%Puṣpa-dāman,%} &lt;ab&gt;n.&lt;/ab&gt; a
+garland, Criṅgārat. 10. -- &lt;ab&gt;Cf.&lt;/ab&gt; &lt;lang n=&quot;greek&quot;&gt;δέμα, κρήδεμνον&lt;/lang&gt;.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

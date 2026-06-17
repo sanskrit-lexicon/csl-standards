@@ -149,6 +149,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#attestation-35"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#attestation-36"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#attestation-37"
         }
       ],
       "csl:sourceRecord": [
@@ -169,6 +175,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:vi",
@@ -476,6 +485,16 @@
       "csl:lineNumber": 36298,
       "csl:pageColumn": "267",
       "rdf:value": "<L>6249<pc>267<k1>vi<k2>vi\nI vi adv.\n<div n=\"1\"/>1 <lang n=\"czech\">pryč, různě</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">прочь, различным способом</lang>\n<div n=\"1\"/>3 <lang n=\"english\">away, asunder, in different directions</lang>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "13139",
+      "csl:lineNumber": 96728,
+      "csl:pageColumn": "0843-b",
+      "rdf:value": "<L>13139<pc>0843-b<k1>vi<k2>vi\r\n2. {#vi#}¦ {%vi,%} <ab>m.</ab>, <ab>f.</ab> {%vī̆,%} {@1.@} A bird, <ls>Chr.</ls>\r\n287, 6 = <ls>Rigv.</ls> i. 48, 6. {@2.@} The eye. {@3.@}\r\nHeaven. {@4.@} The region of the wind.\r\n{@ -- <ab>Comp.</ab>@} {%Bahu-,%} <ab>adj.</ab> containing many\r\nbirds. -- <ab>Cf.</ab> <ab>Lat.</ab> avis; <lang n=\"greek\">αἰετός, οἰωνίς, ὤϊον, ὠόν</lang>;\r\n<ab>Lat.</ab> ovum; <ab>O.H.G.</ab> ei;\r\n<ab>A.S.</ab> aeg.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#attestation-1",
@@ -1010,6 +1029,34 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "TBR.",
       "csl:citedRange": "1,6,4,3"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#attestation-36",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#attestation-37",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi"
+      },
+      "frac:evidence": "Rigv.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Avi#continuation-relation",

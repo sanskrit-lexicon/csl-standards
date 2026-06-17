@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -268,6 +269,12 @@
         <abbr>Ms. 2. 33.</abbr>
         <citedRange>2.33</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-ASis-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ASis-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ASis-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ASis-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ASis-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -391,6 +398,19 @@ expression of a prayer or wish;
 &lt;div n=&quot;TS&quot;&gt;-íṣā {907,1}.
 &lt;div n=&quot;TS&quot;&gt;-íṣas [&lt;ab&gt;N.&lt;/ab&gt;] {533,5}; {664,23}; {1023,7}.
 &lt;div n=&quot;TS&quot;&gt;-íṣas [&lt;ab&gt;A.&lt;/ab&gt;] {179,6}; {277,2}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ASis-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">1765</idno>
+        <idno type="line">10966</idno>
+        <idno type="pc">0090-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1765&lt;pc&gt;0090-b&lt;k1&gt;ASis&lt;k2&gt;ASis
+{#ASis#}¦ {%āśis,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%ā-śās,%} &lt;ab&gt;f.&lt;/ab&gt; Benedic-
+tion, &lt;ls&gt;Rām.&lt;/ls&gt; 2, 32, 11. {@ -- &lt;ab&gt;Comp.&lt;/ab&gt;@} {%Jaya-,%} &lt;ab&gt;f.&lt;/ab&gt;
+cheering, congratulation, &lt;ls&gt;Rām.&lt;/ls&gt; 3, 35, 105.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

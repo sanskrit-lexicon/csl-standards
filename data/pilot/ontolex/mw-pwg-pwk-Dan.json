@@ -89,6 +89,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#attestation-10"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#attestation-11"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#attestation-12"
         }
       ],
       "csl:sourceRecord": [
@@ -106,6 +112,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Dan",
@@ -452,6 +461,16 @@
       "rdf:value": "<L>4626<pc>0653<k1>Dan<k2>Dan\r\n{@√dhan@}¦ [aus dhanv gekürzt], 1〉 {%in rasche Bewegung setzen,%} so auch im Causativ; 2〉 <ab>caus.</ab> {%sich rasch bewegen, laufen%}.\r\n<div n=\"Pf\">Mit {@prá@} {%hervorlaufen, hervorströmen%}. [Page654]\r\n<div n=\"H\">Stamm {@dadhán@} (betont {899,1}):\r\n<div n=\"TS\">-nat [<ab>Co.</ab>] 1〉 mātā́ vīrám {899,1} (dhániṣṭhā).\r\n<div n=\"TS\">-nyus [<per>3.</per> <ab>p.</ab> <ab>Opt.</ab>] {@prá@} ā́pas {299,12}.\r\n<div n=\"H\">Stamm des <ab>Caus.</ab> {@dhanáya@} (unbetont nur {88,3}):\r\n<div n=\"TS\">-an [<ab>Co.</ab>] 1〉 bildlich asya (ṛtásya) dhītím {71,3}.\r\n<div n=\"TS\">-ante 1〉 ádrim {88,3}.\r\n<div n=\"TS\">-anta [<ab>Co.</ab>] 2〉 niyútas {167,2}.\r\n<div n=\"H\">Verbale {@dhán@}\r\n<div n=\"P\">im Superlativ dhániṣṭha <ab>s. d.</ab>\r\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "6923",
+      "csl:lineNumber": 49511,
+      "csl:pageColumn": "0429-b",
+      "rdf:value": "<L>6923<pc>0429-b<k1>Dan<k2>Dan\r\n1. {#Dan#}¦ {%DHAN%} (<ab>cf.</ab> {%dhanv%}), <ab>f.</ab> †,\r\n<ab>Par.</ab> {@1.@} To put in motion (<ab>ved.</ab>). {@2.@} †\r\nTo bear or produce grains, etc. <ab>Caus.</ab>\r\n{%dhanaya,%} To put in motion, <ls>Chr.</ls> 293,\r\n3 = <ls>Rigv.</ls> i. 88, 3.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -606,6 +625,34 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "ṚV. 1,"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#attestation-11",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#attestation-12",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan"
+      },
+      "frac:evidence": "Rigv.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ADan#lineage-pwk",

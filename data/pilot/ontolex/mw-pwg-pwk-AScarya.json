@@ -170,6 +170,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-38"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-39"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-40"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-41"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-42"
         }
       ],
       "csl:sourceRecord": [
@@ -187,6 +199,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:AScarya",
@@ -525,6 +540,16 @@
       "csl:lineNumber": 5890,
       "csl:pageColumn": "046",
       "rdf:value": "<L>1003<pc>046<k1>AScarya<k2>AScarya\nāścarya\n<div n=\"1\"/>1 <lang n=\"czech\">zvláštní, podivuhodný; n. zázrak, div</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">особый, удивительный; n. чудо, диво</lang>\n<div n=\"1\"/>3 <lang n=\"english\">marvellous, wonderful; n. a wonder, miracle</lang>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1771",
+      "csl:lineNumber": 10996,
+      "csl:pageColumn": "0090-b",
+      "rdf:value": "<L>1771<pc>0090-b<k1>AScarya<k2>AScarya\r\n{#AScarya#}¦ {%āścarya,%} <ab>i. e.</ab> {%ā-car + ya%}\r\n{@I.@} <ab>adj.</ab>, <ab>f.</ab> {%yā,%} Astonishing, wonderful,\r\n<ls>Daśak.</ls> in <ls>Chr.</ls> 179, 11. {@II.@} <ab>n.</ab> A sur-\r\nprising phenomenon, <ls>Rām.</ls> 5, 49, 27.\r\n{@ -- <ab>Comp.</ab>@} {%Sa-,%} <ab>adj.</ab> wonderful, <ls>Bhartṛ.</ls>\r\n2, 59. {%-yam,%} <ab>adv.</ab> with surprise.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-1",
@@ -1103,6 +1128,62 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-ap90"
       },
       "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-39",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya"
+      },
+      "frac:evidence": "Daśak.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-40",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-41",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#attestation-42",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya"
+      },
+      "frac:evidence": "Bhartṛ.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAScarya#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

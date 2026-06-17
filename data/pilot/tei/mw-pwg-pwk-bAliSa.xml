@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -224,6 +225,15 @@
         <abbr>Ms. 3. 176.</abbr>
         <citedRange>3.176</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-bAliSa-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-bAliSa-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-bAliSa-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-bAliSa-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-bAliSa-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-bAliSa-record-ben">
+        <abbr>Hit.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-bAliSa-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -302,6 +312,22 @@ bāliśa
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;mladý, dětský, pošetilý&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;молодой, детский, глупый&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;young, childish, foolish&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-bAliSa-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">10292</idno>
+        <idno type="line">73108</idno>
+        <idno type="pc">0631-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;10292&lt;pc&gt;0631-b&lt;k1&gt;bAliSa&lt;k2&gt;bAliSa
+{#bAliSa#}¦ {%bāliśa,%} derived from {%bāla,%} 
+[Page0632-a+ 39]
+{@I.@} &lt;ab&gt;adj.&lt;/ab&gt; {@1.@} Young. {@2.@} Ignorant, foolish,
+&lt;ls&gt;Man.&lt;/ls&gt; 3, 176; &lt;ls&gt;Pañc.&lt;/ls&gt; i. &lt;ab&gt;d.&lt;/ab&gt; 338. {@3.@} Care-
+less. {@II.@} &lt;ab&gt;n.&lt;/ab&gt; A pillow. {@ -- &lt;ab&gt;Comp.&lt;/ab&gt;@} {%A-,%} &lt;ab&gt;adj.&lt;/ab&gt;
+wise, &lt;ls&gt;Hit.&lt;/ls&gt; iv. &lt;ab&gt;d.&lt;/ab&gt; 18.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

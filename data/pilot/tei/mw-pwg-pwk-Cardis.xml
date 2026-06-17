@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and GRA source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -149,6 +150,12 @@
         <abbr>CARAKA. 1,19. 25. 6,20. 8,2</abbr>
         <citedRange>1,19.25.6,20.8,2</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Cardis-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-Cardis-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Cardis-record-ben">
+        <abbr>Rigv.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-Cardis-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -212,6 +219,18 @@ Vomiting. {@--2@} A secure place or residence.
 {@chardís,@}¦ &lt;ab&gt;n.&lt;/ab&gt;, wofür wahrscheinlich überall chadís zu lesen ist, da sämmtliche metrisch entscheidenden Stellen ({48,15}; {487,12}; {629,1}; {638,21}; {647,4}; {676,6}; {680,14}) die Kürze der ersten Silbe fordern und keine deren Länge begünstigt. Das r scheint in die spätere Redaction durch Misverständniss hineingedrungen. {%Schirm, Schutzwehr%} [von &lt;hom&gt;1.&lt;/hom&gt; chad], insbesondere 2〉 in der Verbindung mit yam, {%Schutz, Schirm%} verleihen. [&lt;ab&gt;Vgl.&lt;/ab&gt; chadís]. — &lt;ab&gt;Adj.&lt;/ab&gt; ádābhia, ádhṛṣṭa, avṛká, trivárūtha, nṛpā́yia, pṛthú, varūthía, sapráthas, subhára.
 &lt;div n=&quot;TS&quot;&gt;-ís {676,6}; {680,14}. — 2〉 {48,15}; {114,5}; {349,1}; {456,3}; {487,9}. _{487,12}; {508,2}; {590,5}; {625,12}; {629,1}. _{629,15}; {638,21}; {647,4}. _{647,20}; {676,6}; {694,5}; {861,12}.
 &lt;div n=&quot;TS&quot;&gt;-íṣas {508,11} abhíṣṭau.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Cardis-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">5169</idno>
+        <idno type="line">36564</idno>
+        <idno type="pc">0315-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;5169&lt;pc&gt;0315-b&lt;k1&gt;Cardis&lt;k2&gt;Cardis
+{#Cardis#}¦ {%chardis,%} &lt;ab&gt;n.&lt;/ab&gt; A secure habi-
+tation, &lt;ls&gt;Chr.&lt;/ls&gt; 288, 15 = &lt;ls&gt;Rigv.&lt;/ls&gt; i. 64, 15.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

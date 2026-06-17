@@ -221,6 +221,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#attestation-28"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#attestation-29"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#attestation-30"
         }
       ],
       "csl:sourceRecord": [
@@ -241,6 +247,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aj",
@@ -1016,6 +1025,16 @@
       "rdf:value": "<L>82<pc>013<k1>aj<k2>aj\n√aj ajati, ajate\n<div n=\"1\"/>1 <lang n=\"czech\">hnáti</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">гнать</lang>\n<div n=\"1\"/>3 <lang n=\"english\">to drive</lang>\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "117",
+      "csl:lineNumber": 792,
+      "csl:pageColumn": "0007-b",
+      "rdf:value": "<L>117<pc>0007-b<k1>aj<k2>aj\r\n{#aj#}¦ {%AJ,%} i, 1, <ab>Par.</ab>, in the Vedas\r\nalso <ab>Ātm.</ab> {@1.@} To go. {@2.@} To drive;\r\nto direct, <ls>Chr.</ls> 297, 16 = <ls>Rigv.</ls> 1, 112, 16. \r\n[Page0008-a+ 40]\r\n -- With the prepos. {#ud#} {%ud,%} To drive\r\nout, <ls>Chr.</ls> 297, 12 = <ls>Rigv.</ls> 1, 112, 12.\r\n -- <ab>Cf.</ab> <lang n=\"greek\">ἄγω, πράσσω (πραγ-ϳω)</lang>; <ab>Lat.</ab> ago,\r\nigitur (for agitur); ON. aka.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1443,6 +1462,34 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#record-gra"
       },
       "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#attestation-29",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#attestation-30",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj"
+      },
+      "frac:evidence": "Rigv.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaj#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

@@ -83,6 +83,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#attestation-17"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#attestation-18"
         }
       ],
       "csl:sourceRecord": [
@@ -94,6 +97,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:kAlakUwa",
@@ -230,6 +236,16 @@
       "csl:lineNumber": 577370,
       "csl:pageColumn": "2-298-a",
       "rdf:value": "<L>202995<pc>2-298-a<k1>kAlakUwa<k2>kAlakUwa\n{#kAlakUwa#}¦ auch *<lex>Adj.</lex> von {#kAlakUwa#} 2〉a〉β〉 <is>gaṇa</is> {#paladyAdi#} in der <ls>KĀŚ. zu P. 4,2,110</ls>.<info n=\"sup_2\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "3327",
+      "csl:lineNumber": 21719,
+      "csl:pageColumn": "0182-a",
+      "rdf:value": "<L>3327<pc>0182-a<k1>kAlakUwa<k2>kAlakUwa\r\n{#kAlakUwa#}¦ {%kāla-kūṭa,%} {@I.@} <ab>m.</ab> and <ab>n.</ab>\r\nA kind of poison, <ls>MBh.</ls> 3, 540. {@II.@}\r\n<ab>m.</ab> The name of a people, <ls>MBh.</ls> 1,\r\n4637.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#attestation-1",
@@ -487,6 +503,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "KĀŚ. zu P.",
       "csl:citedRange": "4,2,110"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#attestation-18",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AkAlakUwa#decomposition",

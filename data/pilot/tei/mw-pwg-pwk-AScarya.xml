@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -227,6 +228,18 @@
       <bibl xml:id="mw-pwg-pwk-AScarya-cite-ap90-13" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-AScarya-record-ap90">
         <abbr>K. 8.</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-AScarya-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-AScarya-record-ben">
+        <abbr>Daśak.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-AScarya-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-AScarya-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-AScarya-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-AScarya-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-AScarya-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-AScarya-record-ben">
+        <abbr>Bhartṛ.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-AScarya-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -336,6 +349,22 @@ an object of wonder; &lt;ls&gt;K. 8.&lt;/ls&gt;
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;zvláštní, podivuhodný; n. zázrak, div&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;особый, удивительный; n. чудо, диво&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;marvellous, wonderful; n. a wonder, miracle&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-AScarya-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">1771</idno>
+        <idno type="line">10996</idno>
+        <idno type="pc">0090-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;1771&lt;pc&gt;0090-b&lt;k1&gt;AScarya&lt;k2&gt;AScarya
+{#AScarya#}¦ {%āścarya,%} &lt;ab&gt;i. e.&lt;/ab&gt; {%ā-car + ya%}
+{@I.@} &lt;ab&gt;adj.&lt;/ab&gt;, &lt;ab&gt;f.&lt;/ab&gt; {%yā,%} Astonishing, wonderful,
+&lt;ls&gt;Daśak.&lt;/ls&gt; in &lt;ls&gt;Chr.&lt;/ls&gt; 179, 11. {@II.@} &lt;ab&gt;n.&lt;/ab&gt; A sur-
+prising phenomenon, &lt;ls&gt;Rām.&lt;/ls&gt; 5, 49, 27.
+{@ -- &lt;ab&gt;Comp.&lt;/ab&gt;@} {%Sa-,%} &lt;ab&gt;adj.&lt;/ab&gt; wonderful, &lt;ls&gt;Bhartṛ.&lt;/ls&gt;
+2, 59. {%-yam,%} &lt;ab&gt;adv.&lt;/ab&gt; with surprise.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

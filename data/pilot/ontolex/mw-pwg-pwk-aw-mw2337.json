@@ -167,6 +167,18 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-39"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-40"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-41"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-42"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-43"
         }
       ],
       "csl:sourceRecord": [
@@ -184,6 +196,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aw-mw2337",
@@ -494,6 +509,16 @@
       "csl:lineNumber": 589,
       "csl:pageColumn": "014",
       "rdf:value": "<L>105<pc>014<k1>aw<k2>aw\n√aṭ aṭati\n<div n=\"1\"/>1 <lang n=\"czech\">choditi sem tam, potulovati se</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">ходить туда-сюда, бродить</lang>\n<div n=\"1\"/>3 <lang n=\"english\">to wander about, roam</lang>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "143",
+      "csl:lineNumber": 988,
+      "csl:pageColumn": "0009-b",
+      "rdf:value": "<L>143<pc>0009-b<k1>aw<k2>aw\r\n{#aw#}¦ {%AṬ,%} i. 1, <ab>Par.</ab> (in epic poetry\r\nalso <ab>Ātm.</ab>, <ls>MBh.</ls> 3, 1586), To roam,\r\nwith the <ab>loc.</ab> and <ab>acc.</ab> <ls>MBh.</ls> 1, 1031;\r\n<ls>Daśak.</ls> in <ls>Chr.</ls> 179, 6. -- With the pre-\r\nposition {#pari#} {%pari,%} To wander about,\r\n<ls>Pañc.</ls> 55, 1. {%Puryaṭita,%} <ab>n.</ab> Wander-\r\ning about, <ls>Pañc.</ls> 70, 12.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-1",
@@ -1093,6 +1118,62 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ap90"
       },
       "csl:sourceDictionary": "ap90",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-40",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-41",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337"
+      },
+      "frac:evidence": "Daśak.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-42",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#attestation-43",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337"
+      },
+      "frac:evidence": "Pañc.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aaw-mw2337#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

@@ -89,6 +89,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-16"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-17"
         }
       ],
       "csl:sourceRecord": [
@@ -103,6 +106,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:Barita",
@@ -328,6 +334,16 @@
       "csl:lineNumber": 188398,
       "csl:pageColumn": "0809-b",
       "rdf:value": "<L>21986<pc>0809-b<k1>Barita<k2>Barita\n{#Barita#}¦ {%<ab>a.</ab>%} {@1@} Nourished, maintained. \n[Page0809-c+ 56]\n{@--2@} Filled with, full of; {#jagajjAlaM#} <lbinfo n=\"ka#rtA\"/>\n{#kartA kusumaBarasOraByaBaritaM#} <ls>Bv. 1. 54</ls>; <ls n=\"Bv. 1.\">33.</ls>\n{@--3@} Green. {#--taH#} The green colour.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "10443",
+      "csl:lineNumber": 74425,
+      "csl:pageColumn": "0643-b",
+      "rdf:value": "<L>10443<pc>0643-b<k1>Barita<k2>Barita\r\n{#Barita#}¦ {%bharita,%} <ab>i. e.</ab> {%bhara + ita,%} <ab>adj.</ab>\r\nFilled, <ls>MBh.</ls> 2, 2061.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-1",
@@ -573,6 +589,20 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "Bv. 1."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#attestation-17",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ABarita#lineage-pwk",

@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, and AP90 source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -29,6 +29,7 @@
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -224,6 +225,9 @@
         <abbr>BHĀR. NĀṬYAŚ. 34,109</abbr>
         <citedRange>34,109</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-Kewa-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-Kewa-record-ben">
+        <abbr>MBh.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-Kewa-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -326,6 +330,18 @@ end of &lt;ab&gt;comp.&lt;/ab&gt; {#Kewa#} expresses &lt;lbinfo n=&quot;‘de+fe
 be rendered by ‘miserable’, ‘low’,
 ‘vile’, ‘wretched’ &amp;c.; {#nagaraKewaM#} a
 miserable town.)
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-Kewa-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">4246</idno>
+        <idno type="line">28961</idno>
+        <idno type="pc">0247-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;4246&lt;pc&gt;0247-a&lt;k1&gt;Kewa&lt;k2&gt;Kewa
+{#Kewa#}¦ {%kheṭa,%} &lt;ab&gt;m.&lt;/ab&gt; A village, &lt;ls&gt;MBh.&lt;/ls&gt; 3,
+13220.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

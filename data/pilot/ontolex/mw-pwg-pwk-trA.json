@@ -137,6 +137,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#attestation-31"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#attestation-32"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#attestation-33"
         }
       ],
       "csl:sourceRecord": [
@@ -157,6 +163,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:trA",
@@ -446,6 +455,16 @@
       "csl:lineNumber": 16594,
       "csl:pageColumn": "123",
       "rdf:value": "<L>2859<pc>123<k1>trA<k2>trA\n√trā trāti, trāte, trāyate, pp. trāta\n<div n=\"1\"/>1 <lang n=\"czech\">chrániti, přivésti v bezpečí</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">беречь, привести в безопасность</lang>\n<div n=\"1\"/>3 <lang n=\"english\">to protect, rescue</lang>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "6132",
+      "csl:lineNumber": 43617,
+      "csl:pageColumn": "0377-b",
+      "rdf:value": "<L>6132<pc>0377-b<k1>trA<k2>trA\r\n{#trA#}¦ {%TRĀ,%} ii. 2, <ab>Par.</ab> <ab>Ātm.</ab>, and {#trE#}\r\n{%TRAI,%} i. 1, {%trāya%} (<ab>i. e.</ab> properly {%trā,%} i.\r\n4), <ab>Ātm.</ab> To protect, to preserve (with\r\nthe <ab>abl.</ab>), <ls>MBh.</ls> 2, 2606. -- With the <ab>prep.</ab>\r\n{#pari#} {%pari,%} To protect, <ls>MBh.</ls> 13, 3600;\r\n{%paritrāta,%} <ls>Rām.</ls> 6, 6, 10. -- With {#sam#}\r\n{%sam,%} To protect, <ls>MBh.</ls> 1, 6819. -- Akin\r\nto {%tṝ,%} and for original {%tar + ā.%} \r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#attestation-1",
@@ -922,6 +941,34 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "MBH."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#attestation-32",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#attestation-33",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AtrA#continuation-relation",

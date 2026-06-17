@@ -44,6 +44,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#attestation-5"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#attestation-6"
         }
       ],
       "csl:sourceRecord": [
@@ -55,6 +58,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:kuhu",
@@ -159,6 +165,16 @@
       "rdf:value": "<L>29646<pc>2-087-a<k1>kuhu<k2>kuhu<h>1\n<hom>1.</hom> {#kuhu#}¦\n<div n=\"1\">— 1〉 <lex>m.</lex> {%ein <ab>best.</ab> Gewicht%} <ls>HEMĀDRI 1,117,8</ls>.\n<div n=\"1\">— 2〉 *<lex>f.</lex> {%Neumond%}.\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "3649",
+      "csl:lineNumber": 23902,
+      "csl:pageColumn": "0200-b",
+      "rdf:value": "<L>3649<pc>0200-b<k1>kuhu<k2>kuhu\r\n{#kuhu#}¦ {%kuhu,%} The cry of the cuckoo,\r\n<ls>MBh.</ls> 15, 724.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -231,6 +247,20 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "MBH.",
       "csl:citedRange": "15,724"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#attestation-6",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu"
+      },
+      "frac:evidence": "MBh.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akuhu#continuation-relation",

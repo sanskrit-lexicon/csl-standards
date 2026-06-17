@@ -170,6 +170,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#attestation-27"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#attestation-28"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#attestation-29"
         }
       ],
       "csl:sourceRecord": [
@@ -190,6 +196,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:aBi-mw11185.1",
@@ -705,6 +714,16 @@
       "rdf:value": "<L>481<pc>028<k1>aBi<k2>aBi\n +prep. + acc.\n<div n=\"1\"/>1 <lang n=\"czech\">k, proti, do, v, na, nad, kvůli</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">к, против, до, в, на, над, ради</lang>\n<div n=\"1\"/>3 <lang n=\"english\">to, towards, against, into, on, upon, over, for, for the sake of</lang>\n<LEND>"
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "723",
+      "csl:lineNumber": 4420,
+      "csl:pageColumn": "0037-a",
+      "rdf:value": "<L>723<pc>0037-a<k1>aBi<k2>aBi\r\n{#aBi#}¦ {%abhi%} (Towards, to). {@I.@} <ab>adv.</ab> On,\r\n<ls>Chr.</ls> 295, 10 = <ls>Rigv.</ls> i. 92, 10. {@II.@} <ab>prep.</ab>\r\nwith <ab>acc.</ab> To, <ab>Ved.</ab> <ls>Chr.</ls> 287, 7 = <ls>Rigv.</ls>\r\ni. 48, 7; over, <ls>Chr.</ls> 292, 5 = <ls>Rigv.</ls> i. 86,\r\n5. {@III.@} Combined and compounded\r\nwith verbs and their derivatives. {@IV.@}\r\nFormer part of compounded nouns and\r\nadverbs implying Towards, in presence\r\nof, very, <ab>cf.</ab> e. g. {%abhitāmra;%} Quite,\r\n<ab>cf.</ab> {%abhinava.%} -- <ab>Cf.</ab> <ab>Goth.</ab> bī. The ori-\r\nginal form of this indeclinable was\r\nprobably {%ambhi%} = Gr. <lang n=\"greek\">ἀμϕί</lang>; <ab>Lat.</ab> amb\r\nin amb-ire; <ab>O.H.G.</ab> umbi.\r\n<LEND>"
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#attestation-1",
       "@type": "frac:Attestation",
       "frac:attests": {
@@ -1119,6 +1138,34 @@
       "csl:evidenceClass": "textual",
       "csl:citedWork": "Nir. 〔",
       "csl:citedRange": "1,3〕"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#attestation-28",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1"
+      },
+      "frac:evidence": "Chr.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#attestation-29",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1"
+      },
+      "frac:evidence": "Rigv.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AaBi-mw11185.1#continuation-relation",

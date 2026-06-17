@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, and GRA source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, GRA, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -29,6 +29,7 @@
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -130,6 +131,9 @@
         <abbr>P. 3,4,61</abbr>
         <citedRange>3,4,61</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-muKatas-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-muKatas-record-ben">
+        <abbr>Nal.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-muKatas-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -186,6 +190,18 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;6869&lt;pc&gt;1047&lt;k1&gt;muKatas&lt;k2&gt;muKata/s
 {@mukhatás,@}¦ {%vom Munde her, am Munde%} [múkha]. — yád ‥ (sáptes) rātím gṛbhītā́m 〰 náyanti {162,2}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-muKatas-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">11353</idno>
+        <idno type="line">81979</idno>
+        <idno type="pc">0711-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;11353&lt;pc&gt;0711-b&lt;k1&gt;muKatas&lt;k2&gt;muKatas
+{#muKatas#}¦ {%mukha + tas,%} &lt;ab&gt;adv.&lt;/ab&gt; From the
+mouth, &lt;ls&gt;Nal.&lt;/ls&gt; 11, 28.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

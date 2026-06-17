@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -268,6 +269,18 @@
       <bibl xml:id="mw-pwg-pwk-ad-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-gra">
         <abbr>Cu. 〔279〕</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-ad-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-ben">
+        <abbr>Nal.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ad-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ad-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-ben">
+        <abbr>Man.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-ad-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-ad-record-ben">
+        <abbr>Pañc.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-ad-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -441,6 +454,26 @@ to use up, consume, devour;  &lt;lbinfo n=&quot;samadaMtyA#mizaM&quot;/&gt;
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;jísti, pojídati&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;кушать, съедать&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;to eat, consume&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-ad-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">225</idno>
+        <idno type="line">1454</idno>
+        <idno type="pc">0013-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;225&lt;pc&gt;0013-a&lt;k1&gt;ad&lt;k2&gt;ad
+{#ad#}¦ {%AD,%} ii, 2, &lt;ab&gt;Par.&lt;/ab&gt; (in epic poetry
+also &lt;ab&gt;Ātm.&lt;/ab&gt; &lt;ls&gt;Nal.&lt;/ls&gt; 12, 35). To eat, &lt;ls&gt;Man.&lt;/ls&gt;
+2, 53; to devour, 4, 28. {%Svadita,%} &lt;ab&gt;i. e.&lt;/ab&gt;
+{%su-adita,%} &lt;ab&gt;n.&lt;/ab&gt; Well eaten, a term used
+after presenting food (‘muc good may
+it do you!’), &lt;ls&gt;Man.&lt;/ls&gt; 3, 251; 254. {%Adya,%}
+Eatable, &lt;ls&gt;Pañc.&lt;/ls&gt; iv. &lt;ab&gt;d.&lt;/ab&gt; 79 (perhaps it
+ought to be changed to {%ādya,%} the regular
+form). -- &lt;ab&gt;Cf.&lt;/ab&gt; &lt;lang n=&quot;greek&quot;&gt;ἔδω&lt;/lang&gt;; &lt;ab&gt;Lat.&lt;/ab&gt; edere; &lt;ab&gt;Goth.&lt;/ab&gt; itan;
+&lt;ab&gt;A.S.&lt;/ab&gt; etan.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

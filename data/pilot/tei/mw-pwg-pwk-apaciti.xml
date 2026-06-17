@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -30,6 +30,7 @@
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -178,6 +179,9 @@
       <bibl xml:id="mw-pwg-pwk-apaciti-cite-pwk-8" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-apaciti-record-pwk">
         <abbr>VAITĀN. 40</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-apaciti-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-apaciti-record-ben">
+        <abbr>Rām.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-apaciti-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -266,6 +270,18 @@ apaciti f.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;pocta, ucta&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;честь, уважение&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;honour, reverence&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-apaciti-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">622</idno>
+        <idno type="line">3825</idno>
+        <idno type="pc">0032-a</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;622&lt;pc&gt;0032-a&lt;k1&gt;apaciti&lt;k2&gt;apaciti
+{#apaciti#}¦ {%apa-ci + ti,%} &lt;ab&gt;f.&lt;/ab&gt; {@1.@} Honour,
+&lt;ls&gt;Rām.&lt;/ls&gt; 2, 74, 26. {@2.@} Expiation.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

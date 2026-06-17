@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -233,6 +234,12 @@
         <abbr>Ku. Zeitschr. 〔16,185〕</abbr>
         <citedRange>16,185〕</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-vi-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-vi-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-vi-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-vi-record-ben">
+        <abbr>Rigv.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-vi-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -353,6 +360,23 @@ I vi adv.
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;pryč, různě&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;прочь, различным способом&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;away, asunder, in different directions&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-vi-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">13139</idno>
+        <idno type="line">96728</idno>
+        <idno type="pc">0843-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;13139&lt;pc&gt;0843-b&lt;k1&gt;vi&lt;k2&gt;vi
+2. {#vi#}¦ {%vi,%} &lt;ab&gt;m.&lt;/ab&gt;, &lt;ab&gt;f.&lt;/ab&gt; {%vī̆,%} {@1.@} A bird, &lt;ls&gt;Chr.&lt;/ls&gt;
+287, 6 = &lt;ls&gt;Rigv.&lt;/ls&gt; i. 48, 6. {@2.@} The eye. {@3.@}
+Heaven. {@4.@} The region of the wind.
+{@ -- &lt;ab&gt;Comp.&lt;/ab&gt;@} {%Bahu-,%} &lt;ab&gt;adj.&lt;/ab&gt; containing many
+birds. -- &lt;ab&gt;Cf.&lt;/ab&gt; &lt;ab&gt;Lat.&lt;/ab&gt; avis; &lt;lang n=&quot;greek&quot;&gt;αἰετός, οἰωνίς, ὤϊον, ὠόν&lt;/lang&gt;;
+&lt;ab&gt;Lat.&lt;/ab&gt; ovum; &lt;ab&gt;O.H.G.&lt;/ab&gt; ei;
+&lt;ab&gt;A.S.&lt;/ab&gt; aeg.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

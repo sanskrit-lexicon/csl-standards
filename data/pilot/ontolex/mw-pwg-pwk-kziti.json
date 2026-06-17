@@ -176,6 +176,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-41"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-42"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-43"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-44"
         }
       ],
       "csl:sourceRecord": [
@@ -193,6 +202,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#record-fri"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:kziti",
@@ -518,6 +530,16 @@
       "csl:lineNumber": 11473,
       "csl:pageColumn": "086",
       "rdf:value": "<L>1967<pc>086<k1>kziti<k2>kziti\nI kṣiti f.\n<div n=\"1\"/>1 <lang n=\"czech\">sídlo, země; pl. osady, lidé, kmen</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">место жительства, земля; pl. поселки, люди, племя</lang>\n<div n=\"1\"/>3 <lang n=\"english\">an abode, earth; pl. settlements, men, tribe</lang>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "4056",
+      "csl:lineNumber": 27766,
+      "csl:pageColumn": "0237-a",
+      "rdf:value": "<L>4056<pc>0237-a<k1>kziti<k2>kziti\r\n{#kziti#}¦ 1. {%kṣi + ti,%} <ab>f.</ab> {@1.@} An abode,\r\n<ls>Bhāg. P.</ls> 4, 9, 5. {@2.@} The earth,\r\n<ls>Bhartṛ.</ls> 3, 5. {@3.@} Land, <ls>Rājat.</ls> 5, 109.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-1",
@@ -1142,6 +1164,48 @@
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#record-gra"
       },
       "csl:sourceDictionary": "gra",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-42",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti"
+      },
+      "frac:evidence": "Bhāg. P.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-43",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti"
+      },
+      "frac:evidence": "Bhartṛ.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#attestation-44",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti"
+      },
+      "frac:evidence": "Rājat.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Akziti#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
     },

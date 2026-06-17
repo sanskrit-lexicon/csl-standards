@@ -1,15 +1,15 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 1361,
+    "total": 1364,
     "cases": 256,
     "byStatus": {
-      "partial": 938,
+      "partial": 941,
       "lossy": 348,
       "clean": 75
     },
     "byTarget": {
-      "ontolex": 693,
+      "ontolex": 696,
       "neutral": 370,
       "tei": 298
     },
@@ -17,7 +17,7 @@
       "source-collapse": 369,
       "citation-coordinate": 297,
       "generic-lexicographer-hedge": 234,
-      "named-kosha-citation": 88,
+      "named-kosha-citation": 91,
       "continuation-parent": 80,
       "compound-subentry": 75,
       "compound-decomposition": 75,
@@ -28,7 +28,7 @@
       "source-anomaly": 1
     },
     "byFailureClassification": {
-      "model-vocabulary-gap": 713,
+      "model-vocabulary-gap": 716,
       "editorial-compression": 369,
       "cdsl-markup-gap": 117,
       "print-compression": 80,
@@ -37,11 +37,11 @@
       "data-quality": 1
     },
     "byExtensionNeeded": {
-      "extensionNeeded=true": 816,
+      "extensionNeeded=true": 819,
       "extensionNeeded=false": 545
     },
     "byReviewStatus": {
-      "machine": 1265,
+      "machine": 1268,
       "reviewed": 96
     },
     "bySourceDictionary": {
@@ -50,7 +50,8 @@
       "pwk": 251,
       "ap90": 73,
       "gra": 11,
-      "skd": 6
+      "skd": 6,
+      "ben": 3
     },
     "targetByStatus": {
       "tei": {
@@ -59,7 +60,7 @@
         "lossy": 6
       },
       "ontolex": {
-        "partial": 593,
+        "partial": 596,
         "lossy": 100
       },
       "neutral": {
@@ -76,7 +77,8 @@
       "pwk": 250,
       "ap90": 133,
       "gra": 109,
-      "fri": 87
+      "fri": 87,
+      "ben": 142
     },
     "phenomena": {
       "hedge": 117,
@@ -90,16 +92,17 @@
       "continuation": 40
     },
     "citations": {
-      "total": 3066,
+      "total": 3513,
       "byType": {
         "generic-lexicographer-hedge": 116,
-        "named-source-citation": 2950
+        "named-source-citation": 3397
       },
       "byDictionary": {
         "mw": 379,
         "pwg": 1872,
         "pwk": 366,
         "gra": 64,
+        "ben": 447,
         "ap90": 385
       }
     },
@@ -128,23 +131,24 @@
       "pwk",
       "ap90",
       "gra",
-      "skd"
+      "skd",
+      "ben"
     ],
     "schemaPhenomenaNotEmitted": [],
     "schemaStatusesNotEmitted": [
       "failure"
     ],
     "roadmapCausesNotEmitted": [],
-    "namedSourceCitationsMaterialized": 2950
+    "namedSourceCitationsMaterialized": 3397
   },
   "extensionCoverage": {
-    "ontolexModelVocabularyGapsNeedingExtension": 653,
-    "coveredByImplementedConstruct": 653,
+    "ontolexModelVocabularyGapsNeedingExtension": 656,
+    "coveredByImplementedConstruct": 656,
     "uncovered": 0,
     "byConstruct": {
       "frac:Attestation with csl:citedWork + csl:citedRange": 297,
       "frac:Attestation with csl:evidenceClass \"hedge\"": 117,
-      "frac:Attestation with csl:evidenceClass \"kosha\"": 88,
+      "frac:Attestation with csl:evidenceClass \"kosha\"": 91,
       "decomp:ComponentList of decomp:Component": 75,
       "csl:RootRelation with csl:whitneyRoot": 60,
       "frac:Attestation with csl:evidenceClass \"editorial\"": 16

@@ -182,6 +182,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#attestation-45"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#attestation-46"
         }
       ],
       "csl:sourceRecord": [
@@ -199,6 +202,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#record-gra"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#record-ben"
         }
       ],
       "csl:caseId": "mw-pwg-pwk:ASis",
@@ -484,6 +490,16 @@
       "csl:lineNumber": 9275,
       "csl:pageColumn": "0187",
       "rdf:value": "<L>1630<pc>0187<k1>ASis<k2>ASi/s\r\n{@āśís,@}¦ <ab>f.</ab>, {%Bitte, Gebet, Wunsch%} [von śās mit ā́].\r\n<div n=\"TS\">-ī́s [<ab>N.</ab> <ab>s.</ab>] {954,3}.\r\n<div n=\"TS\">-íṣam {702,18}; {893,11}.\r\n<div n=\"TS\">-íṣā {907,1}.\r\n<div n=\"TS\">-íṣas [<ab>N.</ab>] {533,5}; {664,23}; {1023,7}.\r\n<div n=\"TS\">-íṣas [<ab>A.</ab>] {179,6}; {277,2}.\r\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#record-ben",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "csl:recordNumber": "1765",
+      "csl:lineNumber": 10966,
+      "csl:pageColumn": "0090-b",
+      "rdf:value": "<L>1765<pc>0090-b<k1>ASis<k2>ASis\r\n{#ASis#}¦ {%āśis,%} <ab>i. e.</ab> {%ā-śās,%} <ab>f.</ab> Benedic-\r\ntion, <ls>Rām.</ls> 2, 32, 11. {@ -- <ab>Comp.</ab>@} {%Jaya-,%} <ab>f.</ab>\r\ncheering, congratulation, <ls>Rām.</ls> 3, 35, 105.\r\n<LEND>"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#attestation-1",
@@ -1170,6 +1186,20 @@
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual",
       "csl:inheritedSiglum": "Ku."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#attestation-46",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis"
+      },
+      "frac:evidence": "Rām.",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#record-ben"
+      },
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AASis#continuation-relation",

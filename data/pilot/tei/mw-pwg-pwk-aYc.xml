@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, and PWK source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -28,6 +28,7 @@
           <category xml:id="dict-mw"><catDesc>Monier-Williams 1899</catDesc></category>
           <category xml:id="dict-pwg"><catDesc>Boehtlingk-Roth PWG</catDesc></category>
           <category xml:id="dict-pwk"><catDesc>Boehtlingk PWK</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -89,6 +90,18 @@
         <abbr>P. 3,2,59</abbr>
         <citedRange>3,2,59</citedRange>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-aYc-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aYc-record-ben">
+        <abbr>Nal.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aYc-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aYc-record-ben">
+        <abbr>Ragh.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aYc-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aYc-record-ben">
+        <abbr>Gīt.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aYc-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aYc-record-ben">
+        <abbr>Rājat.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-aYc-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -126,6 +139,23 @@
       </bibl>
       <quote xml:space="preserve">&lt;L&gt;1424&lt;pc&gt;1-017-b&lt;k1&gt;aYc&lt;k2&gt;˚aYc&lt;h&gt;2
 &lt;hom&gt;2.&lt;/hom&gt; {#˚aYc#}¦ &lt;lex&gt;Adj.&lt;/lex&gt; ({%gebogen%}) {%gerichtet nach, zu%}.
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aYc-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">135</idno>
+        <idno type="line">888</idno>
+        <idno type="pc">0008-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;135&lt;pc&gt;0008-b&lt;k1&gt;aYc&lt;k2&gt;aYc
+{#aYc#}¦ {%AÑC%} (&lt;ab&gt;cf.&lt;/ab&gt; {%aṅka%}), i. 1, &lt;ab&gt;Par.&lt;/ab&gt;
+&lt;ab&gt;Ātm.&lt;/ab&gt; {@1.@} To go. {@2.@} To ask. {@3.@} To speak
+indistiṅctly. {@4.@} To bend, to curve,
+&lt;ls&gt;Nal.&lt;/ls&gt; 12, 45. {@5.@} To honour, &lt;ls&gt;Ragh.&lt;/ls&gt; 9,
+24. {@6.@} i. 10 (rather &lt;ab&gt;Caus.&lt;/ab&gt;). To make
+clear, to manifest, &lt;ls&gt;Gīt.&lt;/ls&gt; 10, 11. -- With
+the &lt;ab&gt;prep.&lt;/ab&gt; {#ud#} {%ud,%} To rise, &lt;ls&gt;Rājat.&lt;/ls&gt; 5, 362.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>

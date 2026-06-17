@@ -16,7 +16,7 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, and FRI source records for interoperability analysis.</p>
+        <p>Derived from CDSL MW, PWG, PWK, AP90, GRA, FRI, and BEN source records for interoperability analysis.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -31,6 +31,7 @@
           <category xml:id="dict-ap90"><catDesc>Apte 1890</catDesc></category>
           <category xml:id="dict-gra"><catDesc>Grassmann Wörterbuch zum Rig-Veda</catDesc></category>
           <category xml:id="dict-fri"><catDesc>Frish Sanskrit Reader (Cologne 2015)</catDesc></category>
+          <category xml:id="dict-ben"><catDesc>Benfey Sanskrit-English 1866</catDesc></category>
         </taxonomy>
       </classDecl>
     </encodingDesc>
@@ -248,6 +249,18 @@
       <bibl xml:id="mw-pwg-pwk-aj-cite-gra-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aj-record-gra">
         <abbr>Cu. 〔117〕</abbr>
       </bibl>
+      <bibl xml:id="mw-pwg-pwk-aj-cite-ben-1" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aj-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aj-cite-ben-2" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aj-record-ben">
+        <abbr>Rigv.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aj-cite-ben-3" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aj-record-ben">
+        <abbr>Chr.</abbr>
+      </bibl>
+      <bibl xml:id="mw-pwg-pwk-aj-cite-ben-4" type="named-source-citation" subtype="textual" corresp="#mw-pwg-pwk-aj-record-ben">
+        <abbr>Rigv.</abbr>
+      </bibl>
     </listBibl>
     <cit xml:id="mw-pwg-pwk-aj-record-mw" type="source-entry" source="#dict-mw">
       <bibl type="cdsl-record">
@@ -462,6 +475,24 @@ only in Vedic literature). [&lt;ab&gt;cf.&lt;/ab&gt; &lt;ab&gt;L.&lt;/ab&gt; {%a
 &lt;div n=&quot;1&quot;/&gt;1 &lt;lang n=&quot;czech&quot;&gt;hnáti&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;2 &lt;lang n=&quot;russian&quot;&gt;гнать&lt;/lang&gt;
 &lt;div n=&quot;1&quot;/&gt;3 &lt;lang n=&quot;english&quot;&gt;to drive&lt;/lang&gt;
+&lt;LEND&gt;</quote>
+    </cit>
+    <cit xml:id="mw-pwg-pwk-aj-record-ben" type="source-entry" source="#dict-ben">
+      <bibl type="cdsl-record">
+        <title>Benfey Sanskrit-English 1866</title>
+        <idno type="L">117</idno>
+        <idno type="line">792</idno>
+        <idno type="pc">0007-b</idno>
+      </bibl>
+      <quote xml:space="preserve">&lt;L&gt;117&lt;pc&gt;0007-b&lt;k1&gt;aj&lt;k2&gt;aj
+{#aj#}¦ {%AJ,%} i, 1, &lt;ab&gt;Par.&lt;/ab&gt;, in the Vedas
+also &lt;ab&gt;Ātm.&lt;/ab&gt; {@1.@} To go. {@2.@} To drive;
+to direct, &lt;ls&gt;Chr.&lt;/ls&gt; 297, 16 = &lt;ls&gt;Rigv.&lt;/ls&gt; 1, 112, 16. 
+[Page0008-a+ 40]
+ -- With the prepos. {#ud#} {%ud,%} To drive
+out, &lt;ls&gt;Chr.&lt;/ls&gt; 297, 12 = &lt;ls&gt;Rigv.&lt;/ls&gt; 1, 112, 12.
+ -- &lt;ab&gt;Cf.&lt;/ab&gt; &lt;lang n=&quot;greek&quot;&gt;ἄγω, πράσσω (πραγ-ϳω)&lt;/lang&gt;; &lt;ab&gt;Lat.&lt;/ab&gt; ago,
+igitur (for agitur); ON. aka.
 &lt;LEND&gt;</quote>
     </cit>
         <note type="profile-version">tei-archival-profile-v0.1</note>
