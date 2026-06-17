@@ -6,7 +6,21 @@
 // ({#…#}), class/voice markers ({c1c}, <ab>P.</ab>), bracketed conjugation, and
 // <ls> citations. This segmenter strips the apparatus and keeps the English gloss
 // per sense; like the MW/PW extractors it favours precision over recall, so the
-// sense count is a lower bound.
+// sense count is a lower bound. Each sense also carries the <ls> citations that
+// fall within its segment, so an Apte source links to the sense it attests.
+
+import { extractLabeledSources } from "./citations.mjs";
+
+// AP90 <ls> citations within a sense segment, tagged as ap90 for the sense link.
+function segmentCitations(segment) {
+  const cits = extractLabeledSources(segment).map(c => ({
+    source: c.source,
+    type: c.type,
+    dictionary: "ap90",
+    ...(c.inheritedFrom ? { inheritedFrom: c.inheritedFrom } : {})
+  }));
+  return cits.length ? { citations: cits } : {};
+}
 
 function clean(value) {
   return String(value || "")
@@ -49,7 +63,7 @@ export function extractAp90Senses(raw) {
       .replace(/[\s,;.]+$/, "")
       .trim();
     if (isGloss(def) && !senses.some(s => s.def === def)) {
-      senses.push({ def, lang: "en", evidence: "derived" });
+      senses.push({ def, lang: "en", evidence: "derived", ...segmentCitations(segment) });
     }
     if (senses.length >= 12) break;
   }
