@@ -42,6 +42,8 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-12> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-13> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-14> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-ap90-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-ap90-2> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-fri-1> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#record-pwg> ;
@@ -179,6 +181,16 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "in Folge, wegen,"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-ap90-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "After, behind, along after; =; afterwards"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-ap90-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "Along, along-side, by the side of, lengthwise; = ( {#gaMgAdErGyasa"@en .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-fri-1> a ontolex:LexicalSense ;
   ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu> ;
   csl:sourceDictionary "fri" ;
@@ -201,6 +213,11 @@
   csl:dictionary "pwk" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#lexentry-pwk> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#resource-ap90> a lexicog:LexicographicResource ;
+  dct:source "Apte 1890" ;
+  csl:dictionary "ap90" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#lexentry-ap90> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#resource-fri> a lexicog:LexicographicResource ;
   dct:source "Frish Sanskrit Reader (Cologne 2015)" ;
   csl:dictionary "fri" ;
@@ -217,6 +234,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-3>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-4>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-5>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-6>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-7>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-8>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-9>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-10>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-11>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-12>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-13>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-pwk-14> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#lexentry-ap90> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-ap90-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#sense-ap90-2> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu#lexentry-fri> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aanu> ;

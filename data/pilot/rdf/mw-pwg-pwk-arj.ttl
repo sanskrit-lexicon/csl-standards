@@ -46,6 +46,9 @@
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-16> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-17> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-18> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-1> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-2> ;
+  ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-3> ;
   ontolex:sense <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-fri-1> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#record-mw> ;
   csl:sourceRecord <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#record-pwg> ;
@@ -226,6 +229,21 @@
   csl:sourceDictionary "pwk" ;
   skos:definition "verschaffen"@de .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-1> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "To procure, secure, gain, earn, usually in the in this sense"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-2> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "To take up; -- or"@en .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-3> a ontolex:LexicalSense ;
+  ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj> ;
+  csl:sourceDictionary "ap90" ;
+  skos:definition "To procure, acquire, obtain; obtained by one's own exertions, self-acquired"@en .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-fri-1> a ontolex:LexicalSense ;
   ontolex:isSenseOf <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj> ;
   csl:sourceDictionary "fri" ;
@@ -248,6 +266,11 @@
   csl:dictionary "pwk" ;
   lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#lexentry-pwk> .
 
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#resource-ap90> a lexicog:LexicographicResource ;
+  dct:source "Apte 1890" ;
+  csl:dictionary "ap90" ;
+  lexicog:entry <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#lexentry-ap90> .
+
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#resource-fri> a lexicog:LexicographicResource ;
   dct:source "Frish Sanskrit Reader (Cologne 2015)" ;
   csl:dictionary "fri" ;
@@ -264,6 +287,10 @@
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#lexentry-pwk> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj> ;
   lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-3>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-4>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-5>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-6>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-7>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-8>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-9>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-10>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-11>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-12>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-13>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-14>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-15>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-16>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-17>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-pwk-18> .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#lexentry-ap90> a lexicog:Entry ;
+  lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj> ;
+  lexicog:component <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-1>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-2>, <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#sense-ap90-3> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj#lexentry-fri> a lexicog:Entry ;
   lexicog:describes <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aarj> ;
