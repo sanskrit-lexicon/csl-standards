@@ -39,6 +39,7 @@ The atlas-side removal and pointer update merged in
 
 ## Key documents
 
+- [docs/DEMO.md](docs/DEMO.md) — a guided end-to-end walkthrough of one hard case (the verbal root √ac, 5 source dictionaries): raw CDSL records → neutral model → TEI + OntoLex profiles → the 7 loss reports it generates → the `csl:` constructs that answer them. The fastest way to see the whole instrument on real data.
 - [docs/PAPER.md](docs/PAPER.md) — the full prose draft: *Sanskrit Lexicography Between TEI and OntoLex*. The TEI-vs-OntoLex asymmetry, the evidence/derivation/compression findings, and the implemented + validated `csl:` extension layer (every proposal construct, `extensionCoverage` 653/653, `lineageCoverage` 369/369). [docs/PAPER_OUTLINE.md](docs/PAPER_OUTLINE.md) is the planning outline.
 - [docs/BOUNDARY_RULES.md](docs/BOUNDARY_RULES.md) — what belongs here vs. delegates.
 - [docs/INTEROPERABILITY_MODEL.md](docs/INTEROPERABILITY_MODEL.md) — neutral JSON layer between CDSL source, TEI, and OntoLex.

@@ -1,0 +1,182 @@
+# Demo: one hard case, end to end — the verbal root √ac
+
+This is a guided walkthrough of a **single** entry as it moves through the whole
+workbench: five raw CDSL dictionary records → the dictionary-neutral model → the
+TEI archival and OntoLex/FrAC profiles → the loss reports that record what each
+standard cannot hold → the `csl:` extension constructs that answer them.
+
+Everything below is quoted from regenerable artifacts (`npm run build-pilot`); the
+file links point at the exact outputs. The case is
+[`mw-pwg-pwk:ac`](../data/pilot/neutral-model.json) — the Sanskrit verbal root
+**√ac** "to go, bend, honour". It is a good stress test because it exercises every
+loss family at once: it is a *root* (not a word), it carries the MW `L.`
+*lexicographer hedge*, its citation apparatus is *abridged* down the PWG → PWK
+lineage, and its named sources include both an indigenous *kośa* authority and
+plain textual coordinates. It is also one of the cases that attaches all five
+dictionaries.
+
+---
+
+## Stage 0 — five raw CDSL records
+
+The same headword is digitised independently in five dictionaries. Each is a flat
+`<L>…<LEND>` record in CDSL's project-specific pseudo-markup (truncated here):
+
+```
+[mw  L=1767] <L>1767<pc>8,3<k1>ac … (connected with √ aYc) cl. 1. P. Ā. a/cati …
+[pwg L=791 ] <L>791 … {#aYc, a/cati#} <ls>NAIGH. 2,14.</ls> … <ls>P. 8,4,58</ls> …
+[pwk L=1095] √{#ac#}¦ {#aYc, a/cati …#} — 1〉 {%biegen%}. … — 2〉 {%…%}
+[ap90 L=314] {#ac#}¦ U. (acati …) To go, move; to honour; … request …
+[gra L=144 ] {@√ac@} (√añc). Als Grundbedeutung … der Begriff: {%biegen%} …
+```
+
+MW glosses in English, the two Petersburg dictionaries (PWG large, PWK abridged)
+in German, AP90 in English, and Grassmann (GRA) is a German Rig-Veda glossary.
+Note the differences already visible: PWG carries a dense named apparatus of
+citations; PWK keeps far fewer; MW reduces much of it to a bare `L.`
+
+---
+
+## Stage 1 — the dictionary-neutral model
+
+[`build-neutral-model`](../scripts/build-neutral-model.mjs) suspends commitment to
+either standard and extracts one commensurable JSON record
+([neutral-model.json](../data/pilot/neutral-model.json)):
+
+```jsonc
+{
+  "id": "mw-pwg-pwk:ac",
+  "key": "ac",
+  "phenomena": ["hedge", "root", "tri-dict", "pwg-rich", "pwk-abridged", "homophone"],
+  "forms": [{ "orth": "ac", "type": "verbal-root", "grammar": "cl.", "verbClass": "1P,1Ā" }],
+  "records": { "mw": …, "pwg": …, "pwk": …, "ap90": …, "gra": … },
+  "relations": [{ "type": "whitney-root-association", "target": "ac,1" }],
+  "senses": [{ "def": "to go, move, tend", "kind": "gloss" }, { "def": "to honour", … }],
+  "citations": [ … 23 materialised <ls>, tagged by dictionary … ]
+}
+```
+
+This is the canonical layer: both profiles and all loss reports are derived from
+it, so they are comparable. The `phenomena` tags are what the sampler selected the
+case *for*.
+
+---
+
+## Stage 2 — the TEI archival profile
+
+[`export-tei`](../scripts/export-tei.mjs) renders the entry as archival TEI
+([mw-pwg-pwk-ac.xml](../data/pilot/tei/mw-pwg-pwk-ac.xml)), preserving each raw
+record as an escaped `<quote>` and promoting the structure TEI *can* express. All
+five source records appear (the backbone plus the optional AP90/GRA):
+
+```xml
+<etym xml:id="mw-pwg-pwk-ac-root-relation" type="root">
+  <lbl>verbal root</lbl>
+  <ref type="whitney-root" target="urn:csl:whitney-root:ac,1">ac,1</ref>
+</etym>
+…
+<bibl xml:id="mw-pwg-pwk-ac-cite-pwg-1" type="named-source-citation"
+      subtype="textual" corresp="#mw-pwg-pwk-ac-record-pwg">
+  <abbr>NAIGH. 2,14.</abbr>
+  <citedRange>2,14</citedRange>
+</bibl>
+```
+
+The `@subtype` and `<citedRange>` are already the `csl:` evidence-class extension
+on the TEI side (see Stage 5). TEI holds the dictionary *as an edition* — every
+record survives verbatim — but a citation's *evidential role* is only expressible
+through the extension attributes, not in vanilla TEI.
+
+---
+
+## Stage 3 — the OntoLex/FrAC semantic profile
+
+[`export-ontolex`](../scripts/export-ontolex.mjs) renders the same entry as a
+linked-data graph ([mw-pwg-pwk-ac.json](../data/pilot/ontolex/mw-pwg-pwk-ac.json),
+JSON-LD + Turtle). Here the root becomes a lexical entry **plus** an explicit
+relation, and each citation becomes a typed `frac:Attestation`:
+
+```jsonc
+// the root as a derivational base
+{ "@type": "csl:RootRelation", "csl:whitneyRoot": "ac,1",
+  "csl:modelingNote": "Root is modeled as lexical entry plus derivational/grammatical relation." }
+
+// a named kośa citation, evidence class made explicit
+{ "@type": "frac:Attestation", "frac:evidence": "AK. 3,1,34.",
+  "csl:sourceDictionary": "pwg", "csl:evidenceClass": "kosha",
+  "csl:citedWork": "AK.", "csl:citedRange": "3,1,34" }
+
+// the PWG → PWK abridgement, made queryable
+{ "@type": "csl:LineageRelation", "csl:lineageFrom": "pwg", "csl:lineageTo": "pwk",
+  "csl:transition": "abridgement",
+  "csl:sourceCitationCount": 35, "csl:retainedCitationCount": 8, "csl:droppedCitationCount": 27 }
+```
+
+OntoLex *never merely transcribes*: it relates the data or drops what it cannot
+relate. The graph carries all five `csl:SourceRecord`s and conforms under the
+SHACL profile (pySHACL).
+
+---
+
+## Stage 4 — what gets lost (the loss reports)
+
+[`build-loss-reports`](../scripts/build-loss-reports.mjs) records every degradation
+as an evidence-bound report. √ac generates **seven**
+([loss-reports.json](../data/pilot/loss-reports.json)):
+
+| target | phenomenon | cause | answered by |
+|---|---|---|---|
+| tei | generic-lexicographer-hedge | cdsl-markup-gap | — (string preserved, semantics not) |
+| ontolex | generic-lexicographer-hedge | model-vocabulary-gap | `csl:evidenceClass "hedge"` |
+| tei | root-as-entry | model-vocabulary-gap | (root preservable; role implicit) |
+| ontolex | root-as-derivational-base | model-vocabulary-gap | `csl:RootRelation` + `csl:whitneyRoot` |
+| neutral | source-collapse | editorial-compression | `csl:LineageRelation (abridgement)` |
+| ontolex | named-kosha-citation | model-vocabulary-gap | `csl:evidenceClass "kosha"` |
+| ontolex | citation-coordinate | model-vocabulary-gap | `csl:citedWork` + `csl:citedRange` |
+
+Read together they show the asymmetry in miniature: the TEI side is `partial` (it
+keeps everything as text, but cannot *type* the hedge or the root role); the
+OntoLex side is never `clean` (it must model or drop); and the `neutral` lane
+records a loss that is neither standard's fault — PWK dropped **27 of PWG's 35**
+named citations a century before any digitisation.
+
+---
+
+## Stage 5 — the remedy, on the same case
+
+The point of the workbench is that the diagnosis ends in *running code*. Each
+`model-vocabulary-gap` loss above names, in its `mappedAs` field, a concrete
+`csl:` construct that is implemented in both exporters and schema-validated
+(pySHACL for OntoLex, jing for TEI). For √ac the four such losses are answered by:
+
+- **`csl:evidenceClass`** (`textual` | `hedge` | `kosha` | `editorial`) — the MW
+  `L.` becomes `hedge`; `AK. 3,1,34.` becomes `kosha`, distinguished from a
+  textual attestation.
+- **`csl:citedWork` + `csl:citedRange`** — `DHĀTUP. 7,6.` is parsed into a work
+  siglum and a structured locus instead of a flat string.
+- **`csl:RootRelation` + `csl:whitneyRoot`** — the root is a lexical entry *and* a
+  derivational base pointing at Whitney's root index `ac,1`.
+
+The one `neutral` loss (the PWG → PWK abridgement) is not a standards gap, so it is
+*modeled, not extended*: **`csl:LineageRelation`** makes the editorial collapse an
+explicit, queryable relation with retained/dropped counts.
+
+The full extension layer and its standardise-vs-project-local disposition are in
+[EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md); the corpus-wide numbers are in
+[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md).
+
+---
+
+## Reproduce it
+
+```sh
+npm run build-pilot          # regenerate every artifact below
+
+# then inspect this one case:
+node -e "console.log(require('./data/pilot/neutral-model.json').find(x=>x.id==='mw-pwg-pwk:ac'))"
+cat data/pilot/tei/mw-pwg-pwk-ac.xml
+cat data/pilot/ontolex/mw-pwg-pwk-ac.json
+node -e "console.log(require('./data/pilot/loss-reports.json').filter(x=>x.caseId==='mw-pwg-pwk:ac'))"
+```
+
+Every number and fragment in this walkthrough comes straight from those files.
