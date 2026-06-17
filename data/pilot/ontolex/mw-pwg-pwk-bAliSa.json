@@ -54,6 +54,15 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-fri-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-3"
         }
       ],
       "frac:attestation": [
@@ -281,6 +290,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#resource-ben",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#lexentry-ben"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -355,6 +373,24 @@
       "lexicog:component": [
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-fri-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#lexentry-ben",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-3"
         }
       ]
     },
@@ -500,6 +536,42 @@
         }
       ],
       "csl:sourceDictionary": "fri"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa"
+      },
+      "skos:definition": {
+        "@value": "Young",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa"
+      },
+      "skos:definition": {
+        "@value": "Ignorant, foolish",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-3",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa"
+      },
+      "skos:definition": {
+        "@value": "Careless. A pillow",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#record-mw",
@@ -1190,23 +1262,23 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#attestation-42",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-2"
       },
-      "frac:evidence": "L.",
+      "frac:evidence": "Man.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#record-mw"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#record-ben"
       },
-      "csl:sourceDictionary": "mw",
-      "csl:evidenceType": "generic-lexicographer-hedge",
-      "csl:evidenceClass": "hedge"
+      "csl:sourceDictionary": "ben",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#attestation-43",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#sense-ben-2"
       },
-      "frac:evidence": "Man.",
+      "frac:evidence": "Pañc.",
       "prov:wasDerivedFrom": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#record-ben"
       },
@@ -1220,13 +1292,13 @@
       "frac:attests": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa"
       },
-      "frac:evidence": "Pañc.",
+      "frac:evidence": "L.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#record-ben"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#record-mw"
       },
-      "csl:sourceDictionary": "ben",
-      "csl:evidenceType": "named-source-citation",
-      "csl:evidenceClass": "textual"
+      "csl:sourceDictionary": "mw",
+      "csl:evidenceType": "generic-lexicographer-hedge",
+      "csl:evidenceClass": "hedge"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AbAliSa#attestation-45",

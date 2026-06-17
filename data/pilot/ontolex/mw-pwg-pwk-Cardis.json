@@ -42,6 +42,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#sense-gra-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#sense-ben-1"
         }
       ],
       "frac:attestation": [
@@ -206,6 +209,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#resource-ben",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#lexentry-ben"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -268,6 +280,18 @@
       "lexicog:component": [
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#sense-gra-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#lexentry-ben",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#sense-ben-1"
         }
       ]
     },
@@ -354,6 +378,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "gra"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#sense-ben-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis"
+      },
+      "skos:definition": {
+        "@value": "A secure habitation",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#record-mw",
@@ -752,7 +788,7 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#attestation-23",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#sense-ben-1"
       },
       "frac:evidence": "Chr.",
       "prov:wasDerivedFrom": {
@@ -766,7 +802,7 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#attestation-24",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3ACardis#sense-ben-1"
       },
       "frac:evidence": "Rigv.",
       "prov:wasDerivedFrom": {

@@ -69,6 +69,12 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-fri-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-2"
         }
       ],
       "frac:attestation": [
@@ -179,6 +185,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#attestation-36"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#attestation-37"
         }
       ],
       "csl:sourceRecord": [
@@ -273,6 +282,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#resource-ben",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#lexentry-ben"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#lexentry-pwg",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -362,6 +380,21 @@
       "lexicog:component": [
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-fri-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#lexentry-ben",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-2"
         }
       ]
     },
@@ -566,6 +599,30 @@
         }
       ],
       "csl:sourceDictionary": "fri"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa"
+      },
+      "skos:definition": {
+        "@value": "The eleventh",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa"
+      },
+      "skos:definition": {
+        "@value": "Lasting eleven, The eleventh day of the half month",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#record-mw",
@@ -1153,25 +1210,23 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#attestation-34",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-1"
       },
-      "frac:evidence": "HEMĀDRI 1,627,14. 628,4",
+      "frac:evidence": "Man.",
       "prov:wasDerivedFrom": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#record-pwk"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#record-ben"
       },
-      "csl:sourceDictionary": "pwk",
+      "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
-      "csl:evidenceClass": "textual",
-      "csl:citedWork": "HEMĀDRI",
-      "csl:citedRange": "1,627,14.628,4"
+      "csl:evidenceClass": "textual"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#attestation-35",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-2"
       },
-      "frac:evidence": "Man.",
+      "frac:evidence": "MBh.",
       "prov:wasDerivedFrom": {
         "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#record-ben"
       },
@@ -1183,7 +1238,7 @@
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#attestation-36",
       "@type": "frac:Attestation",
       "frac:attests": {
-        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa"
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#sense-ben-2"
       },
       "frac:evidence": "MBh.",
       "prov:wasDerivedFrom": {
@@ -1192,6 +1247,22 @@
       "csl:sourceDictionary": "ben",
       "csl:evidenceType": "named-source-citation",
       "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#attestation-37",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa"
+      },
+      "frac:evidence": "HEMĀDRI 1,627,14. 628,4",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "HEMĀDRI",
+      "csl:citedRange": "1,627,14.628,4"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AekAdaSa#decomposition",

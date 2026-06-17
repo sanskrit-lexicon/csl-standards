@@ -27,6 +27,9 @@
         },
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#sense-ben-1"
         }
       ],
       "frac:attestation": [
@@ -91,6 +94,15 @@
       }
     },
     {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#resource-ben",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Benfey Sanskrit-English 1866",
+      "csl:dictionary": "ben",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#lexentry-ben"
+      }
+    },
+    {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#lexentry-mw",
       "@type": "lexicog:Entry",
       "lexicog:describes": {
@@ -111,6 +123,18 @@
       "lexicog:component": [
         {
           "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#sense-pwg-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#lexentry-ben",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#sense-ben-1"
         }
       ]
     },
@@ -137,6 +161,18 @@
         "@language": "de"
       },
       "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#sense-ben-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564"
+      },
+      "skos:definition": {
+        "@value": "To sound",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ben"
     },
     {
       "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AamB-mw14564#record-mw",
