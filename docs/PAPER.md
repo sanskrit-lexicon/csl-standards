@@ -70,11 +70,12 @@ apparatus of *kośa* citations was systematically compressed in PWK and
 re-interpreted in MW.
 
 On the standards side we evaluate the TEI dictionaries module, which models the
-physical and editorial structure of the text, alongside OntoLex-Lemon — including
-OntoLex-Lexicog (multi-resource lexicographic structure) and the Frequency,
-Attestation and Corpus (FrAC) module — which models conceptual and semantic
-relations. The TEI Lex-0 baseline serves as a normalised interchange target
-distinct from a full archival profile. We treat all of these as fixed targets and
+physical and editorial structure of the text, alongside OntoLex-Lemon (McCrae,
+Spohr & Cimiano, 2011) — including OntoLex-Lexicog (multi-resource lexicographic
+structure) and the Frequency, Attestation and Corpus (FrAC) module (Chiarcos et
+al., 2022) — which models conceptual and semantic relations. The TEI Lex-0
+baseline (DARIAH-EU "Lexical Resources" WG) serves as a normalised interchange
+target distinct from a full archival profile. We treat all of these as fixed targets and
 ask what they can and cannot hold; where they cannot, we extend them rather than
 abandon them.
 
@@ -370,9 +371,15 @@ is in [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](VALIDATED_INTEROPERABILITY_PR
 
 ## References
 
-This draft is an instrument-grounded study rather than a literature survey; the
-references below are the **standards, tools, and primary sources** the workbench
-actually builds on, each verifiable and used in the pipeline.
+The references below are the **secondary literature, standards, tools, and primary
+sources** the work builds on. Every entry is a real, verifiable publication or
+specification.
+
+**Secondary literature**
+
+- McCrae, J., Spohr, D. & Cimiano, P. (2011). Linking Lexical Resources and Ontologies on the Semantic Web with Lemon. In *The Semantic Web: Research and Applications (ESWC 2011)*, LNCS 6643, pp. 245–259. <https://doi.org/10.1007/978-3-642-21034-1_17>
+- Chiarcos, C., Apostol, E.-S., Kabashi, B. & Truică, C.-O. (2022). Modelling Frequency, Attestation, and Corpus-Based Information with OntoLex-FrAC. In *Proceedings of COLING 2022*, pp. 4018–4027. <https://aclanthology.org/2022.coling-1.353/>
+- Bowers, J., Herold, A. & Romary, L. TEI Lex-0 Etym: Toward Terse Recommendations for the Encoding of Etymological Information (DARIAH-EU / ELEXIS "Lexical Resources" Working Group). <https://www.researchgate.net/publication/363754091>
 
 **Standards and specifications**
 
