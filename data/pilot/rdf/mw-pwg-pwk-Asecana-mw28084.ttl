@@ -43,7 +43,8 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#attestation-5> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#attestation-6> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#attestation-7> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#attestation-8> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#attestation-8> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#attestation-9> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "Asecana"@sa-Latn-x-SLP1 .
@@ -235,6 +236,15 @@
   csl:evidenceType "named-source-citation" ;
   csl:citedWork "KĀTY. ŚR." ;
   csl:citedRange "4,8,5" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#attestation-9> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084> ;
+  frac:evidence "RV 162,13" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "RV" ;
+  csl:citedRange "162,13" ;
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AAsecana-mw28084#lineage-pwk> a csl:LineageRelation ;

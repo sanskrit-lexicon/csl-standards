@@ -42,7 +42,9 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-7> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-8> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-9> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-10> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-10> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-11> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-12> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "asana"@sa-Latn-x-SLP1 .
@@ -217,6 +219,24 @@
   frac:evidence "Ragh." ;
   prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-ben> ;
   csl:evidenceType "named-source-citation" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-11> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611> ;
+  frac:evidence "RV 130,4" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "RV" ;
+  csl:citedRange "130,4" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#attestation-12> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611> ;
+  frac:evidence "RV 112,21" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "RV" ;
+  csl:citedRange "112,21" ;
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Aasana-mw20611#continuation-relation> a csl:ContinuationRelation ;

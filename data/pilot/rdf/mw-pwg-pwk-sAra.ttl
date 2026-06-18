@@ -125,7 +125,8 @@
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#attestation-49> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#attestation-50> ;
   frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#attestation-51> ;
-  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#attestation-52> .
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#attestation-52> ;
+  frac:attestation <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#attestation-53> .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#form-canonical> a ontolex:Form ;
   ontolex:writtenRep "sAra"@sa-Latn-x-SLP1 .
@@ -880,6 +881,15 @@
   csl:evidenceType "named-source-citation" ;
   csl:citedWork "R." ;
   csl:citedRange "5.26" ;
+  csl:evidenceClass "textual" .
+
+<https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#attestation-53> a frac:Attestation ;
+  frac:attests <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra> ;
+  frac:evidence "RV 287,19" ;
+  prov:wasDerivedFrom <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#record-gra> ;
+  csl:evidenceType "named-source-citation" ;
+  csl:citedWork "RV" ;
+  csl:citedRange "287,19" ;
   csl:evidenceClass "textual" .
 
 <https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3AsAra#continuation-relation> a csl:ContinuationRelation ;

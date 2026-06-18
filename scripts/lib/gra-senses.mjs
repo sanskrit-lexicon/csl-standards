@@ -13,12 +13,18 @@
 //     finden Uebergänge statt"). Only the leading consecutive run 1〉 2〉 3〉 … is a
 //     real sense list; the last numbered sense is truncated at the first
 //     non-consecutive marker so a reference never spawns a spurious sense.
-//   • Citation coordinates are `{N,M}` Rigveda hymn,verse refs (not <ls>), so the
-//     few <ls> that do occur (e.g. comparative-grammar refs) are attached per
-//     sense via the shared extractor; coordinate refs are dropped from the gloss.
+//   • Grassmann's citation apparatus is coordinate-based: the <div> segments give
+//     the inflected forms and reference each attestation by `N〉 {hymn,verse}` keyed
+//     to the numbered sense N ("-as 1〉 {548,12}. 5〉 {192,4}"). The dictionary is
+//     wholly the Rigveda, so a coordinate is an RV locus; extractGraSenses attaches
+//     it to the sense it attests, and extractGraCitations surfaces the flat list for
+//     the neutral model so the loss corpus sees Grassmann's evidence. (The few real
+//     <ls> — comparative-grammar refs like Cu. — are still attached per sense too;
+//     coordinate refs are dropped from the gloss text.)
 //
 // Entries with no numbered run fall back to the Petersburg extractor, which
-// handles GRA's <div>/{%…%} glosses fine.
+// handles GRA's <div>/{%…%} glosses fine; their coordinates are still surfaced at
+// entry level by extractGraCitations.
 
 import { extractLabeledSources } from "./citations.mjs";
 import { extractPwSenses } from "./pw-senses.mjs";
@@ -75,6 +81,49 @@ function makeSense(def, span) {
   return sense;
 }
 
+// A coordinate ref {hymn,verse} (two+ numbers in braces) — distinct from the
+// {#…#}/{@…@}/{%…%} pseudo-markup which never starts with a digit.
+const COORD = /\{\s*(\d[\d.,\s]*\d)\s*\}/g;
+
+function coordCite(source) {
+  return { source, type: "named-source-citation", dictionary: "gra" };
+}
+
+function divPartOf(body) {
+  const i = body.indexOf("<div");
+  return i >= 0 ? body.slice(i) : "";
+}
+
+// Walk the <div> portion in document order, assigning each {hymn,verse} coordinate
+// to the most recent N〉 sense number within its own <div> (null = prefix-keyed, not
+// tied to a numbered sense). Returns the flat coordinate list and a per-sense map,
+// each coordinate formatted as the RV locus "RV h,v".
+function parseDivCitations(divPart) {
+  const flat = [];
+  const bySense = new Map();
+  for (const seg of divPart.split(/<div\b[^>]*>/)) {
+    const marks = [];
+    for (const m of seg.matchAll(MARKER)) marks.push({ pos: m.index, num: Number(m[1]) });
+    for (const m of seg.matchAll(COORD)) {
+      const locus = m[1].replace(/\s+/g, "");
+      if (/\d[.,]\d/.test(locus)) marks.push({ pos: m.index, coord: `RV ${locus}` });
+    }
+    marks.sort((a, b) => a.pos - b.pos);
+    let current = null;
+    for (const mk of marks) {
+      if (mk.num !== undefined) current = mk.num;
+      else {
+        flat.push(mk.coord);
+        if (current != null) {
+          if (!bySense.has(current)) bySense.set(current, []);
+          bySense.get(current).push(mk.coord);
+        }
+      }
+    }
+  }
+  return { flat, bySense };
+}
+
 export function extractGraSenses(raw) {
   if (!raw) return [];
   const body = bodyOf(raw);
@@ -96,6 +145,7 @@ export function extractGraSenses(raw) {
   if (runLen === 0) return extractPwSenses(raw, "gra");  // not a numbered entry
 
   const senses = [];
+  const numberedByN = new Map();
 
   // Preamble (before the first marker): etymological prose where only {%…%}
   // marks genuine German equivalents — join them into one base sense.
@@ -121,9 +171,42 @@ export function extractGraSenses(raw) {
     const glosses = glossesIn(span);
     const def = glosses.length ? glosses.join("; ") : cleanDe(span);
     const sense = makeSense(def, span);
-    if (sense) senses.push(sense);
+    if (sense) {
+      senses.push(sense);
+      numberedByN.set(i + 1, sense);
+    }
     if (senses.length >= 20) break;
   }
 
+  // Attach Grassmann's coordinate citations (keyed by N〉 in the <div> apparatus)
+  // to the numbered sense they attest, deduped and capped, alongside any <ls>.
+  const { bySense } = parseDivCitations(divPartOf(body));
+  for (const [n, coords] of bySense) {
+    const sense = numberedByN.get(n);
+    if (!sense) continue;
+    const seen = new Set((sense.citations || []).map(c => c.source));
+    const add = [...new Set(coords)].filter(s => !seen.has(s)).slice(0, 12).map(coordCite);
+    if (add.length) sense.citations = [...(sense.citations || []), ...add];
+  }
+
   return senses;
+}
+
+// Entry-level flat coordinate citations (deduped, capped) for the neutral model's
+// citation layer — Grassmann's RV apparatus is coordinate-based ({hymn,verse}), not
+// <ls>, so build-neutral-model adds these so the loss corpus's citation-coordinate
+// evidence class (which reads model.citations) sees his evidence. Works for numbered
+// and un-numbered entries alike.
+export function extractGraCitations(raw) {
+  if (!raw) return [];
+  const { flat } = parseDivCitations(divPartOf(bodyOf(raw)));
+  const seen = new Set();
+  const out = [];
+  for (const source of flat) {
+    if (seen.has(source)) continue;
+    seen.add(source);
+    out.push(coordCite(source));
+    if (out.length >= 12) break;
+  }
+  return out;
 }
