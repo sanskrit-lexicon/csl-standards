@@ -1,21 +1,21 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 1364,
+    "total": 1430,
     "cases": 256,
     "byStatus": {
-      "partial": 941,
+      "partial": 1007,
       "lossy": 348,
       "clean": 75
     },
     "byTarget": {
-      "ontolex": 696,
+      "ontolex": 762,
       "neutral": 370,
       "tei": 298
     },
     "byPhenomenon": {
       "source-collapse": 369,
-      "citation-coordinate": 297,
+      "citation-coordinate": 363,
       "generic-lexicographer-hedge": 234,
       "named-kosha-citation": 91,
       "continuation-parent": 80,
@@ -28,7 +28,7 @@
       "source-anomaly": 1
     },
     "byFailureClassification": {
-      "model-vocabulary-gap": 716,
+      "model-vocabulary-gap": 782,
       "editorial-compression": 369,
       "cdsl-markup-gap": 117,
       "print-compression": 80,
@@ -37,19 +37,19 @@
       "data-quality": 1
     },
     "byExtensionNeeded": {
-      "extensionNeeded=true": 819,
+      "extensionNeeded=true": 885,
       "extensionNeeded=false": 545
     },
     "byReviewStatus": {
-      "machine": 1268,
+      "machine": 1334,
       "reviewed": 96
     },
     "bySourceDictionary": {
       "mw": 615,
       "pwg": 405,
       "pwk": 251,
+      "gra": 77,
       "ap90": 73,
-      "gra": 11,
       "skd": 6,
       "ben": 3
     },
@@ -60,7 +60,7 @@
         "lossy": 6
       },
       "ontolex": {
-        "partial": 596,
+        "partial": 662,
         "lossy": 100
       },
       "neutral": {
@@ -92,16 +92,16 @@
       "continuation": 40
     },
     "citations": {
-      "total": 3513,
+      "total": 3960,
       "byType": {
         "generic-lexicographer-hedge": 116,
-        "named-source-citation": 3397
+        "named-source-citation": 3844
       },
       "byDictionary": {
         "mw": 379,
         "pwg": 1872,
         "pwk": 366,
-        "gra": 64,
+        "gra": 511,
         "ben": 447,
         "ap90": 385
       }
@@ -129,8 +129,8 @@
       "mw",
       "pwg",
       "pwk",
-      "ap90",
       "gra",
+      "ap90",
       "skd",
       "ben"
     ],
@@ -139,14 +139,14 @@
       "failure"
     ],
     "roadmapCausesNotEmitted": [],
-    "namedSourceCitationsMaterialized": 3397
+    "namedSourceCitationsMaterialized": 3844
   },
   "extensionCoverage": {
-    "ontolexModelVocabularyGapsNeedingExtension": 656,
-    "coveredByImplementedConstruct": 656,
+    "ontolexModelVocabularyGapsNeedingExtension": 722,
+    "coveredByImplementedConstruct": 722,
     "uncovered": 0,
     "byConstruct": {
-      "frac:Attestation with csl:citedWork + csl:citedRange": 297,
+      "frac:Attestation with csl:citedWork + csl:citedRange": 363,
       "frac:Attestation with csl:evidenceClass \"hedge\"": 117,
       "frac:Attestation with csl:evidenceClass \"kosha\"": 91,
       "decomp:ComponentList of decomp:Component": 75,

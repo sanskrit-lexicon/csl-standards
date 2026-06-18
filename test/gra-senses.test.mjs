@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { extractGraSenses } from "../scripts/lib/gra-senses.mjs";
+import { extractGraSenses, extractGraCitations } from "../scripts/lib/gra-senses.mjs";
 
 // Grassmann's numbered sub-senses on the headword line (after the "daher").
 const AMSA = "<L>1<pc>1<k1>aMSa<k2>aMSa {@áṃśa,@}¦ <ab>m.</ab>, das als " +
@@ -64,4 +64,30 @@ test("an un-numbered GRA entry falls back to the Petersburg <div>/{%…%} extrac
 test("empty input yields no senses", () => {
   assert.deepEqual(extractGraSenses(""), []);
   assert.deepEqual(extractGraSenses(null), []);
+});
+
+// The <div> apparatus keys each {hymn,verse} coordinate to a sense number; a
+// prefix-keyed coordinate (no N〉) belongs to the entry, not a numbered sense.
+const AMSA_DIV = "<L>1<k1>aMSa<k2>aMSa {@áṃśa,@}¦ <ab>m.</ab> 1〉 {%Antheil;%} " +
+  "2〉 {%Erbtheil;%}\n<div n=\"TS\">-as 1〉 {548,12}. 2〉 {279,4}; {102,4}.\n" +
+  "<div n=\"RV\">úd kóśam {437,8}.<LEND>";
+
+test("coordinates are attached to the numbered sense they attest, as RV loci", () => {
+  const senses = extractGraSenses(AMSA_DIV);
+  assert.deepEqual(senses[0].citations.map(c => c.source), ["RV 548,12"]);
+  assert.deepEqual(senses[1].citations.map(c => c.source), ["RV 279,4", "RV 102,4"]);
+  assert.ok(senses[0].citations.every(c => c.dictionary === "gra" && c.type === "named-source-citation"));
+});
+
+test("extractGraCitations returns the flat entry-level coordinate list incl. prefix-keyed loci", () => {
+  const sources = extractGraCitations(AMSA_DIV).map(c => c.source);
+  assert.deepEqual(sources, ["RV 548,12", "RV 279,4", "RV 102,4", "RV 437,8"]);
+  // the prefix-keyed 437,8 (no N〉) is entry-level only, on no sense
+  const senses = extractGraSenses(AMSA_DIV);
+  assert.ok(!senses.some(s => (s.citations || []).some(c => c.source === "RV 437,8")));
+});
+
+test("a pseudo-markup brace ({@…@}/{%…%}) is not mistaken for a coordinate", () => {
+  const raw = "<L>2<k1>x<k2>x {@x@}¦ <ab>m.</ab> 1〉 {%gut%}\n<div n=\"TS\">{@sám@} 1〉 {408,12}.<LEND>";
+  assert.deepEqual(extractGraCitations(raw).map(c => c.source), ["RV 408,12"]);
 });

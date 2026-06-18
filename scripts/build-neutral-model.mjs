@@ -5,7 +5,7 @@ import { extractMwSenses } from "./lib/mw-senses.mjs";
 import { extractPwSenses } from "./lib/pw-senses.mjs";
 import { extractFriSenses } from "./lib/fri-senses.mjs";
 import { extractAp90Senses } from "./lib/ap90-senses.mjs";
-import { extractGraSenses } from "./lib/gra-senses.mjs";
+import { extractGraSenses, extractGraCitations } from "./lib/gra-senses.mjs";
 import { extractBenSenses } from "./lib/ben-senses.mjs";
 
 // Per-dictionary sense extractor for the optional dictionaries. GRA (Grassmann)
@@ -73,6 +73,12 @@ function extractCitations(item) {
       });
       if (seen.size >= MAX_CITATIONS_PER_DICT) break;
     }
+  }
+  // GRA's apparatus is coordinate-based ({hymn,verse} RV loci), not <ls>, so the
+  // generic <ls> pass above misses it; surface those coordinates as RV citations so
+  // Grassmann's evidence reaches the loss corpus's citation-coordinate class.
+  if (item.records.gra?.raw) {
+    citations.push(...extractGraCitations(item.records.gra.raw));
   }
   return citations;
 }
