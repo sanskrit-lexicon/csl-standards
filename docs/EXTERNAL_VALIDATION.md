@@ -37,10 +37,11 @@ npm run setup-external-tools      # downloads JRE + Saxon + jing + TEI Styleshee
 npm run validate-external         # runs the harness against the local toolchain; add  -- --strict  to fail on skips
 ```
 `tools/` is git-ignored and self-contained; delete it to reset. The setup is
-idempotent (re-run to repair). For the RDF/SHACL layer, `pip install --user
-pyshacl` — the harness finds it on PATH **or** via `python -m pyshacl`, so the
-`pip --user` script location does not need to be on PATH. Without pyshacl the
-SHACL checks are recorded as `skipped`.
+idempotent (re-run to repair) and verifies every downloaded artifact with a pinned
+SHA-256 before using it. For the RDF/SHACL layer, `pip install --user pyshacl` —
+the harness finds it on PATH **or** via `python -m pyshacl`, so the `pip --user`
+script location does not need to be on PATH. Without pyshacl the SHACL checks are
+recorded as `skipped`.
 
 What `setup-external-tools` assembles under `tools/`:
 
@@ -49,9 +50,9 @@ What `setup-external-tools` assembles under `tools/`:
 | Temurin JRE | 21 | runs Saxon + jing |
 | Saxon-HE | 10.9 | runs the ODD→RNG XSLTs; compiles + runs the Schematron SVRL |
 | TEI Stylesheets | 7.60.0 | `odd2odd` + `odd2relax` |
-| p5subset.xml | P5 current | TEI source for module expansion |
+| p5subset.xml | TEI P5 4.11.0 | TEI source for module expansion |
 | jing | 20091111 | RELAX NG validator |
-| ISO Schematron skeleton | Schematron/schematron | compiles the ODD's Schematron to an SVRL XSLT |
+| ISO Schematron skeleton | Schematron/schematron `77dcd36c` | compiles the ODD's Schematron to an SVRL XSLT |
 
 The setup extracts the Lex-0 ODD's `<sch:pattern>` into a standalone schema and
 compiles it to `tools/schematron/csl-tei-lex0.svrl.xsl` (the 3-stage ISO skeleton

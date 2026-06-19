@@ -18,6 +18,12 @@ into a dated version. Versions track `package.json`.
   required checks exist. Semver-major updates stay open for human review. The
   org-sync onboarding template is aligned with the checked-in workflow and uses
   `dependabot/fetch-metadata@v3`.
+- **External tool downloads pinned and verified.** `setup-external-tools` now pins
+  the portable validation toolchain and verifies downloads with SHA-256 before
+  using them: Temurin JRE 21.0.11+10, Saxon-HE 10.9, jing 20091111, TEI
+  Stylesheets 7.60.0, TEI P5 4.11.0, and the ISO Schematron skeleton at a fixed
+  upstream commit. The setup path also passes TEI's `defaultSource` as a file URI
+  on Windows so a fresh ODD→RNG compile runs cleanly.
 - **External validator process handling hardened.** `validate-external-profiles`
   avoids Node's Windows `shell: true` child-process path for normal executables,
   keeps explicit handling for `.cmd`/`.bat` shims, and records the actual pySHACL
