@@ -31,11 +31,8 @@ DEPENDABOT_PATH = ".github/dependabot.yml"
 # Must stay byte-identical to what /cologne-dependabot-automerge-all deploys.
 AUTOMERGE_YML = """name: Dependabot auto-merge
 
-# Hands-off merge of Dependabot pull requests. When all required checks pass
-# GitHub merges the PR by itself; on repos with no required checks the PR is
-# squash-merged directly. To hold back major bumps for human review, gate the
-# Approve + Enable steps on:
-#   steps.meta.outputs.update-type != 'version-update:semver-major'
+# Hands-off merge of Dependabot pull requests. GitHub merges the PR after the
+# repo's required checks pass; major version bumps stay open for human review.
 # Deployed by /cologne-dependabot-automerge-all.
 
 on: pull_request
@@ -52,18 +49,20 @@ jobs:
     steps:
       - name: Fetch Dependabot metadata
         id: meta
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Approve the PR
+        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
         run: gh pr review --approve "$PR_URL" || true
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Enable auto-merge (falls back to a direct squash-merge where no required checks exist)
-        run: gh pr merge --auto --squash "$PR_URL" || gh pr merge --squash "$PR_URL"
+      - name: Enable auto-merge
+        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
+        run: gh pr merge --auto --squash "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -4,6 +4,33 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
+## [Unreleased]
+
+### Added
+- **CI safety net.** Added a normal GitHub Actions CI workflow for pull requests
+  and pushes to `main`, running the unit tests, pilot validators, TEI/OntoLex/Lex-0
+  structural validators, and Observable build before dependency updates can be
+  considered safe to merge.
+
+### Changed
+- **Dependabot auto-merge hardened.** Dependabot PRs now only enable GitHub
+  auto-merge and no longer fall back to an immediate direct squash merge when no
+  required checks exist. Semver-major updates stay open for human review. The
+  org-sync onboarding template is aligned with the checked-in workflow and uses
+  `dependabot/fetch-metadata@v3`.
+- **External validator process handling hardened.** `validate-external-profiles`
+  avoids Node's Windows `shell: true` child-process path for normal executables,
+  keeps explicit handling for `.cmd`/`.bat` shims, and records the actual pySHACL
+  runner used by the module fallback.
+- **External validation report refreshed.** The generated external validation
+  report now reflects this machine's pySHACL run: 250 passed, 4 skipped, with the
+  SHACL runner recorded in `tools.shaclValidator`.
+
+### Fixed
+- **Pipeline failures now fail the process.** `build-neutral-model` and
+  `build-loss-reports` now exit non-zero when their top-level generation step
+  throws, so `build-pilot` stops instead of continuing with stale artifacts.
+
 ## [0.8.0] - 2026-06-17
 
 **The optional-dictionary layer.** A registry makes adding a dictionary beyond the

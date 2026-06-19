@@ -37,11 +37,20 @@ function commandPath(command) {
   return result.status === 0 ? firstLine(result.stdout).trim() : "";
 }
 
+function isWindowsCommandScript(command) {
+  return process.platform === "win32" && /\.(?:cmd|bat)$/i.test(command);
+}
+
 function run(command, args, options = {}) {
-  return spawnSync(command, args, {
+  const spawnCommand = isWindowsCommandScript(command)
+    ? (process.env.ComSpec || "cmd.exe")
+    : command;
+  const spawnArgs = isWindowsCommandScript(command)
+    ? ["/d", "/s", "/c", command, ...args]
+    : args;
+  return spawnSync(spawnCommand, spawnArgs, {
     cwd: root,
     encoding: "utf8",
-    shell: process.platform === "win32",
     maxBuffer: 1024 * 1024 * 16,
     ...options
   });
@@ -210,10 +219,11 @@ function lex0Files() {
 // (pip --user installs the script outside PATH, so the module fallback matters).
 function shaclRunner() {
   const direct = commandPath("pyshacl");
-  if (direct) return { cmd: direct, pre: [] };
+  if (direct) return { cmd: direct, pre: [], label: direct };
   for (const py of ["python", "python3", "py"]) {
-    if (commandPath(py) && run(py, ["-m", "pyshacl", "--version"]).status === 0) {
-      return { cmd: py, pre: ["-m", "pyshacl"] };
+    const pyPath = commandPath(py);
+    if (pyPath && run(pyPath, ["-m", "pyshacl", "--version"]).status === 0) {
+      return { cmd: pyPath, pre: ["-m", "pyshacl"], label: `${pyPath} -m pyshacl` };
     }
   }
   return null;
@@ -266,8 +276,7 @@ function runSchematronValidation(files) {
   }
 }
 
-function runShaclValidation(models) {
-  const runner = shaclRunner();
+function runShaclValidation(models, runner) {
   const shapesPath = path.join(root, "data/schema/ontolex-frac-profile.shacl.ttl");
   if (!runner) {
     skipped("shacl-engine", "pySHACL is not available; install pyshacl (pip install pyshacl) to run an external SHACL engine.");
@@ -302,6 +311,7 @@ function runShaclValidation(models) {
 
 const models = readJson("data/pilot/neutral-model.json");
 const validator = rngValidator();
+const shacl = shaclRunner();
 
 const teiRng = resolveRng({
   type: "tei",
@@ -322,7 +332,7 @@ runRngValidation({type: "lex0", rngPath: lex0Rng, validator, files: lex0FileList
 
 runSchematronValidation(lex0FileList);
 
-runShaclValidation(models);
+runShaclValidation(models, shacl);
 
 const failedChecks = checks.filter(check => check.status === "fail");
 const skippedChecks = checks.filter(check => check.status === "skipped");
@@ -334,7 +344,7 @@ const report = {
   tools: {
     teiOddCompiler: commandPath("teitorelaxng") || null,
     teiXmlValidator: commandPath("jing") || commandPath("xmllint") || null,
-    shaclValidator: commandPath("pyshacl") || null,
+    shaclValidator: shacl?.label || null,
     schematronEngine: process.env.CSL_STANDARDS_LEX0_SVRL ? "saxon-svrl" : null
   },
   totals: {

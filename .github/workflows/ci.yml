@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Test, validate, and build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Validate pilot artifacts
+        run: npm run validate-pilot
+
+      - name: Validate TEI archival profile
+        run: npm run validate-tei-profile
+
+      - name: Validate OntoLex profile
+        run: npm run validate-ontolex-profile
+
+      - name: Validate TEI Lex-0 baseline
+        run: npm run validate-tei-lex0
+
+      - name: Build Observable site
+        run: npm run build

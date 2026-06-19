@@ -310,4 +310,7 @@ async function main() {
   console.log(`Generated ${reports.length} loss reports at ${outputPaths.join(", ")}`);
 }
 
-main().catch(console.error);
+main().catch(error => {
+  console.error(error);
+  process.exit(1);
+});

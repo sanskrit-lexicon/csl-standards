@@ -5,11 +5,12 @@
   "tools": {
     "teiOddCompiler": null,
     "teiXmlValidator": null,
-    "shaclValidator": null
+    "shaclValidator": "C:\\Python314\\python.exe -m pyshacl",
+    "schematronEngine": null
   },
   "totals": {
-    "checks": 4,
-    "passed": 0,
+    "checks": 254,
+    "passed": 250,
     "failed": 0,
     "skipped": 4
   },
@@ -30,9 +31,2009 @@
       "message": "TEI Stylesheets command teitorelaxng is not available; install TEI Stylesheets or set CSL_STANDARDS_LEX0_RNG to a precompiled RELAX NG schema."
     },
     {
-      "type": "shacl-engine",
+      "type": "schematron",
       "status": "skipped",
-      "message": "pySHACL is not available; install pyshacl to run an external SHACL engine."
+      "message": "No compiled Lex-0 Schematron SVRL transform; set CSL_STANDARDS_LEX0_SVRL or run setup-external-tools."
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ac.",
+      "id": "mw-pwg-pwk:ac",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ac.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ah-mw21630.",
+      "id": "mw-pwg-pwk:ah-mw21630",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ah-mw21630.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:akz.",
+      "id": "mw-pwg-pwk:akz",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-akz.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:am.",
+      "id": "mw-pwg-pwk:am",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-am.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aMh-mw107.",
+      "id": "mw-pwg-pwk:aMh-mw107",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aMh-mw107.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aMh-mw114.",
+      "id": "mw-pwg-pwk:aMh-mw114",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aMh-mw114.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:an.",
+      "id": "mw-pwg-pwk:an",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-an.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:at.",
+      "id": "mw-pwg-pwk:at",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-at.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:DAv.",
+      "id": "mw-pwg-pwk:DAv",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-DAv.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dih.",
+      "id": "mw-pwg-pwk:dih",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dih.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kal.",
+      "id": "mw-pwg-pwk:kal",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kal.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pruz.",
+      "id": "mw-pwg-pwk:pruz",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pruz.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Urj.",
+      "id": "mw-pwg-pwk:Urj",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Urj.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:val.",
+      "id": "mw-pwg-pwk:val",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-val.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:and.",
+      "id": "mw-pwg-pwk:and",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-and.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aNg-mw1492.",
+      "id": "mw-pwg-pwk:aNg-mw1492",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aNg-mw1492.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aNk.",
+      "id": "mw-pwg-pwk:aNk",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aNk.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ard.",
+      "id": "mw-pwg-pwk:ard",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ard.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:arj.",
+      "id": "mw-pwg-pwk:arj",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-arj.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aRW.",
+      "id": "mw-pwg-pwk:aRW",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aRW.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aYj.",
+      "id": "mw-pwg-pwk:aYj",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aYj.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Band.",
+      "id": "mw-pwg-pwk:Band",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Band.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Bikz.",
+      "id": "mw-pwg-pwk:Bikz",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Bikz.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:il.",
+      "id": "mw-pwg-pwk:il",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-il.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:laNG.",
+      "id": "mw-pwg-pwk:laNG",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-laNG.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:maRq.",
+      "id": "mw-pwg-pwk:maRq",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-maRq.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:riP.",
+      "id": "mw-pwg-pwk:riP",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-riP.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aq.",
+      "id": "mw-pwg-pwk:aq",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aq.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aYc.",
+      "id": "mw-pwg-pwk:aYc",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aYc.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:az.",
+      "id": "mw-pwg-pwk:az",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-az.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:uh.",
+      "id": "mw-pwg-pwk:uh",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-uh.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:al.",
+      "id": "mw-pwg-pwk:al",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-al.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:amb-mw14390.",
+      "id": "mw-pwg-pwk:amb-mw14390",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-amb-mw14390.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:amB-mw14564.",
+      "id": "mw-pwg-pwk:amB-mw14564",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-amB-mw14564.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aNG-mw1752.",
+      "id": "mw-pwg-pwk:aNG-mw1752",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aNG-mw1752.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aqq.",
+      "id": "mw-pwg-pwk:aqq",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aqq.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aR-mw2390.",
+      "id": "mw-pwg-pwk:aR-mw2390",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aR-mw2390.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:arb.",
+      "id": "mw-pwg-pwk:arb",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-arb.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:arv.",
+      "id": "mw-pwg-pwk:arv",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-arv.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aW-mw2383.",
+      "id": "mw-pwg-pwk:aW-mw2383",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aW-mw2383.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aww.",
+      "id": "mw-pwg-pwk:aww",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aww.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Urd.",
+      "id": "mw-pwg-pwk:Urd",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Urd.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:mIv.",
+      "id": "mw-pwg-pwk:mIv",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-mIv.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aj.",
+      "id": "mw-pwg-pwk:aj",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aj.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aw-mw2337.",
+      "id": "mw-pwg-pwk:aw-mw2337",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aw-mw2337.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kamb.",
+      "id": "mw-pwg-pwk:kamb",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kamb.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ad.",
+      "id": "mw-pwg-pwk:ad",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ad.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ah-mw21629.",
+      "id": "mw-pwg-pwk:ah-mw21629",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ah-mw21629.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ap.",
+      "id": "mw-pwg-pwk:Ap",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ap.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ar-mw25983.",
+      "id": "mw-pwg-pwk:Ar-mw25983",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ar-mw25983.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:arc.",
+      "id": "mw-pwg-pwk:arc",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-arc.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:as-mw20353.",
+      "id": "mw-pwg-pwk:as-mw20353",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-as-mw20353.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:as-mw20354.",
+      "id": "mw-pwg-pwk:as-mw20354",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-as-mw20354.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aS-mw19412.",
+      "id": "mw-pwg-pwk:aS-mw19412",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aS-mw19412.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aS-mw19416.",
+      "id": "mw-pwg-pwk:aS-mw19416",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aS-mw19416.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:As-mw27851.",
+      "id": "mw-pwg-pwk:As-mw27851",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-As-mw27851.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:av.",
+      "id": "mw-pwg-pwk:av",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-av.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:BA-mw149418.",
+      "id": "mw-pwg-pwk:BA-mw149418",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-BA-mw149418.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Bas-mw149289.",
+      "id": "mw-pwg-pwk:Bas-mw149289",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Bas-mw149289.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:BAs-mw150552.",
+      "id": "mw-pwg-pwk:BAs-mw150552",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-BAs-mw150552.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:annavid.",
+      "id": "mw-pwg-pwk:annavid",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-annavid.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:arcya.",
+      "id": "mw-pwg-pwk:arcya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-arcya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:arTAntara.",
+      "id": "mw-pwg-pwk:arTAntara",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-arTAntara.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aryapatnI.",
+      "id": "mw-pwg-pwk:aryapatnI",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aryapatnI.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:BadreSa.",
+      "id": "mw-pwg-pwk:BadreSa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-BadreSa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:BadreSvara.",
+      "id": "mw-pwg-pwk:BadreSvara",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-BadreSvara.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:bAhukIwa.",
+      "id": "mw-pwg-pwk:bAhukIwa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-bAhukIwa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:cEtika.",
+      "id": "mw-pwg-pwk:cEtika",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-cEtika.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:daSagrAmika.",
+      "id": "mw-pwg-pwk:daSagrAmika",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-daSagrAmika.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:DIratA.",
+      "id": "mw-pwg-pwk:DIratA",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-DIratA.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dozAkara.",
+      "id": "mw-pwg-pwk:dozAkara",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dozAkara.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:druRaha.",
+      "id": "mw-pwg-pwk:druRaha",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-druRaha.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dURASa.",
+      "id": "mw-pwg-pwk:dURASa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dURASa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:durizwa.",
+      "id": "mw-pwg-pwk:durizwa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-durizwa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:DUrvaha.",
+      "id": "mw-pwg-pwk:DUrvaha",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-DUrvaha.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ekAdaSa.",
+      "id": "mw-pwg-pwk:ekAdaSa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ekAdaSa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:gartAruh.",
+      "id": "mw-pwg-pwk:gartAruh",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-gartAruh.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:gfhanamana.",
+      "id": "mw-pwg-pwk:gfhanamana",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-gfhanamana.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:girISa.",
+      "id": "mw-pwg-pwk:girISa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-girISa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:godAna.",
+      "id": "mw-pwg-pwk:godAna",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-godAna.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:jittama.",
+      "id": "mw-pwg-pwk:jittama",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-jittama.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:jri.",
+      "id": "mw-pwg-pwk:jri",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-jri.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:jYA.",
+      "id": "mw-pwg-pwk:jYA",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-jYA.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kAlakUwa.",
+      "id": "mw-pwg-pwk:kAlakUwa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kAlakUwa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kAlarAtri.",
+      "id": "mw-pwg-pwk:kAlarAtri",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kAlarAtri.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:karagraha.",
+      "id": "mw-pwg-pwk:karagraha",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-karagraha.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Karapa.",
+      "id": "mw-pwg-pwk:Karapa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Karapa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:karaprada.",
+      "id": "mw-pwg-pwk:karaprada",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-karaprada.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kaRWakubja.",
+      "id": "mw-pwg-pwk:kaRWakubja",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kaRWakubja.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Kewa.",
+      "id": "mw-pwg-pwk:Kewa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Kewa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kfpanILa-mw54862.",
+      "id": "mw-pwg-pwk:kfpanILa-mw54862",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kfpanILa-mw54862.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kfpAnIla-mw54893.",
+      "id": "mw-pwg-pwk:kfpAnIla-mw54893",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kfpAnIla-mw54893.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kiMkala.",
+      "id": "mw-pwg-pwk:kiMkala",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kiMkala.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kOSikatA.",
+      "id": "mw-pwg-pwk:kOSikatA",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kOSikatA.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kziti.",
+      "id": "mw-pwg-pwk:kziti",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kziti.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:makAra.",
+      "id": "mw-pwg-pwk:makAra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-makAra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:muKatas.",
+      "id": "mw-pwg-pwk:muKatas",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-muKatas.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:naladika.",
+      "id": "mw-pwg-pwk:naladika",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-naladika.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:navagraha.",
+      "id": "mw-pwg-pwk:navagraha",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-navagraha.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:navaraNga.",
+      "id": "mw-pwg-pwk:navaraNga",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-navaraNga.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:navarAzwra.",
+      "id": "mw-pwg-pwk:navarAzwra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-navarAzwra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:navasaMGArAma.",
+      "id": "mw-pwg-pwk:navasaMGArAma",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-navasaMGArAma.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:navavAstva.",
+      "id": "mw-pwg-pwk:navavAstva",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-navavAstva.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nfpAyya.",
+      "id": "mw-pwg-pwk:nfpAyya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nfpAyya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nicita.",
+      "id": "mw-pwg-pwk:nicita",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nicita.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nigfhya.",
+      "id": "mw-pwg-pwk:nigfhya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nigfhya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nimeya.",
+      "id": "mw-pwg-pwk:nimeya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nimeya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nirBedya.",
+      "id": "mw-pwg-pwk:nirBedya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nirBedya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nirdara.",
+      "id": "mw-pwg-pwk:nirdara",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nirdara.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nirmArga.",
+      "id": "mw-pwg-pwk:nirmArga",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nirmArga.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:nirvAcya.",
+      "id": "mw-pwg-pwk:nirvAcya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-nirvAcya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pAkayajYa.",
+      "id": "mw-pwg-pwk:pAkayajYa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pAkayajYa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pAradaRqaka.",
+      "id": "mw-pwg-pwk:pAradaRqaka",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pAradaRqaka.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:parimArga.",
+      "id": "mw-pwg-pwk:parimArga",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-parimArga.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:paYcadaSa.",
+      "id": "mw-pwg-pwk:paYcadaSa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-paYcadaSa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:payoDas.",
+      "id": "mw-pwg-pwk:payoDas",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-payoDas.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pragARa.",
+      "id": "mw-pwg-pwk:pragARa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pragARa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:prajajYi.",
+      "id": "mw-pwg-pwk:prajajYi",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-prajajYi.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:prajApati.",
+      "id": "mw-pwg-pwk:prajApati",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-prajApati.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:prAroha.",
+      "id": "mw-pwg-pwk:prAroha",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-prAroha.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:prasahya.",
+      "id": "mw-pwg-pwk:prasahya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-prasahya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:prasavotTAna.",
+      "id": "mw-pwg-pwk:prasavotTAna",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-prasavotTAna.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pratiprasava.",
+      "id": "mw-pwg-pwk:pratiprasava",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pratiprasava.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pravaradarpaRa.",
+      "id": "mw-pwg-pwk:pravaradarpaRa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pravaradarpaRa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pravaradIpikA.",
+      "id": "mw-pwg-pwk:pravaradIpikA",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pravaradIpikA.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pravaramaYjarI.",
+      "id": "mw-pwg-pwk:pravaramaYjarI",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pravaramaYjarI.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:pUrvavat.",
+      "id": "mw-pwg-pwk:pUrvavat",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-pUrvavat.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:sahasraDAra.",
+      "id": "mw-pwg-pwk:sahasraDAra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-sahasraDAra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:sahatA.",
+      "id": "mw-pwg-pwk:sahatA",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-sahatA.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:SAkapArTiva.",
+      "id": "mw-pwg-pwk:SAkapArTiva",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-SAkapArTiva.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:sakAra.",
+      "id": "mw-pwg-pwk:sakAra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-sakAra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:sakAraBeda.",
+      "id": "mw-pwg-pwk:sakAraBeda",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-sakAraBeda.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:samAsAdya.",
+      "id": "mw-pwg-pwk:samAsAdya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-samAsAdya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:saMsTApya.",
+      "id": "mw-pwg-pwk:saMsTApya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-saMsTApya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:saMvaraRa.",
+      "id": "mw-pwg-pwk:saMvaraRa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-saMvaraRa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:akupya.",
+      "id": "mw-pwg-pwk:akupya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-akupya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aMSa.",
+      "id": "mw-pwg-pwk:aMSa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aMSa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Apra.",
+      "id": "mw-pwg-pwk:Apra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Apra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:asana-mw20611.",
+      "id": "mw-pwg-pwk:asana-mw20611",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-asana-mw20611.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Asecana-mw28084.1.",
+      "id": "mw-pwg-pwk:Asecana-mw28084.1",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Asecana-mw28084.1.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ASis.",
+      "id": "mw-pwg-pwk:ASis",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ASis.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ayana.",
+      "id": "mw-pwg-pwk:Ayana",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ayana.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:daSA.",
+      "id": "mw-pwg-pwk:daSA",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-daSA.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:fcIza.",
+      "id": "mw-pwg-pwk:fcIza",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-fcIza.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:hI.",
+      "id": "mw-pwg-pwk:hI",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-hI.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ka.",
+      "id": "mw-pwg-pwk:ka",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ka.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:karaBa.",
+      "id": "mw-pwg-pwk:karaBa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-karaBa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kenipa.",
+      "id": "mw-pwg-pwk:kenipa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kenipa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ku.",
+      "id": "mw-pwg-pwk:ku",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ku.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kudAra.",
+      "id": "mw-pwg-pwk:kudAra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kudAra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:kuhu.",
+      "id": "mw-pwg-pwk:kuhu",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-kuhu.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:sAra.",
+      "id": "mw-pwg-pwk:sAra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-sAra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:trA.",
+      "id": "mw-pwg-pwk:trA",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-trA.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:upoQa.",
+      "id": "mw-pwg-pwk:upoQa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-upoQa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ut.",
+      "id": "mw-pwg-pwk:ut",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ut.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:uttara-mw31380.1.",
+      "id": "mw-pwg-pwk:uttara-mw31380.1",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-uttara-mw31380.1.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:uttAra-mw31391.1.",
+      "id": "mw-pwg-pwk:uttAra-mw31391.1",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-uttAra-mw31391.1.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:vAta.",
+      "id": "mw-pwg-pwk:vAta",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-vAta.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:veSa.",
+      "id": "mw-pwg-pwk:veSa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-veSa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:vi.",
+      "id": "mw-pwg-pwk:vi",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-vi.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:a-mw1.1.",
+      "id": "mw-pwg-pwk:a-mw1.1",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-a-mw1.1.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:a-mw3.1.",
+      "id": "mw-pwg-pwk:a-mw3.1",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-a-mw3.1.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:a-mw4.3.",
+      "id": "mw-pwg-pwk:a-mw4.3",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-a-mw4.3.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:a-mw4.4.",
+      "id": "mw-pwg-pwk:a-mw4.4",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-a-mw4.4.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:a-mw4.6.",
+      "id": "mw-pwg-pwk:a-mw4.6",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-a-mw4.6.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:a-mw4.7.",
+      "id": "mw-pwg-pwk:a-mw4.7",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-a-mw4.7.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:A-mw22015.60.",
+      "id": "mw-pwg-pwk:A-mw22015.60",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-A-mw22015.60.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:A-mw22015.70.",
+      "id": "mw-pwg-pwk:A-mw22015.70",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-A-mw22015.70.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:abADa.",
+      "id": "mw-pwg-pwk:abADa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-abADa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBava.",
+      "id": "mw-pwg-pwk:aBava",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBava.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBi-mw11185.1.",
+      "id": "mw-pwg-pwk:aBi-mw11185.1",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBi-mw11185.1.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBi-mw11185.3.",
+      "id": "mw-pwg-pwk:aBi-mw11185.3",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBi-mw11185.3.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBi-mw11185.4.",
+      "id": "mw-pwg-pwk:aBi-mw11185.4",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBi-mw11185.4.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBi-mw11185.5.",
+      "id": "mw-pwg-pwk:aBi-mw11185.5",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBi-mw11185.5.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBiGAta.",
+      "id": "mw-pwg-pwk:aBiGAta",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBiGAta.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:a-mw7.",
+      "id": "mw-pwg-pwk:a-mw7",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-a-mw7.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:A-mw22012.",
+      "id": "mw-pwg-pwk:A-mw22012",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-A-mw22012.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:abaDya.",
+      "id": "mw-pwg-pwk:abaDya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-abaDya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBIka.",
+      "id": "mw-pwg-pwk:aBIka",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBIka.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aBIti.",
+      "id": "mw-pwg-pwk:aBIti",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aBIti.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ABoga.",
+      "id": "mw-pwg-pwk:ABoga",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ABoga.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aga.",
+      "id": "mw-pwg-pwk:aga",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aga.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ahava.",
+      "id": "mw-pwg-pwk:Ahava",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ahava.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Akalpa.",
+      "id": "mw-pwg-pwk:Akalpa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Akalpa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:akza.",
+      "id": "mw-pwg-pwk:akza",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-akza.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:AkzapAda.",
+      "id": "mw-pwg-pwk:AkzapAda",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-AkzapAda.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:AkzapAwika.",
+      "id": "mw-pwg-pwk:AkzapAwika",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-AkzapAwika.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:alipaka.",
+      "id": "mw-pwg-pwk:alipaka",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-alipaka.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ama.",
+      "id": "mw-pwg-pwk:Ama",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ama.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:anti.",
+      "id": "mw-pwg-pwk:anti",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-anti.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:antika-mw8332.",
+      "id": "mw-pwg-pwk:antika-mw8332",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-antika-mw8332.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:AntikA-mw24707.",
+      "id": "mw-pwg-pwk:AntikA-mw24707",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-AntikA-mw24707.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:anu.",
+      "id": "mw-pwg-pwk:anu",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-anu.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:anUpa.",
+      "id": "mw-pwg-pwk:anUpa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-anUpa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:anvADi.",
+      "id": "mw-pwg-pwk:anvADi",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-anvADi.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:anvakza.",
+      "id": "mw-pwg-pwk:anvakza",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-anvakza.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:apaciti.",
+      "id": "mw-pwg-pwk:apaciti",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-apaciti.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:apala.",
+      "id": "mw-pwg-pwk:apala",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-apala.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:apaSuc.",
+      "id": "mw-pwg-pwk:apaSuc",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-apaSuc.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Apya.",
+      "id": "mw-pwg-pwk:Apya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Apya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ASana-mw27428.",
+      "id": "mw-pwg-pwk:ASana-mw27428",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ASana-mw27428.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Asava.",
+      "id": "mw-pwg-pwk:Asava",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Asava.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:AScarya.",
+      "id": "mw-pwg-pwk:AScarya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-AScarya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Asecana-mw28084.",
+      "id": "mw-pwg-pwk:Asecana-mw28084",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Asecana-mw28084.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ASI-mw27463.",
+      "id": "mw-pwg-pwk:ASI-mw27463",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ASI-mw27463.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ASI-mw27489.",
+      "id": "mw-pwg-pwk:ASI-mw27489",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ASI-mw27489.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aSira.",
+      "id": "mw-pwg-pwk:aSira",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aSira.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aSmanta-mw19763.",
+      "id": "mw-pwg-pwk:aSmanta-mw19763",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aSmanta-mw19763.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aSmanta-mw19775.",
+      "id": "mw-pwg-pwk:aSmanta-mw19775",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aSmanta-mw19775.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aSmantaka.",
+      "id": "mw-pwg-pwk:aSmantaka",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aSmantaka.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:asra.",
+      "id": "mw-pwg-pwk:asra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-asra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ASrava.",
+      "id": "mw-pwg-pwk:ASrava",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ASrava.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:aSvIya.",
+      "id": "mw-pwg-pwk:aSvIya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-aSvIya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:avAcya.",
+      "id": "mw-pwg-pwk:avAcya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-avAcya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ba-mw147502.",
+      "id": "mw-pwg-pwk:Ba-mw147502",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ba-mw147502.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ba-mw147528.",
+      "id": "mw-pwg-pwk:Ba-mw147528",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ba-mw147528.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:BA-mw149420.",
+      "id": "mw-pwg-pwk:BA-mw149420",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-BA-mw149420.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:bAha.",
+      "id": "mw-pwg-pwk:bAha",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-bAha.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:bAhu.",
+      "id": "mw-pwg-pwk:bAhu",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-bAhu.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:bAhula.",
+      "id": "mw-pwg-pwk:bAhula",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-bAhula.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:balAya.",
+      "id": "mw-pwg-pwk:balAya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-balAya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:bAleya-mw144735.",
+      "id": "mw-pwg-pwk:bAleya-mw144735",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-bAleya-mw144735.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:bAleya-mw144736.",
+      "id": "mw-pwg-pwk:bAleya-mw144736",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-bAleya-mw144736.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:bAliSa.",
+      "id": "mw-pwg-pwk:bAliSa",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-bAliSa.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:BAma.",
+      "id": "mw-pwg-pwk:BAma",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-BAma.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Barita.",
+      "id": "mw-pwg-pwk:Barita",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Barita.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Bfzwi.",
+      "id": "mw-pwg-pwk:Bfzwi",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Bfzwi.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:brAhmaRya.",
+      "id": "mw-pwg-pwk:brAhmaRya",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-brAhmaRya.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:ca-mw70287.",
+      "id": "mw-pwg-pwk:ca-mw70287",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-ca-mw70287.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ca-mw75351.",
+      "id": "mw-pwg-pwk:Ca-mw75351",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ca-mw75351.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Ca-mw75354.",
+      "id": "mw-pwg-pwk:Ca-mw75354",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Ca-mw75354.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:can.",
+      "id": "mw-pwg-pwk:can",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-can.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Canda.",
+      "id": "mw-pwg-pwk:Canda",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Canda.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Cardis.",
+      "id": "mw-pwg-pwk:Cardis",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Cardis.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:cAtura.",
+      "id": "mw-pwg-pwk:cAtura",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-cAtura.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:cAturika.",
+      "id": "mw-pwg-pwk:cAturika",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-cAturika.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:caYcura.",
+      "id": "mw-pwg-pwk:caYcura",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-caYcura.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:cimi.",
+      "id": "mw-pwg-pwk:cimi",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-cimi.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:cimika.",
+      "id": "mw-pwg-pwk:cimika",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-cimika.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:da-mw89227.",
+      "id": "mw-pwg-pwk:da-mw89227",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-da-mw89227.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dA-mw91469.",
+      "id": "mw-pwg-pwk:dA-mw91469",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dA-mw91469.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dA-mw91471.",
+      "id": "mw-pwg-pwk:dA-mw91471",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dA-mw91471.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dAman.",
+      "id": "mw-pwg-pwk:dAman",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dAman.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:Dan.",
+      "id": "mw-pwg-pwk:Dan",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-Dan.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dAna-mw91367.",
+      "id": "mw-pwg-pwk:dAna-mw91367",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dAna-mw91367.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dAna-mw91473.",
+      "id": "mw-pwg-pwk:dAna-mw91473",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dAna-mw91473.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:DanU.",
+      "id": "mw-pwg-pwk:DanU",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-DanU.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:DAra.",
+      "id": "mw-pwg-pwk:DAra",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-DAra.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:dAraka-mw91654.",
+      "id": "mw-pwg-pwk:dAraka-mw91654",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-dAraka-mw91654.ttl"
+    },
+    {
+      "type": "shacl",
+      "status": "pass",
+      "message": "External SHACL validation passed for mw-pwg-pwk:DARaka-mw100888.",
+      "id": "mw-pwg-pwk:DARaka-mw100888",
+      "tool": "pyshacl",
+      "file": "data/pilot/rdf/mw-pwg-pwk-DARaka-mw100888.ttl"
     }
   ]
 }

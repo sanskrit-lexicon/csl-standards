@@ -228,4 +228,7 @@ async function main() {
   console.log(`Generated neutral model for ${models.length} items at ${outputPaths.join(", ")}`);
 }
 
-main().catch(console.error);
+main().catch(error => {
+  console.error(error);
+  process.exit(1);
+});
