@@ -17,14 +17,14 @@ file links point at the exact outputs. The case is
 loss family at once: it is a *root* (not a word), it carries the MW `L.`
 *lexicographer hedge*, its citation apparatus is *abridged* down the PWG → PWK
 lineage, and its named sources include both an indigenous *kośa* authority and
-plain textual coordinates. It is also one of the cases that attaches all five
+plain textual coordinates. It is also one of the cases that attaches six source
 dictionaries.
 
 ---
 
-## Stage 0 — five raw CDSL records
+## Stage 0 — six raw CDSL records
 
-The same headword is digitised independently in five dictionaries. Each is a flat
+The same headword is digitised independently in six dictionaries. Each is a flat
 `<L>…<LEND>` record in CDSL's project-specific pseudo-markup (truncated here):
 
 ```
@@ -33,12 +33,14 @@ The same headword is digitised independently in five dictionaries. Each is a fla
 [pwk L=1095] √{#ac#}¦ {#aYc, a/cati …#} — 1〉 {%biegen%}. … — 2〉 {%…%}
 [ap90 L=314] {#ac#}¦ U. (acati …) To go, move; to honour; … request …
 [gra L=144 ] {@√ac@} (√añc). Als Grundbedeutung … der Begriff: {%biegen%} …
+[fri L=71  ] √ac acati, añcati, -te pp. akna … czech/russian/english glosses …
 ```
 
 MW glosses in English, the two Petersburg dictionaries (PWG large, PWK abridged)
-in German, AP90 in English, and Grassmann (GRA) is a German Rig-Veda glossary.
-Note the differences already visible: PWG carries a dense named apparatus of
-citations; PWK keeps far fewer; MW reduces much of it to a bare `L.`
+in German, AP90 in English, Grassmann (GRA) is a German Rig-Veda glossary, and
+FRI is trilingual (Czech/Russian/English). Note the differences already visible:
+PWG carries a dense named apparatus of citations; PWK keeps far fewer; MW reduces
+much of it to a bare `L.`
 
 ---
 
@@ -54,7 +56,7 @@ either standard and extracts one commensurable JSON record
   "key": "ac",
   "phenomena": ["hedge", "root", "tri-dict", "pwg-rich", "pwk-abridged", "homophone"],
   "forms": [{ "orth": "ac", "type": "verbal-root", "grammar": "cl.", "verbClass": "1P,1Ā" }],
-  "records": { "mw": …, "pwg": …, "pwk": …, "ap90": …, "gra": … },
+  "records": { "mw": …, "pwg": …, "pwk": …, "ap90": …, "gra": …, "fri": … },
   "relations": [{ "type": "whitney-root-association", "target": "ac,1" }],
   "senses": [{ "def": "to go, move, tend", "kind": "gloss" }, { "def": "to honour", … }],
   "citations": [ … 23 materialised <ls>, tagged by dictionary … ]
@@ -72,7 +74,7 @@ case *for*.
 [`export-tei`](../scripts/export-tei.mjs) renders the entry as archival TEI
 ([mw-pwg-pwk-ac.xml](../data/pilot/tei/mw-pwg-pwk-ac.xml)), preserving each raw
 record as an escaped `<quote>` and promoting the structure TEI *can* express. All
-five source records appear (the backbone plus the optional AP90/GRA):
+six source records appear (the backbone plus the optional AP90/GRA/FRI):
 
 ```xml
 <etym xml:id="mw-pwg-pwk-ac-root-relation" type="root">
@@ -118,7 +120,7 @@ relation, and each citation becomes a typed `frac:Attestation`:
 ```
 
 OntoLex *never merely transcribes*: it relates the data or drops what it cannot
-relate. The graph carries all five `csl:SourceRecord`s and conforms under the
+relate. The graph carries all six `csl:SourceRecord`s and conforms under the
 SHACL profile (pySHACL).
 
 ---

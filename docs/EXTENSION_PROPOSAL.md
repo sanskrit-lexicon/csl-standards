@@ -13,11 +13,11 @@ Each is tied to the loss it addresses — by `failureClassification` cause and
 
 ## Motivation
 
-The 1361 loss reports split by cause into: **model-vocabulary-gap (52%)** — the
+The 1430 loss reports split by cause into: **model-vocabulary-gap (55%)** — the
 target standards lack a concept, chiefly an *evidence class* (kośa vs textual vs
 editorial citation, and unparsed citation coordinates; see
-[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b); **editorial-compression (27%)** — the
-19th-century lineage already dropped evidence; **cdsl-markup-gap (9%)**,
+[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b); **editorial-compression (26%)** — the
+19th-century lineage already dropped evidence; **cdsl-markup-gap (8%)**,
 **print-compression (6%)**, **sanskrit-convention (<1%)**, and a single
 **data-quality** anomaly. Only the model-vocabulary and sanskrit-convention causes
 are addressable by *extending the standards*; the others are upstream
@@ -36,7 +36,7 @@ proposal is to promote the stable subset below into a published vocabulary
 
 - **Loss:** `generic-lexicographer-hedge`, `named-kosha-citation`,
   `editorial-reference`, `citation-coordinate`; cause *model-vocabulary-gap*
-  (49% of the corpus — the largest; see [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b).
+  (55% of the corpus — the largest; see [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b).
   The MW `L.` siglum is an evidential hedge, not a citation; an indigenous *kośa*
   source is not a textual attestation; an editorial reference points within the
   tradition; and a citation's textual coordinate is locked in a flat string.
@@ -182,7 +182,7 @@ and validated** — OntoLex (`csl:evidenceClass` + `csl:citedWork`/`csl:citedRan
 SHACL/pySHACL) and TEI (`@subtype` + `<citedRange>` on every citation `<bibl>` in
 the archival and Lex-0 profiles, RELAX NG/jing) — closing the loop from measured
 loss to working remedy: every OntoLex `model-vocabulary-gap` loss that needs an
-extension (653 of 653) names a concrete, implemented `csl:` construct, and all 250
+extension (722 of 722) names a concrete, implemented `csl:` construct, and all 250
 graphs conform to the SHACL profile under pySHACL (`extensionCoverage` in
 [loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2) and
 decomposition (§3) constructs were already implemented; the **source-collapse

@@ -16,7 +16,7 @@ representation of dictionary text and OntoLex-Lemon as a semantic graph of lexic
 knowledge. From a 250-case deterministic sample of deliberately hard cases we
 generate a dictionary-neutral model and, from it, parallel TEI and OntoLex
 profiles, recording every degradation as an evidence-bound *loss report*. The
-resulting corpus of 1,361 reports shows that the two models fail **asymmetrically**:
+resulting corpus of 1,430 reports shows that the two models fail **asymmetrically**:
 TEI is never lossy for the Western cases but never reaches the semantic graph;
 OntoLex is never a clean transcription but exposes reusable relations. The single
 largest difficulty is not derivation or compounding but **evidence** — the class of
@@ -26,7 +26,7 @@ PWG → PWK → MW lineage. We then take the diagnosis to its conclusion: we spe
 small Sanskrit-lexicographic extension layer in a `csl:` namespace, **implement it
 in both target standards, and validate it** against a SHACL profile (pySHACL) and a
 compiled TEI RELAX NG schema (jing). Every model-vocabulary loss that needs an
-extension maps to an implemented, schema-validated construct (653 of 653), and the
+extension maps to an implemented, schema-validated construct (722 of 722), and the
 upstream lineage collapse is made an explicit, queryable relation (369 of 369). The
 accompanying public workbench publishes the raw CDSL snippets, the neutral model,
 the TEI/OntoLex views, the loss reports, and the validators.
@@ -121,19 +121,19 @@ is in [docs/LOSS_ANALYSIS.md](LOSS_ANALYSIS.md), regenerable with
 
 ## 4. The Loss Corpus: An Asymmetry of Success
 
-The 250-case pilot yields **1,361 loss reports**. Overall, 938 are `partial`
-(69%), 348 `lossy` (26%), and 75 `clean` (6%). The central finding is in the
+The 250-case pilot yields **1,430 loss reports**. Overall, 1007 are `partial`
+(70%), 348 `lossy` (24%), and 75 `clean` (5%). The central finding is in the
 cross-tabulation of target against status (Figure 5):
 
 | target | clean | partial | lossy |
 |---|--:|--:|--:|
 | TEI (archival) | 75 | 217 | 6 |
-| OntoLex | 0 | 593 | 100 |
+| OntoLex | 0 | 662 | 100 |
 | neutral (lineage) | 0 | 128 | 242 |
 
 The two models do not fail; they **succeed differently**. For the Western cases
 the TEI archival profile is *never* lossy (75 clean, 217 partial): TEI can always
-at least preserve the dictionary as an edition. OntoLex is *never* clean (593
+at least preserve the dictionary as an edition. OntoLex is *never* clean (662
 partial, 100 lossy): it never merely transcribes, so it either relates the data or
 drops what it cannot relate. The only TEI-lossy reports (6) are not Western at all —
 they are the indigenous *kośa* sense/citation fusion in the Lex-0 baseline (§9), a
@@ -145,13 +145,13 @@ clean): much of what looks like "interoperability loss" is in fact loss that
 already happened in the 19th-century editorial chain, recoverable only by reading
 across PWG, PWK, and MW together (§8).
 
-By cause, the corpus splits as: **model-vocabulary-gap 52%** (the target standard
-lacks a concept), **editorial-compression 27%** (upstream lineage loss the
-standards could have held), CDSL-markup-gap 9%, print-compression 6%, clean 6%, and
+By cause, the corpus splits as: **model-vocabulary-gap 55%** (the target standard
+lacks a concept), **editorial-compression 26%** (upstream lineage loss the
+standards could have held), CDSL-markup-gap 8%, print-compression 6%, clean 5%, and
 the small but qualitatively distinct `sanskrit-convention` and `data-quality`
 (<1% each). By phenomenon, the leaders are `source-collapse` (27%), the unparsed
-`citation-coordinate` (22%), and the MW `L.` hedge (17%); the five
-evidence-related phenomena together are **74%** of the corpus. The centre of
+`citation-coordinate` (25%), and the MW `L.` hedge (16%); the five
+evidence-related phenomena together are **75%** of the corpus. The centre of
 gravity is evidence, not derivation or compounding.
 
 ## 5. Evidence and Provenance
@@ -262,7 +262,7 @@ explicit without claiming to recover it).
 
 The remedy is **measured**. Every loss report names the construct that answers it
 in a `mappedAs` field, so coverage is regenerable, not asserted. Of the OntoLex
-`model-vocabulary-gap` losses that need an extension, **653 of 653** map to an
+`model-vocabulary-gap` losses that need an extension, **722 of 722** map to an
 implemented construct (`extensionCoverage`); of the upstream source-collapse
 losses, **369 of 369** are now modeled by a lineage relation (`lineageCoverage`,
 250 abridgement + 119 recomposition). The distinction matters: the evidence-class
@@ -303,14 +303,16 @@ than hidden.
 
 The sample is 250 cases drawn from three dictionaries of one lineage; the
 asymmetry findings are strong within it but their generality across other
-dictionaries is only partially tested. As a first step beyond the tri-dict
-backbone, two further dictionaries — Apte 1890 (AP90, 133 of 250 cases) and
-Grassmann's Rig-Veda Wörterbuch (GRA, 109 of 250) — are now attached on the
-semantic (OntoLex) side via a dictionary registry, each entering the graph as an
-extra source record with evidence-class-typed attestations; adding a dictionary is
-a one-line registry change. Fuller generalisation (weaving these into the archival
-profile and the loss corpus) remains future work. The evidence-class and lineage
-detectors are curated heuristics (kośa sigla, editorial abbreviations, a coordinate
+dictionaries is only partially tested. The optional-dictionary layer now tests
+that generalisation beyond the tri-dict backbone: Apte 1890 (AP90, 133/250),
+Grassmann's Rig-Veda Wörterbuch (GRA, 109/250), the Frish Sanskrit Reader (FRI,
+87/250), and Benfey 1866 (BEN, 142/250) are attached through the registry and
+woven across OntoLex, archival TEI, TEI Lex-0, and the loss corpus. Their coverage
+is still uneven and source-dependent: FRI adds trilingual senses but no named
+citations, while AP90/GRA/BEN add sense-linked evidence where their `<ls>`
+apparatus supports it. Adding a dictionary is therefore mechanically cheap but
+philologically variable. The evidence-class and lineage detectors are curated
+heuristics (kośa sigla, editorial abbreviations, a coordinate
 regex, a literal `[sic]`), so per-class counts are a **lower bound**, not a
 philological census — for example, all-caps *kośa* sigla are currently read as
 textual. Sense extraction is machine-derived and marked as such. The loss reports
@@ -414,6 +416,8 @@ specification.
 - Böhtlingk, O. *Sanskrit-Wörterbuch in kürzerer Fassung*. St Petersburg, 1879–1889. (PWK)
 - Apte, V. S. *The Practical Sanskrit–English Dictionary*. Poona, 1890. (AP90)
 - Grassmann, H. *Wörterbuch zum Rig-Veda*. Leipzig, 1873. (GRA)
+- Frish Sanskrit Reader (CDSL/Cologne edition, 2015). (FRI)
+- Benfey, T. *Sanskrit-English Dictionary*. London, 1866. (BEN)
 - Whitney, W. D. *The Roots, Verb-Forms and Primary Derivatives of the Sanskrit Language*. Leipzig, 1885. (the root index referenced by `csl:whitneyRoot`)
 - Amarasiṃha. *Amarakośa* (Nāmaliṅgānuśāsana) — representative of the indigenous *kośa* authorities (cited as AK.).
 - Cologne Digital Sanskrit Dictionaries (CDSL), Universität zu Köln — the digitised editions and project-specific XML this study consumes. <https://www.sanskrit-lexicon.uni-koeln.de/>

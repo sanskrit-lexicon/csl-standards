@@ -4,6 +4,13 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
+## [Unreleased]
+
+### Changed
+- **Paper/data consistency polish.** Refreshed the paper-facing documentation
+  against the current 1430-report loss-analysis corpus, including BEN/FRI
+  optional-dictionary coverage and `extensionCoverage` 722/722.
+
 ## [0.9.0] - 2026-06-19
 
 **Optional dictionaries completed, automation hardened.** This release finishes the
