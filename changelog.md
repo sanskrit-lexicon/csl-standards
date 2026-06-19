@@ -4,9 +4,34 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
-## [Unreleased]
+## [0.9.0] - 2026-06-19
+
+**Optional dictionaries completed, automation hardened.** This release finishes the
+post-v0.8 optional-dictionary arc: every optional dictionary now has senses and
+sense-linked citations where its source data provides them, Benfey joins the
+registry, GRA's numbered sense/citation apparatus is preserved, and the worked-case
+demo is interactive on the site. It also closes the repository audit hardening pass:
+CI now protects ordinary pushes/PRs, Dependabot only enables guarded auto-merge,
+pipeline generators fail loudly, external validation reports the actual runner, and
+portable external-tool downloads are pinned and SHA-256 verified.
 
 ### Added
+- **Benfey as the fourth optional dictionary.** Benfey's Sanskrit-English
+  dictionary (`ben`) joins the one-line registry as the highest-coverage optional
+  dictionary in the pilot (142/250 cases). It is woven through OntoLex, archival
+  TEI, TEI Lex-0, and the loss corpus like AP90/GRA/FRI.
+- **Benfey senses and sense-linked citations.** A Benfey sense extractor handles
+  Benfey's numbered `{@N.@}` markers, trims compound/reference tails, and links
+  in-segment `<ls>` citations to the specific OntoLex sense they attest.
+- **Grassmann sense/citation refinement.** GRA now splits leading numbered `N〉`
+  sub-senses instead of flattening them into one long German sense, and its
+  coordinate apparatus is parsed into sense-level attestations.
+- **Lexical-sense SHACL shape.** OntoLex lexical senses now have an explicit SHACL
+  shape for definitions, source dictionary, sense ownership, and allowed sense
+  kinds, so the sense layer is validated rather than only generated.
+- **Interactive worked-case demo.** `/tools/demo` adds a bilingual, data-driven
+  case picker for the worked examples, reading from the generated neutral model and
+  loss reports.
 - **CI safety net.** Added a normal GitHub Actions CI workflow for pull requests
   and pushes to `main`, running the unit tests, pilot validators, TEI/OntoLex/Lex-0
   structural validators, and Observable build before dependency updates can be
