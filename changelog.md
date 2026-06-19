@@ -10,6 +10,9 @@ into a dated version. Versions track `package.json`.
 - **Paper/data consistency polish.** Refreshed the paper-facing documentation
   against the current 1430-report loss-analysis corpus, including BEN/FRI
   optional-dictionary coverage and `extensionCoverage` 722/722.
+- **Roadmap refreshed.** Replaced the completed three-month scaffold roadmap with
+  a post-v0.9 roadmap covering paper submission, citeable release, corpus scaling,
+  standards packaging, Salt API integration, and project-lead decision questions.
 
 ## [0.9.0] - 2026-06-19
 
