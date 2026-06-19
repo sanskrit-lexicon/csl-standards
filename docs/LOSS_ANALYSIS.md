@@ -15,6 +15,11 @@ Do not hand-edit the tables below — re-run the script.
 Corpus: **1430 loss reports** across the 250 Western cases and 6 indigenous *kośa*
 entries. Four families are present:
 
+Scale robustness is recorded separately in [SCALE_STABILITY.md](SCALE_STABILITY.md):
+500- and 1000-case runs preserve the central asymmetry, evidence-loss dominance, and
+complete extension/lineage coverage while leaving this canonical 250-case corpus
+unchanged.
+
 - **Target-model losses** (653): what TEI / OntoLex cannot hold when mapping a
   CDSL record. Generated per case per target per phenomenon.
 - **Source-collapse losses** (369): named evidence the *dictionary lineage* itself

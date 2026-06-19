@@ -92,6 +92,8 @@ decomposition).
 ## Minimum Submission Dataset
 
 - 250 generated hard cases.
+- 500/1000 scale-stability report as robustness evidence, with the committed generated
+  corpus kept at 250 cases.
 - 15 deterministic profile-validated review-slice mappings.
 - Full 250-case machine-reviewed TEI and OntoLex/FrAC outputs.
 - External validation report when the TEI/SHACL toolchain is available.

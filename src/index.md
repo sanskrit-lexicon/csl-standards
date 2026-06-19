@@ -14,6 +14,7 @@ without turning the public dictionary atlas into a standards workbench.
 ## Current Track
 
 - [MW-PWG-PWK interoperability hard cases](/tools/interoperability-hard-cases)
+- [`csl:` vocabulary index](/tools/csl-vocabulary)
 
 ## Goals
 

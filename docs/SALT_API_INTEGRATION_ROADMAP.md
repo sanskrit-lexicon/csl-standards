@@ -1,9 +1,10 @@
 # Salt API Integration Roadmap — sanskrit-lexicon.uni-koeln.de
 
-Date: 2026-06-11
-Status: **C-SALT MW contract verified live on 2026-06-11** (REST OpenAPI + GraphQL
-introspection against `api.c-salt.uni-koeln.de/dicts/mw`). All field names, enum values,
-and query signatures below are facts from the running service, not proposals.
+Date: 2026-06-20
+Status: **Phase 0 implementation handoff ready.** C-SALT MW contract verified live on
+2026-06-11 (REST OpenAPI + GraphQL introspection against
+`api.c-salt.uni-koeln.de/dicts/mw`). All field names, enum values, and query signatures
+below are facts from the running service, not proposals.
 
 > Scope note: this roadmap covers two repositories. The **normative contract and its
 > documentation** are a `csl-standards` deliverable (the "C-SALT API Profile"). The
@@ -405,11 +406,14 @@ makes "integration" checkable, not aspirational.
 ## 6. Phased roadmap
 
 ### Phase 0 — Profile & contract (`csl-standards`) — no server work
-- Author `SALT_API_PROFILE.md` (+ RU), `salt-api.openapi.yaml`, `salt-api.graphql`,
-  `SALT_API_LOSS_REPORT.md` (first pass). The contract is already captured (this doc, §1.1,
-  §3); Phase 0 turns it into the normative artifacts.
-- Cross-check the 7 entry counts against the live `/restful/spec` endpoints.
-- **Exit:** the spec Jim builds against exists and is reviewed.
+- **Done in `csl-standards`:** `SALT_API_PROFILE.md` (+ RU),
+  `data/schema/salt-api.openapi.yaml`, `data/schema/salt-api.graphql`,
+  `SALT_API_LOSS_REPORT.md`, and the implementation checklist
+  [`SALT_API_PHASE0_CHECKLIST.md`](SALT_API_PHASE0_CHECKLIST.md).
+- **No server implementation in this repository.** The server work belongs in
+  `csl-apidev`; this repository owns the contract/profile artifacts and loss report.
+- **Exit:** the spec Jim builds against exists, is reviewed, and has a concrete Phase 1
+  handoff checklist.
 
 ### Phase 1 — MW REST pilot (`csl-apidev`)
 - `api1/salt_entries.php`: `/dicts/mw/restful/entries` for `query_type` ∈ `{term, prefix,

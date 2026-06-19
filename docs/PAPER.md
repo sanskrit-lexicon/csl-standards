@@ -303,7 +303,12 @@ than hidden.
 
 The sample is 250 cases drawn from three dictionaries of one lineage; the
 asymmetry findings are strong within it but their generality across other
-dictionaries is only partially tested. The optional-dictionary layer now tests
+dictionaries is only partially tested. A scale-stability check reran the same
+pipeline at 500 and 1000 cases in temporary restored workspaces
+([docs/SCALE_STABILITY.md](SCALE_STABILITY.md)): the central asymmetry still held,
+evidence-loss share stayed about 70%, and extension/lineage coverage remained
+complete. The committed generated corpus remains the 250-case pilot so the paper
+has a stable, reviewable dataset rather than shifting bulk artifacts. The optional-dictionary layer now tests
 that generalisation beyond the tri-dict backbone: Apte 1890 (AP90, 133/250),
 Grassmann's Rig-Veda Wörterbuch (GRA, 109/250), the Frish Sanskrit Reader (FRI,
 87/250), and Benfey 1866 (BEN, 142/250) are attached through the registry and

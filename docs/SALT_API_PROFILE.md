@@ -1,10 +1,10 @@
 # C-SALT API Profile (CSL)
 
 Version: 0.1.0
-Date: 2026-06-11
-Status: **Draft normative profile.** The contract below was verified live against
+Date: 2026-06-20
+Status: **Phase 0 implementation-ready normative profile.** The contract below was verified live against
 `api.c-salt.uni-koeln.de/dicts/mw` (REST OpenAPI `/restful/spec` + GraphQL introspection)
-on 2026-06-11.
+on 2026-06-11 and packaged for the `csl-apidev` handoff on 2026-06-20.
 
 Machine-readable companions (authoritative for tooling):
 - REST: [`data/schema/salt-api.openapi.yaml`](../data/schema/salt-api.openapi.yaml)
@@ -13,6 +13,7 @@ Machine-readable companions (authoritative for tooling):
 Russian mirror: [`SALT_API_PROFILE.ru.md`](SALT_API_PROFILE.ru.md).
 Divergence catalogue: [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md).
 Implementation plan: [`SALT_API_INTEGRATION_ROADMAP.md`](SALT_API_INTEGRATION_ROADMAP.md).
+Phase 0 checklist: [`SALT_API_PHASE0_CHECKLIST.md`](SALT_API_PHASE0_CHECKLIST.md).
 
 ---
 

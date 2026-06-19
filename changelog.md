@@ -4,9 +4,31 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
-## [Unreleased]
+## [1.0.0] - 2026-06-20
+
+**Stable research snapshot after scale/Salt/vocabulary work.** This release keeps
+the canonical generated pilot at 250 cases, adds a non-invasive 500/1000 scale
+stability check, refreshes the Salt API Phase 0 contract package, and publishes a
+small `csl:` vocabulary index. Releases continue as annotated git tags only: no
+GitHub Release and no Zenodo DOI in this pass.
+
+### Added
+- **Scale stability check.** Added `npm run scale-check`, which runs 500- and
+  1000-case pilots under a snapshot/restore guard so canonical `data/pilot/*`
+  and `src/data/pilot/*` remain the committed 250-case corpus. The compact
+  report records that the central TEI/OntoLex/neutral asymmetry and evidence-loss
+  dominance hold at both larger scales.
+- **Salt API Phase 0 checklist.** Added an implementation-ready handoff checklist
+  for the C-SALT-compatible Salt API package, keeping server implementation
+  explicitly in `csl-apidev`.
+- **`csl:` vocabulary index.** Added a repository doc and Observable site page
+  indexing the project-local `csl:` terms and mapping loss phenomena to constructs
+  and validation rules.
 
 ### Changed
+- **Post-v0.9 roadmap implemented.** Roadmap now records the decided order:
+  scale check, Salt API Phase 0, `csl:` vocabulary page, `v1.0.0` annotated tag,
+  then paper submission for broader computational lexicography.
 - **Paper/data consistency polish.** Refreshed the paper-facing documentation
   against the current 1430-report loss-analysis corpus, including BEN/FRI
   optional-dictionary coverage and `extensionCoverage` 722/722.

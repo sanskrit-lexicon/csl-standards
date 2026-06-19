@@ -1,6 +1,6 @@
 {
   "name": "csl-standards",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Standards and export workbench for CDSL dictionary data",
   "type": "module",
   "license": "CC-BY-SA-4.0",
@@ -13,6 +13,7 @@
     "build-neutral-model": "node scripts/build-neutral-model.mjs",
     "build-loss-reports": "node scripts/build-loss-reports.mjs",
     "analyze-loss": "node scripts/analyze-loss-reports.mjs",
+    "scale-check": "node scripts/run-scale-check.mjs --max 500 --max 1000",
     "build-figures": "node scripts/build-figures.mjs",
     "refine-curated-stubs": "node scripts/refine-curated-stubs.cjs",
     "export-tei": "node scripts/export-tei.mjs",

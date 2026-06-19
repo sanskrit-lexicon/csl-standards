@@ -1,0 +1,372 @@
+{
+  "generatedBy": "scripts/run-scale-check.mjs",
+  "scalePolicy": "Canonical 250-case pilot files are restored after each scale run.",
+  "runs": [
+    {
+      "maxRequested": 500,
+      "cases": 500,
+      "reports": 2807,
+      "byStatus": {
+        "partial": 1977,
+        "lossy": 680,
+        "clean": 150
+      },
+      "targetByStatus": {
+        "tei": {
+          "partial": 392,
+          "clean": 150,
+          "lossy": 6
+        },
+        "ontolex": {
+          "partial": 1324,
+          "lossy": 200
+        },
+        "neutral": {
+          "partial": 261,
+          "lossy": 474
+        }
+      },
+      "byFailureClassification": {
+        "model-vocabulary-gap": 1564,
+        "editorial-compression": 734,
+        "cdsl-markup-gap": 192,
+        "print-compression": 160,
+        "none": 150,
+        "sanskrit-convention": 6,
+        "data-quality": 1
+      },
+      "byPhenomenon": {
+        "citation-coordinate": 742,
+        "source-collapse": 734,
+        "generic-lexicographer-hedge": 384,
+        "named-kosha-citation": 192,
+        "continuation-parent": 160,
+        "compound-subentry": 150,
+        "compound-decomposition": 150,
+        "root-as-entry": 120,
+        "root-as-derivational-base": 120,
+        "editorial-reference": 48,
+        "sense-citation-fusion": 6,
+        "source-anomaly": 1
+      },
+      "topCauses": [
+        {
+          "key": "model-vocabulary-gap",
+          "count": 1564
+        },
+        {
+          "key": "editorial-compression",
+          "count": 734
+        },
+        {
+          "key": "cdsl-markup-gap",
+          "count": 192
+        },
+        {
+          "key": "print-compression",
+          "count": 160
+        },
+        {
+          "key": "none",
+          "count": 150
+        },
+        {
+          "key": "sanskrit-convention",
+          "count": 6
+        },
+        {
+          "key": "data-quality",
+          "count": 1
+        }
+      ],
+      "topPhenomena": [
+        {
+          "key": "citation-coordinate",
+          "count": 742
+        },
+        {
+          "key": "source-collapse",
+          "count": 734
+        },
+        {
+          "key": "generic-lexicographer-hedge",
+          "count": 384
+        },
+        {
+          "key": "named-kosha-citation",
+          "count": 192
+        },
+        {
+          "key": "continuation-parent",
+          "count": 160
+        },
+        {
+          "key": "compound-decomposition",
+          "count": 150
+        },
+        {
+          "key": "compound-subentry",
+          "count": 150
+        },
+        {
+          "key": "root-as-derivational-base",
+          "count": 120
+        }
+      ],
+      "extensionCoverage": {
+        "ontolexModelVocabularyGapsNeedingExtension": 1444,
+        "coveredByImplementedConstruct": 1444,
+        "uncovered": 0,
+        "byConstruct": {
+          "frac:Attestation with csl:citedWork + csl:citedRange": 742,
+          "frac:Attestation with csl:evidenceClass \"hedge\"": 192,
+          "frac:Attestation with csl:evidenceClass \"kosha\"": 192,
+          "decomp:ComponentList of decomp:Component": 150,
+          "csl:RootRelation with csl:whitneyRoot": 120,
+          "frac:Attestation with csl:evidenceClass \"editorial\"": 48
+        },
+        "constructByPhenomenon": {
+          "citation-coordinate": "frac:Attestation with csl:citedWork + csl:citedRange",
+          "compound-decomposition": "decomp:ComponentList of decomp:Component",
+          "editorial-reference": "frac:Attestation with csl:evidenceClass \"editorial\"",
+          "generic-lexicographer-hedge": "frac:Attestation with csl:evidenceClass \"hedge\"",
+          "named-kosha-citation": "frac:Attestation with csl:evidenceClass \"kosha\"",
+          "root-as-derivational-base": "csl:RootRelation with csl:whitneyRoot"
+        }
+      },
+      "lineageCoverage": {
+        "sourceCollapseReports": 734,
+        "modeledByLineageRelation": 734,
+        "unmodeled": 0,
+        "byConstruct": {
+          "csl:LineageRelation (abridgement)": 500,
+          "csl:LineageRelation (recomposition)": 234
+        }
+      },
+      "recordsPresent": {
+        "mw": 500,
+        "pwg": 500,
+        "pwk": 500,
+        "ap90": 259,
+        "gra": 225,
+        "fri": 184,
+        "ben": 267
+      },
+      "optionalDictionaryAttachments": {
+        "ap90": 259,
+        "gra": 225,
+        "fri": 184,
+        "ben": 267
+      },
+      "centralClaims": {
+        "teiWesternLossy": 0,
+        "ontolexClean": 0,
+        "teiLossy": 6,
+        "ontolexLossy": 200,
+        "neutralLossy": 474,
+        "evidenceLosses": 474,
+        "lossyTotal": 680,
+        "evidenceLossShare": 0.6971,
+        "holds": true
+      }
+    },
+    {
+      "maxRequested": 1000,
+      "cases": 1000,
+      "reports": 5559,
+      "byStatus": {
+        "partial": 3912,
+        "lossy": 1347,
+        "clean": 300
+      },
+      "targetByStatus": {
+        "tei": {
+          "partial": 742,
+          "clean": 300,
+          "lossy": 6
+        },
+        "ontolex": {
+          "partial": 2646,
+          "lossy": 400
+        },
+        "neutral": {
+          "partial": 524,
+          "lossy": 941
+        }
+      },
+      "byFailureClassification": {
+        "model-vocabulary-gap": 3126,
+        "editorial-compression": 1464,
+        "cdsl-markup-gap": 342,
+        "print-compression": 320,
+        "none": 300,
+        "sanskrit-convention": 6,
+        "data-quality": 1
+      },
+      "byPhenomenon": {
+        "citation-coordinate": 1475,
+        "source-collapse": 1464,
+        "generic-lexicographer-hedge": 684,
+        "named-kosha-citation": 386,
+        "continuation-parent": 320,
+        "compound-subentry": 300,
+        "compound-decomposition": 300,
+        "root-as-entry": 240,
+        "root-as-derivational-base": 240,
+        "editorial-reference": 143,
+        "sense-citation-fusion": 6,
+        "source-anomaly": 1
+      },
+      "topCauses": [
+        {
+          "key": "model-vocabulary-gap",
+          "count": 3126
+        },
+        {
+          "key": "editorial-compression",
+          "count": 1464
+        },
+        {
+          "key": "cdsl-markup-gap",
+          "count": 342
+        },
+        {
+          "key": "print-compression",
+          "count": 320
+        },
+        {
+          "key": "none",
+          "count": 300
+        },
+        {
+          "key": "sanskrit-convention",
+          "count": 6
+        },
+        {
+          "key": "data-quality",
+          "count": 1
+        }
+      ],
+      "topPhenomena": [
+        {
+          "key": "citation-coordinate",
+          "count": 1475
+        },
+        {
+          "key": "source-collapse",
+          "count": 1464
+        },
+        {
+          "key": "generic-lexicographer-hedge",
+          "count": 684
+        },
+        {
+          "key": "named-kosha-citation",
+          "count": 386
+        },
+        {
+          "key": "continuation-parent",
+          "count": 320
+        },
+        {
+          "key": "compound-decomposition",
+          "count": 300
+        },
+        {
+          "key": "compound-subentry",
+          "count": 300
+        },
+        {
+          "key": "root-as-derivational-base",
+          "count": 240
+        }
+      ],
+      "extensionCoverage": {
+        "ontolexModelVocabularyGapsNeedingExtension": 2886,
+        "coveredByImplementedConstruct": 2886,
+        "uncovered": 0,
+        "byConstruct": {
+          "frac:Attestation with csl:citedWork + csl:citedRange": 1475,
+          "frac:Attestation with csl:evidenceClass \"kosha\"": 386,
+          "frac:Attestation with csl:evidenceClass \"hedge\"": 342,
+          "decomp:ComponentList of decomp:Component": 300,
+          "csl:RootRelation with csl:whitneyRoot": 240,
+          "frac:Attestation with csl:evidenceClass \"editorial\"": 143
+        },
+        "constructByPhenomenon": {
+          "citation-coordinate": "frac:Attestation with csl:citedWork + csl:citedRange",
+          "compound-decomposition": "decomp:ComponentList of decomp:Component",
+          "editorial-reference": "frac:Attestation with csl:evidenceClass \"editorial\"",
+          "generic-lexicographer-hedge": "frac:Attestation with csl:evidenceClass \"hedge\"",
+          "named-kosha-citation": "frac:Attestation with csl:evidenceClass \"kosha\"",
+          "root-as-derivational-base": "csl:RootRelation with csl:whitneyRoot"
+        }
+      },
+      "lineageCoverage": {
+        "sourceCollapseReports": 1464,
+        "modeledByLineageRelation": 1464,
+        "unmodeled": 0,
+        "byConstruct": {
+          "csl:LineageRelation (abridgement)": 1000,
+          "csl:LineageRelation (recomposition)": 464
+        }
+      },
+      "recordsPresent": {
+        "mw": 1000,
+        "pwg": 1000,
+        "pwk": 1000,
+        "ap90": 496,
+        "gra": 420,
+        "fri": 382,
+        "ben": 525
+      },
+      "optionalDictionaryAttachments": {
+        "ap90": 496,
+        "gra": 420,
+        "fri": 382,
+        "ben": 525
+      },
+      "centralClaims": {
+        "teiWesternLossy": 0,
+        "ontolexClean": 0,
+        "teiLossy": 6,
+        "ontolexLossy": 400,
+        "neutralLossy": 941,
+        "evidenceLosses": 941,
+        "lossyTotal": 1347,
+        "evidenceLossShare": 0.6986,
+        "holds": true
+      }
+    }
+  ],
+  "comparison": {
+    "claimsHoldEverywhere": true,
+    "evidenceDominantEverywhere": true,
+    "topCauseKeys": [
+      [
+        "model-vocabulary-gap",
+        "editorial-compression",
+        "cdsl-markup-gap"
+      ],
+      [
+        "model-vocabulary-gap",
+        "editorial-compression",
+        "cdsl-markup-gap"
+      ]
+    ],
+    "topPhenomenonKeys": [
+      [
+        "citation-coordinate",
+        "source-collapse",
+        "generic-lexicographer-hedge"
+      ],
+      [
+        "citation-coordinate",
+        "source-collapse",
+        "generic-lexicographer-hedge"
+      ]
+    ],
+    "topCauseStable": true,
+    "topPhenomenonStable": true
+  }
+}
