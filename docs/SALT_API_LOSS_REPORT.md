@@ -2,7 +2,7 @@
 
 Version: 0.1.0
 Date: 2026-06-20
-Status: updated first pass, combining the live MW contract (verified 2026-06-11) with Phase 1 implementation findings from 2026-06-20.
+Status: updated first pass, combining the live MW contract (verified 2026-06-11), Phase 1 implementation findings from 2026-06-20, and the 2026-06-20 host-deploy checkpoint.
 
 Companion to [`SALT_API_PROFILE.md`](SALT_API_PROFILE.md). Following the repository's working
 principle, **a lossy mapping is a finding, not a bug.** This report catalogues where the
@@ -17,6 +17,21 @@ The C-SALT MW REST and GraphQL contracts were read directly from the running ser
 (`/dicts/mw/restful/spec` and a GraphQL introspection) and from real `entries` responses
 for `agni`, `indra`, `ka`, `aMSa`. CSL fields are from `COLOGNE/api/getword.md` and
 `csl-apidev` (`getword`, `restfulparm.md`).
+
+## Deployment checkpoint (2026-06-20)
+
+After the `csl-apidev` Phase 1 PR stack was applied (#59 into `salt-api-phase1`,
+then #46 to `master`), external checks against
+`https://sanskrit-lexicon.uni-koeln.de/dicts/mw/...` did not yet reach the Phase 1
+controllers. The `entries` route returned the Cologne TYPO3/Apache HTTP 404
+"Document not found" page. The `ids` and `graphql` checks timed out or failed TLS
+from this host, and `data/pilot/parity_mw.py` timed out before producing a parity
+table.
+
+This is recorded as a host deployment/rewrite blocker, not a CSL/C-SALT semantic
+divergence. Do not add parity findings for `-L{lnum}`, `prefix` `size`, homonym
+ordering, or Phase 1 HTTP 400 behavior until the public routes answer the positive
+and negative smoke checks from the handoff document.
 
 ## 2. The two entry shapes
 

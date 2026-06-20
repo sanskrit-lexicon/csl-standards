@@ -7,6 +7,10 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 
 ### Changed
+- **Salt Phase 1 deployment checkpoint.** Recorded that the `csl-apidev` Phase 1
+  PR stack was applied, but the public Cologne Salt routes are not yet live: the
+  `entries` check returned HTTP 404 and the `ids` / `graphql` checks timed out or
+  failed TLS from this host, so parity remains blocked until host deploy/rewrites land.
 - **Salt API docs alignment.** Tightened Phase 1 documentation so endpoint paths, use-case
   caveats, query-mode status, id fallback notes, and parity-ledger wording match the
   `csl-apidev` handoff branch.
