@@ -2,9 +2,11 @@
 
 Version: 0.1.0
 Date: 2026-06-20
-Status: **Phase 0 implementation-ready normative profile.** The contract below was verified live against
+Status: **Phase 0 implementation-ready normative profile.** The target contract below was verified live against
 `api.c-salt.uni-koeln.de/dicts/mw` (REST OpenAPI `/restful/spec` + GraphQL introspection)
-on 2026-06-11 and packaged for the `csl-apidev` handoff on 2026-06-20.
+on 2026-06-11 and packaged for the `csl-apidev` handoff on 2026-06-20. The Phase 1 MW
+pilot may explicitly return 400 for unimplemented fields/body-search modes; those
+implementation-stage divergences are tracked in the loss report, not hidden as empty hits.
 
 Machine-readable companions (authoritative for tooling):
 - REST: [`data/schema/salt-api.openapi.yaml`](../data/schema/salt-api.openapi.yaml)
@@ -82,9 +84,11 @@ GET /dicts/mw/restful/entries?field=headword_slp1&query=agni&query_type=term&siz
 
 ## 4. Search modes (`query_type`)
 
-A conforming host MUST accept all seven values. The *quality* of each mode MAY depend on the
-search backend (see the roadmap §4.3: PHP-native over headwords, or Elasticsearch). At
-minimum:
+The target contract includes all seven values. A full conforming host MUST either implement
+the requested mode or return an explicit HTTP 400 for modes not yet indexed; it MUST NOT
+silently return an empty result for an unimplemented search surface. The *quality* of each
+implemented mode MAY depend on the search backend (see the roadmap §4.3: PHP-native over
+headwords, SQLite FTS5, or Elasticsearch). At minimum:
 
 | Mode | Meaning | Minimum CSL behaviour |
 |---|---|---|
@@ -96,7 +100,7 @@ minimum:
 | `match` | token match | token match over the field |
 | `match_phrase` | phrase match | phrase match over the field |
 
-`match` / `match_phrase` over `field=sense` or `field=xml` (body search) MAY be deferred
+`regexp`, `match`, and `match_phrase` MAY be deferred in the Phase 1 MW pilot
 (roadmap Phase 4) but MUST then return HTTP 400 rather than silently empty results.
 
 ## 5. REST — batch fetch (`/restful/ids`)
@@ -168,7 +172,7 @@ original's primary advantage over the derivative.
 
 | Field (REST / GraphQL) | Type | Meaning |
 |---|---|---|
-| `id` / `id` | string | Stable entry id. **MUST equal C-SALT's exactly:** `lemma-{headword_slp1}` for a unique headword, or `lemma-{headword_slp1}-{n}` for homonyms (`n` = 1-based homonym number; verified live: `ka` → `lemma-ka-1`…`lemma-ka-4`, while single headwords `agni`/`aMSa` carry no suffix). Reconstructed from CSL `key` + the `hc1` homonym counter. |
+| `id` / `id` | string | Stable entry id. Target parity is C-SALT's `lemma-{headword_slp1}` for a unique headword, or `lemma-{headword_slp1}-{n}` for homonyms (`n` = 1-based homonym number; verified live: `ka` → `lemma-ka-1`…`lemma-ka-4`, while single headwords `agni`/`aMSa` carry no suffix). Phase 1 additionally uses `lemma-{headword_slp1}-L{lnum}` for un-numbered CSL sub-records so ids remain unique; reconcile that sanctioned divergence in the Phase 3 parity pass. |
 | `headword_slp1` / `headwordSlp1` | string | Headword in SLP1. |
 | `sense` / `sense` | string[] | Sense glosses. |
 | `re_headwords_slp1` / `reHeadwordsSlp1` | string[] | Run-on / sub-headwords in SLP1. |
@@ -199,7 +203,9 @@ indistinguishable in structure from C-SALT's, except that:
 1. `xml` MAY be `null` until Phase 5; and
 2. each entry MAY carry an additional `csl` object.
 
-No other structural divergence is permitted by this profile. Behavioural divergences
+No other structural divergence is permitted by the target profile. Phase 1 implementation
+divergences such as `-L{lnum}` ids and explicit 400s for deferred fields/modes are
+catalogued in the loss report. Behavioural divergences
 (coverage of additional dictionaries, additional homonyms, richer `csl` data) are expected
 and catalogued in [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md).
 

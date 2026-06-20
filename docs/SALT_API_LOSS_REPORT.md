@@ -1,8 +1,8 @@
 # Salt API — CSL ↔ C-SALT Loss Report
 
 Version: 0.1.0
-Date: 2026-06-11
-Status: first pass, from the live MW contract (verified 2026-06-11).
+Date: 2026-06-20
+Status: updated first pass, combining the live MW contract (verified 2026-06-11) with Phase 1 implementation findings from 2026-06-20.
 
 Companion to [`SALT_API_PROFILE.md`](SALT_API_PROFILE.md). Following the repository's working
 principle, **a lossy mapping is a finding, not a bug.** This report catalogues where the
@@ -56,13 +56,13 @@ Phase 5) can be validated field-by-field against C-SALT's TEI as a **parity orac
 the public `id` and `lnum` line up mechanically (`lemma-agni` ↔ headword; `monier_890` ↔
 `lnum 890`).
 
-### F4. The `id` scheme is reproducible exactly
+### F4. The `id` scheme is reproducible, with one Phase 1 uniqueness fallback
 C-SALT id = `lemma-{headword_slp1}`, or `lemma-{headword_slp1}-{n}` for homonyms (verified:
 `ka` → `lemma-ka-1`…`-4`; `agni`, `aMSa` carry no suffix). CSL reconstructs this from `key`
-+ the `hc1` homonym counter — no loss, provided CSL's homonym numbering matches C-SALT's.
-**Open verification (Phase 3):** confirm the homonym ordering agrees for a sample of
-multi-homonym headwords.
-
++ the homonym counter where the source has one. Phase 1 additionally mints
+`lemma-{headword_slp1}-L{lnum}` for un-numbered CSL sub-records so the `ids` face can address
+one record without collisions. **Open verification (Phase 3):** confirm homonym ordering and
+settle whether the `-L{lnum}` fallback is exposed, mapped, or hidden for strict C-SALT parity.
 ### F5. `sense[]` quality gap
 Kosh's `sense[]` is parsed from the TEI `<sense>` elements. Before Phase 5, CSL can only
 approximate sense segmentation from `getword` rendering; TEI-grade `sense[]` arrives with
@@ -76,11 +76,16 @@ and the main behavioural divergence a client will observe.
 
 ### F7. `query_type` backend dependence
 All seven modes (`term, fuzzy, match, match_phrase, prefix, wildcard, regexp`) are in the
-contract, but body-text modes (`match`/`match_phrase` over `field=sense`/`xml`) require an
-index CSL does not build for the MW pilot. Until Phase 4 (Elasticsearch or SQLite FTS5),
-those MUST return HTTP 400 rather than silently empty results — silence would read as "no
-matches," a false negative.
+target contract, but `regexp` and body-text modes (`match`/`match_phrase` over `field=sense`/`xml`)
+require an index CSL does not build for the MW pilot. Until Phase 4 (Elasticsearch or SQLite
+FTS5), those MUST return HTTP 400 rather than silently empty results — silence would read as
+"no matches," a false negative.
 
+### F8. Phase 1 parity ledger items
+The deploy parity pass must record three implementation-stage divergences explicitly:
+`-L{lnum}` id fallback for un-numbered sub-records; `prefix` `size` semantics (records vs.
+distinct headwords); and explicit HTTP 400 responses for valid C-SALT enum values whose
+field/index is not implemented in Phase 1.
 ## 4. Model-adequacy summary
 
 | Aspect | Status | Note |

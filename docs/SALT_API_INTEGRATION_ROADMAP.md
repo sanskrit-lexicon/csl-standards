@@ -1,7 +1,7 @@
 # Salt API Integration Roadmap — sanskrit-lexicon.uni-koeln.de
 
 Date: 2026-06-20
-Status: **Phase 0 implementation handoff ready.** C-SALT MW contract verified live on
+Status: **Phase 0 complete; Phase 1 implementation moved to `csl-apidev`.** C-SALT MW contract verified live on
 2026-06-11 (REST OpenAPI + GraphQL introspection against
 `api.c-salt.uni-koeln.de/dicts/mw`). All field names, enum values, and query signatures
 below are facts from the running service, not proposals.
@@ -21,7 +21,8 @@ below are facts from the running service, not proposals.
 Goal stated by the project lead: **`sanskrit-lexicon.uni-koeln.de` should expose a full
 "Salt API"** — an API that speaks the same contract as the C-SALT APIs at
 `api.c-salt.uni-koeln.de`, so a client written against C-SALT (e.g. VedaWeb) can query the
-Cologne original unchanged, and so the CCeH derivative (`cceh/c-salt_sanskrit_data`, 7
+Cologne original with the same endpoint shapes, while Phase 1 implementation caveats remain
+explicit, and so the CCeH derivative (`cceh/c-salt_sanskrit_data`, 7
 dictionaries) and the original (CDSL, ~40 dictionaries) converge on one interface.
 
 This is **not** a request to run CCeH's software. It is a request to **serve the same
@@ -137,7 +138,7 @@ face**, **add clean `/dicts/{id}/…` routes**, and (Phase 5) **fill `xml` with 
 | 3 | Dictionary scope | **MW-only pilot first** | Prove the pipeline on Monier-Williams, publish, then decide 7-vs-40 with real parity numbers (Phase 3 gate). |
 | 4 | `csl-standards` deliverable | **Bilingual API Profile + schema** | Normative EN/RU profile + OpenAPI + GraphQL SDL + loss report. The spec Jim builds against. |
 | 5 | Search backend | **PHP-native pilot, Elasticsearch at Phase 4** | MW pilot needs only headword modes (no new runtime); ES (or SQLite FTS5) enters for body search + scale. Contract identical either way. |
-| 6 | Public `id` | **Match C-SALT exactly** | `lemma-{headword_slp1}` (or `-{n}` for homonyms); built from `key` + `hc1`. The `lnum` moves to `csl.lnum`. |
+| 6 | Public `id` | **Match C-SALT where numbered; preserve uniqueness otherwise** | `lemma-{headword_slp1}` / `-{n}` is the parity target; Phase 1 uses `-L{lnum}` for un-numbered CSL sub-records. The `lnum` also moves to `csl.lnum`. |
 | 7 | Clean URLs | **Salt subsumes `cleanurl` (COLOGNE#249)** | one `/{dict}/{ref}` permalink alongside the `/dicts/{id}/…` API; Jim implements the permalink once. |
 | 8 | C-SALT relation | **Clean-room** | reconstruct from CSL data; C-SALT's TEI is a parity oracle, never a code source. |
 | 9 | Landing | **PRs to csl-standards and csl-apidev** | reviewed on GitHub, not pushed to default branches. |
@@ -211,14 +212,14 @@ location — §8 Q6.)
   "data": {
     "entries": [
       {
-        "id": "mw-100564",
+        "id": "lemma-agni-L890",
         "headword_slp1": "agni",
         "sense": ["fire, sacrificial fire …", "the number three …"],
         "re_headwords_slp1": ["agniprawizWA", "agnihowra"],
         "created": "2026-06-11T00:00:00",
         "xml": null,
         "csl": {
-          "recordId": "100564",
+          "lnum": "890",
           "page": "5", "column": "1",
           "scanUrl": "https://sanskrit-lexicon.uni-koeln.de/dicts/mw/pdf/page/5",
           "html": "…", "text": "…",
@@ -249,9 +250,10 @@ CSL-aware client reads `csl`. No breaking change when Phase 5 lands.
 ### 3.2. REST — batch fetch by id
 
 ```
-GET /dicts/{id}/restful/ids?ids=mw-100564&ids=mw-100565     # multi-value, returns full entries
+GET /dicts/{id}/restful/ids?ids=lemma-agni-L890&ids=lemma-agni-L891     # multi-value, returns full entries
 ```
-Maps to `getword`'s record lookup by `recordId`, once per id. This is Kosh's `ids` query —
+Maps to the Salt `lemma-...` id forms and then to the existing `getword` record path,
+once per id. This is Kosh's `ids` query —
 a **batch get by id**, not a search (an earlier draft mis-described it).
 
 ### 3.3. GraphQL
@@ -294,7 +296,7 @@ Kosh does not.
 
 | Salt field | Filled from CSL | When | Note |
 |---|---|---|---|
-| `id` | `lemma-{headword_slp1}` (or `-{n}` for homonyms) — **matches C-SALT** | now | Built from `key` + `hc1`. Verified: `ka` → `lemma-ka-1`…`-4`. |
+| `id` | `lemma-{headword_slp1}` / `-{n}` where C-SALT has numbered homonyms; `-L{lnum}` fallback for un-numbered CSL sub-records | now | Keeps ids unique in Phase 1; reconcile fallback exposure in Phase 3 parity. |
 | `headword_slp1` | `key` (already SLP1) | now | Direct. |
 | `sense[]` | best-effort sense split / Phase-5 TEI `<sense>` | now (rough) → Phase 5 | Sense extraction is the hard interoperability case the repo studies. |
 | `re_headwords_slp1[]` | CSL run-on headwords | now | From existing sub-entries. |
@@ -335,7 +337,7 @@ path for website and API means the API never drifts from what users see.
 
 ### 4.2. Add a thin controller; do not disturb `api0`
 Add `csl-apidev/api1/` (sibling of `api0/`) with `salt_entries.php`, `salt_ids.php`,
-`graphql.php`. Each parses the Salt route, dispatches to `dal`, calls `basicdisplay`,
+`salt_graphql.php`. Each parses the Salt route, dispatches to `dal`, calls `basicdisplay`,
 assembles the §3.4 envelope, emits JSON. Production endpoints are untouched, so the pilot
 cannot regress the live site.
 
@@ -351,7 +353,7 @@ can be executed two ways.
 | `term` | exact headword-key match | `getword` lookup |
 | `prefix` | starts-with on headword | `listhier` neighborhood |
 | `wildcard` | `*`/`?` glob on headword | site glob search |
-| `regexp` | regex on headword | advanced/regex search |
+| `regexp` | deferred in Phase 1 | needs a Phase 4 regex/body index; return HTTP 400 meanwhile |
 | `fuzzy` | edit-distance on headword | `getsuggest` |
 | `match` / `match_phrase` | token / phrase over body | *needs a body index (Phase 4)* |
 
@@ -375,7 +377,7 @@ scale arrive — at which point Elasticsearch (or SQLite FTS5 as a lighter alter
 earns its keep. The contract and the controller do not change when the backend does.
 
 ### 4.4. GraphQL face
-`api1/graphql.php` (webonyx [provisional]) resolves `entries`/`ids` through the same code
+`api1/salt_graphql.php` (webonyx [provisional]) resolves `entries`/`ids` through the same code
 as REST. Only two root fields.
 
 ### 4.5. Apache rewrite layer
@@ -416,18 +418,18 @@ makes "integration" checkable, not aspirational.
   handoff checklist.
 
 ### Phase 1 — MW REST pilot (`csl-apidev`)
-- `api1/salt_entries.php`: `/dicts/mw/restful/entries` for `query_type` ∈ `{term, prefix,
-  wildcard, regexp, fuzzy}` over headwords; full §3.4 envelope (`xml: null`, `csl` filled).
+- `api1/salt_entries.php`: `/dicts/mw/restful/entries` for `query_type` ∈ `{term, prefix, wildcard, fuzzy}` over headwords; `regexp`/`match`/`match_phrase` return explicit HTTP 400
+  until Phase 4 indexing exists; full §3.4 envelope (`xml: null`, `csl` filled).
 - `salt_ids.php` (batch by id); rewrites; `csl.scanUrl` bridged to `servepdf.php`.
 - **Exit:** MW answers Salt REST live, identical envelope for every headword.
 
 ### Phase 2 — MW GraphQL pilot
-- `api1/graphql.php`: `entries` + `ids` over the same resolvers; field names per §3.3.2.
+- `api1/salt_graphql.php`: `entries` + `ids` over the same resolvers; field names per §3.3.2.
 - **Exit:** MW answers Salt GraphQL; REST and GraphQL return the same records.
 
 ### Phase 3 — Parity review & the 7-vs-40 decision gate
-- Validation recipe (§9): same headwords on both hosts; compare `id` (does
-  `{dict}-{recordId}` line up with `monier_<L>`?), count, headword form. Write results into
+- Validation recipe (§9): same headwords on both hosts; compare `id` (does it match C-SALT
+  or use the documented `-L{lnum}` fallback?), count, headword form. Write results into
   `SALT_API_LOSS_REPORT.md`.
 - **Decision (project lead):** expand to the 7 C-SALT dicts, all ~40 CDSL dicts, or a
   staged order — backed by real MW numbers. **Also decide search backend (Option A vs B)
@@ -458,7 +460,7 @@ makes "integration" checkable, not aspirational.
 |---|---|---|
 | CSL → Kosh flat fields | scan page/column, `scanUrl`, `html`/`text`, flat `references`, accent, multi-transliteration | None have a Kosh flat slot — but **page/column/accent/L-number do survive inside the TEI** (`facs 5,1`, `key2 agn/i`, `monier_890`). The loss is in the *flat* projection, not the TEI. |
 | Kosh → CSL (pre-Phase-5) | TEI-P5 structure in `xml` | CSL `xml` is `null` until Phase 5; structural TEI queries are unanswerable on CSL until then. CSL display-XML lives at `csl.xmlCsl` meanwhile. |
-| Both | `id` semantics | Kosh ids are index-stable; CSL `recordId` stability across `redo_xampp_selective.sh` must be confirmed (§8 Q2). The TEI `monier_<L>` suggests alignment is mechanical. |
+| Both | `id` semantics | Kosh ids are index-stable; CSL `lnum` stability across `redo_xampp_selective.sh` must be confirmed (§8 Q2). The TEI `monier_<L>` suggests alignment is mechanical, while Phase 1 records the `-L{lnum}` fallback as a parity item. |
 | Modeling | `sense[]` quality | Kosh's `sense[]` is parsed from TEI `<sense>`; CSL can only approximate it before Phase 5. The gap between rough and TEI-grade senses is itself a finding for the paper. |
 
 These rows seed `SALT_API_LOSS_REPORT.md` and feed the paper's "what TEI/OntoLex capture and
@@ -472,17 +474,17 @@ Resolved this round are struck through; the rest carry a recommended default so 
 not blocked.
 
 1. ~~**GraphQL field names** — unknown.~~ **RESOLVED:** introspected live (§1.1, §3.3.2).
-2. ~~**`recordId` → public id**~~ **RESOLVED:** the public `id` matches C-SALT exactly —
-   `lemma-{headword_slp1}` (or `-{n}` for homonyms; verified `ka` → `lemma-ka-1`…`-4`),
-   built from `key` + `hc1`. The `lnum` (Jim's existing parameter) moves to `csl.lnum`.
-   Phase-3 check: confirm CSL homonym ordering agrees with C-SALT.
+2. ~~**`recordId` → public id**~~ **RESOLVED:** the parity target is C-SALT's
+   `lemma-{headword_slp1}` / `-{n}` scheme; Phase 1 adds `-L{lnum}` for un-numbered CSL
+   sub-records so ids remain unique. The `lnum` (Jim's existing parameter) moves to
+   `csl.lnum`. Phase-3 check: confirm homonym ordering and settle fallback exposure.
 3. ~~**Prefixed vs bare id**~~ **RESOLVED:** neither — match C-SALT's `lemma-…` token.
 4. **GraphQL library** — **Default [provisional]:** `webonyx/graphql-php`. Revisit only if
    adding a Composer dependency on the host is unwanted.
 5. ~~**Search backend**~~ **RESOLVED:** PHP-native for the MW pilot; Elasticsearch (or
    SQLite FTS5) enters at Phase 4 for body search + scale. Contract unchanged either way.
-6. **Controller home** — confirm the real `apidev` path for `api1/` and the rewrite targets
-   in §3.1.7 (currently placeholders).
+6. **Controller home** — `api1/` is the Phase 1 controller home; use the concrete rewrite
+   targets in `csl-apidev/doc/salt_api_handoff.md`.
 7. **CORS / rate limit / auth** — **Default [provisional]:** match C-SALT (open,
    unauthenticated), subject to the Cologne host's usual limits.
 8. **`noLit`** — `getword.md` itself asks what it is for. **Default [provisional]:** keep it
@@ -496,17 +498,18 @@ not blocked.
 For a fixed headword list (`agni`, `Davala`, `aMSa`, `indra`, `BU`):
 1. C-SALT: `GET …/dicts/mw/restful/entries?field=headword_slp1&query={hw}&query_type=term`
 2. CSL:    `GET …/dicts/mw/restful/entries?field=headword_slp1&query={hw}&query_type=term`
-3. Compare: entry count per headword; each `id` (does `{dict}-{recordId}` match the TEI
-   `monier_<L>`?); the `headword_slp1` form; and (Phase 5) `xml` TEI vs C-SALT's TEI body.
+3. Compare: entry count per headword; each `id` (does the Salt id match C-SALT or use
+   the documented `-L{lnum}` fallback?); the `headword_slp1` form; and (Phase 5)
+   `xml` TEI vs C-SALT's TEI body.
 4. Record agreements and divergences in `SALT_API_LOSS_REPORT.md`. Divergences are expected
    where CSL covers homonyms, continuation entries, or scan apparatus the 7-dictionary
    derivative does not.
 
-A small script under `csl-standards/data/pilot/` can automate this (reusing the repo's
-`npm run sample` data-handling pattern) and emit a parity table.
+The helper [`data/pilot/parity_mw.py`](../data/pilot/parity_mw.py) automates this
+comparison and emits Markdown or JSON parity tables.
 
 ---
 
-*End of roadmap. The verified contract above is ready to become the Phase 0 normative
-artifacts (`SALT_API_PROFILE.md` + RU, `salt-api.openapi.yaml`, `salt-api.graphql`,
-`SALT_API_LOSS_REPORT.md`) on request.*
+*End of roadmap. The verified contract is now packaged as Phase 0 normative artifacts
+(`SALT_API_PROFILE.md` + RU, `salt-api.openapi.yaml`, `salt-api.graphql`,
+`SALT_API_LOSS_REPORT.md`) and is feeding the `csl-apidev` Phase 1 work.*

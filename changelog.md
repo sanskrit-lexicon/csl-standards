@@ -6,6 +6,11 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Changed
+- **Salt API docs alignment.** Tightened Phase 1 documentation so endpoint paths, use-case
+  caveats, query-mode status, id fallback notes, and parity-ledger wording match the
+  `csl-apidev` handoff branch.
+
 ### Added
 - **MW Salt parity helper.** Added `data/pilot/parity_mw.py`, a dependency-free
   post-deploy helper for comparing the CSL Salt MW endpoint against C-SALT by
