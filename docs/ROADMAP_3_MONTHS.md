@@ -5,15 +5,18 @@ Status date: 2026-06-20.
 The original three-month scaffold is complete. The repository now has a reproducible
 TEI/OntoLex workbench, a validated 250-case canonical pilot, a 500/1000 scale-stability
 check, a Salt API Phase 0 handoff package, a public `csl:` vocabulary index, and the
-`v0.9.0` baseline release.
+`v1.0.0` stable release.
 
-The next sequence is fixed:
+The completed post-v0.9 sequence was:
 
 1. Scaling stability check.
 2. Salt API Phase 0.
 3. `csl:` vocabulary page.
 4. `v1.0.0` annotated-tag snapshot.
 5. Paper submission last, aimed at broader computational lexicography.
+
+Current next step: implement the Salt API MW REST pilot in `csl-apidev`. Paper submission
+remains last.
 
 ## Completed Baseline
 
@@ -31,7 +34,7 @@ The next sequence is fixed:
   portable Windows toolchain pinned and SHA-256 verified.
 - Audit hardening: CI workflow, guarded Dependabot auto-merge, non-zero pipeline failures,
   and current project state/changelog discipline.
-- Release: `v0.9.0` annotated tag pushed.
+- Release: `v1.0.0` annotated tag pushed.
 
 ## Track 1 - Scaling Stability Check
 
