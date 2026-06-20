@@ -4,6 +4,13 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
+## [Unreleased]
+
+### Added
+- **MW Salt parity helper.** Added `data/pilot/parity_mw.py`, a dependency-free
+  post-deploy helper for comparing the CSL Salt MW endpoint against C-SALT by
+  entry count, ids, and headwords for a fixed smoke set.
+
 ## [1.0.0] - 2026-06-20
 
 **Stable research snapshot after scale/Salt/vocabulary work.** This release keeps
