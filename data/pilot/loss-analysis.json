@@ -1,51 +1,52 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 1430,
+    "total": 1722,
     "cases": 256,
     "byStatus": {
       "partial": 1007,
-      "lossy": 348,
+      "lossy": 640,
       "clean": 75
     },
     "byTarget": {
       "ontolex": 762,
       "neutral": 370,
-      "tei": 298
+      "tei": 298,
+      "mdf": 292
     },
     "byPhenomenon": {
       "source-collapse": 369,
       "citation-coordinate": 363,
-      "generic-lexicographer-hedge": 234,
+      "generic-lexicographer-hedge": 351,
+      "compound-decomposition": 150,
+      "root-as-derivational-base": 120,
+      "continuation-parent": 120,
       "named-kosha-citation": 91,
-      "continuation-parent": 80,
       "compound-subentry": 75,
-      "compound-decomposition": 75,
       "root-as-entry": 60,
-      "root-as-derivational-base": 60,
       "editorial-reference": 16,
       "sense-citation-fusion": 6,
       "source-anomaly": 1
     },
     "byFailureClassification": {
-      "model-vocabulary-gap": 782,
+      "model-vocabulary-gap": 1034,
       "editorial-compression": 369,
+      "print-compression": 120,
       "cdsl-markup-gap": 117,
-      "print-compression": 80,
       "none": 75,
       "sanskrit-convention": 6,
       "data-quality": 1
     },
     "byExtensionNeeded": {
       "extensionNeeded=true": 885,
-      "extensionNeeded=false": 545
+      "extensionNeeded=false": 837
     },
     "byReviewStatus": {
-      "machine": 1334,
-      "reviewed": 96
+      "machine": 1593,
+      "reviewed": 129
     },
     "bySourceDictionary": {
-      "mw": 615,
+      "mw": 907,
       "pwg": 405,
       "pwk": 251,
       "gra": 77,
@@ -62,6 +63,9 @@
       "ontolex": {
         "partial": 662,
         "lossy": 100
+      },
+      "mdf": {
+        "lossy": 292
       },
       "neutral": {
         "partial": 128,

@@ -58,6 +58,22 @@ async function main() {
           extensionNeeded: true,
           reviewStatus
         });
+
+        // MDF (flat field schema) adequacy: the hedge has no MDF field at all.
+        reports.push({
+          caseId: model.id,
+          target: "mdf",
+          status: "lossy",
+          phenomenon: "generic-lexicographer-hedge",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "MW L. evidence preservation",
+          mappedAs: "\\bb L. + \\nt model-loss marker",
+          loss: "MDF's flat \\bb flattens the generic-lexicographer hedge to a plain reference; the evidence-kind is not representable.",
+          failureClassification: "model-vocabulary-gap",
+          extensionNeeded: false,
+          reviewStatus
+        });
       } else if (p === "root") {
         reports.push({
           caseId: model.id,
@@ -84,6 +100,20 @@ async function main() {
           loss: "Root needs lexical plus derivational relation (OntoLex-Morph gap)",
           failureClassification: "model-vocabulary-gap",
           extensionNeeded: true,
+          reviewStatus
+        });
+        reports.push({
+          caseId: model.id,
+          target: "mdf",
+          status: "lossy",
+          phenomenon: "root-as-derivational-base",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "Root modeling",
+          mappedAs: "\\et / \\nt model-loss marker",
+          loss: "MDF has no root/derivation relation field; the derivational-base role survives only as a \\nt.",
+          failureClassification: "model-vocabulary-gap",
+          extensionNeeded: false,
           reviewStatus
         });
       } else if (p === "compound") {
@@ -113,6 +143,20 @@ async function main() {
           extensionNeeded: true,
           reviewStatus
         });
+        reports.push({
+          caseId: model.id,
+          target: "mdf",
+          status: "lossy",
+          phenomenon: "compound-decomposition",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "Compound modeling",
+          mappedAs: "\\cf components + \\nt model-loss marker",
+          loss: "MDF \\se subentry is not a semantic decomposition; components are flattened to \\cf cross-references.",
+          failureClassification: "model-vocabulary-gap",
+          extensionNeeded: false,
+          reviewStatus
+        });
       } else if (p === "continuation") {
         // Print compression classification
         reports.push({
@@ -140,6 +184,20 @@ async function main() {
           loss: "Suppressed headword needs explicit parent relation mapped in OntoLex",
           failureClassification: "print-compression",
           extensionNeeded: true,
+          reviewStatus
+        });
+        reports.push({
+          caseId: model.id,
+          target: "mdf",
+          status: "lossy",
+          phenomenon: "continuation-parent",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "Continuation modeling",
+          mappedAs: "single record + \\nt model-loss marker",
+          loss: "MDF has no continuation concept; the suppressed headword must be resolved from adjacency before a single flat record can be emitted.",
+          failureClassification: "print-compression",
+          extensionNeeded: false,
           reviewStatus
         });
       }

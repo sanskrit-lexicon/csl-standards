@@ -106,9 +106,10 @@ function figureEvidence(a) {
 // ── Figure 5: loss distribution — target × status, and by cause ──
 function figureLossDistribution(a) {
   const tbs = a.lossReports.targetByStatus;
-  const targets = ["tei", "ontolex", "neutral"];
+  const targets = ["tei", "ontolex", "mdf", "neutral"];
+  const nT = targets.length;
   const statuses = ["clean", "partial", "lossy"];
-  const total = t => statuses.reduce((s, k) => s + (tbs[t][k] || 0), 0);
+  const total = t => statuses.reduce((s, k) => s + ((tbs[t] || {})[k] || 0), 0);
   const maxTotal = Math.max(...targets.map(total));
   const W = 760, x0 = 90, barW = 560, top = 100, rowH = 46;
 
@@ -116,7 +117,7 @@ function figureLossDistribution(a) {
     const y = top + i * rowH;
     let cx = x0;
     const segs = statuses.map(st => {
-      const n = tbs[t][st] || 0;
+      const n = (tbs[t] || {})[st] || 0;
       const w = Math.round((n / maxTotal) * barW);
       const seg = n > 0
         ? `<rect x="${cx}" y="${y}" width="${w}" height="28" fill="${C[st]}"/>` +
@@ -129,14 +130,14 @@ function figureLossDistribution(a) {
   }).join("\n");
 
   const legend = statuses.map((st, i) =>
-    `<rect x="${x0 + i * 130}" y="${top + 3 * rowH + 6}" width="12" height="12" fill="${C[st]}"/>` +
-    `<text x="${x0 + i * 130 + 18}" y="${top + 3 * rowH + 16}" font-size="12" fill="${C.text}">${st}</text>`
+    `<rect x="${x0 + i * 130}" y="${top + nT * rowH + 6}" width="12" height="12" fill="${C[st]}"/>` +
+    `<text x="${x0 + i * 130 + 18}" y="${top + nT * rowH + 16}" font-size="12" fill="${C.text}">${st}</text>`
   ).join("\n");
 
   // by-cause mini panel
   const causes = Object.entries(a.lossReports.byFailureClassification).sort((p, q) => q[1] - p[1]);
   const cMax = Math.max(...causes.map(c => c[1]));
-  const cTop = top + 3 * rowH + 64, cRowH = 26;
+  const cTop = top + nT * rowH + 64, cRowH = 26;
   const causeBars = causes.map(([k, n], i) => {
     const y = cTop + i * cRowH;
     const w = Math.round((n / cMax) * 360);
@@ -149,8 +150,8 @@ function figureLossDistribution(a) {
   const H = cTop + causes.length * cRowH + 24;
 
   const body = [
-    title(24, 34, "Figure 5 — How TEI and OntoLex fail"),
-    caption(24, 54, `${a.lossReports.total} loss reports. TEI is never lossy for the Western cases; OntoLex is never clean; the neutral lineage lane is the most lossy.`),
+    title(24, 34, "Figure 5 — How TEI, OntoLex and MDF fail"),
+    caption(24, 54, `${a.lossReports.total} loss reports. TEI is never lossy for the Western cases; OntoLex is never clean; MDF, the deliberately flat field schema, is lossy across the board; the neutral lineage lane carries the editorial source-collapse.`),
     title(24, 86, "Target × status", 13),
     stacked, legend,
     title(24, cTop - 10, "By cause", 13),

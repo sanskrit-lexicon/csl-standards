@@ -38,6 +38,9 @@ jobs:
       - name: Validate OntoLex profile
         run: npm run validate-ontolex-profile
 
+      - name: Validate MDF profile
+        run: npm run validate-mdf-profile
+
       - name: Validate TEI Lex-0 baseline
         run: npm run validate-tei-lex0
 
