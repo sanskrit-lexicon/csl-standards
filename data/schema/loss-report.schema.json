@@ -6,7 +6,7 @@
     "type": "object",
     "properties": {
       "caseId": { "type": "string" },
-      "target": { "type": "string", "enum": ["tei", "ontolex", "neutral"] },
+      "target": { "type": "string", "enum": ["tei", "ontolex", "mdf", "neutral"] },
       "status": { "type": "string", "enum": ["clean", "partial", "lossy", "failure"] },
       "phenomenon": { "type": "string" },
       "sourceDictionary": { "type": "string", "enum": ["mw", "pwg", "pwk", "skd"] },

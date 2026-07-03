@@ -76,7 +76,7 @@ check(!/[A-Za-z]:\\|\\\\Users\\\\|\/Users\/|\/home\//.test(sourceString), "hard-
 const fixtureIdSet = new Set(lex0Fixtures.map(f => f.id));
 for (const report of reports || []) {
   check(hardIdSet.has(report.caseId) || fixtureIdSet.has(report.caseId), `loss report points to unknown case ${report.caseId}`);
-  check(["tei", "ontolex", "neutral"].includes(report.target), `loss report ${report.id} has invalid target ${report.target}`);
+  check(["tei", "ontolex", "mdf", "neutral"].includes(report.target), `loss report ${report.id} has invalid target ${report.target}`);
   check(["clean", "partial", "lossy"].includes(report.status), `loss report ${report.id} has invalid status ${report.status}`);
   check(allowedReviewStatus.has(report.reviewStatus), `loss report ${report.id} has invalid reviewStatus ${report.reviewStatus}`);
   check(

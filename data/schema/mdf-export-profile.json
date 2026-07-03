@@ -1,0 +1,51 @@
+{
+  "profile": "mdf-export-profile-v0.1",
+  "validationScope": "full-mdf-marker-profile",
+  "description": "SIL Multi-Dictionary Formatter (MDF) marker profile for the CDSL third export view. Standard-format markers (Toolbox/FLEx lineage) over the neutral model, MW-focused (national language = English). Implements docs/MDF_EXPORT_MAPPING.md; every lossy adequacy call is surfaced as a \\nt model-loss marker.",
+  "nationalLanguage": "en",
+  "recordStart": "\\lx",
+  "modelLossMarker": "\\nt",
+  "markers": [
+    "\\lx",
+    "\\hm",
+    "\\lc",
+    "\\va",
+    "\\ps",
+    "\\sn",
+    "\\ge",
+    "\\de",
+    "\\xv",
+    "\\xn",
+    "\\et",
+    "\\es",
+    "\\cf",
+    "\\bb",
+    "\\se",
+    "\\sd",
+    "\\nt"
+  ],
+  "markerRoles": {
+    "\\lx": "lexeme / headword (SLP1)",
+    "\\hm": "homonym number (MW <h>)",
+    "\\lc": "citation / segmented form (MW <k2> when it carries a morpheme boundary)",
+    "\\va": "variant form (reserved; not emitted by the MW-only first pass)",
+    "\\ps": "part of speech, with gender folded in (MW <lex> or derived grammar)",
+    "\\sn": "sense number (inferred from prose segmentation, not observed)",
+    "\\ge": "English gloss (national language for MW)",
+    "\\de": "national-language definition (reserved; SKD/VCP where national = Sanskrit)",
+    "\\xv": "example sentence (empty for MW: a retrieval dictionary with no examples)",
+    "\\xn": "example translation (empty for MW)",
+    "\\et": "etymon / etymology (MW <etym>)",
+    "\\es": "etymology source language (MW <lang>/<gk>)",
+    "\\cf": "cross-reference (q.v. targets; flattened compound components)",
+    "\\bb": "bibliography / source citation (MW <ls>; the L. hedge is kept as \\bb L.)",
+    "\\se": "subentry (reserved; not a semantic decomposition in MDF)",
+    "\\sd": "semantic domain (reserved)",
+    "\\nt": "note; model-loss markers use the 'model-loss:' prefix, provenance the 'meta:' prefix"
+  },
+  "notePrefixes": {
+    "meta:": "per-record provenance: profile version, scope, review status, entry type, MW source pointer",
+    "model-loss:": "a lossy adequacy call made visible (hedge, root, compound, continuation)",
+    "sense-numbering:": "declares inferred (prose) sense numbering"
+  }
+}

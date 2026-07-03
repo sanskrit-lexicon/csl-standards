@@ -21,11 +21,13 @@ to a later phase.
 npm run dev                        # observable preview
 npm run build                      # observable build
 npm test                           # node --test
-npm run build-pilot                # full pipeline: sample → select → neutral-model → parse-skd-kosa → loss-reports → TEI/TEI-Lex0/OntoLex export → validate-* → analyze-loss → build-figures
+npm run build-pilot                # full pipeline: sample → select → neutral-model → parse-skd-kosa → loss-reports → TEI/TEI-Lex0/OntoLex/MDF export → validate-* → analyze-loss → build-figures
 npm run validate-pilot             # validate pilot artifacts (CI gate)
 npm run validate-tei-profile       # validate TEI archival profile (CI gate)
 npm run validate-tei-lex0          # validate TEI Lex-0 baseline (CI gate)
 npm run validate-ontolex-profile   # validate OntoLex/SHACL profile (CI gate)
+npm run export-mdf                 # export the flat SIL MDF field-schema profile (third view)
+npm run validate-mdf-profile       # validate MDF marker profile (CI gate)
 npm run analyze-loss               # regenerate docs/LOSS_ANALYSIS.md from the loss reports
 npm run scale-check                # 500/1000-case scale-stability check (docs/SCALE_STABILITY.md)
 npm run validate-external-profiles[:strict]   # validate against external TEI/OntoLex tooling
@@ -33,9 +35,10 @@ npm run validate-external-profiles[:strict]   # validate against external TEI/On
 
 Individual pipeline stages (`sample-hard-cases`, `select-review-cases`,
 `build-neutral-model`, `build-loss-reports`, `export-tei`,
-`export-tei-lex0`, `export-ontolex`, `parse-skd-kosa`, `build-figures`,
-`refine-curated-stubs`) can be run standalone via `npm run <script>` — see
-`package.json` for the exact chain order `build-pilot` runs them in.
+`export-tei-lex0`, `export-ontolex`, `export-mdf`, `parse-skd-kosa`,
+`build-figures`, `refine-curated-stubs`) can be run standalone via
+`npm run <script>` — see `package.json` for the exact chain order `build-pilot`
+runs them in.
 
 ## Key directories / files
 

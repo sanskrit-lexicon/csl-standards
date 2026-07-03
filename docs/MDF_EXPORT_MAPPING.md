@@ -1,12 +1,21 @@
-# MDF Export Mapping (Candidate Third Profile)
+# MDF Export Mapping (Third Profile)
 
-Date: 2026-06-11
+_Created: 11-06-2026 · Last updated: 03-07-2026_
 
-Status: design draft. A candidate **third export profile** beside the existing
+Status: **implemented.** The **third export profile** beside the existing
 [TEI archival](INTEROPERABILITY_MODEL.md#tei-mapping) and
 [OntoLex/FrAC semantic](INTEROPERABILITY_MODEL.md#ontolex-mapping) views, targeting
 SIL's **Multi-Dictionary Formatter (MDF)** standard-format markers (Toolbox/FLEx
-lineage). Not yet wired to a generator or validator.
+lineage). Serialized by
+[`scripts/export-mdf.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-mdf.mjs),
+validated by
+[`scripts/validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
+against
+[`data/schema/mdf-export-profile.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/mdf-export-profile.json),
+and compared case-by-case against TEI/OntoLex in the loss corpus (the `mdf` target
+in [`build-loss-reports.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)).
+Run via `npm run export-mdf` / `npm run validate-mdf-profile` (both wired into
+`npm run build-pilot`).
 
 ## Why MDF, And Why A Third View
 
@@ -99,8 +108,8 @@ adequacy band.
 | `<s>` / `<s1>` | inline Sanskrit (Deva/SLP1) | context-dependent | partial | Headword zone → part of `\lx`; example zone → `\xv`; gloss zone → inline. |
 | gloss text after `¦` | English gloss/definition | `\ge` (MW) / `\de` | clean | MW target is English → `\ge`. |
 | `<div>` | sense division | `\sn` boundary | clean | |
-| `<srs>` | sub-sense / sense-ref subdivision | `\sn` (sub) | **review** | Exact semantics to confirm against MW docs. |
-| `<bot>` | body-of-text segment | part of `\de`/`\ge` | **review** | Segment role to confirm. |
+| `<srs/>` | sandhi marker inside `<s>` (not a sub-sense) | — (rendering) | n/a | **Resolved** against `csl-orig/v02/mw/mw-meta2.txt`: `<srs/>` is a self-closing marker used *within* `<s>` following a long vowel that is a sandhi — **not** a sub-sense divider. Dropped (no `\sn`). |
+| `<bot>` | plant name (Linnaean) | part of `\ge` | clean | **Resolved** against `mw-meta2.txt`: `<bot>X</bot>` marks a botanical name; it is part of the gloss and flows into `\ge`. |
 | `<ab>` | abbreviation (`q.v.`, `&c.`) | inline; `q.v.` ⇒ `\cf` | partial | "q.v." marks a cross-reference target. |
 | `<ls>` | literary source / `L.` hedge | `\bb` (+`\nt` for `L.`) | **lossy** | See stress point below. |
 | `<etym>` | etymology | `\et` | partial | |
@@ -169,23 +178,36 @@ Candidate MDF:
 
 ## Open Questions / Review Items
 
-- Confirm the role of `<srs>` and `<bot>` against MW digitisation notes
-  (`csl-orig/v02/mw/mw-meta2.txt`) before fixing their MDF target.
-- Decide whether `\lc`/`\va` is the right home for `<k2>`, or whether the segmentation
-  key is dropped as index metadata.
-- Gloss marker choice per dictionary: `\ge` (English target) vs `\gn`/`\de` for the
-  Sanskrit–Sanskrit koshas (SKD/VCP) where the "national" language is itself Sanskrit.
-- Whether to emit a per-record `\nt` carrying the CDSL `<L>` id and `<pc>` coordinate for
-  round-trip traceability.
+- ✅ **Resolved.** `<srs>`/`<bot>` roles confirmed against `csl-orig/v02/mw/mw-meta2.txt`:
+  `<srs/>` is a sandhi rendering marker inside `<s>` (dropped, no `\sn`); `<bot>` is a
+  Linnaean plant name (flows into `\ge`). See the markup table above.
+- ✅ **Resolved.** `<k2>` maps to `\lc` **when it carries a morpheme boundary** (`—`/`-`),
+  which preserves genuine segmentation/compounding information; when `<k2>` merely
+  duplicates `<k1>` it is treated as index metadata and dropped. `\va` is reserved for
+  true variant spellings (not emitted by the MW-only first pass).
+- ✅ **Resolved (for MW).** MW's national language is English, so glosses go to `\ge`.
+  The `\gn`/`\de` choice for the Sanskrit–Sanskrit koshas (SKD/VCP) is deferred to when
+  the profile is extended beyond MW — the marker inventory reserves `\de` for it.
+- ✅ **Resolved.** A per-record `\nt meta:` line carries the CDSL `<L>` id and `<pc>`
+  coordinate (plus profile version, scope, review status, entry type) for round-trip
+  traceability.
 
 ## Next Steps
 
-1. Promote this table to a deterministic `scripts/export-mdf.mjs` serializer over the
-   neutral model, mirroring `export-tei.mjs` / `export-ontolex.mjs`.
-2. Add an `\nt` model-loss marker wherever adequacy is `lossy`/`failure`, and a
-   project-level MDF validator (`validate-mdf-profile.mjs`) parallel to the TEI/OntoLex
-   validators.
-3. Run the same deterministic 50-case hard sample through MDF and add an MDF column to
-   the loss report, so TEI/OntoLex/MDF adequacy can be compared case-by-case.
-4. Cross-check a Sanskrit MDF sample against the MUDIDI MDF conventions, since MUDIDI's
-   parsing subset omits Sanskrit — this is the gap CDSL data can fill.
+1. ✅ **Done.** Deterministic
+   [`scripts/export-mdf.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-mdf.mjs)
+   serializer over the neutral model, mirroring `export-tei.mjs` / `export-ontolex.mjs`
+   (one CDSL record → one `.mdf` record in `data/pilot/mdf/`).
+2. ✅ **Done.** An `\nt model-loss:` marker is emitted for every `lossy` adequacy row
+   (hedge, root, compound, continuation), and
+   [`scripts/validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
+   checks structure, marker inventory, and the presence of each model-loss marker
+   (250/250 records pass, 281 model-loss markers).
+3. ✅ **Done.** The full hard sample runs through MDF and the loss corpus carries an
+   `mdf` target alongside `tei`/`ontolex`/`neutral`, so adequacy is comparable
+   case-by-case (`npm run analyze-loss`; MDF is `lossy` across the board — the flat
+   field schema is intentionally the poorest of the three views).
+4. **Remaining.** Cross-check a Sanskrit MDF sample against the MUDIDI MDF conventions,
+   since MUDIDI's parsing subset omits Sanskrit — this is the gap CDSL data can fill.
+
+_Dr. Mārcis Gasūns_
