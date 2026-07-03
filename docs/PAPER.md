@@ -1,19 +1,26 @@
-# Sanskrit Lexicography Between TEI and OntoLex: Evidence, Derivation, and Compression in MW, PWG, and PWK
+# A Serialization Standard for the Petersburg-Family Sanskrit Dictionaries: Evidence, Derivation, and Compression across TEI, OntoLex, and MDF
 
 *Working draft. The numbers, tables, and figures in this paper are regenerable
 from the workbench (`npm run build-pilot`); see [§14 Availability](#14-availability-and-reproducibility).
 This draft is generated from [docs/PAPER_OUTLINE.md](PAPER_OUTLINE.md) and the
-machine artefacts it cites.*
+machine artefacts it cites. Former working title: "Sanskrit Lexicography Between
+TEI and OntoLex"; reframed 2026-07-03 around the serialization-standard
+contribution with three export profiles (see
+[A27_review_fable5.md](A27_review_fable5.md)).*
 
 ## Abstract
 
-This paper uses three related CDSL Sanskrit dictionaries — Monier-Williams 1899
-(MW), the large Petersburg dictionary (PWG), and the shorter Petersburg dictionary
-(PWK) — as a stress test for lexicographic interoperability. Rather than converting
+This paper proposes a serialization standard for the Petersburg family of CDSL
+Sanskrit dictionaries — Monier-Williams 1899 (MW), the large Petersburg dictionary
+(PWG), and the shorter Petersburg dictionary (PWK) — built on a dictionary-neutral
+model with parallel export profiles, and uses the family as a stress test for
+lexicographic interoperability. Rather than converting
 dictionary XML mechanically, we ask whether the *lexicographic meaning* of these
-works survives mapping into two complementary standard models: TEI as an archival
-representation of dictionary text and OntoLex-Lemon as a semantic graph of lexical
-knowledge. From a 250-case deterministic sample of deliberately hard cases we
+works survives mapping into complementary standard models: TEI as an archival
+representation of dictionary text, OntoLex-Lemon as a semantic graph of lexical
+knowledge, and — as an adopted third profile whose serializer is queued — SIL's
+Multi-Dictionary Formatter (MDF) as the flat field format the
+language-documentation community consumes. From a 250-case deterministic sample of deliberately hard cases we
 generate a dictionary-neutral model and, from it, parallel TEI and OntoLex
 profiles, recording every degradation as an evidence-bound *loss report*. The
 resulting corpus of 1,430 reports shows that the two models fail **asymmetrically**:
@@ -85,6 +92,23 @@ target distinct from a full archival profile. We treat all of these as fixed tar
 ask what they can and cannot hold; where they cannot, we extend them rather than
 abandon them.
 
+A third export profile targets SIL's **Multi-Dictionary Formatter (MDF)** standard-format
+markers (Toolbox/FLEx lineage; Coward & Grimes, 2000) — a deliberately *flat*,
+line-oriented field record that the language-documentation community reads directly.
+Its mapping over the same neutral model was adopted by the project on 2026-07-02
+([docs/MDF_EXPORT_MAPPING.md](MDF_EXPORT_MAPPING.md)); the serializer itself is queued,
+so this paper reports the mapping design, not generated MDF output. MDF earns its place
+for two reasons. First, reach with external corroboration: the MUDIDI dictionary-digitization
+benchmark (Setiawan et al., 2026) uses MDF as its parsing target across 30 public-domain
+dictionaries (including Sanskrit–English) and shows machine parsing into MDF to be strong
+but *convention-dependent* — exactly the prior knowledge CDSL's curated markup already
+supplies. Second, as a schema stress test from the opposite direction: where TEI and
+OntoLex are rich, MDF is intentionally poor, so mapping into it surfaces which CDSL
+distinctions are structurally load-bearing rather than presentational. Where MDF has no
+field for a distinction — notably the `L.` evidential hedge — the gap is recorded on the
+same `clean`/`partial`/`lossy` scale as the other two profiles: for a flat target,
+lossiness is the finding, not a failure.
+
 ## 3. Method
 
 To test the limits of TEI and OntoLex systematically, we built an automated
@@ -121,7 +145,8 @@ is in [docs/LOSS_ANALYSIS.md](LOSS_ANALYSIS.md), regenerable with
 
 ## 4. The Loss Corpus: An Asymmetry of Success
 
-The 250-case pilot yields **1,430 loss reports**. Overall, 1007 are `partial`
+The pilot yields **1,430 loss reports** over 256 cases (the 250 Western cases
+plus the six indigenous *kośa* entries of §9). Overall, 1007 are `partial`
 (70%), 348 `lossy` (24%), and 75 `clean` (5%). The central finding is in the
 cross-tabulation of target against status (Figure 5):
 
@@ -149,7 +174,7 @@ By cause, the corpus splits as: **model-vocabulary-gap 55%** (the target standar
 lacks a concept), **editorial-compression 26%** (upstream lineage loss the
 standards could have held), CDSL-markup-gap 8%, print-compression 6%, clean 5%, and
 the small but qualitatively distinct `sanskrit-convention` and `data-quality`
-(<1% each). By phenomenon, the leaders are `source-collapse` (27%), the unparsed
+(<1% each). By phenomenon, the leaders are `source-collapse` (26%), the unparsed
 `citation-coordinate` (25%), and the MW `L.` hedge (16%); the five
 evidence-related phenomena together are **75%** of the corpus. The centre of
 gravity is evidence, not derivation or compounding.
@@ -287,7 +312,12 @@ SVRL engine for the Schematron, and **pySHACL** for SHACL — assembled by a por
 no-admin toolchain ([docs/EXTERNAL_VALIDATION.md](EXTERNAL_VALIDATION.md)). The
 external harness validates all 250 archival + 256 Lex-0 XML files (RELAX NG), runs
 the Schematron over all 256 Lex-0 entries with **zero failed assertions**, and
-validates all 250 RDF graphs (SHACL), with no failures. Running the real engines
+validates all 250 RDF graphs (SHACL), with no failures — 1,014 checks, 0 skipped,
+recorded in the committed
+[external-validation-review.json](../data/pilot/external-validation-review.json)
+(re-run 2026-07-03 with jing, Saxon+ISO-Schematron, and pySHACL installed; an
+earlier committed run had recorded the non-SHACL layers as skipped for lack of the
+toolchain). Running the real engines
 was not cosmetic: real RNG validation exposed and we fixed three genuine
 TEI-conformance bugs (a duplicate `xml:id`, an illegal `<sourceDesc>` content
 model, and a misplaced `@target`) that the substring-level structural validators
@@ -303,7 +333,10 @@ than hidden.
 
 The sample is 250 cases drawn from three dictionaries of one lineage; the
 asymmetry findings are strong within it but their generality across other
-dictionaries is only partially tested. A scale-stability check reran the same
+dictionaries is only partially tested. The MDF profile is at the mapping-design
+stage (adopted 2026-07-02; serializer queued), so its loss distribution is a
+prediction from the field inventory, not yet a measured lane of the loss corpus —
+wiring it into the pipeline is the standard's next milestone. A scale-stability check reran the same
 pipeline at 500 and 1000 cases in temporary restored workspaces
 ([docs/SCALE_STABILITY.md](SCALE_STABILITY.md)): the central asymmetry still held,
 evidence-loss share stayed about 70%, and extension/lineage coverage remained
@@ -380,7 +413,9 @@ Key artefacts: the loss corpus
 ([data/pilot/loss-analysis.json](../data/pilot/loss-analysis.json)), the SHACL
 profile and ODDs ([data/schema/](../data/schema/)), and the extension proposal
 ([docs/EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md)). The validated-profile summary
-is in [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](VALIDATED_INTEROPERABILITY_PROFILE.md).
+is in [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](VALIDATED_INTEROPERABILITY_PROFILE.md);
+the adopted MDF third-profile mapping is in
+[docs/MDF_EXPORT_MAPPING.md](MDF_EXPORT_MAPPING.md).
 
 ## References
 
@@ -390,10 +425,12 @@ specification.
 
 **Secondary literature**
 
-- McCrae, J., Spohr, D. & Cimiano, P. (2011). Linking Lexical Resources and Ontologies on the Semantic Web with Lemon. In *The Semantic Web: Research and Applications (ESWC 2011)*, LNCS 6643, pp. 245–259. <https://doi.org/10.1007/978-3-642-21034-1_17>
+- McCrae, J., Spohr, D. & Cimiano, P. (2011). Linking Lexical Resources and Ontologies on the Semantic Web with lemon. In *The Semantic Web: Research and Applications (ESWC 2011)*, LNCS 6643, pp. 245–259. <https://doi.org/10.1007/978-3-642-21034-1_17>
 - Chiarcos, C., Apostol, E.-S., Kabashi, B. & Truică, C.-O. (2022). Modelling Frequency, Attestation, and Corpus-Based Information with OntoLex-FrAC. In *Proceedings of COLING 2022*, pp. 4018–4027. <https://aclanthology.org/2022.coling-1.353/>
-- Bowers, J., Herold, A. & Romary, L. TEI Lex-0 Etym: Toward Terse Recommendations for the Encoding of Etymological Information (DARIAH-EU / ELEXIS "Lexical Resources" Working Group). <https://www.researchgate.net/publication/363754091>
-- Steiner, R. (2020). On the character of Monier-Williams' Sanskrit-English Dictionary. *Zeitschrift der Deutschen Morgenländischen Gesellschaft* 170(1), pp. 107–117.
+- Bowers, J., Herold, A., Tasovac, T. & Romary, L. (2022). TEI Lex-0 Etym: Toward Terse Recommendations for the Encoding of Etymological Information. *Journal of the Text Encoding Initiative*, Rolling Issue. <https://journals.openedition.org/jtei/4300>
+- Coward, D. F. & Grimes, C. E. (2000). *Making Dictionaries: A Guide to Lexicography and the Multi-Dictionary Formatter*. Waxhaw, NC: SIL International.
+- Setiawan, D., Khishigsuren, T., Agarwal, M., Pit, P., Mahmudi, A. & Vylomova, E. (2026). MUDIDI: A Two-Stage Framework for Multilingual Dictionary Digitization with Language Models. arXiv:2606.09435.
+- Steiner, R. (2020). "Woher hat er das?" Zum Charakter des Sanskrit-English Dictionary von Monier-Williams. *Zeitschrift der Deutschen Morgenländischen Gesellschaft* 170(1), pp. 107–118. (An English version, "On the character of Monier-Williams' Sanskrit-English Dictionary," is circulated by the author.)
 - Funderburk, J. & Malten, T. (2008). Marking Monier: Current state of the digitized Monier-Williams Dictionary. Cologne Digital Sanskrit Dictionaries. <https://www.sanskrit-lexicon.uni-koeln.de/talkMay2008/markingMonier.html>
 
 **Standards and specifications**
@@ -420,7 +457,7 @@ specification.
 - Böhtlingk, O. & Roth, R. *Sanskrit-Wörterbuch*. St Petersburg, 1855–1875. (PWG)
 - Böhtlingk, O. *Sanskrit-Wörterbuch in kürzerer Fassung*. St Petersburg, 1879–1889. (PWK)
 - Apte, V. S. *The Practical Sanskrit–English Dictionary*. Poona, 1890. (AP90)
-- Grassmann, H. *Wörterbuch zum Rig-Veda*. Leipzig, 1873. (GRA)
+- Grassmann, H. *Wörterbuch zum Rig-Veda*. Leipzig: Brockhaus, 1873–1875. (GRA)
 - Frish Sanskrit Reader (CDSL/Cologne edition, 2015). (FRI)
 - Benfey, T. *Sanskrit-English Dictionary*. London, 1866. (BEN)
 - Whitney, W. D. *The Roots, Verb-Forms and Primary Derivatives of the Sanskrit Language*. Leipzig, 1885. (the root index referenced by `csl:whitneyRoot`)
