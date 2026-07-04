@@ -13,13 +13,15 @@ Each is tied to the loss it addresses — by `failureClassification` cause and
 
 ## Motivation
 
-The 1430 loss reports split by cause into: **model-vocabulary-gap (55%)** — the
+The 1722 loss reports split by cause into: **model-vocabulary-gap (60%)** — the
 target standards lack a concept, chiefly an *evidence class* (kośa vs textual vs
 editorial citation, and unparsed citation coordinates; see
-[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b); **editorial-compression (26%)** — the
-19th-century lineage already dropped evidence; **cdsl-markup-gap (8%)**,
-**print-compression (6%)**, **sanskrit-convention (<1%)**, and a single
-**data-quality** anomaly. Only the model-vocabulary and sanskrit-convention causes
+[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b), plus the flat MDF lane's field gaps;
+**editorial-compression (21%)** — the
+19th-century lineage already dropped evidence; **print-compression (7%)**,
+**cdsl-markup-gap (7%)**, **sanskrit-convention (<1%)**, and a single
+**data-quality** anomaly. (The MDF lane's losses are recorded, not extension
+targets — a flat interchange format is not extended.) Only the model-vocabulary and sanskrit-convention causes
 are addressable by *extending the standards*; the others are upstream
 (source/lineage) and are addressed by *modeling* the lineage, not by new schema. This proposal therefore has two kinds of construct: **target
 extensions** (new TEI/OntoLex vocabulary) and **lineage/provenance constructs**

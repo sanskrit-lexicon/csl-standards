@@ -54,9 +54,9 @@ function arrow(x1, y1, x2, y2) {
     `<polygon points="${x2},${y2} ${ex + px * 5},${ey + py * 5} ${ex - px * 5},${ey - py * 5}" fill="${C.muted}"/>`;
 }
 
-// ── Figure 1: three-view architecture (CDSL → neutral model → TEI/OntoLex) ──
+// ── Figure 1: three-view architecture (CDSL → neutral model → TEI/OntoLex/MDF) ──
 function figureArchitecture() {
-  const W = 760, H = 300;
+  const W = 760, H = 340;
   const box = (x, y, w, h, label, sub, fill = "#edf5fb", stroke = C.barLight) =>
     `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>` +
     `<text x="${x + w / 2}" y="${y + (sub ? 26 : h / 2 + 5)}" font-size="14" font-weight="700" fill="${C.text}" text-anchor="middle">${esc(label)}</text>` +
@@ -66,15 +66,17 @@ function figureArchitecture() {
     `<polygon points="${x2},${y} ${x2 - 9},${y - 5} ${x2 - 9},${y + 5}" fill="${C.muted}"/>`;
   const body = [
     title(24, 34, "Figure 1 — Three-view interoperability architecture"),
-    caption(24, 54, "CDSL source records pass through one neutral model into two complementary standard profiles."),
-    box(24, 90, 150, 80, "CDSL", "MW · PWG · PWK raw"),
-    arrow(174, 250, 130),
-    box(250, 90, 170, 80, "Neutral model", "senses · citations · relations", "#fff7df", "#ebc169"),
+    caption(24, 54, "CDSL source records pass through one neutral model into three parallel standard profiles."),
+    box(24, 120, 150, 80, "CDSL", "MW · PWG · PWK raw"),
+    arrow(174, 250, 160),
+    box(250, 120, 170, 80, "Neutral model", "senses · citations · relations", "#fff7df", "#ebc169"),
     arrow(420, 500, 110),
-    arrow(420, 500, 150),
-    box(500, 60, 236, 64, "TEI", "archival profile + Lex-0 baseline"),
-    box(500, 150, 236, 64, "OntoLex / FrAC", "Lexicog multi-resource graph"),
-    caption(250, 200, "Loss reports record what each mapping cannot carry.")
+    arrow(420, 500, 190),
+    arrow(420, 500, 270),
+    box(500, 78, 236, 64, "TEI", "archival profile + Lex-0 baseline"),
+    box(500, 158, 236, 64, "OntoLex / FrAC", "Lexicog multi-resource graph"),
+    box(500, 238, 236, 64, "MDF", "flat standard-format field records"),
+    caption(250, 250, "Loss reports record what each mapping cannot carry.")
   ].join("\n");
   return svg(W, H, body);
 }

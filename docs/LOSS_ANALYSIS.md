@@ -12,16 +12,24 @@ which reads [`data/pilot/loss-reports.json`](../data/pilot/loss-reports.json) an
 machine artifact [`data/pilot/loss-analysis.json`](../data/pilot/loss-analysis.json).
 Do not hand-edit the tables below — re-run the script.
 
-Corpus: **1430 loss reports** across the 250 Western cases and 6 indigenous *kośa*
-entries. Four families are present:
+Corpus: **1722 loss reports** across the 250 Western cases and 6 indigenous *kośa*
+entries. Five families are present:
 
 Scale robustness is recorded separately in [SCALE_STABILITY.md](SCALE_STABILITY.md):
 500- and 1000-case runs preserve the central asymmetry, evidence-loss dominance, and
 complete extension/lineage coverage while leaving this canonical 250-case corpus
-unchanged.
+unchanged. (The scale check predates the MDF lane and covers the TEI / OntoLex /
+neutral lanes.)
 
-- **Target-model losses** (653): what TEI / OntoLex cannot hold when mapping a
-  CDSL record. Generated per case per target per phenomenon.
+- **Target-model losses** (876): what TEI / OntoLex / MDF cannot hold when mapping
+  a CDSL record. Generated per case per target per phenomenon — the probe set is
+  symmetric, so each target lane carries the same **292** probe reports; OntoLex
+  additionally carries the 470 evidence-class reports below, and TEI the 6 fusion
+  reports. The MDF lane's 292 (all `lossy`; hedge 117, compound-decomposition 75,
+  root-as-derivational-base 60, continuation-parent 40) are deliberately *not*
+  extension targets (`extensionNeeded: false` throughout): a flat interchange
+  format is not extended, so each names its `\nt` model-loss marker in `mappedAs`
+  (e.g. `\bb L. + \nt model-loss marker`) — recorded, not remedied.
 - **Source-collapse losses** (369): named evidence the *dictionary lineage* itself
   drops along PWG → PWK → MW. These are `target: "neutral"` because TEI and
   OntoLex can both hold named citations — the loss is editorial, upstream of any
@@ -50,6 +58,7 @@ a source record carrying an unresolved editorial `[sic]` marker.
 |---|--:|--:|--:|--:|
 | tei | 75 | 217 | 6 | 0 |
 | ontolex | 0 | 662 | 100 | 0 |
+| mdf | 0 | 0 | 292 | 0 |
 | neutral | 0 | 128 | 242 | 0 |
 
 **Target asymmetry (Western cases).** For the 250 MW/PWG/PWK cases the TEI
@@ -62,66 +71,79 @@ reports (6) are *not* Western: they are the indigenous *kośa* sense/citation
 fusion in the Lex-0 baseline (§4a) — a different TEI profile and a different
 lexicographic tradition.
 
-**Source asymmetry.** The `neutral` lane (the dictionary lineage, before any
-model) is the *most* lossy of the three: 242 lossy, 128 partial, 0 clean. Much of
-what looks like "interoperability loss" is in fact loss that already happened in
-the 19th-century editorial chain, recoverable only by reading across PWG, PWK, and
-MW together (see §4).
+**Flat-target asymmetry (MDF).** The MDF lane is never anything *but* `lossy`
+(0 clean, 0 partial, 292 lossy): on every probed phenomenon the flat field
+schema drops the distinction entirely — there is no field to be partially
+adequate *with*. This is by design (lossiness is the finding, not a failure —
+[MDF_EXPORT_MAPPING.md](MDF_EXPORT_MAPPING.md)): the lane measures which CDSL
+distinctions are structurally load-bearing, and every one probed turned out to
+be.
 
-Overall status: 1007 partial (70%), 348 lossy (24%), 75 clean (5%).
+**Source asymmetry.** Among the rich-model lanes the `neutral` lane (the
+dictionary lineage, before any model) is the *most* lossy: 242 lossy, 128
+partial, 0 clean. Much of what looks like "interoperability loss" is in fact
+loss that already happened in the 19th-century editorial chain, recoverable only
+by reading across PWG, PWK, and MW together (see §4).
+
+Overall status: 1007 partial (58%), 640 lossy (37%), 75 clean (4%).
 
 ## 2. Failure classification (by cause)
 
 | failureClassification | n | % |
 |---|--:|--:|
-| model-vocabulary-gap | 782 | 55% |
-| editorial-compression | 369 | 26% |
-| cdsl-markup-gap | 117 | 8% |
-| print-compression | 80 | 6% |
-| none (clean) | 75 | 5% |
+| model-vocabulary-gap | 1034 | 60% |
+| editorial-compression | 369 | 21% |
+| print-compression | 120 | 7% |
+| cdsl-markup-gap | 117 | 7% |
+| none (clean) | 75 | 4% |
 | sanskrit-convention | 6 | <1% |
 | data-quality | 1 | <1% |
 
-The two leading causes tell different stories. **Model-vocabulary-gap (55%)** is
-now the largest: downstream losses where the target standard lacks a concept — a
+The two leading causes tell different stories. **Model-vocabulary-gap (60%)** is
+the largest: downstream losses where the target standard lacks a concept — a
 derivational-base relation, and above all an *evidence class* (the 470
 evidence-class sub-typing reports, §4b, all fall here, alongside the root and
-relation gaps). **Editorial-compression (26%)** is upstream lineage loss — the
-standards could hold the evidence, but MW/PWK already discarded it. Only 8% is a
-CDSL-markup gap and 6% print-layout compression. The qualitatively distinct small
-causes are **sanskrit-convention (<1%, 6 reports)** — losses inherent to a
-lexicographic tradition, not fixable by either better encoding or a generic model
-extension (the *kośa* fusion, §4a) — and a single **data-quality** report (an
-unresolved `[sic]` marker). So the remedy splits three ways: a **standards
-extension layer** for the model-vocabulary gaps (§8), **cross-dictionary lineage
-modeling** for the editorial-compression losses (§7), and a
-**tradition-specific ODD customisation** for the sanskrit-convention losses. The
-369 editorial-compression reports all carry `extensionNeeded: false` (the
-standards are not at fault); the 470 evidence-class and 6 sanskrit-convention
-reports carry `true` (they need a model extension or the kośa Lex-0 customisation).
+relation gaps, and the MDF lane's 252 flat-field gaps). **Editorial-compression
+(21%)** is upstream lineage loss — the standards could hold the evidence, but
+MW/PWK already discarded it. 7% is print-layout compression (which now includes
+the 40 MDF continuation reports — MDF has no continuation concept, so adjacency
+must be resolved before export) and 7% a CDSL-markup gap. The qualitatively
+distinct small causes are **sanskrit-convention (<1%, 6 reports)** — losses
+inherent to a lexicographic tradition, not fixable by either better encoding or a
+generic model extension (the *kośa* fusion, §4a) — and a single **data-quality**
+report (an unresolved `[sic]` marker). So the remedy splits three ways: a
+**standards extension layer** for the TEI/OntoLex model-vocabulary gaps (§8),
+**cross-dictionary lineage modeling** for the editorial-compression losses (§7),
+and a **tradition-specific ODD customisation** for the sanskrit-convention
+losses. The 369 editorial-compression reports carry `extensionNeeded: false`
+(the standards are not at fault), as do all 292 MDF reports (a flat interchange
+format is recorded, not extended); the extension flag concentrates in the
+OntoLex lane (762) and the TEI hedge/fusion reports (123).
 
 ## 3. Where the stress concentrates (phenomenon)
 
 | phenomenon | n | % |
 |---|--:|--:|
-| source-collapse | 369 | 26% |
-| citation-coordinate | 363 | 25% |
-| generic-lexicographer-hedge | 234 | 16% |
-| named-kosha-citation | 91 | 6% |
-| continuation-parent | 80 | 6% |
-| compound-subentry | 75 | 5% |
-| compound-decomposition | 75 | 5% |
-| root-as-entry | 60 | 4% |
-| root-as-derivational-base | 60 | 4% |
+| source-collapse | 369 | 21% |
+| citation-coordinate | 363 | 21% |
+| generic-lexicographer-hedge | 351 | 20% |
+| compound-decomposition | 150 | 9% |
+| root-as-derivational-base | 120 | 7% |
+| continuation-parent | 120 | 7% |
+| named-kosha-citation | 91 | 5% |
+| compound-subentry | 75 | 4% |
+| root-as-entry | 60 | 3% |
 | editorial-reference | 16 | 1% |
 | sense-citation-fusion | 6 | <1% |
 | source-anomaly | 1 | <1% |
 
-`source-collapse` is the single largest phenomenon (26%), ahead of the unparsed
-`citation-coordinate` (25%) and the MW `L.` hedge (16%). The five
-evidence-related phenomena — source-collapse, hedge, coordinate, kośa citation
-and editorial reference — together are **75%** of the corpus: the evidence
-problem, not derivation or compounding, is the centre of gravity (§4, §4b).
+`source-collapse` is the single largest phenomenon (21%), just ahead of the
+unparsed `citation-coordinate` (21%) and the MW `L.` hedge (20% — the hedge's
+weight grew with the MDF lane, which cannot carry it at all: 117 of its 351
+reports are MDF). The five evidence-related phenomena — source-collapse, hedge,
+coordinate, kośa citation and editorial reference — together are **69%** of the
+corpus: the evidence problem, not derivation or compounding, is the centre of
+gravity (§4, §4b).
 
 ## 4. The PWG → PWK → MW lineage, as loss reports (§7)
 
@@ -247,11 +269,12 @@ of the phenomena (the roadmap's "do not hide model failures").
 
 ## 6. Reviewer-trust note
 
-Of the 1430 reports, 96 (the 15 high-stress review-slice keys) are marked
+Of the 1722 reports, 129 (the 15 high-stress review-slice keys) are marked
 `reviewed`; the rest are `machine` (the §4b evidence-class and §4a kośa reports
 are all `machine`). The **target** asymmetry of §1 holds within
-the reviewed slice — TEI is never lossy there (0 of 33) and OntoLex is never
-clean (20 lossy, 13 partial) — so it is not an artefact of unreviewed heuristics.
+the reviewed slice — TEI is never lossy there (0 of 33), OntoLex is never
+clean (20 lossy, 13 partial), and the MDF reports are uniformly lossy (33 of
+33) — so it is not an artefact of unreviewed heuristics.
 (The 6 `tei`-lossy reports in the full corpus are the indigenous *kośa* fusion,
 all `machine`, and fall outside the Western review slice.) The **source**
 asymmetry (the neutral lane being the *most* lossy) is a full-corpus measurement:
