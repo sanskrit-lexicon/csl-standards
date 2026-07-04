@@ -7,7 +7,16 @@
 
 Working title:
 
-**Sanskrit Lexicography Between TEI and OntoLex: Evidence, Derivation, and Compression in MW, PWG, and PWK**
+**A Serialization Standard for the Petersburg-Family Sanskrit Dictionaries: Evidence, Derivation, and Compression across TEI, OntoLex, and MDF**
+
+> Reframed 2026-07-03 (see [A27_review_fable5.md](A27_review_fable5.md)): the
+> headline is the MW+PWG+PWK serialization standard with three export profiles —
+> TEI Lex-0, OntoLex, and MDF (mapping adopted 2026-07-02 and since implemented
+> as a measured lane of the loss corpus); the TEI↔OntoLex loss comparison
+> remains the evaluation core. The skeleton below predates the reframe — the
+> prose draft in [PAPER.md](PAPER.md) is authoritative.
+> Former working title: *Sanskrit Lexicography Between TEI and OntoLex:
+> Evidence, Derivation, and Compression in MW, PWG, and PWK*.
 
 ## Abstract Draft
 

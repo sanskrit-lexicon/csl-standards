@@ -23,9 +23,9 @@ remains last.
 - Public `csl-standards` repository and Observable site.
 - Deterministic MW/PWG/PWK hard-case sampler, canonical 250-case pilot, and 15-case review slice.
 - Dictionary-neutral model with optional-dictionary registry support.
-- Generated archival TEI, TEI Lex-0, OntoLex/FrAC JSON-LD, and RDF/Turtle profiles.
+- Generated archival TEI, TEI Lex-0, OntoLex/FrAC JSON-LD, RDF/Turtle, and MDF profiles.
 - Optional dictionaries AP90, GRA, FRI, and BEN woven through the implemented profiles.
-- Loss corpus and analysis: 1430 reports at the canonical 250-case scale.
+- Loss corpus and analysis: 1722 reports at the canonical 250-case scale (incl. the MDF lane added 03-07-2026).
 - Implemented `csl:` extension layer: evidence classes, cited ranges, root relation,
   decomposition, continuation recovery status, lineage relation, and kośa sense-boundary
   customisation.
