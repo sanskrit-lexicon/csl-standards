@@ -1,5 +1,7 @@
 # csl-standards
 
+_Created: 04-06-2026 · Last updated: 05-07-2026_
+
 Technical standards and export workbench for CDSL dictionary data.
 
 This repository is the home for TEI, OntoLex/Lexicog, RDF, SHACL, and related
@@ -37,6 +39,36 @@ Boundary rules are in [docs/BOUNDARY_RULES.md](docs/BOUNDARY_RULES.md).
 The atlas-side removal and pointer update merged in
 [`csl-atlas` PR #32](https://github.com/sanskrit-lexicon/csl-atlas/pull/32).
 
+## Worked example
+
+From [`docs/DEMO.md`](docs/DEMO.md)'s √ac hard case (six source dictionaries:
+MW, PWG, PWK + optional AP90/GRA/FRI), the actual TEI export at
+[`data/pilot/tei/mw-pwg-pwk-ac.xml`](data/pilot/tei/mw-pwg-pwk-ac.xml) encodes
+the verbal-root relation and a named-source citation with the `csl:`-motivated
+constructs (`whitney-root` pointer, `named-source-citation` subtype) layered
+onto standard TEI elements:
+
+```xml
+<etym xml:id="mw-pwg-pwk-ac-root-relation" type="root">
+  <lbl>verbal root</lbl>
+  <ref type="whitney-root" target="urn:csl:whitney-root:ac,1">ac,1</ref>
+</etym>
+…
+<bibl xml:id="mw-pwg-pwk-ac-cite-pwg-1" type="named-source-citation"
+      subtype="textual" corresp="#mw-pwg-pwk-ac-record-pwg">
+  <abbr>NAIGH. 2,14.</abbr>
+  <citedRange>2,14</citedRange>
+</bibl>
+```
+
+`<etym>`/`<ref target="urn:csl:whitney-root:...">` is standard TEI carrying a
+CDSL-specific URN scheme; `<bibl type="named-source-citation" subtype="textual">`
+is how the `csl:evidenceClass`/`csl:citedWork`/`csl:citedRange` OntoLex
+properties (see [`docs/CSL_VOCABULARY.md`](docs/CSL_VOCABULARY.md)) surface on
+the TEI side of the same record. Reproduce it yourself: `npm run build-pilot`
+regenerates this file from the pipeline; `npm run validate-tei-profile` checks
+it against the archival TEI profile.
+
 ## Key documents
 
 - [docs/DEMO.md](docs/DEMO.md) — guided end-to-end walkthroughs of three contrasting hard cases (the verbal root √ac with 6 source dictionaries; the compound *annavid*; the suppressed-headword continuation *āyana*): raw CDSL records → neutral model → TEI + OntoLex profiles → the loss reports they generate → the `csl:` constructs that answer them. The fastest way to see the whole instrument on real data.
@@ -52,3 +84,5 @@ The atlas-side removal and pointer update merged in
 - [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](docs/VALIDATED_INTEROPERABILITY_PROFILE.md) — 250-case TEI + OntoLex/FrAC validation.
 - [docs/LOSS_ANALYSIS.md](docs/LOSS_ANALYSIS.md) — quantitative analysis of the 1430 loss reports: the TEI-vs-OntoLex target asymmetry, the PWG→PWK→MW source-collapse family (369 lineage losses), the evidence-class sub-typing family (470: kośa/coordinate/editorial citations the flat model can't type, including optional-dictionary evidence), the indigenous *kośa* sense/citation fusion (6), and by-cause breakdown; regenerate with `npm run analyze-loss`.
 - [docs/EXTENSION_PROPOSAL.md](docs/EXTENSION_PROPOSAL.md) — the Sanskrit lexicographic extension layer for TEI + OntoLex (evidence class, root/compound/continuation relations, source-collapse lineage, kośa sense-boundary). Every construct (§1–§5, §4a) is now implemented in the `csl:` namespace and validated in-pipeline (pySHACL + jing), each tied to the loss it answers.
+
+_Dr. Mārcis Gasūns_
