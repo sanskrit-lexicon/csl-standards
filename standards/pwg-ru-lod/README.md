@@ -39,6 +39,10 @@ full model + before/after coverage table in
 - [`shapes.ttl`](shapes.ttl) — the SHACL profile pinning the modelling contract
   (entry has a lemma + label; sense has a grade + definition; citation/attestation/
   relation carry their required provenance fields).
+- [`void.ttl`](void.ttl) — **stub template** for the VoID + DCAT dataset descriptor
+  (title, license, publisher, the two graphs, triple counts). Not live metadata —
+  fill the `<TODO>` counts from a real full-graph build before publishing; see the
+  runbook §5.
 
 These are **schema only** — no dictionary content — so they are safe to publish
 here now. Running them needs the graph data, which is produced by the generator
@@ -46,6 +50,12 @@ in `RussianTranslation` and validated there by
 [`src/lod_acceptance.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/lod_acceptance.py).
 
 ## Publication status — gated, not yet published
+
+The full, ordered runbook for taking this graph from *validated-locally* to real
+published Linked Open Data — every step tagged [HUMAN] / [AGENT] / [HUMAN-DECIDE],
+with a consolidated checklist — is
+[`docs/PUBLISHING_LOD.md`](../../docs/PUBLISHING_LOD.md). The summary below is the
+current status; that doc is what a human works down to publish.
 
 Consistent with this repo's mission ("leave real RDF publication for a later
 phase, after the modeling risks are documented"):

@@ -7,6 +7,17 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 
 ### Added
+- **PWG→RU LOD publishing runbook (H383).** New
+  [`docs/PUBLISHING_LOD.md`](docs/PUBLISHING_LOD.md): the ordered, human-runnable
+  runbook for taking the PWG→RU LOD graph from *validated-locally* to real
+  published Linked Open Data — gates (G5 citable subset, `/publish-safety-check`,
+  license composition), the IRI-domain decision (w3id vs project domain, with a
+  sample conneg `.htaccess`), dereferenceability + content negotiation (static
+  Pages vs dynamic nginx), SPARQL-endpoint options (static dump vs
+  Oxigraph/Fuseki/QLever), VoID/DCAT + LOV, Zenodo DOI via `/data-release`, and
+  lod-cloud.net/LiLa registration — every step tagged [HUMAN]/[AGENT]/[HUMAN-DECIDE]
+  with a consolidated checklist. Doc-only; nothing published. Companion
+  [`standards/pwg-ru-lod/void.ttl`](standards/pwg-ru-lod/void.ttl) VoID stub template.
 - **PWG→RU LOD graph — SPARQL surface + SHACL profile (E7).** New
   [`standards/pwg-ru-lod/`](standards/pwg-ru-lod/): the `csl-standards`-owned
   surface for the Petersburg-Dictionary→Russian LOD graph, per the boundary

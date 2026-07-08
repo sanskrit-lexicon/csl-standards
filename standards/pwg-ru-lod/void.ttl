@@ -1,0 +1,63 @@
+# VoID + DCAT dataset descriptor for the PWG->RU LOD graph (STUB TEMPLATE).
+#
+# This is a template, NOT a published descriptor. Fill the <TODO> slots from a
+# real full-graph build (docs/PUBLISHING_LOD.md section 8) before publishing:
+#   - triple counts / entity counts come from the `all` build, not the fixture;
+#   - the base IRI is whatever the section-2 @DECIDE rules (replace the w3id
+#     placeholder if a different domain is chosen);
+#   - the version DOI comes from the Zenodo deposit (section 6);
+#   - dcterms:license is subject to the section-1c composition check.
+# See docs/PUBLISHING_LOD.md section 5. Do not treat this file as live metadata.
+
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix pwglex:  <https://w3id.org/sanskrit-lexicon/pwg-ru/vocab#> .
+@prefix :        <https://w3id.org/sanskrit-lexicon/pwg-ru/> .
+
+:dataset a void:Dataset , dcat:Dataset ;
+  dcterms:title       "PWG->RU LOD graph — Petersburg Dictionary senses, Russian, OntoLex-Lemon + LiLa lemma bank"@en ;
+  dcterms:description  "Linked-Open-Data graph of the Petersburg Sanskrit Dictionary (Boehtlingk-Roth) with Russian sense definitions, evidence grades (PROV-O), first-class <ls> citations, Renou stratum dating, vartrans sense relations, and a LiLa-style lemma bank joined to DCS corpus frequency."@en ;
+  # NOTE (section 1c): CC BY-SA 4.0 pending the DCS-frequency license-composition check.
+  dcterms:license     <https://creativecommons.org/licenses/by-sa/4.0/> ;
+  dcterms:publisher   [ a foaf:Person ;
+                        foaf:name "Dr. Marcis Gasuns" ;
+                        <http://www.w3.org/2002/07/owl#sameAs> <https://orcid.org/0000-0003-4513-884X> ] ;
+  dcterms:creator     <https://orcid.org/0000-0003-4513-884X> ;
+  # NOTE (section 6): replace with the Zenodo version DOI once minted.
+  dcterms:identifier  "<TODO: Zenodo version DOI>" ;
+  dcterms:hasVersion  "<TODO: release version, e.g. data-v1>" ;
+  dcterms:modified    "<TODO: release date>"^^xsd:date ;
+
+  void:feature        <http://www.w3.org/ns/formats/Turtle> ;
+  void:sparqlEndpoint <TODO: section-4 endpoint URL, omit if static-dump-only> ;
+  void:vocabulary     ontolex: , pwglex: ;
+  void:uriSpace       "https://w3id.org/sanskrit-lexicon/pwg-ru/" ;
+  void:exampleResource :entry/rakz ;
+
+  # ---- the two graphs (the cross-dataset join is on the shared lemma IRI) ----
+  void:subset :lexicalGraph , :dcsFreqGraph ;
+
+  # ---- counts: fill from `python src/export_lod.py all` (section 8) ----
+  void:entities       "<TODO: entity count>"^^xsd:integer ;
+  void:triples        "<TODO: total triple count>"^^xsd:integer ;
+  void:classPartition [ void:class ontolex:LexicalEntry ; void:entities "<TODO>"^^xsd:integer ] ,
+                      [ void:class ontolex:LexicalSense ; void:entities "<TODO>"^^xsd:integer ] ,
+                      [ void:class pwglex:Citation     ; void:entities "<TODO>"^^xsd:integer ] .
+
+:lexicalGraph a void:Dataset ;
+  dcterms:title "PWG->RU lexical graph (entries, senses, citations, strata, relations)"@en ;
+  void:triples  "<TODO>"^^xsd:integer .
+
+:dcsFreqGraph a void:Dataset ;
+  dcterms:title "DCS corpus-frequency graph (pwglex:dcsCount / dcsBand on the shared lemma IRI)"@en ;
+  void:triples  "<TODO>"^^xsd:integer .
+
+# Links to the standards surface in this directory:
+#   - SHACL profile:    shapes.ttl
+#   - acceptance query: sense_citation_dcsfreq.rq
+# and the model doc: RussianTranslation/LOD_GRAPH.md (in gasyoun/SanskritLexicography).
