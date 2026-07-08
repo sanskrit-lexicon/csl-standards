@@ -6,6 +6,23 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Added
+- **PWG→RU LOD graph — SPARQL surface + SHACL profile (E7).** New
+  [`standards/pwg-ru-lod/`](standards/pwg-ru-lod/): the `csl-standards`-owned
+  surface for the Petersburg-Dictionary→Russian LOD graph, per the boundary
+  contract (generator + data stay in
+  [`SanskritLexicography/RussianTranslation`](https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation);
+  the query/validation surface lands here). Schema-only, so publishable now:
+  a federated acceptance query
+  [`sense_citation_dcsfreq.rq`](standards/pwg-ru-lod/sense_citation_dcsfreq.rq)
+  (sense → `<ls>` citation + lemma DCS frequency across the shared LiLa-style
+  lemma IRI) and a SHACL profile [`shapes.ttl`](standards/pwg-ru-lod/shapes.ttl)
+  (OntoLex + `vartrans` + PROV-O evidence grades). Full graph-data publication
+  stays **deferred/gated on G5** (store is 100 % machine-preview) and an IRI
+  publication-domain `@DECIDE`, consistent with the repo's "real RDF publication
+  is a later phase" mission. Model doc:
+  [`standards/pwg-ru-lod/README.md`](standards/pwg-ru-lod/README.md).
+
 ### Changed
 - **Salt Phase 1 deployment checkpoint.** Recorded that the `csl-apidev` Phase 1
   PR stack was applied, but the public Cologne Salt routes are not yet live: the
