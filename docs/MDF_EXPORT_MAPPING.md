@@ -1,6 +1,6 @@
 # MDF Export Mapping (Third Profile)
 
-_Created: 11-06-2026 · Last updated: 11-07-2026_
+_Created: 11-06-2026 · Last updated: 12-07-2026_
 
 Status: **implemented.** The **third export profile** beside the existing
 [TEI archival](INTEROPERABILITY_MODEL.md#tei-mapping) and
@@ -250,6 +250,83 @@ from general MDF/Toolbox knowledge. Three concrete refinements:
   extraction turned out sufficient without waiting on that separate digest
   pass, which still has its own scope (full literature digest into
   `literature/md/Lexicography-Manuals`, rights-check on committing the PDF).
+
+## Real-Consumer Smoke Test — Lexique Pro 3.6 (H722)
+
+MG ruled 11-07-2026 ([SIL MDF ecosystem correlation map](https://github.com/gasyoun/SanskritLexicography/blob/master/papers/SIL_MDF_ECOSYSTEM_CORRELATION.md) §5) that self-validation is not enough: the pilot export must be
+loaded into a real MDF consumer. Executed 11/12-07-2026 by Fable 5 (`claude-fable-5`) under
+[H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md):
+[Lexique Pro 3.6.0.583](https://software.sil.org/lexiquepro/) (SIL freeware), run **portably** — the
+setup exe demands admin elevation, but `innoextract 1.9` unpacks a fully working layout — and driven
+via scripted Win32 automation (pywinauto 0.6.9). Input: all **250** pilot records from
+[`data/pilot/mdf/`](https://github.com/sanskrit-lexicon/csl-standards/tree/main/data/pilot/mdf)
+concatenated into one SFM lexicon file (records blank-line-separated, `\lx`-initial, CRLF,
+UTF-8 **without** BOM per org convention).
+
+**Load verdict: green.** The Configure Lexicon wizard accepted the file with no Toolbox
+`.typ`/`.lng` sidecars ("Do not use any" default), recognised every marker in the pilot
+inventory as standard MDF, pre-checked **English** as the gloss language from `\ge`, and
+auto-derived the language marker letter `e`. Result: status bar `Sanskrit: 250 words` —
+all 250 records parsed, **zero crashes or import errors** — and an English reversal
+finderlist was auto-built purely from `\ge` values (`English: 390 words`), navigable back
+to entries.
+
+Consumer-setup facts a future MDF consumer of these exports must know:
+
+- **Encoding is NOT auto-detected.** The wizard defaults to *Plain text file*; with our
+  BOM-less UTF-8 that setting would mojibake every IAST character. *Unicode UTF-8 file*
+  must be selected manually on the Encoding page. (Keeping the export BOM-less is still
+  right — a BOM is banned org-wide and Toolbox-lineage tools accept declared UTF-8.)
+- `\lc` replaces `\lx` as the display headword when present (em-dash segmentation like
+  `DIra—tA` is preserved verbatim); `\hm` renders as a subscript on the headword and as
+  `(n)` in the entry list.
+- The wizard is non-destructive by design ("Lexique Pro will not make any changes to the
+  database file itself") — safe to hand the raw export to end users.
+
+### Per-marker render outcomes
+
+| Marker | Count in pilot | Outcome | Evidence |
+|---|---|---|---|
+| `\lx` | 250 | ✅ renders | entry list + article header; SLP1 keys display verbatim |
+| `\hm` | 129 | ✅ renders | subscript on headword (`A‑kalpa₁`), `(n)` in list |
+| `\lc` | 83 | ✅ renders | replaces `\lx` as display headword; `DIra—tA` em-dash intact |
+| `\ps` | 170 | ✅ renders | italic line under headword; non-ASCII `cl. 5P,5Ā` correct |
+| `\sn` | 239 | ✅ renders | bold sense numbers, one paragraph per sense (`Ap₁` shows all 12) |
+| `\ge` | 414 | ✅ renders | bulleted gloss per sense; also feeds the reversal index (390 words) |
+| `\cf` | 13 | ✅ renders | teal *See:* hyperlink; resolving targets navigate (`ac`↔`aYc` verified round-trip); dangling targets (10/13 in-pilot) are inert — no crash, no error dialog |
+| `\bb` | 379 | ⚠️ renders-wrong | *Read:* label, but **only one `\bb` per entry displays** — `Ap` carries 12 stacked `\bb` and shows only `AV. ix, 5, 22` |
+| `\lf` + `\le` | 134 + 134 | ⚠️ renders-wrong | *Compound:* label, but **repeated identical `\lf` labels collapse to the last pair** — `DIra—tA` (`\le DIra` + `\le tA`) shows only `tA` |
+| `\nt` | 515 | ✅ renders | every note as its own *Note:* paragraph; literal backslashes in note text display verbatim |
+| `\et` | 3 | ✅ renders | *Etym:* line (`vi` → `dis`) |
+| `\es` | 14 | ❌ ignored | never displayed — `vi` has `\es Lat.` and no trace renders |
+
+### Findings (validator-passed, consumer-degraded)
+
+All three findings pass [`validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
+cleanly — they are display-layer losses in the consumer, surfaced only by this real-consumer test:
+
+1. **Stacked `\bb` collapse.** The exporter emits all source references as consecutive
+   `\bb` lines at the end of the entry; Lexique Pro displays exactly one. The
+   MDF-idiomatic fix is **per-sense `\bb` placement** (each `\bb` inside the `\sn` block
+   it evidences) and/or joining same-sense references into one `\bb` line — a serializer
+   structure change in [`export-mdf.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-mdf.mjs),
+   not a trivial patch, so logged as a review item per the H722 rule rather than
+   hot-fixed. Until then 11/12 of `Ap`'s references are invisible in this consumer
+   (data intact in the file).
+2. **Repeated `\lf`/`\le` pair collapse.** Two `\lf Compound` + `\le` pairs render as a
+   single *Compound:* group holding only the last `\le`. Candidate mitigation: one
+   `\lf Compound` with a joined `\le DIra + tA` value, or distinct `\lf` labels — same
+   review-item routing as (1).
+3. **`\es` is display-dead in Lexique Pro.** Keep emitting it (the field is correct MDF
+   and other consumers read it), but do not rely on it being visible here.
+
+Screenshots (committed under [`docs/img/`](https://github.com/sanskrit-lexicon/csl-standards/tree/main/docs/img)):
+
+![Pilot lexicon loaded — 250 words, alphabet index, reversal tab](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-overview.png)
+
+![Ap₁ — 12 numbered senses, IAST in \ps](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-ap-senses.png)
+
+![DIra—tA₂ — repeated \lf/\le pair collapsed to one value](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-dirata-lf-collapse.png)
 
 ## Open Questions / Review Items
 
