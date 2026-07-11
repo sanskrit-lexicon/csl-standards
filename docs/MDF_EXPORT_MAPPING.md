@@ -66,7 +66,7 @@ Order below follows App. B (see Book-Sourced Refinements) — not alphabetic.
 | `\cf` | cross-reference (untyped — q.v. targets) |
 | `\va` | variant form (reserved, not emitted) |
 | `\et` / `\es` | etymon / etymology source language |
-| `\sd` | semantic domain (reserved, not emitted) |
+| `\sd` | semantic domain (reserved, not emitted — source data now EXISTS: the H742 semdom ↔ Amarakosha crosswalk, [SEMDOM_AK_CROSSWALK_2026.md](https://github.com/gasyoun/SanskritLexicography/blob/master/data/SEMDOM_AK_CROSSWALK_2026.md), kosha manifest id `semdom-amarakosha-crosswalk`; emit only reviewed codes — the candidate table is a shortlist, top-1 17.5%, per [SanskritLexicography FINDINGS §76](https://github.com/gasyoun/SanskritLexicography/blob/master/FINDINGS.md)) |
 | `\bb` | bibliography / source citation |
 | `\nt` | note |
 
