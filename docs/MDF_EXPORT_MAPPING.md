@@ -1,6 +1,6 @@
 # MDF Export Mapping (Third Profile)
 
-_Created: 11-06-2026 · Last updated: 03-07-2026_
+_Created: 11-06-2026 · Last updated: 11-07-2026_
 
 Status: **implemented.** The **third export profile** beside the existing
 [TEI archival](INTEROPERABILITY_MODEL.md#tei-mapping) and
@@ -47,26 +47,27 @@ Three reasons to carry it:
 
 ## Target MDF Field Inventory
 
-The subset of MDF markers this profile emits (national language = the target language,
-e.g. English for MW):
+Order below follows App. B (see Book-Sourced Refinements) — not alphabetic.
 
 | Marker | MDF role |
 |---|---|
 | `\lx` | lexeme / headword |
 | `\hm` | homonym number |
 | `\lc` | citation / lexical-citation form |
-| `\va` | variant form |
+| `\se` | subentry (reserved, not emitted) |
 | `\ps` | part of speech (and gender, for MW) |
 | `\sn` | sense number |
 | `\ge` | gloss (English) |
-| `\de` | definition (national) |
+| `\re` | reversal-index pointer (reserved, not emitted) |
+| `\de` | definition (national; reserved for MW) |
 | `\xv` | example sentence (vernacular) |
 | `\xn` | example translation (national) |
+| `\lf` / `\le` | lexical function / value (typed relation — compound decomposition) |
+| `\cf` | cross-reference (untyped — q.v. targets) |
+| `\va` | variant form (reserved, not emitted) |
 | `\et` / `\es` | etymon / etymology source language |
-| `\cf` | cross-reference |
+| `\sd` | semantic domain (reserved, not emitted) |
 | `\bb` | bibliography / source citation |
-| `\se` | subentry |
-| `\sd` | semantic domain |
 | `\nt` | note |
 
 ## Neutral Model → MDF
@@ -83,8 +84,8 @@ Parallel to the TEI and OntoLex tables in `INTEROPERABILITY_MODEL.md`.
 | `sense` | `\sn` + `\ge`/`\de` | partial | Prose-segmented senses (MW/WIL/VCP/SKD) need inference to number. |
 | `citation` (textual / coordinate / named-kosha) | `\bb` | partial | MDF has no evidence-class field; source string is preserved flat. |
 | `citation` (generic-lexicographer `L.`) | `\bb` + `\nt` | **lossy** | The evidential *hedge* meaning is flattened to a plain reference. |
-| `relation` (cross-reference) | `\cf` | partial | Direction/role not typed in MDF. |
-| `relation` (compound decomposition) | `\se` or `\cf` | lossy | MDF subentry ≠ semantic decomposition. |
+| `relation` (cross-reference, q.v.) | `\cf` | partial | No App. D lexical function cleanly types a generic see-also pointer; stays untyped. |
+| `relation` (compound decomposition) | `\lf Compound` + `\le` | partial | App. D's `Compound` lexical function types each component ("lexicalized compound using headword not easily handled by other lexical functions"); still not an ordered/typed decomposition graph. |
 | `relation` (continuation) | merge into parent record | lossy | MDF has no continuation concept; adjacency must be resolved first. |
 | `relation` (root / derivation) | `\et` / `\nt` | lossy | No MDF root-relation field. |
 | `loss` | `\nt` (model-loss note) | n/a | Reviewed samples only. |
@@ -110,7 +111,7 @@ adequacy band.
 | `<div>` | sense division | `\sn` boundary | clean | |
 | `<srs/>` | sandhi marker inside `<s>` (not a sub-sense) | — (rendering) | n/a | **Resolved** against `csl-orig/v02/mw/mw-meta2.txt`: `<srs/>` is a self-closing marker used *within* `<s>` following a long vowel that is a sandhi — **not** a sub-sense divider. Dropped (no `\sn`). |
 | `<bot>` | plant name (Linnaean) | part of `\ge` | clean | **Resolved** against `mw-meta2.txt`: `<bot>X</bot>` marks a botanical name; it is part of the gloss and flows into `\ge`. |
-| `<ab>` | abbreviation (`q.v.`, `&c.`) | inline; `q.v.` ⇒ `\cf` | partial | "q.v." marks a cross-reference target. |
+| `<ab>` | abbreviation (`q.v.`, `&c.`) | inline; `q.v.` ⇒ `\cf` (untyped); compound component ⇒ `\lf Compound` + `\le` (typed) | partial | "q.v." marks a cross-reference target; a compound's own component words get the typed lexical function instead. |
 | `<ls>` | literary source / `L.` hedge | `\bb` (+`\nt` for `L.`) | **lossy** | See stress point below. |
 | `<etym>` | etymology | `\et` | partial | |
 | `<lang>` / `<gk>` | source language / Greek inline | `\es` / `\et` | partial | |
@@ -176,6 +177,80 @@ Candidate MDF:
 \nt model-loss: <ls> source flattened to \bb; evidence-kind not represented
 ```
 
+A compound-decomposition record (real pilot output, `mw-pwg-pwk-nigfhya`):
+
+```
+\lx nigfhya
+\hm 1
+\lc ni-gfhya
+\ps mfn.
+\ge to be held back etc
+\lf Compound
+\le ni
+\lf Compound
+\le gfhya
+\nt meta: profile=mdf-export-profile-v0.1; scope=full-mdf-marker-profile; review=full-machine-review; entry-type=compound; src=MW L=108119 pc=546,1
+```
+
+## Book-Sourced Refinements (11-07-2026, H721)
+
+Read directly from Coward & Grimes 2000 App. B ("Relative order of fields in an
+entry") and App. D ("Alphabetized starter list of lexical functions") via
+`pypdf` text extraction of the local `MDF_2000.pdf` — not guessed or inferred
+from general MDF/Toolbox knowledge. Three concrete refinements:
+
+- ✅ **Field order is now validated against the book's actual App. B table, not
+  a plausible-looking guess.** The true relative order, filtered to this
+  profile's markers, is `\lx \hm \lc \se \ps \sn \ge \re \de \xv \xn \lf \le \cf
+  \va \et \es \sd \bb \nt` — notably **`\lf`/`\cf` (relations) precede `\et`/`\es`
+  (etymology)**, the reverse of a naive alphabetic-ish first guess. (An earlier
+  draft of this refinement had `\et`/`\es` before `\cf`, `\re` after `\de`
+  instead of between `\ge` and `\de`, and `\va` right after `\lc`; all three
+  were corrected against the book text before this landed.)
+  [`data/schema/mdf-export-profile.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/mdf-export-profile.json)
+  carries the corrected `fieldOrder` array, and
+  [`scripts/validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
+  checks every exported record's marker sequence against it (`\sn`/`\ge` and
+  `\lf`/`\le` each share one order key since they legitimately alternate across
+  repeats — a multi-sense record's `\sn`/`\ge` pairs, a multi-component
+  compound's `\lf`/`\le` pairs; any other marker repeating in a run, e.g.
+  multiple `\cf`/`\bb`, is a same-key repeat — a record is only flagged when a
+  field's key is strictly less than the highest key already seen).
+  `scripts/export-mdf.mjs` was fixed to emit `\lf`/`\le` before `\cf`
+  accordingly.
+- ✅ **`\ge` vs `\re` vs `\de` semantics settled**, and now correctly positioned
+  per App. B (`\re` sits directly after `\ge`, before `\de`/`\we` — not after
+  `\de` as an earlier draft had it). `\ge` is the interlinear/secondary gloss
+  (App. B: "supplanted by a `\de`" — the two are mutually exclusive alternates
+  at the same slot); `\de` is the primary prose definition in the dictionary's
+  own national/target language; `\re` is a curated reversal-index pointer,
+  never mined from body text. For MW, English is the national language, so MW
+  glosses go to `\ge` and `\de`/`\re` stay reserved. The deferred item this
+  settles is *which* field a future Sanskrit–Sanskrit kosha (SKD/VCP) profile
+  should target: `\de` (Sanskrit is *their* national language, not a secondary
+  gloss), never `\ge`. `\re` stays reserved regardless — reversal entries are
+  policy-gated on a curated pass over `\ge`/`\de` fields, corroborated by the
+  SIL correlation doc's finding that SIL builds reversals from curated gloss
+  fields only, never mined (matching the csl-atlas body/reverse
+  headword-mining rejection at 38.6% precision).
+- ✅ **`\lf` (lexical functions) implemented for compound decomposition, from
+  the book's actual App. D vocabulary — not fabricated.** App. D's `Compound`
+  function ("Lexicalized compound using headword not easily handled by other
+  lexical functions") is a direct, book-sourced fit: `export-mdf.mjs` now
+  emits `\lf Compound` + `\le <component>` per component, upgrading
+  compound-decomposition from `lossy` (flattened to untyped `\cf`) to
+  `partial` (typed, still not an ordered/typed decomposition graph — no
+  component role, position, or boundary type). q.v. cross-references stay
+  plain `\cf`: no App. D function (Syn, Ant, Gen, Spec, Part, Whole, Cpart,
+  Sim, ParS/ParD, …) cleanly types a generic "see also" pointer, and MDF's own
+  `\cf` ("See:") is already the correct book-sanctioned home for that — typing
+  it as, say, `Syn` would be a false precision claim the source text doesn't
+  support. This lands the item an earlier draft of this refinement had
+  deferred to H723/H724 pending a "digested" App. D list — the direct text
+  extraction turned out sufficient without waiting on that separate digest
+  pass, which still has its own scope (full literature digest into
+  `literature/md/Lexicography-Manuals`, rights-check on committing the PDF).
+
 ## Open Questions / Review Items
 
 - ✅ **Resolved.** `<srs>`/`<bot>` roles confirmed against `csl-orig/v02/mw/mw-meta2.txt`:
@@ -186,11 +261,15 @@ Candidate MDF:
   duplicates `<k1>` it is treated as index metadata and dropped. `\va` is reserved for
   true variant spellings (not emitted by the MW-only first pass).
 - ✅ **Resolved (for MW).** MW's national language is English, so glosses go to `\ge`.
-  The `\gn`/`\de` choice for the Sanskrit–Sanskrit koshas (SKD/VCP) is deferred to when
-  the profile is extended beyond MW — the marker inventory reserves `\de` for it.
+  The `\ge`/`\de`/`\re` choice for the Sanskrit–Sanskrit koshas (SKD/VCP) is now
+  settled in favour of `\de` (see Book-Sourced Refinements above) for when the
+  profile is extended beyond MW.
 - ✅ **Resolved.** A per-record `\nt meta:` line carries the CDSL `<L>` id and `<pc>`
   coordinate (plus profile version, scope, review status, entry type) for round-trip
   traceability.
+- ✅ **Resolved.** `\lf` typed lexical functions for compound decomposition —
+  see Book-Sourced Refinements above. q.v. cross-references remain untyped
+  `\cf` (no App. D function fits a generic see-also pointer).
 
 ## Next Steps
 
@@ -199,15 +278,28 @@ Candidate MDF:
    serializer over the neutral model, mirroring `export-tei.mjs` / `export-ontolex.mjs`
    (one CDSL record → one `.mdf` record in `data/pilot/mdf/`).
 2. ✅ **Done.** An `\nt model-loss:` marker is emitted for every `lossy` adequacy row
-   (hedge, root, compound, continuation), and
+   (hedge, root, continuation — compound decomposition is `partial` now, see below),
+   and
    [`scripts/validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
-   checks structure, marker inventory, and the presence of each model-loss marker
-   (250/250 records pass, 281 model-loss markers).
+   checks structure, marker inventory, field order, and the presence of each
+   model-loss marker.
 3. ✅ **Done.** The full hard sample runs through MDF and the loss corpus carries an
-   `mdf` target alongside `tei`/`ontolex`/`neutral`, so adequacy is comparable
-   case-by-case (`npm run analyze-loss`; MDF is `lossy` across the board — the flat
-   field schema is intentionally the poorest of the three views).
-4. **Remaining.** Cross-check a Sanskrit MDF sample against the MUDIDI MDF conventions,
+   `mdf` target alongside `tei`/`ontolex`/`lift`/`neutral`, so adequacy is comparable
+   case-by-case (`npm run analyze-loss`: 217 `lossy` + 75 `partial`, down from
+   292 `lossy`/0 `partial` before the `\lf Compound` refinement — MDF/LIFT are still
+   the poorest two of the four views, but no longer uniformly `lossy`).
+4. ✅ **Done (11-07-2026, H721).** Field order validated against the book's actual
+   App. B table (not a guess); `\ge`/`\de`/`\re` semantics settled and correctly
+   positioned; `\lf Compound` implemented from App. D for compound decomposition
+   (`lossy`→`partial`); a fourth serialization ([LIFT](LIFT_EXPORT_MAPPING.md)) added
+   beside MDF for consumption by living SIL tools, with the same field-order and
+   `\lf`→`<relation type="Compound">` refinements carried over.
+5. **Remaining.** Cross-check a Sanskrit MDF sample against the MUDIDI MDF conventions,
    since MUDIDI's parsing subset omits Sanskrit — this is the gap CDSL data can fill.
+6. **Remaining.** Type `\lf` beyond `Compound` (e.g. a genuine `Syn`/`Ant` case, if
+   one is ever identified in the neutral model — none of the current phenomena
+   warrant it) and digest the rest of App. D into
+   `literature/md/Lexicography-Manuals` (H723/H724), independent of this pass's
+   direct-extraction fix.
 
 _Dr. Mārcis Gasūns_

@@ -114,9 +114,11 @@ function fullRawMw(model, index) {
   return index.get(L) || model.records?.mw?.raw || "";
 }
 
-// Serialize one neutral-model case to an MDF record. Field order follows the MDF
-// marker hierarchy (\lx \hm \lc \ps \sn \ge \et \es \cf \bb \nt); all notes are
-// grouped at the record end, model-loss markers distinguished by their prefix.
+// Serialize one neutral-model case to an MDF record. Field order follows Coward
+// & Grimes 2000 App. B's relative order, filtered to the markers this profile
+// emits: \lx \hm \lc \ps \sn \ge \lf \le \cf \et \es \bb \nt (\cf/\lf precede
+// \et/\es in App. B — verified against the book, not a naive alphabetic guess).
+// All notes are grouped at the record end, model-loss markers by their prefix.
 function mdfRecord(model, rawMw, isReviewCase) {
   const lines = [];
   const notes = [];          // sense/meta notes
@@ -148,21 +150,31 @@ function mdfRecord(model, rawMw, isReviewCase) {
     lines.push(`\\ge ${oneLine(senses[0].def)}`);
   }
 
+  // Relations. q.v. targets have no App. D lexical-function type that fits a
+  // generic "see also" pointer, so they stay plain \cf (MDF's own "See:" field,
+  // App. B). Compound components DO have a direct App. D fit — \lf Compound
+  // ("lexicalized compound using headword not easily handled by other lexical
+  // functions") + \le <component> — which upgrades compound-decomposition from
+  // lossy (flattened to untyped \cf) to partial (typed, still not a full
+  // ordered decomposition graph). \lf/\le precede \cf in App. B — emit in that
+  // order, not the mapping doc's narrative order (cross-refs discussed first).
+  const crossRefs = qvCrossReferences(rawMw);
+  const decomp = model.relations?.find(rel => rel.type === "lexical-decomposition");
+  const components = decomp?.components || [];
+  const seenComponents = new Set();
+  for (const component of components) {
+    const c = oneLine(component);
+    if (!c || seenComponents.has(c) || crossRefs.includes(c)) continue;
+    seenComponents.add(c);
+    lines.push(`\\lf Compound`);
+    lines.push(`\\le ${c}`);
+  }
+  for (const ref of crossRefs) lines.push(`\\cf ${ref}`);
+
   const et = etymology(rawMw);
   if (et) lines.push(`\\et ${et}`);
   const es = sourceLanguage(rawMw);
   if (es) lines.push(`\\es ${es}`);
-
-  // Cross-references: q.v. targets, then compound components (mapping doc:
-  // compound decomposition flattens to \cf, MDF \se ≠ semantic decomposition).
-  const crossRefs = qvCrossReferences(rawMw);
-  const decomp = model.relations?.find(rel => rel.type === "lexical-decomposition");
-  const components = decomp?.components || [];
-  for (const ref of crossRefs) lines.push(`\\cf ${ref}`);
-  for (const component of components) {
-    const c = oneLine(component);
-    if (c && !crossRefs.includes(c)) lines.push(`\\cf ${c}`);
-  }
 
   // Bibliography / source citations — MW witnesses only, deduplicated. The
   // generic-lexicographer hedge (L.) is preserved as \bb L. and flagged lossy.
@@ -186,9 +198,9 @@ function mdfRecord(model, rawMw, isReviewCase) {
     const whitney = model.relations?.find(rel => rel.type === "whitney-root-association")?.target;
     lossNotes.push(`\\nt model-loss: root/derivation relation${whitney ? ` (Whitney root ${whitney})` : ""} has no MDF field`);
   }
-  if (model.phenomena?.includes("compound") && components.length) {
-    lossNotes.push("\\nt model-loss: compound decomposition flattened to \\cf; MDF \\se subentry is not a semantic decomposition");
-  }
+  // Compound decomposition is no longer lossy (typed via \lf Compound above),
+  // so it gets no model-loss note here — matching the convention that only
+  // lossy-adequacy phenomena carry one.
   if (model.phenomena?.includes("continuation")) {
     const eCode = model.relations?.find(rel => rel.type === "adjacency-continuation-parent")?.eCode || "unknown";
     lossNotes.push(`\\nt model-loss: continuation record; headword recovered from MW adjacency (e=${eCode}), not printed`);

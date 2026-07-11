@@ -1,0 +1,472 @@
+{
+  "@context": {
+    "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
+    "lexicog": "http://www.w3.org/ns/lemon/lexicog#",
+    "decomp": "http://www.w3.org/ns/lemon/decomp#",
+    "frac": "http://www.w3.org/ns/lemon/frac#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "csl": "https://sanskrit-lexicon.github.io/csl-standards/ns#"
+  },
+  "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita",
+  "@graph": [
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita",
+      "@type": [
+        "ontolex:LexicalEntry"
+      ],
+      "ontolex:canonicalForm": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#form-canonical"
+      },
+      "ontolex:sense": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-mw-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwg-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwk-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-ap90-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-ap90-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-fri-1"
+        }
+      ],
+      "frac:attestation": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-2"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-3"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-4"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-5"
+        }
+      ],
+      "csl:sourceRecord": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-mw"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwg"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwk"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-ap90"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-fri"
+        }
+      ],
+      "csl:caseId": "mw-pwg-pwk:nirmita",
+      "csl:key": "nirmita",
+      "csl:entryType": "compound",
+      "csl:phenomenon": [
+        "compound",
+        "tri-dict",
+        "pwg-rich",
+        "pwk-abridged",
+        "mw-uncited-pwg-cited",
+        "homophone"
+      ],
+      "csl:profileVersion": "ontolex-frac-profile-v0.1",
+      "csl:reviewStatus": "full-machine-review",
+      "csl:validationScope": "full-ontolex-shacl-profile"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#form-canonical",
+      "@type": "ontolex:Form",
+      "ontolex:writtenRep": {
+        "@value": "nirmita",
+        "@language": "sa-Latn-x-SLP1"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#resource-mw",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-mw"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#resource-pwg",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-pwg"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#resource-pwk",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-pwk"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#resource-ap90",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-ap90"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#resource-fri",
+      "@type": "lexicog:LexicographicResource",
+      "dct:source": "Frish Sanskrit Reader (Cologne 2015)",
+      "csl:dictionary": "fri",
+      "lexicog:entry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-fri"
+      }
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-mw",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-mw-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-pwg",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwg-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-pwk",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwk-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-ap90",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-ap90-1"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-ap90-2"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lexentry-fri",
+      "@type": "lexicog:Entry",
+      "lexicog:describes": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "lexicog:component": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-fri-1"
+        }
+      ]
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-mw-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "skos:definition": {
+        "@value": "See 1. nir-mA",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "mw",
+      "csl:senseKind": "cross-reference"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwg-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "skos:definition": {
+        "@value": "die Umgewandelten",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwg"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwk-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "skos:definition": {
+        "@value": "eine best. Klasse von Göttern",
+        "@language": "de"
+      },
+      "csl:sourceDictionary": "pwk"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-ap90-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "skos:definition": {
+        "@value": "Constructed, built, formed, prepared, made",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-ap90-2",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "skos:definition": {
+        "@value": "Artificial",
+        "@language": "en"
+      },
+      "csl:sourceDictionary": "ap90"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-fri-1",
+      "@type": "ontolex:LexicalSense",
+      "ontolex:isSenseOf": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "skos:definition": [
+        {
+          "@value": "constructed, built, made, created",
+          "@language": "en"
+        },
+        {
+          "@value": "поставленный, построенный, сделанный, сотворенный, созданный",
+          "@language": "ru"
+        },
+        {
+          "@value": "postavený, zbudovaný, udělaný, stvořený",
+          "@language": "cs"
+        }
+      ],
+      "csl:sourceDictionary": "fri"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-mw",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Monier-Williams 1899",
+      "csl:dictionary": "mw",
+      "csl:recordNumber": "109794",
+      "csl:lineNumber": 368481,
+      "csl:pageColumn": "556,2",
+      "rdf:value": "<L>109794<pc>556,2<k1>nirmita<k2>nir-mita<e>3\n<s>nir-˚mita</s> ¦ See <hom>1.</hom> <s>nir-mA</s>.<info hui=\"b\"/>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwg",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk-Roth PWG",
+      "csl:dictionary": "pwg",
+      "csl:recordNumber": "39579",
+      "csl:lineNumber": 198301,
+      "csl:pageColumn": "4-0202",
+      "rdf:value": "<L>39579<pc>4-0202<k1>nirmita<k2>nirmita\n{#nirmita#}¦ 1〉 <ab>partic.</ab> <ab>s. u.</ab> {#mA#} mit {#nis#}.\n<div n=\"1\">— 2〉 <lex>m.</lex> bei den Buddhisten <ab>Bez.</ab> einer Klasse von Göttern ({%die Umgewandelten%}) <ls>LALIT. 203</ls>. <ls n=\"LALIT.\">205</ls>. <ls n=\"LALIT.\">209</ls>. <ls n=\"LALIT.\">230</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwk",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Boehtlingk PWK",
+      "csl:dictionary": "pwk",
+      "csl:recordNumber": "59485",
+      "csl:lineNumber": 244488,
+      "csl:pageColumn": "3-217-c",
+      "rdf:value": "<L>59485<pc>3-217-c<k1>nirmita<k2>nirmita\n{#nirmita#}¦\n<div n=\"1\">— 1〉 <lex>Adj.</lex> <ab>s. u.</ab> <hom>3.</hom> {#mA#} mit {#nis#}.\n<div n=\"1\">— 2〉 <lex>m.</lex> <ab>Pl.</ab> {%eine <ab>best.</ab> Klasse von Göttern%} <ls>LALIT. 260,3. 263,6. 268,6. 299,9</ls>.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-ap90",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Apte 1890",
+      "csl:dictionary": "ap90",
+      "csl:recordNumber": "16996",
+      "csl:lineNumber": 147129,
+      "csl:pageColumn": "0634-a",
+      "rdf:value": "<L>16996<pc>0634-a<k1>nirmita<k2>nirmita\n{#nirmita#}¦ {%<ab>p. p.</ab>%} {@1@} Constructed, built,\nformed, prepared, made &c. {@--2@} Artificial.\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-fri",
+      "@type": "csl:SourceRecord",
+      "dct:source": "Frish Sanskrit Reader (Cologne 2015)",
+      "csl:dictionary": "fri",
+      "csl:recordNumber": "3629",
+      "csl:lineNumber": 21052,
+      "csl:pageColumn": "153",
+      "rdf:value": "<L>3629<pc>153<k1>nirmita<k2>nirmita\nnirmita (pp. ≺ mā) \n<div n=\"1\"/>1 <lang n=\"czech\">postavený, zbudovaný, udělaný, stvořený</lang>\n<div n=\"1\"/>2 <lang n=\"russian\">поставленный, построенный, сделанный, сотворенный, созданный</lang>\n<div n=\"1\"/>3 <lang n=\"english\">constructed, built, made, created</lang>\n<LEND>"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-1",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwg-1"
+      },
+      "frac:evidence": "LALIT. 203",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-2",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwg-1"
+      },
+      "frac:evidence": "205",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:inheritedSiglum": "LALIT."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-3",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwg-1"
+      },
+      "frac:evidence": "209",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:inheritedSiglum": "LALIT."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-4",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwg-1"
+      },
+      "frac:evidence": "230",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwg"
+      },
+      "csl:sourceDictionary": "pwg",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:inheritedSiglum": "LALIT."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#attestation-5",
+      "@type": "frac:Attestation",
+      "frac:attests": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#sense-pwk-1"
+      },
+      "frac:evidence": "LALIT. 260,3. 263,6. 268,6. 299,9",
+      "prov:wasDerivedFrom": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#record-pwk"
+      },
+      "csl:sourceDictionary": "pwk",
+      "csl:evidenceType": "named-source-citation",
+      "csl:evidenceClass": "textual",
+      "csl:citedWork": "LALIT.",
+      "csl:citedRange": "260,3.263,6.268,6.299,9"
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#decomposition",
+      "@type": "decomp:ComponentList",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "decomp:constituent": [
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#component-1",
+          "@type": "decomp:Component",
+          "ontolex:correspondsTo": {
+            "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/lexeme/nir"
+          },
+          "rdfs:label": "nir"
+        },
+        {
+          "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#component-2",
+          "@type": "decomp:Component",
+          "ontolex:correspondsTo": {
+            "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/lexeme/mita"
+          },
+          "rdfs:label": "mita"
+        }
+      ],
+      "csl:modelingNote": "Machine segmentation exported for review."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lineage-pwk",
+      "@type": "csl:LineageRelation",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "csl:lineageFrom": "pwg",
+      "csl:lineageTo": "pwk",
+      "csl:transition": "abridgement",
+      "csl:sourceCitationCount": 4,
+      "csl:retainedCitationCount": 1,
+      "csl:droppedCitationCount": 3,
+      "csl:modelingNote": "PWK abridges PWG's named apparatus; dropped citations are upstream editorial loss, not a model gap."
+    },
+    {
+      "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita#lineage-mw",
+      "@type": "csl:LineageRelation",
+      "csl:relatesEntry": {
+        "@id": "https://sanskrit-lexicon.github.io/csl-standards/id/case/mw-pwg-pwk%3Anirmita"
+      },
+      "csl:lineageFrom": "pwg",
+      "csl:lineageTo": "mw",
+      "csl:transition": "recomposition",
+      "csl:sourceCitationCount": 4,
+      "csl:retainedCitationCount": 0,
+      "csl:droppedCitationCount": 4,
+      "csl:modelingNote": "MW recomposes the Petersburg dictionaries in English, collapsing named sources to the L. hedge or dropping them."
+    }
+  ]
+}
