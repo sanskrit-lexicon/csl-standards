@@ -74,6 +74,23 @@ async function main() {
           extensionNeeded: false,
           reviewStatus
         });
+
+        // LIFT (fourth, XML) adequacy: same flattening as MDF — LIFT core has no
+        // evidence-kind field either, only a plain source note.
+        reports.push({
+          caseId: model.id,
+          target: "lift",
+          status: "lossy",
+          phenomenon: "generic-lexicographer-hedge",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "MW L. evidence preservation",
+          mappedAs: "<note type=\"source\">L.</note> + <note type=\"model-loss\">",
+          loss: "LIFT core has no evidence-kind field; the generic-lexicographer hedge is flattened to a plain source note, same as MDF's \\bb.",
+          failureClassification: "model-vocabulary-gap",
+          extensionNeeded: false,
+          reviewStatus
+        });
       } else if (p === "root") {
         reports.push({
           caseId: model.id,
@@ -116,6 +133,20 @@ async function main() {
           extensionNeeded: false,
           reviewStatus
         });
+        reports.push({
+          caseId: model.id,
+          target: "lift",
+          status: "lossy",
+          phenomenon: "root-as-derivational-base",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "Root modeling",
+          mappedAs: "<etymology> / <note type=\"model-loss\">",
+          loss: "LIFT's <etymology> element holds the root string but not a typed derivational-base relation; the role survives only as a model-loss note, same as MDF.",
+          failureClassification: "model-vocabulary-gap",
+          extensionNeeded: false,
+          reviewStatus
+        });
       } else if (p === "compound") {
         reports.push({
           caseId: model.id,
@@ -146,13 +177,27 @@ async function main() {
         reports.push({
           caseId: model.id,
           target: "mdf",
-          status: "lossy",
+          status: "partial",
           phenomenon: "compound-decomposition",
           sourceDictionary: "mw",
           sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
           claim: "Compound modeling",
-          mappedAs: "\\cf components + \\nt model-loss marker",
-          loss: "MDF \\se subentry is not a semantic decomposition; components are flattened to \\cf cross-references.",
+          mappedAs: "\\lf Compound + \\le <component> (App. D lexical function)",
+          loss: "App. D's Compound lexical function types each component as part of a lexicalized compound, upgrading this from the untyped-\\cf flattening — but it is still not an ordered/typed decomposition graph (no component role, position, or boundary type).",
+          failureClassification: "model-vocabulary-gap",
+          extensionNeeded: false,
+          reviewStatus
+        });
+        reports.push({
+          caseId: model.id,
+          target: "lift",
+          status: "partial",
+          phenomenon: "compound-decomposition",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "Compound modeling",
+          mappedAs: "<relation type=\"Compound\"> components (LIFT twin of MDF's \\lf Compound)",
+          loss: "Same App. D-sourced typing as MDF's \\lf Compound, expressed as a typed <relation>; still not an ordered/typed decomposition graph.",
           failureClassification: "model-vocabulary-gap",
           extensionNeeded: false,
           reviewStatus
@@ -196,6 +241,20 @@ async function main() {
           claim: "Continuation modeling",
           mappedAs: "single record + \\nt model-loss marker",
           loss: "MDF has no continuation concept; the suppressed headword must be resolved from adjacency before a single flat record can be emitted.",
+          failureClassification: "print-compression",
+          extensionNeeded: false,
+          reviewStatus
+        });
+        reports.push({
+          caseId: model.id,
+          target: "lift",
+          status: "lossy",
+          phenomenon: "continuation-parent",
+          sourceDictionary: "mw",
+          sourcePointer: { L: model.records.mw.L, line: model.records.mw.line },
+          claim: "Continuation modeling",
+          mappedAs: "single entry + <note type=\"model-loss\">",
+          loss: "LIFT has no continuation concept either; the suppressed headword must be resolved from adjacency before a single <entry> can be emitted, same as MDF.",
           failureClassification: "print-compression",
           extensionNeeded: false,
           reviewStatus

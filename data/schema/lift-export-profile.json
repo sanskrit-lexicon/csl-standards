@@ -1,0 +1,42 @@
+{
+  "profile": "lift-export-profile-v0.1",
+  "validationScope": "full-lift-entry-profile",
+  "description": "LIFT (Lexicon Interchange FormaT, sillsdev/lift-standard) profile for the CDSL fourth export view. XML entry/sense/relation/etymology/note structure over the neutral model, MW-focused (same scope as the MDF third view). Implements docs/LIFT_EXPORT_MAPPING.md; every lossy adequacy call is surfaced as a <note type=\"model-loss\"> element.",
+  "liftVersion": "0.13",
+  "nationalLanguage": "en",
+  "vernacularLang": "sa-Latn-x-slp1",
+  "rootElement": "lift",
+  "entryElement": "entry",
+  "modelLossNoteType": "model-loss",
+  "elements": [
+    "lift",
+    "entry",
+    "lexical-unit",
+    "variant",
+    "trait",
+    "sense",
+    "grammatical-info",
+    "gloss",
+    "definition",
+    "relation",
+    "etymology",
+    "note",
+    "form",
+    "text"
+  ],
+  "elementRoles": {
+    "lift": "document root; one <entry> per fragment file in this per-case pass (see LIFT_EXPORT_MAPPING.md stress points on merging into one lexicon)",
+    "entry": "one lexeme record; id = safe case id, order = MW homonym number when present",
+    "lexical-unit": "headword (SLP1, MDF \\lx analogue)",
+    "variant": "segmented/sort form carrying a morpheme boundary (MDF \\lc analogue); trait variant-type=segmented-citation-form",
+    "sense": "one sense; order attribute present only on multi-sense entries (inferred numbering, never claimed observed)",
+    "grammatical-info": "part of speech with gender folded in (MDF \\ps analogue)",
+    "gloss": "English gloss, lang=en (MDF \\ge analogue)",
+    "relation type=cf": "cross-reference: q.v. targets and flattened compound components (MDF \\cf analogue)",
+    "etymology": "etymon text + source attribute (MDF \\et/\\es analogue)",
+    "note type=source": "bibliography / source citation, hedge kept as literal 'L.' (MDF \\bb analogue)",
+    "note type=model-loss": "a lossy adequacy call made visible (hedge, root, compound, continuation)",
+    "note type=meta": "per-entry provenance: profile version, scope, review status, entry type, MW source pointer",
+    "note type=sense-numbering": "declares inferred (prose) sense numbering on multi-sense entries"
+  }
+}
