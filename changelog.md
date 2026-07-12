@@ -6,6 +6,19 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-07-12
+
+### Added
+- **Lexique Pro real-consumer smoke test of the MDF pilot export (H722).** All 250
+  pilot records loaded into Lexique Pro 3.6 (SIL's offline MDF consumer), zero
+  crashes; new "Real-Consumer Smoke Test" section in
+  [`docs/MDF_EXPORT_MAPPING.md`](docs/MDF_EXPORT_MAPPING.md) with a per-marker
+  render-outcome table (13 markers), three screenshots, and consumer-setup
+  instructions (UTF-8 is not auto-detected). Three validator-green,
+  consumer-degraded findings logged as exporter review items: stacked `\bb`
+  collapse, repeated `\lf`/`\le` pair collapse, `\es` display-dead. (PR #109)
+
+
 ### Added
 - **PWG→RU LOD publishing runbook (H383).** New
   [`docs/PUBLISHING_LOD.md`](docs/PUBLISHING_LOD.md): the ordered, human-runnable
