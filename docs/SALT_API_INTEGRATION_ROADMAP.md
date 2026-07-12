@@ -1,5 +1,7 @@
 # Salt API Integration Roadmap — sanskrit-lexicon.uni-koeln.de
 
+_Created: 11-06-2026 · Last updated: 20-06-2026_
+
 Date: 2026-06-20
 Status: **Phase 0 complete; Phase 1 implementation moved to `csl-apidev`.** C-SALT MW contract verified live on
 2026-06-11 (REST OpenAPI + GraphQL introspection against
@@ -513,3 +515,5 @@ comparison and emits Markdown or JSON parity tables.
 *End of roadmap. The verified contract is now packaged as Phase 0 normative artifacts
 (`SALT_API_PROFILE.md` + RU, `salt-api.openapi.yaml`, `salt-api.graphql`,
 `SALT_API_LOSS_REPORT.md`) and is feeding the `csl-apidev` Phase 1 work.*
+
+_Dr. Mārcis Gasūns_

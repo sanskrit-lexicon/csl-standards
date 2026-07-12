@@ -1,5 +1,7 @@
 # Roadmap
 
+_Created: 04-06-2026 · Last updated: 04-07-2026_
+
 Status date: 2026-06-20.
 
 The original three-month scaffold is complete. The repository now has a reproducible
@@ -121,3 +123,5 @@ Exit condition:
 
 > A paper draft that can be sent to an external reader or venue without relying on repository
 > history as explanation.
+
+_Dr. Mārcis Gasūns_
