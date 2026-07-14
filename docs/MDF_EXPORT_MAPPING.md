@@ -255,7 +255,7 @@ from general MDF/Toolbox knowledge. Three concrete refinements:
 
 MG ruled 11-07-2026 ([SIL MDF ecosystem correlation map](https://github.com/gasyoun/SanskritLexicography/blob/master/papers/SIL_MDF_ECOSYSTEM_CORRELATION.md) §5) that self-validation is not enough: the pilot export must be
 loaded into a real MDF consumer. Executed 11/12-07-2026 by Fable 5 (`claude-fable-5`) under
-[H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md):
+[H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md):
 [Lexique Pro 3.6.0.583](https://software.sil.org/lexiquepro/) (SIL freeware), run **portably** — the
 setup exe demands admin elevation, but `innoextract 1.9` unpacks a fully working layout — and driven
 via scripted Win32 automation (pywinauto 0.6.9). Input: all **250** pilot records from

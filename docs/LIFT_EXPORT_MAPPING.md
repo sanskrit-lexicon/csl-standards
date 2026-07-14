@@ -30,7 +30,7 @@ serve different consumers:
 
 1. **MDF buys MUDIDI comparability** — the benchmark's Stage 2 target is MDF SFM
    markers, and a real SIL consumer (Lexique Pro) reads MDF directly with zero
-   import step (→ [H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md)).
+   import step (→ [H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md)).
 2. **LIFT buys consumption by *living* SIL tools.** FLEx and Lexique Pro both
    exchange LIFT natively; it is the interchange format Webonary and Dictionary
    App Builder actually ingest, not merely display. Publishing only MDF would
@@ -195,9 +195,9 @@ output, `mw-pwg-pwk-nigfhya.lift`):
   file plus a `.lift-ranges` sidecar is needed before a real FLEx/Lexique Pro
   import, but is not required for loss-corpus comparability — tracked as a
   follow-on, most naturally alongside the Lexique Pro smoke test
-  ([H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md))
+  ([H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md))
   or the kosha/PWG integration pass
-  ([H727](https://github.com/gasyoun/Uprava/blob/main/handoffs/H727-Fable_SanskritLexicography_pwg-kosha-mdf-integration_11.07.26.md)).
+  ([H727](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H727-Fable_SanskritLexicography_pwg-kosha-mdf-integration_11.07.26.md)).
 - **Resolved (for MW).** Vernacular language tag is `sa-Latn-x-slp1` (SLP1 kept
   consistent with the TEI and MDF profiles' orth notation, tagged per BCP-47
   private-use conventions); national language is `en`, matching MDF's `\ge`
