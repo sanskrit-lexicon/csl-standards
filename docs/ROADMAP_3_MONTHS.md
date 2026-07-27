@@ -1,6 +1,7 @@
 # Roadmap
 
-Status date: 2026-06-20.
+Status date: 2026-06-20 (content refreshed 2026-07-27 — Salt Phase 1 GitHub-side merge and
+Track 5 paper-progress synced against `.ai_state.md`/`CHANGELOG.md`/A27 review; H1498).
 
 The original three-month scaffold is complete. The repository now has a reproducible
 TEI/OntoLex workbench, a validated 250-case canonical pilot, a 500/1000 scale-stability
@@ -15,8 +16,10 @@ The completed post-v0.9 sequence was:
 4. `v1.0.0` annotated-tag snapshot.
 5. Paper submission last, aimed at broader computational lexicography.
 
-Current next step: implement the Salt API MW REST pilot in `csl-apidev`. Paper submission
-remains last.
+Current next step: Cologne host deploy + Apache rewrites for the already-merged Salt API MW
+REST pilot (ops gate on the Cologne maintainer, not further `csl-apidev` code — see Track 2).
+Paper submission is now gated on MG's byline/title/venue `@DECIDE` rather than on drafting
+(see Track 5) — most of the drafting work is done.
 
 ## Completed Baseline
 
@@ -62,7 +65,12 @@ report for paper/release claims.
 
 ## Track 2 - Salt API Phase 0
 
-Status: complete as of 2026-06-20.
+Status: complete as of 2026-06-20. Phase 1 (MW REST pilot) GitHub-side implementation is also
+merged — `csl-apidev` PR #59 into `salt-api-phase1`, then PR #46 to `master` (2026-06-20). Only
+the Cologne host deploy + Apache rewrites remain: the public `entries` route returns HTTP 404
+and `ids`/`graphql` time out or fail TLS from this host, so live parity stays blocked on that
+ops gate, not on further code (`.ai_state.md`; `CHANGELOG.md` v1.1.0 "Salt Phase 1 deployment
+checkpoint").
 
 Salt API is the next engineering track after scaling, but server implementation belongs in
 `csl-apidev`. This repository owns the contract package:
@@ -74,7 +82,8 @@ Salt API is the next engineering track after scaling, but server implementation 
 - [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md) — CSL ↔ C-SALT divergence ledger.
 - [`SALT_API_PHASE0_CHECKLIST.md`](SALT_API_PHASE0_CHECKLIST.md) — implementation handoff checklist.
 
-Next implementation step outside this repo: MW REST pilot in `csl-apidev`.
+Next implementation step outside this repo: Cologne host deploy + Apache rewrites for the
+already-merged MW REST pilot (ops gate), then the Phase 2 GraphQL pilot.
 
 ## Track 3 - `csl:` Vocabulary Package
 
@@ -103,19 +112,31 @@ Release policy:
 
 ## Track 5 - Paper Submission
 
-Status: deferred until after `v1.0.0`.
+Status: in progress, not deferred — `v1.0.0` has shipped (Track 4) and the paper draft has
+been through a hostile-review re-frame pass ([docs/A27_review_fable5.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A27_review_fable5.md),
+H144/A27, [PR #100](https://github.com/sanskrit-lexicon/csl-standards/pull/100) +
+[PR #101](https://github.com/sanskrit-lexicon/csl-standards/pull/101) merged). 3 of the 4
+next-paper-work items below are already executed; only submission itself remains gated.
 
 Audience: broader computational lexicography.
 
-Next paper work:
+Next paper work (updated against the A27 pass):
 
-1. Tune the framing away from narrow TEI/OntoLex venue assumptions and toward reusable
-   computational lexicography method.
-2. Use the 500/1000 stability report as a robustness check, while keeping the canonical
-   committed corpus at 250 cases.
-3. Keep optional dictionaries stopped for now; do not add BHS unless a later paper revision
-   specifically needs a Buddhist Hybrid stress test.
-4. Tighten abstract, conclusion, figures, citation style, and data-availability language.
+1. **Done** — tuned the framing away from narrow TEI/OntoLex venue assumptions: retitled to
+   "A Serialization Standard for the Petersburg-Family Sanskrit Dictionaries: Evidence,
+   Derivation, and Compression across TEI, OntoLex, and MDF"; abstract/§1/§2 re-led around the
+   three-profile contribution (A27 finding M2).
+2. **Done** — the 500/1000 stability report is cited in §12 Limitations as the robustness
+   check, while the committed corpus stays the 250-case pilot.
+3. **Still standing** — optional dictionaries remain stopped; no BHS added (nothing to execute
+   here unless a future revision needs a Buddhist Hybrid stress test).
+4. **Done** — abstract, figures (Figure 1 regenerated with the MDF box), and citation style
+   tightened (six fixes, A27 minor findings m1-m6); §13 Conclusion and §14 Availability read as
+   tightened prose after the PR #101 re-sync.
+
+Remaining gates before submission ([A27 review §5](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A27_review_fable5.md#5-remaining-gates)): byline (the paper
+currently has none), title veto, and venue re-aim now that the re-frame opens
+LREC/LDL/*Semantic Web*-type venues beyond jTEI — all `@DECIDE` (MG).
 
 Exit condition:
 
