@@ -162,12 +162,22 @@ function mdfRecord(model, rawMw, isReviewCase) {
   const decomp = model.relations?.find(rel => rel.type === "lexical-decomposition");
   const components = decomp?.components || [];
   const seenComponents = new Set();
+  const joinedComponents = [];
   for (const component of components) {
     const c = oneLine(component);
     if (!c || seenComponents.has(c) || crossRefs.includes(c)) continue;
     seenComponents.add(c);
+    joinedComponents.push(c);
+  }
+  // Lexique Pro (and MDF consumers generally) group same-name fields by label
+  // and keep only the last pair when a \lf label repeats verbatim within a
+  // record (H722 finding: DIra—tA's two \lf Compound/\le pairs rendered as a
+  // single group holding only the last \le). Join all components into one
+  // \lf Compound + one \le line so multi-component decompositions survive
+  // display, per the mapping doc's own named mitigation.
+  if (joinedComponents.length) {
     lines.push(`\\lf Compound`);
-    lines.push(`\\le ${c}`);
+    lines.push(`\\le ${joinedComponents.join(" + ")}`);
   }
   for (const ref of crossRefs) lines.push(`\\cf ${ref}`);
 
@@ -177,18 +187,31 @@ function mdfRecord(model, rawMw, isReviewCase) {
   if (es) lines.push(`\\es ${es}`);
 
   // Bibliography / source citations — MW witnesses only, deduplicated. The
-  // generic-lexicographer hedge (L.) is preserved as \bb L. and flagged lossy.
+  // generic-lexicographer hedge (L.) is preserved as its own \bb L. line
+  // (kept separate so the hedge stays individually detectable/flagged lossy);
+  // the named-source references are joined into a second \bb line. Lexique
+  // Pro displays exactly one \bb line per entry even when the source emits
+  // several consecutive \bb lines (H722 finding: Ap's 12 stacked \bb refs
+  // showed only the first) — joining the named-source values into one line
+  // is the mapping doc's own named mitigation ("joining same-sense
+  // references into one \bb line") so every reference stays visible.
   const mwCitations = (model.citations || []).filter(c => c.dictionary === "mw");
   const seenBb = new Set();
+  const joinedBb = [];
   let hasHedge = false;
   for (const cite of mwCitations) {
     const isHedge = cite.type === "generic-lexicographer-hedge" || cite.source === "L.";
-    const value = isHedge ? "L." : oneLine(cite.source);
+    if (isHedge) {
+      hasHedge = true;
+      continue;
+    }
+    const value = oneLine(cite.source);
     if (!value || seenBb.has(value)) continue;
     seenBb.add(value);
-    lines.push(`\\bb ${value}`);
-    if (isHedge) hasHedge = true;
+    joinedBb.push(value);
   }
+  if (hasHedge) lines.push(`\\bb L.`);
+  if (joinedBb.length) lines.push(`\\bb ${joinedBb.join("; ")}`);
 
   // Model-loss markers — one per lossy adequacy row triggered by this record.
   if (hasHedge) {

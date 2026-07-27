@@ -1,6 +1,6 @@
 # MDF Export Mapping (Third Profile)
 
-_Created: 11-06-2026 · Last updated: 12-07-2026_
+_Created: 11-06-2026 · Last updated: 27-07-2026_
 
 Status: **implemented.** The **third export profile** beside the existing
 [TEI archival](INTEROPERABILITY_MODEL.md#tei-mapping) and
@@ -294,8 +294,8 @@ Consumer-setup facts a future MDF consumer of these exports must know:
 | `\sn` | 239 | ✅ renders | bold sense numbers, one paragraph per sense (`Ap₁` shows all 12) |
 | `\ge` | 414 | ✅ renders | bulleted gloss per sense; also feeds the reversal index (390 words) |
 | `\cf` | 13 | ✅ renders | teal *See:* hyperlink; resolving targets navigate (`ac`↔`aYc` verified round-trip); dangling targets (10/13 in-pilot) are inert — no crash, no error dialog |
-| `\bb` | 379 | ⚠️ renders-wrong | *Read:* label, but **only one `\bb` per entry displays** — `Ap` carries 12 stacked `\bb` and shows only `AV. ix, 5, 22` |
-| `\lf` + `\le` | 134 + 134 | ⚠️ renders-wrong | *Compound:* label, but **repeated identical `\lf` labels collapse to the last pair** — `DIra—tA` (`\le DIra` + `\le tA`) shows only `tA` |
+| `\bb` | 379 → joined | ✅ renders (fixed H1499) | *Read:* label; the exporter now joins all deduplicated named-source references into one `\bb` line (`; `-separated), so `Ap`'s 12 references all display on the single visible line instead of only `AV. ix, 5, 22`. The `L.` hedge stays on its own dedicated `\bb L.` line. |
+| `\lf` + `\le` | 134 + 134 → 1 pair/record | ✅ renders (fixed H1499) | *Compound:* label; the exporter now emits one `\lf Compound` + one `\le` per record, joining multiple components into a single `+`-separated value — `DIra—tA` now shows `\le DIra + tA` instead of only `tA`. |
 | `\nt` | 515 | ✅ renders | every note as its own *Note:* paragraph; literal backslashes in note text display verbatim |
 | `\et` | 3 | ✅ renders | *Etym:* line (`vi` → `dis`) |
 | `\es` | 14 | ❌ ignored | never displayed — `vi` has `\es Lat.` and no trace renders |
@@ -303,30 +303,29 @@ Consumer-setup facts a future MDF consumer of these exports must know:
 ### Findings (validator-passed, consumer-degraded)
 
 All three findings pass [`validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
-cleanly — they are display-layer losses in the consumer, surfaced only by this real-consumer test:
+cleanly — they were display-layer losses in the consumer, surfaced only by this real-consumer test.
+Findings 1 and 2 were fixed under [H1499](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1499-Sonnet_csl-standards_fix-mdf-exporter-bb-lf-collapse_22.07.26.md):
 
-1. **Stacked `\bb` collapse.** The exporter emits all source references as consecutive
-   `\bb` lines at the end of the entry; Lexique Pro displays exactly one. The
-   MDF-idiomatic fix is **per-sense `\bb` placement** (each `\bb` inside the `\sn` block
-   it evidences) and/or joining same-sense references into one `\bb` line — a serializer
-   structure change in [`export-mdf.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-mdf.mjs),
-   not a trivial patch, so logged as a review item per the H722 rule rather than
-   hot-fixed. Until then 11/12 of `Ap`'s references are invisible in this consumer
-   (data intact in the file).
-2. **Repeated `\lf`/`\le` pair collapse.** Two `\lf Compound` + `\le` pairs render as a
-   single *Compound:* group holding only the last `\le`. Candidate mitigation: one
-   `\lf Compound` with a joined `\le DIra + tA` value, or distinct `\lf` labels — same
-   review-item routing as (1).
+1. **✅ Fixed — stacked `\bb` collapse.** The exporter used to emit all source references as
+   consecutive `\bb` lines at the end of the entry; Lexique Pro displayed exactly one.
+   [`export-mdf.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-mdf.mjs)
+   now joins same-record named-source references into one `; `-separated `\bb` line (the `L.`
+   generic-lexicographer hedge stays on its own dedicated `\bb L.` line so it remains
+   individually detectable). All 12 of `Ap`'s references now render on the single visible line.
+2. **✅ Fixed — repeated `\lf`/`\le` pair collapse.** Two `\lf Compound` + `\le` pairs used to
+   render as a single *Compound:* group holding only the last `\le`. The exporter now emits one
+   `\lf Compound` + one `\le` per record, joining multiple components into a single
+   `+`-separated value — `DIra—tA` now renders `\le DIra + tA`.
 3. **`\es` is display-dead in Lexique Pro.** Keep emitting it (the field is correct MDF
    and other consumers read it), but do not rely on it being visible here.
 
-Screenshots (committed under [`docs/img/`](https://github.com/sanskrit-lexicon/csl-standards/tree/main/docs/img)):
+Screenshots (committed under [`docs/img/`](https://github.com/sanskrit-lexicon/csl-standards/tree/main/docs/img)), from the original H722 smoke test — retained as historical evidence of the pre-fix consumer behaviour; findings 1/2 above are superseded by the H1499 fix:
 
 ![Pilot lexicon loaded — 250 words, alphabet index, reversal tab](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-overview.png)
 
 ![Ap₁ — 12 numbered senses, IAST in \ps](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-ap-senses.png)
 
-![DIra—tA₂ — repeated \lf/\le pair collapsed to one value](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-dirata-lf-collapse.png)
+![DIra—tA₂ — repeated \lf/\le pair collapsed to one value (pre-H1499)](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-dirata-lf-collapse.png)
 
 ## Open Questions / Review Items
 
