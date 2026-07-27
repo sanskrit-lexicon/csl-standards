@@ -1,7 +1,10 @@
 # Salt API Integration Roadmap — sanskrit-lexicon.uni-koeln.de
 
-Date: 2026-06-20
-Status: **Phase 0 complete; Phase 1 implementation moved to `csl-apidev`.** C-SALT MW contract verified live on
+Date: 2026-06-20 (Phase 1 GitHub-side merge status added 2026-07-27, H1498)
+Status: **Phase 0 complete; Phase 1 GitHub-side implementation merged in `csl-apidev`
+(PR #59 → PR #46 to `master`, 2026-06-20), blocked on Cologne host deploy + Apache rewrites
+(ops gate, not code — `entries` returns HTTP 404, `ids`/`graphql` time out/fail TLS from this
+host).** C-SALT MW contract verified live on
 2026-06-11 (REST OpenAPI + GraphQL introspection against
 `api.c-salt.uni-koeln.de/dicts/mw`). All field names, enum values, and query signatures
 below are facts from the running service, not proposals.
@@ -418,6 +421,9 @@ makes "integration" checkable, not aspirational.
   handoff checklist.
 
 ### Phase 1 — MW REST pilot (`csl-apidev`)
+- **Status: GitHub-side merged** — `csl-apidev` PR #59 into `salt-api-phase1`, then PR #46 to
+  `master` (2026-06-20). Blocked on Cologne host deploy + Apache rewrites before
+  `data/pilot/parity_mw.py` can confirm live parity (ops gate, not further code).
 - `api1/salt_entries.php`: `/dicts/mw/restful/entries` for `query_type` ∈ `{term, prefix, wildcard, fuzzy}` over headwords; `regexp`/`match`/`match_phrase` return explicit HTTP 400
   until Phase 4 indexing exists; full §3.4 envelope (`xml: null`, `csl` filled).
 - `salt_ids.php` (batch by id); rewrites; `csl.scanUrl` bridged to `servepdf.php`.
