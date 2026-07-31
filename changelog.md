@@ -6,60 +6,18 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
-## [1.1.0] - 2026-07-12
-
+## [1.2.0] - 2026-07-31
 ### Added
-- **Lexique Pro real-consumer smoke test of the MDF pilot export (H722).** All 250
-  pilot records loaded into Lexique Pro 3.6 (SIL's offline MDF consumer), zero
-  crashes; new "Real-Consumer Smoke Test" section in
-  [`docs/MDF_EXPORT_MAPPING.md`](docs/MDF_EXPORT_MAPPING.md) with a per-marker
-  render-outcome table (13 markers), three screenshots, and consumer-setup
-  instructions (UTF-8 is not auto-detected). Three validator-green,
-  consumer-degraded findings logged as exporter review items: stacked `\bb`
-  collapse, repeated `\lf`/`\le` pair collapse, `\es` display-dead. (PR #109)
+- **H742 handshake:** `\sd` semantic-domain source data now exists (semdom ↔ Amarakosha crosswalk).
 
-
-### Added
-- **PWG→RU LOD publishing runbook (H383).** New
-  [`docs/PUBLISHING_LOD.md`](docs/PUBLISHING_LOD.md): the ordered, human-runnable
-  runbook for taking the PWG→RU LOD graph from *validated-locally* to real
-  published Linked Open Data — gates (G5 citable subset, `/publish-safety-check`,
-  license composition), the IRI-domain decision (w3id vs project domain, with a
-  sample conneg `.htaccess`), dereferenceability + content negotiation (static
-  Pages vs dynamic nginx), SPARQL-endpoint options (static dump vs
-  Oxigraph/Fuseki/QLever), VoID/DCAT + LOV, Zenodo DOI via `/data-release`, and
-  lod-cloud.net/LiLa registration — every step tagged [HUMAN]/[AGENT]/[HUMAN-DECIDE]
-  with a consolidated checklist. Doc-only; nothing published. Companion
-  [`standards/pwg-ru-lod/void.ttl`](standards/pwg-ru-lod/void.ttl) VoID stub template.
-- **PWG→RU LOD graph — SPARQL surface + SHACL profile (E7).** New
-  [`standards/pwg-ru-lod/`](standards/pwg-ru-lod/): the `csl-standards`-owned
-  surface for the Petersburg-Dictionary→Russian LOD graph, per the boundary
-  contract (generator + data stay in
-  [`SanskritLexicography/RussianTranslation`](https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation);
-  the query/validation surface lands here). Schema-only, so publishable now:
-  a federated acceptance query
-  [`sense_citation_dcsfreq.rq`](standards/pwg-ru-lod/sense_citation_dcsfreq.rq)
-  (sense → `<ls>` citation + lemma DCS frequency across the shared LiLa-style
-  lemma IRI) and a SHACL profile [`shapes.ttl`](standards/pwg-ru-lod/shapes.ttl)
-  (OntoLex + `vartrans` + PROV-O evidence grades). Full graph-data publication
-  stays **deferred/gated on G5** (store is 100 % machine-preview) and an IRI
-  publication-domain `@DECIDE`, consistent with the repo's "real RDF publication
-  is a later phase" mission. Model doc:
-  [`standards/pwg-ru-lod/README.md`](standards/pwg-ru-lod/README.md).
+### Fixed
+- **MDF export:** join stacked `\bb` refs and repeated `\lf`/`\le` pairs (#116).
+- **Org-wide link audit:** repair 4 broken links; repoint dead Uprava handoff links to `archive/`.
 
 ### Changed
-- **Salt Phase 1 deployment checkpoint.** Recorded that the `csl-apidev` Phase 1
-  PR stack was applied, but the public Cologne Salt routes are not yet live: the
-  `entries` check returned HTTP 404 and the `ids` / `graphql` checks timed out or
-  failed TLS from this host, so parity remains blocked until host deploy/rewrites land.
-- **Salt API docs alignment.** Tightened Phase 1 documentation so endpoint paths, use-case
-  caveats, query-mode status, id fallback notes, and parity-ledger wording match the
-  `csl-apidev` handoff branch.
+- **Roadmap sync** to actual Salt Phase 1 + paper-progress state (#115).
+- **`\sd` coverage boundary** — grammatical kāṇḍa-3 vargas carry no semantic domain by design (H782/H774).
 
-### Added
-- **MW Salt parity helper.** Added `data/pilot/parity_mw.py`, a dependency-free
-  post-deploy helper for comparing the CSL Salt MW endpoint against C-SALT by
-  entry count, ids, and headwords for a fixed smoke set.
 
 ## [1.0.0] - 2026-06-20
 
