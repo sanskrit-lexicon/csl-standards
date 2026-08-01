@@ -186,18 +186,17 @@ function mdfRecord(model, rawMw, isReviewCase) {
   const es = sourceLanguage(rawMw);
   if (es) lines.push(`\\es ${es}`);
 
-  // Bibliography / source citations — MW witnesses only, deduplicated. The
-  // generic-lexicographer hedge (L.) is preserved as its own \bb L. line
-  // (kept separate so the hedge stays individually detectable/flagged lossy);
-  // the named-source references are joined into a second \bb line. Lexique
-  // Pro displays exactly one \bb line per entry even when the source emits
-  // several consecutive \bb lines (H722 finding: Ap's 12 stacked \bb refs
-  // showed only the first) — joining the named-source values into one line
-  // is the mapping doc's own named mitigation ("joining same-sense
-  // references into one \bb line") so every reference stays visible.
+  // Bibliography / source citations — MW witnesses only, deduplicated.
+  // Lexique Pro displays exactly *one* `\bb` per entry (H722: Ap's stacked
+  // `\bb` showed only the first). H1499 joined named-source refs onto one
+  // line but still emitted a separate `\bb L.` for the generic-lexicographer
+  // hedge — so hedge+named records (29/250 pilot) still hid the named refs
+  // behind the first-only display rule (H2087 residual). Emit *at most one*
+  // `\bb` line: optional leading `L.` token, then named sources, `; `-joined.
+  // Hedge remains detectable as the first token + the `\nt model-loss` note.
   const mwCitations = (model.citations || []).filter(c => c.dictionary === "mw");
   const seenBb = new Set();
-  const joinedBb = [];
+  const namedBb = [];
   let hasHedge = false;
   for (const cite of mwCitations) {
     const isHedge = cite.type === "generic-lexicographer-hedge" || cite.source === "L.";
@@ -208,10 +207,10 @@ function mdfRecord(model, rawMw, isReviewCase) {
     const value = oneLine(cite.source);
     if (!value || seenBb.has(value)) continue;
     seenBb.add(value);
-    joinedBb.push(value);
+    namedBb.push(value);
   }
-  if (hasHedge) lines.push(`\\bb L.`);
-  if (joinedBb.length) lines.push(`\\bb ${joinedBb.join("; ")}`);
+  const bbTokens = hasHedge ? ["L.", ...namedBb] : namedBb;
+  if (bbTokens.length) lines.push(`\\bb ${bbTokens.join("; ")}`);
 
   // Model-loss markers — one per lossy adequacy row triggered by this record.
   if (hasHedge) {

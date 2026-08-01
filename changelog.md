@@ -6,6 +6,18 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Fixed
+- **H2087 — MDF Lexique consumer-display residual.** Fold the `L.` hedge into the single
+  joined `\bb` line (`L.; named; …`) so hedge+named records no longer hide named refs
+  under Lexique Pro's one-`\bb`-per-entry rule (H1499 left a dual-`\bb` residual on
+  29/250 pilot cases). `validate-mdf-profile` now enforces ≤1 `\bb` and ≤1 `\lf Compound`
+  pair; `npm run smoke-mdf-consumer-display` locks Ap / DIratA / dih fixtures and the
+  documented `\es` residual (still emitted, still Lexique-invisible).
+
+### Added
+- **`scripts/smoke-mdf-consumer-display.mjs`** — machine proxy for the `/export-consumer-smoke`
+  MDF checklist (wired into `build-pilot` after schema validation).
+
 ## [1.2.0] - 2026-07-31
 ### Added
 - **H742 handshake:** `\sd` semantic-domain source data now exists (semdom ↔ Amarakosha crosswalk).
