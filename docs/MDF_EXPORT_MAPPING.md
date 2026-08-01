@@ -294,32 +294,56 @@ Consumer-setup facts a future MDF consumer of these exports must know:
 | `\sn` | 239 | ✅ renders | bold sense numbers, one paragraph per sense (`Ap₁` shows all 12) |
 | `\ge` | 414 | ✅ renders | bulleted gloss per sense; also feeds the reversal index (390 words) |
 | `\cf` | 13 | ✅ renders | teal *See:* hyperlink; resolving targets navigate (`ac`↔`aYc` verified round-trip); dangling targets (10/13 in-pilot) are inert — no crash, no error dialog |
-| `\bb` | 379 → joined | ✅ renders (fixed H1499) | *Read:* label; the exporter now joins all deduplicated named-source references into one `\bb` line (`; `-separated), so `Ap`'s 12 references all display on the single visible line instead of only `AV. ix, 5, 22`. The `L.` hedge stays on its own dedicated `\bb L.` line. |
-| `\lf` + `\le` | 134 + 134 → 1 pair/record | ✅ renders (fixed H1499) | *Compound:* label; the exporter now emits one `\lf Compound` + one `\le` per record, joining multiple components into a single `+`-separated value — `DIra—tA` now shows `\le DIra + tA` instead of only `tA`. |
+| `\bb` | ≤1 line/record (joined) | ✅ renders (fixed H1499 + H2087) | *Read:* label; **at most one `\bb` line per record** — named sources `; `-joined; when the `L.` hedge is present it is the **first** token of that same line (`L.; …`), not a second `\bb` (H2087 residual of H1499). Pilot `Ap` shows all 12 refs; hedge+named `dih` shows `L.; Dhātup. …`. |
+| `\lf` + `\le` | 1 pair/record | ✅ renders (fixed H1499) | *Compound:* label; one `\lf Compound` + one `\le` per record, multi-component values `+`-joined — `DIra—tA` shows `\le DIra + tA`. |
 | `\nt` | 515 | ✅ renders | every note as its own *Note:* paragraph; literal backslashes in note text display verbatim |
 | `\et` | 3 | ✅ renders | *Etym:* line (`vi` → `dis`) |
-| `\es` | 14 | ❌ ignored | never displayed — `vi` has `\es Lat.` and no trace renders |
+| `\es` | 14 | ❌ ignored | **residual** — never displayed in Lexique Pro (`vi` has `\es Lat.` with no UI trace). Still emitted (correct MDF; other consumers may read it). |
 
 ### Findings (validator-passed, consumer-degraded)
 
-All three findings pass [`validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
-cleanly — they were display-layer losses in the consumer, surfaced only by this real-consumer test.
-Findings 1 and 2 were fixed under [H1499](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1499-Sonnet_csl-standards_fix-mdf-exporter-bb-lf-collapse_22.07.26.md):
+These findings pass [`validate-mdf-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-mdf-profile.mjs)
+cleanly as schema — they were display-layer losses in the consumer, surfaced only by the
+real-consumer test (classic validator-green ≠ consumer-green). Emit mitigations:
 
-1. **✅ Fixed — stacked `\bb` collapse.** The exporter used to emit all source references as
-   consecutive `\bb` lines at the end of the entry; Lexique Pro displayed exactly one.
+1. **✅ Fixed — stacked `\bb` collapse (H1499 + H2087).** The exporter used to emit all source
+   references as consecutive `\bb` lines; Lexique Pro displayed exactly one (first wins).
    [`export-mdf.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-mdf.mjs)
-   now joins same-record named-source references into one `; `-separated `\bb` line (the `L.`
-   generic-lexicographer hedge stays on its own dedicated `\bb L.` line so it remains
-   individually detectable). All 12 of `Ap`'s references now render on the single visible line.
-2. **✅ Fixed — repeated `\lf`/`\le` pair collapse.** Two `\lf Compound` + `\le` pairs used to
-   render as a single *Compound:* group holding only the last `\le`. The exporter now emits one
-   `\lf Compound` + one `\le` per record, joining multiple components into a single
-   `+`-separated value — `DIra—tA` now renders `\le DIra + tA`.
-3. **`\es` is display-dead in Lexique Pro.** Keep emitting it (the field is correct MDF
-   and other consumers read it), but do not rely on it being visible here.
+   joins every bibliography token into **one** `; `-separated `\bb` line. H1499 joined
+   named sources but still emitted a separate `\bb L.` for the hedge — 29/250 pilot records
+   therefore still hid named refs behind the first-only rule. **H2087** folds `L.` into the
+   same single line as the leading token (`L.; named; …`) so hedge+named stays fully visible;
+   detectability is the first token + the existing `\nt model-loss` hedge note.
+2. **✅ Fixed — repeated `\lf`/`\le` pair collapse (H1499).** Two `\lf Compound` + `\le` pairs
+   used to render as a single *Compound:* group holding only the last `\le`. The exporter
+   emits one `\lf Compound` + one `\le` per record, joining components with ` + ` —
+   `DIra—tA` renders `\le DIra + tA`.
+3. **Residual — `\es` is display-dead in Lexique Pro.** Keep emitting it (correct MDF; other
+   consumers may read it). Do **not** drop the field to chase Lexique UI. Schema-green with
+   this known invisible field is an accepted stop condition for the residual, not a failure
+   of the multi-bb/multi-lf work.
 
-Screenshots (committed under [`docs/img/`](https://github.com/sanskrit-lexicon/csl-standards/tree/main/docs/img)), from the original H722 smoke test — retained as historical evidence of the pre-fix consumer behaviour; findings 1/2 above are superseded by the H1499 fix:
+### Consumer-display smoke (machine proxy — H2087)
+
+Re-running Lexique Pro GUI is not required for every exporter edit once the emit contract
+is locked. [`scripts/smoke-mdf-consumer-display.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/smoke-mdf-consumer-display.mjs)
+(`npm run smoke-mdf-consumer-display`, wired into `build-pilot` after `validate-mdf-profile`)
+asserts the Lexique one-field-per-label contract on the pilot tree:
+
+| Check | Fixture / census | Pass criterion |
+|---|---|---|
+| ≤1 `\bb` / record | all 250 | no stacked bibliography |
+| ≤1 `\lf Compound` + 1 `\le` | all 250 | no repeated Compound pairs |
+| Multi-ref join | `mw-pwg-pwk-Ap.mdf` | single `\bb` contains `AV. ix, 5, 22` … `Kathās.` |
+| Multi-component join | `mw-pwg-pwk-DIratA.mdf` | `\le DIra + tA` |
+| Hedge+named join | `mw-pwg-pwk-dih.mdf` | single `\bb` starts `L.; ` and keeps named sources |
+| Residual `\es` | census | still emitted on ≥1 record (14/250 as of H2087) |
+
+This is the `/export-consumer-smoke` checklist for the MDF profile: schema validator +
+consumer-display emit smoke + documented residual. It does **not** replace a periodic
+human Lexique GUI re-smoke when the consumer app itself changes.
+
+Screenshots (committed under [`docs/img/`](https://github.com/sanskrit-lexicon/csl-standards/tree/main/docs/img)), from the original H722 smoke test — retained as historical evidence of the pre-fix consumer behaviour; findings 1/2 above are superseded by the H1499/H2087 emit mitigations:
 
 ![Pilot lexicon loaded — 250 words, alphabet index, reversal tab](https://raw.githubusercontent.com/sanskrit-lexicon/csl-standards/main/docs/img/lexiquepro-smoke-overview.png)
 

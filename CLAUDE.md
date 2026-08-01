@@ -28,6 +28,7 @@ npm run validate-tei-lex0          # validate TEI Lex-0 baseline (CI gate)
 npm run validate-ontolex-profile   # validate OntoLex/SHACL profile (CI gate)
 npm run export-mdf                 # export the flat SIL MDF field-schema profile (third view)
 npm run validate-mdf-profile       # validate MDF marker profile (CI gate)
+npm run smoke-mdf-consumer-display # Lexique one-field-per-label emit smoke (H2087; after schema validate)
 npm run export-lift                # export the SIL LIFT XML profile (fourth view)
 npm run validate-lift-profile      # validate LIFT entry profile (CI gate)
 npm run analyze-loss               # regenerate docs/LOSS_ANALYSIS.md from the loss reports

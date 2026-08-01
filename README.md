@@ -92,6 +92,7 @@ npm run validate-tei-profile       # validate TEI archival profile (CI gate)
 npm run validate-tei-lex0          # validate TEI Lex-0 baseline (CI gate)
 npm run validate-ontolex-profile   # validate OntoLex/SHACL profile (CI gate)
 npm run validate-mdf-profile       # validate MDF marker profile (CI gate)
+npm run smoke-mdf-consumer-display # Lexique one-field-per-label emit smoke (H2087)
 npm run analyze-loss               # regenerate docs/LOSS_ANALYSIS.md from the loss reports
 npm run scale-check                # 500/1000-case scale-stability check
 ```

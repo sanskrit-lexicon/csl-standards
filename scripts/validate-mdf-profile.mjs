@@ -180,8 +180,24 @@ function validateCase(model, reviewIds, allowedMarkers, fieldOrder) {
   // hedge phenomenon flag is set (e.g. the hedge lives only in PWG/PWK/AP90).
   const mwHasHedge = (model.citations || []).some(c => c.dictionary === "mw" && (c.type === "generic-lexicographer-hedge" || c.source === "L."));
   if (mwHasHedge) {
-    caseCheck(byMarker("bb").some(f => f.value === "L."), "MW-hedge case must preserve the L. hedge as \\bb L.");
+    // H2087: hedge may be the sole `\bb L.` value or the first `; `-token of a
+    // single joined bibliography line (Lexique shows only one `\bb` per entry).
+    const bbHedgeVisible = byMarker("bb").some(f => {
+      const v = f.value || "";
+      return v === "L." || v.startsWith("L.; ") || /(^|;\s)L\.(;|$)/.test(v);
+    });
+    caseCheck(bbHedgeVisible, "MW-hedge case must preserve L. as a \\bb token (alone or first in a joined \\bb line)");
     caseCheck(lossNotes.some(v => /generic-lexicographer hedge/.test(v)), "MW-hedge case lacks its \\nt model-loss marker");
+  }
+  // Consumer-display invariants (H722/H1499/H2087): Lexique Pro collapses
+  // repeated same-label fields, so the exporter must not emit multi-`\bb`
+  // stacks or multi-`\lf Compound` pairs. At most one `\bb` and one Compound
+  // pair per record; multi-component `\le` must be ` + `-joined when present.
+  caseCheck(byMarker("bb").length <= 1, `consumer-display: expected at most one \\bb line, found ${byMarker("bb").length}`);
+  const compoundLf = byMarker("lf").filter(f => f.value === "Compound");
+  caseCheck(compoundLf.length <= 1, `consumer-display: expected at most one \\lf Compound, found ${compoundLf.length}`);
+  if (compoundLf.length === 1) {
+    caseCheck(byMarker("le").length === 1, "consumer-display: \\lf Compound must pair with exactly one \\le (joined components)");
   }
   if (model.phenomena?.includes("root")) {
     caseCheck(lossNotes.some(v => /root\/derivation/.test(v)), "root case lacks its \\nt model-loss marker");
