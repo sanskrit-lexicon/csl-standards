@@ -6,6 +6,17 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+### Added
+- **Pipeline audit — MDF export → Lexique Pro consumer (H2022, Fable 5 `claude-fable-5`).**
+  [docs/PIPELINE_AUDIT_MDF_EXPORT_CONSUMER_06-08-2026.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PIPELINE_AUDIT_MDF_EXPORT_CONSUMER_06-08-2026.md)
+  — call graph, silent-failure census, capability inventory and six ranked gap specs, plus a
+  dual-run adjudication against the Grok 4.5 (`grok-4.5`) lane of 01-08-2026. Audit-only; gap
+  execution is [H2307](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2307-Sonnet_csl-standards_mdf-consumer-smoke-ci-and-artifact-freshness_06.08.26.md).
+  Headline: the H2087 fix below is verified live (`multiBb=0` across 250 records) but
+  `smoke-mdf-consumer-display` is **not a CI step**, and CI validates committed `.mdf` artifacts it
+  cannot regenerate (the exporter needs a csl-orig sibling clone), so exporter-vs-artifact drift is
+  currently undetectable.
+
 ### Fixed
 - **H2087 — MDF Lexique consumer-display residual.** Fold the `L.` hedge into the single
   joined `\bb` line (`L.; named; …`) so hedge+named records no longer hide named refs
