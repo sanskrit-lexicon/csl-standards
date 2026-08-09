@@ -4,7 +4,7 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
-## [Unreleased]
+## [1.3.0] - 2026-08-09
 
 ### Added
 - **H2307 — MDF consumer smoke wired into CI; exporter-vs-artifact drift closed (Sonnet 5 `claude-sonnet-5`).**
