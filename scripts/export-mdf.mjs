@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { stripPseudoMarkup } from "./lib/citations.mjs";
 
 // MDF (SIL Multi-Dictionary Formatter, Toolbox/FLEx lineage) export — the third,
@@ -99,13 +100,20 @@ function sourceLanguage(rawMw) {
 
 async function loadSourceIndexes(hardCases) {
   const source = hardCases.sources?.mw;
-  if (!source) return new Map();
-  const text = await fs.readFile(path.resolve(process.cwd(), source), "utf8");
+  if (!source) throw new Error("export-mdf: hard-cases.json has no sources.mw path — cannot build the MW source index");
+  const sourcePath = path.resolve(process.cwd(), source);
+  let text;
+  try {
+    text = await fs.readFile(sourcePath, "utf8");
+  } catch (err) {
+    throw new Error(`export-mdf: cannot read MW source file '${sourcePath}': ${err.message}`);
+  }
   const index = new Map();
   for (const raw of text.match(/<L>[\s\S]*?<LEND>/g) || []) {
     const L = raw.match(/^<L>([^<]+)/)?.[1];
     if (L) index.set(L, raw.trim());
   }
+  if (index.size === 0) throw new Error(`export-mdf: MW source index built from '${sourcePath}' is empty — check the file format`);
   return index;
 }
 
@@ -119,7 +127,7 @@ function fullRawMw(model, index) {
 // emits: \lx \hm \lc \ps \sn \ge \lf \le \cf \et \es \bb \nt (\cf/\lf precede
 // \et/\es in App. B — verified against the book, not a naive alphabetic guess).
 // All notes are grouped at the record end, model-loss markers by their prefix.
-function mdfRecord(model, rawMw, isReviewCase) {
+function mdfRecord(model, rawMw, isReviewCase, exporterHash) {
   const lines = [];
   const notes = [];          // sense/meta notes
   const lossNotes = [];      // \nt model-loss: … (adequacy = lossy in the mapping)
@@ -229,7 +237,7 @@ function mdfRecord(model, rawMw, isReviewCase) {
   }
 
   const rec = model.records?.mw || {};
-  const meta = `\\nt meta: profile=${PROFILE_VERSION}; scope=${VALIDATION_SCOPE}; review=${isReviewCase ? "validated-slice" : "full-machine-review"}; entry-type=${entryType(model)}; src=MW L=${rec.L} pc=${rec.pc}`;
+  const meta = `\\nt meta: profile=${PROFILE_VERSION}; scope=${VALIDATION_SCOPE}; review=${isReviewCase ? "validated-slice" : "full-machine-review"}; entry-type=${entryType(model)}; src=MW L=${rec.L} pc=${rec.pc}; exporter-hash=${exporterHash}`;
 
   return [...lines, ...notes, ...lossNotes, meta].join("\n") + "\n";
 }
@@ -249,9 +257,12 @@ async function main() {
   const reviewIds = new Set(review.items.map(item => item.id));
   const index = await loadSourceIndexes(hardCases);
 
+  const exporterSrc = await fs.readFile(new URL(import.meta.url), "utf8");
+  const exporterHash = createHash("sha256").update(exporterSrc).digest("hex").slice(0, 16);
+
   for (const model of models) {
     const rawMw = fullRawMw(model, index);
-    const record = mdfRecord(model, rawMw, reviewIds.has(model.id));
+    const record = mdfRecord(model, rawMw, reviewIds.has(model.id), exporterHash);
     await fs.writeFile(path.join(outputDir, `${safeCaseId(model.id)}.mdf`), record, "utf8");
   }
 
