@@ -10,6 +10,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const mdfDir = path.join(root, "data", "pilot", "mdf");
+const modelCount = JSON.parse(fs.readFileSync(path.join(root, "data", "pilot", "neutral-model.json"), "utf8")).length;
 const errors = [];
 const notes = [];
 
@@ -36,7 +37,7 @@ check(fs.existsSync(mdfDir), `missing MDF pilot dir: ${mdfDir}`);
 const files = fs.existsSync(mdfDir)
   ? fs.readdirSync(mdfDir).filter(f => f.endsWith(".mdf")).sort()
   : [];
-check(files.length === 250, `expected 250 pilot .mdf files, found ${files.length}`);
+check(files.length === modelCount, `expected ${modelCount} pilot .mdf files (neutral-model.json count), found ${files.length}`);
 
 let multiBb = 0;
 let multiLf = 0;
@@ -112,7 +113,7 @@ if (fs.existsSync(dihPath)) {
 // Residual: \\es is still emitted (correct MDF) but display-dead in Lexique Pro.
 // Do not "fix" by dropping the field — document only.
 check(esCount >= 1, "expected some pilot records to still emit \\es (residual consumer no-render, not an emit drop)");
-notes.push(`residual \\es still emitted on ${esCount}/250 records (Lexique display-dead; keep emitting)`);
+notes.push(`residual \\es still emitted on ${esCount}/${modelCount} records (Lexique display-dead; keep emitting)`);
 notes.push(`census: multiBb=${multiBb} multiLf=${multiLf} joinedBb=${joinedBb} joinedLe=${joinedLe} hedgeToken=${hedgeTokenCount}`);
 
 if (errors.length) {

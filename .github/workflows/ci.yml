@@ -41,6 +41,9 @@ jobs:
       - name: Validate MDF profile
         run: npm run validate-mdf-profile
 
+      - name: Smoke-test MDF consumer display
+        run: npm run smoke-mdf-consumer-display
+
       - name: Validate TEI Lex-0 baseline
         run: npm run validate-tei-lex0
 

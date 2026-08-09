@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { generatedAt } from "./lib/provenance.mjs";
 
 // MDF marker-profile validation, parallel to validate-tei-profile.mjs and
@@ -15,6 +16,14 @@ const errors = [];
 const warnings = [];
 const PROFILE_VERSION = "mdf-export-profile-v0.1";
 const VALIDATION_SCOPE = "full-mdf-marker-profile";
+
+let exporterHash = null;
+try {
+  exporterHash = createHash("sha256")
+    .update(fs.readFileSync(path.join(root, "scripts", "export-mdf.mjs"), "utf8"))
+    .digest("hex")
+    .slice(0, 16);
+} catch { /* skip stale-artifact check if exporter is unreadable */ }
 
 function safeCaseId(id) {
   return id.replace(/:/g, "-");
@@ -221,6 +230,8 @@ function validateCase(model, reviewIds, allowedMarkers, fieldOrder) {
   const hasHom = /<h>\d+/.test(model.records?.mw?.raw || "");
   caseWarn(!hasHom || byMarker("hm").length === 1, "MW record has a homonym number but the MDF record has no \\hm");
 
+  const exporterHashFound = meta.match(/exporter-hash=([0-9a-f]+)/)?.[1] || null;
+
   return {
     id: model.id,
     key: model.key,
@@ -234,6 +245,8 @@ function validateCase(model, reviewIds, allowedMarkers, fieldOrder) {
     modelLossMarkers: lossNotes.length,
     markersUsed: [...new Set(markers.filter(Boolean))],
     phenomena: model.phenomena || [],
+    homonymExpected: hasHom,
+    exporterHashFound,
     errors: caseErrors,
     warnings: caseWarnings
   };
@@ -252,6 +265,31 @@ const items = models.map(model => validateCase(model, reviewIds, allowedMarkers,
 for (const item of items) {
   errors.push(...item.errors);
   warnings.push(...item.warnings);
+}
+
+// Spec 4: aggregate error when \hm-missing rate signals systematic source-index failure.
+// In a healthy run this is 0/N; if sources.mw is absent all <h> records lose \hm at once.
+const hmExpected = items.filter(i => i.homonymExpected).length;
+const hmMissing = items.filter(
+  i => i.homonymExpected && i.warnings?.some(w => w.includes("homonym number but"))
+).length;
+if (hmMissing > 0 && (hmMissing > 5 || (hmExpected > 0 && hmMissing / hmExpected > 0.1))) {
+  errors.push(
+    `systematic \\hm loss: ${hmMissing}/${hmExpected} records with MW <h> are missing \\hm` +
+    ` (${Math.round(hmMissing / hmExpected * 100)}%) — signature of a missing source index; check export-mdf.mjs`
+  );
+}
+
+// Spec 2: stale-artifact detection via exporter hash embedded in \nt meta: line.
+if (exporterHash !== null) {
+  const staleMeta = items.filter(i => i.exporterHashFound !== exporterHash);
+  if (staleMeta.length > 0) {
+    const foundHash = staleMeta[0].exporterHashFound ?? "(none)";
+    errors.push(
+      `stale artifact: ${staleMeta.length} MDF file(s) carry exporter-hash=${foundHash}` +
+      ` but export-mdf.mjs now hashes to ${exporterHash} — re-run \`npm run export-mdf\``
+    );
+  }
 }
 
 const report = {

@@ -7,6 +7,16 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 
 ### Added
+- **H2307 — MDF consumer smoke wired into CI; exporter-vs-artifact drift closed (Sonnet 5 `claude-sonnet-5`).**
+  `smoke-mdf-consumer-display` is now a required CI step between `validate-mdf-profile` and
+  `validate-tei-lex0`. `validate-mdf-profile` gains two aggregate checks: a stale-artifact
+  detector (SHA-256 of `export-mdf.mjs` embedded as `exporter-hash=` in every `\nt meta:` line,
+  validated at CI time) and a systematic-`\hm`-loss gate (fails when >10% of `<h>`-bearing
+  records are missing `\hm`, the signature of a missing source index). `export-mdf.mjs` now
+  throws explicitly — with path and cause — when `sources.mw` is absent or the resulting index is
+  empty (spec 3). Smoke count check scales off `neutral-model.json` length instead of the
+  hardcoded literal 250 (spec 5).
+
 - **Pipeline audit — MDF export → Lexique Pro consumer (H2022, Fable 5 `claude-fable-5`).**
   [docs/PIPELINE_AUDIT_MDF_EXPORT_CONSUMER_06-08-2026.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PIPELINE_AUDIT_MDF_EXPORT_CONSUMER_06-08-2026.md)
   — call graph, silent-failure census, capability inventory and six ranked gap specs, plus a
