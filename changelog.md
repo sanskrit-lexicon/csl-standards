@@ -4,6 +4,24 @@ All notable changes to csl-standards are documented here. Releases are dated,
 semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
+## [Unreleased]
+
+### Fixed
+- **H2811 — LIFT consumer-display silent-empty (stacked `<note type="source">`).**
+  `export-lift.mjs` emitted one source note per bibliography witness (44/250
+  pilot records, max 12). FLEx / Lexique Pro collapse same-type notes the way
+  Lexique collapsed stacked `\bb` (FINDINGS §69 / H2087). Join named sources
+  onto one `; `-separated note, with the `L.` hedge as the leading token
+  (`L.; Dhātup. …`). `validate-lift-profile` now enforces ≤1 source note.
+
+### Added
+- **`scripts/smoke-lift-consumer-display.mjs`** + **`scripts/merge-lift-lexicon.mjs`**
+  — `/export-consumer-smoke` machine proxy for the LIFT profile: one-source-note
+  contract on the 250 fragments, Ap / DIratA / dih / vi fixtures, residual
+  `<etymology source>` keep, and a single importable
+  `data/pilot/lift-lexicon/cdsl-pilot.lift` + `.lift-ranges` sidecar.
+  Wired into `build-pilot` and CI after `validate-lift-profile`.
+
 ## [1.3.0] - 2026-08-09
 
 ### Added

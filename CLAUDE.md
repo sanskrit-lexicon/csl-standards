@@ -31,6 +31,7 @@ npm run validate-mdf-profile       # validate MDF marker profile (CI gate)
 npm run smoke-mdf-consumer-display # Lexique one-field-per-label emit smoke (H2087; after schema validate)
 npm run export-lift                # export the SIL LIFT XML profile (fourth view)
 npm run validate-lift-profile      # validate LIFT entry profile (CI gate)
+npm run smoke-lift-consumer-display # FLEx/Lexique one-source-note + merged lexicon smoke (H2811)
 npm run analyze-loss               # regenerate docs/LOSS_ANALYSIS.md from the loss reports
 npm run scale-check                # 500/1000-case scale-stability check (docs/SCALE_STABILITY.md)
 npm run validate-external-profiles[:strict]   # validate against external TEI/OntoLex tooling
@@ -72,7 +73,7 @@ Key docs (read these before making a claim about the model, not just the code):
 
 | Workflow | Trigger | Purpose |
 |---|---|---|
-| `ci.yml` | PR, push to `main` | `npm ci` → `npm test` → validate pilot/TEI-profile/OntoLex-profile/TEI-Lex0 → `npm run build` |
+| `ci.yml` | PR, push to `main` | `npm ci` → `npm test` → validate pilot/TEI/OntoLex/MDF + MDF consumer smoke + LIFT + LIFT consumer smoke + TEI-Lex0 → `npm run build` |
 | `dependabot-auto-merge.yml`, `dependabot-automerge-sync.yml` | Dependabot PRs | Auto-merge dependency bumps |
 
 ## Conventions
