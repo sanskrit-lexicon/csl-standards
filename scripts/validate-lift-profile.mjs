@@ -142,9 +142,14 @@ function validateCase(model, reviewIds, allowedElements) {
   // trigger conditions as validate-mdf-profile.mjs, so the two profiles stay in
   // lockstep on what counts as lossy.
   const lossNoteTexts = [...text.matchAll(/<note type="model-loss">\s*<form[^>]*>\s*<text>([^<]*)<\/text>/g)].map(m => m[1]);
+  const sourceNotes = [...text.matchAll(/<note type="source">\s*<form[^>]*>\s*<text>([^<]*)<\/text>/g)].map(m => m[1]);
+  caseCheck(sourceNotes.length <= 1, `consumer-display requires ≤1 <note type="source"> (found ${sourceNotes.length})`);
   const mwHasHedge = (model.citations || []).some(c => c.dictionary === "mw" && (c.type === "generic-lexicographer-hedge" || c.source === "L."));
   if (mwHasHedge) {
-    caseCheck(/<note type="source">\s*<form[^>]*>\s*<text>L\.<\/text>/.test(text), "MW-hedge case must preserve the L. hedge as a source note");
+    caseCheck(
+      sourceNotes.some(v => v === "L." || v.startsWith("L.; ")),
+      "MW-hedge case must preserve the L. hedge as the first token of the single source note"
+    );
     caseCheck(lossNoteTexts.some(v => /generic-lexicographer hedge/.test(v)), "MW-hedge case lacks its model-loss note");
   }
   if (model.phenomena?.includes("root")) {

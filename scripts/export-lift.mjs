@@ -195,17 +195,29 @@ function liftEntry(model, rawMw, isReviewCase) {
     body.push(`</etymology>`);
   }
 
-  // Bibliography / source citations, same dedupe + hedge handling as MDF's \bb.
+  // Bibliography / source citations — MW witnesses only, deduplicated.
+  // Lexique Pro / FLEx display one note of a given type per entry (H722
+  // stacked-\bb collapse; LIFT's <note type="source"> is the same field).
+  // Emit *at most one* source note: optional leading `L.` token, then named
+  // sources, `; `-joined (H2087 MDF contract, ported here as H2811).
   const mwCitations = (model.citations || []).filter(c => c.dictionary === "mw");
   const seenBb = new Set();
+  const namedBb = [];
   let hasHedge = false;
   for (const cite of mwCitations) {
     const isHedge = cite.type === "generic-lexicographer-hedge" || cite.source === "L.";
-    const value = isHedge ? "L." : oneLine(cite.source);
+    if (isHedge) {
+      hasHedge = true;
+      continue;
+    }
+    const value = oneLine(cite.source);
     if (!value || seenBb.has(value)) continue;
     seenBb.add(value);
-    body.push(`<note type="source"><form lang="en"><text>${xmlEscape(value)}</text></form></note>`);
-    if (isHedge) hasHedge = true;
+    namedBb.push(value);
+  }
+  const bbTokens = hasHedge ? ["L.", ...namedBb] : namedBb;
+  if (bbTokens.length) {
+    body.push(`<note type="source"><form lang="en"><text>${xmlEscape(bbTokens.join("; "))}</text></form></note>`);
   }
 
   // Model-loss notes, one per lossy adequacy row triggered by this entry — the

@@ -1,6 +1,6 @@
 # LIFT Export Mapping (Fourth Profile)
 
-_Created: 11-07-2026 · Last updated: 11-07-2026_
+_Created: 11-07-2026 · Last updated: 16-08-2026_
 
 Status: **implemented.** The **fourth export profile**, beside the existing
 [TEI archival](INTEROPERABILITY_MODEL.md#tei-mapping), [OntoLex/FrAC semantic](INTEROPERABILITY_MODEL.md#ontolex-mapping),
@@ -97,21 +97,24 @@ states only what differs because LIFT is XML rather than line-oriented SFM.
 
 ## Stress Points (LIFT-specific, beyond the MDF twins above)
 
-- **LIFT is per-entry XML, this profile emits one file per case (a fragment, not
-  a merged lexicon).** A production FLEx/Lexique Pro import expects one `.lift`
-  file containing all entries under a single `<lift>` root plus a `.lift-ranges`
-  sidecar (controlled vocabularies for `<trait>`/`<relation type>` values,
-  parts-of-speech, semantic domains). Neither the merge nor the ranges file is
-  built by this pass — `export-lift.mjs` deliberately mirrors `export-mdf.mjs`'s
-  per-case fragment pattern for review/validation symmetry across all four
-  profiles. Merging into a single importable lexicon is a follow-on step (see
-  Next Steps), not required for the loss-corpus comparison this profile exists
-  to support.
-- **No `.lift-ranges` sidecar yet**, so `<grammatical-info value="m.">` etc. use
-  MW's raw abbreviation strings rather than a LIFT-ranges-conformant controlled
-  vocabulary. FLEx will accept unmapped values but flag them for reconciliation
-  on import — expected friction for a first pass, not a defect to silently paper
-  over.
+- **LIFT is per-entry XML; `export-lift.mjs` still emits one fragment per case
+  for review/validation symmetry with the other three profiles.** A production
+  FLEx/Lexique Pro import expects one `.lift` file plus a `.lift-ranges`
+  sidecar. **H2811** builds that importable pair from the fragments via
+  [`scripts/merge-lift-lexicon.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/merge-lift-lexicon.mjs)
+  → [`data/pilot/lift-lexicon/cdsl-pilot.lift`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/lift-lexicon/cdsl-pilot.lift)
+  + [`cdsl-pilot.lift-ranges`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/lift-lexicon/cdsl-pilot.lift-ranges).
+  Fragments stay the per-case review unit; the merged lexicon is the consumer
+  artifact. Range ids are the raw MW abbreviation strings actually emitted
+  (`m.`, `cl. 5P,5Ā`, `Compound`, `cf`) — FLEx will still flag them for
+  reconciliation against a project-specific writing system, which is expected
+  friction, not a silent paper-over.
+- **Stacked `<note type="source">` was a silent consumer-display loss.** The
+  first-pass emitter wrote one source note per bibliography witness (44/250
+  pilot records, max 12). FLEx / Lexique Pro collapse same-type notes the way
+  Lexique collapsed stacked `\bb` ([Uprava FINDINGS §69](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
+  **H2811** joins them onto one `; `-separated note, `L.` leading when the
+  hedge is present — the MDF H2087 contract ported to LIFT.
 - **`<relation type="Compound">` uses the book's App. D label as the type string
   verbatim, not a LIFT-native controlled-vocabulary term.** This is a pragmatic
   choice, not a claim that "Compound" is part of any LIFT range definition —
@@ -191,13 +194,11 @@ output, `mw-pwg-pwk-nigfhya.lift`):
   (`pypdf` extraction of `MDF_2000.pdf`), not a placeholder pending a future
   digest. q.v. cross-references stay `type="cf"` — no App. D function fits a
   generic see-also pointer (see Stress Points above).
-- **Deferred.** Merging the per-case fragments into a single `<lift>` lexicon
-  file plus a `.lift-ranges` sidecar is needed before a real FLEx/Lexique Pro
-  import, but is not required for loss-corpus comparability — tracked as a
-  follow-on, most naturally alongside the Lexique Pro smoke test
-  ([H722](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H722-Fable_csl-standards_lexique-pro-mdf-smoke-test_11.07.26.md))
-  or the kosha/PWG integration pass
-  ([H727](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H727-Fable_SanskritLexicography_pwg-kosha-mdf-integration_11.07.26.md)).
+- ✅ **Resolved (16-08-2026, H2811).** Merging the per-case fragments into a
+  single `<lift>` lexicon + `.lift-ranges` sidecar is now
+  `npm run merge-lift-lexicon` / the last step of
+  `npm run smoke-lift-consumer-display`. Not a remint of the MDF H722 GUI
+  smoke — a new consumer-green gate on the LIFT profile.
 - **Resolved (for MW).** Vernacular language tag is `sa-Latn-x-slp1` (SLP1 kept
   consistent with the TEI and MDF profiles' orth notation, tagged per BCP-47
   private-use conventions); national language is `en`, matching MDF's `\ge`
@@ -222,7 +223,66 @@ output, `mw-pwg-pwk-nigfhya.lift`):
    profiles.
 4. ✅ **Done (11-07-2026, H721).** `<relation type="Compound">` implemented
    from the book's actual App. D text for compound decomposition.
-5. **Remaining.** Merge per-case fragments into one importable `<lift>` lexicon
-   + `.lift-ranges` sidecar (see Open Questions above).
+5. ✅ **Done (16-08-2026, H2811).** Merge per-case fragments into one
+   importable `<lift>` lexicon + `.lift-ranges` sidecar, and lock the
+   one-source-note consumer-display contract (see Real-Consumer Smoke Test).
+
+## Real-Consumer Smoke Test — FLEx / Lexique Pro (H2811)
+
+The LIFT profile was **validator-green** (`npm run validate-lift-profile`,
+250/250) with **no consumer smoke** — the 06-08 MDF audit explicitly left
+the other four export profiles out of scope
+([PIPELINE_AUDIT_MDF_EXPORT_CONSUMER_06-08-2026.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PIPELINE_AUDIT_MDF_EXPORT_CONSUMER_06-08-2026.md)
+§7). This is not a remint of
+[H2087 (Grok 4.5) — MDF consumer-display silent-empty](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2087-Grok_csl-standards_mdf-consumer-display-silent-empty_01.08.26.md),
+[H2089 (Grok 4.5) — PWG-RU silent-empty route bypass](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2089-Grok_SanskritLexicography_pwg-ru-silent-empty-route-bypass_01.08.26.md),
+or
+[H2086 (Grok 4.5) — batch_pending queue durability](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2086-Grok_csl-corrections_batch-pending-queue-durability_01.08.26.md):
+those three 01-08 residuals already shipped. The still-open gap of the same
+class was LIFT.
+
+Flagship consumers: [FLEx](https://software.sil.org/fieldworks/) and
+[Lexique Pro](https://software.sil.org/lexiquepro/) (same SIL lineage as the
+MDF H722 smoke). They import **one** `.lift` + optional `.lift-ranges`, not
+a directory of fragments. Same-type notes collapse to one visible field —
+the H722 stacked-`\bb` rule applied to `<note type="source">`.
+
+### Pre-fix emit (frozen 250-case pilot, 16-08-2026)
+
+| Check | Count | Consumer effect |
+|---|---|---|
+| Fragment files | 250 | cannot be imported as a lexicon |
+| Stacked `<note type="source">` | **44/250** (max 12, `Ap` / `ah-mw21629`) | only the first note displays |
+| `<etymology source=…>` | 14/250 | LIFT analogue of MDF `\es` — keep emitting |
+| Multi `<relation type="Compound">` | 65/250 | **keep** — LIFT can hold these; unlike stacked MDF `\lf` |
+
+### Emit mitigations + machine proxy
+
+[`scripts/export-lift.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-lift.mjs)
+now emits **at most one** source note, `; `-joined, `L.` leading when the
+hedge is present. [`scripts/smoke-lift-consumer-display.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/smoke-lift-consumer-display.mjs)
+(`npm run smoke-lift-consumer-display`, wired into `build-pilot` and CI after
+`validate-lift-profile`) asserts:
+
+| Check | Fixture / census | Pass criterion |
+|---|---|---|
+| ≤1 `<note type="source">` / entry | all 250 | no stacked bibliography |
+| Multi-ref join | `mw-pwg-pwk-Ap.lift` | single note contains `AV. ix, 5, 22` … `Kathās.` |
+| Hedge+named join | `mw-pwg-pwk-dih.lift` | single note starts `L.; ` and keeps `Dhātup.` |
+| Compound relations survive | `mw-pwg-pwk-DIratA.lift` | both `DIra` and `tA` as `<relation type="Compound">` |
+| Residual etymology source | `mw-pwg-pwk-vi.lift` + census | still emitted (`source="Lat."`; Lexique-display-dead analogue of `\es`) |
+| Importable merge | `data/pilot/lift-lexicon/cdsl-pilot.lift` | one `<lift>` root, 250 `<entry>`, no BOM |
+| Ranges sidecar | `cdsl-pilot.lift-ranges` | `grammatical-info` + `lexical-relation` (`cf`, `Compound`) + `note-type` |
+
+**Empty-delta keep:** do not flatten multiple Compound relations into one
+string — LIFT's data model holds them. Do not drop `<etymology source>` to
+chase Lexique UI. Do not add a UTF-8 BOM (org-wide ban; declare encoding
+in the consumer, same instruction as MDF H722).
+
+This is the `/export-consumer-smoke` checklist for the LIFT profile. It
+does **not** replace a periodic human FLEx/Lexique GUI re-smoke when the
+consumer app itself changes. No Lexique session was launched this pass —
+the emit contract is locked from the H722 display rule plus the LIFT
+import-shape residual the mapping already named.
 
 _Dr. Mārcis Gasūns_
