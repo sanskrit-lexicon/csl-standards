@@ -7,6 +7,13 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 
 ### Fixed
+- **H2307 follow-up — MDF `exporter-hash` is now LF-normalized (H2811).**
+  H2307 hashed `export-mdf.mjs` as checked-out bytes, so a Windows CRLF
+  working tree stamped `ac49cc289067eaef` into 250 `\nt meta:` lines while
+  Ubuntu CI hashed LF (`571ce89a2d34d159`) and failed `validate-mdf-profile`.
+  Both `export-mdf.mjs` and `validate-mdf-profile.mjs` now hash LF-normalized
+  source; committed artifacts restamped to `5e7f982d59c2b5ca`.
+
 - **H2811 — LIFT consumer-display silent-empty (stacked `<note type="source">`).**
   `export-lift.mjs` emitted one source note per bibliography witness (44/250
   pilot records, max 12). FLEx / Lexique Pro collapse same-type notes the way

@@ -20,7 +20,7 @@ const VALIDATION_SCOPE = "full-mdf-marker-profile";
 let exporterHash = null;
 try {
   exporterHash = createHash("sha256")
-    .update(fs.readFileSync(path.join(root, "scripts", "export-mdf.mjs"), "utf8"))
+    .update(fs.readFileSync(path.join(root, "scripts", "export-mdf.mjs"), "utf8").replace(/\r\n/g, "\n"))
     .digest("hex")
     .slice(0, 16);
 } catch { /* skip stale-artifact check if exporter is unreadable */ }

@@ -257,7 +257,7 @@ async function main() {
   const reviewIds = new Set(review.items.map(item => item.id));
   const index = await loadSourceIndexes(hardCases);
 
-  const exporterSrc = await fs.readFile(new URL(import.meta.url), "utf8");
+  const exporterSrc = (await fs.readFile(new URL(import.meta.url), "utf8")).replace(/\r\n/g, "\n");
   const exporterHash = createHash("sha256").update(exporterSrc).digest("hex").slice(0, 16);
 
   for (const model of models) {
