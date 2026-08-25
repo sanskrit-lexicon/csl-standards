@@ -248,7 +248,7 @@ Route the full graph through [`/data-release`](https://github.com/gasyoun/Uprava
    tier/version, build command, acceptance result), the
    [`/publish-safety-check`](https://github.com/gasyoun/Uprava) pass (§1b), and
    [`/cut-release`](https://github.com/gasyoun/Uprava) to promote the
-   [`../changelog.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/changelog.md)
+   [`../CHANGELOG.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/CHANGELOG.md)
    `[Unreleased]` entries to a dated version + tag + GitHub release.
 2. **[HUMAN]** — mint the **Zenodo concept + version DOI** (the concept DOI is the
    stable "all versions" identifier; each release gets its own version DOI) and
