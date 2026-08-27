@@ -1,5 +1,13 @@
 # Roadmap
 
+_Created: 04-06-2026 · Last updated: 27-08-2026_
+
+> Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4):
+> header added, content re-read and found accurate. All five tracks still read true —
+> Tracks 1–4 complete, Track 5 gated on MG's byline/title/venue `@DECIDE` rather than on
+> drafting, and Track 2's live parity still blocked on the Cologne host deploy rather than
+> on code. No status was changed.
+
 Status date: 2026-06-20 (content refreshed 2026-07-27 — Salt Phase 1 GitHub-side merge and
 Track 5 paper-progress synced against `.ai_state.md`/`CHANGELOG.md`/A27 review; H1498).
 
@@ -142,3 +150,5 @@ Exit condition:
 
 > A paper draft that can be sent to an external reader or venue without relying on repository
 > history as explanation.
+
+_Dr. Mārcis Gasūns_

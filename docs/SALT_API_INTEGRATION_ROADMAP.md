@@ -1,5 +1,12 @@
 # Salt API Integration Roadmap — sanskrit-lexicon.uni-koeln.de
 
+_Created: 11-06-2026 · Last updated: 27-08-2026_
+
+> Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4):
+> header added, status line re-read and found accurate. Phase 1's GitHub-side implementation
+> is still merged-and-waiting on the Cologne host deploy plus Apache rewrites — an ops gate
+> on the Cologne maintainer, not further `csl-apidev` code. No status was changed.
+
 Date: 2026-06-20 (Phase 1 GitHub-side merge status added 2026-07-27, H1498)
 Status: **Phase 0 complete; Phase 1 GitHub-side implementation merged in `csl-apidev`
 (PR #59 → PR #46 to `master`, 2026-06-20), blocked on Cologne host deploy + Apache rewrites
@@ -519,3 +526,5 @@ comparison and emits Markdown or JSON parity tables.
 *End of roadmap. The verified contract is now packaged as Phase 0 normative artifacts
 (`SALT_API_PROFILE.md` + RU, `salt-api.openapi.yaml`, `salt-api.graphql`,
 `SALT_API_LOSS_REPORT.md`) and is feeding the `csl-apidev` Phase 1 work.*
+
+_Dr. Mārcis Gasūns_
