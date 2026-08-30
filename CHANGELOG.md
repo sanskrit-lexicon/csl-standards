@@ -6,6 +6,7 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+## [1.3.1] - 2026-08-30
 ### Fixed
 - **H2307 follow-up — MDF `exporter-hash` is now LF-normalized (H2811).**
   H2307 hashed `export-mdf.mjs` as checked-out bytes, so a Windows CRLF
