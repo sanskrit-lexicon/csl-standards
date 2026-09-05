@@ -1,3 +1,5 @@
+_Created: 20-06-2026 · Last updated: 05-09-2026_
+
 # Salt API Phase 0 Checklist
 
 Date: 2026-06-20
@@ -11,12 +13,12 @@ wire shape, field names, or loss policy. The next engineering track is the serve
 
 | Artifact | Role | Phase 0 state |
 |---|---|---|
-| [`SALT_API_PROFILE.md`](SALT_API_PROFILE.md) | Normative prose profile: endpoints, query parameters, entry envelope, `csl` extension object, versioning. | Ready for implementation. |
-| [`SALT_API_PROFILE.ru.md`](SALT_API_PROFILE.ru.md) | Russian mirror of the profile for project coordination. | Present; keep synchronized when the normative profile changes. |
-| [`../data/schema/salt-api.openapi.yaml`](../data/schema/salt-api.openapi.yaml) | OpenAPI 3.1 REST contract for `/dicts/{id}/restful/entries`, `/ids`, and `/graphql`. | Ready for implementation and client generation. |
-| [`../data/schema/salt-api.graphql`](../data/schema/salt-api.graphql) | GraphQL SDL for `entries` and `ids`, including the additive `CslExtension`. | Ready for implementation. |
-| [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md) | CSL ↔ C-SALT divergence catalogue. | Ready as the Phase 1/3 parity ledger. |
-| [`SALT_API_INTEGRATION_ROADMAP.md`](SALT_API_INTEGRATION_ROADMAP.md) | Implementation path for `csl-apidev`. | Phase 0 refreshed; Phase 1 is MW REST pilot. |
+| [`SALT_API_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md) | Normative prose profile: endpoints, query parameters, entry envelope, `csl` extension object, versioning. | Ready for implementation. |
+| [`SALT_API_PROFILE.ru.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.ru.md) | Russian mirror of the profile for project coordination. | Present; keep synchronized when the normative profile changes. |
+| [`../data/schema/salt-api.openapi.yaml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.openapi.yaml) | OpenAPI 3.1 REST contract for `/dicts/{id}/restful/entries`, `/ids`, and `/graphql`. | Ready for implementation and client generation. |
+| [`../data/schema/salt-api.graphql`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.graphql) | GraphQL SDL for `entries` and `ids`, including the additive `CslExtension`. | Ready for implementation. |
+| [`SALT_API_LOSS_REPORT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_LOSS_REPORT.md) | CSL ↔ C-SALT divergence catalogue. | Ready as the Phase 1/3 parity ledger. |
+| [`SALT_API_INTEGRATION_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_INTEGRATION_ROADMAP.md) | Implementation path for `csl-apidev`. | Phase 0 refreshed; Phase 1 is MW REST pilot. |
 
 ## Phase 1 Handoff
 
@@ -43,3 +45,5 @@ For this repository, Phase 0 validation is static:
 For `csl-apidev`, Phase 1 validation compares a fixed MW headword list against
 C-SALT and record entry count, `id`, `headword_slp1`, `sense[]`, `re_headwords_slp1[]`, and
 the `csl` extension payload shape.
+
+_Dr. Mārcis Gasūns_

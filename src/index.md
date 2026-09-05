@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: csl-standards
 toc: false
@@ -28,3 +30,5 @@ without turning the public dictionary atlas into a standards workbench.
 - [Boundary rules](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/BOUNDARY_RULES.md)
 - [Migration plan](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MIGRATION_PLAN.md)
 - [FrAC note](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/FRAC_NOTE.md)
+
+_Dr. Mārcis Gasūns_

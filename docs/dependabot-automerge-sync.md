@@ -1,3 +1,5 @@
+_Created: 14-06-2026 · Last updated: 05-09-2026_
+
 # Dependabot auto-merge — org sync
 
 A scheduled GitHub Actions workflow that keeps every `gasyoun/*` and
@@ -21,8 +23,8 @@ Existing files are **never overwritten** — a repo with a hand-tuned
 `dependabot.yml` (e.g. grouped updates) is left alone. Settings are re-asserted
 every run (cheap, idempotent).
 
-- Workflow: [`.github/workflows/dependabot-automerge-sync.yml`](../.github/workflows/dependabot-automerge-sync.yml)
-- Script: [`.github/scripts/onboard_dependabot.py`](../.github/scripts/onboard_dependabot.py)
+- Workflow: [`.github/workflows/dependabot-automerge-sync.yml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/.github/workflows/dependabot-automerge-sync.yml)
+- Script: [`.github/scripts/onboard_dependabot.py`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/.github/scripts/onboard_dependabot.py)
 
 ## One-time setup: the token
 
@@ -52,3 +54,5 @@ have the workflow yet. A Claude **hook** only fires inside a live Claude session
 and a **skill** only runs when invoked — neither is autonomous. A scheduled
 GitHub Actions workflow is, which is why onboarding lives here. The local
 `/cologne-dependabot-automerge-all` skill remains available for an on-demand sweep.
+
+_Dr. Mārcis Gasūns_

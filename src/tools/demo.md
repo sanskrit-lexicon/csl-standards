@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Worked cases
 toc: false
@@ -183,3 +185,5 @@ display(html`<p class="foot">${t("demo.reproduce")}
   · <a href="https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/tei/${ghCase}.xml" target="_blank">TEI</a>
   · <a href="https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/ontolex/${ghCase}.json" target="_blank">OntoLex</a></p>`);
 ```
+
+_Dr. Mārcis Gasūns_

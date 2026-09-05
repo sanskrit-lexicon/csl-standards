@@ -1,3 +1,5 @@
+_Created: 20-06-2026 · Last updated: 05-09-2026_
+
 # `csl:` Vocabulary Index
 
 Date: 2026-06-20
@@ -53,6 +55,8 @@ answers specific loss phenomena in the validated profiles.
 
 ## Source Files
 
-- SHACL profile: [`../data/schema/ontolex-frac-profile.shacl.ttl`](../data/schema/ontolex-frac-profile.shacl.ttl)
-- Extension proposal: [`EXTENSION_PROPOSAL.md`](EXTENSION_PROPOSAL.md)
-- Scale stability report: [`SCALE_STABILITY.md`](SCALE_STABILITY.md)
+- SHACL profile: [`../data/schema/ontolex-frac-profile.shacl.ttl`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl)
+- Extension proposal: [`EXTENSION_PROPOSAL.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)
+- Scale stability report: [`SCALE_STABILITY.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SCALE_STABILITY.md)
+
+_Dr. Mārcis Gasūns_

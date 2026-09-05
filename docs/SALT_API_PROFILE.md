@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # C-SALT API Profile (CSL)
 
 Version: 0.1.0
@@ -9,13 +11,13 @@ pilot may explicitly return 400 for unimplemented fields/body-search modes; thos
 implementation-stage divergences are tracked in the loss report, not hidden as empty hits.
 
 Machine-readable companions (authoritative for tooling):
-- REST: [`data/schema/salt-api.openapi.yaml`](../data/schema/salt-api.openapi.yaml)
-- GraphQL: [`data/schema/salt-api.graphql`](../data/schema/salt-api.graphql)
+- REST: [`data/schema/salt-api.openapi.yaml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.openapi.yaml)
+- GraphQL: [`data/schema/salt-api.graphql`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.graphql)
 
-Russian mirror: [`SALT_API_PROFILE.ru.md`](SALT_API_PROFILE.ru.md).
-Divergence catalogue: [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md).
-Implementation plan: [`SALT_API_INTEGRATION_ROADMAP.md`](SALT_API_INTEGRATION_ROADMAP.md).
-Phase 0 checklist: [`SALT_API_PHASE0_CHECKLIST.md`](SALT_API_PHASE0_CHECKLIST.md).
+Russian mirror: [`SALT_API_PROFILE.ru.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.ru.md).
+Divergence catalogue: [`SALT_API_LOSS_REPORT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_LOSS_REPORT.md).
+Implementation plan: [`SALT_API_INTEGRATION_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_INTEGRATION_ROADMAP.md).
+Phase 0 checklist: [`SALT_API_PHASE0_CHECKLIST.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PHASE0_CHECKLIST.md).
 
 ---
 
@@ -114,7 +116,7 @@ GET /dicts/{id}/restful/ids?ids={id}&ids={id}…
 
 ## 6. GraphQL (`/graphql`)
 
-The schema is [`salt-api.graphql`](../data/schema/salt-api.graphql). Two root fields:
+The schema is [`salt-api.graphql`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.graphql). Two root fields:
 
 ```graphql
 entries(field: Field = headword_slp1, query: String!, queryType: QueryType = term, size: Int = 25): [Entry!]
@@ -207,10 +209,12 @@ No other structural divergence is permitted by the target profile. Phase 1 imple
 divergences such as `-L{lnum}` ids and explicit 400s for deferred fields/modes are
 catalogued in the loss report. Behavioural divergences
 (coverage of additional dictionaries, additional homonyms, richer `csl` data) are expected
-and catalogued in [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md).
+and catalogued in [`SALT_API_LOSS_REPORT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_LOSS_REPORT.md).
 
 ## 10. Versioning
 
 This profile is versioned independently of any host. Backwards-compatible additions
 (new `csl.*` fields, new dictionary ids) increment the minor version; changes to §8.1 or
 §2–§6 increment the major version.
+
+_Dr. Mārcis Gasūns_

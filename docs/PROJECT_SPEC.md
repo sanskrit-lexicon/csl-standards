@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # MW-PWG-PWK Interoperability Standards Pilot
 
 Date: 2026-05-28
@@ -107,3 +109,5 @@ By the end of month 3:
 ## Working Principle
 
 The workbench must make failure productive. A lossy conversion is not a bug in the research; it is a finding.
+
+_Dr. Mārcis Gasūns_

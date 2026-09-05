@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Changelog
 
 All notable changes to csl-standards are documented here. Releases are dated,
@@ -429,30 +431,30 @@ archival + TEI Lex-0 + OntoLex-Lexicog exports, all machine-validated, with a
 extension proposal, and all five paper figures.
 
 ### Added
-- **Extension proposal** ([docs/EXTENSION_PROPOSAL.md](docs/EXTENSION_PROPOSAL.md)) —
+- **Extension proposal** ([docs/EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)) —
   each documented loss-cause mapped to a concrete TEI/OntoLex construct already
   prototyped in the `csl:` namespace (evidence-type vocabulary, root/derivational
   relation, decomposition-status, adjacency-parent recovery, cross-resource
   lineage, kośa sense-boundary), with a standardize-vs-project-local disposition.
   Discharges PAPER_OUTLINE §8.
-- **Paper figures** ([scripts/build-figures.mjs](scripts/build-figures.mjs),
+- **Paper figures** ([scripts/build-figures.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-figures.mjs),
   `npm run build-figures`) — all five figures as reproducible, dependency-free SVG
   into [data/pilot/figures/](data/pilot/figures), from the analysis artifact and
   neutral model.
-- **TEI Lex-0 ODD** ([data/schema/tei-lex0-profile.odd.xml](data/schema/tei-lex0-profile.odd.xml))
+- **TEI Lex-0 ODD** ([data/schema/tei-lex0-profile.odd.xml](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml))
   + RNG validation wired into `validate-external-profiles` (gated on the
   Java/TEI-Stylesheets toolchain; recorded as `skipped` when absent), encoding the
   Lex-0 baseline shape and the kośa sense-boundary customisation.
 - **Senses across all three dictionaries** — MW segmenter
-  ([scripts/lib/mw-senses.mjs](scripts/lib/mw-senses.mjs)) and PWG/PWK extractor
-  ([scripts/lib/pw-senses.mjs](scripts/lib/pw-senses.mjs)) — with **sense-level
+  ([scripts/lib/mw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/mw-senses.mjs)) and PWG/PWK extractor
+  ([scripts/lib/pw-senses.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/pw-senses.mjs)) — with **sense-level
   citation linkage** in TEI Lex-0 (MW) and OntoLex (all three).
 - **Named-source citation layer** in the neutral model — every `<ls>` across
   MW/PWG/PWK, tagged by dictionary, materialized once and shared.
 - **Loss-report families**: PWG → PWK → MW source-collapse (`editorial-compression`)
   and the indigenous kośa sense/citation fusion (`sanskrit-convention`).
-- **Month-3 loss-report analysis** ([scripts/analyze-loss-reports.mjs](scripts/analyze-loss-reports.mjs),
-  [docs/LOSS_ANALYSIS.md](docs/LOSS_ANALYSIS.md)) and a **public bilingual Loss
+- **Month-3 loss-report analysis** ([scripts/analyze-loss-reports.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/analyze-loss-reports.mjs),
+  [docs/LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md)) and a **public bilingual Loss
   Analysis page** on the Observable site.
 - Broadened the **SKD kośa parser** to six records with SLP1→IAST transliteration
   and a work-vs-person `<title>`/`<author>` split.
@@ -465,13 +467,13 @@ extension proposal, and all five paper figures.
   per source dictionary, multilingual senses, sense-level `frac:Attestation`s — and
   made fully model-driven (no re-extraction from raw).
 - Centralised the `<ls>` citation parser
-  ([scripts/lib/citations.mjs](scripts/lib/citations.mjs)) shared by the neutral
+  ([scripts/lib/citations.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/citations.mjs)) shared by the neutral
   model and both exporters.
 
 ### Fixed
 - Generated artifacts are **byte-reproducible**: generators honour
   `SOURCE_DATE_EPOCH` and otherwise omit `generatedAt`
-  ([scripts/lib/provenance.mjs](scripts/lib/provenance.mjs)).
+  ([scripts/lib/provenance.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/provenance.mjs)).
 - Code-review findings: Figure 5 height clipping; OntoLex `lexicog:entry` domain
   violation on the lemma; sampler double-compaction.
 
@@ -490,3 +492,5 @@ relabelled to track the project's `package.json` version at the time).
 - 2026-06-13 Merge pull request #5 from sanskrit-lexicon/feat/tei-lex0-generator
 - 2026-06-13 feat: TEI Lex-0 generator + structural validator (G2 slice 2)
 - 2026-06-13 Merge pull request #4 from sanskrit-lexicon/docs/tei-lex0-pilot
+
+_Dr. Mārcis Gasūns_

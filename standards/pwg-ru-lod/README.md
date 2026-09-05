@@ -1,10 +1,10 @@
 # PWG→RU LOD graph — SPARQL surface + SHACL profile (E7)
 
-_Created: 08-07-2026 · Last updated: 08-07-2026_
+_Created: 08-07-2026 · Last updated: 05-09-2026_
 
 This directory is the `csl-standards`-owned **standards surface** for the PWG→RU
 (Petersburg Dictionary → Russian) Linked-Open-Data graph. Per the
-[boundary rules](../../docs/BOUNDARY_RULES.md), OntoLex/LOD **exports** live here,
+[boundary rules](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/BOUNDARY_RULES.md), OntoLex/LOD **exports** live here,
 not in the pipeline repo: the graph **generator + input data** stay in
 [`gasyoun/SanskritLexicography` → `RussianTranslation`](https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation),
 and the **published graph + the query/validation surface** land in `csl-standards`.
@@ -32,14 +32,14 @@ full model + before/after coverage table in
 
 ## Files here
 
-- [`sense_citation_dcsfreq.rq`](sense_citation_dcsfreq.rq) — the acceptance query:
+- [`sense_citation_dcsfreq.rq`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/standards/pwg-ru-lod/sense_citation_dcsfreq.rq) — the acceptance query:
   join a PWG sense to its `<ls>` citation **and** the DCS frequency of its lemma,
   across the shared lemma IRI (offline two-graph form + a commented `SERVICE`
   true-federation variant).
-- [`shapes.ttl`](shapes.ttl) — the SHACL profile pinning the modelling contract
+- [`shapes.ttl`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/standards/pwg-ru-lod/shapes.ttl) — the SHACL profile pinning the modelling contract
   (entry has a lemma + label; sense has a grade + definition; citation/attestation/
   relation carry their required provenance fields).
-- [`void.ttl`](void.ttl) — **stub template** for the VoID + DCAT dataset descriptor
+- [`void.ttl`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/standards/pwg-ru-lod/void.ttl) — **stub template** for the VoID + DCAT dataset descriptor
   (title, license, publisher, the two graphs, triple counts). Not live metadata —
   fill the `<TODO>` counts from a real full-graph build before publishing; see the
   runbook §5.
@@ -54,7 +54,7 @@ in `RussianTranslation` and validated there by
 The full, ordered runbook for taking this graph from *validated-locally* to real
 published Linked Open Data — every step tagged [HUMAN] / [AGENT] / [HUMAN-DECIDE],
 with a consolidated checklist — is
-[`docs/PUBLISHING_LOD.md`](../../docs/PUBLISHING_LOD.md). The summary below is the
+[`docs/PUBLISHING_LOD.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PUBLISHING_LOD.md). The summary below is the
 current status; that doc is what a human works down to publish.
 
 Consistent with this repo's mission ("leave real RDF publication for a later

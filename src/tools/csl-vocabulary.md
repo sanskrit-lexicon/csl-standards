@@ -1,3 +1,5 @@
+_Created: 20-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: csl vocabulary
 ---
@@ -51,3 +53,5 @@ each construct to the loss phenomenon it repairs or preserves.
 | `sense-citation-fusion` | TEI Lex-0 kośa fixture + visible loss report | TEI Lex-0 validation |
 
 Full documentation: [CSL vocabulary index](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/CSL_VOCABULARY.md).
+
+_Dr. Mārcis Gasūns_

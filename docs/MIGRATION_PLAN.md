@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # TEI/OntoLex Migration Plan
 
 Date: 2026-06-03
@@ -107,3 +109,5 @@ Completed on 2026-06-04. The order below is retained as an audit trail.
 
 After the pipeline is moved, `csl-atlas` keeps only a short pointer to this
 repository. New feature work must happen in `csl-standards`.
+
+_Dr. Mārcis Gasūns_

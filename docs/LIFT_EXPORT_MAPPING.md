@@ -1,10 +1,10 @@
 # LIFT Export Mapping (Fourth Profile)
 
-_Created: 11-07-2026 · Last updated: 16-08-2026_
+_Created: 11-07-2026 · Last updated: 05-09-2026_
 
 Status: **implemented.** The **fourth export profile**, beside the existing
 [TEI archival](INTEROPERABILITY_MODEL.md#tei-mapping), [OntoLex/FrAC semantic](INTEROPERABILITY_MODEL.md#ontolex-mapping),
-and [MDF flat-field](MDF_EXPORT_MAPPING.md) views, targeting SIL's
+and [MDF flat-field](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md) views, targeting SIL's
 **LIFT (Lexicon Interchange FormaT)** XML schema — the modern successor to MDF's
 SFM markers, consumed directly by [FLEx](https://software.sil.org/fieldworks/) and
 [Lexique Pro](https://software.sil.org/lexiquepro/), and the source format

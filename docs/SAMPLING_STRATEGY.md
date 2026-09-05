@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Automatic Hard-Case Sampling Strategy
 
 The pilot sample is not meant to be statistically representative. It is meant to stress TEI and OntoLex.
@@ -67,3 +69,5 @@ Each case records:
 Automatic sampling finds useful trouble. It does not decide the scholarly interpretation.
 
 Every case chosen for the paper should be reviewed manually before it is cited.
+
+_Dr. Mārcis Gasūns_

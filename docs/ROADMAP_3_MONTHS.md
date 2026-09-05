@@ -1,6 +1,6 @@
 # Roadmap
 
-_Created: 04-06-2026 · Last updated: 27-08-2026_
+_Created: 04-06-2026 · Last updated: 05-09-2026_
 
 > Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4):
 > header added, content re-read and found accurate. All five tracks still read true —
@@ -54,8 +54,8 @@ Status: complete as of 2026-06-20.
 The new `npm run scale-check` harness runs 500- and 1000-case pilots, captures compact
 summaries, and restores canonical `data/pilot/*` and `src/data/pilot/*` before exiting.
 
-Results are recorded in [`SCALE_STABILITY.md`](SCALE_STABILITY.md) and
-[`../data/scale/scale-stability-report.json`](../data/scale/scale-stability-report.json).
+Results are recorded in [`SCALE_STABILITY.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SCALE_STABILITY.md) and
+[`../data/scale/scale-stability-report.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/scale/scale-stability-report.json).
 
 Observed results:
 
@@ -83,12 +83,12 @@ checkpoint").
 Salt API is the next engineering track after scaling, but server implementation belongs in
 `csl-apidev`. This repository owns the contract package:
 
-- [`SALT_API_PROFILE.md`](SALT_API_PROFILE.md) — normative REST/GraphQL profile.
-- [`SALT_API_PROFILE.ru.md`](SALT_API_PROFILE.ru.md) — Russian mirror.
-- [`../data/schema/salt-api.openapi.yaml`](../data/schema/salt-api.openapi.yaml) — OpenAPI.
-- [`../data/schema/salt-api.graphql`](../data/schema/salt-api.graphql) — GraphQL SDL.
-- [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md) — CSL ↔ C-SALT divergence ledger.
-- [`SALT_API_PHASE0_CHECKLIST.md`](SALT_API_PHASE0_CHECKLIST.md) — implementation handoff checklist.
+- [`SALT_API_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md) — normative REST/GraphQL profile.
+- [`SALT_API_PROFILE.ru.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.ru.md) — Russian mirror.
+- [`../data/schema/salt-api.openapi.yaml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.openapi.yaml) — OpenAPI.
+- [`../data/schema/salt-api.graphql`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.graphql) — GraphQL SDL.
+- [`SALT_API_LOSS_REPORT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_LOSS_REPORT.md) — CSL ↔ C-SALT divergence ledger.
+- [`SALT_API_PHASE0_CHECKLIST.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PHASE0_CHECKLIST.md) — implementation handoff checklist.
 
 Next implementation step outside this repo: Cologne host deploy + Apache rewrites for the
 already-merged MW REST pilot (ops gate), then the Phase 2 GraphQL pilot.
@@ -99,7 +99,7 @@ Status: complete as of 2026-06-20.
 
 The small vocabulary/index page is now available as:
 
-- [`CSL_VOCABULARY.md`](CSL_VOCABULARY.md) for repository readers.
+- [`CSL_VOCABULARY.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/CSL_VOCABULARY.md) for repository readers.
 - `/tools/csl-vocabulary` on the Observable site.
 
 It indexes the project-local `csl:` terms and maps each major loss phenomenon to its

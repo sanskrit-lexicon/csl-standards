@@ -1,21 +1,23 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Loss-Report Analysis (Month 3)
 
 Quantitative analysis of the pilot loss reports and the MW/PWG/PWK
-cross-dictionary signal. This backs [PAPER_OUTLINE.md](PAPER_OUTLINE.md) §7
+cross-dictionary signal. This backs [PAPER_OUTLINE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER_OUTLINE.md) §7
 (PWG→PWK→MW transformations), §8 (Standards Critique), Figure 2 (evidence-class
 comparison), and Figure 5 (loss-report distribution).
 
 All numbers here are **regenerable**: run `npm run analyze-loss`
-([`scripts/analyze-loss-reports.mjs`](../scripts/analyze-loss-reports.mjs)),
-which reads [`data/pilot/loss-reports.json`](../data/pilot/loss-reports.json) and
-[`data/pilot/neutral-model.json`](../data/pilot/neutral-model.json) and writes the
-machine artifact [`data/pilot/loss-analysis.json`](../data/pilot/loss-analysis.json).
+([`scripts/analyze-loss-reports.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/analyze-loss-reports.mjs)),
+which reads [`data/pilot/loss-reports.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-reports.json) and
+[`data/pilot/neutral-model.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/neutral-model.json) and writes the
+machine artifact [`data/pilot/loss-analysis.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-analysis.json).
 Do not hand-edit the tables below — re-run the script.
 
 Corpus: **1722 loss reports** across the 250 Western cases and 6 indigenous *kośa*
 entries. Five families are present:
 
-Scale robustness is recorded separately in [SCALE_STABILITY.md](SCALE_STABILITY.md):
+Scale robustness is recorded separately in [SCALE_STABILITY.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SCALE_STABILITY.md):
 500- and 1000-case runs preserve the central asymmetry, evidence-loss dominance, and
 complete extension/lineage coverage while leaving this canonical 250-case corpus
 unchanged. (The scale check predates the MDF lane and covers the TEI / OntoLex /
@@ -66,7 +68,7 @@ archival profile is never `lossy` (75 clean, 217 partial); OntoLex is never
 `clean` (662 partial, 100 lossy). TEI can always at least preserve the dictionary
 *as an edition*; OntoLex never merely transcribes, so it either relates the data
 or drops what it cannot relate. The models do not fail — they **succeed
-differently** ([PAPER_OUTLINE.md](PAPER_OUTLINE.md) §3). The only `tei`-lossy
+differently** ([PAPER_OUTLINE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER_OUTLINE.md) §3). The only `tei`-lossy
 reports (6) are *not* Western: they are the indigenous *kośa* sense/citation
 fusion in the Lex-0 baseline (§4a) — a different TEI profile and a different
 lexicographic tradition.
@@ -75,7 +77,7 @@ lexicographic tradition.
 (0 clean, 0 partial, 292 lossy): on every probed phenomenon the flat field
 schema drops the distinction entirely — there is no field to be partially
 adequate *with*. This is by design (lossiness is the finding, not a failure —
-[MDF_EXPORT_MAPPING.md](MDF_EXPORT_MAPPING.md)): the lane measures which CDSL
+[MDF_EXPORT_MAPPING.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md)): the lane measures which CDSL
 distinctions are structurally load-bearing, and every one probed turned out to
 be.
 
@@ -220,8 +222,8 @@ leads the corpus, and the §8 extension layer's primary target.
 **The remedy is now implemented in both target standards and validated.** OntoLex
 emits a sub-typed `csl:evidenceClass` ∈ {`textual`, `hedge`, `kosha`, `editorial`}
 on every `frac:Attestation`, parsing a coordinate-bearing citation into
-`csl:citedWork` + `csl:citedRange` ([scripts/lib/evidence.mjs](../scripts/lib/evidence.mjs),
-[export-ontolex.mjs](../scripts/export-ontolex.mjs)); the [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl)
+`csl:citedWork` + `csl:citedRange` ([scripts/lib/evidence.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/evidence.mjs),
+[export-ontolex.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-ontolex.mjs)); the [SHACL profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl)
 constrains the class with `sh:in`, and all 250 graphs conform under pySHACL. The
 TEI archival and Lex-0 exports carry the same class as `@subtype` (plus a
 `<citedRange>`) on every citation `<bibl>`, validated against the compiled TEI
@@ -244,7 +246,7 @@ of the phenomena (the roadmap's "do not hide model failures").
 - **Named citations are now materialized in the neutral model** (done). The model
   carries **3844 named-source citations**, each tagged with its dictionary. Optional
   dictionaries beyond the tri-dict backbone are attached via a registry
-  ([scripts/lib/dictionaries.mjs](../scripts/lib/dictionaries.mjs)): Apte 1890
+  ([scripts/lib/dictionaries.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/dictionaries.mjs)): Apte 1890
   (AP90, 133/250 cases), Grassmann's Rig-Veda Wörterbuch (GRA, 109/250), the Frish
   Sanskrit Reader (FRI, 87/250), and Benfey Sanskrit-English 1866 (BEN, 142/250).
   They now enter **all four profiles**: OntoLex, archival TEI, TEI Lex-0, and the
@@ -254,7 +256,7 @@ of the phenomena (the roadmap's "do not hide model failures").
   AP90 73, GRA 77, and BEN 3 reports in the current 470-report family.
 - **All schema *phenomena* are now emitted** (done): `named-kosha-citation`,
   `citation-coordinate` and `editorial-reference` — previously defined in
-  [LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md) but unused — are emitted as the
+  [LOSS_REPORT_SCHEMA.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_REPORT_SCHEMA.md) but unused — are emitted as the
   evidence-class sub-typing family (§4b), alongside the already-emitted
   `source-collapse`. `analyze-loss` reports `schemaPhenomenaNotEmitted: []`.
 - **Every roadmap failure cause is now emitted** (done): `data-quality` is emitted
@@ -281,3 +283,5 @@ asymmetry (the neutral lane being the *most* lossy) is a full-corpus measurement
 the review slice is deliberately root/hedge-heavy, so it contains only 30 of the
 369 source-collapse reports (10 lossy, 20 partial) and does not, on its own, show
 the lineage-collapse magnitude.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # FrAC Note
 
 FrAC means Frequency, Attestation and Corpus information. It is an OntoLex
@@ -23,3 +25,5 @@ Not allowed now:
 - build FrAC dashboards inside `csl-atlas`;
 - mix FrAC with `csl-observatory` unless measuring repository activity around
   FrAC work.
+
+_Dr. Mārcis Gasūns_

@@ -1,6 +1,8 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Paper Outline
 
-> The full prose draft is now in [PAPER.md](PAPER.md). This file remains the
+> The full prose draft is now in [PAPER.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER.md). This file remains the
 > planning outline (section skeleton, figure list, abstract sketch); the draft
 > elaborates it into a complete article reporting the implemented + validated
 > extension layer.
@@ -9,12 +11,12 @@ Working title:
 
 **A Serialization Standard for the Petersburg-Family Sanskrit Dictionaries: Evidence, Derivation, and Compression across TEI, OntoLex, and MDF**
 
-> Reframed 2026-07-03 (see [A27_review_fable5.md](A27_review_fable5.md)): the
+> Reframed 2026-07-03 (see [A27_review_fable5.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A27_review_fable5.md)): the
 > headline is the MW+PWG+PWK serialization standard with three export profiles —
 > TEI Lex-0, OntoLex, and MDF (mapping adopted 2026-07-02 and since implemented
 > as a measured lane of the loss corpus); the TEI↔OntoLex loss comparison
 > remains the evaluation core. The skeleton below predates the reframe — the
-> prose draft in [PAPER.md](PAPER.md) is authoritative.
+> prose draft in [PAPER.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER.md) is authoritative.
 > Former working title: *Sanskrit Lexicography Between TEI and OntoLex:
 > Evidence, Derivation, and Compression in MW, PWG, and PWK*.
 
@@ -58,11 +60,11 @@ The dense compression of MW, PWG, and PWK relies heavily on nested subentries fo
 
 ### 7. PWG To PWK To MW Transformations
 
-Tracing entries across the three dictionaries reveals that compression and translation are not semantically neutral operations. PWK serves as an abridgement and reinterpretation of PWG, often discarding specific kosha citations in favor of generalized summaries. MW, in turn, acts as an English recomposition of the Petersburg dictionaries, further simplifying the evidential apparatus (e.g., collapsing specific references into the `L.` hedge). This editorial compression is semantically meaningful; tracking the transformation from PWG to PWK to MW demonstrates how evidential certainty degrades across the lineage. We measure this directly: of the 250 cases, PWK abridges PWG's named apparatus in **all 250** (123 drop it entirely, 127 retain a subset — e.g. *ac*: PWG 35 → PWK 8 → MW 3), and in **119 cases** MW carries no citation at all where PWG named a textual source. These 369 source-collapse losses are recorded as `target: neutral` loss reports with `editorial-compression` as the cause and an evidence-bound `sourceEvidence` payload, because the loss is upstream of any model choice — TEI and OntoLex can both represent named citations. An interoperable model must be capable of representing these cross-dictionary lineage transformations. Full breakdown in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4.
+Tracing entries across the three dictionaries reveals that compression and translation are not semantically neutral operations. PWK serves as an abridgement and reinterpretation of PWG, often discarding specific kosha citations in favor of generalized summaries. MW, in turn, acts as an English recomposition of the Petersburg dictionaries, further simplifying the evidential apparatus (e.g., collapsing specific references into the `L.` hedge). This editorial compression is semantically meaningful; tracking the transformation from PWG to PWK to MW demonstrates how evidential certainty degrades across the lineage. We measure this directly: of the 250 cases, PWK abridges PWG's named apparatus in **all 250** (123 drop it entirely, 127 retain a subset — e.g. *ac*: PWG 35 → PWK 8 → MW 3), and in **119 cases** MW carries no citation at all where PWG named a textual source. These 369 source-collapse losses are recorded as `target: neutral` loss reports with `editorial-compression` as the cause and an evidence-bound `sourceEvidence` payload, because the loss is upstream of any model choice — TEI and OntoLex can both represent named citations. An interoperable model must be capable of representing these cross-dictionary lineage transformations. Full breakdown in [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4.
 
 ### 8. Standards Critique
 
-Our dual-profile mapping reveals what maps cleanly, what maps partially, and what becomes lossy. Across the 1430 loss reports for the 250-case pilot, the two models fail **asymmetrically**: the TEI archival profile is never `lossy` for the Western cases (75 clean, 217 partial), while the OntoLex semantic profile is never `clean` (0 clean, 662 partial, 100 lossy). TEI can always at least preserve the dictionary as an edition; OntoLex never merely transcribes, so it either relates the data or drops what it cannot relate. By cause, the leading class is **model-vocabulary gaps (55%)** where the target standards lack a concept — chiefly an *evidence class* (kośa vs textual vs editorial citation, and the unparsed citation coordinate) — followed by **editorial-compression (26%)** upstream lineage loss the standards could have held, against 8% CDSL-markup and 6% print-compression, so the remedy combines a standards extension layer with cross-dictionary lineage modeling. The single largest stress point is source-collapse (26%), ahead of the unparsed citation coordinate (25%) and the MW `L.` hedge (16%); evidence-related phenomena together are 75% of the corpus. To address these gaps, we implement a Sanskrit lexicographic extension layer for both standards. This layer introduces specific modeling for the evidence class, root relation types, compound decomposition status, continuation parent status, and source-collapse relations, ensuring that the unique features of Sanskrit lexicography are preserved in digital formats. The concrete constructs — each prototyped in the `csl:` namespace, tied to the loss it answers, and marked as standardize-vs-project-local — are set out in [EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md). The full breakdown, and the honest coverage limits of the current instrument, are in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md).
+Our dual-profile mapping reveals what maps cleanly, what maps partially, and what becomes lossy. Across the 1430 loss reports for the 250-case pilot, the two models fail **asymmetrically**: the TEI archival profile is never `lossy` for the Western cases (75 clean, 217 partial), while the OntoLex semantic profile is never `clean` (0 clean, 662 partial, 100 lossy). TEI can always at least preserve the dictionary as an edition; OntoLex never merely transcribes, so it either relates the data or drops what it cannot relate. By cause, the leading class is **model-vocabulary gaps (55%)** where the target standards lack a concept — chiefly an *evidence class* (kośa vs textual vs editorial citation, and the unparsed citation coordinate) — followed by **editorial-compression (26%)** upstream lineage loss the standards could have held, against 8% CDSL-markup and 6% print-compression, so the remedy combines a standards extension layer with cross-dictionary lineage modeling. The single largest stress point is source-collapse (26%), ahead of the unparsed citation coordinate (25%) and the MW `L.` hedge (16%); evidence-related phenomena together are 75% of the corpus. To address these gaps, we implement a Sanskrit lexicographic extension layer for both standards. This layer introduces specific modeling for the evidence class, root relation types, compound decomposition status, continuation parent status, and source-collapse relations, ensuring that the unique features of Sanskrit lexicography are preserved in digital formats. The concrete constructs — each prototyped in the `csl:` namespace, tied to the loss it answers, and marked as standardize-vs-project-local — are set out in [EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md). The full breakdown, and the honest coverage limits of the current instrument, are in [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md).
 
 ### 9. The Standards Workbench
 
@@ -75,28 +77,28 @@ Sanskrit dictionaries are not mere edge cases to be normalized away by rigid dig
 ## Figures
 
 All five figures are generated as reproducible SVG by `npm run build-figures`
-([scripts/build-figures.mjs](../scripts/build-figures.mjs)) into
+([scripts/build-figures.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-figures.mjs)) into
 [`data/pilot/figures/`](../data/pilot/figures/). Figures 1, 2, 5 are driven by
 `data/pilot/loss-analysis.json`; Figures 3, 4 are concept diagrams grounded in a
 real pilot exemplar (a root with a Whitney pointer; a compound with a
 decomposition).
 
 1. Three-view architecture: CDSL → neutral model → TEI/OntoLex.
-   → [`figure-1-architecture.svg`](../data/pilot/figures/figure-1-architecture.svg)
+   → [`figure-1-architecture.svg`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-1-architecture.svg)
 2. Evidence-class comparison: PWG named kosha citations vs MW `L.` — 119/250 cases
    are `mw-uncited-pwg-cited` (PWG names a source MW reduces to `L.` or drops).
-   → [`figure-2-evidence-collapse.svg`](../data/pilot/figures/figure-2-evidence-collapse.svg);
-   data: [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4.
+   → [`figure-2-evidence-collapse.svg`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-2-evidence-collapse.svg);
+   data: [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4.
 3. Root modeling: a root as lexical entry vs derivational base (TEI `<etym type="root">`
    vs OntoLex `csl:RootRelation`).
-   → [`figure-3-root-modeling.svg`](../data/pilot/figures/figure-3-root-modeling.svg)
+   → [`figure-3-root-modeling.svg`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-3-root-modeling.svg)
 4. Compound archival/semantic split: TEI subentry/adjacency vs OntoLex
    `decomp:ComponentList`.
-   → [`figure-4-compound-split.svg`](../data/pilot/figures/figure-4-compound-split.svg)
+   → [`figure-4-compound-split.svg`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-4-compound-split.svg)
 5. Loss-report distribution: the TEI-never-lossy / OntoLex-never-clean asymmetry
    and the by-cause breakdown.
-   → [`figure-5-loss-distribution.svg`](../data/pilot/figures/figure-5-loss-distribution.svg);
-   data: [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §1–2.
+   → [`figure-5-loss-distribution.svg`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-5-loss-distribution.svg);
+   data: [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §1–2.
 
 ## Minimum Submission Dataset
 
@@ -109,3 +111,5 @@ decomposition).
 - Human philological review status clearly separated from machine/profile validation.
 - 5 fully discussed paper cases.
 - Public archive of JSON, TEI, and OntoLex outputs.
+
+_Dr. Mārcis Gasūns_

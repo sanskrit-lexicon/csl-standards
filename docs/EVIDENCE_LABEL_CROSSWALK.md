@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Evidence-Label Crosswalk
 
 Date: 2026-06-13
@@ -20,10 +22,10 @@ the `csl-atlas` review gap G3 ("the in-house evidence vocabulary is unmapped").
   itself grade certainty (see §A); several status mappings are annotations, not
   core PROV relations (flagged inline).
 - Validation: Turtle examples use the prefixes already declared in
-  [`data/schema/ontolex-frac-profile.shacl.ttl`](../data/schema/ontolex-frac-profile.shacl.ttl);
+  [`data/schema/ontolex-frac-profile.shacl.ttl`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl);
   not machine-validated here.
 - Owner repo: `csl-standards` (standards mapping is out of scope for `csl-atlas`
-  per [`docs/BOUNDARY_RULES.md`](BOUNDARY_RULES.md)).
+  per [`docs/BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/BOUNDARY_RULES.md)).
 - Next use: a future profile revision can enforce the label→`@cert` and
   label→`prov:` mappings via the archival ODD and the OntoLex/FrAC SHACL shapes.
 
@@ -208,17 +210,17 @@ corrected it, the prior machine value would appear inside
 
 ## 4. How this attaches to the existing profiles
 
-- **OntoLex/FrAC SHACL** ([`ontolex-frac-profile.shacl.ttl`](../data/schema/ontolex-frac-profile.shacl.ttl))
+- **OntoLex/FrAC SHACL** ([`ontolex-frac-profile.shacl.ttl`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl))
   already requires `prov:wasDerivedFrom` on every `frac:Attestation` and
   `dct:source` on every `csl:SourceRecord`. `csl:evidenceLevel` and
   `csl:reviewStatus` attach to the value/attestation node as additional
   properties; a future profile revision can add
   `sh:property [ sh:path csl:evidenceLevel ; sh:in ( "observed" "derived" "inferred" "reviewed" ) ]`.
-- **TEI archival ODD** ([`tei-archival-profile.odd.xml`](../data/schema/tei-archival-profile.odd.xml))
+- **TEI archival ODD** ([`tei-archival-profile.odd.xml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-archival-profile.odd.xml))
   governs `@cert` / `@resp`; the label→`@cert` mapping in §A is what a Schematron
   rule in the ODD would enforce (e.g. `evidenceLevel="inferred"` ⇒ `@cert` not
   `"high"`).
-- **Neutral model** ([`INTEROPERABILITY_MODEL.md`](INTEROPERABILITY_MODEL.md)):
+- **Neutral model** ([`INTEROPERABILITY_MODEL.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/INTEROPERABILITY_MODEL.md)):
   `csl:evidenceType` (citation class) and `csl:evidenceLevel` (epistemic grade)
   are kept as separate properties, per §1.
 
@@ -252,3 +254,5 @@ corrected it, the prior machine value would appear inside
 - Source vocabularies: `csl-atlas/docs/EVIDENCE_LABELS.md`,
   `csl-atlas/docs/REVIEW_REPORTS.md`,
   `csl-atlas/data/schema/review-report.schema.json`.
+
+_Dr. Mārcis Gasūns_

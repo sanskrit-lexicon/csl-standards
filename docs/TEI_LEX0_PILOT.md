@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # TEI Lex-0 Pilot
 
 Date: 2026-06-13
@@ -16,19 +18,19 @@ down the target element model and proving the hard, novel case (the indigenous
 entry), with each statement's epistemic status bound to `@cert`/`@resp`.
 
 Hand-authored exemplar (the documented target encoding, with inline comments):
-[`data/pilot/tei-lex0/pilot-sample.lex0.tei.xml`](../data/pilot/tei-lex0/pilot-sample.lex0.tei.xml)
+[`data/pilot/tei-lex0/pilot-sample.lex0.tei.xml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/tei-lex0/pilot-sample.lex0.tei.xml)
 (entries `mw-gaja`, `skd-dharma`; well-formed; 5 senses; 11 `@cert`-bound nodes).
 
 Generated corpus: `npm run export-tei-lex0`
-([`scripts/export-tei-lex0.mjs`](../scripts/export-tei-lex0.mjs)) emits **256**
+([`scripts/export-tei-lex0.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei-lex0.mjs)) emits **256**
 Lex-0 entries under `data/pilot/tei-lex0/*.lex0.xml` — the 250 MW/PWG/PWK neutral-
 model cases plus **6 indigenous SKD entries** (*Darmma*, *kīrti*, *kaṇṭha*,
 *vara*, *pāruṣya*, *tūla*). The SKD entries are **parsed from source**
-by `npm run parse-skd-kosa` ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)),
+by `npm run parse-skd-kosa` ([`scripts/parse-skd-kosa.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs)),
 which segments each kośa record by its closing authorities (*iti amaraḥ* / *iti
 medinī* / *iti hemacandraḥ*, plus *Bharata*, *Jaṭādhara*, *Trikāṇḍaśeṣa*,
 *Śabdaratnāvalī*, *Viśva*, *Śabdacandrikā*) into
-[`data/pilot/lex0-fixtures.json`](../data/pilot/lex0-fixtures.json). Glosses are
+[`data/pilot/lex0-fixtures.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/lex0-fixtures.json). Glosses are
 transliterated from the SLP1 source to IAST (the lemma `orth` is left in SLP1, as
 declared); recognised kośas are emitted as `<bibl><title>`, persons as
 `<bibl><author>`. Every statement carries `@cert`/`@resp`; `npm run
@@ -50,11 +52,11 @@ are wired into `build-pilot`.
 
 ## 1. What already exists, and the gap
 
-The workbench already emits TEI: [`scripts/export-tei.mjs`](../scripts/export-tei.mjs)
+The workbench already emits TEI: [`scripts/export-tei.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei.mjs)
 produces 250 entries under `data/pilot/tei/`, validated by
-[`scripts/validate-tei-profile.mjs`](../scripts/validate-tei-profile.mjs). But that
+[`scripts/validate-tei-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-profile.mjs). But that
 output is the project's own **archival** profile (`tei-archival-profile-v0.1`,
-see [`VALIDATED_INTEROPERABILITY_PROFILE.md`](VALIDATED_INTEROPERABILITY_PROFILE.md)),
+see [`VALIDATED_INTEROPERABILITY_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/VALIDATED_INTEROPERABILITY_PROFILE.md)),
 and it is, by design, **not** TEI Lex-0:
 
 - it targets the TEI *Dictionaries* module for archival fidelity (it preserves
@@ -62,7 +64,7 @@ and it is, by design, **not** TEI Lex-0:
   DARIAH Lex-0 baseline for interchange;
 - it covers **only MW/PWG/PWK** — no indigenous dictionary;
 - it carries **no `@cert`/`@resp`** evidence metadata, although the crosswalk
-  ([`EVIDENCE_LABEL_CROSSWALK.md`](EVIDENCE_LABEL_CROSSWALK.md)) specifies the
+  ([`EVIDENCE_LABEL_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md)) specifies the
   mapping.
 
 This pilot adds the three missing pieces: a Lex-0 target encoding, an indigenous
@@ -127,7 +129,7 @@ lexicographic tradition it baselines) assumes sense and source are separable, so
 the encoding must split the unit into a `<def>` plus a `<bibl>` — and the output
 flags this with `<note type="model-loss">`.
 
-The parser ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)) makes
+The parser ([`scripts/parse-skd-kosa.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs)) makes
 this structural rather than asserted: it segments the record on its closing
 authorities, so each `<sense>` *is* an authority group (Amara → Medinī →
 Hemacandra), and the synonym run plus its `iti amaraḥ` become one sense carrying
@@ -147,22 +149,22 @@ declares it with `<note type="entry-convention">kosa-iti-unit</note>`, every sen
 closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus a
 `<note type="model-loss">` witnessing the fusion, the ODD's
 `csl-lex0-kosa-sense-boundary` Schematron asserts the pairing, and
-[`validate-tei-lex0`](../scripts/validate-tei-lex0.mjs) enforces it in `build-pilot`.
+[`validate-tei-lex0`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-lex0.mjs) enforces it in `build-pilot`.
 
 ## 6. Validation status
 
-- **Done (slice 2):** [`scripts/validate-tei-lex0.mjs`](../scripts/validate-tei-lex0.mjs)
+- **Done (slice 2):** [`scripts/validate-tei-lex0.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-lex0.mjs)
   checks all 256 generated entries for well-formedness and the Lex-0 baseline
   shape — a lemma `form/orth`, a `gramGrp` or `sense`, `@cert` on the lemma orth,
   the profile-version note, and the **absence** of the archival
   `<cit type="source-entry">`. Report: `data/pilot/tei-lex0-review.json`. Note the
-  archival validator [`validate-tei-profile.mjs`](../scripts/validate-tei-profile.mjs)
+  archival validator [`validate-tei-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-profile.mjs)
   does **not** apply here (it requires three source-entry cits per entry, which a
   Lex-0 entry has none of).
 - **Wired (RNG):** a project Lex-0 ODD
-  ([`data/schema/tei-lex0-profile.odd.xml`](../data/schema/tei-lex0-profile.odd.xml))
+  ([`data/schema/tei-lex0-profile.odd.xml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml))
   is authored and the RNG validation is wired into
-  [`validate-external-profiles`](../scripts/validate-external-profiles.mjs): it
+  [`validate-external-profiles`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-external-profiles.mjs): it
   compiles the ODD with `teitorelaxng` (or uses a precompiled schema from
   `CSL_STANDARDS_LEX0_RNG`) and validates every `*.lex0.xml` with `jing`/`xmllint`.
   The run is **gated on the local Java/TEI-Stylesheets toolchain**; where those are
@@ -176,7 +178,7 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
    customisation (sec. 5) as a documented Schematron constraint. Still external:
    actually *running* the RNG needs the Java/TEI-Stylesheets toolchain (see sec. 6).
 2. **Done (slice 4):** broadened the *kośa* parser
-   ([`scripts/parse-skd-kosa.mjs`](../scripts/parse-skd-kosa.mjs)) beyond *Darmma*
+   ([`scripts/parse-skd-kosa.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs)) beyond *Darmma*
    (L17667) to 6 SKD records (*kīrti* L7806, *kaṇṭha* L6080, *vara* L31183,
    *pāruṣya* L21315, *tūla* L15202), with SLP1→IAST transliteration of glosses,
    a wider authority/work vocabulary, and a work-vs-person `<title>`/`<author>`
@@ -184,22 +186,22 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
    L13859, whose trailing prose group does not reduce to glosses) and VCP, plus
    sense-level (not entry-level) linkage of an example to its specific sense.
 3. **Done:** a Lex-0 loss-report row family for the sense/citation-fusion
-   phenomenon — [`scripts/build-loss-reports.mjs`](../scripts/build-loss-reports.mjs)
+   phenomenon — [`scripts/build-loss-reports.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
    emits one `sense-citation-fusion` report per SKD entry (`target: tei`,
    `sourceDictionary: skd`, cause `sanskrit-convention`, `extensionNeeded: true`),
    recording the authority groups the baseline had to split. See
-   [`EVIDENCE_LABEL_CROSSWALK.md`](EVIDENCE_LABEL_CROSSWALK.md) and
-   [`LOSS_ANALYSIS.md`](LOSS_ANALYSIS.md) §4a.
+   [`EVIDENCE_LABEL_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md) and
+   [`LOSS_ANALYSIS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4a.
 4. **Partly done:** the neutral model now materializes every `<ls>` named source
    across MW/PWG/PWK as `named-source-citation` objects tagged with their
    dictionary (2617 of them, capped at 12 per dictionary), and the Lex-0 export
    emits them as entry-level `<bibl type="named-source" source="#dict-…">` — so a
    Western lemma uncited in MW (e.g. *arcya*) now carries PWG's named apparatus.
    The `<ls>` parser is now shared across the three generators
-   ([`scripts/lib/citations.mjs`](../scripts/lib/citations.mjs)) — build-neutral,
+   ([`scripts/lib/citations.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/citations.mjs)) — build-neutral,
    export-tei, and export-ontolex no longer each re-implement it.
 5. **Done:** the MW sense segmenter
-   ([`scripts/lib/mw-senses.mjs`](../scripts/lib/mw-senses.mjs)) populates
+   ([`scripts/lib/mw-senses.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/mw-senses.mjs)) populates
    `model.senses` from the MW record — splitting on `;`/`<div>`, glossing verbal
    roots as "to …" phrases, and recognising cross-references (`See …`, `= X`,
    `(for … See …)`) as `kind: "cross-reference"`. **224 of 250** Western Lex-0
@@ -218,7 +220,7 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
    from stub entries with no senses. This completes the original §7.4 goal.
 7. **Done: PWG/PWK sense modeling.** The German Petersburg dictionaries delimit
    senses explicitly (`<div>` + numbered run-ins; German glosses in `{%…%}`), so
-   [`scripts/lib/pw-senses.mjs`](../scripts/lib/pw-senses.mjs) extracts them with
+   [`scripts/lib/pw-senses.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/pw-senses.mjs) extracts them with
    their `<ls>` citations sense-linked, carried on each source record
    (`records.{pwg,pwk}.senses`): PWG 214/250 entries (455 senses, 431 linked),
    PWK 203/250 (939 senses, 216 linked). These live in the neutral model (the
@@ -235,10 +237,12 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
   Group). <https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html>
 - TEI Consortium, *Guidelines*, ch. 9 "Dictionaries" and ch. 21 "Certainty,
   Precision, and Responsibility".
-- [`EVIDENCE_LABEL_CROSSWALK.md`](EVIDENCE_LABEL_CROSSWALK.md) — evidence labels →
+- [`EVIDENCE_LABEL_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md) — evidence labels →
   PROV-O / TEI `@cert`/`@resp`.
-- [`VALIDATED_INTEROPERABILITY_PROFILE.md`](VALIDATED_INTEROPERABILITY_PROFILE.md)
+- [`VALIDATED_INTEROPERABILITY_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/VALIDATED_INTEROPERABILITY_PROFILE.md)
   — the archival TEI profile this pilot complements.
 - `csl-atlas` `docs/articles/paper_sense_inheritance.md` §7 — the SKD
   sense/citation-fusion finding at corpus scale.
 - Source records: CDSL MW `L62306` (*gaja*), SKD `L17667` (*Darmma*).
+
+_Dr. Mārcis Gasūns_

@@ -1,10 +1,12 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Salt API — CSL ↔ C-SALT Loss Report
 
 Version: 0.1.0
 Date: 2026-06-20
 Status: updated first pass, combining the live MW contract (verified 2026-06-11), Phase 1 implementation findings from 2026-06-20, and the 2026-06-20 host-deploy checkpoint.
 
-Companion to [`SALT_API_PROFILE.md`](SALT_API_PROFILE.md). Following the repository's working
+Companion to [`SALT_API_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md). Following the repository's working
 principle, **a lossy mapping is a finding, not a bug.** This report catalogues where the
 Cologne original (CSL) and the CCeH derivative (C-SALT / Kosh) diverge, so the divergences
 are explicit and feed the interoperability paper.
@@ -114,3 +116,5 @@ field/index is not implemented in Phase 1.
 
 These rows mirror the model-adequacy scale in `INTEROPERABILITY_MODEL.md` and feed the
 paper's standards-critique section.
+
+_Dr. Mārcis Gasūns_

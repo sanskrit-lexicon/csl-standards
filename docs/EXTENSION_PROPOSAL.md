@@ -1,22 +1,24 @@
+_Created: 15-06-2026 · Last updated: 05-09-2026_
+
 # Sanskrit Lexicographic Extension Proposal (TEI + OntoLex)
 
 A proposal — for discussion, not adopted — for the extension layer the MW-PWG-PWK
-pilot shows is needed. It is the concrete form of [PAPER_OUTLINE.md](PAPER_OUTLINE.md)
+pilot shows is needed. It is the concrete form of [PAPER_OUTLINE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER_OUTLINE.md)
 §8: *"we propose a Sanskrit lexicographic extension layer for both standards."*
 
 Each construct below is already **prototyped** in the pilot's `csl:` namespace
 (`https://sanskrit-lexicon.github.io/csl-standards/ns#`) and exercised over 250
 cases, so this is a report of what the generators actually emit, not a wishlist.
 Each is tied to the loss it addresses — by `failureClassification` cause and
-`phenomenon` from [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) and
-[LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md).
+`phenomenon` from [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) and
+[LOSS_REPORT_SCHEMA.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_REPORT_SCHEMA.md).
 
 ## Motivation
 
 The 1722 loss reports split by cause into: **model-vocabulary-gap (60%)** — the
 target standards lack a concept, chiefly an *evidence class* (kośa vs textual vs
 editorial citation, and unparsed citation coordinates; see
-[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b), plus the flat MDF lane's field gaps;
+[LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4b), plus the flat MDF lane's field gaps;
 **editorial-compression (21%)** — the
 19th-century lineage already dropped evidence; **print-compression (7%)**,
 **cdsl-markup-gap (7%)**, **sanskrit-convention (<1%)**, and a single
@@ -38,7 +40,7 @@ proposal is to promote the stable subset below into a published vocabulary
 
 - **Loss:** `generic-lexicographer-hedge`, `named-kosha-citation`,
   `editorial-reference`, `citation-coordinate`; cause *model-vocabulary-gap*
-  (55% of the corpus — the largest; see [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §4b).
+  (55% of the corpus — the largest; see [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4b).
   The MW `L.` siglum is an evidential hedge, not a citation; an indigenous *kośa*
   source is not a textual attestation; an editorial reference points within the
   tradition; and a citation's textual coordinate is locked in a flat string.
@@ -47,8 +49,8 @@ proposal is to promote the stable subset below into a published vocabulary
   **`csl:evidenceClass`** ∈ {`textual`, `hedge`, `kosha`, `editorial`}, and a
   coordinate-bearing one parses into **`csl:citedWork`** + **`csl:citedRange`**
   (e.g. `AV. 6,116,1.` → work `AV.`, range `6,116,1`). Classification and parsing
-  live in [scripts/lib/evidence.mjs](../scripts/lib/evidence.mjs); the
-  [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl) constrains
+  live in [scripts/lib/evidence.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/evidence.mjs); the
+  [SHACL profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl) constrains
   `csl:evidenceClass` with `sh:in`, and all 250 graphs pass pySHACL. The coarse
   `csl:evidenceType` ∈ {`named-source-citation`, `generic-lexicographer-hedge`}
   is retained for back-compatibility. **TEI side** (symmetric, also implemented):
@@ -58,7 +60,7 @@ proposal is to promote the stable subset below into a published vocabulary
   coordinate-bearing citation a structured **`<citedRange>`** — all validated
   against the compiled TEI RELAX NG (jing). Per-statement `@cert`/`@resp` carries
   certainty, mapped to PROV-O in
-  [EVIDENCE_LABEL_CROSSWALK.md](EVIDENCE_LABEL_CROSSWALK.md).
+  [EVIDENCE_LABEL_CROSSWALK.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md).
 - **Proposal:** standardize this **evidence-class vocabulary** as a first-class
   attestation property (textual · hedge · kośa · editorial · catalogue ·
   unresolved) plus a structured cited-locus, with a defined certainty mapping to
@@ -116,7 +118,7 @@ proposal is to promote the stable subset below into a published vocabulary
   carrying `csl:lineageFrom` / `csl:lineageTo` and the
   `csl:sourceCitationCount` / `csl:retainedCitationCount` /
   `csl:droppedCitationCount` (e.g. *ac*: PWG 35 → PWK 8 = 27 dropped; PWG 35 →
-  MW 3 = 32 dropped). The [SHACL profile](../data/schema/ontolex-frac-profile.shacl.ttl)
+  MW 3 = 32 dropped). The [SHACL profile](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl)
   adds `csl:LineageRelationShape` (constraining `csl:transition` with `sh:in`),
   and all 250 graphs conform under pySHACL. This sits alongside the existing
   OntoLex-Lexicog multi-resource graph (one `lexicog:Entry` per source dictionary)
@@ -134,14 +136,14 @@ proposal is to promote the stable subset below into a published vocabulary
   to its closing authority as one indivisible *iti*-unit (§5); the sense/
   citation-separating standards cannot express it.
 - **Implemented:** the project **TEI Lex-0 ODD**
-  ([tei-lex0-profile.odd.xml](../data/schema/tei-lex0-profile.odd.xml)) carries a
+  ([tei-lex0-profile.odd.xml](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml)) carries a
   *kośa sense-boundary customisation* (`constraintSpec` `csl-lex0-kosa-sense-boundary`,
   Schematron). A kośa entry declares the convention with
   `<note type="entry-convention">kosa-iti-unit</note>`; each sense closed by an
   authority formula carries it as a typed **`<bibl type="kosa-authority">`** (the
   sense boundary, distinguishable from an example citation) and a
   `<note type="model-loss">` witnessing the fusion. The Schematron asserts the
-  pairing; [validate-tei-lex0](../scripts/validate-tei-lex0.mjs) **enforces** it in
+  pairing; [validate-tei-lex0](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-lex0.mjs) **enforces** it in
   `build-pilot` (not only declares it), and the markup validates against the
   compiled TEI RELAX NG (jing). The `sense-citation-fusion` loss reports name this
   remedy in `mappedAs`.
@@ -157,7 +159,7 @@ proposal is to promote the stable subset below into a published vocabulary
 All of the above hang off one spine, already implemented: per-statement
 `@cert`/`@resp` (TEI) ↔ PROV-O (`prov:wasDerivedFrom`, OntoLex) ↔ `csl:reviewStatus`
 (machine · validated-slice), specified in
-[EVIDENCE_LABEL_CROSSWALK.md](EVIDENCE_LABEL_CROSSWALK.md). The extension layer's
+[EVIDENCE_LABEL_CROSSWALK.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md). The extension layer's
 value is that an assertion's *epistemic status* travels with it across both models.
 
 ## What needs standardization vs stays project-local
@@ -176,7 +178,7 @@ value is that an assertion's *epistemic status* travels with it across both mode
 Prototyped and validated over the 250-case pilot; **proposed for discussion**. No
 construct here is claimed as adopted by TEI or the OntoLex community group. The
 `csl:` terms are the working reference implementation; the SHACL profile
-([ontolex-frac-profile.shacl.ttl](../data/schema/ontolex-frac-profile.shacl.ttl))
+([ontolex-frac-profile.shacl.ttl](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl))
 and the two ODDs are the machine-checkable form.
 
 The evidence-class construct (§1) is now **implemented in both target standards
@@ -186,7 +188,7 @@ the archival and Lex-0 profiles, RELAX NG/jing) — closing the loop from measur
 loss to working remedy: every OntoLex `model-vocabulary-gap` loss that needs an
 extension (722 of 722) names a concrete, implemented `csl:` construct, and all 250
 graphs conform to the SHACL profile under pySHACL (`extensionCoverage` in
-[loss-analysis.json](../data/pilot/loss-analysis.json)). The root (§2) and
+[loss-analysis.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-analysis.json)). The root (§2) and
 decomposition (§3) constructs were already implemented; the **source-collapse
 lineage relation (§4a)** (`csl:LineageRelation`, `lineageCoverage` 369/369), the
 **continuation recovery-status (§4)** (`csl:recoveryStatus` / TEI `@subtype`), and
@@ -199,9 +201,11 @@ in-pipeline and in the external harness.
 
 ## References
 
-- [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) — the loss corpus the proposal answers to.
-- [EVIDENCE_LABEL_CROSSWALK.md](EVIDENCE_LABEL_CROSSWALK.md) — the provenance spine.
-- [TEI_LEX0_PILOT.md](TEI_LEX0_PILOT.md) — the kośa case and the Lex-0 ODD.
-- [INTEROPERABILITY_MODEL.md](INTEROPERABILITY_MODEL.md) — the neutral model the
+- [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) — the loss corpus the proposal answers to.
+- [EVIDENCE_LABEL_CROSSWALK.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md) — the provenance spine.
+- [TEI_LEX0_PILOT.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_PILOT.md) — the kośa case and the Lex-0 ODD.
+- [INTEROPERABILITY_MODEL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/INTEROPERABILITY_MODEL.md) — the neutral model the
   constructs are generated from.
-- [PAPER_OUTLINE.md](PAPER_OUTLINE.md) §8 — the argument this proposal discharges.
+- [PAPER_OUTLINE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER_OUTLINE.md) §8 — the argument this proposal discharges.
+
+_Dr. Mārcis Gasūns_

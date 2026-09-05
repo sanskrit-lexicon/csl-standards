@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Validated TEI And OntoLex/FrAC Profile
 
 Date: 2026-05-29
@@ -82,7 +84,7 @@ The output is a full OntoLex/FrAC profile:
 - `ontolex:Form` canonical form node.
 - `ontolex:LexicalSense` nodes from all three dictionaries — MW (`@en`) plus the
   German Petersburg dictionaries PWG/PWK (`@de`), each tagged `csl:sourceDictionary`.
-- `csl:SourceRecord` nodes for MW/PWG/PWK provenance, plus **optional dictionaries** — **Apte 1890 (AP90)**, **Grassmann (GRA)**, **Frish Sanskrit Reader (FRI)**, and **Benfey (BEN)** — on cases that share their headword. Citation-bearing optional dictionaries contribute evidence-class-typed attestations from their named citations; FRI contributes source/sense coverage without named citations (registry: [scripts/lib/dictionaries.mjs](../scripts/lib/dictionaries.mjs)).
+- `csl:SourceRecord` nodes for MW/PWG/PWK provenance, plus **optional dictionaries** — **Apte 1890 (AP90)**, **Grassmann (GRA)**, **Frish Sanskrit Reader (FRI)**, and **Benfey (BEN)** — on cases that share their headword. Citation-bearing optional dictionaries contribute evidence-class-typed attestations from their named citations; FRI contributes source/sense coverage without named citations (registry: [scripts/lib/dictionaries.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/lib/dictionaries.mjs)).
 - `frac:Attestation` nodes linked with `prov:wasDerivedFrom`, **attesting the
   specific sense** they belong to (sense-level linkage), or the entry for
   citations not tied to a sense. Each attestation carries a sub-typed
@@ -159,3 +161,5 @@ This is full 250-case machine review, not the final complete philological projec
 - Human philological review of all 250 cases.
 - Running the optional external validation harness in a toolchain-equipped environment and committing the resulting pass report.
 - Expanding from project-profile validation to publication-grade TEI and RDF release QA.
+
+_Dr. Mārcis Gasūns_

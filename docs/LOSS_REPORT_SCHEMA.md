@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Loss Report Schema
 
 Loss reports are the standards-pilot mechanism for turning imperfect interoperability into evidence.
@@ -78,3 +80,5 @@ A loss report records what happens when a CDSL dictionary record is mapped into 
 ## Principle
 
 No lossy mapping should silently pass as clean.
+
+_Dr. Mārcis Gasūns_

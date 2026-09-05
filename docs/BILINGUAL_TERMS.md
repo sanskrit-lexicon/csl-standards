@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Bilingual Standards Terminology Seed List
 
 This file seeds the English/Russian interface and paper vocabulary for the
@@ -32,3 +34,5 @@ standards/export workbench. Russian terms are provisional until reviewed.
 | clean mapping | чистое отображение | Interoperability result |
 | partial mapping | частичное отображение | Interoperability result |
 | model failure | сбой модели | Strong term; use carefully |
+
+_Dr. Mārcis Gasūns_

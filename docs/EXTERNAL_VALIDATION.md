@@ -1,3 +1,5 @@
+_Created: 15-06-2026 · Last updated: 05-09-2026_
+
 # External RELAX NG / Schematron / SHACL Validation
 
 `npm run validate-pilot` / `validate-tei-profile` / `validate-tei-lex0` are
@@ -98,3 +100,5 @@ mirror). Check the totals:
 ```bash
 node -e "console.log(require('./data/pilot/external-validation-review.json').totals)"
 ```
+
+_Dr. Mārcis Gasūns_

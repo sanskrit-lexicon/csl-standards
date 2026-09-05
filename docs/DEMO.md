@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Demo: three hard cases, end to end
 
 This is a guided walkthrough of single entries as they move through the whole
@@ -12,7 +14,7 @@ highlight what is *different* about a compound and about print compression.
 
 Everything below is quoted from regenerable artifacts (`npm run build-pilot`); the
 file links point at the exact outputs. The case is
-[`mw-pwg-pwk:ac`](../data/pilot/neutral-model.json) — the Sanskrit verbal root
+[`mw-pwg-pwk:ac`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/neutral-model.json) — the Sanskrit verbal root
 **√ac** "to go, bend, honour". It is a good stress test because it exercises every
 loss family at once: it is a *root* (not a word), it carries the MW `L.`
 *lexicographer hedge*, its citation apparatus is *abridged* down the PWG → PWK
@@ -46,9 +48,9 @@ much of it to a bare `L.`
 
 ## Stage 1 — the dictionary-neutral model
 
-[`build-neutral-model`](../scripts/build-neutral-model.mjs) suspends commitment to
+[`build-neutral-model`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-neutral-model.mjs) suspends commitment to
 either standard and extracts one commensurable JSON record
-([neutral-model.json](../data/pilot/neutral-model.json)):
+([neutral-model.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/neutral-model.json)):
 
 ```jsonc
 {
@@ -71,8 +73,8 @@ case *for*.
 
 ## Stage 2 — the TEI archival profile
 
-[`export-tei`](../scripts/export-tei.mjs) renders the entry as archival TEI
-([mw-pwg-pwk-ac.xml](../data/pilot/tei/mw-pwg-pwk-ac.xml)), preserving each raw
+[`export-tei`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei.mjs) renders the entry as archival TEI
+([mw-pwg-pwk-ac.xml](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/tei/mw-pwg-pwk-ac.xml)), preserving each raw
 record as an escaped `<quote>` and promoting the structure TEI *can* express. All
 six source records appear (the backbone plus the optional AP90/GRA/FRI):
 
@@ -98,8 +100,8 @@ through the extension attributes, not in vanilla TEI.
 
 ## Stage 3 — the OntoLex/FrAC semantic profile
 
-[`export-ontolex`](../scripts/export-ontolex.mjs) renders the same entry as a
-linked-data graph ([mw-pwg-pwk-ac.json](../data/pilot/ontolex/mw-pwg-pwk-ac.json),
+[`export-ontolex`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-ontolex.mjs) renders the same entry as a
+linked-data graph ([mw-pwg-pwk-ac.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/ontolex/mw-pwg-pwk-ac.json),
 JSON-LD + Turtle). Here the root becomes a lexical entry **plus** an explicit
 relation, and each citation becomes a typed `frac:Attestation`:
 
@@ -127,9 +129,9 @@ SHACL profile (pySHACL).
 
 ## Stage 4 — what gets lost (the loss reports)
 
-[`build-loss-reports`](../scripts/build-loss-reports.mjs) records every degradation
+[`build-loss-reports`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs) records every degradation
 as an evidence-bound report. √ac generates **seven**
-([loss-reports.json](../data/pilot/loss-reports.json)):
+([loss-reports.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-reports.json)):
 
 | target | phenomenon | cause | answered by |
 |---|---|---|---|
@@ -169,8 +171,8 @@ The one `neutral` loss (the PWG → PWK abridgement) is not a standards gap, so 
 explicit, queryable relation with retained/dropped counts.
 
 The full extension layer and its standardise-vs-project-local disposition are in
-[EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md); the corpus-wide numbers are in
-[LOSS_ANALYSIS.md](LOSS_ANALYSIS.md).
+[EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md); the corpus-wide numbers are in
+[LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md).
 
 ---
 
@@ -178,7 +180,7 @@ The full extension layer and its standardise-vs-project-local disposition are in
 
 Where √ac stressed *evidence*, the compound **annavid** ("food-knowing") stresses
 *derivation* and *editorial divergence*. It is a tri-dict case
-([`mw-pwg-pwk:annavid`](../data/pilot/neutral-model.json)); no optional dictionary
+([`mw-pwg-pwk:annavid`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/neutral-model.json)); no optional dictionary
 shares the headword. Three raw records, one per backbone dictionary:
 
 ```
@@ -262,7 +264,7 @@ flattened to one "winner".
 The third loss family is **print compression**: a dictionary that, to save column
 space, *suppresses* an entry, leaving its content to be recovered from its
 neighbours. The case is the tri-dict (plus GRA) entry
-[`mw-pwg-pwk:Ayana`](../data/pilot/neutral-model.json). What MW prints for *āyana*
+[`mw-pwg-pwk:Ayana`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/neutral-model.json). What MW prints for *āyana*
 is not an entry at all — it is a bare pointer:
 
 ```
@@ -342,3 +344,5 @@ node -e "console.log(require('./data/pilot/loss-reports.json').filter(x=>x.caseI
 ```
 
 Every number and fragment in all three walkthroughs comes straight from those files.
+
+_Dr. Mārcis Gasūns_

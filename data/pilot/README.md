@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Pilot Data
 
 Generated pilot data for the MW-PWG-PWK Interoperability Atlas.
@@ -17,3 +19,5 @@ npm run sample
 ```
 
 The script reads local sibling `../csl-orig` data. Generated records are snippets for atlas research, not a substitute for the canonical CDSL source files.
+
+_Dr. Mārcis Gasūns_

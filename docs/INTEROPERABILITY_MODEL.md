@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Interoperability Model
 
 This is the neutral layer between CDSL source data, TEI archival XML, and OntoLex semantic graph output.
@@ -47,7 +49,7 @@ The neutral model keeps the scholarly interpretation visible. TEI and OntoLex ex
 Evidence *classes* below answer *what kind of source* licenses a claim. They are
 orthogonal to the epistemic *evidence level* (`observed` / `derived` / `inferred`
 / `reviewed`) and the human-review lifecycle; for the mapping of those to PROV-O
-and TEI `@cert`/`@resp`, see [`EVIDENCE_LABEL_CROSSWALK.md`](EVIDENCE_LABEL_CROSSWALK.md).
+and TEI `@cert`/`@resp`, see [`EVIDENCE_LABEL_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md).
 
 | Class | Definition | Example |
 |---|---|---|
@@ -121,3 +123,5 @@ Continuation entries suppress the headword and depend on adjacency. The neutral 
 | `failure` | Target model lacks a plausible representation without extension |
 
 The public standards workbench should show this status per case and per target model.
+
+_Dr. Mārcis Gasūns_

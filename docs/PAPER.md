@@ -1,12 +1,14 @@
+_Created: 16-06-2026 · Last updated: 05-09-2026_
+
 # A Serialization Standard for the Petersburg-Family Sanskrit Dictionaries: Evidence, Derivation, and Compression across TEI, OntoLex, and MDF
 
 *Working draft. The numbers, tables, and figures in this paper are regenerable
 from the workbench (`npm run build-pilot`); see [§14 Availability](#14-availability-and-reproducibility).
-This draft is generated from [docs/PAPER_OUTLINE.md](PAPER_OUTLINE.md) and the
+This draft is generated from [docs/PAPER_OUTLINE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER_OUTLINE.md) and the
 machine artefacts it cites. Former working title: "Sanskrit Lexicography Between
 TEI and OntoLex"; reframed 2026-07-03 around the serialization-standard
 contribution with three export profiles (see
-[A27_review_fable5.md](A27_review_fable5.md)).*
+[A27_review_fable5.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A27_review_fable5.md)).*
 
 ## Abstract
 
@@ -108,7 +110,7 @@ line-oriented field record that the language-documentation community reads direc
 Its mapping over the same neutral model was adopted by the project on 2026-07-02
 and is implemented: a serializer and marker-profile validator generate and check
 MDF records for all 250 cases, and MDF runs as a third measured lane of the loss
-corpus ([docs/MDF_EXPORT_MAPPING.md](MDF_EXPORT_MAPPING.md)). MDF earns its place
+corpus ([docs/MDF_EXPORT_MAPPING.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md)). MDF earns its place
 for two reasons. First, reach with external corroboration: the MUDIDI dictionary-digitization
 benchmark (Setiawan et al., 2026) uses MDF as its parsing target across 30 public-domain
 dictionaries (including Sanskrit–English) and shows machine parsing into MDF to be strong
@@ -153,8 +155,8 @@ stages are:
    analysis: *no lossy mapping silently passes as clean*.
 
 The schema for a loss report is given in
-[docs/LOSS_REPORT_SCHEMA.md](LOSS_REPORT_SCHEMA.md); the full quantitative analysis
-is in [docs/LOSS_ANALYSIS.md](LOSS_ANALYSIS.md), regenerable with
+[docs/LOSS_REPORT_SCHEMA.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_REPORT_SCHEMA.md); the full quantitative analysis
+is in [docs/LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md), regenerable with
 `npm run analyze-loss`.
 
 ## 4. The Loss Corpus: An Asymmetry of Success
@@ -275,7 +277,7 @@ customisation, not a generic extension (§10).
 The diagnosis above is actionable: each loss cause points to a concrete construct.
 We specify these in a `csl:` namespace, tie each to the loss it answers, and — the
 step that distinguishes this work — **implement and validate** all of them over the
-full sample ([docs/EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md)). The constructs
+full sample ([docs/EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)). The constructs
 fall into two kinds: *target extensions* (new TEI/OntoLex vocabulary for
 model-vocabulary gaps) and *modeling constructs* (which make an upstream loss
 explicit without claiming to recover it).
@@ -319,7 +321,7 @@ lineage; we make its disappearance explicit, not recovered).
 
 Every construct is validated, not merely emitted. The OntoLex graphs are checked
 against a SHACL profile
-([data/schema/ontolex-frac-profile.shacl.ttl](../data/schema/ontolex-frac-profile.shacl.ttl))
+([data/schema/ontolex-frac-profile.shacl.ttl](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/ontolex-frac-profile.shacl.ttl))
 with shapes for the lexical entry, source records, attestations (with an `sh:in`
 constraint on the evidence class), the Lexicog multi-resource structure, the
 continuation relation, and the lineage relation. The TEI is checked against a
@@ -329,12 +331,12 @@ compiled to an SVRL transform with the ISO Schematron skeleton. All are run by t
 project validators in `build-pilot` and, independently, by an external harness
 using real engines — **jing** for RELAX NG, a **Saxon + ISO Schematron skeleton**
 SVRL engine for the Schematron, and **pySHACL** for SHACL — assembled by a portable,
-no-admin toolchain ([docs/EXTERNAL_VALIDATION.md](EXTERNAL_VALIDATION.md)). The
+no-admin toolchain ([docs/EXTERNAL_VALIDATION.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTERNAL_VALIDATION.md)). The
 external harness validates all 250 archival + 256 Lex-0 XML files (RELAX NG), runs
 the Schematron over all 256 Lex-0 entries with **zero failed assertions**, and
 validates all 250 RDF graphs (SHACL), with no failures — 1,014 checks, 0 skipped,
 recorded in the committed
-[external-validation-review.json](../data/pilot/external-validation-review.json)
+[external-validation-review.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/external-validation-review.json)
 (re-run 2026-07-03 with jing, Saxon+ISO-Schematron, and pySHACL installed; an
 earlier committed run had recorded the non-SHACL layers as skipped for lack of the
 toolchain). Running the real engines
@@ -343,14 +345,14 @@ TEI-conformance bugs (a duplicate `xml:id`, an illegal `<sourceDesc>` content
 model, and a misplaced `@target`) that the substring-level structural validators
 had passed. The MDF profile has no external schema language to compile, so it is
 validated in-pipeline against the project's marker profile
-([data/schema/mdf-export-profile.json](../data/schema/mdf-export-profile.json)):
+([data/schema/mdf-export-profile.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/mdf-export-profile.json)):
 all 250 records pass, with 281 in-band `\nt` model-loss markers witnessing the
-flat schema's drops ([data/pilot/mdf-review.json](../data/pilot/mdf-review.json)).
+flat schema's drops ([data/pilot/mdf-review.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/mdf-review.json)).
 
 Reproducibility is built in. Generators honour `SOURCE_DATE_EPOCH` and otherwise
 omit timestamps, so `build-pilot` is byte-stable; the five figures are deterministic
-SVG ([scripts/build-figures.mjs](../scripts/build-figures.mjs)). The honest limits
-of the instrument are recorded in [LOSS_ANALYSIS.md](LOSS_ANALYSIS.md) §5 rather
+SVG ([scripts/build-figures.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-figures.mjs)). The honest limits
+of the instrument are recorded in [LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §5 rather
 than hidden.
 
 ## 12. Limitations
@@ -363,7 +365,7 @@ lanes only; and MDF's uniform lossiness reflects the deliberately hard probe set
 routine MW entries serialize into MDF's core fields without incident, so the lane
 measures the hard-case ceiling, not average-case fidelity. A scale-stability check reran the same
 pipeline at 500 and 1000 cases in temporary restored workspaces
-([docs/SCALE_STABILITY.md](SCALE_STABILITY.md)): the central asymmetry still held,
+([docs/SCALE_STABILITY.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SCALE_STABILITY.md)): the central asymmetry still held,
 evidence-loss share stayed about 70%, and extension/lineage coverage remained
 complete. The committed generated corpus remains the 250-case pilot so the paper
 has a stable, reviewable dataset rather than shifting bulk artifacts. The optional-dictionary layer now tests
@@ -403,24 +405,24 @@ sample.
 ## Figures
 
 All five figures are reproducible SVG, generated by `npm run build-figures`
-([scripts/build-figures.mjs](../scripts/build-figures.mjs)) into
+([scripts/build-figures.mjs](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-figures.mjs)) into
 [data/pilot/figures/](../data/pilot/figures/). Figures 1, 2, and 5 are driven by
-[data/pilot/loss-analysis.json](../data/pilot/loss-analysis.json); Figures 3 and 4
+[data/pilot/loss-analysis.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-analysis.json); Figures 3 and 4
 are concept diagrams grounded in real pilot exemplars.
 
 1. **Three-view architecture**: CDSL → neutral model → TEI/OntoLex/MDF.
-   [figure-1-architecture.svg](../data/pilot/figures/figure-1-architecture.svg)
+   [figure-1-architecture.svg](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-1-architecture.svg)
 2. **Evidence-class collapse**: PWG named *kośa* citations vs the MW `L.` hedge —
    119/250 cases are `mw-uncited-pwg-cited`.
-   [figure-2-evidence-collapse.svg](../data/pilot/figures/figure-2-evidence-collapse.svg)
+   [figure-2-evidence-collapse.svg](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-2-evidence-collapse.svg)
 3. **Root modeling**: a root as lexical entry vs derivational base (TEI
    `<etym type="root">` vs OntoLex `csl:RootRelation`).
-   [figure-3-root-modeling.svg](../data/pilot/figures/figure-3-root-modeling.svg)
+   [figure-3-root-modeling.svg](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-3-root-modeling.svg)
 4. **Compound split**: TEI subentry/adjacency vs OntoLex `decomp:ComponentList`.
-   [figure-4-compound-split.svg](../data/pilot/figures/figure-4-compound-split.svg)
+   [figure-4-compound-split.svg](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-4-compound-split.svg)
 5. **Loss-report distribution**: the TEI-never-lossy / OntoLex-never-clean /
    MDF-all-lossy asymmetry and the by-cause breakdown.
-   [figure-5-loss-distribution.svg](../data/pilot/figures/figure-5-loss-distribution.svg)
+   [figure-5-loss-distribution.svg](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-5-loss-distribution.svg)
 
 ## 14. Availability and Reproducibility
 
@@ -436,14 +438,14 @@ npm run validate-external    # real RNG (jing) + SHACL (pySHACL) over the full c
 ```
 
 Key artefacts: the loss corpus
-([data/pilot/loss-reports.json](../data/pilot/loss-reports.json)), the analysis
-([data/pilot/loss-analysis.json](../data/pilot/loss-analysis.json)), the SHACL
+([data/pilot/loss-reports.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-reports.json)), the analysis
+([data/pilot/loss-analysis.json](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/loss-analysis.json)), the SHACL
 profile and ODDs ([data/schema/](../data/schema/)), the MDF records
 ([data/pilot/mdf/](../data/pilot/mdf/)), and the extension proposal
-([docs/EXTENSION_PROPOSAL.md](EXTENSION_PROPOSAL.md)). The validated-profile summary
-is in [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](VALIDATED_INTEROPERABILITY_PROFILE.md);
+([docs/EXTENSION_PROPOSAL.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EXTENSION_PROPOSAL.md)). The validated-profile summary
+is in [docs/VALIDATED_INTEROPERABILITY_PROFILE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/VALIDATED_INTEROPERABILITY_PROFILE.md);
 the implemented MDF third-profile mapping is in
-[docs/MDF_EXPORT_MAPPING.md](MDF_EXPORT_MAPPING.md).
+[docs/MDF_EXPORT_MAPPING.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md).
 
 ## References
 
@@ -491,3 +493,5 @@ specification.
 - Whitney, W. D. *The Roots, Verb-Forms and Primary Derivatives of the Sanskrit Language*. Leipzig, 1885. (the root index referenced by `csl:whitneyRoot`)
 - Amarasiṃha. *Amarakośa* (Nāmaliṅgānuśāsana) — representative of the indigenous *kośa* authorities (cited as AK.).
 - Cologne Digital Sanskrit Dictionaries (CDSL), Universität zu Köln — the digitised editions and project-specific XML this study consumes. <https://www.sanskrit-lexicon.uni-koeln.de/>
+
+_Dr. Mārcis Gasūns_

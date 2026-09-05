@@ -1,6 +1,6 @@
 # MDF Export Mapping (Third Profile)
 
-_Created: 11-06-2026 · Last updated: 27-07-2026_
+_Created: 11-06-2026 · Last updated: 05-09-2026_
 
 Status: **implemented.** The **third export profile** beside the existing
 [TEI archival](INTEROPERABILITY_MODEL.md#tei-mapping) and
@@ -19,7 +19,7 @@ Run via `npm run export-mdf` / `npm run validate-mdf-profile` (both wired into
 
 ## Why MDF, And Why A Third View
 
-The [interoperability model](INTEROPERABILITY_MODEL.md) already exposes two views over
+The [interoperability model](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/INTEROPERABILITY_MODEL.md) already exposes two views over
 the neutral JSON layer: TEI preserves the dictionary as an edited historical text;
 OntoLex/FrAC exposes lexicographic meaning as a graph. MDF adds a **third, deliberately
 flatter view**: a line-oriented field record (`\lx`, `\ps`, `\ge`, …) that the
@@ -391,7 +391,7 @@ Screenshots (committed under [`docs/img/`](https://github.com/sanskrit-lexicon/c
 4. ✅ **Done (11-07-2026, H721).** Field order validated against the book's actual
    App. B table (not a guess); `\ge`/`\de`/`\re` semantics settled and correctly
    positioned; `\lf Compound` implemented from App. D for compound decomposition
-   (`lossy`→`partial`); a fourth serialization ([LIFT](LIFT_EXPORT_MAPPING.md)) added
+   (`lossy`→`partial`); a fourth serialization ([LIFT](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LIFT_EXPORT_MAPPING.md)) added
    beside MDF for consumption by living SIL tools, with the same field-order and
    `\lf`→`<relation type="Compound">` refinements carried over.
 5. **Remaining.** Cross-check a Sanskrit MDF sample against the MUDIDI MDF conventions,

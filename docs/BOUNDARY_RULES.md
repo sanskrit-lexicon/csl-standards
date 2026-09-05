@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Boundary Rules
 
 Date: 2026-06-03
@@ -66,3 +68,5 @@ from dictionary-only evidence.
 The migrated MW-PWG-PWK OntoLex pilot contains legacy FrAC-style attestation
 nodes. Treat them as a stress test showing where the model becomes unsafe, not
 as a publication-ready FrAC claim.
+
+_Dr. Mārcis Gasūns_

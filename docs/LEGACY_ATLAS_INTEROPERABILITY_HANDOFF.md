@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Legacy Atlas Interoperability Handoff
 
 > Migration note, 2026-06-03: this file was preserved from `csl-atlas`
@@ -445,3 +447,5 @@ When done, report:
 - next recommended slice.
 
 Keep the report concise. Do not include long pasted data.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Профиль API C-SALT (CSL)
 
 Версия: 0.1.0
@@ -11,11 +13,11 @@
 > уверенностью). **Требуется проверка @gasyoun.**
 
 Машиночитаемые спутники (авторитетны для инструментов):
-- REST: [`data/schema/salt-api.openapi.yaml`](../data/schema/salt-api.openapi.yaml)
-- GraphQL: [`data/schema/salt-api.graphql`](../data/schema/salt-api.graphql)
+- REST: [`data/schema/salt-api.openapi.yaml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.openapi.yaml)
+- GraphQL: [`data/schema/salt-api.graphql`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.graphql)
 
-Английский оригинал: [`SALT_API_PROFILE.md`](SALT_API_PROFILE.md).
-Отчет о расхождениях: [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md).
+Английский оригинал: [`SALT_API_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md).
+Отчет о расхождениях: [`SALT_API_LOSS_REPORT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_LOSS_REPORT.md).
 
 ---
 
@@ -114,7 +116,7 @@ GET /dicts/{id}/restful/ids?ids={id}&ids={id}…
 
 ## 6. GraphQL (`/graphql`)
 
-Схема — [`salt-api.graphql`](../data/schema/salt-api.graphql). Два корневых поля:
+Схема — [`salt-api.graphql`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/salt-api.graphql). Два корневых поля:
 
 ```graphql
 entries(field: Field = headword_slp1, query: String!, queryType: QueryType = term, size: Int = 25): [Entry!]
@@ -205,10 +207,12 @@ GET /{dict}/{ref}
 
 Иные структурные расхождения профилем не допускаются. Поведенческие расхождения (покрытие
 дополнительных словарей, дополнительные омонимы, более богатые данные `csl`) ожидаемы и
-каталогизированы в [`SALT_API_LOSS_REPORT.md`](SALT_API_LOSS_REPORT.md).
+каталогизированы в [`SALT_API_LOSS_REPORT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_LOSS_REPORT.md).
 
 ## 10. Версионирование
 
 Профиль версионируется независимо от любого хоста. Обратносовместимые добавления (новые
 поля `csl.*`, новые id словарей) увеличивают минорную версию; изменения §8.1 или §2–§6 —
 мажорную.
+
+_Dr. Mārcis Gasūns_

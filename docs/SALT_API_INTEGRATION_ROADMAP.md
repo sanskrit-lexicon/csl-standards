@@ -1,6 +1,6 @@
 # Salt API Integration Roadmap — sanskrit-lexicon.uni-koeln.de
 
-_Created: 11-06-2026 · Last updated: 27-08-2026_
+_Created: 11-06-2026 · Last updated: 05-09-2026_
 
 > Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4):
 > header added, status line re-read and found accurate. Phase 1's GitHub-side implementation
@@ -421,7 +421,7 @@ makes "integration" checkable, not aspirational.
 - **Done in `csl-standards`:** `SALT_API_PROFILE.md` (+ RU),
   `data/schema/salt-api.openapi.yaml`, `data/schema/salt-api.graphql`,
   `SALT_API_LOSS_REPORT.md`, and the implementation checklist
-  [`SALT_API_PHASE0_CHECKLIST.md`](SALT_API_PHASE0_CHECKLIST.md).
+  [`SALT_API_PHASE0_CHECKLIST.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PHASE0_CHECKLIST.md).
 - **No server implementation in this repository.** The server work belongs in
   `csl-apidev`; this repository owns the contract/profile artifacts and loss report.
 - **Exit:** the spec Jim builds against exists, is reviewed, and has a concrete Phase 1
@@ -518,7 +518,7 @@ For a fixed headword list (`agni`, `Davala`, `aMSa`, `indra`, `BU`):
    where CSL covers homonyms, continuation entries, or scan apparatus the 7-dictionary
    derivative does not.
 
-The helper [`data/pilot/parity_mw.py`](../data/pilot/parity_mw.py) automates this
+The helper [`data/pilot/parity_mw.py`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/parity_mw.py) automates this
 comparison and emits Markdown or JSON parity tables.
 
 ---

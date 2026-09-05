@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: MW-PWG-PWK Interoperability Hard Cases
 toc: false
@@ -426,3 +428,5 @@ display(html`
 </div>
 `);
 ```
+
+_Dr. Mārcis Gasūns_
