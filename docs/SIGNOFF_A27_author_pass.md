@@ -43,7 +43,7 @@ Left deliberately as they were: every count, percentage and cross-tab in §4, §
 6. **FRI primary-source entry.** "Frish Sanskrit Reader (CDSL/Cologne edition, 2015). (FRI)" carries no URL, editor or place, unlike every other primary source; verify the expansion and the 2015 date against the CDSL dictionary registry before submission.
 7. **Coward & Grimes (2000) and the Saxon tool entry** have no URL/DOI; the references paragraph promises "Every entry is a real, verifiable publication or specification". Add a locator or soften the promise.
 8. **Closing hub byline.** The manuscript now ends with `_Dr. Mārcis Gasūns_` (added by the 05-09-2026 mechanical header pass) while the academic byline sits under the title. For a submission copy the closing line must go; in the repo it is the house convention. Not removed here.
-9. **Relative links remain** in the preamble (`[§14 Availability](#14-availability-and-reproducibility)`), §14 (`data/schema/`, `data/pilot/mdf/`, `data/pilot/figures/`) — untouched because a URL is substance under this pass; a camera-ready pass should make them absolute or drop them.
+9. **Relative links remain** in the preamble (`§14 Availability`), §14 (`data/schema/`, `data/pilot/mdf/`, `data/pilot/figures/`) — untouched because a URL is substance under this pass; a camera-ready pass should make them absolute or drop them.
 
 ## 3. Read-and-sign
 
