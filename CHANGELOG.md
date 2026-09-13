@@ -8,6 +8,7 @@ into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
 
+- Added a root `AGENTS.md` agent-entrypoint stub (H4634): names itself the agent entrypoint, links [CLAUDE.md](CLAUDE.md), points at the [Uprava org standard](https://github.com/gasyoun/Uprava/blob/main/AGENTS.md).
 ## [1.3.1] - 2026-08-30
 ### Fixed
 - **H2307 follow-up — MDF `exporter-hash` is now LF-normalized (H2811).**
