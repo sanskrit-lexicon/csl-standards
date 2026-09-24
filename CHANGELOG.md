@@ -7,7 +7,9 @@ semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
+<!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.4.0] - 2026-09-24
 ### Added
 - **H5321 — TEI Lex-0 indigenous half: a stratified Śabdakalpadruma sample.**
   `parse-skd-kosa` now draws a deterministic, seeded sample from all 42,196 SKD
