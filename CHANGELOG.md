@@ -9,6 +9,9 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.4.2] - 2026-09-24
+
+- **H5322 — publishable note on the twelve indigenous-apparatus gaps in TEI Lex-0.** New [`docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md) turns the H5321 gaps file into a venue-shaped draft (portfolio row A70, not submitted): for each of G1–G12 a real exported example, the validated workaround, and a proposed Lex-0 extension, classed by schema impact (A guideline example · B controlled value · C content-model change · D out of scope; 9/12 need no content-model change). Proposals are cross-referenced to the DARIAH-ERIC/lexicalresources tracker (#63, #64, #242 for scoped references and sense numbers; #236 as the precedent for adding a `gram/@type` value). Registered in the README docs list.
 ## [1.4.1] - 2026-09-24
 ### Changed
 - **Loss-analysis docs re-synced to the measured corpus (2038 reports, 280 cases).**
