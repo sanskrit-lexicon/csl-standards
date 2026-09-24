@@ -12,19 +12,15 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <!-- Lex-0 v0.9.4 requires listBibl/@type; "dictionaries" is the sanctioned value here. -->
         <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
-          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
-          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
-          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
         </listBibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
-    <!-- Lex-0 v0.9.4 makes profileDesc/langUsage mandatory in teiHeader. -->
     <profileDesc>
       <langUsage>
         <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
@@ -43,7 +39,7 @@
           <gram type="gender" norm="neuter" cert="high" resp="#source">neuter</gram>
           <gram type="gender" norm="masculine" cert="high" resp="#source">masculine</gram>
         </gramGrp>
-        <etym xml:id="skd-tUlaM-etym" subtype="derivation"><lbl>from</lbl> <hi rend="mentioned" xml:lang="sa">tūla + karmmaṇi</hi></etym>
+        <etym xml:id="skd-tUlaM-etym" subtype="derivation"><lbl>from</lbl> <hi rend="mentioned" xml:lang="sa">tūla + karmmaṇi</hi> <note type="analysis" xml:lang="sa-Latn" resp="#source">tūlyate iyattayā paricchidyate iti . tūla + karmmaṇi ghañ . yadbā, tūlayate svalpo&apos;pi bahusthānaṃ pūrayatīti . tūla + “igupadheti .” kaḥ .</note></etym>
         <sense xml:id="skd-tUlaM-sense-1" n="1">
           <def xml:lang="sa-Latn" cert="high" resp="#source">kārpāsāditūlaḥ</def>
           <cit type="example">
@@ -69,6 +65,8 @@
           </cit>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Trikāṇḍaśeṣa) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
+        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
+        <note type="lex0-gap" n="G5">Paryāya run: an authority&apos;s numbered synonym list</note>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
         <note type="entry-convention" resp="#source">kosa-iti-unit</note>
         <note type="source-record">skd L15202</note>
