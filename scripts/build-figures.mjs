@@ -153,7 +153,9 @@ function figureLossDistribution(a) {
 
   const body = [
     title(24, 34, "Figure 5 — How TEI, OntoLex and MDF fail"),
-    caption(24, 54, `${a.lossReports.total} loss reports. TEI is never lossy for the Western cases; OntoLex is never clean; MDF, the deliberately flat field schema, is lossy across the board; the neutral lineage lane carries the editorial source-collapse.`),
+    // Two lines: one 12px line at 760px width clips after ~115 characters.
+    caption(24, 54, `${a.lossReports.total} loss reports. TEI is never lossy for the Western cases; OntoLex is never clean; MDF, the flat`),
+    caption(24, 70, "field schema, is never clean and mostly lossy (only compounds reach partial); the neutral lane carries the source-collapse."),
     title(24, 86, "Target × status", 13),
     stacked, legend,
     title(24, cTop - 10, "By cause", 13),

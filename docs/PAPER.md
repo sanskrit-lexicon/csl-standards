@@ -1,4 +1,4 @@
-_Created: 16-06-2026 · Last updated: 06-09-2026_
+_Created: 16-06-2026 · Last updated: 24-09-2026_
 
 # A Serialization Standard for the Petersburg-Family Sanskrit Dictionaries: Evidence, Derivation, and Compression across TEI, OntoLex, and MDF
 
@@ -28,11 +28,11 @@ knowledge, and SIL's Multi-Dictionary Formatter (MDF) as the flat field format t
 language-documentation community consumes. From a 250-case deterministic sample
 of deliberately hard cases I generate a dictionary-neutral model and, from it,
 parallel TEI, OntoLex, and MDF profiles, recording every degradation as an
-evidence-bound *loss report*. The resulting corpus of 1,722 reports shows that the
+evidence-bound *loss report*. The resulting corpus of 2,038 reports shows that the
 models fail asymmetrically. TEI is never lossy for the Western cases but never
 reaches the semantic graph; OntoLex is never a clean transcription but exposes
-reusable relations; MDF, the deliberately flat target, is never anything *but*
-lossy on the probed phenomena, and which distinctions it drops is itself a
+reusable relations; MDF, the deliberately flat target, is never clean and is
+lossy on every probed phenomenon except compounds, and which distinctions it drops is itself a
 measurement of what is structurally load-bearing in these dictionaries. The
 largest difficulty is evidence, not derivation or compounding: the class of a
 citation (a textual attestation, an indigenous *kośa* authority, an editorial
@@ -126,7 +126,10 @@ intentionally poor, so mapping into it surfaces which CDSL distinctions are
 structurally load-bearing rather than presentational. Where MDF has no field for a
 distinction, notably the `L.` evidential hedge, the gap is recorded on the same
 `clean`/`partial`/`lossy` scale as the other two profiles: for a flat target,
-lossiness is the finding, not a failure.
+lossiness is the finding, not a failure. A fourth, SIL LIFT XML profile (the
+FLEx/Lexique interchange format) runs over the same neutral model as a further
+measured lane; its loss profile is identical to MDF's
+([docs/LIFT_EXPORT_MAPPING.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LIFT_EXPORT_MAPPING.md)).
 
 ## 3. Method
 
@@ -167,16 +170,17 @@ is in [docs/LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/
 
 ## 4. The Loss Corpus: An Asymmetry of Success
 
-The pilot yields 1,722 loss reports over 256 cases (the 250 Western cases
-plus the six indigenous *kośa* entries of §9). Overall, 1007 are `partial`
-(58%), 640 `lossy` (37%), and 75 `clean` (4%). The central finding is in the
+The pilot yields 2,038 loss reports over 280 cases (the 250 Western cases
+plus the 30 indigenous *kośa* entries of §9). Overall, 1157 are `partial`
+(57%), 806 `lossy` (40%), and 75 `clean` (4%). The central finding is in the
 cross-tabulation of target against status (Figure 5):
 
 | target | clean | partial | lossy |
 |---|--:|--:|--:|
-| TEI (archival) | 75 | 217 | 6 |
+| TEI (archival) | 75 | 217 | 30 |
 | OntoLex | 0 | 662 | 100 |
-| MDF | 0 | 0 | 292 |
+| MDF | 0 | 75 | 217 |
+| LIFT | 0 | 75 | 217 |
 | neutral (lineage) | 0 | 128 | 242 |
 
 The three profiles succeed at different things, and the corpus shows where. For
@@ -184,10 +188,13 @@ the Western cases the TEI archival profile is *never* lossy (75 clean, 217
 partial): TEI can always at least preserve the dictionary as an edition. OntoLex is
 *never* clean (662 partial, 100 lossy): it never merely transcribes, so it either
 relates the data or drops what it cannot relate. MDF, the deliberately flat third
-profile, is never anything *but* lossy (292 of 292): on every probed phenomenon
-there is no field to be partially adequate *with*, so the lane reads as a census
-of which CDSL distinctions are structurally load-bearing, and every one probed
-turned out to be. The only TEI-lossy reports (6) are not Western at all: they are
+profile, is never clean and mostly lossy (217 lossy, 75 partial): for the hedge,
+the root and the continuation parent there is no field to be partially adequate
+*with*; only compounds reach `partial`, through MDF's `\lf Compound` lexical
+function, which still gives no typed decomposition. The lane reads as a census of
+which CDSL distinctions are structurally load-bearing, and every one probed turned
+out to be — compounds only partly. The LIFT lane repeats the MDF profile exactly.
+The only TEI-lossy reports (30) are not Western at all: they are
 the indigenous *kośa* sense/citation fusion in the Lex-0 baseline (§9), a
 different profile and a different lexicographic tradition.
 
@@ -197,14 +204,14 @@ partial, 0 clean): much of what looks like "interoperability loss" is in fact lo
 that already happened in the 19th-century editorial chain, recoverable only by
 reading across PWG, PWK, and MW together (§8).
 
-By cause, the corpus splits as: model-vocabulary-gap 60% (the target standard
-lacks a concept), editorial-compression 21% (upstream lineage loss the standards
-could have held), print-compression 7%, CDSL-markup-gap 7%, clean 4%, and the
-small but qualitatively distinct `sanskrit-convention` and `data-quality` (<1%
-each). By phenomenon, the leaders are `source-collapse` (21%), the unparsed
-`citation-coordinate` (21%), and the MW `L.` hedge (20%; its weight grew with the
-MDF lane, which cannot carry it at all); the five evidence-related phenomena
-together are 69% of the corpus. The centre of gravity is evidence, not derivation
+By cause, the corpus splits as: model-vocabulary-gap 63% (the target standard
+lacks a concept), editorial-compression 18% (upstream lineage loss the standards
+could have held), print-compression 8%, CDSL-markup-gap 6%, clean 4%, and the
+small but qualitatively distinct `sanskrit-convention` (1%) and `data-quality`
+(<1%). By phenomenon, the leaders are the MW `L.` hedge (23%; its weight grew with
+the MDF and LIFT lanes, which cannot carry it at all), `source-collapse` (18%) and
+the unparsed `citation-coordinate` (18%); the five evidence-related phenomena
+together are 64% of the corpus. The centre of gravity is evidence, not derivation
 or compounding.
 
 ## 5. Evidence and Provenance
@@ -268,7 +275,8 @@ reports the relation that makes it explicit.
 ## 9. The Indigenous *Kośa*: A Tradition-Bound Construct
 
 A qualitatively different loss appears in the indigenous *kośa* (here the SKD
-register, six entries). A *kośa* binds a run of synonyms to its closing authority
+register: 30 of the 47 entries in a curated-plus-stratified Śabdakalpadruma sample
+carry it). A *kośa* binds a run of synonyms to its closing authority
 formula (*iti amaraḥ*, *iti medinī*) as one indivisible *iti*-unit: sense
 enumeration and source attestation are a *single construction*. The
 sense/citation-separating standards cannot express this; the TEI Lex-0 baseline can
@@ -366,7 +374,7 @@ The sample is 250 cases drawn from three dictionaries of one lineage; the
 asymmetry findings are strong within it but their generality across other
 dictionaries is only partially tested. The MDF lane is measured, but it postdates
 the scale-stability check, which therefore covers the TEI, OntoLex, and neutral
-lanes only; and MDF's uniform lossiness reflects the deliberately hard probe set:
+lanes only; and MDF's near-uniform lossiness reflects the deliberately hard probe set:
 routine MW entries serialize into MDF's core fields without incident, so the lane
 measures the hard-case ceiling, not average-case fidelity. A scale-stability check
 reran the same pipeline at 500 and 1000 cases in temporary restored workspaces
@@ -429,7 +437,7 @@ are concept diagrams grounded in real pilot exemplars.
 4. **Compound split**: TEI subentry/adjacency vs OntoLex `decomp:ComponentList`.
    [figure-4-compound-split.svg](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-4-compound-split.svg)
 5. **Loss-report distribution**: the TEI-never-lossy / OntoLex-never-clean /
-   MDF-all-lossy asymmetry and the by-cause breakdown.
+   MDF-mostly-lossy asymmetry and the by-cause breakdown.
    [figure-5-loss-distribution.svg](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/figures/figure-5-loss-distribution.svg)
 
 ## 14. Availability and Reproducibility
