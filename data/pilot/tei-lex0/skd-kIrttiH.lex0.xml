@@ -14,9 +14,7 @@
       <sourceDesc>
         <listBibl>
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
-          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
-          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
-          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
         </listBibl>
       </sourceDesc>
     </fileDesc>
@@ -34,7 +32,7 @@
           <pos norm="noun" cert="high" resp="#machine">noun</pos>
           <gen norm="feminine" cert="high" resp="#source">feminine</gen>
         </gramGrp>
-        <etym xml:id="skd-kIrttiH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">kṝt + ktin</mentioned> <bibl><title>Uṇādisūtra 4.118</title></bibl></etym>
+        <etym xml:id="skd-kIrttiH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">kṝt + ktin</mentioned> <bibl><title>Uṇādisūtra 4.118</title></bibl> <note type="analysis" xml:lang="sa-Latn" resp="#source">kṝt + ktin . yadvā, kṝt saṃśabdane “hṛpiṣiruhīti” uṇāṃ 4 . 118 . irādikāryye in .</note></etym>
         <sense xml:id="skd-kIrttiH-sense-1" n="1">
           <def xml:lang="sa-Latn" cert="high" resp="#source">sukhyātiḥ — paryāya: yaśaḥ, samajñā</def>
           <bibl type="kosa-authority"><author>Amara</author></bibl>
@@ -56,20 +54,45 @@
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Śabdaratnāvalī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
         <sense xml:id="skd-kIrttiH-sense-5" n="5">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">(unparsed)</def>
+          <cit type="example" subtype="positional" xml:lang="sa">
+            <quote xml:space="preserve">dānādiprabhavā kīrttiḥ śauryyādiprabhavaṃ yaśaḥ</quote>
+          </cit>
+          <bibl type="kosa-authority"><title>Mādhavī</title></bibl>
+          <note type="model-loss" resp="#source">Sense and its closing authority (iti Mādhavī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-6" n="6">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">ata eva yaśaḥkīrttyorbhedasyāti darśanāt; prayogaḥ; prayogadarśanāt</def>
+          <cit type="example" subtype="positional" xml:lang="sa">
+            <quote xml:space="preserve">yaśaḥkīrttipravibhraṣṭo jīvannapi na jīvati</quote>
+            <bibl><title>kasyacit</title></bibl>
+          </cit>
+          <cit type="example" subtype="positional" xml:lang="sa">
+            <quote xml:space="preserve">kīrttiste nṛpadūtiketi</quote>
+          </cit>
+          <bibl type="kosa-authority"><author>Bharata</author></bibl>
+          <note type="model-loss" resp="#source">Sense and its closing authority (iti Bharata) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
+        </sense>
+        <sense xml:id="skd-kIrttiH-sense-7" n="7">
           <def xml:lang="sa-Latn" cert="high" resp="#source">prasādaḥ</def>
           <bibl type="kosa-authority"><title>Medinī</title></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Medinī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
-        <sense xml:id="skd-kIrttiH-sense-6" n="6">
+        <sense xml:id="skd-kIrttiH-sense-8" n="8">
           <def xml:lang="sa-Latn" cert="high" resp="#source">śabdaḥ; dīptiḥ; mātṛkāviśeṣaḥ</def>
           <bibl type="kosa-authority"><title>Śabdaratnāvalī</title></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Śabdaratnāvalī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
-        <sense xml:id="skd-kIrttiH-sense-7" n="7">
+        <sense xml:id="skd-kIrttiH-sense-9" n="9">
           <def xml:lang="sa-Latn" cert="high" resp="#source">vistāraḥ; karddamaḥ</def>
           <bibl type="kosa-authority"><title>Viśva</title></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Viśva) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
+        <note type="unparsed-prose" resp="#machine">1 prose segment(s), 60 characters not reduced to glosses. Full text: the archival profile / source record.</note>
+        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
+        <note type="lex0-gap" n="G5">Paryāya run: an authority&apos;s numbered synonym list</note>
+        <note type="lex0-gap" n="G9">Quotation attributed by a following `iti &lt;work&gt;`</note>
+        <note type="lex0-gap" n="G11">Derivation as grammatical analysis (sūtra, samāsa, Uṇādi)</note>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
         <note type="entry-convention" resp="#source">kosa-iti-unit</note>
         <note type="source-record">skd L7806</note>

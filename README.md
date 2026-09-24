@@ -1,6 +1,6 @@
 # csl-standards
 
-_Created: 04-06-2026 · Last updated: 11-07-2026_
+_Created: 04-06-2026 · Last updated: 24-09-2026_
 
 Technical standards and export workbench for CDSL dictionary data.
 
@@ -129,6 +129,7 @@ step-by-step runbook for that later phase is
 - [`docs/INTEROPERABILITY_MODEL.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/INTEROPERABILITY_MODEL.md) — neutral JSON layer between CDSL source, TEI, and OntoLex.
 - [`docs/EVIDENCE_LABEL_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/EVIDENCE_LABEL_CROSSWALK.md) — maps the `csl-atlas` evidence labels and review statuses to W3C PROV-O and TEI `@cert`/`@resp` (FAIR interoperability).
 - [`docs/TEI_LEX0_PILOT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_PILOT.md) — TEI Lex-0 baseline encoding for CDSL entries, covering a Western (MW) and an indigenous *kośa* (SKD) entry, with the sense/citation-fusion loss.
+- [`docs/TEI_LEX0_SKD_GAPS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_SKD_GAPS.md) — the 47-entry stratified Śabdakalpadruma Lex-0 sample and the 12 indigenous structures with no, or only a partial, Lex-0 home (zero-meaning, anubandha slot, iti-unit, nibandha …), each with an exported example.
 - [`docs/MDF_EXPORT_MAPPING.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md) — the flat SIL MDF field-schema profile (the third interoperability view alongside TEI and OntoLex).
 - [`docs/SALT_API_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md) — normative C-SALT-compatible REST + GraphQL profile.
 - [`docs/SALT_API_PHASE0_CHECKLIST.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PHASE0_CHECKLIST.md) — implementation-ready Salt API Phase 0 handoff for `csl-apidev`.

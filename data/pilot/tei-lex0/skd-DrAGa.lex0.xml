@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-DrAGa">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: DrAGa</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+        <respStmt xml:id="m4"><resp>anubandha decode (gaṇa, pada, transitivity, it-augment) via the Dhātudīpikā key</resp><name>csl-atlas m4_indigenous (data/lexico/indigenous_roots.csv)</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listBibl>
+          <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-DrAGa-entry" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">DrAGa</orth>
+        </form>
+        <gramGrp>
+          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="anubandha" norm="ṅa" cert="high" resp="#source">Na</gram>
+          <gram type="anubandha" norm="ṛ" cert="high" resp="#source">f</gram>
+          <gram type="pada" norm="atmanepada" cert="high" resp="#m4">ātmanepada</gram>
+          <gram type="it-augment" cert="high" resp="#m4">seṭ</gram>
+        </gramGrp>
+        <sense xml:id="skd-DrAGa-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">śaktau</def>
+          <bibl type="kosa-authority"><title>Kavikalpadruma</title></bibl>
+          <note type="model-loss" resp="#source">Sense and its closing authority (iti Kavikalpadruma) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
+        </sense>
+        <note type="grammatical-annotation" xml:lang="sa-Latn" resp="#source">bhvāṃ-ātmaṃ-akaṃ-seṭ .</note>
+        <note type="commentary" xml:lang="sa-Latn" resp="#source"><bibl><author>Durgādāsa</author></bibl> ṅa, dhrāghate . ṛ, adadhrāghat</note>
+        <note type="zero-meaning" resp="#machine">Gaṇa not resolved by the M4 decode: an unresolved gaṇa is a detector limit, not a statement that the root has none.</note>
+        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
+        <note type="lex0-gap" n="G2">Anubandha slot (it-letters) on a root entry</note>
+        <note type="lex0-gap" n="G3">Zero-meaning: a marker&apos;s absence is itself a statement</note>
+        <note type="lex0-gap" n="G4">Dhātupāṭha commentary layer inside the entry</note>
+        <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
+        <note type="entry-convention" resp="#source">kosa-iti-unit</note>
+        <note type="source-record">skd L18062</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

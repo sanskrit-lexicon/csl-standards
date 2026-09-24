@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-gAtraBaNgA">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: gAtraBaNgA</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+        <respStmt xml:id="cdsl"><resp>digitisation corrections embedded in the source text</resp><name>CDSL csl-orig editors</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listBibl>
+          <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-gAtraBaNgA-entry" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">gAtraBaNgA</orth>
+        </form>
+        <gramGrp>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gen norm="feminine" cert="high" resp="#source">feminine</gen>
+        </gramGrp>
+        <etym xml:id="skd-gAtraBaNgA-etym" type="derivation"><lbl>from</lbl> <note type="analysis" xml:lang="sa-Latn" resp="#source">gātrasya bhaṅgo&apos;vasādo yasyāḥ .</note></etym>
+        <sense xml:id="skd-gAtraBaNgA-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">śūkaśimbī</def>
+          <bibl type="kosa-authority"><title>Śabdacandrikā</title></bibl>
+          <note type="model-loss" resp="#source">Sense and its closing authority (iti Śabdacandrikā) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
+        </sense>
+        <note type="cdsl-correction" resp="#cdsl">gātrabhaṅgāḥ → gātrabhaṅgā <ref target="https://github.com/sanskrit-lexicon/CORRECTIONS/issues/291">https://github.com/sanskrit-lexicon/CORRECTIONS/issues/291</ref></note>
+        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
+        <note type="lex0-gap" n="G12">CDSL correction layer `{{old-&gt;new|…}}` (digitisation, not indigenous)</note>
+        <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
+        <note type="entry-convention" resp="#source">kosa-iti-unit</note>
+        <note type="source-record">skd L10817</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>
