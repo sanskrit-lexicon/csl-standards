@@ -9,6 +9,8 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+- **A02: `.zenodo.json` added for GitHub-Zenodo archive metadata.** Closes the csl-standards half of the FAIR-sprint gap noted in [SanskritLexicography's roadmap](https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_ATLAS_FAIR_PUBLICATIONS_2026_2027.md) — `CITATION.cff` existed here already, but no `.zenodo.json` had ever been committed, so a GitHub release could not carry Zenodo upload metadata. Connecting the repo to Zenodo and minting the DOI itself remains a human step (Zenodo account authorization).
+
 ## [1.4.2] - 2026-09-24
 
 - **H5322 — publishable note on the twelve indigenous-apparatus gaps in TEI Lex-0.** New [`docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md) turns the H5321 gaps file into a venue-shaped draft (portfolio row A70, not submitted): for each of G1–G12 a real exported example, the validated workaround, and a proposed Lex-0 extension, classed by schema impact (A guideline example · B controlled value · C content-model change · D out of scope; 9/12 need no content-model change). Proposals are cross-referenced to the DARIAH-ERIC/lexicalresources tracker (#63, #64, #242 for scoped references and sense numbers; #236 as the precedent for adding a `gram/@type` value). Registered in the README docs list.
