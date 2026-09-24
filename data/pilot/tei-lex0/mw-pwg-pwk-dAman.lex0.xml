@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-dAman">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-dAman" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -12,7 +12,8 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <!-- Lex-0 v0.9.4 requires listBibl/@type; "dictionaries" is the sanctioned value here. -->
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
           <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
@@ -26,6 +27,13 @@
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <!-- Lex-0 v0.9.4 makes profileDesc/langUsage mandatory in teiHeader. -->
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -36,11 +44,15 @@
         <sense xml:id="mw-pwg-pwk-dAman-sense-1" n="1">
           <def xml:lang="en" cert="high" resp="#machine">string, cord, rope, fetter</def>
           <usg type="hint" cert="high" resp="#source">lexicographers only (L.)</usg>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-dAman-sense-2" n="2">
           <def xml:lang="en" cert="high" resp="#machine">etc</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+          </cit>
         </sense>
         <bibl xml:id="mw-pwg-pwk-dAman-cite-1" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>P. 4,1,11</abbr><citedRange>4,1,11</citedRange></bibl>
         <bibl xml:id="mw-pwg-pwk-dAman-cite-2" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>UJJVAL.</abbr></bibl>

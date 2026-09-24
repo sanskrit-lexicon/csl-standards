@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-BA-mw149418">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-BA-mw149418" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -12,7 +12,8 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <!-- Lex-0 v0.9.4 requires listBibl/@type; "dictionaries" is the sanctioned value here. -->
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
           <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
@@ -26,6 +27,13 @@
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <!-- Lex-0 v0.9.4 makes profileDesc/langUsage mandatory in teiHeader. -->
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -34,38 +42,54 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">BA</orth>
         </form>
         <gramGrp>
-          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="pos" norm="verb" cert="high" resp="#machine">verb</gram>
           <gram type="verb-class" cert="high" resp="#source">2P</gram>
         </gramGrp>
-        <etym xml:id="mw-pwg-pwk-BA-mw149418-etym-root" type="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:BA,110" cert="high" resp="#source">BA,110</ref></etym>
+        <etym xml:id="mw-pwg-pwk-BA-mw149418-etym-root" subtype="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:BA,110" cert="high" resp="#source">BA,110</ref></etym>
         <sense xml:id="mw-pwg-pwk-BA-mw149418-sense-1" n="1">
           <def xml:lang="en" cert="high" resp="#machine">to shine, be bright or luminous, etc. etc</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>RV.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-BA-mw149418-sense-2" n="2">
           <def xml:lang="en" cert="high" resp="#machine">to shine forth, appear, show one&apos;s self</def>
-          <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>ib.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>ib.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-BA-mw149418-sense-3" n="3">
           <def xml:lang="en" cert="high" resp="#machine">to be splendid or beautiful or eminent</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-BA-mw149418-sense-4" n="4">
           <def xml:lang="en" cert="high" resp="#machine">to cut a poor figure, )</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Kāv.</abbr></bibl>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Kathās.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Kāv.</abbr></bibl>
+          </cit>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Kathās.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-BA-mw149418-sense-5" n="5">
           <def xml:lang="en" cert="high" resp="#machine">to appear as, seem, look like, pass for</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>MBh.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-BA-mw149418-sense-6" n="6">
           <def xml:lang="en" cert="high" resp="#machine">to be, exist</def>
-          <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>W.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>W.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-BA-mw149418-sense-7" n="7">
           <def xml:lang="en" cert="high" resp="#machine">to show, exhibit, manifest</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Bhaṭṭ.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Bhaṭṭ.</abbr></bibl>
+          </cit>
         </sense>
         <bibl xml:id="mw-pwg-pwk-BA-mw149418-cite-1" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>VOP. 3,167.</abbr><citedRange>3,167</citedRange></bibl>
         <bibl xml:id="mw-pwg-pwk-BA-mw149418-cite-2" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>4,12</abbr><ref type="inherited-siglum">VOP.</ref></bibl>

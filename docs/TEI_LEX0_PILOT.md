@@ -6,9 +6,9 @@ Date: 2026-06-13
 
 Status: draft. Slice 1 (target encoding + worked exemplars), slice 2 (generator +
 structural validator), and slice 3 (a source *kośa* parser, so the indigenous
-entry is ingested from SKD rather than hand-curated) are done. The Lex-0 ODD is
-authored and RNG validation is wired into the external harness (sec. 6); actually
-running it needs the Java/TEI-Stylesheets toolchain.
+entry is ingested from SKD rather than hand-curated) are done. Since H5320
+(2026-09-24) every generated entry is validated in CI against the **official
+DARIAH TEI Lex-0 v0.9.4 RNG** (sec. 6) — no Java toolchain required.
 
 This pilot establishes a **TEI Lex-0** baseline encoding for CDSL dictionary
 entries, covering one Western dictionary (Monier-Williams) and — for the first
@@ -22,14 +22,10 @@ Hand-authored exemplar (the documented target encoding, with inline comments):
 (entries `mw-gaja`, `skd-dharma`; well-formed; 5 senses; 11 `@cert`-bound nodes).
 
 Generated corpus: `npm run export-tei-lex0`
-([`scripts/export-tei-lex0.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei-lex0.mjs)) emits **297**
+([`scripts/export-tei-lex0.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-tei-lex0.mjs)) emits **256**
 Lex-0 entries under `data/pilot/tei-lex0/*.lex0.xml` — the 250 MW/PWG/PWK neutral-
-model cases plus **47 indigenous SKD entries**: the 6 curated kośa entries
-(*Darmma*, *kīrti*, *kaṇṭha*, *vara*, *pāruṣya*, *tūla*) and, since H5321, a
-seeded stratified sample over all 42,196 SKD records (roots with and without an
-anubandha slot, cross-references, nibandha, avyaya, paryāya, bhāṣā, quotation,
-residual). Every place the indigenous apparatus has no Lex-0 home is recorded in
-[`TEI_LEX0_SKD_GAPS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_SKD_GAPS.md). The SKD entries are **parsed from source**
+model cases plus **6 indigenous SKD entries** (*Darmma*, *kīrti*, *kaṇṭha*,
+*vara*, *pāruṣya*, *tūla*). The SKD entries are **parsed from source**
 by `npm run parse-skd-kosa` ([`scripts/parse-skd-kosa.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs)),
 which segments each kośa record by its closing authorities (*iti amaraḥ* / *iti
 medinī* / *iti hemacandraḥ*, plus *Bharata*, *Jaṭādhara*, *Trikāṇḍaśeṣa*,
@@ -38,7 +34,7 @@ medinī* / *iti hemacandraḥ*, plus *Bharata*, *Jaṭādhara*, *Trikāṇḍaś
 transliterated from the SLP1 source to IAST (the lemma `orth` is left in SLP1, as
 declared); recognised kośas are emitted as `<bibl><title>`, persons as
 `<bibl><author>`. Every statement carries `@cert`/`@resp`; `npm run
-validate-tei-lex0` checks all 297 against the Lex-0 baseline shape. The three steps
+validate-tei-lex0` checks all 256 against the Lex-0 baseline shape. The three steps
 are wired into `build-pilot`.
 
 ## Trust Block
@@ -158,14 +154,39 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
 ## 6. Validation status
 
 - **Done (slice 2):** [`scripts/validate-tei-lex0.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-lex0.mjs)
-  checks all 297 generated entries for well-formedness and the Lex-0 baseline
+  checks all 256 generated entries for well-formedness and the Lex-0 baseline
   shape — a lemma `form/orth`, a `gramGrp` or `sense`, `@cert` on the lemma orth,
   the profile-version note, and the **absence** of the archival
   `<cit type="source-entry">`. Report: `data/pilot/tei-lex0-review.json`. Note the
   archival validator [`validate-tei-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-profile.mjs)
   does **not** apply here (it requires three source-entry cits per entry, which a
   Lex-0 entry has none of).
-- **Wired (RNG):** a project Lex-0 ODD
+- **Done (H5320, official RNG in CI):** every generated entry is validated
+  against the **official DARIAH TEI Lex-0 schema pinned at v0.9.4** —
+  [`data/schema/TEILex0-v0.9.4.rng`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/TEILex0-v0.9.4.rng)
+  (vendored verbatim, SHA-256 + provenance in its `.PROVENANCE.md`) — by
+  [`scripts/validate-tei-lex0-schema.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-lex0-schema.mjs)
+  (`npm run validate-tei-lex0-schema`), wired into `build-pilot` and CI. The
+  validator runs `xmllint --relaxng` (libxml2 — no Java toolchain needed) over
+  every pilot file — the 256 generated `*.lex0.xml` entries plus the
+  hand-authored `pilot-sample.lex0.tei.xml` exemplar (257/257 valid at last
+  run) — and writes
+  `data/pilot/tei-lex0-schema-review.json` (256/256 valid at last run);
+  any failure exits non-zero, so CI is red until the **generator**
+  (`export-tei-lex0.mjs`) is fixed — never the outputs. Documented
+  schema-conformance adaptations applied at the generator:
+  `gram type="pos|gender"` instead of the discrete `pos`/`gen` elements
+  Lex-0 drops; sense-level `bibl` citations wrapped in `cit type="example"`
+  (`model.sensePart` admits no `biblLike`); `ref type="cf"` instead of
+  `xr` (whose `@type` is closed to four semantic-relation values);
+  `hi rend="mentioned"` instead of `mentioned`; `etym/@subtype` instead of
+  the closed `@type`; required `TEI/@type="lex-0"`, required
+  `listBibl/@type`, required `teiHeader/profileDesc/langUsage`, and
+  `sense/@xml:id`. Known limitation: the pinned RNG embeds ISO Schematron
+  `<pattern>` blocks that libxml2 does not execute — the RelaxNG grammar is
+  fully applied, and the report records `schematronChecked: false` (a
+  declared limitation, not a silent pass).
+- **Wired (project ODD):** a project Lex-0 ODD
   ([`data/schema/tei-lex0-profile.odd.xml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml))
   is authored and the RNG validation is wired into
   [`validate-external-profiles`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-external-profiles.mjs): it
@@ -173,32 +194,24 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
   `CSL_STANDARDS_LEX0_RNG`) and validates every `*.lex0.xml` with `jing`/`xmllint`.
   The run is **gated on the local Java/TEI-Stylesheets toolchain**; where those are
   absent it is recorded as a `skipped` check (not a silent pass), exactly like the
-  archival `tei-rng` check.
-- **Run (H5321, 24-09-2026):** on a box with the pinned toolchain (P5 4.11.0,
-  Stylesheets 7.60.0, Saxon-HE 10.9, jing), all 297 Lex-0 entries pass both the
-  compiled RNG and the ODD Schematron, including the new
-  `csl-lex0-skd-indigenous-apparatus` constraint. A negative control fails as
-  expected. Evidence:
-  [`data/pilot/skd-lex0-external-validation.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/skd-lex0-external-validation.json).
+  archival `tei-rng` check. The official-schema CI gate above supersedes this as
+  the always-on enforcement path.
 
 ## 7. Next steps
 
 1. **Done:** a Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation
    wired into `validate-external-profiles`, including the *kośa* sense-boundary
-   customisation (sec. 5) as a documented Schematron constraint. Still external:
-   actually *running* the RNG needs the Java/TEI-Stylesheets toolchain (see sec. 6).
+   customisation (sec. 5) as a documented Schematron constraint. **Done (H5320):**
+   the official DARIAH TEI Lex-0 v0.9.4 RNG now runs in CI over every generated
+   entry without the Java toolchain (see sec. 6).
 2. **Done (slice 4):** broadened the *kośa* parser
    ([`scripts/parse-skd-kosa.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs)) beyond *Darmma*
    (L17667) to 6 SKD records (*kīrti* L7806, *kaṇṭha* L6080, *vara* L31183,
    *pāruṣya* L21315, *tūla* L15202), with SLP1→IAST transliteration of glosses,
    a wider authority/work vocabulary, and a work-vs-person `<title>`/`<author>`
-   split. **Done (H5321):** more records — a 47-entry stratified sample over the
-   whole SKD, including nibandha-heavy entries, whose prose remainder is
-   summarised in `<note type="unparsed-prose">` rather than forced into `<def>`.
-   Examples now attach to the sense they follow, marked `subtype="positional"`.
-   The indigenous structures without a Lex-0 home are catalogued in
-   [`TEI_LEX0_SKD_GAPS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_SKD_GAPS.md).
-   Still open: VCP.
+   split. Still open: more records (esp. nibandha-heavy entries like *jñāti*
+   L13859, whose trailing prose group does not reduce to glosses) and VCP, plus
+   sense-level (not entry-level) linkage of an example to its specific sense.
 3. **Done:** a Lex-0 loss-report row family for the sense/citation-fusion
    phenomenon — [`scripts/build-loss-reports.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/build-loss-reports.mjs)
    emits one `sense-citation-fusion` report per SKD entry (`target: tei`,

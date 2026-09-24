@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-varaH">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-varaH" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -12,15 +12,25 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <!-- Lex-0 v0.9.4 requires listBibl/@type; "dictionaries" is the sanctioned value here. -->
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
-          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
+          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
         </listBibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <!-- Lex-0 v0.9.4 makes profileDesc/langUsage mandatory in teiHeader. -->
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -29,58 +39,56 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">vara</orth>
         </form>
         <gramGrp>
-          <pos norm="noun" cert="high" resp="#machine">noun</pos>
-          <gen norm="masculine" cert="high" resp="#source">masculine</gen>
+          <gram type="pos" norm="noun" cert="high" resp="#machine">noun</gram>
+          <gram type="gender" norm="masculine" cert="high" resp="#source">masculine</gram>
         </gramGrp>
-        <etym xml:id="skd-varaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">vṛ + ap</mentioned> <note type="analysis" xml:lang="sa-Latn" resp="#source">vṛ + ap .</note></etym>
+        <etym xml:id="skd-varaH-etym" subtype="derivation"><lbl>from</lbl> <hi rend="mentioned" xml:lang="sa">vṛ + ap</hi></etym>
         <sense xml:id="skd-varaH-sense-1" n="1">
           <def xml:lang="sa-Latn" cert="high" resp="#source">varaṇam — paryāya: vṛtiḥ</def>
-          <bibl type="kosa-authority"><author>Amara</author></bibl>
+          <cit type="example">
+            <bibl type="kosa-authority"><author>Amara</author></bibl>
+          </cit>
           <note type="model-loss" resp="#source">In the source this synonym run and its authority (iti Amara) are one indivisible iti-unit: sense enumeration and source attestation are a single construction, split into def + bibl here.</note>
         </sense>
         <sense xml:id="skd-varaH-sense-2" n="2">
           <def xml:lang="sa-Latn" cert="high" resp="#source">dve veṣṭane; prāthenāviśeṣe ityanye</def>
-          <bibl type="kosa-authority"><author>Bharata</author></bibl>
+          <cit type="example">
+            <bibl type="kosa-authority"><author>Bharata</author></bibl>
+          </cit>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Bharata) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
         <sense xml:id="skd-varaH-sense-3" n="3">
           <def xml:lang="sa-Latn" cert="high" resp="#source">devādvṛvaḥ; devasakāśāt yācitaḥ</def>
-          <cit type="example" subtype="positional" xml:lang="sa">
-            <quote xml:space="preserve">tapobhiriṣyate yastu devebhyaḥ sa varo mataḥ ..</quote>
+          <cit type="example">
+            <bibl type="kosa-authority"><author>Bharata</author></bibl>
           </cit>
-          <bibl type="kosa-authority"><author>Bharata</author></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Bharata) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
         <sense xml:id="skd-varaH-sense-4" n="4">
           <def xml:lang="sa-Latn" cert="high" resp="#source">jāmātā; ṣiḍgaḥ</def>
           <cit type="example" xml:lang="sa">
-            <quote xml:space="preserve">pramuditavarapakṣamekatastat kṣitipatimaṇḍalamanyato vitānam ..</quote>
+            <quote>pramuditavarapakṣamekatastat kṣitipatimaṇḍalamanyato vitānam ..</quote>
             <bibl><title>raghuḥ</title><citedRange>6.86</citedRange></bibl>
           </cit>
-          <bibl type="kosa-authority"><title>Medinī</title></bibl>
+          <cit type="example">
+            <bibl type="kosa-authority"><title>Medinī</title></bibl>
+          </cit>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Medinī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
         <sense xml:id="skd-varaH-sense-5" n="5">
           <def xml:lang="sa-Latn" cert="high" resp="#source">gulguluḥ</def>
-          <bibl type="kosa-authority"><title>Śabdaratnāvalī</title></bibl>
+          <cit type="example">
+            <bibl type="kosa-authority"><title>Śabdaratnāvalī</title></bibl>
+          </cit>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Śabdaratnāvalī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
         <sense xml:id="skd-varaH-sense-6" n="6">
           <def xml:lang="sa-Latn" cert="high" resp="#source">patiḥ</def>
-          <cit type="example" subtype="positional" xml:lang="sa">
-            <quote xml:space="preserve">na yo varāya marutāmiva svanaḥ seneva sṛṣṭā divyā yathāśaniḥ ..</quote>
+          <cit type="example">
+            <bibl type="kosa-authority"><author>Hemacandra</author></bibl>
           </cit>
-          <cit type="example" subtype="positional" xml:lang="sa">
-            <quote xml:space="preserve">yo&apos;gnirvarāya varaṇāya nigrahāya śakto na bhavati ..</quote>
-            <bibl><title>tadbhāṣye</title></bibl>
-          </cit>
-          <bibl type="kosa-authority"><author>Hemacandra</author></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Hemacandra) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
-        <note type="unparsed-prose" resp="#machine">1 prose segment(s), 7 characters not reduced to glosses. Full text: the archival profile / source record.</note>
-        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
-        <note type="lex0-gap" n="G5">Paryāya run: an authority&apos;s numbered synonym list</note>
-        <note type="lex0-gap" n="G9">Quotation attributed by a following `iti &lt;work&gt;`</note>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
         <note type="entry-convention" resp="#source">kosa-iti-unit</note>
         <note type="source-record">skd L31183</note>

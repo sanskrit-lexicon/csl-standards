@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-as-mw20353">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-as-mw20353" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -12,7 +12,8 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <!-- Lex-0 v0.9.4 requires listBibl/@type; "dictionaries" is the sanctioned value here. -->
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
           <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
@@ -26,6 +27,13 @@
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <!-- Lex-0 v0.9.4 makes profileDesc/langUsage mandatory in teiHeader. -->
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -34,7 +42,7 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">as</orth>
         </form>
         <gramGrp>
-          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="pos" norm="verb" cert="high" resp="#machine">verb</gram>
           <gram type="verb-class" cert="high" resp="#source">2</gram>
         </gramGrp>
         <sense xml:id="mw-pwg-pwk-as-mw20353-sense-1" n="1">
@@ -54,16 +62,24 @@
         </sense>
         <sense xml:id="mw-pwg-pwk-as-mw20353-sense-6" n="6">
           <def xml:lang="en" cert="high" resp="#machine">to be equal to</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>ŚBr. xiv</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>ŚBr. xiv</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-as-mw20353-sense-7" n="7">
           <def xml:lang="en" cert="high" resp="#machine">to turn out, tend towards any result, prove</def>
         </sense>
         <sense xml:id="mw-pwg-pwk-as-mw20353-sense-8" n="8">
           <def xml:lang="en" cert="high" resp="#machine">to become, etc</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>BṛĀrUp.</abbr></bibl>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Pāṇ. v, 4, 51</abbr><citedRange>4,51</citedRange></bibl>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>55</abbr><ref type="inherited-siglum">Pāṇ. v, 4</ref></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>BṛĀrUp.</abbr></bibl>
+          </cit>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Pāṇ. v, 4, 51</abbr><citedRange>4,51</citedRange></bibl>
+          </cit>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>55</abbr><ref type="inherited-siglum">Pāṇ. v, 4</ref></bibl>
+          </cit>
         </sense>
         <bibl xml:id="mw-pwg-pwk-as-mw20353-cite-1" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 26,100.</abbr><citedRange>26,100</citedRange></bibl>
         <bibl xml:id="mw-pwg-pwk-as-mw20353-cite-2" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>VOP. 11,5.</abbr><citedRange>11,5</citedRange></bibl>
