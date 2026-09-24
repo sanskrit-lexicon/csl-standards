@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 05-09-2026_
+_Created: 13-06-2026 · Last updated: 24-09-2026_
 
 # Changelog
 
@@ -7,6 +7,38 @@ semver-style snapshots; upcoming work stays under [Unreleased] until it is cut
 into a dated version. Versions track `package.json`.
 
 ## [Unreleased]
+
+### Added
+- **H5321 — TEI Lex-0 indigenous half: a stratified Śabdakalpadruma sample.**
+  `parse-skd-kosa` now draws a deterministic, seeded sample from all 42,196 SKD
+  records. It uses 10 source-marker strata (dhātu with printed anubandha, dhātu
+  with an empty slot, cross-reference, nibandha, avyaya, paryāya, iti-kośa,
+  bhāṣā, quotation, residual), 4 records each, plus the 6 curated kośa entries
+  and one gap witness. That gives 47 SKD Lex-0 entries, 297 in all.
+  - The export honours the zero-meaning doctrine. An empty slot becomes
+    `<gram type="anubandha" norm="none">` with an explanatory note. An unmarked
+    pada or an unresolved gaṇa is never asserted.
+  - The csl-atlas M4 anubandha decode is emitted as `resp="#m4"`, and the
+    anubandha letters as printed carry `resp="#source"`.
+  - The export also covers:
+    - the Durgādāsa commentary;
+    - scoped cross-references (`<xr><lbl>`);
+    - bhāṣā glosses (`translationEquivalent`, a machine-inferred `bn-Latn`);
+    - positional quotation examples;
+    - sūtra references in `<etym>`;
+    - the CDSL correction layer.
+  - New gaps file [`docs/TEI_LEX0_SKD_GAPS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_SKD_GAPS.md)
+    plus `data/pilot/skd-lex0-gaps.json`, generated from the registry in
+    `scripts/lib/skd-gaps.mjs`. It lists 12 structures with no or only a
+    partial Lex-0 home, each with an exported example and a corpus count.
+  - New ODD Schematron constraint `csl-lex0-skd-indigenous-apparatus`, mirrored
+    in `validate-tei-lex0`, which also cross-checks the gaps file against the
+    entries.
+  - New `test/skd.test.mjs`.
+  - Loss reports grow from 2014 to 2038: the new kośa entries add
+    `sense-citation-fusion` rows, 30 in total.
+- The stale generated `mw-pwg-pwk-nirmita.lex0.xml` is removed. It is not one of
+  the 250 cases, and the generator no longer emits it.
 
 ## [1.3.1] - 2026-08-30
 ### Fixed

@@ -14,9 +14,7 @@
       <sourceDesc>
         <listBibl>
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
-          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
-          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
-          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
         </listBibl>
       </sourceDesc>
     </fileDesc>
@@ -34,7 +32,7 @@
           <pos norm="noun" cert="high" resp="#machine">noun</pos>
           <gen norm="masculine" cert="high" resp="#source">masculine</gen>
         </gramGrp>
-        <etym xml:id="skd-varaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">vṛ + ap</mentioned></etym>
+        <etym xml:id="skd-varaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">vṛ + ap</mentioned> <note type="analysis" xml:lang="sa-Latn" resp="#source">vṛ + ap .</note></etym>
         <sense xml:id="skd-varaH-sense-1" n="1">
           <def xml:lang="sa-Latn" cert="high" resp="#source">varaṇam — paryāya: vṛtiḥ</def>
           <bibl type="kosa-authority"><author>Amara</author></bibl>
@@ -47,6 +45,9 @@
         </sense>
         <sense xml:id="skd-varaH-sense-3" n="3">
           <def xml:lang="sa-Latn" cert="high" resp="#source">devādvṛvaḥ; devasakāśāt yācitaḥ</def>
+          <cit type="example" subtype="positional" xml:lang="sa">
+            <quote xml:space="preserve">tapobhiriṣyate yastu devebhyaḥ sa varo mataḥ ..</quote>
+          </cit>
           <bibl type="kosa-authority"><author>Bharata</author></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Bharata) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
@@ -66,9 +67,20 @@
         </sense>
         <sense xml:id="skd-varaH-sense-6" n="6">
           <def xml:lang="sa-Latn" cert="high" resp="#source">patiḥ</def>
+          <cit type="example" subtype="positional" xml:lang="sa">
+            <quote xml:space="preserve">na yo varāya marutāmiva svanaḥ seneva sṛṣṭā divyā yathāśaniḥ ..</quote>
+          </cit>
+          <cit type="example" subtype="positional" xml:lang="sa">
+            <quote xml:space="preserve">yo&apos;gnirvarāya varaṇāya nigrahāya śakto na bhavati ..</quote>
+            <bibl><title>tadbhāṣye</title></bibl>
+          </cit>
           <bibl type="kosa-authority"><author>Hemacandra</author></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Hemacandra) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
+        <note type="unparsed-prose" resp="#machine">1 prose segment(s), 7 characters not reduced to glosses. Full text: the archival profile / source record.</note>
+        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
+        <note type="lex0-gap" n="G5">Paryāya run: an authority&apos;s numbered synonym list</note>
+        <note type="lex0-gap" n="G9">Quotation attributed by a following `iti &lt;work&gt;`</note>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
         <note type="entry-convention" resp="#source">kosa-iti-unit</note>
         <note type="source-record">skd L31183</note>

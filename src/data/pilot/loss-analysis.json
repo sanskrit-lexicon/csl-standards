@@ -1,17 +1,17 @@
 {
   "generatedBy": "scripts/analyze-loss-reports.mjs",
   "lossReports": {
-    "total": 2014,
-    "cases": 256,
+    "total": 2038,
+    "cases": 280,
     "byStatus": {
       "partial": 1157,
-      "lossy": 782,
+      "lossy": 806,
       "clean": 75
     },
     "byTarget": {
       "ontolex": 762,
       "neutral": 370,
-      "tei": 298,
+      "tei": 322,
       "mdf": 292,
       "lift": 292
     },
@@ -25,8 +25,8 @@
       "named-kosha-citation": 91,
       "compound-subentry": 75,
       "root-as-entry": 60,
+      "sense-citation-fusion": 30,
       "editorial-reference": 16,
-      "sense-citation-fusion": 6,
       "source-anomaly": 1
     },
     "byFailureClassification": {
@@ -35,15 +35,15 @@
       "print-compression": 160,
       "cdsl-markup-gap": 117,
       "none": 75,
-      "sanskrit-convention": 6,
+      "sanskrit-convention": 30,
       "data-quality": 1
     },
     "byExtensionNeeded": {
       "extensionNeeded=false": 1129,
-      "extensionNeeded=true": 885
+      "extensionNeeded=true": 909
     },
     "byReviewStatus": {
-      "machine": 1852,
+      "machine": 1876,
       "reviewed": 162
     },
     "bySourceDictionary": {
@@ -52,14 +52,14 @@
       "pwk": 251,
       "gra": 77,
       "ap90": 73,
-      "skd": 6,
+      "skd": 30,
       "ben": 3
     },
     "targetByStatus": {
       "tei": {
         "partial": 217,
         "clean": 75,
-        "lossy": 6
+        "lossy": 30
       },
       "ontolex": {
         "partial": 662,

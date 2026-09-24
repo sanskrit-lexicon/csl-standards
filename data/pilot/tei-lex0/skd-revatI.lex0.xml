@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-revatI">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: revatI</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listBibl>
+          <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-revatI-entry" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">revatI</orth>
+        </form>
+        <gramGrp>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gen norm="feminine" cert="high" resp="#source">feminine</gen>
+        </gramGrp>
+        <etym xml:id="skd-revatI-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">revata + aṇ</mentioned> <note type="analysis" xml:lang="sa-Latn" resp="#source">revatasyāpatyaṃ strī . revata + aṇ . na vṛddhiḥ . ṅīṣ .</note></etym>
+        <sense xml:id="skd-revatI-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">baladevapatnī; nakṣatrabhedaḥ; mātṛkābhedaḥ</def>
+          <bibl type="kosa-authority"><title>Medinī</title></bibl>
+          <note type="model-loss" resp="#source">Sense and its closing authority (iti Medinī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
+        </sense>
+        <sense xml:id="skd-revatI-sense-2" n="2">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">strīgavī</def>
+        </sense>
+        <note type="unparsed-prose" resp="#machine">1 prose segment(s), 9562 characters not reduced to glosses; nibandha remainder: 11 quotation(s), 9 distinct attribution(s); opens &quot;durgā . yathā, “revā tu narmmadā devī nadī vā ravatī matā . atikhaṇḍanabandhā vā loke devī prakīrttitā ..” iti devīpurāṇe 45 adhyāyaḥ .. * .. revatīnakṣatrantu aśvinyādisaptaviṃśatinakṣatrāntargataśeṣanak…&quot;. Full text: the archival profile / source record.</note>
+        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
+        <note type="lex0-gap" n="G8">Nibandha: treatise prose inside an entry</note>
+        <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
+        <note type="entry-convention" resp="#source">kosa-iti-unit</note>
+        <note type="source-record">skd L29882</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>

@@ -19,6 +19,9 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 import { OPTIONAL_DICTS, DICT_LABEL } from "./lib/dictionaries.mjs";
+import { SKD_GAPS } from "./lib/skd-gaps.mjs";
+
+const GAP_BY_ID = new Map(SKD_GAPS.map(g => [g.id, g]));
 
 const PROFILE_VERSION = "tei-lex0-pilot-v0.1";
 
@@ -95,9 +98,62 @@ function indent(lines, pad) {
   return lines.filter(Boolean).map(line => pad + line).join("\n");
 }
 
+const GANA_IAST = {
+  bhvadi: "bhvādi", adadi: "adādi", juhotyadi: "juhotyādi", divadi: "divādi", svadi: "svādi",
+  tudadi: "tudādi", rudhadi: "rudhādi", tanadi: "tanādi", kryadi: "kryādi", curadi: "curādi"
+};
+const PADA_IAST = { parasmaipada: "parasmaipada", atmanepada: "ātmanepada", ubhayapada: "ubhayapada" };
+
+// SKD root (dhātu) grammar: the anubandha slot as printed (#source) and its
+// interpretation by the csl-atlas M4 decode (#m4, Dhātudīpikā key). Zero-meaning
+// doctrine (docs/TEI_LEX0_SKD_GAPS.md G3): an empty slot is encoded as the
+// source's "no anubandha", and an unmarked pada is never defaulted.
+function skdRootGrams(root) {
+  const rows = [`<pos norm="verb"${cert("derived")}>verb</pos>`];
+  if (root.slot.length) {
+    root.slot.forEach((t, i) => rows.push(`<gram type="anubandha" norm="${escapeXml(root.slotIast[i])}"${cert("observed")}>${escapeXml(t)}</gram>`));
+  } else {
+    rows.push(`<gram type="anubandha" norm="none"${cert("observed")}>none</gram>`);
+  }
+  const m4 = root.m4 || {};
+  if (m4.gana) rows.push(`<gram type="gana" norm="${escapeXml(m4.gana)}" cert="high" resp="#m4">${escapeXml(GANA_IAST[m4.gana] || m4.gana)}</gram>`);
+  if (m4.pada) rows.push(`<gram type="pada" norm="${escapeXml(m4.pada)}" cert="high" resp="#m4">${escapeXml(PADA_IAST[m4.pada] || m4.pada)}</gram>`);
+  if (m4.transitivity) rows.push(`<gram type="transitivity" norm="${escapeXml(m4.transitivity)}" cert="high" resp="#m4">${escapeXml(m4.transitivity)}</gram>`);
+  const aug = [m4.set && "seṭ", m4.anit && "aniṭ", m4.vet && "veṭ"].filter(Boolean);
+  for (const a of aug) rows.push(`<gram type="it-augment" cert="high" resp="#m4">${a}</gram>`);
+  return rows;
+}
+
+function skdZeroMeaningNotes(model) {
+  const notes = [];
+  const root = model.root;
+  if (!root) return notes;
+  if (!root.slot.length) {
+    notes.push("Empty anubandha slot: per the Śabdakalpadruma front matter a root without anubandha carries a dot or zero here — the source's statement 'no anubandha', not missing data.");
+  }
+  if (!root.m4?.pada) {
+    notes.push("Pada not asserted: SKD marks only ātmanepada (ṅ) and ubhayapada (ñ); parasmaipada is the unmarked default (Dhātudīpikā key), so no pada is encoded rather than a default over-asserted.");
+  }
+  if (!root.m4?.gana) {
+    notes.push("Gaṇa not resolved by the M4 decode: an unresolved gaṇa is a detector limit, not a statement that the root has none.");
+  }
+  return notes;
+}
+
 function gramGrpXml(model) {
   const form = model.forms?.[0] || {};
   const rows = [];
+  if (model.root) {
+    const r = skdRootGrams(model.root);
+    return ["<gramGrp>", ...r.map(x => "  " + x), "</gramGrp>"].join("\n");
+  }
+  // SKD liṅga-based word class (G10): triliṅga = adjective, avyaya = indeclinable.
+  if (model.wordClass) {
+    rows.push(`<pos norm="${escapeXml(model.wordClass.norm)}"${cert("derived")}>${escapeXml(model.wordClass.norm)}</pos>`);
+    for (const g of model.genders || []) rows.push(`<gen norm="${escapeXml(g)}"${cert("observed")}>${escapeXml(g)}</gen>`);
+    rows.push(`<gram type="linga"${cert("observed")}>${escapeXml(model.wordClass.token)}</gram>`);
+    return ["<gramGrp>", ...rows.map(r => "  " + r), "</gramGrp>"].join("\n");
+  }
   // explicit normalized genders (fixtures) win
   const genders = model.genders
     || (form.grammar ? form.grammar.split(/\s+/).map(t => GENDER_NORM.get(t)).filter(Boolean) : []);
@@ -136,11 +192,20 @@ function senseXml(sense, id, index) {
       lines.push(`  <bibl type="named-source"${ext.subtype}${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${ext.citedRange}${inh}</bibl>`);
     }
   }
-  if (sense.example) {
-    lines.push(`  <cit type="example" xml:lang="sa">`);
-    lines.push(`    <quote xml:space="preserve">${escapeXml(sense.example.quote)}</quote>`);
-    lines.push(`    <bibl><title>${escapeXml(sense.example.source)}</title>${sense.example.cited ? `<citedRange>${escapeXml(sense.example.cited)}</citedRange>` : ""}</bibl>`);
+  // Examples: a source-linked one ("yaTA, <work> . <ref> . “…”") or a quotation
+  // attached only by its position before a trailing "iti <work>" (SKD G9, marked
+  // @subtype="positional" so the inferred sense link is visible).
+  for (const ex of sense.examples || (sense.example ? [sense.example] : [])) {
+    const sub = ex.attachedBy === "position" ? ` subtype="positional"` : "";
+    lines.push(`  <cit type="example"${sub} xml:lang="sa">`);
+    lines.push(`    <quote xml:space="preserve">${escapeXml(ex.quote)}</quote>`);
+    if (ex.source) lines.push(`    <bibl><title>${escapeXml(ex.source)}</title>${ex.cited ? `<citedRange>${escapeXml(ex.cited)}</citedRange>` : ""}</bibl>`);
     lines.push(`  </cit>`);
+  }
+  // SKD bhāṣā gloss (G6): the source says only "the vernacular"; the Bengali
+  // language tag is an inference, hence cert="medium" resp="#machine".
+  for (const v of sense.vernacular || []) {
+    lines.push(`  <cit type="translationEquivalent" xml:lang="bn-Latn" cert="medium" resp="#machine"><quote>${escapeXml(v.text)}</quote></cit>`);
   }
   if (sense.authority) {
     // §5 kośa sense boundary: the closing authority formula ("iti <authority>") is
@@ -199,7 +264,47 @@ function etymXml(model, id) {
   }
   const etym = model.relations?.find(r => r.type === "etymology");
   if (etym) {
-    rows.push(`<etym xml:id="${id}-etym" type="derivation"><lbl>${escapeXml(etym.label || "from")}</lbl> <mentioned xml:lang="sa">${escapeXml(etym.mention || "")}</mentioned>${etym.source ? ` <bibl><title>${escapeXml(etym.source)}</title></bibl>` : ""}</etym>`);
+    // SKD derivations (G11) carry a Pāṇinian analysis (sūtra, samāsa type) that
+    // <etym> has no slot for: kept whole as <note type="analysis">.
+    const mention = etym.mention ? ` <mentioned xml:lang="sa">${escapeXml(etym.mention)}</mentioned>` : "";
+    const sutra = etym.sutraRef ? ` <bibl><title>Aṣṭādhyāyī</title><citedRange>${escapeXml(etym.sutraRef)}</citedRange></bibl>` : "";
+    const analysis = etym.analysis ? ` <note type="analysis" xml:lang="sa-Latn" resp="#source">${escapeXml(etym.analysis)}</note>` : "";
+    rows.push(`<etym xml:id="${id}-etym" type="derivation"><lbl>${escapeXml(etym.label || "from")}</lbl>${mention}${etym.source ? ` <bibl><title>${escapeXml(etym.source)}</title></bibl>` : ""}${sutra}${analysis}</etym>`);
+  }
+  return rows;
+}
+
+// Entry-level SKD apparatus that has no Lex-0 sense home (docs/TEI_LEX0_SKD_GAPS.md):
+// cross-references, the dhātupāṭha commentary layer, unreduced prose, CDSL
+// corrections, zero-meaning statements and one lex0-gap witness per gap.
+function skdEntryParts(model) {
+  if (!model.records?.skd) return [];
+  const rows = [];
+  for (const r of model.crossRefs || []) {
+    const lbl = r.scope ? `<lbl xml:lang="sa-Latn">${escapeXml(r.scope)}</lbl> ` : "";
+    rows.push(`<xr type="see">${lbl}<ref type="entry" xml:lang="sa-Latn" cert="medium" resp="#machine">${escapeXml(r.targetIast)}</ref></xr>`);
+  }
+  if (model.root?.annotation) {
+    rows.push(`<note type="grammatical-annotation" xml:lang="sa-Latn" resp="#source">${escapeXml(model.root.annotation)}</note>`);
+  }
+  if (model.commentary) {
+    const who = model.commentary.author ? `<bibl><author>${escapeXml(model.commentary.author)}</author></bibl> ` : "";
+    rows.push(`<note type="commentary" xml:lang="sa-Latn" resp="#source">${who}${escapeXml(model.commentary.text)}</note>`);
+  }
+  for (const z of skdZeroMeaningNotes(model)) rows.push(`<note type="zero-meaning" resp="#machine">${escapeXml(z)}</note>`);
+  if (model.prose) {
+    const p = model.prose;
+    const parts = [`${p.segments} prose segment(s), ${p.chars} characters not reduced to glosses`];
+    if (p.extraQuotations) parts.push(`${p.extraQuotations} further quotation(s) beyond the per-sense cap`);
+    if (p.nibandha) parts.push(`nibandha remainder: ${p.nibandha.quotations} quotation(s), ${p.nibandha.attributions} distinct attribution(s); opens "${p.nibandha.opening}…"`);
+    rows.push(`<note type="unparsed-prose" resp="#machine">${escapeXml(parts.join("; "))}. Full text: the archival profile / source record.</note>`);
+  }
+  for (const c of model.corrections || []) {
+    rows.push(`<note type="cdsl-correction" resp="#cdsl">${escapeXml(`${c.old} → ${c.new}`)}${c.url ? ` <ref target="${escapeXml(c.url)}">${escapeXml(c.url)}</ref>` : ""}</note>`);
+  }
+  for (const g of model.gaps || []) {
+    const gap = GAP_BY_ID.get(g);
+    rows.push(`<note type="lex0-gap" n="${escapeXml(g)}">${escapeXml(gap ? gap.title : g)}</note>`);
   }
   return rows;
 }
@@ -230,11 +335,13 @@ function entryXml(model) {
     body.push(`  <sense xml:id="${id}-sense-unparsed"><note type="sense-status">No machine sense extracted; see the archival profile for the source record.</note></sense>`);
   }
   for (const c of citationsXml(model, id)) body.push("  " + c);
+  for (const x of skdEntryParts(model)) body.push("  " + x);
   for (const note of model.loss || []) body.push(`  <note type="model-loss" resp="#source">${escapeXml(note)}</note>`);
   // §5: declare the indigenous-kośa convention so the iti-unit customisation is
   // self-describing (and the Schematron/validator can target it) rather than
-  // inferred from the xml:id.
-  if ((model.phenomena || []).some(p => p === "indigenous-kosa" || p === "sense-citation-fusion")) {
+  // inferred from the xml:id. Only an entry that actually has an authority-
+  // bounded sense is an iti-unit entry (an SKD root or prose entry need not be).
+  if ((model.phenomena || []).includes("sense-citation-fusion")) {
     body.push(`  <note type="entry-convention" resp="#source">kosa-iti-unit</note>`);
   }
   body.push(`  <note type="source-record">${escapeXml(dict)} L${escapeXml(rec.L)}</note>`);
@@ -253,6 +360,18 @@ function teiDocument(model) {
   const optionalBibls = citedOptional
     .map(dict => `\n          <bibl xml:id="dict-${dict}"><abbr>${escapeXml(dict.toUpperCase())}</abbr> <title>${escapeXml(DICT_LABEL[dict])}</title></bibl>`)
     .join("");
+  // An SKD entry's source is the Śabdakalpadruma, not the MW/PWG/PWK backbone;
+  // its M4 decode and CDSL corrections get their own responsibility statements.
+  const isSkd = Boolean(model.records?.skd);
+  const listBibl = isSkd
+    ? `\n          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>`
+    : `\n          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
+          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
+          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>${optionalBibls}`;
+  const extraResp = [
+    model.root ? `\n        <respStmt xml:id="m4"><resp>anubandha decode (gaṇa, pada, transitivity, it-augment) via the Dhātudīpikā key</resp><name>csl-atlas m4_indigenous (data/lexico/indigenous_roots.csv)</name></respStmt>` : "",
+    (model.corrections || []).length ? `\n        <respStmt xml:id="cdsl"><resp>digitisation corrections embedded in the source text</resp><name>CDSL csl-orig editors</name></respStmt>` : ""
+  ].join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="${id}">
   <teiHeader>
@@ -260,7 +379,7 @@ function teiDocument(model) {
       <titleStmt>
         <title>CDSL TEI Lex-0 entry: ${escapeXml(model.key)}</title>
         <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
-        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>${extraResp}
       </titleStmt>
       <publicationStmt>
         <publisher>CSL Standards</publisher>
@@ -268,10 +387,7 @@ function teiDocument(model) {
       </publicationStmt>
       <sourceDesc>
         <listBibl>
-          <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
-          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
-          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
-          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>${optionalBibls}
+          <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>${listBibl}
         </listBibl>
       </sourceDesc>
     </fileDesc>

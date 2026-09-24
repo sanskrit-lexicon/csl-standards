@@ -14,9 +14,7 @@
       <sourceDesc>
         <listBibl>
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
-          <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
-          <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
-          <bibl xml:id="dict-pwk"><abbr>PWK</abbr> <title>Böhtlingk, Sanskrit-Wörterbuch in kürzerer Fassung</title></bibl>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
         </listBibl>
       </sourceDesc>
     </fileDesc>
@@ -35,7 +33,7 @@
           <gen norm="masculine" cert="high" resp="#source">masculine</gen>
           <gen norm="neuter" cert="high" resp="#source">neuter</gen>
         </gramGrp>
-        <etym xml:id="skd-DarmmaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">dhṛ</mentioned> <bibl><title>Uṇādisūtra 1.139</title></bibl></etym>
+        <etym xml:id="skd-DarmmaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">dhṛ</mentioned> <bibl><title>Uṇādisūtra 1.139</title></bibl> <note type="analysis" xml:lang="sa-Latn" resp="#source">dharati lokān dhriyate puṇyātmabhiriti vā . dhṛ + “arttistuhusriti .” uṇāṃ 1 . 139 . iti man .</note></etym>
         <sense xml:id="skd-DarmmaH-sense-1" n="1">
           <def xml:lang="sa-Latn" cert="high" resp="#source">śubhādṛṣṭam — paryāya: puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ</def>
           <cit type="example" xml:lang="sa">
@@ -63,6 +61,9 @@
           <bibl type="kosa-authority"><author>Hemacandra</author></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Hemacandra) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
+        <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
+        <note type="lex0-gap" n="G5">Paryāya run: an authority&apos;s numbered synonym list</note>
+        <note type="lex0-gap" n="G11">Derivation as grammatical analysis (sūtra, samāsa, Uṇādi)</note>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
         <note type="entry-convention" resp="#source">kosa-iti-unit</note>
         <note type="source-record">skd L17667</note>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-tUlaM">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-astakaH">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>CDSL TEI Lex-0 entry: tUlaM</title>
+        <title>CDSL TEI Lex-0 entry: astaka</title>
         <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
         <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
       </titleStmt>
@@ -24,40 +24,24 @@
   </teiHeader>
   <text>
     <body>
-      <entry xml:id="skd-tUlaM-entry" xml:lang="sa">
+      <entry xml:id="skd-astakaH-entry" xml:lang="sa">
         <form type="lemma">
-          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">tUlaM</orth>
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">astaka</orth>
         </form>
         <gramGrp>
           <pos norm="noun" cert="high" resp="#machine">noun</pos>
-          <gen norm="neuter" cert="high" resp="#source">neuter</gen>
           <gen norm="masculine" cert="high" resp="#source">masculine</gen>
         </gramGrp>
-        <etym xml:id="skd-tUlaM-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">tūla + karmmaṇi</mentioned> <note type="analysis" xml:lang="sa-Latn" resp="#source">tūlyate iyattayā paricchidyate iti . tūla + karmmaṇi ghañ . yadbā, tūlayate svalpo&apos;pi bahusthānaṃ pūrayatīti . tūla + “igupadheti .” kaḥ .</note></etym>
-        <sense xml:id="skd-tUlaM-sense-1" n="1">
-          <def xml:lang="sa-Latn" cert="high" resp="#source">kārpāsāditūlaḥ</def>
-          <bibl type="kosa-authority"><title>Medinī</title></bibl>
-          <note type="model-loss" resp="#source">Sense and its closing authority (iti Medinī) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
-        </sense>
-        <sense xml:id="skd-tUlaM-sense-2" n="2">
-          <def xml:lang="sa-Latn" cert="high" resp="#source">paryāya: picuḥ</def>
-          <bibl type="kosa-authority"><author>Amara</author></bibl>
-          <note type="model-loss" resp="#source">In the source this synonym run and its authority (iti Amara) are one indivisible iti-unit: sense enumeration and source attestation are a single construction, split into def + bibl here.</note>
-        </sense>
-        <sense xml:id="skd-tUlaM-sense-3" n="3">
-          <def xml:lang="sa-Latn" cert="high" resp="#source">piculaḥ picutūlaḥ tūlapicuḥ; picutūlam</def>
-          <cit type="example" xml:lang="sa">
-            <quote xml:space="preserve">viparītaṃ yadā daivaṃ tṛṇaṃ vajrasamaṃ bhavet . vidhiścet sumukhaḥ kāmaṃ kuliśaṃ tūlavattadā ..</quote>
-            <bibl><title>devībhāgavate</title><citedRange>5.10.36</citedRange></bibl>
-          </cit>
+        <etym xml:id="skd-astakaH-etym" type="derivation"><lbl>from</lbl> <mentioned xml:lang="sa">asta + kan</mentioned> <note type="analysis" xml:lang="sa-Latn" resp="#source">asta + kan .</note></etym>
+        <sense xml:id="skd-astakaH-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">mokṣaḥ; nirbbāṇaṃ</def>
           <bibl type="kosa-authority"><title>Trikāṇḍaśeṣa</title></bibl>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Trikāṇḍaśeṣa) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
         <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
-        <note type="lex0-gap" n="G5">Paryāya run: an authority&apos;s numbered synonym list</note>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
         <note type="entry-convention" resp="#source">kosa-iti-unit</note>
-        <note type="source-record">skd L15202</note>
+        <note type="source-record">skd L3015</note>
         <note type="profile-version">tei-lex0-pilot-v0.1</note>
       </entry>
     </body>

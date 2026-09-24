@@ -13,11 +13,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { generatedAt } from "./lib/provenance.mjs";
+import { SKD_GAPS } from "./lib/skd-gaps.mjs";
 
 const root = process.cwd();
 const dir = path.join(root, "data", "pilot", "tei-lex0");
 const REPORT = path.join(dir, "..", "tei-lex0-review.json");
 const PROFILE_VERSION = "tei-lex0-pilot-v0.1";
+const GAPS_FILE = path.join(dir, "..", "skd-lex0-gaps.json");
+const GAP_IDS = new Set(SKD_GAPS.map(g => g.id));
 
 function wellFormed(xml, file, errors) {
   const stack = [];
@@ -85,8 +88,48 @@ function main() {
       }
     }
 
+    // Indigenous-apparatus customisation (H5321, ODD
+    // csl-lex0-skd-indigenous-apparatus; docs/TEI_LEX0_SKD_GAPS.md).
+    const gapNs = [...xml.matchAll(/<note type="lex0-gap" n="([^"]*)"/g)].map(g => g[1]);
+    const isSkd = /<entry\b[^>]*xml:id="skd-/.test(xml);
+    check(isSkd || gapNs.length === 0, "lex0-gap notes on a non-SKD entry");
+    check(gapNs.every(n => GAP_IDS.has(n)), `lex0-gap id not in the registry (${gapNs.filter(n => !GAP_IDS.has(n)).join(", ")})`);
+    if (isSkd) {
+      check(xml.includes('<bibl xml:id="dict-skd">'), "SKD document does not declare bibl dict-skd");
+      if (/<gram\b[^>]*resp="#m4"/.test(xml)) check(xml.includes('<respStmt xml:id="m4">'), "M4 decode used without the m4 respStmt");
+      if (xml.includes('<gram type="anubandha" norm="none"')) {
+        check(xml.includes('<note type="zero-meaning"'), "empty anubandha slot without a zero-meaning note");
+        check(gapNs.includes("G3"), "empty anubandha slot does not witness gap G3");
+      }
+      for (const g of xml.matchAll(/<gram type="anubandha" norm="(?!none")[^"]*"[^>]*>/g)) {
+        check(/resp="#source"/.test(g[0]), "anubandha letter not bound to #source");
+        check(gapNs.includes("G2"), "printed anubandha slot does not witness gap G2");
+      }
+      for (const g of xml.matchAll(/<gram type="(?:gana|pada|transitivity|it-augment)"[^>]*>/g)) {
+        check(/resp="#m4"/.test(g[0]), `M4-derived gram not bound to #m4: ${g[0]}`);
+      }
+    }
+
     if (errors.length) failed += 1;
-    cases.push({ file, ok: errors.length === 0, errors });
+    cases.push({ file, ok: errors.length === 0, errors, ...(gapNs.length ? { gaps: gapNs } : {}) });
+  }
+
+  // Gaps file <-> entries: every registry gap has at least one worked example
+  // in the sample, and the file's per-gap sampleCount matches the witnesses
+  // actually present in the exported entries.
+  const gapErrors = [];
+  if (fs.existsSync(GAPS_FILE)) {
+    const gapsDoc = JSON.parse(fs.readFileSync(GAPS_FILE, "utf8"));
+    const witnessed = new Map();
+    for (const c of cases) for (const n of c.gaps || []) witnessed.set(n, (witnessed.get(n) || 0) + 1);
+    for (const g of SKD_GAPS) {
+      const row = gapsDoc.gaps.find(r => r.id === g.id);
+      if (!row) { gapErrors.push(`${path.relative(root, GAPS_FILE)}: gap ${g.id} missing`); continue; }
+      if (!row.examples?.length) gapErrors.push(`${path.relative(root, GAPS_FILE)}: gap ${g.id} has no example`);
+      if (row.sampleCount !== (witnessed.get(g.id) || 0)) {
+        gapErrors.push(`${path.relative(root, GAPS_FILE)}: gap ${g.id} sampleCount ${row.sampleCount} != ${witnessed.get(g.id) || 0} witnessing entries`);
+      }
+    }
   }
 
   fs.writeFileSync(REPORT, `${JSON.stringify({
@@ -99,12 +142,14 @@ function main() {
     total: cases.length,
     passed: cases.length - failed,
     failed,
+    gapRegistry: { gaps: SKD_GAPS.length, errors: gapErrors },
     cases
   }, null, 2)}\n`);
 
   for (const c of cases) if (!c.ok) for (const e of c.errors) console.error(e);
-  console.log(`TEI Lex-0: ${cases.length - failed}/${cases.length} entries pass structural baseline checks. Report: ${path.relative(root, REPORT)}`);
-  if (failed) process.exit(1);
+  for (const e of gapErrors) console.error(e);
+  console.log(`TEI Lex-0: ${cases.length - failed}/${cases.length} entries pass structural baseline checks; SKD gap registry ${SKD_GAPS.length - new Set(gapErrors.map(e => e.match(/gap (G\d+)/)?.[1])).size}/${SKD_GAPS.length} consistent. Report: ${path.relative(root, REPORT)}`);
+  if (failed || gapErrors.length) process.exit(1);
 }
 
 main();

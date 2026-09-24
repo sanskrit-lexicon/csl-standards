@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-maDyAhnaH">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>CDSL TEI Lex-0 entry: maDyAhna</title>
+        <respStmt xml:id="source"><resp>headword, grammar, and citations as printed</resp><name>CDSL source dictionary</name></respStmt>
+        <respStmt xml:id="machine"><resp>derived classification and gloss extraction</resp><name>scripts/export-tei-lex0.mjs</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CSL Standards</publisher>
+        <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
+      </publicationStmt>
+      <sourceDesc>
+        <listBibl>
+          <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
+          <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
+        </listBibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <entry xml:id="skd-maDyAhnaH-entry" xml:lang="sa">
+        <form type="lemma">
+          <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">maDyAhna</orth>
+        </form>
+        <gramGrp>
+          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gen norm="masculine" cert="high" resp="#source">masculine</gen>
+        </gramGrp>
+        <etym xml:id="skd-maDyAhnaH-etym" type="derivation"><lbl>from</lbl> <bibl><title>Aṣṭādhyāyī</title><citedRange>5.4.88</citedRange></bibl> <note type="analysis" xml:lang="sa-Latn" resp="#source">madhyaṃ ahaḥ samāsāntaḥ ṭac . “ahno&apos;hna etebhyaḥ .” 5 . 4 . 88 . ityahnādeśaḥ puṃstvañca .</note></etym>
+        <sense xml:id="skd-maDyAhnaH-sense-1" n="1">
+          <def xml:lang="sa-Latn" cert="high" resp="#source">ahro&apos;ṣṭamamuhūrttātmakamadhyabhāgaḥ</def>
+        </sense>
+        <xr type="see"><lbl xml:lang="sa-Latn">atra</lbl> <ref type="entry" xml:lang="sa-Latn" cert="medium" resp="#machine">bhojanavidhirbhojana</ref></xr>
+        <note type="unparsed-prose" resp="#machine">2 prose segment(s), 6616 characters not reduced to glosses; nibandha remainder: 2 quotation(s), 5 distinct attribution(s); opens &quot;“ahro muhūrttā vikhyātā daśa pañca ca sarvvadā . tatrāṣṭamo muhūrtto yaḥ saḥ kālaḥ kutapaḥ smṛtaḥ . madhyāhre sarvvadā yasmānmandībhavati bhāskaraḥ . tasmādanantaphaladastatrārambho viśiṣyate .. madhyāhraḥ kh…&quot;. Full text: the archival profile / source record.</note>
+        <note type="lex0-gap" n="G7">Scoped cross-reference (`asya guRAH XSabde drazwavyAH`)</note>
+        <note type="lex0-gap" n="G8">Nibandha: treatise prose inside an entry</note>
+        <note type="lex0-gap" n="G11">Derivation as grammatical analysis (sūtra, samāsa, Uṇādi)</note>
+        <note type="source-record">skd L26136</note>
+        <note type="profile-version">tei-lex0-pilot-v0.1</note>
+      </entry>
+    </body>
+  </text>
+</TEI>
