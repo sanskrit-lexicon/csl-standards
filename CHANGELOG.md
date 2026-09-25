@@ -71,6 +71,33 @@ into a dated version. Versions track `package.json`.
 - The stale generated `mw-pwg-pwk-nirmita.lex0.xml` is removed. It is not one of
   the 250 cases, and the generator no longer emits it.
 
+### Added
+- **H5320 — TEI Lex-0 exports validated in CI against the official DARIAH
+  schema, pinned at v0.9.4.** The compiled official RelaxNG
+  (`Schemas/TEILex0/out/TEILex0.rng` @ tag `v0.9.4`, BSD-2-Clause) is vendored
+  verbatim at `data/schema/TEILex0-v0.9.4.rng` with SHA-256 provenance, and
+  `npm run validate-tei-lex0-schema` (new CI gate) validates every pilot file
+  — 297 generated entries (H5321 stratified SKD set) plus the hand-authored
+  exemplar — via
+  `xmllint --relaxng` — no Java/TEI-Stylesheets toolchain. Report:
+  `data/pilot/tei-lex0-schema-review.json` (256/256 valid; embedded Schematron
+  recorded as not executed — a declared limitation, never a silent pass).
+
+### Fixed
+- **H5320 — generator conformance fixes (outputs untouched by hand).** The
+  pre-existing entries all failed the official v0.9.4 grammar (0/298 valid
+  against it before this pass, including H5321's stratified SKD set). Defects
+  fixed in `scripts/export-tei-lex0.mjs`: `gram type="pos|gender"` replaces the
+  `pos`/`gen` elements Lex-0 drops; sense-level `bibl` citations are wrapped in
+  `cit type="example"` (`model.sensePart` admits no `biblLike`); `ref type="cf"`
+  replaces `xr` (`xr/@type` is closed to four semantic-relation values);
+  `hi rend="mentioned"` replaces `mentioned`; `etym/@subtype` replaces the
+  closed `etym/@type`; `quote` drops `xml:space` (not in Lex-0); required
+  `TEI/@type="lex-0"`, `listBibl/@type` ("dictionaries"),
+  `teiHeader/profileDesc/langUsage`, and `entry`/`sense` `xml:id` pairing
+  honoured. Also conformed here: H5321 additions (`xr type="see"`, `ref @subtype` tokens,
+  correction-URL refs inside `note`).
+
 ## [1.3.1] - 2026-08-30
 ### Fixed
 - **H2307 follow-up — MDF `exporter-hash` is now LF-normalized (H2811).**

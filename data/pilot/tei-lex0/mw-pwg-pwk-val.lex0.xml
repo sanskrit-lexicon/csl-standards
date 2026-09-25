@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-val">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mw-pwg-pwk-val" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -12,7 +12,7 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-mw"><abbr>MW</abbr> <title>Monier-Williams Sanskrit–English Dictionary (1899)</title></bibl>
           <bibl xml:id="dict-pwg"><abbr>PWG</abbr> <title>Böhtlingk–Roth, Sanskrit-Wörterbuch (Petersburg, large)</title></bibl>
@@ -25,6 +25,12 @@
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -33,40 +39,56 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">val</orth>
         </form>
         <gramGrp>
-          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="pos" norm="verb" cert="high" resp="#machine">verb</gram>
           <gram type="verb-class" cert="high" resp="#source">1</gram>
         </gramGrp>
         <sense xml:id="mw-pwg-pwk-val-sense-1" n="1">
           <def xml:lang="en" cert="high" resp="#machine">to turn, turn round, turn to</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Kāv.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Kāv.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-2" n="2">
           <def xml:lang="en" cert="high" resp="#machine">to be drawn or attached towards, be attached to</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Nalod.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Nalod.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-3" n="3">
           <def xml:lang="en" cert="high" resp="#machine">to move to and fro</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Hcat.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Hcat.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-4" n="4">
           <def xml:lang="en" cert="high" resp="#machine">to go, approach, hasten</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Mcar.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Mcar.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-5" n="5">
           <def xml:lang="en" cert="high" resp="#machine">to return i.e. come back or home</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Uttamac.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Uttamac.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-6" n="6">
           <def xml:lang="en" cert="high" resp="#machine">to return i.e. depart or go away again</def>
-          <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>ib.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>ib.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-7" n="7">
           <def xml:lang="en" cert="high" resp="#machine">to break forth, appear</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Gīt.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Gīt.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-8" n="8">
           <def xml:lang="en" cert="high" resp="#machine">to increase</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Sāh.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Sāh.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-9" n="9">
           <def xml:lang="en" cert="high" resp="#machine">to cover or enclose or to be covered</def>
@@ -74,11 +96,15 @@
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-10" n="10">
           <def xml:lang="en" cert="high" resp="#machine">to cause to move or turn or roll</def>
-          <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Śiś.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="textual" source="#dict-mw" cert="high" resp="#source"><abbr>Śiś.</abbr></bibl>
+          </cit>
         </sense>
         <sense xml:id="mw-pwg-pwk-val-sense-11" n="11">
           <def xml:lang="en" cert="high" resp="#machine">to cherish etc</def>
-          <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>W.</abbr></bibl>
+          <cit type="example">
+            <bibl type="named-source" subtype="editorial" source="#dict-mw" cert="high" resp="#source"><abbr>W.</abbr></bibl>
+          </cit>
         </sense>
         <bibl xml:id="mw-pwg-pwk-val-cite-1" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>DHĀTUP. 14,20</abbr><citedRange>14,20</citedRange></bibl>
         <bibl xml:id="mw-pwg-pwk-val-cite-2" type="named-source" subtype="textual" source="#dict-pwg" cert="high" resp="#source"><abbr>VOP.</abbr></bibl>
