@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 24-09-2026_
+_Created: 13-06-2026 · Last updated: 06-10-2026_
 
 # Changelog
 
@@ -9,6 +9,9 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.4.3] - 2026-10-06
+
+- **H6192 — A70 note: related-work spine, live-verified references, upstream Lex-0 state.** [#149](https://github.com/sanskrit-lexicon/csl-standards/pull/149) completes the Cologne acl-uplift wave for [`docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md) (A68 → A69 → A70). §6 "Relation to prior work" was internal-only; it now carries the live-verified external spine: Lex-0 practice literature (Salgado, Costa & Tasovac 2019, *Lexicography*; Tasovac, Salgado & Costa 2020, *Slovenščina 2.0* 8(2):28–57; Bowers, Herold, Tasovac & Romary 2022, *jTEI*, the Lex-0 Etym module), TEI foundations (Ide & Véronis 1995; P5 ch. 10 "Dictionaries" and ch. 22 "Certainty, Precision, and Responsibility"), the Western quotation-apparatus analogue (Brewer 2007) and computational-Sanskrit prior art (Huet's Sanskrit Heritage). References completed 6 → 11 external entries, every source fetched live 06-10-2026. Live-fact catch: issue #63 was closed by PR #104 (2020) and the released baseline (v0.9.5) ships `@scope` on `ref` (`att.scoped`) — G7 recast from "pending upstream" to "landed, target-scope only", with the SKD aspect-deferring cases kept as test material. Defects caught by the live-verification rule: TEI P5 chapter numbers corrected to 10/22 under the note's own pinned P5 4.11.0; the dead Lex-0 spec URL replaced with lex-0.org; Romary & Tasovac's title corrected per HAL hal-02265312. Counts, the 47-entry sample, validation claims and toolchain pins are untouched.
 - **A02: `.zenodo.json` added for GitHub-Zenodo archive metadata.** Closes the csl-standards half of the FAIR-sprint gap noted in [SanskritLexicography's roadmap](https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_ATLAS_FAIR_PUBLICATIONS_2026_2027.md) — `CITATION.cff` existed here already, but no `.zenodo.json` had ever been committed, so a GitHub release could not carry Zenodo upload metadata. Connecting the repo to Zenodo and minting the DOI itself remains a human step (Zenodo account authorization).
 
 ## [1.4.2] - 2026-09-24
