@@ -1,4 +1,4 @@
-_Created: 24-09-2026 · Last updated: 24-09-2026_
+_Created: 24-09-2026 · Last updated: 06-10-2026_
 
 # What TEI Lex-0 lacks for the indigenous apparatus: twelve structures from the Śabdakalpadruma, with workarounds and proposed extensions
 
@@ -12,7 +12,8 @@ Dr. Mārcis Gasūns (draft prepared with a little help from my Chinese friend)
 > Every example below is an exported, validated entry in
 > [`data/pilot/tei-lex0/`](https://github.com/sanskrit-lexicon/csl-standards/tree/main/data/pilot/tei-lex0).
 > Venue candidates are in §8. The proposals are offered for discussion in the TEI Lex-0
-> working group; none is adopted anywhere yet.
+> working group; none is adopted anywhere yet. Section 6 and the References were
+> live-verified against upstream sources on 06-10-2026.
 
 ## Abstract
 
@@ -229,10 +230,10 @@ the ordinals are dropped, and the loss is declared.
 nor the binding to one authority. Allow `@n` on each `<ref>` for the ordinal, and allow
 a `<bibl>` inside `<xr>` for the authority, both as guideline examples, and reserve
 `subtype="paryaya"` on the `<xr>` so that a numbered, authority-bound list is
-distinguishable from a modern synonym note. The working group's own handling of
-referenced sense numbers as surface labels (issue
-[#242](https://github.com/DARIAH-ERIC/lexicalresources/issues/242)) is the model: the
-printed number is a `<lbl>` first, a computable link second.
+distinguishable from a modern synonym note. The working group's own thread on
+referenced sense numbers (issue
+[#242](https://github.com/DARIAH-ERIC/lexicalresources/issues/242), 2025) shows the
+same need: the printed number is a `<lbl>` first, a computable link second.
 
 ### G6. The *bhāṣā* gloss: a vernacular equivalent with no language name (partial; 3,470; class A)
 
@@ -255,7 +256,7 @@ source's own label survives: the printed label as `<lbl>bhāṣā</lbl>` inside 
 infer, and the inferred language as a separate, `@cert`-marked statement. Our export
 infers; a more cautious project should be able not to, and still validate.
 
-### G7. The scoped cross-reference (partial; 354; class A, pending upstream)
+### G7. The scoped cross-reference (partial; 354; class A; upstream scope mechanism landed — see §6)
 
 **Structure.** `asyā vivaraṇaṃ capeṭīśabde draṣṭavyam`: "for its account, see under
 *capeṭī*". The reference defers one aspect of the entry (its properties, its account,
@@ -270,13 +271,21 @@ entry is deferred.
 
 **Workaround.** The scope as `<lbl>`, the target as `<ref type="entry">`.
 
-**Proposal.** The working group already opened this: issue
-[#63](https://github.com/DARIAH-ERIC/lexicalresources/issues/63) proposes a scope
-attribute on `<ref>` once `<ref>` joins `att.lexicographic`, and issue
-[#64](https://github.com/DARIAH-ERIC/lexicalresources/issues/64) a cross-reference type
-for inclusion rather than pointing. The SKD scoped cases (354 in the corpus, 5 in the
-sample) are offered as test material for whichever resolution lands. Until then the
-`<lbl>` form is a guideline example, not a schema change.
+**Proposal.** The upstream state has moved since this note was drafted. Issue
+[#63](https://github.com/DARIAH-ERIC/lexicalresources/issues/63) ("put scope on
+`ref` to indicate where the reference applies") was closed by pull request
+[#104](https://github.com/DARIAH-ERIC/lexicalresources/pull/104) in June 2020, and
+the released baseline (v0.9.5) now carries `@scope` on `<ref>` (the `att.scoped`
+class, with `currentEntry` and `externalEntry` as sample values). The landed
+mechanism scopes the *target* of the reference — this entry or another one; the
+SKD cases defer an *aspect* of the entry (its account, its properties), which
+`@scope` does not name. The SKD scoped cases (354 in the corpus, 5 in the sample)
+are therefore offered as test material for how far the landed attribute reaches,
+with the `<lbl>` form kept as the guideline example for the aspect itself. Issue
+[#64](https://github.com/DARIAH-ERIC/lexicalresources/issues/64) ("add value to
+`xr` type to indicate inclusion of external material") is likewise closed, and no
+inclusion value appears among the released `xr/@type` values (`synonymy`,
+`hyponymy`, `hypernymy`, `meronymy`, `antonymy`, `related`).
 
 ### G8. *Nibandha*: treatise prose inside an entry (no home; 667; class C)
 
@@ -401,7 +410,7 @@ baseline need not admit.
 | G4 | commentary layer | 2,287 | B + C | `note/@type="commentary"` with `<bibl>`; `form/@corresp` to the licensing `<gram>` | none |
 | G5 | *paryāya* run | 4,887 | B | `ref/@n` ordinals, `<bibl>` in `<xr>`, `xr/@subtype="paryaya"` | [#242](https://github.com/DARIAH-ERIC/lexicalresources/issues/242) |
 | G6 | *bhāṣā* gloss | 3,470 | A | `<lbl>` keeps the source label; `und-Latn` when not inferring | none |
-| G7 | scoped cross-reference | 354 | A | adopt the #63 scope attribute; SKD cases as tests | [#63](https://github.com/DARIAH-ERIC/lexicalresources/issues/63), [#64](https://github.com/DARIAH-ERIC/lexicalresources/issues/64) |
+| G7 | scoped cross-reference | 354 | A | upstream `@scope` landed on `ref` (Lex-0 0.9.5); guideline example for the deferred aspect; SKD cases as tests | [#63](https://github.com/DARIAH-ERIC/lexicalresources/issues/63), [#64](https://github.com/DARIAH-ERIC/lexicalresources/issues/64) |
 | G8 | *nibandha* prose | 667 | C | `note/@type="discourse"` admitting `<p>`, `<cit>`, `<bibl>`, with `@extent` | none |
 | G9 | positional quotation | 20,452 | B | `cit/@subtype="positional"` | none |
 | G10 | *liṅga* word class | 4,440 | B | `gram/@type="linga"`; `<pos>` as marked inference | none |
@@ -432,6 +441,31 @@ G12 needs nothing from Lex-0.
 
 ## 6. Relation to prior work
 
+**The Lex-0 lineage and its practice literature.** TEI Lex-0 was launched in 2016
+under the auspices of the DARIAH working group on lexical resources, as the terse
+target format into which heterogeneously encoded dictionaries can be mapped (Romary
+and Tasovac 2018); the released baseline stands at version 0.9.5 (DARIAH-ERIC
+Working Group on Lexical Resources, accessed 06-10-2026). The practice literature
+that tests the baseline is young but real: usage-label consistency (Salgado, Costa
+and Tasovac 2019), polylexical units (Tasovac, Salgado and Costa 2020), and a terse
+etymology module (Bowers, Herold, Tasovac and Romary 2022). Each extends Lex-0 one
+domain at a time; the twelve gaps below are the indigenous-apparatus contribution
+to the same pattern, and G11's derivation cases sit directly on the ground the
+etymology module opened.
+
+**TEI foundations.** The baseline inherits the TEI P5 dictionary model (ch. 10,
+"Dictionaries") and the certainty and responsibility machinery (ch. 22) that the
+export's `resp`/`cert` split relies on; the founding context of the whole effort is
+documented in the TEI's background collection (Ide and Véronis 1995).
+
+**The Western analogue and computational Sanskrit.** The tradition this note
+encodes keeps its evidence *inside* the entry, as the OED's quotation base did in
+print-era editorial practice (Brewer 2007) — the adjacency-attributed quotation of
+G9 is that habit's data face. On the computational Sanskrit side, the Sanskrit
+Heritage platform (Huet, accessed 06-10-2026) has for decades generated the full
+verb system from the *dhātupāṭha*, which makes it the longest-standing consumer of
+exactly the it-letter code that G2 asks Lex-0 to name.
+
 - The Western-side pilot of this repository
   ([`PAPER.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER.md),
   [`LOSS_ANALYSIS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md))
@@ -448,10 +482,6 @@ G12 needs nothing from Lex-0.
   inheritance (§7), and the SKD/VCP microstructure is the subject of the portfolio's
   A30 and A04 drafts. This note stays on the standard's side of that line: what Lex-0
   needs, not what the *kośa* is.
-- On the Lex-0 side, issues #63, #64 and #242 of the working group's tracker show the
-  same pressure from European historical dictionaries: scoped references, inclusion
-  references, and referenced sense numbers. The SKD cases are more numerous and more
-  regular, which is the argument for treating them as test material.
 
 ## 7. Limitations, and what would refute this note
 
@@ -473,7 +503,7 @@ G12 needs nothing from Lex-0.
 **Refutation.** The claim "no home" for G1, G2, G3, G4 and G8 is falsified if the
 current Lex-0 ODD and guidelines already admit an encoding that keeps the structure
 whole without a `model-loss` note. We checked the guidelines and the tracker searches
-recorded in §6; we did not find one. A working-group member who does would collapse the
+recorded in §3 and §6; we did not find one. A working-group member who does would collapse the
 corresponding proposal into a guideline example, and this note would be shortened
 accordingly. The class-A proposals are already that.
 
@@ -492,18 +522,45 @@ accordingly. The class-A proposals are already that.
 
 ## References
 
-To be verified at submission; the two web sources were live on 24-09-2026.
+All external sources below were fetched and verified live on 06-10-2026; authors,
+titles and venues were read from the authoritative record (publisher, journal,
+repository or issue tracker), not from secondary snippets.
 
-- DARIAH-ERIC Working Group on Lexical Resources. *TEI Lex-0: A baseline encoding for
-  lexicographic resources.* <https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html>
-- DARIAH-ERIC/lexicalresources issue tracker, issues #63, #64, #242 and pull request
-  #236. <https://github.com/DARIAH-ERIC/lexicalresources/issues>
-- Romary, L. and Tasovac, T. 2018. "TEI Lex-0: A Target Format for TEI-Encoded
-  Dictionaries and Lexicons." *TEI Conference and Members' Meeting 2018*, Tokyo.
-- TEI Consortium. *TEI P5: Guidelines for Electronic Text Encoding and Interchange*,
-  ch. 9 "Dictionaries" and ch. 21 "Certainty, Precision, and Responsibility".
-- Rādhākānta Deva. *Śabdakalpadruma.* Calcutta, nineteenth century. Digital text:
+- Bowers, J., A. Herold, T. Tasovac & L. Romary. 2022. "TEI Lex-0 Etym: Toward
+  Terse Recommendations for the Encoding of Etymological Information." *Journal of
+  the Text Encoding Initiative*, rolling issue (online 20-09-2022).
+  <https://doi.org/10.4000/jtei.4300>
+- Brewer, C. 2007. *Treasure-house of the Language: The Living OED*. New Haven and
+  London: Yale University Press.
+- DARIAH-ERIC Working Group on Lexical Resources. *TEI Lex-0 — A baseline encoding
+  for lexicographic data*, version 0.9.5 (updated 08-02-2026). <https://lex-0.org/>
+  (accessed 06-10-2026)
+- DARIAH-ERIC/lexicalresources issue tracker: [#63](https://github.com/DARIAH-ERIC/lexicalresources/issues/63)
+  ("put scope on `ref`", closed by [PR #104](https://github.com/DARIAH-ERIC/lexicalresources/pull/104),
+  June 2020); [#64](https://github.com/DARIAH-ERIC/lexicalresources/issues/64)
+  ("add value to `xr` type to indicate inclusion of external material", closed);
+  [#242](https://github.com/DARIAH-ERIC/lexicalresources/issues/242) ("How to tag
+  the referenced sense number?", 2025, closed); [PR #236](https://github.com/DARIAH-ERIC/lexicalresources/pull/236)
+  (`degree` added to `gram/@type`, merged 04-05-2025).
+- Huet, G. *The Sanskrit Heritage Site*, version 3.84. <https://sanskrit.inria.fr/>
+  (accessed 06-10-2026)
+- Ide, N. & J. Véronis (eds.). 1995. *Text Encoding Initiative: Background and
+  Context*. Dordrecht: Kluwer Academic Publishers. <https://doi.org/10.1007/978-94-011-0325-1>
+- Rādhākānta Deva. *Śabdakalpadruma*. Calcutta, nineteenth century. Digital text:
   Cologne Digital Sanskrit Dictionaries, csl-orig `v02/skd/skd.txt`.
+- Romary, L. & T. Tasovac. 2018. "TEI Lex-0: A Target Format for TEI-Encoded
+  Dictionaries and Lexical Resources." *TEI Conference and Members' Meeting 2018*,
+  Tokyo. HAL hal-02265312, <https://doi.org/10.34894/VQ1DJA>
+- Salgado, A., R. Costa & T. Tasovac. 2019. "Improving the consistency of usage
+  labelling in dictionaries with TEI Lex-0." *Lexicography*.
+  <https://doi.org/10.1007/s40607-019-00061-x>
+- Tasovac, T., A. Salgado & R. Costa. 2020. "Encoding polylexical units with TEI
+  Lex-0: A case study." *Slovenščina 2.0* 8(2): 28–57.
+  <https://doi.org/10.4312/slo2.0.2020.2.28-57>
+- TEI Consortium. *TEI P5: Guidelines for Electronic Text Encoding and
+  Interchange*, ch. 10 "Dictionaries" and ch. 22 "Certainty, Precision, and
+  Responsibility". <https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html>
+  (accessed 06-10-2026)
 - This repository:
   [`TEI_LEX0_SKD_GAPS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_SKD_GAPS.md),
   [`data/pilot/skd-lex0-gaps.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/pilot/skd-lex0-gaps.json),
