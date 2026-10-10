@@ -34,7 +34,7 @@ Baseline = the census collision universe read straight from the payload (448 col
 |---|---|
 | Baseline | 448 colliding strings, 1128 senses (excess 680), 205 cross-category |
 | Register coverage | 98 senses bound (8.69%), on 48 strings; 20 concepts, 19 touching the universe |
-| Concept view | 432 strings still colliding; excess 680 → 634 (−6.76%); 16 strings resolved, 32 reduced |
+| Concept view | 432 strings still colliding; excess 680 → 634 (−6.76%); 32 strings reduced in total, of which 16 fully resolved |
 | Notation view | 414 notations still carry ≥2 concepts; **0 new concept pairs** |
 | Canary | `V.` 7→7, `c.` 4→2, `P.` 11→10, `S.` 5→5, `N.` 10→10, `M.` 11→11, `f.` 6→6 — census polysemy numbers pinned verbatim in the register |
 
