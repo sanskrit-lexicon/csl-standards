@@ -6,9 +6,10 @@ Date: 2026-06-13
 
 Status: draft. Slice 1 (target encoding + worked exemplars), slice 2 (generator +
 structural validator), and slice 3 (a source *kośa* parser, so the indigenous
-entry is ingested from SKD rather than hand-curated) are done. The Lex-0 ODD is
-authored and RNG validation is wired into the external harness (sec. 6); actually
-running it needs the Java/TEI-Stylesheets toolchain.
+entry is ingested from SKD rather than hand-curated) are done. Since H5320
+(2026-09-24) every generated entry is validated in CI against the **official
+DARIAH TEI Lex-0 v0.9.4 RNG** (sec. 6) — no Java toolchain required, unlike the
+project-ODD path of H5321.
 
 This pilot establishes a **TEI Lex-0** baseline encoding for CDSL dictionary
 entries, covering one Western dictionary (Monier-Williams) and — for the first
@@ -165,6 +166,27 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
   archival validator [`validate-tei-profile.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-profile.mjs)
   does **not** apply here (it requires three source-entry cits per entry, which a
   Lex-0 entry has none of).
+- **Done (H5320, official RNG in CI):** every pilot file is validated against the
+  **official DARIAH TEI Lex-0 schema pinned at v0.9.4** —
+  [`data/schema/TEILex0-v0.9.4.rng`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/TEILex0-v0.9.4.rng)
+  (vendored verbatim, SHA-256 + provenance in its `.PROVENANCE.md`) — by
+  [`scripts/validate-tei-lex0-schema.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-tei-lex0-schema.mjs)
+  (`npm run validate-tei-lex0-schema`), wired into `build-pilot` and CI. The
+  validator runs `xmllint --relaxng` (libxml2 — no Java toolchain needed) over
+  every pilot file — all 297 generated `*.lex0.xml` entries plus the
+  hand-authored `pilot-sample.lex0.tei.xml` exemplar — and writes
+  `data/pilot/tei-lex0-schema-review.json`; any failure exits non-zero, so CI is
+  red until the **generator** (`export-tei-lex0.mjs`) is fixed, never the
+  outputs. The official v0.9.4 grammar is **stricter** than the project ODD
+  compiled in the H5321 external run above: it drops the discrete `pos`/`gen`
+  elements, closes `xr`/`cit`/`etym` `@type` to fixed lists, bars `bibl` from
+  `model.sensePart` and `ref` from note content, and requires `TEI/@type`,
+  `listBibl/@type`, `profileDesc/langUsage`, and `sense/@xml:id`. The
+  conformance substitutions are applied at the generator (`gram type="pos|gender"`,
+  sense-level `bibl` wrapped in `cit type="example"`, `ref` for `xr`, `hi
+  rend="mentioned"` for `mentioned`, `etym/@subtype`, required `@type`s);
+  embedded Schematron in the pinned RNG is not executed by libxml2 — the report
+  records `schematronChecked: false` (a declared limitation, not a silent pass).
 - **Wired (RNG):** a project Lex-0 ODD
   ([`data/schema/tei-lex0-profile.odd.xml`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/tei-lex0-profile.odd.xml))
   is authored and the RNG validation is wired into
@@ -185,8 +207,9 @@ closed by an authority carries it as a typed `<bibl type="kosa-authority">` plus
 
 1. **Done:** a Lex-0 ODD (`data/schema/tei-lex0-profile.odd.xml`) + RNG validation
    wired into `validate-external-profiles`, including the *kośa* sense-boundary
-   customisation (sec. 5) as a documented Schematron constraint. Still external:
-   actually *running* the RNG needs the Java/TEI-Stylesheets toolchain (see sec. 6).
+   customisation (sec. 5) as a documented Schematron constraint. **Done
+   (H5320):** the official DARIAH TEI Lex-0 v0.9.4 RNG now runs in CI over every
+   pilot file without the Java toolchain (see sec. 6).
 2. **Done (slice 4):** broadened the *kośa* parser
    ([`scripts/parse-skd-kosa.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/parse-skd-kosa.mjs)) beyond *Darmma*
    (L17667) to 6 SKD records (*kīrti* L7806, *kaṇṭha* L6080, *vara* L31183,

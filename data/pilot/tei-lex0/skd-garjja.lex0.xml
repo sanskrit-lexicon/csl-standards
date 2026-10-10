@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-garjja">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-garjja" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -13,7 +13,7 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
         </listBibl>
@@ -22,6 +22,12 @@
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -30,14 +36,16 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">garjja</orth>
         </form>
         <gramGrp>
-          <pos norm="verb" cert="high" resp="#machine">verb</pos>
+          <gram type="pos" norm="verb" cert="high" resp="#machine">verb</gram>
           <gram type="anubandha" norm="ka" cert="high" resp="#source">ka</gram>
           <gram type="gana" norm="curadi" cert="high" resp="#m4">curādi</gram>
           <gram type="it-augment" cert="high" resp="#m4">seṭ</gram>
         </gramGrp>
         <sense xml:id="skd-garjja-sense-1" n="1">
           <def xml:lang="sa-Latn" cert="high" resp="#source">svane</def>
-          <bibl type="kosa-authority"><title>Kavikalpadruma</title></bibl>
+          <cit type="example">
+            <bibl type="kosa-authority"><title>Kavikalpadruma</title></bibl>
+          </cit>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Kavikalpadruma) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
         <note type="grammatical-annotation" xml:lang="sa-Latn" resp="#source">curāṃ-paraṃ-akaṃ-seṭ .</note>

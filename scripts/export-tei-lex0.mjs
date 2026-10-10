@@ -109,7 +109,7 @@ const PADA_IAST = { parasmaipada: "parasmaipada", atmanepada: "ātmanepada", ubh
 // doctrine (docs/TEI_LEX0_SKD_GAPS.md G3): an empty slot is encoded as the
 // source's "no anubandha", and an unmarked pada is never defaulted.
 function skdRootGrams(root) {
-  const rows = [`<pos norm="verb"${cert("derived")}>verb</pos>`];
+  const rows = [`<gram type="pos" norm="verb"${cert("derived")}>verb</gram>`];
   if (root.slot.length) {
     root.slot.forEach((t, i) => rows.push(`<gram type="anubandha" norm="${escapeXml(root.slotIast[i])}"${cert("observed")}>${escapeXml(t)}</gram>`));
   } else {
@@ -149,8 +149,8 @@ function gramGrpXml(model) {
   }
   // SKD liṅga-based word class (G10): triliṅga = adjective, avyaya = indeclinable.
   if (model.wordClass) {
-    rows.push(`<pos norm="${escapeXml(model.wordClass.norm)}"${cert("derived")}>${escapeXml(model.wordClass.norm)}</pos>`);
-    for (const g of model.genders || []) rows.push(`<gen norm="${escapeXml(g)}"${cert("observed")}>${escapeXml(g)}</gen>`);
+    rows.push(`<gram type="pos" norm="${escapeXml(model.wordClass.norm)}"${cert("derived")}>${escapeXml(model.wordClass.norm)}</gram>`);
+    for (const g of model.genders || []) rows.push(`<gram type="gender" norm="${escapeXml(g)}"${cert("observed")}>${escapeXml(g)}</gram>`);
     rows.push(`<gram type="linga"${cert("observed")}>${escapeXml(model.wordClass.token)}</gram>`);
     return ["<gramGrp>", ...rows.map(r => "  " + r), "</gramGrp>"].join("\n");
   }
@@ -159,11 +159,11 @@ function gramGrpXml(model) {
     || (form.grammar ? form.grammar.split(/\s+/).map(t => GENDER_NORM.get(t)).filter(Boolean) : []);
   const isVerb = form.type === "verbal-root" || /\bcl\.?\b/.test(form.grammar || "");
   if (isVerb) {
-    rows.push(`<pos norm="verb"${cert("derived")}>verb</pos>`);
+    rows.push(`<gram type="pos" norm="verb"${cert("derived")}>verb</gram>`);
     if (form.verbClass) rows.push(`<gram type="verb-class"${cert("observed", "#source")}>${escapeXml(form.verbClass)}</gram>`);
   } else if (genders.length) {
-    rows.push(`<pos norm="noun"${cert("derived")}>noun</pos>`);
-    for (const g of genders) rows.push(`<gen norm="${escapeXml(g)}"${cert("observed")}>${escapeXml(g)}</gen>`);
+    rows.push(`<gram type="pos" norm="noun"${cert("derived")}>noun</gram>`);
+    for (const g of genders) rows.push(`<gram type="gender" norm="${escapeXml(g)}"${cert("observed")}>${escapeXml(g)}</gram>`);
   } else if (form.grammar) {
     rows.push(`<gram type="category"${cert("observed")}>${escapeXml(form.grammar)}</gram>`);
   }
@@ -177,7 +177,7 @@ function senseXml(sense, id, index) {
   const lang = sense.lang || "en";
   const ev = sense.evidence || "derived";
   if (sense.kind === "cross-reference") {
-    lines.push(`  <xr type="cf"><ref xml:lang="${escapeXml(lang)}"${cert(ev)}>${escapeXml(sense.def)}</ref></xr>`);
+    lines.push(`  <ref type="cf" xml:lang="${escapeXml(lang)}"${cert(ev)}>${escapeXml(sense.def)}</ref>`);
   } else {
     lines.push(`  <def xml:lang="${escapeXml(lang)}"${cert(ev)}>${escapeXml(sense.def)}</def>`);
   }
@@ -189,7 +189,9 @@ function senseXml(sense, id, index) {
       const prov = c.dictionary ? ` source="#dict-${escapeXml(c.dictionary)}"` : "";
       const inh = c.inheritedFrom ? `<ref type="inherited-siglum">${escapeXml(c.inheritedFrom)}</ref>` : "";
       const ext = biblExtension(c);
-      lines.push(`  <bibl type="named-source"${ext.subtype}${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${ext.citedRange}${inh}</bibl>`);
+      lines.push(`  <cit type="example">`);
+      lines.push(`    <bibl type="named-source"${ext.subtype}${prov}${cert("observed")}><abbr>${escapeXml(c.source)}</abbr>${ext.citedRange}${inh}</bibl>`);
+      lines.push(`  </cit>`);
     }
   }
   // Examples: a source-linked one ("yaTA, <work> . <ref> . “…”") or a quotation
@@ -198,7 +200,7 @@ function senseXml(sense, id, index) {
   for (const ex of sense.examples || (sense.example ? [sense.example] : [])) {
     const sub = ex.attachedBy === "position" ? ` subtype="positional"` : "";
     lines.push(`  <cit type="example"${sub} xml:lang="sa">`);
-    lines.push(`    <quote xml:space="preserve">${escapeXml(ex.quote)}</quote>`);
+    lines.push(`    <quote>${escapeXml(ex.quote)}</quote>`);
     if (ex.source) lines.push(`    <bibl><title>${escapeXml(ex.source)}</title>${ex.cited ? `<citedRange>${escapeXml(ex.cited)}</citedRange>` : ""}</bibl>`);
     lines.push(`  </cit>`);
   }
@@ -214,7 +216,9 @@ function senseXml(sense, id, index) {
     // citation, paired with the model-loss note below witnessing the fusion.
     const a = sense.authority;
     const inner = a.author ? `<author>${escapeXml(a.author)}</author>` : `<title>${escapeXml(a.title)}</title>`;
-    lines.push(`  <bibl type="kosa-authority">${inner}${a.cited ? `<citedRange>${escapeXml(a.cited)}</citedRange>` : ""}</bibl>`);
+    lines.push(`  <cit type="example">`);
+    lines.push(`    <bibl type="kosa-authority">${inner}${a.cited ? `<citedRange>${escapeXml(a.cited)}</citedRange>` : ""}</bibl>`);
+    lines.push(`  </cit>`);
   }
   // §5: every kośa iti-unit (a sense closed by an authority formula) witnesses the
   // sense/citation fusion as a model-loss — the explicit fixture note when given,
@@ -260,16 +264,16 @@ function etymXml(model, id) {
   const rows = [];
   const whitney = model.relations?.find(r => r.type === "whitney-root-association")?.target;
   if (whitney) {
-    rows.push(`<etym xml:id="${id}-etym-root" type="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:${escapeXml(whitney)}"${cert("observed")}>${escapeXml(whitney)}</ref></etym>`);
+    rows.push(`<etym xml:id="${id}-etym-root" subtype="root"><lbl>verbal root</lbl> <ref type="whitney-root" target="urn:csl:whitney-root:${escapeXml(whitney)}"${cert("observed")}>${escapeXml(whitney)}</ref></etym>`);
   }
   const etym = model.relations?.find(r => r.type === "etymology");
   if (etym) {
     // SKD derivations (G11) carry a Pāṇinian analysis (sūtra, samāsa type) that
     // <etym> has no slot for: kept whole as <note type="analysis">.
-    const mention = etym.mention ? ` <mentioned xml:lang="sa">${escapeXml(etym.mention)}</mentioned>` : "";
+    const mention = etym.mention ? ` <hi rend="mentioned" xml:lang="sa">${escapeXml(etym.mention)}</hi>` : "";
     const sutra = etym.sutraRef ? ` <bibl><title>Aṣṭādhyāyī</title><citedRange>${escapeXml(etym.sutraRef)}</citedRange></bibl>` : "";
     const analysis = etym.analysis ? ` <note type="analysis" xml:lang="sa-Latn" resp="#source">${escapeXml(etym.analysis)}</note>` : "";
-    rows.push(`<etym xml:id="${id}-etym" type="derivation"><lbl>${escapeXml(etym.label || "from")}</lbl>${mention}${etym.source ? ` <bibl><title>${escapeXml(etym.source)}</title></bibl>` : ""}${sutra}${analysis}</etym>`);
+    rows.push(`<etym xml:id="${id}-etym" subtype="derivation"><lbl>${escapeXml(etym.label || "from")}</lbl>${mention}${etym.source ? ` <bibl><title>${escapeXml(etym.source)}</title></bibl>` : ""}${sutra}${analysis}</etym>`);
   }
   return rows;
 }
@@ -281,8 +285,10 @@ function skdEntryParts(model) {
   if (!model.records?.skd) return [];
   const rows = [];
   for (const r of model.crossRefs || []) {
-    const lbl = r.scope ? `<lbl xml:lang="sa-Latn">${escapeXml(r.scope)}</lbl> ` : "";
-    rows.push(`<xr type="see">${lbl}<ref type="entry" xml:lang="sa-Latn" cert="medium" resp="#machine">${escapeXml(r.targetIast)}</ref></xr>`);
+    // Lex-0 v0.9.4 closes xr/@type to four semantic-relation values: the
+    // cross-reference rides as a plain <ref type="see"> (model.ptrLike), the
+    // scope folded into its text.
+    rows.push(`<ref type="entry" subtype="see" xml:lang="sa-Latn" cert="medium" resp="#machine">${escapeXml(r.scope ? r.scope + " " : "")}${escapeXml(r.targetIast)}</ref>`);
   }
   if (model.root?.annotation) {
     rows.push(`<note type="grammatical-annotation" xml:lang="sa-Latn" resp="#source">${escapeXml(model.root.annotation)}</note>`);
@@ -300,7 +306,8 @@ function skdEntryParts(model) {
     rows.push(`<note type="unparsed-prose" resp="#machine">${escapeXml(parts.join("; "))}. Full text: the archival profile / source record.</note>`);
   }
   for (const c of model.corrections || []) {
-    rows.push(`<note type="cdsl-correction" resp="#cdsl">${escapeXml(`${c.old} → ${c.new}`)}${c.url ? ` <ref target="${escapeXml(c.url)}">${escapeXml(c.url)}</ref>` : ""}</note>`);
+    // Lex-0 note content admits no <ref>: the correction URL rides as plain text.
+    rows.push(`<note type="cdsl-correction" resp="#cdsl">${escapeXml(`${c.old} → ${c.new}`)}${c.url ? ` (${escapeXml(c.url)})` : ""}</note>`);
   }
   for (const g of model.gaps || []) {
     const gap = GAP_BY_ID.get(g);
@@ -373,7 +380,7 @@ function teiDocument(model) {
     (model.corrections || []).length ? `\n        <respStmt xml:id="cdsl"><resp>digitisation corrections embedded in the source text</resp><name>CDSL csl-orig editors</name></respStmt>` : ""
   ].join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="${id}">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="${id}" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -386,7 +393,7 @@ function teiDocument(model) {
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>${listBibl}
         </listBibl>
       </sourceDesc>
@@ -394,6 +401,12 @@ function teiDocument(model) {
     <encodingDesc>
       <projectDesc><p>${PROFILE_VERSION}; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>

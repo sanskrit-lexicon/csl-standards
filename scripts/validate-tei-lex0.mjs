@@ -5,8 +5,9 @@
 // does NOT apply here). It checks well-formedness plus the Lex-0 element model:
 // a lemma form/orth, a gramGrp or sense, no archival <cit type="source-entry">,
 // @cert presence on the lemma orth, and the profile-version note. Full TEI
-// Lex-0 RNG validation (jing/teitorelaxng against the DARIAH schema) is the
-// remaining external step — see docs/TEI_LEX0_PILOT.md sec. 6.
+// Lex-0 RNG validation against the pinned official DARIAH v0.9.4 schema runs in
+// scripts/validate-tei-lex0-schema.mjs (npm run validate-tei-lex0-schema, CI
+// gate since H5320) — see docs/TEI_LEX0_PILOT.md sec. 6.
 //
 // Usage: npm run validate-tei-lex0
 
