@@ -1,6 +1,6 @@
 # csl-standards
 
-_Created: 04-06-2026 · Last updated: 24-09-2026_
+_Created: 04-06-2026 · Last updated: 10-10-2026_
 
 Technical standards and export workbench for CDSL dictionary data.
 
@@ -131,6 +131,7 @@ step-by-step runbook for that later phase is
 - [`docs/TEI_LEX0_PILOT.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_PILOT.md) — TEI Lex-0 baseline encoding for CDSL entries, covering a Western (MW) and an indigenous *kośa* (SKD) entry, with the sense/citation-fusion loss.
 - [`docs/TEI_LEX0_SKD_GAPS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/TEI_LEX0_SKD_GAPS.md) — the 47-entry stratified Śabdakalpadruma Lex-0 sample and the 12 indigenous structures with no, or only a partial, Lex-0 home (zero-meaning, anubandha slot, iti-unit, nibandha …), each with an exported example.
 - [`docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md) — the publishable note on those 12 gaps (draft A70, not submitted): per gap a real exported example, the validated workaround, and a proposed Lex-0 extension, classed by schema impact (9 need no content-model change, 2 do, 1 is out of scope); cross-referenced to the DARIAH Lex-0 tracker.
+- [`docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md) — the 2006 "small classes" abbreviation scheme (Gasūns, EURALEX XII) as a SKOS-shaped controlled register grounded in the csl-atlas H6409 census, with the raw-vs-register collision-reduction table (`npm run measure-small-class-collisions`, byte-identical re-runs).
 - [`docs/MDF_EXPORT_MAPPING.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/MDF_EXPORT_MAPPING.md) — the flat SIL MDF field-schema profile (the third interoperability view alongside TEI and OntoLex).
 - [`docs/SALT_API_PROFILE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PROFILE.md) — normative C-SALT-compatible REST + GraphQL profile.
 - [`docs/SALT_API_PHASE0_CHECKLIST.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SALT_API_PHASE0_CHECKLIST.md) — implementation-ready Salt API Phase 0 handoff for `csl-apidev`.

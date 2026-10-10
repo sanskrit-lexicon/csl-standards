@@ -1,0 +1,556 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "uri": "@id",
+    "type": { "@id": "@type", "@container": "@set" },
+    "title": { "@id": "http://purl.org/dc/terms/title", "@container": "@language" },
+    "notation": { "@id": "http://www.w3.org/2004/02/skos/core#notation", "@container": "@set" },
+    "prefLabel": { "@id": "http://www.w3.org/2004/02/skos/core#prefLabel", "@container": "@language" },
+    "altLabel": { "@id": "http://www.w3.org/2004/02/skos/core#altLabel", "@container": "@language" },
+    "definition": { "@id": "http://www.w3.org/2004/02/skos/core#definition", "@container": "@language" },
+    "scopeNote": { "@id": "http://www.w3.org/2004/02/skos/core#scopeNote", "@container": "@language" },
+    "inScheme": { "@id": "http://www.w3.org/2004/02/skos/core#inScheme", "@container": "@set" },
+    "member": { "@id": "http://www.w3.org/2004/02/skos/core#member", "@container": "@set" },
+    "smallClass": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#smallClass", "@type": "@id" },
+    "gramDimension": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#gramDimension", "@container": "@language" },
+    "altForm": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#altForm", "@container": "@set" },
+    "attestedKeys": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#attestedKeys", "@container": "@set" },
+    "evidence": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#censusEvidence", "@container": "@set" },
+    "paperQuote": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#paperQuote", "@container": "@language" },
+    "censusConflict": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#censusConflict", "@container": "@language" },
+    "unresolvedForms": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#unresolvedForms", "@container": "@set" },
+    "canaryExhibits": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#canaryExhibits", "@container": "@set" },
+    "provenance": { "@id": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#provenance", "@type": "@id" }
+  },
+  "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006",
+  "type": ["skos:ConceptScheme"],
+  "title": {
+    "en": "Small-class abbreviation register after Gasūns 2006 (EURALEX XII, pp. 773–778, §2.3), grounded in the CSDL abbreviation census (H6409)"
+  },
+  "version": "1.0.0",
+  "handoff": "H6419",
+  "provenance": {
+    "paper": {
+      "author": "Mārcis Gasūns",
+      "title": "Latin Terms in Sanskrit Dictionaries",
+      "venue": "EURALEX XII Proceedings, Lexicography for Specialised Languages — Terminology and Terminography, Torino, pp. 773–778",
+      "year": 2006,
+      "fulltext": "https://github.com/gasyoun/Uprava/blob/main/research/notes/latin-terms-2006-fulltext.md"
+    },
+    "census": {
+      "repo": "csl-atlas",
+      "file": "data/abbrev/abbrev_census.json",
+      "handoff": "H6409",
+      "generatedAt": "2026-10-10T19:00:00.879Z",
+      "corpusCommit": "f4c08c578b330e2379e38f54d3a541f1564b8eee"
+    },
+    "lex0Pin": "TEI Lex-0 baseline 0.9.5 (DARIAH-ERIC/lexicalresources; estate pin per docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md)",
+    "skosRef": "https://www.w3.org/TR/skos-reference/",
+    "jsonLdStyle": "JSKOS-style field conventions per gbv/jskos (notation @set, prefLabel/altLabel @language)",
+    "adjacent": "H5335 lexicographic-types register (SanskritLexicography docs/DECISION_BRIEF_LEXICOGRAPHIC_TYPES_REGISTER_H5335_24-09-2026.md) — dictionary-genre taxonomy, a different layer; cross-linked, not duplicated",
+    "determinism": "No wallclock stamp; generated consumers (scripts/measure-small-class-collisions.mjs) honour SOURCE_DATE_EPOCH via scripts/lib/provenance.mjs",
+    "created": "2026-10-10"
+  },
+  "collections": [
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "type": ["skos:Collection"],
+      "prefLabel": { "en": "2006 one-letter small class" },
+      "definition": { "en": "Abbreviations of one letter: cases and voices." },
+      "paperQuote": { "en": "One-letter abbreviation: a) for cases \"N[ominative].\", \"G[enetive].\", \"L[ocative].\" and combinations involving cases (without the dot sign to economize space) as IDAbl., NA. and GL. (Kn) instead of Ab.G., D.Ab. (Mc). b) for voices 'Ä', 'A', 'P', 'p'" },
+      "member": [
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nominative",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#genitive",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#locative",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#atmanepada",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#active",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#parasmaipada",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#passive"
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-2",
+      "type": ["skos:Collection"],
+      "prefLabel": { "en": "2006 two-letter small class" },
+      "definition": { "en": "Abbreviations of two letters: persons (number) and participium." },
+      "paperQuote": { "en": "Two-letter abbreviations: a) for persons sg. du. pl. instead of sing. or plur. b) participium pp. pn." },
+      "member": [
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#singular",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#dual",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#plural",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#past-passive-participle"
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "type": ["skos:Collection"],
+      "prefLabel": { "en": "2006 three-letter small class" },
+      "definition": { "en": "Abbreviations of three letters: voices, moods, languages." },
+      "paperQuote": { "en": "Three-letter abbreviations: a) for voices Atrn., Par. (Bf) b) moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc) c) languages skt. pkr. (Kn), Ssk. (Bf)" },
+      "member": [
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#imperative",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#imperfect",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#pluperfect",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#gerundive",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#infinitive",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#sanskrit",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#prakrit"
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-4",
+      "type": ["skos:Collection"],
+      "prefLabel": { "en": "2006 four-letter small class" },
+      "definition": { "en": "Abbreviations of four letters: moods, participium, miscellaneous." },
+      "paperQuote": { "en": "Four-letter abbreviations: a) for moods caus. pass. b) participium ppfa. pfph. c) miscellaneous onom[apoetic]. (MC)" },
+      "member": [
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#causal",
+        "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#onomatopoeic"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nominative",
+      "type": ["skos:Concept"],
+      "notation": ["N."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "gramDimension": { "en": "cases" },
+      "prefLabel": { "en": "nominative" },
+      "altLabel": { "de": ["Nominativ"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for cases \"N[ominative].\", \"G[enetive].\", \"L[ocative].\"" },
+      "attestedKeys": ["nominative", "nominativ"],
+      "evidence": [
+        { "label": "Nom.", "expansion": "Nominative." },
+        { "label": "nom.", "expansion": "Nominative" },
+        { "label": "N.", "expansion": "Nominativ" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#genitive",
+      "type": ["skos:Concept"],
+      "notation": ["G."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "gramDimension": { "en": "cases" },
+      "prefLabel": { "en": "genitive" },
+      "altLabel": { "en": ["genetive"], "de": ["Genetiv"], "fr": ["génitif"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for cases \"N[ominative].\", \"G[enetive].\", \"L[ocative].\"" },
+      "attestedKeys": ["genitive", "genetive", "genetiv", "génitif"],
+      "evidence": [
+        { "label": "gen.", "expansion": "Genitive" },
+        { "label": "Gen.", "expansion": "Genitive." },
+        { "label": "g.", "expansion": "genitive." },
+        { "label": "gen.", "expansion": "genetive." },
+        { "label": "G.", "expansion": "Genetiv" },
+        { "label": "G.", "expansion": "génitif" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#locative",
+      "type": ["skos:Concept"],
+      "notation": ["L."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "gramDimension": { "en": "cases" },
+      "prefLabel": { "en": "locative" },
+      "altLabel": { "de": ["Locativ"], "fr": ["locatif"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for cases \"N[ominative].\", \"G[enetive].\", \"L[ocative].\"" },
+      "attestedKeys": ["locative", "locativ", "locatif"],
+      "evidence": [
+        { "label": "Loc.", "expansion": "Locative." },
+        { "label": "loc.", "expansion": "Locative" },
+        { "label": "L.", "expansion": "Locativ" },
+        { "label": "L.", "expansion": "locatif" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#atmanepada",
+      "type": ["skos:Concept"],
+      "notation": ["Ä"],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "gramDimension": { "en": "voices" },
+      "prefLabel": { "en": "ātmanepada" },
+      "altLabel": { "en": ["Atmanepada", "Ātmane-pada"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for voices 'Ä', 'A', 'P', 'p' (Ä. is the form the paper attests for St, Kl, Mc, Ko in §2.1)" },
+      "attestedKeys": ["ātmanepada", "atmanepada", "ātmane-pada", "atmane-pada"],
+      "altForm": [
+        { "notation": "Atrn.", "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3", "source": "Bf", "censusLegends": 0 }
+      ],
+      "evidence": [
+        { "label": "Ā.", "expansion": "Ātmanepada." },
+        { "label": "A.", "expansion": "Ātmanepada" },
+        { "label": "Atm.", "expansion": "Ātmanepada." },
+        { "label": "Atm.", "expansion": "Atmanepada." },
+        { "label": "Ā.", "expansion": "Ātmane-pada" },
+        { "label": "A", "expansion": "Ātmanepada" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#active",
+      "type": ["skos:Concept"],
+      "notation": ["A"],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "gramDimension": { "en": "voices" },
+      "prefLabel": { "en": "active" },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for voices 'Ä', 'A', 'P', 'p' (the paper's §2.1 cites Bt's 'Aktivum' among the raw A-forms)" },
+      "attestedKeys": ["active"],
+      "evidence": [
+        { "label": "A.", "expansion": "Active." },
+        { "label": "act.", "expansion": "active." }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#parasmaipada",
+      "type": ["skos:Concept"],
+      "notation": ["P"],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "gramDimension": { "en": "voices" },
+      "prefLabel": { "en": "parasmaipada" },
+      "altLabel": { "en": ["Parasmai-pada"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for voices 'Ä', 'A', 'P', 'p' (P. = Parasmaipada is the paper's §2.1 Ko reading)" },
+      "attestedKeys": ["parasmaipada", "parasmai-pada"],
+      "altForm": [
+        { "notation": "Par.", "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3", "source": "Bf", "censusLegends": 3 }
+      ],
+      "evidence": [
+        { "label": "P.", "expansion": "Parasmaipada." },
+        { "label": "Par.", "expansion": "Parasmaipada." },
+        { "label": "P.", "expansion": "Parasmai-pada" },
+        { "label": "P", "expansion": "Parasmaipada" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#passive",
+      "type": ["skos:Concept"],
+      "notation": ["p"],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "gramDimension": { "en": "voices" },
+      "prefLabel": { "en": "passive" },
+      "altLabel": { "de": ["passivisch"], "fr": ["passif"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for voices 'Ä', 'A', 'P', 'p' (p[assivum] is the paper's §2.1 Ko reading; the four-letter row repeats 'pass.')" },
+      "attestedKeys": ["passive", "passif", "passivisch", "passive voice"],
+      "altForm": [
+        { "notation": "pass.", "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-4", "source": "2006 §2.3 four-letter a", "censusLegends": 7 }
+      ],
+      "evidence": [
+        { "label": "pass.", "expansion": "Passive" },
+        { "label": "P.", "expansion": "Passive." },
+        { "label": "ps.", "expansion": "passive." },
+        { "label": "ps.", "expansion": "passif" },
+        { "label": "pass.", "expansion": "passivisch" },
+        { "label": "pass.", "expansion": "Passive voice" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#singular",
+      "type": ["skos:Concept"],
+      "notation": ["sg."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-2",
+      "gramDimension": { "en": "persons" },
+      "prefLabel": { "en": "singular" },
+      "altLabel": { "fr": ["singulier"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for persons sg. du. pl. instead of sing. or plur." },
+      "attestedKeys": ["singular", "singulier", "singular number"],
+      "evidence": [
+        { "label": "sg.", "expansion": "singular." },
+        { "label": "sg.", "expansion": "singulier" },
+        { "label": "s.", "expansion": "singular" },
+        { "label": "sing.", "expansion": "Singular" },
+        { "label": "sg.", "expansion": "singular number" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#dual",
+      "type": ["skos:Concept"],
+      "notation": ["du."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-2",
+      "gramDimension": { "en": "persons" },
+      "prefLabel": { "en": "dual" },
+      "altLabel": { "fr": ["duel"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for persons sg. du. pl. instead of sing. or plur." },
+      "attestedKeys": ["dual", "duel", "dual number"],
+      "evidence": [
+        { "label": "du.", "expansion": "Dual" },
+        { "label": "du.", "expansion": "dual." },
+        { "label": "d.", "expansion": "dual" },
+        { "label": "du.", "expansion": "duel" },
+        { "label": "du.", "expansion": "dual number" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#plural",
+      "type": ["skos:Concept"],
+      "notation": ["pl."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-2",
+      "gramDimension": { "en": "persons" },
+      "prefLabel": { "en": "plural" },
+      "altLabel": { "fr": ["pluriel"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for persons sg. du. pl. instead of sing. or plur." },
+      "attestedKeys": ["plural", "pluriel", "plural number"],
+      "evidence": [
+        { "label": "pl.", "expansion": "Plural" },
+        { "label": "pl.", "expansion": "plural." },
+        { "label": "Pl.", "expansion": "Plural" },
+        { "label": "pl.", "expansion": "pluriel" },
+        { "label": "p.", "expansion": "plural" },
+        { "label": "pl.", "expansion": "plural number" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#past-passive-participle",
+      "type": ["skos:Concept"],
+      "notation": ["pp."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-2",
+      "gramDimension": { "en": "participium" },
+      "prefLabel": { "en": "past passive participle" },
+      "altLabel": {
+        "en": ["participle", "past participle", "perfect passive participle", "participium"],
+        "fr": ["participe passé", "participe"]
+      },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "participium pp. pn. (pn. is left unresolved — see unresolvedForms)" },
+      "scopeNote": { "en": "GRA's pp. legend 'perge, perge' is legend noise and is deliberately not in attestedKeys." },
+      "attestedKeys": ["past passive participle", "participe passé", "participle", "past participle", "perfect passive participle", "participium", "participe"],
+      "evidence": [
+        { "label": "pp.", "expansion": "Past passive participle." },
+        { "label": "pp.", "expansion": "participe passé" },
+        { "label": "pp.", "expansion": "participle." },
+        { "label": "pp.", "expansion": "past participle" },
+        { "label": "pp.", "expansion": "perfect passive participle." },
+        { "label": "P.", "expansion": "Participium" },
+        { "label": "part.", "expansion": "Participle" },
+        { "label": "part.", "expansion": "participium" },
+        { "label": "Par.", "expansion": "Participle." },
+        { "label": "partic.", "expansion": "participe" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#imperative",
+      "type": ["skos:Concept"],
+      "notation": ["Ipv."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "gramDimension": { "en": "moods" },
+      "prefLabel": { "en": "imperative" },
+      "altLabel": { "de": ["Imperativ"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc)" },
+      "attestedKeys": ["imperative", "imperativ"],
+      "evidence": [
+        { "label": "imp.", "expansion": "Imperative" },
+        { "label": "imper.", "expansion": "imperative." },
+        { "label": "Imp.", "expansion": "Imperativ" },
+        { "label": "Impv.", "expansion": "Imperativ" },
+        { "label": "Imp.", "expansion": "imperative" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#imperfect",
+      "type": ["skos:Concept"],
+      "notation": ["Ipf"],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "gramDimension": { "en": "moods" },
+      "prefLabel": { "en": "imperfect" },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc)" },
+      "attestedKeys": ["imperfect"],
+      "evidence": [
+        { "label": "impf.", "expansion": "imperfect." }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#pluperfect",
+      "type": ["skos:Concept"],
+      "notation": ["Ppf."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "gramDimension": { "en": "moods" },
+      "prefLabel": { "en": "pluperfect" },
+      "altLabel": { "de": ["Plusquamperfekt"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc)" },
+      "censusConflict": { "en": "The source prints Ppf. in the moods row between Ipf and Prc; the census's own Ppf. legend (BUR) reads 'participe parfait' (perfect participle), which is deliberately NOT bound here. The pluperfect binding rests on the Plusquamperfekt attestations (Plusq., Plusquamperf., GRA) plus the source's own category row." },
+      "attestedKeys": ["plusquamperfekt"],
+      "evidence": [
+        { "label": "Plusq.", "expansion": "Plusquamperfekt" },
+        { "label": "Plusquamperf.", "expansion": "Plusquamperfekt" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#gerundive",
+      "type": ["skos:Concept"],
+      "notation": ["Gdv."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "gramDimension": { "en": "moods" },
+      "prefLabel": { "en": "gerundive" },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc)" },
+      "attestedKeys": ["gerundive"],
+      "evidence": [
+        { "label": "gdve.", "expansion": "gerundive." }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#infinitive",
+      "type": ["skos:Concept"],
+      "notation": ["Inf."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "gramDimension": { "en": "moods" },
+      "prefLabel": { "en": "infinitive" },
+      "altLabel": { "de": ["Infinitiv"], "fr": ["infinitif"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc)" },
+      "attestedKeys": ["infinitive", "infinitiv", "infinitif", "infinitive mood"],
+      "evidence": [
+        { "label": "inf.", "expansion": "Infinitive" },
+        { "label": "Inf.", "expansion": "Infinitiv" },
+        { "label": "Inf.", "expansion": "infinitif" },
+        { "label": "Inf.", "expansion": "infinitive mood" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#sanskrit",
+      "type": ["skos:Concept"],
+      "notation": ["skt."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "gramDimension": { "en": "languages" },
+      "prefLabel": { "en": "Sanskrit" },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "languages skt. pkr. (Kn), Ssk. (Bf)" },
+      "attestedKeys": ["sanskrit"],
+      "altForm": [
+        { "notation": "Ssk.", "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3", "source": "Bf", "censusLegends": 1 }
+      ],
+      "evidence": [
+        { "label": "skt.", "expansion": "Sanskrit" },
+        { "label": "skt", "expansion": "sanskrit." },
+        { "label": "Ssk.", "expansion": "Sanskrit." },
+        { "label": "Sansk.", "expansion": "Sanskrit." }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#prakrit",
+      "type": ["skos:Concept"],
+      "notation": ["pkr."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "gramDimension": { "en": "languages" },
+      "prefLabel": { "en": "Prakrit" },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "languages skt. pkr. (Kn), Ssk. (Bf)" },
+      "scopeNote": { "en": "The census's only Prakrit legend (Pkt., BHS) carries the payload category 'works'; the category is the census layer's own classification and is reproduced untouched." },
+      "attestedKeys": ["prakrit"],
+      "evidence": [
+        { "label": "Pkt.", "expansion": "Prakrit." }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#causal",
+      "type": ["skos:Concept"],
+      "notation": ["caus."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-4",
+      "gramDimension": { "en": "moods" },
+      "prefLabel": { "en": "causal" },
+      "altLabel": { "en": ["causative"], "de": ["causativ"], "fr": ["causatif"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "for moods caus. pass. (the paper's §2.1 exhibit reads 'c.' as '(3) causal form')" },
+      "attestedKeys": ["causal", "causative", "causativ", "causatif"],
+      "evidence": [
+        { "label": "Caus.", "expansion": "Causal." },
+        { "label": "caus.", "expansion": "Causal." },
+        { "label": "c.", "expansion": "Causal" },
+        { "label": "caus.", "expansion": "causative." },
+        { "label": "C.", "expansion": "Causative." },
+        { "label": "c.", "expansion": "causativ" },
+        { "label": "caus.", "expansion": "causativ" },
+        { "label": "C.", "expansion": "Causativ" },
+        { "label": "c.", "expansion": "causatif" },
+        { "label": "caus.", "expansion": "causatif." },
+        { "label": "C.", "expansion": "causatif" }
+      ]
+    },
+    {
+      "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#onomatopoeic",
+      "type": ["skos:Concept"],
+      "notation": ["onom."],
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-4",
+      "gramDimension": { "en": "miscellaneous" },
+      "prefLabel": { "en": "onomatopoeic" },
+      "altLabel": { "fr": ["onomatopée"] },
+      "inScheme": ["https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006"],
+      "paperQuote": { "en": "miscellaneous onom[apoetic]. (MC)" },
+      "attestedKeys": ["onomatopœic", "onomatopée"],
+      "evidence": [
+        { "label": "onom.", "expansion": "onomatopœic." },
+        { "label": "onom.", "expansion": "onomatopée." }
+      ]
+    }
+  ],
+  "unresolvedForms": [
+    {
+      "notation": "pn.",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-2",
+      "paperQuote": { "en": "participium pp. pn." },
+      "reason": { "en": "The source gives no expansion for pn.; the census's only pn. legend reads 'pronoun, pronominal.' (MD), which contradicts a participle reading. Left unresolved rather than bound against the evidence." },
+      "censusConflict": { "en": "pn. legend: [MD] 'pronoun, pronominal.'" }
+    },
+    {
+      "notation": "Inj.",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "paperQuote": { "en": "moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc)" },
+      "reason": { "en": "No census legend carries the form, and the expansion (injunctive) is not stated in the source. Registering a concept would assign a sense the census does not evidence." }
+    },
+    {
+      "notation": "Prc",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3",
+      "paperQuote": { "en": "moods Inj., Ipv., Ipf, Ppf., Prc, Gdv., Inf., in small caps (Mc)" },
+      "reason": { "en": "No census legend carries the form, and the source states no expansion. Left unresolved rather than guessed." }
+    },
+    {
+      "notation": "NA.",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "paperQuote": { "en": "combinations involving cases (without the dot sign to economize space) as IDAbl., NA. and GL. (Kn)" },
+      "reason": { "en": "Combination form; no census legend carries it, and the component cases it combines (nominative + accusative) are not all individually proposed in the source's one-letter row (N. G. L. only)." }
+    },
+    {
+      "notation": "GL.",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "paperQuote": { "en": "combinations involving cases (without the dot sign to economize space) as IDAbl., NA. and GL. (Kn)" },
+      "reason": { "en": "Combination form; no census legend carries it. Components G. and L. are register concepts, but the combination itself is unattested in the census." }
+    },
+    {
+      "notation": "IDAbl.",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1",
+      "paperQuote": { "en": "combinations involving cases (without the dot sign to economize space) as IDAbl., NA. and GL. (Kn)" },
+      "reason": { "en": "Combination form; no census legend carries it, and the component cases (instrumental, dative, ablative) are not individually proposed in the source's one-letter row." }
+    },
+    {
+      "notation": "ppfa.",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-4",
+      "paperQuote": { "en": "participium ppfa. pfph." },
+      "reason": { "en": "No census legend carries the form, and the source states no expansion." }
+    },
+    {
+      "notation": "pfph.",
+      "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-4",
+      "paperQuote": { "en": "participium ppfa. pfph." },
+      "reason": { "en": "No census legend carries the form, and the source states no expansion." }
+    }
+  ],
+  "canaryExhibits": [
+    { "label": "V.", "paperRole": { "en": "2006 §2.1 homograph exhibit: vocativus (Hn, Ko), Vedic (Ln, Wh, Mc), Vopadeva (Rn), vide (Fr), Vikram (j)" }, "censusPolysemy": 7 },
+    { "label": "c.", "paperRole": { "en": "2006 §2 exhibit: '(1) conjugation or (2) class, but can as well denote a (3) causal form, as part of (4) nom c[ase] or even (5) Classical Sanskrit'" }, "censusPolysemy": 4 },
+    { "label": "P.", "paperRole": { "en": "2006 §2.1 single-letter exhibit: Parasmaipada (Ko), Person (MR), pagina (Wb), Praesens, Pluralis (Bt), Pānini's Ashthadyāyī (Wg, Ap, Rn), Prosa (Db), Prajna (j); p[assivum] (Ko)" }, "censusPolysemy": 11 },
+    { "label": "S.", "paperRole": { "en": "2006 §2.1 exhibit: ai, au (Si), Sutra (Ln, Wg); Schwundstufe (MR), Sārasvata (Rn), Semantik (Wb), Savitrī (Kn), Sāṁkhya (?)" }, "censusPolysemy": 5 },
+    { "label": "N.", "paperRole": { "en": "2006 §2.1 exhibit: Nominative case (Hn, Mc), Name (St), Naishadhacarita (Ap), Nyāsa (Rn), Nala (Kn); neuter (Ln, Wb); note in Small Caps (Ln)" }, "censusPolysemy": 10 },
+    { "label": "M.", "paperRole": { "en": "2006 §2.1 exhibit: Manu (Wh, Wg, Kn), Murti; masculinum (Ko, Wb), mitten (Bt)" }, "censusPolysemy": 11 },
+    { "label": "f.", "paperRole": { "en": "2006 §2 exhibit: 'reserved for femininum, occasionally comes across as futurum (Kn) and for (Mc)'" }, "censusPolysemy": 6 }
+  ]
+}
