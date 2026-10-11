@@ -37,11 +37,24 @@ The four **[HUMAN-DECIDE]** gates were ruled by MG in one interactive pass
 |---|---|
 | §1a release posture | **(B) technical preview** — publish the full graph explicitly non-citable (`gr:machine-preview` banner in the VoID description and the landing HTML, citable filter documented); G5 human approvals still gate any *content* release |
 | §1c license composition | **verify-then-compose** — the `/data-release` license step runs first; verbatim DCS (Digital Corpus of Sanskrit) terms + composition verdict recorded; separate-or-omit fallback if any term is stricter than CC BY-SA 4.0 |
-| §2 IRI domain | **(a) w3id.org PURL** — `https://w3id.org/sanskrit-lexicon/pwg-ru/` via PR to [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org); the generator placeholder already matches |
+| §2 IRI domain | **(a) w3id.org PURL** — `https://w3id.org/sanskrit-lexicon/repwg/` via PR to [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org); the generator placeholder already matches |
 | §4 SPARQL endpoint | **(a) static dump first** — GitHub Pages + client-side querying; Oxigraph only if a live `SERVICE`-federation demo is wanted |
 
 With §1a = (B), §6–§7 may ride the *preview* release once §1b–§5 land,
 clearly labelled non-citable; a real content release still waits on G5.
+
+## Wave-0 execution — 11-10-2026
+
+Steps 1b–5 executed ([H6484](https://github.com/gasyoun/Uprava/blob/main/handoffs/H6484-OxAlpha_csl-standards_publishing-lod-wave0-rulings-exec_11.10.26.md)):
+§1b safety-check **GO**, §1c DCS composition **COMPOSE** (CC BY 4.0 ⊆ CC BY-SA 4.0,
+verbatim terms + verdict in [PROVENANCE](https://github.com/sanskrit-lexicon/csl-standards/blob/main/standards/pwg-ru-lod/PROVENANCE.md)),
+full build green (367,987 triples, `lod_acceptance.py` exit 0), static Pages surface
+live, [void.ttl](https://github.com/sanskrit-lexicon/csl-standards/blob/main/standards/pwg-ru-lod/void.ttl)
+filled from the real build. **Namespace correction (MG, 11-10-2026, interactive):**
+the permanent namespace is `https://w3id.org/sanskrit-lexicon/repwg/` — the 27-07-2026
+"rePWG" ruling stands; the `pwg-ru/` string in the table above was stale runbook
+prose. §6–§7 (Zenodo DOI, lod-cloud/LiLa) ride the preview release next, labelled
+non-citable. Checklist rows done: 1, 2, 3, 5, 6, 7 (+9 hosting, 4 PR open).
 
 ## What already exists (so you don't rebuild it)
 
@@ -137,7 +150,7 @@ release provenance; the separate-or-omit fallback stands.
 IRIs are permanent identifiers; the moment one dereferences publicly, churning it
 breaks every downstream link. So the publication domain is a human ruling, not a
 code default. The generator ships the **placeholder**
-`https://w3id.org/sanskrit-lexicon/pwg-ru/` and takes `--base-iri`; **nothing
+`https://w3id.org/sanskrit-lexicon/repwg/` and takes `--base-iri`; **nothing
 downstream hard-codes it**, so this decision changes zero lines of code — only
 the value passed at build time. (The `@DECIDE` row this paragraph once pointed
 at does not exist in
@@ -155,22 +168,22 @@ at does not exist in
 namespaces precisely because it decouples the permanent identifier from any
 hosting or DNS you have to maintain — the w3id redirect can point at GitHub Pages
 today and a Cologne endpoint later without a single IRI changing. The base becomes
-whatever you register (e.g. `https://w3id.org/sanskrit-lexicon/pwg-ru/`, which is
+whatever you register (e.g. `https://w3id.org/sanskrit-lexicon/repwg/`, which is
 already the placeholder), passed to every build as `--base-iri`.
 
 **RESOLVED (MG, 11-10-2026, interactive): (a) w3id.org PURL** — register
-`https://w3id.org/sanskrit-lexicon/pwg-ru/` via PR to
+`https://w3id.org/sanskrit-lexicon/repwg/` via PR to
 [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org).
 
 Sample w3id `.htaccess` (goes in the PR's redirect dir; the redirect target is
 whatever hosting §3 stands up):
 
 ```apache
-# w3id.org/sanskrit-lexicon/pwg-ru/.htaccess
+# w3id.org/sanskrit-lexicon/repwg/.htaccess
 # Permanent namespace for the PWG->RU LOD graph.
 # Content negotiation is delegated to the hosting target (see §3).
 RewriteEngine On
-RewriteBase /sanskrit-lexicon/pwg-ru/
+RewriteBase /sanskrit-lexicon/repwg/
 
 # Turtle for machines that ask for it
 RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
@@ -328,7 +341,7 @@ run the generator on the **full** data (not the committed fixture) at the ruled
 ```sh
 cd RussianTranslation                       # in gasyoun/SanskritLexicography
 python src/export_lod.py all \
-    --base-iri https://w3id.org/sanskrit-lexicon/pwg-ru/ \   # the §2 ruling
+    --base-iri https://w3id.org/sanskrit-lexicon/repwg/ \   # the §2 ruling
     --out-dir release
 python src/lod_acceptance.py                # federated join + round-trip + SHACL; exit != 0 blocks publish
 ```
