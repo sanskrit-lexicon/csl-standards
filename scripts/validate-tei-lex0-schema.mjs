@@ -1,6 +1,6 @@
 // Validate the generated TEI Lex-0 entries (data/pilot/tei-lex0/*.lex0.xml)
-// against the OFFICIAL DARIAH TEI Lex-0 schema, pinned at v0.9.4
-// (data/schema/TEILex0-v0.9.4.rng, see its .PROVENANCE.md).
+// against the official TEI Lex-0 schema (bcdh/tei-lex-0), pinned at v0.9.5
+// (data/schema/TEILex0-v0.9.5.rng, see its .PROVENANCE.md).
 //
 // Distinct from scripts/validate-tei-lex0.mjs, which checks the project's
 // structural baseline shape; this script applies the upstream grammar itself
@@ -26,9 +26,9 @@ import { generatedAt } from "./lib/provenance.mjs";
 
 const root = process.cwd();
 const dir = path.join(root, "data", "pilot", "tei-lex0");
-const RNG = path.join(root, "data", "schema", "TEILex0-v0.9.4.rng");
+const RNG = path.join(root, "data", "schema", "TEILex0-v0.9.5.rng");
 const REPORT = path.join(dir, "..", "tei-lex0-schema-review.json");
-const SCHEMA_VERSION = "TEI Lex-0 v0.9.4 (DARIAH-ERIC/lexicalresources)";
+const SCHEMA_VERSION = "TEI Lex-0 v0.9.5 (bcdh/tei-lex-0)";
 
 function sha256(file) {
   return createHash("sha256").update(fs.readFileSync(file)).digest("hex");
@@ -75,7 +75,7 @@ function main() {
     generatedAt: generatedAt(),
     generatedBy: "npm run validate-tei-lex0-schema",
     schema: SCHEMA_VERSION,
-    schemaSource: "https://github.com/DARIAH-ERIC/lexicalresources/blob/v0.9.4/Schemas/TEILex0/out/TEILex0.rng",
+    schemaSource: "https://lex-0.org/schema/lex-0.rng (bcdh/tei-lex-0 tag v0.9.5)",
     schemaSha256: sha256(RNG),
     schematronChecked: false,
     note: "Official TEI Lex-0 RNG validation via xmllint --relaxng. Embedded Schematron rules are not executed by libxml2 (documented limitation). Failures are generator defects: fix scripts/export-tei-lex0.mjs, not the outputs.",
