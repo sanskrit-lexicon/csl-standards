@@ -1,6 +1,6 @@
 # Publishing the PWG→RU LOD graph — a step-by-step runbook
 
-_Created: 08-07-2026 · Last updated: 08-07-2026_
+_Created: 08-07-2026 · Last updated: 11-10-2026_
 
 This is the human-runnable runbook for taking the **PWG→RU** (Petersburg
 Dictionary → Russian) Linked-Open-Data graph from *validated-locally* — where
@@ -22,10 +22,26 @@ Each step is tagged:
   descriptor, a build run) with no human judgement.
 - **[HUMAN-DECIDE]** — a fork that needs a human ruling before any agent can
   proceed; recorded as an `@DECIDE` in
-  [`Uprava/GTD_NEXT_ACTIONS.md`](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).
+  [`Uprava/GTD_NEXT_ACTIONS.md`](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+  or, once ruled, in the [MG rulings](#mg-rulings--1110-2026) section below.
 
 The **[consolidated checklist](#9-consolidated-checklist)** at the end is the
 part you actually work down; §1–§8 are the reasoning behind each row.
+
+## MG rulings — 11-10-2026
+
+The four **[HUMAN-DECIDE]** gates were ruled by MG in one interactive pass
+(11-10-2026). These verdicts are binding on every step below:
+
+| Gate | Ruling (MG, 11-10-2026) |
+|---|---|
+| §1a release posture | **(B) technical preview** — publish the full graph explicitly non-citable (`gr:machine-preview` banner in the VoID description and the landing HTML, citable filter documented); G5 human approvals still gate any *content* release |
+| §1c license composition | **verify-then-compose** — the `/data-release` license step runs first; verbatim DCS (Digital Corpus of Sanskrit) terms + composition verdict recorded; separate-or-omit fallback if any term is stricter than CC BY-SA 4.0 |
+| §2 IRI domain | **(a) w3id.org PURL** — `https://w3id.org/sanskrit-lexicon/pwg-ru/` via PR to [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org); the generator placeholder already matches |
+| §4 SPARQL endpoint | **(a) static dump first** — GitHub Pages + client-side querying; Oxigraph only if a live `SERVICE`-federation demo is wanted |
+
+With §1a = (B), §6–§7 may ride the *preview* release once §1b–§5 land,
+clearly labelled non-citable; a real content release still waits on G5.
 
 ## What already exists (so you don't rebuild it)
 
@@ -82,6 +98,13 @@ acceptable for a clearly-labelled *technical preview* release whose value is the
 graph shape, not the translations. Either way, a real content release waits on
 G5. This ruling gates §6–§7.
 
+**RESOLVED (MG, 11-10-2026, interactive): (B) technical preview.** The full
+graph ships explicitly non-citable; (B)'s binding requirements — every sense
+visibly graded `gr:machine-preview`, the prominent "machine translation, not
+yet human-reviewed — not citable" banner in the VoID description (§5) and the
+landing HTML, the citable filter documented — carry into §5. §6–§7 may ride the
+preview release once §1b–§5 land; a content release still waits on G5.
+
 ### 1b. `/publish-safety-check` — mandatory, no exceptions — **[HUMAN]**
 
 Before any publish action, run
@@ -102,6 +125,11 @@ carries a non-commercial or share-alike-incompatible term, the frequency graph
 must be published separately (or omitted), not composed into a single
 CC BY-SA 4.0 release.
 
+**RESOLVED (MG, 11-10-2026, interactive): verify-then-compose.** The
+`/data-release` license step runs before any ship; the verbatim DCS (Digital
+Corpus of Sanskrit) license terms and the composition verdict go into the
+release provenance; the separate-or-omit fallback stands.
+
 ---
 
 ## 2. The IRI domain decision — **[HUMAN-DECIDE]**
@@ -111,8 +139,11 @@ breaks every downstream link. So the publication domain is a human ruling, not a
 code default. The generator ships the **placeholder**
 `https://w3id.org/sanskrit-lexicon/pwg-ru/` and takes `--base-iri`; **nothing
 downstream hard-codes it**, so this decision changes zero lines of code — only
-the value passed at build time. Already tracked as an `@DECIDE` in
-[GTD](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).
+the value passed at build time. (The `@DECIDE` row this paragraph once pointed
+at does not exist in
+[`Uprava/GTD_NEXT_ACTIONS.md`](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md)
+— verified 11-10-2026; the ruling is recorded in the
+[MG rulings](#mg-rulings--1110-2026) section above.)
 
 | Option | Registration | Pros | Cons |
 |---|---|---|---|
@@ -126,6 +157,10 @@ hosting or DNS you have to maintain — the w3id redirect can point at GitHub Pa
 today and a Cologne endpoint later without a single IRI changing. The base becomes
 whatever you register (e.g. `https://w3id.org/sanskrit-lexicon/pwg-ru/`, which is
 already the placeholder), passed to every build as `--base-iri`.
+
+**RESOLVED (MG, 11-10-2026, interactive): (a) w3id.org PURL** — register
+`https://w3id.org/sanskrit-lexicon/pwg-ru/` via PR to
+[`perma-id/w3id.org`](https://github.com/perma-id/w3id.org).
 
 Sample w3id `.htaccess` (goes in the PR's redirect dir; the redirect target is
 whatever hosting §3 stands up):
@@ -214,6 +249,10 @@ offline), then **Oxigraph** as the cheapest hosted endpoint if a live
 already carries the commented `SERVICE` variant: once each graph sits behind its
 own endpoint, the true cross-endpoint federation edge lights up by uncommenting
 it. Until then the offline two-graph form is the canonical demonstration.
+
+**RESOLVED (MG, 11-10-2026, interactive): static dump first** — GitHub Pages +
+client-side querying for the first release; Oxigraph deferred until a live
+`SERVICE`-federation demo is actually wanted.
 
 ---
 
