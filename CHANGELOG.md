@@ -9,6 +9,9 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.6.0] - 2026-10-11
+
+- H6447: small-class register v2 — measured-residue classes (gender/features, work titles, authors/editors; 15 census-evidenced concepts) + externalGrounding for the 8 unresolved 2006 forms (Whitney/Macdonell/Knauer verbatim, Stenzler negative result); coverage 8.69% → 13.12% (148/1128), 0 new concept pairs
 ## [1.5.0] - 2026-10-10
 
 - **H6419 — E3: the 2006 "small classes" scheme as a controlled abbreviation register, with measured collision reduction.** The Gasūns-2006 proposal (EURALEX XII, pp. 773–778, §2.3) becomes a testable claim over the csl-atlas H6409 abbreviation census: [`data/abbrev/small-class-register.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/abbrev/small-class-register.json) registers 20 SKOS-shaped concepts (notation = the paper's proposed form, prefLabel = expansion, band = the 2006 1/2/3/4-letter small class), every concept's meaning grounded mechanically in the census payload (validator [`scripts/validate-small-class-register.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-small-class-register.mjs) re-derives each evidence row and attested expansion key; 8 paper forms are declared unresolved with reasons, incl. the declared `Ppf.` pluperfect/participe-parfait conflict); [`scripts/measure-small-class-collisions.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/measure-small-class-collisions.mjs) regenerates the raw-vs-register collision table byte-identically ([report](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/abbrev/small-class-collision-report.md)): over 448 colliding strings / 1128 senses the scheme-as-printed binds 98 senses (8.69%), resolves 16 strings, reduces 32, excess −6.76%, and introduces 0 new concept pairs; the §2.1 canary strings (`V.` `c.` `P.` `S.` `N.` `M.` `f.`) carry verbatim census numbers. Design + grounding rules in [`docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md). Format read github-first (W3C SKOS Rec, TEI Lex-0 0.9.5, JSKOS). Two-gates: additive only, export pipeline untouched.
@@ -563,6 +566,5 @@ relabelled to track the project's `package.json` version at the time).
 - 2026-06-13 feat: TEI Lex-0 generator + structural validator (G2 slice 2)
 - 2026-06-13 Merge pull request #4 from sanskrit-lexicon/docs/tei-lex0-pilot
 
-- 2026-10-11 H6447: small-class register v2 — measured-residue classes (gender/features, work titles, authors/editors; 15 census-evidenced concepts) + externalGrounding for the 8 unresolved 2006 forms (Whitney/Macdonell/Knauer verbatim, Stenzler negative result); coverage 8.69% → 13.12% (148/1128), 0 new concept pairs
 
 _Dr. Mārcis Gasūns_
