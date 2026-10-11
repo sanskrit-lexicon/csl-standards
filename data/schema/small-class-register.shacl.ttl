@@ -1,0 +1,236 @@
+# SHACL profile for the small-class abbreviation register — small-class-shacl-profile-v1,
+# validation scope full-small-class-shacl-profile (H6448).
+#
+# Mirrors the structural contract of scripts/validate-small-class-register.mjs
+# (the register's authority) over the Turtle image exported by
+# scripts/export-small-class-register-ttl.mjs:
+#   - notation uniqueness within the scheme (SKOS convention: a notation
+#     identifies exactly one concept per scheme) — sh:sparql below;
+#   - at most one skos:prefLabel per language tag (SKOS integrity S14) — sh:uniqueLang;
+#   - band-membership consistency between scr:smallClass and the band
+#     collection's skos:member list, both directions — sh:sparql below.
+# Shapes read github-first: W3C SKOS Reference + W3C SHACL, idiom after
+# skohub-io/skohub-shapes (SPARQL constraints as dedicated shapes).
+#
+# Run with any SHACL engine, e.g. pySHACL:
+#   python3 -m pyshacl -s data/schema/small-class-register.shacl.ttl -d data/abbrev/small-class-register.ttl
+# or npm run validate-small-class-register-shacl (structural mode; executes a
+# real engine too when one is importable).
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix scr: <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#> .
+
+scr:ConceptSchemeShape
+  a sh:NodeShape ;
+  sh:targetClass skos:ConceptScheme ;
+  sh:property [
+    sh:path dct:title ;
+    sh:minCount 1 ;
+    sh:uniqueLang true
+  ] ;
+  sh:property [
+    sh:path scr:registerVersion ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path scr:paper ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path scr:census ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] .
+
+scr:BandCollectionShape
+  a sh:NodeShape ;
+  sh:targetClass skos:Collection ;
+  sh:property [
+    sh:path skos:prefLabel ;
+    sh:minCount 1 ;
+    sh:uniqueLang true
+  ] ;
+  sh:property [
+    sh:path skos:definition ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:paperQuote ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path skos:member ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI
+  ] ;
+  # band-membership consistency, collection direction: every listed member
+  # must declare THIS collection as its scr:smallClass band.
+  sh:sparql [
+    sh:message "band membership: a skos:member of this band collection declares a different scr:smallClass band" ;
+    sh:select """
+      SELECT $this (?member AS ?value)
+      WHERE {
+        $this skos:member ?member .
+        ?member scr:smallClass ?band .
+        FILTER (?band != $this)
+      }
+    """
+  ] .
+
+scr:ConceptShape
+  a sh:NodeShape ;
+  sh:targetClass skos:Concept ;
+  sh:property [
+    sh:path skos:inScheme ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:hasValue <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006>
+  ] ;
+  # skos:notation range: typed literals; the datatype denotes the notation
+  # system (W3C SKOS Reference §skos:notation) — here the 2006 scheme.
+  sh:property [
+    sh:path skos:notation ;
+    sh:minCount 1 ;
+    sh:datatype scr:AbbreviationNotation
+  ] ;
+  # SKOS S14: no more than one skos:prefLabel per language tag.
+  sh:property [
+    sh:path skos:prefLabel ;
+    sh:minCount 1 ;
+    sh:uniqueLang true
+  ] ;
+  sh:property [
+    sh:path scr:smallClass ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:in (
+      <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-1>
+      <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-2>
+      <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-3>
+      <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#2006-4>
+      <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-gender-features>
+      <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles>
+      <https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-authors-editors>
+    )
+  ] ;
+  sh:property [
+    sh:path scr:gramDimension ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:paperQuote ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:attestedKeys ;
+    sh:minCount 1
+  ] ;
+  # notation uniqueness within the scheme (SKOS convention): report each
+  # colliding concept pair once, on the lexicographically smaller subject.
+  sh:sparql [
+    sh:message "notation uniqueness: this notation is already claimed by another concept in the same scheme" ;
+    sh:select """
+      SELECT $this (?other AS ?value)
+      WHERE {
+        $this skos:inScheme ?scheme ;
+              skos:notation ?notation .
+        ?other skos:inScheme ?scheme ;
+               skos:notation ?notation .
+        FILTER (STR($this) < STR(?other))
+      }
+    """
+  ] ;
+  # band-membership consistency, concept direction: the band a concept
+  # declares must list it as a skos:member.
+  sh:sparql [
+    sh:message "band membership: the concept's scr:smallClass band collection does not list it among skos:member" ;
+    sh:select """
+      SELECT $this (?band AS ?value)
+      WHERE {
+        $this scr:smallClass ?band .
+        FILTER NOT EXISTS { ?band skos:member $this }
+      }
+    """
+  ] .
+
+scr:UnresolvedFormShape
+  a sh:NodeShape ;
+  sh:targetClass scr:UnresolvedForm ;
+  sh:property [
+    sh:path skos:notation ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype scr:AbbreviationNotation
+  ] ;
+  sh:property [
+    sh:path scr:reason ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:paperQuote ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:externalGrounding ;
+    sh:minCount 1
+  ] ;
+  # unresolved forms never collide with a concept notation of the scheme
+  # (binding stays forbidden — the register's unresolved contract).
+  sh:sparql [
+    sh:message "unresolved form: its notation collides with a concept notation — resolve or bind, never both" ;
+    sh:select """
+      SELECT $this (?concept AS ?value)
+      WHERE {
+        $this skos:notation ?notation .
+        ?concept a skos:Concept ;
+                 skos:notation ?notation .
+      }
+    """
+  ] .
+
+scr:ExternalGroundingShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf scr:externalGrounding ;
+  sh:property [
+    sh:path scr:source ;
+    sh:minCount 1 ;
+    sh:in ( "Whitney 1879" "Macdonell 1916" "Stenzler" "Knauer" )
+  ] ;
+  sh:property [
+    sh:path scr:edition ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:quote ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:locator ;
+    sh:minCount 1
+  ] .
+
+scr:CanaryExhibitShape
+  a sh:NodeShape ;
+  sh:targetClass scr:CanaryExhibit ;
+  sh:property [
+    sh:path scr:label ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path scr:paperRole ;
+    sh:minCount 1
+  ] ;
+  sh:property [
+    sh:path scr:censusPolysemy ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer
+  ] .
