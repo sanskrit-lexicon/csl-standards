@@ -47,8 +47,8 @@
 
   # ---- static surface (section 4 ruling: static dump first) ----
   dcat:distribution [ a dcat:Distribution ;
-                      dcterms:title "Full lexical graph (Turtle dump)"@en ;
-                      dcat:accessURL <https://sanskrit-lexicon.github.io/pwg-ru-lod/pwg_ru_lod.ttl> ;
+                      dcterms:title "Full lexical graph (Turtle, gzip — under the 100 MB git file cap)"@en ;
+                      dcat:accessURL <https://sanskrit-lexicon.github.io/pwg-ru-lod/pwg_ru_lod.ttl.gz> ;
                       dcat:mediaType <http://www.w3.org/ns/formats/Turtle> ] ,
                     [ a dcat:Distribution ;
                       dcterms:title "DCS lemma-frequency graph (Turtle dump)"@en ;
