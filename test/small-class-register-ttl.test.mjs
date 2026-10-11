@@ -1,7 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { spawnSync } from "node:child_process";
 import { serializeRegister, OUTPUT_PATH } from "../scripts/export-small-class-register-ttl.mjs";
+import { validateContract } from "../scripts/validate-small-class-register-shacl.mjs";
 import { loadRegister, BANDS } from "../scripts/lib/small-class-register.mjs";
 
 const register = loadRegister();
@@ -83,3 +87,80 @@ test("band member lists in the TTL match the register's collections exactly", ()
     assert.deepEqual(members, [...band.member].sort(), band.uri);
   }
 });
+
+// --- negative tests: the profile must FAIL on seeded violations (fail-closed
+// proof — SHACL green on a known-bad fixture is the handoff's named Fail
+// condition). Structural layer always runs; the engine layer runs when a
+// SHACL engine (pyshacl) is importable, else skips loudly.
+
+const clone = () => JSON.parse(JSON.stringify(register));
+
+function seeded(mutate) {
+  const reg = clone();
+  mutate(reg);
+  return reg;
+}
+
+test("negative (structural): a duplicated notation is rejected", () => {
+  const reg = seeded(r => {
+    const genitive = r.concepts.find(c => c.uri.endsWith("#genitive"));
+    r.concepts.find(c => c.uri.endsWith("#nominative")).notation.push(genitive.notation[0]);
+  });
+  const errs = validateContract(reg);
+  assert.ok(errs.some(e => e.includes("claimed by both")), errs.join(" | "));
+});
+
+test("negative (structural): two prefLabels in one language are rejected (SKOS S14)", () => {
+  const reg = seeded(r => {
+    r.concepts.find(c => c.uri.endsWith("#nominative")).prefLabel.en = ["nominative", "Nom."];
+  });
+  const errs = validateContract(reg);
+  assert.ok(errs.some(e => e.includes("prefLabel.en must be a single string")), errs.join(" | "));
+});
+
+test("negative (structural): a concept in the wrong band is rejected", () => {
+  const reg = seeded(r => {
+    const nom = r.concepts.find(c => c.uri.endsWith("#nominative"));
+    nom.smallClass = nom.smallClass.replace("#2006-1", "#2006-2");
+  });
+  const errs = validateContract(reg);
+  assert.ok(
+    errs.some(e => e.includes("not listed in the member list")) || errs.some(e => e.includes("lists it under")),
+    errs.join(" | "),
+  );
+});
+
+test("negative (engine): pySHACL reports violations on a mutated export", {skip: !engineAvailable()}, async () => {
+  const reg = seeded(r => {
+    const genitive = r.concepts.find(c => c.uri.endsWith("#genitive"));
+    r.concepts.find(c => c.uri.endsWith("#nominative")).notation.push(genitive.notation[0]);
+  });
+  const tmp = path.join(os.tmpdir(), `h6448-negative-${process.pid}.ttl`);
+  fs.writeFileSync(tmp, serializeRegister(reg), "utf8");
+  try {
+    const result = await engineConforms(tmp);
+    assert.equal(result, false, "engine must NOT conform on a seeded duplicate notation");
+  } finally {
+    fs.rmSync(tmp, {force: true});
+  }
+});
+
+function engineAvailable() {
+  return spawnSync("python3", ["-c", "import pyshacl, rdflib"], {encoding: "utf8"}).status === 0;
+}
+
+async function engineConforms(dataFile) {
+  const script = [
+    "import sys",
+    "from rdflib import Graph",
+    "from pyshacl import validate",
+    `conforms, _, _ = validate(`,
+    `    data_graph=Graph().parse(${JSON.stringify(path.resolve(dataFile))}, format="turtle"),`,
+    `    shacl_graph=Graph().parse(${JSON.stringify(path.resolve("data/schema/small-class-register.shacl.ttl"))}, format="turtle"),`,
+    `    inference="none", advanced=True)`,
+    `print("CONFORMS:", conforms)`,
+    "sys.exit(0 if conforms else 1)",
+  ].join("\n");
+  const run = spawnSync("python3", ["-c", script], {encoding: "utf8"});
+  return run.status === 0;
+}

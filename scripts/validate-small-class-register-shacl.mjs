@@ -24,6 +24,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import { pathToFileURL } from "node:url";
 import { serializeRegister, OUTPUT_PATH } from "./export-small-class-register-ttl.mjs";
 import { loadRegister, BANDS } from "./lib/small-class-register.mjs";
 
@@ -66,10 +67,11 @@ function validateDataCurrency(register, ttl) {
 }
 
 function validateContract(register) {
+  const found = [];
   // notation uniqueness within the scheme (+ unresolved forms never colliding)
   const owner = new Map();
   const claim = (notation, who) => {
-    if (owner.has(notation)) err(`notation ${JSON.stringify(notation)} claimed by both ${owner.get(notation)} and ${who} (SKOS: a notation identifies one concept within its scheme)`);
+    if (owner.has(notation)) found.push(`notation ${JSON.stringify(notation)} claimed by both ${owner.get(notation)} and ${who} (SKOS: a notation identifies one concept within its scheme)`);
     else owner.set(notation, who);
   };
   for (const concept of register.concepts) {
@@ -81,7 +83,7 @@ function validateContract(register) {
   // at most one prefLabel per language (SKOS S14)
   for (const concept of register.concepts) {
     for (const [lang, v] of Object.entries(concept.prefLabel ?? {})) {
-      if (Array.isArray(v)) err(`${concept.uri}: prefLabel.${lang} must be a single string (SKOS S14)`);
+      if (Array.isArray(v)) found.push(`${concept.uri}: prefLabel.${lang} must be a single string (SKOS S14)`);
     }
   }
 
@@ -93,20 +95,21 @@ function validateContract(register) {
   for (const concept of register.concepts) {
     const declared = concept.smallClass;
     if (!BANDS.some(b => declared?.endsWith(b))) {
-      err(`${concept.uri}: smallClass must be one of the register bands`);
+      found.push(`${concept.uri}: smallClass must be one of the register bands`);
       continue;
     }
     if (!listed.has(concept.uri)) {
-      err(`${concept.uri}: not listed in the member list of its band collection ${declared}`);
+      found.push(`${concept.uri}: not listed in the member list of its band collection ${declared}`);
     } else if (listed.get(concept.uri) !== declared) {
-      err(`${concept.uri}: smallClass says band ${declared} but its band collection lists it under ${listed.get(concept.uri)}`);
+      found.push(`${concept.uri}: smallClass says band ${declared} but its band collection lists it under ${listed.get(concept.uri)}`);
     }
   }
   for (const [member, bandUri] of listed) {
     if (!register.concepts.some(c => c.uri === member)) {
-      err(`${bandUri}: member ${member} is not a register concept`);
+      found.push(`${bandUri}: member ${member} is not a register concept`);
     }
   }
+  return found;
 }
 
 function runEngine(shapesFile, dataFile) {
@@ -139,7 +142,7 @@ function main() {
   const register = loadRegister(root);
   if (fs.existsSync(shapesFile)) validateShapesFile(fs.readFileSync(shapesFile, "utf8"));
   if (fs.existsSync(dataFile)) validateDataCurrency(register, fs.readFileSync(dataFile, "utf8"));
-  validateContract(register);
+  errors.push(...validateContract(register));
 
   const engine = fs.existsSync(shapesFile) && fs.existsSync(dataFile) ? runEngine(shapesFile, dataFile) : {engine: null};
   if (engine.engine && !engine.conforms) {
@@ -159,4 +162,9 @@ function main() {
   process.exit(0);
 }
 
-main();
+// Seeded-violation entry point for the suite's negative tests: the profile's
+// three headline contracts must reject a mutated register (fail-closed proof —
+// SHACL green on a known-bad fixture is the handoff's named Fail condition).
+export { validateContract };
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main();
