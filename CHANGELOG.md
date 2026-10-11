@@ -563,6 +563,5 @@ relabelled to track the project's `package.json` version at the time).
 - 2026-06-13 feat: TEI Lex-0 generator + structural validator (G2 slice 2)
 - 2026-06-13 Merge pull request #4 from sanskrit-lexicon/docs/tei-lex0-pilot
 
-- 2026-10-11 H6447: small-class register v2 — measured-residue classes (gender/features, work titles, authors/editors; 15 census-evidenced concepts) + externalGrounding for the 8 unresolved 2006 forms (Whitney/Macdonell/Knauer verbatim, Stenzler negative result); coverage 8.69% → 13.12% (148/1128), 0 new concept pairs
 
 _Dr. Mārcis Gasūns_
