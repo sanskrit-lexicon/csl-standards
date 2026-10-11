@@ -1,6 +1,6 @@
 # SMALL_CLASS_ABBREV_REGISTER_NOTE.meta.md -- metadoc about `SMALL_CLASS_ABBREV_REGISTER_NOTE`
 
-_Created: 10-10-2026 · Last updated: 10-10-2026_
+_Created: 10-10-2026 · Last updated: 11-10-2026_
 
 This is a **metadoc** -- a document *about* a document. Its subject is [SMALL_CLASS_ABBREV_REGISTER_NOTE](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md).
 It does not duplicate the subject's content; it records everything *around* it: why it
@@ -9,7 +9,7 @@ standing "one metadoc per important document" convention (`~/.claude/CLAUDE.md`)
 
 ## Subject
 - **Document:** [SMALL_CLASS_ABBREV_REGISTER_NOTE](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md)
-- **Purpose:** design record for the H6419 controlled abbreviation register (data/abbrev/small-class-register.json) and its deterministic collision measurement — the grounding rules, the declared conflicts, and the honest reading of the numbers.
+- **Purpose:** design record for the H6419 v1 + H6447 v2 controlled abbreviation register (data/abbrev/small-class-register.json) and its deterministic collision measurement — the grounding rules, the declared conflicts, the v2 measured-residue extension, and the honest reading of the numbers.
 - **Audience:** future sessions extending the register (the E4a/E4b paper lanes re-read it), reviewers of the register artifact, and anyone re-running the measurement.
 - **Format / contract:** repo docs note; its normative counterpart is the register artifact + validator (`npm run validate-small-class-register`) — the note explains, the validator enforces.
 
@@ -20,12 +20,12 @@ standing "one metadoc per important document" convention (`~/.claude/CLAUDE.md`)
 ## Improvement backlog (ranked)
 | # | Improvement | Why | Status |
 |---|---|---|---|
-| 1 | Extend the register beyond the scheme-as-printed (gender, middle, feature labels) | 91.3% of the collision mass is uncovered residue | queued — research decision for the E4a/E4b lanes |
+| 1 | Extend the register beyond the scheme-as-printed (gender, middle, feature labels) | 91.3% of the collision mass was uncovered residue | **done 11-10-2026 (H6447 v2)** — 86.88% remains, further classes need new census evidence |
 | 2 | SKOS/Turtle serialization for LOD serving | JSON-LD context is declared but no .ttl export exists | not queued (PUBLISHING_LOD phase owns dereferenceable serving) |
 | 3 | Re-pin provenance when csl-atlas re-cuts the census | validator/measurement hard-fail on drift by design | standing rule, no ticket needed |
 
 ## Known limitations / caveats
-- The register is deliberately the **scheme-as-printed** (2006 §2.3): forms without paper-proposed notation do not become concepts; 8 forms are declared unresolved (incl. `pn.` contradicting the census, and the `Ppf.` pluperfect/participe-parfait conflict).
+- v1 was deliberately the **scheme-as-printed** (2006 §2.3); v2 (H6447) extends it with the measured-residue classes under the same census rules, and grounds the 8 unresolved forms externally (Whitney/Macdonell/Knauer verbatim; Stenzler negative result) without binding them — the `pn.` and `Ppf.` conflicts stay declared.
 - The measurement covers the census collision universe only (448 strings of 4752 legend-carrying ones); the 18/44 machine-readable legend denominator bounds every claim.
 - JS `toLowerCase()` stands in for Python `casefold()`; verified equal on every census character class, and the validator pins key existence against the payload either way.
 - The census payload is read cross-repo and never committed here.
@@ -50,5 +50,6 @@ standing "one metadoc per important document" convention (`~/.claude/CLAUDE.md`)
 | Date | Event | Who |
 |---|---|---|
 | 10-10-2026 | metadoc created (`metadoc_emit.py`) | GLM-5.3-Flash via ZCode |
+| 11-10-2026 | v2 extension recorded (H6447: residue bands, externalGrounding, 13.12% coverage) | GLM-5.3 via ZCode |
 
 _Dr. Mārcis Gasūns_

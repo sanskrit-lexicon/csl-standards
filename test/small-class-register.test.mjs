@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  expansionKey, loadRegister, BANDS, CANARY_LABELS, keyToConcept,
+  expansionKey, loadRegister, BANDS, CANARY_LABELS, EXTERNAL_SOURCES, keyToConcept,
 } from "../scripts/lib/small-class-register.mjs";
 
 const register = loadRegister();
@@ -60,6 +60,27 @@ test("unresolved forms never collide with concept notations and carry a reason",
   }
 });
 
+test("v2 (H6447): every unresolved form is externally grounded in the paper's reference grammars", () => {
+  for (const f of register.unresolvedForms) {
+    assert.ok(Array.isArray(f.externalGrounding) && f.externalGrounding.length >= 1,
+      `${f.notation}: externalGrounding must be a non-empty array`);
+    for (const g of f.externalGrounding) {
+      assert.ok(EXTERNAL_SOURCES.includes(g.source), `${f.notation}: source ${g.source} not in the palette`);
+      assert.equal(typeof g.edition, "string");
+      assert.ok(g.edition.length > 5, `${f.notation}: edition must be stated`);
+      assert.equal(typeof g.quote, "string");
+      assert.ok(g.quote.length >= 10, `${f.notation}: verbatim quote required`);
+      assert.equal(typeof g.locator, "string");
+      assert.ok(g.locator.length > 0, `${f.notation}: locator required`);
+    }
+  }
+  // the two declared conflicts stay declared — never silently overwritten
+  const pn = register.unresolvedForms.find(f => f.notation === "pn.");
+  assert.ok(pn.censusConflict?.en.includes("pronoun, pronominal"), "pn. census conflict must stay declared");
+  const ppf = register.concepts.find(c => c.notation[0] === "Ppf.");
+  assert.ok(ppf.censusConflict?.en.includes("participe parfait"), "Ppf. census conflict must stay declared");
+});
+
 test("canary exhibits are exactly the 2006 §2.1/§2 target strings with integer polysemy", () => {
   assert.deepEqual(register.canaryExhibits.map(c => c.label), CANARY_LABELS);
   for (const c of register.canaryExhibits) {
@@ -87,8 +108,28 @@ test("keyToConcept binds unambiguously; senses outside the scheme stay unbound",
   const map = keyToConcept(register);
   assert.equal(map.get("singular"), register.concepts.find(c => c.notation[0] === "sg.").uri);
   assert.equal(map.get("plusquamperfekt"), register.concepts.find(c => c.notation[0] === "Ppf.").uri);
-  // the 2006 scheme proposes no forms for these — they must never bind
+  // v2 (H6447): the measured-residue classes now bind
+  assert.equal(map.get("masculine"), register.concepts.find(c => c.notation[0] === "m.").uri);
+  assert.equal(map.get("femininum"), register.concepts.find(c => c.notation[0] === "f.").uri);
+  assert.equal(map.get("neutre"), register.concepts.find(c => c.notation[0] === "n.").uri);
+  assert.equal(map.get("medium"), register.concepts.find(c => c.notation[0] === "med.").uri);
+  assert.equal(map.get("naiṣadhacarita"), register.concepts.find(c => c.notation[0] === "Naiṣ.").uri);
+  // neither v1 nor v2 proposes forms for these — they must never bind
   assert.equal(map.get("case"), undefined);
-  assert.equal(map.get("masculine"), undefined);
   assert.equal(map.get("vocativ"), undefined);
+  assert.equal(map.get("māhārāṣṭrī"), undefined);
+  assert.equal(map.get("marut"), undefined);
+});
+
+test("v2 (H6447): the three residue bands carry the census-evidenced extension", () => {
+  const v2bands = ["v2-gender-features", "v2-work-titles", "v2-authors-editors"];
+  for (const b of v2bands) assert.ok(BANDS.includes(b));
+  const byBand = new Map();
+  for (const c of register.concepts) byBand.set(c.smallClass, [...(byBand.get(c.smallClass) ?? []), c.uri]);
+  assert.equal(byBand.get(`https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-gender-features`).length, 4);
+  assert.equal(byBand.get(`https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles`).length, 8);
+  assert.equal(byBand.get(`https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-authors-editors`).length, 3);
+  // v1 is untouched: 20 concepts still sit in the four 2006 bands
+  const v1 = register.concepts.filter(c => c.smallClass.endsWith("2006-1") || c.smallClass.endsWith("2006-2") || c.smallClass.endsWith("2006-3") || c.smallClass.endsWith("2006-4"));
+  assert.equal(v1.length, 20);
 });

@@ -1,11 +1,11 @@
 {
   "report": "small-class-collision-report",
-  "version": "1.0.0",
-  "handoff": "H6419",
+  "version": "2.0.0",
+  "handoff": "H6447",
   "register": {
     "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006",
-    "version": "1.0.0",
-    "concepts": 20,
+    "version": "2.0.0",
+    "concepts": 35,
     "unresolvedForms": 8
   },
   "census": {
@@ -62,11 +62,11 @@
     }
   },
   "coverage": {
-    "boundSenses": 98,
-    "senseCoveragePct": "8.69",
-    "boundLabels": 48,
-    "labelCoveragePct": "10.71",
-    "conceptsTouched": 16,
+    "boundSenses": 148,
+    "senseCoveragePct": "13.12",
+    "boundLabels": 66,
+    "labelCoveragePct": "14.73",
+    "conceptsTouched": 31,
     "perConcept": [
       {
         "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nominative",
@@ -295,16 +295,211 @@
           "onomat."
         ],
         "labelCount": 2
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#feminine",
+        "notation": "f.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-gender-features",
+        "boundSenses": 7,
+        "labels": [
+          "f.",
+          "fem."
+        ],
+        "labelCount": 2
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#masculine",
+        "notation": "m.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-gender-features",
+        "boundSenses": 7,
+        "labels": [
+          "M.",
+          "m.",
+          "masc."
+        ],
+        "labelCount": 3
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#neuter",
+        "notation": "n.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-gender-features",
+        "boundSenses": 7,
+        "labels": [
+          "N.",
+          "n.",
+          "nt."
+        ],
+        "labelCount": 3
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#middle",
+        "notation": "med.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-gender-features",
+        "boundSenses": 3,
+        "labels": [
+          "M.",
+          "Me.",
+          "Med."
+        ],
+        "labelCount": 3
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#manu",
+        "notation": "M.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 3,
+        "labels": [
+          "M."
+        ],
+        "labelCount": 1
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nalopakhhyana",
+        "notation": "Nal.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 3,
+        "labels": [
+          "N.",
+          "Nal."
+        ],
+        "labelCount": 2
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#naishadhacarita",
+        "notation": "Naiṣ.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 1,
+        "labels": [
+          "N."
+        ],
+        "labelCount": 1
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#paninis-ashtadhyayi",
+        "notation": "Pāṇ.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 5,
+        "labels": [
+          "P.",
+          "Pāṇ."
+        ],
+        "labelCount": 2
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#vikramorvashiyam",
+        "notation": "Vikr.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 3,
+        "labels": [
+          "V.",
+          "Vikr."
+        ],
+        "labelCount": 2
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#malavikagnimitra",
+        "notation": "Mālav.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 2,
+        "labels": [
+          "M.",
+          "MĀLAV."
+        ],
+        "labelCount": 2
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#matsyopakhyana",
+        "notation": "Matsy.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 1,
+        "labels": [
+          "M."
+        ],
+        "labelCount": 1
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#atharvaveda",
+        "notation": "AV.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-work-titles",
+        "boundSenses": 4,
+        "labels": [
+          "AV."
+        ],
+        "labelCount": 1
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#vopadeva",
+        "notation": "Vop.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-authors-editors",
+        "boundSenses": 2,
+        "labels": [
+          "V.",
+          "Vop."
+        ],
+        "labelCount": 2
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#bohtlingk",
+        "notation": "B.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-authors-editors",
+        "boundSenses": 1,
+        "labels": [
+          "B."
+        ],
+        "labelCount": 1
+      },
+      {
+        "uri": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#brockhaus",
+        "notation": "Br.",
+        "smallClass": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#v2-authors-editors",
+        "boundSenses": 1,
+        "labels": [
+          "Br."
+        ],
+        "labelCount": 1
       }
-    ]
+    ],
+    "v1Baseline": {
+      "registerVersion": "1.0.0",
+      "handoff": "H6419",
+      "boundSenses": 98,
+      "senseCoveragePct": "8.69",
+      "boundLabels": 48,
+      "conceptsTouched": 16,
+      "excessSensesAfter": 634,
+      "resolvedStrings": 16,
+      "reducedStrings": 32,
+      "notationsCollidingAfter": 414,
+      "excessSensesAfterNotationView": 603
+    },
+    "v2VsV1": {
+      "sameCensusPayload": true,
+      "totalSenses": 1128,
+      "boundSensesV1": 98,
+      "boundSensesV2": 148,
+      "boundSensesDelta": 50,
+      "senseCoveragePctV1": "8.69",
+      "senseCoveragePctV2": "13.12",
+      "coveragePctPoints": "4.43",
+      "boundLabelsV1": 48,
+      "boundLabelsV2": 66,
+      "conceptsTouchedV1": 16,
+      "conceptsTouchedV2": 31
+    }
   },
   "conceptMetric": {
-    "collidingStringsAfter": 432,
-    "excessSensesAfter": 634,
-    "resolvedStrings": 16,
-    "reducedStrings": 32,
-    "excessReductionPct": "6.76",
+    "collidingStringsAfter": 428,
+    "excessSensesAfter": 611,
+    "resolvedStrings": 20,
+    "reducedStrings": 43,
+    "excessReductionPct": "10.15",
     "changedLabels": [
+      {
+        "label": "AV.",
+        "before": 4,
+        "after": 1,
+        "bound": 4
+      },
       {
         "label": "Atm.",
         "before": 2,
@@ -372,6 +567,18 @@
         "bound": 2
       },
       {
+        "label": "M.",
+        "before": 11,
+        "after": 8,
+        "bound": 8
+      },
+      {
+        "label": "N.",
+        "before": 10,
+        "after": 8,
+        "bound": 6
+      },
+      {
         "label": "Nom.",
         "before": 3,
         "after": 2,
@@ -380,8 +587,8 @@
       {
         "label": "P.",
         "before": 11,
-        "after": 10,
-        "bound": 4
+        "after": 8,
+        "bound": 7
       },
       {
         "label": "Pass.",
@@ -393,6 +600,18 @@
         "label": "Pl.",
         "before": 2,
         "after": 1,
+        "bound": 2
+      },
+      {
+        "label": "Pāṇ.",
+        "before": 3,
+        "after": 2,
+        "bound": 2
+      },
+      {
+        "label": "Vikr.",
+        "before": 3,
+        "after": 2,
         "bound": 2
       },
       {
@@ -409,6 +628,18 @@
       },
       {
         "label": "du.",
+        "before": 3,
+        "after": 1,
+        "bound": 3
+      },
+      {
+        "label": "f.",
+        "before": 6,
+        "after": 3,
+        "bound": 4
+      },
+      {
+        "label": "fem.",
         "before": 3,
         "after": 1,
         "bound": 3
@@ -441,6 +672,30 @@
         "label": "loc.",
         "before": 3,
         "after": 2,
+        "bound": 2
+      },
+      {
+        "label": "m.",
+        "before": 5,
+        "after": 3,
+        "bound": 3
+      },
+      {
+        "label": "masc.",
+        "before": 2,
+        "after": 1,
+        "bound": 2
+      },
+      {
+        "label": "n.",
+        "before": 6,
+        "after": 4,
+        "bound": 3
+      },
+      {
+        "label": "nt.",
+        "before": 2,
+        "after": 1,
         "bound": 2
       },
       {
@@ -500,9 +755,9 @@
     ]
   },
   "notationMetric": {
-    "notationsCollidingAfter": 414,
-    "excessSensesAfter": 603,
-    "notationGroupsSpanningLabels": 4,
+    "notationsCollidingAfter": 407,
+    "excessSensesAfter": 567,
+    "notationGroupsSpanningLabels": 11,
     "newConceptPairCount": 0,
     "newConceptPairs": [],
     "collidingNotations": [
@@ -627,21 +882,6 @@
         "senses": [
           "raw:AK.:amarakośa, ausg. von loiseleur deslongchamps. (vol. 1) @ AK. (AMARAKOŚA, Ausg. von LOISELEUR DESLONGCHAMPS. (v)",
           "raw:AK.:amarakoṣa nach der ausgabe von colebrooke und loiseleur deslongchamps (gild. bibl. 251. 253) @ AK. (AMARAKOṢA nach der Ausgabe von COLEBROOKE und LO)"
-        ]
-      },
-      {
-        "notation": "AV.",
-        "concepts": 4,
-        "labels": [
-          "AV."
-        ],
-        "spanningLabels": false,
-        "newPairs": 0,
-        "senses": [
-          "raw:AV.:atharvaveda, ausg. von roth und whitney (roth). (vol. 1) @ AV. (ATHARVAVEDA, Ausg. von ROTH und WHITNEY (ROTH). )",
-          "raw:AV.:atharvavedasam̃hitā, herausg. von r. roth und w. d. whitney. berlin bei f. dümmler. 1855. 8º. in den ersten bogen des wörter- buchs finden sich mehrere citate, deren zahlen mit der in der aus- gabe angenommenen zählung nicht ganz zusammentreffen. man kann den unterschied dadurch ausgleichen, dass man in den zusammen- gesetzten liedern (paryāyasūkta), welche in der ausgabe als ein- heiten gezählt sind, die unterabtheilungen (strophen) als besondere lieder zählt @ AV. (ATHARVAVEDASAM̃HITĀ, herausg. von R. ROTH und W.)",
-          "raw:AV.:atharva-veda @ AV. (Atharva-veda.)",
-          "raw:AV.:atharvaveda @ AV. (Atharvaveda.)"
         ]
       },
       {
@@ -787,7 +1027,7 @@
           "raw:B.:bombay edition @ B. (Bombay edition.)",
           "raw:B.:buddha @ B. (Buddha.)",
           "raw:B.:buddhistic term @ B. (Buddhistic term.)",
-          "raw:B.:böhtlingk ? [cologne addition] usu. preceded by 'z.' @ B. (BÖHTLINGK ? [Cologne Addition] usu. preceded by )"
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#bohtlingk @ B. (BÖHTLINGK ? [Cologne Addition] usu. preceded by )"
         ]
       },
       {
@@ -1009,7 +1249,7 @@
         "newPairs": 0,
         "senses": [
           "raw:Br.:brāhmaṇa @ Br. (Brāhmaṇa.)",
-          "raw:Br.:brockhaus @ Br. (Brockhaus.)",
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#brockhaus @ Br. (Brockhaus.)",
           "raw:Br.:brāhmaṇas (language of) @ Br. (Brāhmaṇas (language of).)"
         ]
       },
@@ -2327,24 +2567,17 @@
       },
       {
         "notation": "M.",
-        "concepts": 11,
+        "concepts": 4,
         "labels": [
           "M."
         ],
         "spanningLabels": false,
         "newPairs": 0,
         "senses": [
-          "raw:M.:manu's gesetzbuch in der ausg. von loiseleur deslongchamps (gild. bibl. 289) @ M. (MANU'S Gesetzbuch in der Ausg. von LOISELEUR DES)",
-          "raw:M.:manusmṛiti (in twelve adyāyas, māndlik’s edition, 1886) @ M. (Manusmṛiti (in twelve adyāyas, Māndlik’s edition)",
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#manu @ M. (MANU'S Gesetzbuch in der Ausg. von LOISELEUR DES)",
           "raw:M.:marut @ M. (Marut.)",
-          "raw:M.:masculine @ M. (Masculine.)",
-          "raw:M.:matsyôpâkhyâna, i.e. episodium de diluvio @ M. (Matsyôpâkhyâna, i.e. episodium de diluvio.)",
-          "raw:M.:middle @ M. (Middle.)",
-          "raw:M.:mānavadharmaśāstra. (vol. 1) @ M. (MĀNAVADHARMAŚĀSTRA. (vol. 1))",
           "raw:M.:māhārāṣṭrī @ M. (Māhārāṣṭrī.)",
-          "raw:M.:mālavikāgnimitra (bombay) @ M. (Mālavikāgnimitra (Bombay).)",
-          "raw:M.:mātaríśva @ M. (Mātaríśva)",
-          "raw:M.:masculin @ M. (masculin)"
+          "raw:M.:mātaríśva @ M. (Mātaríśva)"
         ]
       },
       {
@@ -2517,32 +2750,6 @@
         ]
       },
       {
-        "notation": "Me.",
-        "concepts": 2,
-        "labels": [
-          "Me."
-        ],
-        "spanningLabels": false,
-        "newPairs": 0,
-        "senses": [
-          "raw:Me.:medium @ Me. (Medium)",
-          "raw:Me.:meghadūta (bombay) @ Me. (Meghadūta (Bombay).)"
-        ]
-      },
-      {
-        "notation": "Med.",
-        "concepts": 2,
-        "labels": [
-          "Med."
-        ],
-        "spanningLabels": false,
-        "newPairs": 0,
-        "senses": [
-          "raw:Med.:medinīkośa @ Med. (Medinīkośa.)",
-          "raw:Med.:medium @ Med. (Medium)"
-        ]
-      },
-      {
         "notation": "Megh.",
         "concepts": 3,
         "labels": [
@@ -2610,19 +2817,6 @@
         ]
       },
       {
-        "notation": "MĀLAV.",
-        "concepts": 2,
-        "labels": [
-          "MĀLAV."
-        ],
-        "spanningLabels": false,
-        "newPairs": 0,
-        "senses": [
-          "raw:MĀLAV.:mālavikāgnimitr, ausg. von tulliberg. (vol. 1) @ MĀLAV. (MĀLAVIKĀGNIMITR, Ausg. von TULLIBERG. (vol. 1))",
-          "raw:MĀLAV.:mālavikāgnimitra, ed. tullberg (gild. bibl. 209) @ MĀLAV. (MĀLAVIKĀGNIMITRA, ed. TULLBERG (GILD. Bibl. 209))"
-        ]
-      },
-      {
         "notation": "MĀRK. P.",
         "concepts": 2,
         "labels": [
@@ -2663,7 +2857,7 @@
       },
       {
         "notation": "N.",
-        "concepts": 10,
+        "concepts": 5,
         "labels": [
           "N.",
           "Nom.",
@@ -2673,15 +2867,10 @@
         "newPairs": 0,
         "senses": [
           "raw:N.:name @ N. (Name.)",
-          "raw:N.:nalopākhyāna in böhtlingk's chrestomathie (gild. bibl. 49). die bopp'sche ausgabe (gild. bibl. 99) ist durch n. (bopp) bezeichnet @ N. (NALOPĀKHYĀNA in BÖHTLINGK'S Chrestomathie (GILD.)",
-          "raw:N.:naiṣadhacarita @ N. (Naiṣadhacarita.)",
-          "raw:N.:nalus (berol. apud nicolai) @ N. (Nalus (Berol. apud Nicolai).)",
           "raw:N.:name (also = title or epithet) @ N. (Name (also = title or epithet))",
-          "raw:N.:neuter @ N. (Neuter.)",
           "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nominative @ N. (Nominativ)",
           "raw:N.:nāga @ N. (Nāga.)",
-          "raw:N.:name; when alone = name of a man or of a woman @ N. (name; when alone = name of a man or of a woman.)",
-          "raw:N.:neutre @ N. (neutre)"
+          "raw:N.:name; when alone = name of a man or of a woman @ N. (name; when alone = name of a man or of a woman.)"
         ]
       },
       {
@@ -2766,12 +2955,13 @@
         "notation": "Nal.",
         "concepts": 2,
         "labels": [
+          "N.",
           "Nal."
         ],
-        "spanningLabels": false,
+        "spanningLabels": true,
         "newPairs": 0,
         "senses": [
-          "raw:Nal.:nala, an episode of the mbh. ed. bopp.; a numeral in brackets denotes böhtlingk's ed. in his chrestomathy @ Nal. (Nala, an episode of the MBh. ed. Bopp.; a numera)",
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nalopakhhyana @ N. (NALOPĀKHYĀNA in BÖHTLINGK'S Chrestomathie (GILD.)",
           "raw:Nal.:nalodaya (in four sargas, published in kāvyasangraha, calcutta, 1872) @ Nal. (Nalodaya (in four sargas, published in Kāvyasang)"
         ]
       },
@@ -2855,7 +3045,7 @@
       },
       {
         "notation": "P.",
-        "concepts": 7,
+        "concepts": 4,
         "labels": [
           "P."
         ],
@@ -2865,9 +3055,6 @@
           "raw:P.:1) parasmaipadum. 2) påtaliputra (ed. h. brockhaus. lipsiae 1835.) @ P. (1) Parasmaipadum. 2) Påtaliputra (ed. H. Brockha)",
           "raw:P.:1) parasmaipadum. 2) p�taliputra (ed. h. brockhaus. lipsiae 1835.) @ P. (1) Parasmaipadum. 2) P�taliputra (ed. H. Brockha)",
           "raw:P.:pitṛ @ P. (Pitṛ.)",
-          "raw:P.:pāṇini's acht bücher grammatischer regeln (gild. bibl. 244) @ P. (PĀṆINI'S acht Bücher grammatischer Regeln (GILD.)",
-          "raw:P.:pāṇini. (vol. 1) @ P. (PĀṆINI. (vol. 1))",
-          "raw:P.:pāṇini's aṣṭādhyāyī @ P. (Pāṇini's Aṣṭādhyāyī.)",
           "raw:P.:parfait @ P. (parfait)"
         ]
       },
@@ -3059,15 +3246,15 @@
       },
       {
         "notation": "Pāṇ.",
-        "concepts": 3,
+        "concepts": 2,
         "labels": [
+          "P.",
           "Pāṇ."
         ],
-        "spanningLabels": false,
+        "spanningLabels": true,
         "newPairs": 0,
         "senses": [
-          "raw:Pāṇ.:pāṇini, ed. böhtlingk @ Pāṇ. (Pāṇini, ed. Böhtlingk.)",
-          "raw:Pāṇ.:pāṇini @ Pāṇ. (Pāṇini.)",
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#paninis-ashtadhyayi @ P. (PĀṆINI'S acht Bücher grammatischer Regeln (GILD.)",
           "raw:Pāṇ.:pāṇiniʼs aṣṭādhyāyī @ Pāṇ. (Pāṇiniʼs Aṣṭādhyāyī)"
         ]
       },
@@ -3664,7 +3851,7 @@
       },
       {
         "notation": "V.",
-        "concepts": 7,
+        "concepts": 5,
         "labels": [
           "V."
         ],
@@ -3675,9 +3862,7 @@
           "raw:V.:vasu @ V. (Vasu.)",
           "raw:V.:veda, vedic @ V. (Veda, Vedic.)",
           "raw:V.:verb @ V. (Verb.)",
-          "raw:V.:vikramorvaśīyam (bombay) @ V. (Vikramorvaśīyam (Bombay).)",
-          "raw:V.:vocativ @ V. (Vocativ)",
-          "raw:V.:vôpadêvus grammaticus cujus radicum corpus, kavikalpadruma inscriptum, edidit w. carey in grammaticâ suâ. westerg. est westergardii liber radices sanscritae inscriptus @ V. (Vôpadêvus grammaticus cujus radicum corpus, Kavi)"
+          "raw:V.:vocativ @ V. (Vocativ)"
         ]
       },
       {
@@ -3893,15 +4078,15 @@
       },
       {
         "notation": "Vikr.",
-        "concepts": 3,
+        "concepts": 2,
         "labels": [
+          "V.",
           "Vikr."
         ],
-        "spanningLabels": false,
+        "spanningLabels": true,
         "newPairs": 0,
         "senses": [
-          "raw:Vikr.:vikramorvaśī, ed. bollensen @ Vikr. (Vikramorvaśī, ed. Bollensen.)",
-          "raw:Vikr.:vikramorvaśīya (in five acts, paṇḍit’s edition, 1879) @ Vikr. (Vikramorvaśīya (in five acts, Paṇḍit’s edition, )",
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#vikramorvashiyam @ V. (Vikramorvaśīyam (Bombay).)",
           "raw:Vikr.:vikramāṅkadevacarita (bombay) @ Vikr. (Vikramāṅkadevacarita (Bombay).)"
         ]
       },
@@ -3922,13 +4107,14 @@
         "notation": "Vop.",
         "concepts": 2,
         "labels": [
+          "V.",
           "Vop."
         ],
-        "spanningLabels": false,
+        "spanningLabels": true,
         "newPairs": 0,
         "senses": [
-          "raw:Vop.:vopadeva, ed. böhtlingk @ Vop. (Vopadeva, ed. Böhtlingk.)",
-          "raw:Vop.:vopadeva @ Vop. (Vopadeva.)"
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#vopadeva @ V. (Vôpadêvus grammaticus cujus radicum corpus, Kavi)",
+          "raw:Vop.:vopadeva, ed. böhtlingk @ Vop. (Vopadeva, ed. Böhtlingk.)"
         ]
       },
       {
@@ -4700,33 +4886,17 @@
       },
       {
         "notation": "f.",
-        "concepts": 6,
-        "labels": [
-          "f."
-        ],
-        "spanningLabels": false,
-        "newPairs": 0,
-        "senses": [
-          "raw:f.:feminine @ f. (Feminine)",
-          "raw:f.:féminin @ f. (féminin)",
-          "raw:f.:feminine (of adjectives) @ f. (Feminine (of adjectives).)",
-          "raw:f.:feminine; also = for @ f. (feminine; also = for.)",
-          "raw:f.:feminine; following @ f. (feminine; following.)",
-          "raw:f.:femininum @ f. (femininum)"
-        ]
-      },
-      {
-        "notation": "fem.",
         "concepts": 3,
         "labels": [
+          "f.",
           "fem."
         ],
-        "spanningLabels": false,
+        "spanningLabels": true,
         "newPairs": 0,
         "senses": [
-          "raw:fem.:feminine @ fem. (Feminine)",
-          "raw:fem.:feminine (of nouns) @ fem. (Feminine (of nouns).)",
-          "raw:fem.:femininum @ fem. (femininum)"
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#feminine @ f. (Feminine)",
+          "raw:f.:feminine; also = for @ f. (feminine; also = for.)",
+          "raw:f.:feminine; following @ f. (feminine; following.)"
         ]
       },
       {
@@ -5078,17 +5248,17 @@
       },
       {
         "notation": "m.",
-        "concepts": 5,
+        "concepts": 3,
         "labels": [
-          "m."
+          "M.",
+          "m.",
+          "masc."
         ],
-        "spanningLabels": false,
+        "spanningLabels": true,
         "newPairs": 0,
         "senses": [
-          "raw:m.:masculine @ m. (Masculine)",
-          "raw:m.:masculin @ m. (masculin)",
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#masculine @ M. (Masculine.)",
           "raw:m.:masculine gender @ m. (masculine gender)",
-          "raw:m.:masculinum @ m. (masculinum)",
           "raw:m.:meaning @ m. (meaning.)"
         ]
       },
@@ -5103,19 +5273,6 @@
         "senses": [
           "raw:m.c.:metri causa, or 'for the sake of the meter' in poetry @ m.c. (metri causa, or 'for the sake of the meter' in p)",
           "raw:m.c.:metri causa. i include under this term two classes of cases, because in both i find evidence for believing that metrical considerations were either the exclusive or the dominant reason for the use of the form in question. the first includes any cases of a particular form which is never used in prose, or in positions in a verse where the alternative (‘regular’) form would fit as well. the second includes cases in which the form labelled ‘m.c.’ is indeed also used (elsewhere) in prose or metrically indifferent positions, but in such limited or specialized ways (which vary in different cases) that i still believe the choice was determined, in the cases under consideration where the term ‘m.c.’ occurs, by meter. in both types, of course, the alternative (‘regular’) form would be impossible in a specific context where it is labelled ‘m.c.’ it is hoped that my manner of presentation will make it easy to distinguish the two types. frequency of occurrence, and use of corresponding forms in other mindic dialects, are important considerations to which i have tried to give due weight @ m.c. (metri causa. I include under this term two class)"
-        ]
-      },
-      {
-        "notation": "masc.",
-        "concepts": 2,
-        "labels": [
-          "masc."
-        ],
-        "spanningLabels": false,
-        "newPairs": 0,
-        "senses": [
-          "raw:masc.:masculine @ masc. (Masculine)",
-          "raw:masc.:masculinum @ masc. (masculinum)"
         ]
       },
       {
@@ -5146,17 +5303,17 @@
       },
       {
         "notation": "n.",
-        "concepts": 6,
+        "concepts": 4,
         "labels": [
-          "n."
+          "N.",
+          "n.",
+          "nt."
         ],
-        "spanningLabels": false,
+        "spanningLabels": true,
         "newPairs": 0,
         "senses": [
-          "raw:n.:neuter @ n. (Neuter)",
+          "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#neuter @ N. (Neuter.)",
           "raw:n.:neuter gender @ n. (neuter gender)",
-          "raw:n.:neutre @ n. (neutre)",
-          "raw:n.:neutrum @ n. (neutrum)",
           "raw:n.:nom @ n. (nom.)",
           "raw:n.:nominative; name @ n. (nominative; name.)"
         ]
@@ -5172,19 +5329,6 @@
         "senses": [
           "raw:nom.:nominatif @ nom. (nominatif.)",
           "raw:nom.:nominative case @ nom. (nominative case)"
-        ]
-      },
-      {
-        "notation": "nt.",
-        "concepts": 2,
-        "labels": [
-          "nt."
-        ],
-        "spanningLabels": false,
-        "newPairs": 0,
-        "senses": [
-          "raw:nt.:neuter @ nt. (neuter.)",
-          "raw:nt.:neutre @ nt. (neutre.)"
         ]
       },
       {
@@ -6099,18 +6243,18 @@
       "label": "M.",
       "censusPolysemy": 11,
       "before": 11,
-      "after": 11,
-      "bound": 0,
+      "after": 8,
+      "bound": 8,
       "senses": [
         {
           "expansion": "MANU'S Gesetzbuch in der Ausg. von LOISELEUR DESLONGCHAMPS (GILD. Bibl. 289).",
           "key": "manu's gesetzbuch in der ausg. von loiseleur deslongchamps (gild. bibl. 289)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#manu"
         },
         {
           "expansion": "Manusmṛiti (in twelve adyāyas, Māndlik’s edition, 1886).",
           "key": "manusmṛiti (in twelve adyāyas, māndlik’s edition, 1886)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#manu"
         },
         {
           "expansion": "Marut.",
@@ -6120,22 +6264,22 @@
         {
           "expansion": "Masculine.",
           "key": "masculine",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#masculine"
         },
         {
           "expansion": "Matsyôpâkhyâna, i.e. episodium de diluvio.",
           "key": "matsyôpâkhyâna, i.e. episodium de diluvio",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#matsyopakhyana"
         },
         {
           "expansion": "Middle.",
           "key": "middle",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#middle"
         },
         {
           "expansion": "MĀNAVADHARMAŚĀSTRA. (vol. 1)",
           "key": "mānavadharmaśāstra. (vol. 1)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#manu"
         },
         {
           "expansion": "Māhārāṣṭrī.",
@@ -6145,7 +6289,7 @@
         {
           "expansion": "Mālavikāgnimitra (Bombay).",
           "key": "mālavikāgnimitra (bombay)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#malavikagnimitra"
         },
         {
           "expansion": "Mātaríśva",
@@ -6155,7 +6299,7 @@
         {
           "expansion": "masculin",
           "key": "masculin",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#masculine"
         }
       ]
     },
@@ -6163,8 +6307,8 @@
       "label": "N.",
       "censusPolysemy": 10,
       "before": 10,
-      "after": 10,
-      "bound": 1,
+      "after": 8,
+      "bound": 6,
       "senses": [
         {
           "expansion": "Name.",
@@ -6174,17 +6318,17 @@
         {
           "expansion": "NALOPĀKHYĀNA in BÖHTLINGK'S Chrestomathie (GILD. Bibl. 49). Die BOPP'sche Ausgabe (GILD. Bibl. 99) ist durch N. (BOPP) bezeichnet.",
           "key": "nalopākhyāna in böhtlingk's chrestomathie (gild. bibl. 49). die bopp'sche ausgabe (gild. bibl. 99) ist durch n. (bopp) bezeichnet",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nalopakhhyana"
         },
         {
           "expansion": "Naiṣadhacarita.",
           "key": "naiṣadhacarita",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#naishadhacarita"
         },
         {
           "expansion": "Nalus (Berol. apud Nicolai).",
           "key": "nalus (berol. apud nicolai)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#nalopakhhyana"
         },
         {
           "expansion": "Name (also = title or epithet)",
@@ -6194,7 +6338,7 @@
         {
           "expansion": "Neuter.",
           "key": "neuter",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#neuter"
         },
         {
           "expansion": "Nominativ",
@@ -6214,7 +6358,7 @@
         {
           "expansion": "neutre",
           "key": "neutre",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#neuter"
         }
       ]
     },
@@ -6222,8 +6366,8 @@
       "label": "P.",
       "censusPolysemy": 11,
       "before": 11,
-      "after": 10,
-      "bound": 4,
+      "after": 8,
+      "bound": 7,
       "senses": [
         {
           "expansion": "Parasmaipada.",
@@ -6263,17 +6407,17 @@
         {
           "expansion": "PĀṆINI'S acht Bücher grammatischer Regeln (GILD. Bibl. 244).",
           "key": "pāṇini's acht bücher grammatischer regeln (gild. bibl. 244)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#paninis-ashtadhyayi"
         },
         {
           "expansion": "PĀṆINI. (vol. 1)",
           "key": "pāṇini. (vol. 1)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#paninis-ashtadhyayi"
         },
         {
           "expansion": "Pāṇini's Aṣṭādhyāyī.",
           "key": "pāṇini's aṣṭādhyāyī",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#paninis-ashtadhyayi"
         },
         {
           "expansion": "parfait",
@@ -6321,7 +6465,7 @@
       "censusPolysemy": 7,
       "before": 7,
       "after": 7,
-      "bound": 0,
+      "bound": 2,
       "senses": [
         {
           "expansion": "Burdwan edition.",
@@ -6346,7 +6490,7 @@
         {
           "expansion": "Vikramorvaśīyam (Bombay).",
           "key": "vikramorvaśīyam (bombay)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#vikramorvashiyam"
         },
         {
           "expansion": "Vocativ",
@@ -6356,7 +6500,7 @@
         {
           "expansion": "Vôpadêvus grammaticus cujus radicum corpus, Kavikalpadruma inscriptum, edidit W. Carey in grammaticâ suâ. Westerg. est Westergardii liber Radices sanscritae inscriptus.",
           "key": "vôpadêvus grammaticus cujus radicum corpus, kavikalpadruma inscriptum, edidit w. carey in grammaticâ suâ. westerg. est westergardii liber radices sanscritae inscriptus",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#vopadeva"
         }
       ]
     },
@@ -6393,23 +6537,23 @@
       "label": "f.",
       "censusPolysemy": 6,
       "before": 6,
-      "after": 6,
-      "bound": 0,
+      "after": 3,
+      "bound": 4,
       "senses": [
         {
           "expansion": "Feminine",
           "key": "feminine",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#feminine"
         },
         {
           "expansion": "féminin",
           "key": "féminin",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#feminine"
         },
         {
           "expansion": "Feminine (of adjectives).",
           "key": "feminine (of adjectives)",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#feminine"
         },
         {
           "expansion": "feminine; also = for.",
@@ -6424,7 +6568,7 @@
         {
           "expansion": "femininum",
           "key": "femininum",
-          "boundTo": null
+          "boundTo": "https://sanskrit-lexicon.github.io/csl-standards/registers/small-class-2006#feminine"
         }
       ]
     }
