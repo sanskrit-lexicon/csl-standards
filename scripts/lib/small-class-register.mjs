@@ -15,7 +15,18 @@ import fs from "node:fs";
 export const REGISTER_PATH = "data/abbrev/small-class-register.json";
 export const CENSUS_DEFAULT = "../csl-atlas/data/abbrev/abbrev_census.json";
 
-export const BANDS = ["2006-1", "2006-2", "2006-3", "2006-4"];
+// v1 bands are the 2006 §2.3 letter-length rows as printed; the v2 bands
+// (H6447) are the measured-residue classes added beyond the scheme-as-printed
+// (MG verdicts 10-10-2026), under the same census-grounding rules.
+export const BANDS = [
+  "2006-1", "2006-2", "2006-3", "2006-4",
+  "v2-gender-features", "v2-work-titles", "v2-authors-editors",
+];
+
+// External grounding palette for unresolved forms (H6447): the four grammars
+// of the 2006 paper's own reference list. Editions live in the register's
+// provenance.extensionV2.externalGroundingSources.
+export const EXTERNAL_SOURCES = ["Whitney 1879", "Macdonell 1916", "Stenzler", "Knauer"];
 
 export const CANARY_LABELS = ["V.", "c.", "P.", "S.", "N.", "M.", "f."];
 

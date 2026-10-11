@@ -26,7 +26,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {
-  REGISTER_PATH, CENSUS_DEFAULT, BANDS, CANARY_LABELS,
+  REGISTER_PATH, CENSUS_DEFAULT, BANDS, CANARY_LABELS, EXTERNAL_SOURCES,
   expansionKey, loadRegister, loadCensus, collisionIndex, keyToConcept,
 } from "./lib/small-class-register.mjs";
 
@@ -73,7 +73,7 @@ function main() {
       err(`${concept.uri}: attestedKeys must be a non-empty array`);
     }
     if (!BANDS.some(b => concept.smallClass?.endsWith(b))) {
-      err(`${concept.uri}: smallClass must be one of the 2006 bands (${BANDS.join(", ")})`);
+      err(`${concept.uri}: smallClass must be one of the register bands (${BANDS.join(", ")})`);
     }
     for (const alt of concept.altForm ?? []) {
       if (notationOwner.has(alt.notation)) err(`altForm notation ${JSON.stringify(alt.notation)} (${concept.uri}) collides with ${notationOwner.get(alt.notation)}`);
@@ -119,6 +119,28 @@ function main() {
     if (notationOwner.has(form.notation)) err(`unresolvedForm ${JSON.stringify(form.notation)} collides with concept notation of ${notationOwner.get(form.notation)}`);
     if (!form.reason?.en) err(`unresolvedForm ${JSON.stringify(form.notation)} must state why it is unresolved`);
     if (!form.paperQuote?.en) err(`unresolvedForm ${JSON.stringify(form.notation)} must cite the source scheme`);
+    // externalGrounding (H6447): the 2006 forms the census does not evidence
+    // are anchored in the paper's own reference grammars. Every entry needs a
+    // verbatim quote + edition + a source from the named palette; a grounded
+    // form is still unresolved-in-census (binding stays forbidden).
+    const grounding = form.externalGrounding ?? [];
+    if (grounding.length === 0) {
+      err(`unresolvedForm ${JSON.stringify(form.notation)} carries no externalGrounding entry (H6447: all v1 unresolved forms are grounded)`);
+    }
+    for (const g of grounding) {
+      if (!EXTERNAL_SOURCES.includes(g.source)) {
+        err(`unresolvedForm ${JSON.stringify(form.notation)}: externalGrounding source ${JSON.stringify(g.source)} is not from the paper's reference list (${EXTERNAL_SOURCES.join(", ")})`);
+      }
+      if (typeof g.edition !== "string" || !g.edition.trim()) {
+        err(`unresolvedForm ${JSON.stringify(form.notation)}: externalGrounding entry (${g.source}) must carry an edition`);
+      }
+      if (typeof g.quote !== "string" || g.quote.trim().length < 10) {
+        err(`unresolvedForm ${JSON.stringify(form.notation)}: externalGrounding entry (${g.source}) must carry a verbatim quote`);
+      }
+      if (typeof g.locator !== "string" || !g.locator.trim()) {
+        err(`unresolvedForm ${JSON.stringify(form.notation)}: externalGrounding entry (${g.source}) must carry a locator`);
+      }
+    }
   }
 
   // --- canary exhibits -----------------------------------------------------
