@@ -6,7 +6,7 @@
      are bound to @cert/@resp per docs/EVIDENCE_LABEL_CROSSWALK.md:
      observed/reviewed -> cert="high", derived -> cert="high" resp="#machine",
      inferred -> cert="low". Sanskrit orth is SLP1; glosses/notes use IAST. -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="csl-lex0-pilot-sample">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="csl-lex0-pilot-sample" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -31,8 +31,10 @@
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Derived from CDSL MW record L62306 and SKD record L17667 for a TEI
-           Lex-0 baseline-profile pilot.</p>
+        <listBibl type="dictionaries">
+          <bibl xml:id="src-mw"><title>Monier-Williams 1899, record L62306 (csl-orig v02/mw)</title></bibl>
+          <bibl xml:id="src-skd"><title>Śabdakalpadruma, record L17667 (csl-orig v02/skd)</title></bibl>
+        </listBibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -44,6 +46,12 @@
            @cert/@resp, mapped from the csl-atlas evidence labels.</p>
       </projectDesc>
     </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -55,22 +63,30 @@
         </form>
         <gramGrp>
           <!-- <lex>m.</lex>: gender masculine is OBSERVED; "noun" is DERIVED. -->
-          <gen norm="masculine" cert="high" resp="#mw-source">m</gen>
-          <pos norm="noun" cert="high" resp="#machine">noun</pos>
+          <gram type="gender" norm="masculine" cert="high" resp="#mw-source">m</gram>
+          <gram type="pos" norm="noun" cert="high" resp="#machine">noun</gram>
         </gramGrp>
         <sense xml:id="mw-gaja-s1">
-          <def xml:lang="en" cert="high" resp="#machine">an elephant</def>
+          <def xml:lang="en" cert="high" resp="#machine">an elephant</def>          <cit type="example">
           <bibl><abbr xml:lang="en">ṢaḍvBr.</abbr><citedRange>v, 3</citedRange></bibl>
+          </cit>
+          <cit type="example">
           <bibl><abbr xml:lang="en">Mn.</abbr></bibl>
+          </cit>
         </sense>
         <!-- ifc. f(A): a feminine compound-final form, attested in R. -->
-        <re type="comb" subtype="ifc">
+        <entry type="relatedEntry" xml:id="mw-gaja-gajA" xml:lang="sa">
           <form type="inflected">
             <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#mw-source">gajA</orth>
-            <gramGrp><gen norm="feminine" cert="high" resp="#mw-source">f</gen></gramGrp>
           </form>
-          <bibl><abbr xml:lang="en">R.</abbr><citedRange>ii, 57, 7</citedRange></bibl>
-        </re>
+          <!-- ifc. f(A): the feminine compound-final form, attested in R. -->
+          <sense xml:id="mw-gaja-gajA-s1">
+            <gramGrp><gram type="gender" norm="feminine" cert="high" resp="#mw-source">f</gram></gramGrp>
+            <cit type="example">
+              <bibl><abbr xml:lang="en">R.</abbr><citedRange>ii, 57, 7</citedRange></bibl>
+            </cit>
+          </sense>
+        </entry>
       </entry>
 
       <!-- ========= Indigenous kosa: Sabdakalpadruma, Darmma (L17667) ========= -->
@@ -79,17 +95,17 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#skd-source">Darmma</orth>
         </form>
         <gramGrp>
-          <gen norm="masculine" cert="high" resp="#skd-source">puṃ</gen>
-          <gen norm="neuter" cert="high" resp="#skd-source">klī</gen>
+          <gram type="gender" norm="masculine" cert="high" resp="#skd-source">puṃ</gram>
+          <gram type="gender" norm="neuter" cert="high" resp="#skd-source">klī</gram>
         </gramGrp>
         <etym cert="high" resp="#skd-source">
-          <lbl>from</lbl> <mentioned xml:lang="sa-Latn-x-SLP1">Dṛ</mentioned>
+          <lbl>from</lbl> <hi rend="mentioned" xml:lang="sa-Latn-x-SLP1">Dṛ</hi>
           <bibl><title>Uṇādisūtra</title><citedRange>1.139</citedRange></bibl>
         </etym>
         <sense xml:id="skd-dharma-s1">
           <def xml:lang="sa">śubhādṛṣṭam</def>
           <cit type="example" xml:lang="sa">
-            <quote xml:space="preserve">eka eva suhṛd dharmo nidhane 'py anuyāti yaḥ</quote>
+            <quote>eka eva suhṛd dharmo nidhane 'py anuyāti yaḥ</quote>
             <bibl><title>Hitopadeśa</title><citedRange>1.59</citedRange></bibl>
           </cit>
         </sense>
@@ -99,20 +115,26 @@
              model-loss note below and docs/TEI_LEX0_PILOT.md sec. 5. -->
         <sense xml:id="skd-dharma-s2">
           <def xml:lang="sa"><lbl>paryāya</lbl> puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ</def>
+          <cit type="example">
           <bibl><author>Amara</author><citedRange>1.4.24</citedRange></bibl>
+          </cit>
           <note type="model-loss" resp="#skd-source">In the source the synonym run
-            and its authority (<mentioned xml:lang="sa">ity amaraḥ</mentioned>) are a
+            and its authority (<hi rend="mentioned" xml:lang="sa">ity amaraḥ</hi>) are a
             single iti-unit: sense enumeration and source attestation are one
             construction, not separable into def + bibl as encoded here.</note>
         </sense>
         <sense xml:id="skd-dharma-s3">
           <def xml:lang="en">law; nature; custom; likeness; sacrifice; non-violence; an Upaniṣad</def>
+          <cit type="example">
           <bibl><title>Medinī</title></bibl>
+          </cit>
         </sense>
         <sense xml:id="skd-dharma-s4">
           <def xml:lang="en" cert="high" resp="#skd-source">(in the neuter) a gift, charity</def>
-          <gramGrp><gen norm="neuter">klī</gen></gramGrp>
+          <gramGrp><gram type="gender" norm="neuter">klī</gram></gramGrp>
+          <cit type="example">
           <bibl><author>Hemacandra</author></bibl>
+          </cit>
         </sense>
       </entry>
 

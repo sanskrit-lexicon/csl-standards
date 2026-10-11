@@ -53,5 +53,10 @@ jobs:
       - name: Validate TEI Lex-0 baseline
         run: npm run validate-tei-lex0
 
+      - name: Validate TEI Lex-0 against official v0.9.4 schema
+        run: |
+          which xmllint >/dev/null 2>&1 || { sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils; }
+          npm run validate-tei-lex0-schema
+
       - name: Build Observable site
         run: npm run build

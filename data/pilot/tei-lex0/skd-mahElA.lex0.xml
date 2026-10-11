@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-mahElA">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="skd-mahElA" type="lex-0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -12,7 +12,7 @@
         <availability><licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</licence></availability>
       </publicationStmt>
       <sourceDesc>
-        <listBibl>
+        <listBibl type="dictionaries">
           <head>Derived from CDSL source records for the TEI Lex-0 baseline pilot.</head>
           <bibl xml:id="dict-skd"><abbr>SKD</abbr> <title>Śabdakalpadruma of Rādhākānta Deva</title> <idno type="cdsl">csl-orig v02/skd/skd.txt</idno></bibl>
         </listBibl>
@@ -21,6 +21,12 @@
     <encodingDesc>
       <projectDesc><p>tei-lex0-pilot-v0.1; DARIAH TEI Lex-0 baseline element model. Per-statement epistemic status is carried in @cert/@resp (docs/EVIDENCE_LABEL_CROSSWALK.md).</p></projectDesc>
     </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="sa" role="sourceLanguage">Sanskrit (lemmata, citations, authorities)</language>
+        <language ident="en" role="targetLanguage">English (definitions and editorial notes)</language>
+      </langUsage>
+    </profileDesc>
   </teiHeader>
   <text>
     <body>
@@ -29,16 +35,18 @@
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#source">mahElA</orth>
         </form>
         <gramGrp>
-          <pos norm="noun" cert="high" resp="#machine">noun</pos>
-          <gen norm="feminine" cert="high" resp="#source">feminine</gen>
+          <gram type="pos" norm="noun" cert="high" resp="#machine">noun</gram>
+          <gram type="gender" norm="feminine" cert="high" resp="#source">feminine</gram>
         </gramGrp>
-        <etym xml:id="skd-mahElA-etym" type="derivation"><lbl>from</lbl> <note type="analysis" xml:lang="sa-Latn" resp="#source">mahatī cāsāvelā ca .</note></etym>
+        <etym xml:id="skd-mahElA-etym" subtype="derivation"><lbl>from</lbl> <note type="analysis" xml:lang="sa-Latn" resp="#source">mahatī cāsāvelā ca .</note></etym>
         <sense xml:id="skd-mahElA-sense-1" n="1">
           <def xml:lang="sa-Latn" cert="high" resp="#source">sthūlailā</def>
-          <bibl type="kosa-authority"><title>Rājanighaṇṭu</title></bibl>
+          <cit type="example">
+            <bibl type="kosa-authority"><title>Rājanighaṇṭu</title></bibl>
+          </cit>
           <note type="model-loss" resp="#source">Sense and its closing authority (iti Rājanighaṇṭu) are one indivisible iti-unit in the source, split into def + bibl in the Lex-0 baseline.</note>
         </sense>
-        <xr type="see"><lbl xml:lang="sa-Latn">guṇādiviṣayo&apos;syāḥ</lbl> <ref type="entry" xml:lang="sa-Latn" cert="medium" resp="#machine">sthūlailā</ref></xr>
+        <ref type="entry" subtype="see" xml:lang="sa-Latn" cert="medium" resp="#machine">guṇādiviṣayo&apos;syāḥ sthūlailā</ref>
         <note type="lex0-gap" n="G1">iti-unit: sense and closing authority fused</note>
         <note type="lex0-gap" n="G7">Scoped cross-reference (`asya guRAH XSabde drazwavyAH`)</note>
         <note type="model-loss" resp="#source">Source-parsed indigenous kosa entry: meanings/synonyms are grouped by their closing authority (iti &lt;author&gt;), the kosa&apos;s own sense-and-citation unit.</note>
