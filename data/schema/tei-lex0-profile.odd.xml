@@ -24,6 +24,7 @@
     </fileDesc>
     <revisionDesc>
       <change when="2026-06-14">Created: project Lex-0 ODD + RNG validation wiring (TEI_LEX0_PILOT sec. 7.1).</change>
+      <change when="2026-09-24">Added csl-lex0-skd-indigenous-apparatus: zero-meaning, anubandha and M4-decode constraints plus lex0-gap witnesses for the stratified Śabdakalpadruma sample (H5321).</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -82,6 +83,39 @@
               <sch:rule context="tei:sense[tei:bibl[@type='kosa-authority']]">
                 <sch:assert test="tei:note[@type='model-loss']">A kośa sense closed by an authority formula (iti X) records the sense/citation-fusion as a model-loss, so the fusion is declared rather than silently flattened.</sch:assert>
                 <sch:assert test="tei:def">A kośa iti-unit carries its synonym run as a def.</sch:assert>
+              </sch:rule>
+            </sch:pattern>
+          </constraint>
+        </constraintSpec>
+        <!-- Indigenous-apparatus customisation (H5321, docs/TEI_LEX0_SKD_GAPS.md).
+             Zero-meaning doctrine: in the Śabdakalpadruma the absence of a marker
+             is a statement, not missing data. An empty anubandha slot is encoded
+             as gram type="anubandha" norm="none" and must be explained; pada,
+             gaṇa and transitivity are the M4 (csl-atlas Dhātudīpikā) decode and
+             must say so in @resp — a derived reading never passes as source
+             text. Every structure without a Lex-0 home is witnessed on the entry
+             as note type="lex0-gap" with a registry id (G1…Gn). -->
+        <constraintSpec ident="csl-lex0-skd-indigenous-apparatus" scheme="schematron">
+          <constraint>
+            <sch:pattern xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+              <sch:rule context="tei:entry[tei:gramGrp/tei:gram[@type='anubandha'][@norm='none']]">
+                <sch:assert test="tei:note[@type='zero-meaning']">An empty anubandha slot is the source's statement "no anubandha": the entry explains it in a zero-meaning note.</sch:assert>
+                <sch:assert test="tei:note[@type='lex0-gap'][@n='G3']">An empty anubandha slot witnesses the zero-meaning gap (G3).</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:gram[@type='anubandha'][not(@norm='none')]">
+                <sch:assert test="@resp='#source'">An anubandha letter is read as printed (resp="#source").</sch:assert>
+                <sch:assert test="ancestor::tei:entry/tei:note[@type='lex0-gap'][@n='G2']">A printed anubandha slot witnesses the anubandha gap (G2).</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:gram[@type='gana' or @type='pada' or @type='transitivity' or @type='it-augment']">
+                <sch:assert test="@resp='#m4'">Gaṇa, pada, transitivity and it-augment are the M4 decode, never source text (resp="#m4").</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:note[@type='lex0-gap']">
+                <sch:assert test="matches(@n, '^G[0-9]+$')">A lex0-gap note carries its registry id (G1…Gn) in @n.</sch:assert>
+                <sch:assert test="starts-with(ancestor::tei:entry/@xml:id, 'skd-')">lex0-gap notes belong to indigenous (SKD) entries.</sch:assert>
+              </sch:rule>
+              <sch:rule context="tei:entry[starts-with(@xml:id, 'skd-')]">
+                <sch:assert test="//tei:bibl[@xml:id='dict-skd']">An SKD entry's document declares its source dictionary (bibl xml:id="dict-skd").</sch:assert>
+                <sch:assert test="not(tei:gramGrp/tei:gram[@resp='#m4']) or //tei:respStmt[@xml:id='m4']">A document using the M4 decode declares the m4 respStmt.</sch:assert>
               </sch:rule>
             </sch:pattern>
           </constraint>

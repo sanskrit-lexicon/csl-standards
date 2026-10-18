@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "handoff": "H5321",
+  "runDate": "2026-09-24",
+  "box": "MSI (Windows), scratch copy of this branch; pinned toolchain from scripts/setup-external-tools.mjs",
+  "note": "Real RELAX NG + Schematron validation of the TEI Lex-0 export (250 MW/PWG/PWK + 47 SKD) against the project profile ODD compiled with the pinned toolchain. Validation against the official DARIAH Lex-0 RNG is the sibling pin H5320.",
+  "toolchain": {
+    "teiP5": "4.11.0 (p5subset.xml, sha256-pinned)",
+    "teiStylesheets": "7.60.0 (odd2odd + odd2relax)",
+    "saxon": "Saxon-HE 10.9",
+    "jing": "20091111",
+    "java": "OpenJDK 21.0.11",
+    "schematron": "ISO skeleton (iso_svrl_for_xslt2), queryBinding xslt2"
+  },
+  "inputs": {
+    "odd": { "path": "data/schema/tei-lex0-profile.odd.xml", "sha256": "74ad67404a2527f6f9e6c3023a2bf8aef5456d20914aa3b8369c1433cf75085b" },
+    "compiledRng": { "name": "csl-tei-lex0-profile-v0.1.rng", "sha256": "9eb6369de97313c84350e51021503b52fdf01ccd25eb0c6517a9a2e1fc680298" },
+    "compiledSvrl": { "name": "csl-tei-lex0.svrl.xsl", "sha256": "dad2aef484a6d3b575a47afb6c263f14592549301ce3d11fbf6977399d866fc7" },
+    "lex0Files": { "count": 297, "skd": 47, "manifestSha256": "b10769a34b31235b26e368c7ae61ca53e0d144d92e3aebbd1a4f5a2b71ac83a9", "manifestRecipe": "cd data/pilot/tei-lex0 && ls *.lex0.xml | sort | xargs shasum -a 256 | shasum -a 256" }
+  },
+  "results": {
+    "harness": {
+      "command": "node scripts/validate-external-profiles.mjs --strict (CSL_STANDARDS_LEX0_RNG, CSL_STANDARDS_LEX0_SVRL, CSL_STANDARDS_SAXON_JAR set)",
+      "checks": 846, "passed": 845, "failed": 0, "skipped": 1,
+      "byType": { "lex0-rng": "1 pass", "lex0-xml": "297 pass (jing)", "schematron": "297 pass (saxon-svrl)", "shacl": "250 pass", "tei-odd-compile": "1 skipped (archival profile: teitorelaxng not on PATH; not part of this run)" }
+    },
+    "directJing": { "files": 297, "exit": 0 },
+    "directSchematron": { "files": 297, "failedFiles": 0 },
+    "negativeControl": {
+      "input": "skd-BarBa.lex0.xml with its zero-meaning note removed and the M4 gaṇa gram re-attributed to #source",
+      "expected": "fail",
+      "failedAsserts": [
+        "An empty anubandha slot is the source's statement \"no anubandha\": the entry explains it in a zero-meaning note.",
+        "Gaṇa, pada, transitivity and it-augment are the M4 decode, never source text (resp=\"#m4\")."
+      ]
+    }
+  },
+  "verdict": "pass"
+}

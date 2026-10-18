@@ -1,0 +1,392 @@
+{
+  "schemaVersion": "1.0.0",
+  "license": "CC-BY-SA-4.0",
+  "generatedBy": "npm run parse-skd-kosa",
+  "handoff": "H5321",
+  "sources": {
+    "skd": {
+      "path": "csl-orig/v02/skd/skd.txt",
+      "commit": "f4c08c578b33"
+    },
+    "m4": {
+      "path": "csl-atlas/data/lexico/indigenous_roots.csv",
+      "commit": "bbca79116982",
+      "skdRootRows": 2544
+    }
+  },
+  "design": {
+    "seed": "h5321-skd-lex0-v1",
+    "perStratum": 4,
+    "ordering": "FNV-1a 32-bit over `${seed}:${stratum}:${L}`, ascending",
+    "strata": [
+      "dhatu-anubandha",
+      "dhatu-zero-slot",
+      "cross-reference",
+      "nibandha",
+      "avyaya",
+      "kosa-paryaya",
+      "kosa-iti",
+      "bhasa-gloss",
+      "literary-quotation",
+      "residual"
+    ],
+    "rule": "priority order: a record belongs to the first stratum whose positive structural marker it carries (scripts/lib/skd.mjs classifyStratum)",
+    "curated": [
+      "17667",
+      "7806",
+      "6080",
+      "31183",
+      "21315",
+      "15202"
+    ]
+  },
+  "corpus": {
+    "records": 42196,
+    "aliasRecords": 335,
+    "strata": {
+      "dhatu-anubandha": 1925,
+      "dhatu-zero-slot": 445,
+      "cross-reference": 227,
+      "nibandha": 667,
+      "avyaya": 423,
+      "kosa-paryaya": 4553,
+      "kosa-iti": 22553,
+      "bhasa-gloss": 716,
+      "literary-quotation": 6487,
+      "residual": 4200
+    },
+    "markers": {
+      "rootSlot": 1925,
+      "rootZeroSlot": 445,
+      "rootPadaUnmarked": 878,
+      "rootGanaUnresolved": 639,
+      "kavikalpadrumaCommentary": 2287,
+      "paryaya": 4887,
+      "bhasa": 3470,
+      "crossRefScoped": 354,
+      "crossRef": 649,
+      "nibandha": 667,
+      "triliṅga": 4440,
+      "avyaya": 425,
+      "kosaAuthority": 30029,
+      "quotation": 20452,
+      "cdslCorrection": 114
+    }
+  },
+  "sample": {
+    "total": 47,
+    "curated": 6,
+    "stratified": 40,
+    "gapWitness": [
+      {
+        "caseId": "skd:gAtraBaNgA",
+        "L": "10817",
+        "for": "G12"
+      }
+    ],
+    "byStratum": {
+      "dhatu-anubandha": [
+        {
+          "caseId": "skd:garjja",
+          "L": "10659",
+          "key": "garjja",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:GiRa",
+          "L": "11792",
+          "key": "GiRa",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:DrAGa",
+          "L": "18062",
+          "key": "DrAGa",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:stamBa",
+          "L": "40448",
+          "key": "stamBa",
+          "selection": "stratified"
+        }
+      ],
+      "dhatu-zero-slot": [
+        {
+          "caseId": "skd:BarBa",
+          "L": "24806",
+          "key": "BarBa",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:sarjja",
+          "L": "38283",
+          "key": "sarjja",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:karvva",
+          "L": "6749",
+          "key": "karvva",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:Baza",
+          "L": "24863",
+          "key": "Baza",
+          "selection": "stratified"
+        }
+      ],
+      "cross-reference": [
+        {
+          "caseId": "skd:mattA",
+          "L": "25832",
+          "key": "mattA",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:SiSutvaM",
+          "L": "35768",
+          "key": "SiSutvaM",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:carpawA",
+          "L": "12271",
+          "key": "carpawA",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:mahElA",
+          "L": "26937",
+          "key": "mahElA",
+          "selection": "stratified"
+        }
+      ],
+      "nibandha": [
+        {
+          "caseId": "skd:revatI",
+          "L": "29882",
+          "key": "revatI",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:annapUrRA",
+          "L": "1317",
+          "key": "annapUrRA",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:kozaH",
+          "L": "9045",
+          "key": "koza",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:maDyAhnaH",
+          "L": "26136",
+          "key": "maDyAhna",
+          "selection": "stratified"
+        }
+      ],
+      "avyaya": [
+        {
+          "caseId": "skd:aDarastAt",
+          "L": "823",
+          "key": "aDarastAt",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:apa",
+          "L": "1368",
+          "key": "apa",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:aDarasmAt",
+          "L": "824",
+          "key": "aDarasmAt",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:bAhAbAhavi",
+          "L": "24330",
+          "key": "bAhAbAhavi",
+          "selection": "stratified"
+        }
+      ],
+      "kosa-paryaya": [
+        {
+          "caseId": "skd:DarmmaH",
+          "L": "17667",
+          "key": "Darmma",
+          "selection": "curated"
+        },
+        {
+          "caseId": "skd:kIrttiH",
+          "L": "7806",
+          "key": "kIrtti",
+          "selection": "curated"
+        },
+        {
+          "caseId": "skd:kaRWaH",
+          "L": "6080",
+          "key": "kaRWa",
+          "selection": "curated"
+        },
+        {
+          "caseId": "skd:varaH",
+          "L": "31183",
+          "key": "vara",
+          "selection": "curated"
+        },
+        {
+          "caseId": "skd:pAruzyaM",
+          "L": "21315",
+          "key": "pAruzyaM",
+          "selection": "curated"
+        },
+        {
+          "caseId": "skd:tUlaM",
+          "L": "15202",
+          "key": "tUlaM",
+          "selection": "curated"
+        },
+        {
+          "caseId": "skd:hulahulI",
+          "L": "41920",
+          "key": "hulahulI",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:hfdAvarttaH",
+          "L": "41956",
+          "key": "hfdAvartta",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:aDirohiRI",
+          "L": "860",
+          "key": "aDirohiRI",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:kzAntiH",
+          "L": "9466",
+          "key": "kzAnti",
+          "selection": "stratified"
+        }
+      ],
+      "kosa-iti": [
+        {
+          "caseId": "skd:sAriH",
+          "L": "38847",
+          "key": "sAri",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:DAmArgavaH",
+          "L": "17811",
+          "key": "DAmArgava",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:dIrGakARqaH",
+          "L": "16512",
+          "key": "dIrGakARqa",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:astakaH",
+          "L": "3015",
+          "key": "astaka",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:gAtraBaNgA",
+          "L": "10817",
+          "key": "gAtraBaNgA",
+          "selection": "gap-witness"
+        }
+      ],
+      "bhasa-gloss": [
+        {
+          "caseId": "skd:AnayanaM",
+          "L": "3480",
+          "key": "AnayanaM",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:mawwakaM",
+          "L": "25728",
+          "key": "mawwakaM",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:kutURakaH",
+          "L": "8026",
+          "key": "kutURaka",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:mAtulA",
+          "L": "27056",
+          "key": "mAtulA",
+          "selection": "stratified"
+        }
+      ],
+      "literary-quotation": [
+        {
+          "caseId": "skd:nirDAryyaM",
+          "L": "19127",
+          "key": "nirDAryyaM",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:pAdAtaH",
+          "L": "21156",
+          "key": "pAdAta",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:pArASariH",
+          "L": "21276",
+          "key": "pArASari",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:pArasI",
+          "L": "21256",
+          "key": "pArasI",
+          "selection": "stratified"
+        }
+      ],
+      "residual": [
+        {
+          "caseId": "skd:himajJawiH",
+          "L": "41808",
+          "key": "himajJawi",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:hInasaKyaM",
+          "L": "41888",
+          "key": "hInasaKyaM",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:karmmavajraH",
+          "L": "6733",
+          "key": "karmmavajra",
+          "selection": "stratified"
+        },
+        {
+          "caseId": "skd:BAllUkaH",
+          "L": "24995",
+          "key": "BAllUka",
+          "selection": "stratified"
+        }
+      ]
+    }
+  }
+}

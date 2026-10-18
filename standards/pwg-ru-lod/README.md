@@ -49,7 +49,15 @@ here now. Running them needs the graph data, which is produced by the generator
 in `RussianTranslation` and validated there by
 [`src/lod_acceptance.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/lod_acceptance.py).
 
-## Publication status — gated, not yet published
+## Publication status — non-citable technical preview live (11-10-2026)
+
+Wave-0 of the runbook executed under MG's 11-10-2026 rulings:
+the **machine-preview technical preview** (explicitly non-citable) is live at
+`https://sanskrit-lexicon.github.io/pwg-ru-lod/` behind the permanent namespace
+`https://w3id.org/sanskrit-lexicon/repwg/` (w3id registration PR open; 303 conneg).
+Build provenance, the `/publish-safety-check` GO verdict and the DCS license
+composition record: [PROVENANCE.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/standards/pwg-ru-lod/PROVENANCE.md).
+**A citable content release remains gated on G5** (human sense approvals).
 
 The full, ordered runbook for taking this graph from *validated-locally* to real
 published Linked Open Data — every step tagged [HUMAN] / [AGENT] / [HUMAN-DECIDE],
@@ -65,8 +73,13 @@ phase, after the modeling risks are documented"):
   the citable subset is the SPARQL filter `pwglex:citable true` and is empty until
   human sense-approvals land. Any publish step runs a
   [`/publish-safety-check`](https://github.com/gasyoun/SanskritLexicography) first.
-- **IRI publication domain is an open `@DECIDE`** — the generator ships a
-  `https://w3id.org/sanskrit-lexicon/pwg-ru/` placeholder and takes `--base-iri`;
+- **IRI publication domain: RULED** — the permanent namespace is
+  `https://w3id.org/sanskrit-lexicon/repwg/` (w3id PURL; "rePWG", a re-edition of
+  PWG — see the 27-07-2026 namespace ruling in
+  [LOD_GRAPH.md](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/LOD_GRAPH.md),
+  confirmed by MG 11-10-2026). The generator takes `--base-iri`.
+- (archived) IRI publication domain was an open `@DECIDE` — the generator ships a
+  `https://w3id.org/sanskrit-lexicon/repwg/` placeholder and takes `--base-iri`;
   the real dereferenceable domain (w3id PURL vs a project domain) is a human
   ruling tracked in
   [`Uprava/GTD_NEXT_ACTIONS.md`](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md).

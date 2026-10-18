@@ -1,4 +1,4 @@
-_Created: 15-06-2026 · Last updated: 05-09-2026_
+_Created: 15-06-2026 · Last updated: 24-09-2026_
 
 # Sanskrit Lexicographic Extension Proposal (TEI + OntoLex)
 
@@ -15,14 +15,14 @@ Each is tied to the loss it addresses — by `failureClassification` cause and
 
 ## Motivation
 
-The 1722 loss reports split by cause into: **model-vocabulary-gap (60%)** — the
+The 2038 loss reports split by cause into: **model-vocabulary-gap (63%)** — the
 target standards lack a concept, chiefly an *evidence class* (kośa vs textual vs
 editorial citation, and unparsed citation coordinates; see
-[LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4b), plus the flat MDF lane's field gaps;
-**editorial-compression (21%)** — the
-19th-century lineage already dropped evidence; **print-compression (7%)**,
-**cdsl-markup-gap (7%)**, **sanskrit-convention (<1%)**, and a single
-**data-quality** anomaly. (The MDF lane's losses are recorded, not extension
+[LOSS_ANALYSIS.md](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md) §4b), plus the flat MDF and LIFT lanes' field gaps;
+**editorial-compression (18%)** — the
+19th-century lineage already dropped evidence; **print-compression (8%)**,
+**cdsl-markup-gap (6%)**, **sanskrit-convention (1%)**, and a single
+**data-quality** anomaly. (The MDF and LIFT lanes' losses are recorded, not extension
 targets — a flat interchange format is not extended.) Only the model-vocabulary and sanskrit-convention causes
 are addressable by *extending the standards*; the others are upstream
 (source/lineage) and are addressed by *modeling* the lineage, not by new schema. This proposal therefore has two kinds of construct: **target
