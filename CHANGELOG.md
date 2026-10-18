@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 24-09-2026_
+_Created: 13-06-2026 · Last updated: 10-10-2026_
 
 # Changelog
 
@@ -9,6 +9,48 @@ into a dated version. Versions track `package.json`.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.6.1] - 2026-10-11
+
+- **H6448 — deterministic SKOS Turtle export + SHACL profile for the small-class register.** [`scripts/export-small-class-register-ttl.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/export-small-class-register-ttl.mjs) serializes [`data/abbrev/small-class-register.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/abbrev/small-class-register.json) to [`data/abbrev/small-class-register.ttl`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/abbrev/small-class-register.ttl) (skos:ConceptScheme, one skos:Collection per 2006/v2 band, skos:Concept per concept with typed skos:notation literals under a dedicated scr:AbbreviationNotation datatype, language-tagged prefLabel/altLabel, skos:inScheme, unresolved forms + canary exhibits + provenance 1:1 with the JSON); byte-stable by construction (sorted lists/maps, register as only input; SOURCE_DATE_EPOCH pins scr:exportedAt via scripts/lib/provenance.mjs). [`data/schema/small-class-register.shacl.ttl`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/small-class-register.shacl.ttl) (small-class-shacl-profile-v1) mirrors the JS validator's structural contract: notation uniqueness within the scheme (SHACL-SPARQL), at most one prefLabel per language (sh:uniqueLang, SKOS S14), band-membership consistency both directions (SHACL-SPARQL), typed notations, grounding palette; engine-verified with pySHACL (Conforms: True; all three headline constraints proven to fire via negative controls) after W3C SKOS Reference + skohub-io/skohub-shapes read github-first. `npm run export-small-class-register-ttl` · `npm run validate-small-class-register-shacl` (structural mode always; executes pySHACL when importable) · node --test coverage in test/small-class-register-ttl.test.mjs (determinism, SOURCE_DATE_EPOCH, committed-image currency, typed-notation/label shape, band lists). Two-gates (MG 10-10-2026): additive only — export pipeline and CI untouched, serving stays with PUBLISHING_LOD.
+## [1.6.0] - 2026-10-11
+
+- H6447: small-class register v2 — measured-residue classes (gender/features, work titles, authors/editors; 15 census-evidenced concepts) + externalGrounding for the 8 unresolved 2006 forms (Whitney/Macdonell/Knauer verbatim, Stenzler negative result); coverage 8.69% → 13.12% (148/1128), 0 new concept pairs
+## [1.5.0] - 2026-10-10
+
+- **H6419 — E3: the 2006 "small classes" scheme as a controlled abbreviation register, with measured collision reduction.** The Gasūns-2006 proposal (EURALEX XII, pp. 773–778, §2.3) becomes a testable claim over the csl-atlas H6409 abbreviation census: [`data/abbrev/small-class-register.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/abbrev/small-class-register.json) registers 20 SKOS-shaped concepts (notation = the paper's proposed form, prefLabel = expansion, band = the 2006 1/2/3/4-letter small class), every concept's meaning grounded mechanically in the census payload (validator [`scripts/validate-small-class-register.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/validate-small-class-register.mjs) re-derives each evidence row and attested expansion key; 8 paper forms are declared unresolved with reasons, incl. the declared `Ppf.` pluperfect/participe-parfait conflict); [`scripts/measure-small-class-collisions.mjs`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/scripts/measure-small-class-collisions.mjs) regenerates the raw-vs-register collision table byte-identically ([report](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/abbrev/small-class-collision-report.md)): over 448 colliding strings / 1128 senses the scheme-as-printed binds 98 senses (8.69%), resolves 16 strings, reduces 32, excess −6.76%, and introduces 0 new concept pairs; the §2.1 canary strings (`V.` `c.` `P.` `S.` `N.` `M.` `f.`) carry verbatim census numbers. Design + grounding rules in [`docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/SMALL_CLASS_ABBREV_REGISTER_NOTE.md). Format read github-first (W3C SKOS Rec, TEI Lex-0 0.9.5, JSKOS). Two-gates: additive only, export pipeline untouched.
+
+## [1.4.3] - 2026-10-06
+
+- **H6192 — A70 note: related-work spine, live-verified references, upstream Lex-0 state.** [#149](https://github.com/sanskrit-lexicon/csl-standards/pull/149) completes the Cologne acl-uplift wave for [`docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md) (A68 → A69 → A70). §6 "Relation to prior work" was internal-only; it now carries the live-verified external spine: Lex-0 practice literature (Salgado, Costa & Tasovac 2019, *Lexicography*; Tasovac, Salgado & Costa 2020, *Slovenščina 2.0* 8(2):28–57; Bowers, Herold, Tasovac & Romary 2022, *jTEI*, the Lex-0 Etym module), TEI foundations (Ide & Véronis 1995; P5 ch. 10 "Dictionaries" and ch. 22 "Certainty, Precision, and Responsibility"), the Western quotation-apparatus analogue (Brewer 2007) and computational-Sanskrit prior art (Huet's Sanskrit Heritage). References completed 6 → 11 external entries, every source fetched live 06-10-2026. Live-fact catch: issue #63 was closed by PR #104 (2020) and the released baseline (v0.9.5) ships `@scope` on `ref` (`att.scoped`) — G7 recast from "pending upstream" to "landed, target-scope only", with the SKD aspect-deferring cases kept as test material. Defects caught by the live-verification rule: TEI P5 chapter numbers corrected to 10/22 under the note's own pinned P5 4.11.0; the dead Lex-0 spec URL replaced with lex-0.org; Romary & Tasovac's title corrected per HAL hal-02265312. Counts, the 47-entry sample, validation claims and toolchain pins are untouched.
+- **A02: `.zenodo.json` added for GitHub-Zenodo archive metadata.** Closes the csl-standards half of the FAIR-sprint gap noted in [SanskritLexicography's roadmap](https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_ATLAS_FAIR_PUBLICATIONS_2026_2027.md) — `CITATION.cff` existed here already, but no `.zenodo.json` had ever been committed, so a GitHub release could not carry Zenodo upload metadata. Connecting the repo to Zenodo and minting the DOI itself remains a human step (Zenodo account authorization).
+
+## [1.4.2] - 2026-09-24
+
+- **H5322 — publishable note on the twelve indigenous-apparatus gaps in TEI Lex-0.** New [`docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A70_TEI_LEX0_INDIGENOUS_APPARATUS_NOTE.md) turns the H5321 gaps file into a venue-shaped draft (portfolio row A70, not submitted): for each of G1–G12 a real exported example, the validated workaround, and a proposed Lex-0 extension, classed by schema impact (A guideline example · B controlled value · C content-model change · D out of scope; 9/12 need no content-model change). Proposals are cross-referenced to the DARIAH-ERIC/lexicalresources tracker (#63, #64, #242 for scoped references and sense numbers; #236 as the precedent for adding a `gram/@type` value). Registered in the README docs list.
+## [1.4.1] - 2026-09-24
+### Changed
+- **Loss-analysis docs re-synced to the measured corpus (2038 reports, 280 cases).**
+  [`docs/LOSS_ANALYSIS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/LOSS_ANALYSIS.md)
+  was stale in two layers. It still said 1722 reports, while the JSON already said
+  2014 before H5321 and 2038 after it. It also predated the LIFT lane and the
+  MDF compound refinement from H721. Every table and count is now regenerated
+  from `npm run analyze-loss`:
+  - LIFT row added.
+  - MDF is now 0 clean, 75 partial, 217 lossy; it was 292 lossy.
+  - TEI-lossy is 30, and the kośa fusion counts rose from 6 to 30. They come
+    from the 6 curated entries plus 24 of the 41 entries added by the H5321
+    stratified SKD sample.
+  - Cause and phenomenon shares are updated. The `L.` hedge is now the largest
+    phenomenon at 23%, and the evidence-related phenomena make up 64% (was 69%).
+  - The review slice now holds 162 reviewed reports (was 129).
+  - The same stale counts are fixed in `docs/PAPER.md` (abstract, §2, §4 table and
+    prose, §9, §12, Figure 5 caption), `docs/PAPER_OUTLINE.md`,
+    `docs/EXTENSION_PROPOSAL.md` and `docs/ROADMAP_3_MONTHS.md`.
+  - **Figure 5 regenerated.** The committed SVG still showed 2014 reports and the
+    6 TEI-lossy bar. Its caption said MDF is "lossy across the board", which is no
+    longer true. `scripts/build-figures.mjs` now states it measured (never clean,
+    mostly lossy) and splits the caption over two lines so it no longer clips at
+    760 px.
 ## [1.4.0] - 2026-09-24
 ### Added
 - **H5321 — TEI Lex-0 indigenous half: a stratified Śabdakalpadruma sample.**
@@ -553,5 +595,6 @@ relabelled to track the project's `package.json` version at the time).
 - 2026-06-13 Merge pull request #5 from sanskrit-lexicon/feat/tei-lex0-generator
 - 2026-06-13 feat: TEI Lex-0 generator + structural validator (G2 slice 2)
 - 2026-06-13 Merge pull request #4 from sanskrit-lexicon/docs/tei-lex0-pilot
+
 
 _Dr. Mārcis Gasūns_

@@ -36,7 +36,7 @@ Paper submission is now gated on MG's byline/title/venue `@DECIDE` rather than o
 - Dictionary-neutral model with optional-dictionary registry support.
 - Generated archival TEI, TEI Lex-0, OntoLex/FrAC JSON-LD, RDF/Turtle, and MDF profiles.
 - Optional dictionaries AP90, GRA, FRI, and BEN woven through the implemented profiles.
-- Loss corpus and analysis: 1722 reports at the canonical 250-case scale (incl. the MDF lane added 03-07-2026).
+- Loss corpus and analysis: 2038 reports at the canonical 250-case scale plus 30 SKD kośa entries (incl. the MDF lane added 03-07-2026, the LIFT lane, and the H5321 SKD sample).
 - Implemented `csl:` extension layer: evidence classes, cited ranges, root relation,
   decomposition, continuation recovery status, lineage relation, and kośa sense-boundary
   customisation.
