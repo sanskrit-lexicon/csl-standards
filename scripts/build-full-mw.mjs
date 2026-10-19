@@ -271,11 +271,11 @@ function aggregateLoss(doneState, totalRecords, exportedEntries) {
       basis: "records exported / <L> records in csl-orig v02/mw/mw.txt"
     },
     targets: {
-      "tei-lex0": { entries: 0, files: 0, entriesWithoutSense: 0, senseStatusFallback: 0 },
+      "tei-lex0": { entries: 0, files: 0, entriesWithoutSense: 0 },
       ontolex: { entries: 0, files: 0, entriesWithoutAttestation: 0, rawValueOmitted: 0 }
     },
     phenomena: {},
-    citations: { total: 0, hedge: 0, named: 0, byElicdenceClass: {} },
+    citations: { total: 0, hedge: 0, named: 0, byEvidenceClass: {} },
     senses: { total: 0, crossReference: 0 },
     notes: [
       "Full MW only: PWG/PWK and optional dictionaries are out of scope for H7105.",
@@ -299,7 +299,7 @@ function aggregateLoss(doneState, totalRecords, exportedEntries) {
     loss.citations.hedge += data.citations.hedge;
     loss.citations.named += data.citations.named;
     for (const [k, v] of Object.entries(data.evidenceClasses || {})) {
-      loss.citations.byElicdenceClass[k] = (loss.citations.byElicdenceClass[k] || 0) + v;
+      loss.citations.byEvidenceClass[k] = (loss.citations.byEvidenceClass[k] || 0) + v;
     }
     loss.senses.total += data.senses.total;
     loss.senses.crossReference += data.senses.crossReference;
