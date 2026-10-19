@@ -17,6 +17,7 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 import { OPTIONAL_DICTS, DICT_LABEL } from "./lib/dictionaries.mjs";
 import { SKD_GAPS } from "./lib/skd-gaps.mjs";
@@ -441,4 +442,7 @@ async function main() {
   console.log(`Exported ${all.length} TEI Lex-0 entries to ${outputDir} (${models.length} extracted + ${fixtures.length} fixture(s)).`);
 }
 
-main().catch(error => { console.error(error); process.exit(1); });
+const invokedDirectly = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (invokedDirectly) main().catch(error => { console.error(error); process.exit(1); });
+
+export { teiDocument, entryXml, safeCaseId, escapeXml, PROFILE_VERSION };

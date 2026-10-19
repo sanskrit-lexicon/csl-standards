@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-10-19T15:32:50.643Z",
+  "source": "csl-orig/v02/mw/mw.txt",
+  "totalRecords": 286560,
+  "exportedEntries": 286560,
+  "coverage": {
+    "percent": 100,
+    "basis": "records exported / <L> records in csl-orig v02/mw/mw.txt"
+  },
+  "targets": {
+    "tei-lex0": {
+      "entries": 286560,
+      "files": 287,
+      "entriesWithoutSense": 33736
+    },
+    "ontolex": {
+      "entries": 286560,
+      "files": 287,
+      "entriesWithoutAttestation": 59814,
+      "rawValueOmitted": 286560
+    }
+  },
+  "phenomena": {
+    "homophone": 9317,
+    "continuation": 9294,
+    "compound": 161078,
+    "hedge": 39962,
+    "root": 750
+  },
+  "citations": {
+    "total": 307882,
+    "hedge": 39952,
+    "named": 267930,
+    "byEvidenceClass": {
+      "textual": 244317,
+      "hedge": 39952,
+      "editorial": 23279,
+      "kosha": 334
+    }
+  },
+  "senses": {
+    "total": 283219,
+    "crossReference": 9793
+  },
+  "notes": [
+    "Full MW only: PWG/PWK and optional dictionaries are out of scope for H7105.",
+    "OnteLex carries csl:rawSha256/csl:rawLength instead of duplicating the raw record; the raw corpus is the manifest-pinned csl-orig source.",
+    "An MW entry with no extracted gloss is exported as a sense-status stub, not invented content.",
+    "An entry with no cited source has zero FrAC attestations; this is an upstream absence, not a model gap."
+  ]
+}
