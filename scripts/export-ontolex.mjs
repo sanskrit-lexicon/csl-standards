@@ -1,8 +1,14 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { evidenceClass, parseCoordinate } from "./lib/evidence.mjs";
 import { extractLabeledSources } from "./lib/citations.mjs";
 import { ALL_DICTS, DICT_LABEL } from "./lib/dictionaries.mjs";
+import { createHash } from "node:crypto";
+
+function sha256(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
 
 // mw/pwg/pwk are the tri-dict backbone; optional dictionaries are attached per case
 // (see scripts/lib/dictionaries.mjs). Senses are only modeled for the dictionaries
@@ -63,7 +69,8 @@ function fullRaw(model, dict, indexes) {
   return indexes[dict]?.get(L) || model.records?.[dict]?.raw || "";
 }
 
-function jsonldFor(model, rawByDict, isReviewCase) {
+function jsonldFor(model, rawByDict, isReviewCase, options = {}) {
+  const includeRaw = options.includeRaw !== false;
   const caseIri = iriForCase(model.id);
   const formIri = iriFor(model.id, "form-canonical");
   // The dictionaries actually present for this case (always mw/pwg/pwk; ap90 when
@@ -110,7 +117,9 @@ function jsonldFor(model, rawByDict, isReviewCase) {
       "csl:recordNumber": rec.L,
       "csl:lineNumber": rec.line,
       "csl:pageColumn": rec.pc,
-      "rdf:value": rawByDict[dict]
+      ...(includeRaw
+        ? {"rdf:value": rawByDict[dict]}
+        : {"csl:rawSha256": sha256(rawByDict[dict] || ""), "csl:rawLength": (rawByDict[dict] || "").length})
     });
   }
 
@@ -439,7 +448,10 @@ async function main() {
   console.log(`Exported ${models.length} OntoLex/FrAC JSON-LD files to ${outputDir}; ${models.length} Turtle RDF files to ${turtleDir}.`);
 }
 
-main().catch(error => {
+const invokedDirectly = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (invokedDirectly) main().catch(error => {
   console.error(error);
   process.exit(1);
 });
+
+export { jsonldFor, turtleFor, safeCaseId, PROFILE_VERSION };
