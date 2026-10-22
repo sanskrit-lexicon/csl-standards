@@ -191,7 +191,6 @@ function main() {
     passed: cases.filter(c => c.ok).length,
     failed,
     witnessRejections: witnessCases,
-    witnessRejections: witnessCases,
     negativeControl,
     cases
   }, null, 2)}\n`);
