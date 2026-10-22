@@ -2,14 +2,69 @@
   "schemaVersion": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "generatedBy": "npm run validate-tei-lex0-schema",
-  "schema": "TEI Lex-0 v0.9.4 (DARIAH-ERIC/lexicalresources)",
-  "schemaSource": "https://github.com/DARIAH-ERIC/lexicalresources/blob/v0.9.4/Schemas/TEILex0/out/TEILex0.rng",
-  "schemaSha256": "f5270a718c377d18d3137d4fbbd883e3d39a01dca890fa62f5f580d43d1aa30a",
+  "schema": "TEI Lex-0 v0.9.5 (bcdh/tei-lex-0)",
+  "schemaSource": "https://lex-0.org/schema/lex-0.rng (bcdh/tei-lex-0 tag v0.9.5)",
+  "schemaSha256": "af0554bc915da24a9dd71815088b87e11c1feea49b0bc44fd2f36acb53e67a2a",
   "schematronChecked": false,
-  "note": "Official TEI Lex-0 RNG validation via xmllint --relaxng. Embedded Schematron rules are not executed by libxml2 (documented limitation). Failures are generator defects: fix scripts/export-tei-lex0.mjs, not the outputs.",
+  "note": "Official TEI Lex-0 RNG validation via xmllint --relaxng. Embedded Schematron rules are not executed by libxml2 (documented limitation). Failures are generator defects: fix scripts/export-tei-lex0.mjs, not the outputs. The seven G4 commentary witnesses are expected rejections under the H6196 §7 ruling (recorded verbatim, never conformed away); the negative control must keep failing (a pin that passes it is broken).",
   "total": 298,
-  "passed": 298,
+  "passed": 291,
   "failed": 0,
+  "witnessRejections": [
+    {
+      "file": "skd-BarBa.lex0.xml",
+      "verdictLine": "note has extra content: bibl",
+      "observed": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-BarBa.lex0.xml:54: element bibl: Relax-NG validity error : Element note has extra content: bibl"
+      ]
+    },
+    {
+      "file": "skd-Baza.lex0.xml",
+      "verdictLine": "note has extra content: bibl",
+      "observed": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-Baza.lex0.xml:54: element bibl: Relax-NG validity error : Element note has extra content: bibl"
+      ]
+    },
+    {
+      "file": "skd-DrAGa.lex0.xml",
+      "verdictLine": "note has extra content: bibl",
+      "observed": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-DrAGa.lex0.xml:53: element bibl: Relax-NG validity error : Element note has extra content: bibl"
+      ]
+    },
+    {
+      "file": "skd-GiRa.lex0.xml",
+      "verdictLine": "note has extra content: bibl",
+      "observed": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-GiRa.lex0.xml:53: element bibl: Relax-NG validity error : Element note has extra content: bibl"
+      ]
+    },
+    {
+      "file": "skd-garjja.lex0.xml",
+      "verdictLine": "note has extra content: bibl",
+      "observed": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-garjja.lex0.xml:52: element bibl: Relax-NG validity error : Element note has extra content: bibl"
+      ]
+    },
+    {
+      "file": "skd-sarjja.lex0.xml",
+      "verdictLine": "note has extra content: bibl",
+      "observed": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-sarjja.lex0.xml:54: element bibl: Relax-NG validity error : Element note has extra content: bibl"
+      ]
+    },
+    {
+      "file": "skd-stamBa.lex0.xml",
+      "verdictLine": "note has extra content: bibl",
+      "observed": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-stamBa.lex0.xml:56: element bibl: Relax-NG validity error : Element note has extra content: bibl"
+      ]
+    }
+  ],
+  "negativeControl": {
+    "rejected": true,
+    "error": "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0-negative-control.tmp.xml:32: element body: Relax-NG validity error : Element body failed to validate content"
+  },
   "cases": [
     {
       "file": "mw-pwg-pwk-A-mw22012.lex0.xml",
@@ -1278,13 +1333,25 @@
     },
     {
       "file": "skd-BarBa.lex0.xml",
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "expectedWitnessRejection": true,
+      "errors": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-BarBa.lex0.xml:54: element bibl: Relax-NG validity error : Did not expect element bibl there",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-BarBa.lex0.xml:54: element bibl: Relax-NG validity error : Element note has extra content: bibl",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-BarBa.lex0.xml:33: element body: Relax-NG validity error : Element body failed to validate content",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-BarBa.lex0.xml fails to validate"
+      ]
     },
     {
       "file": "skd-Baza.lex0.xml",
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "expectedWitnessRejection": true,
+      "errors": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-Baza.lex0.xml:54: element bibl: Relax-NG validity error : Did not expect element bibl there",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-Baza.lex0.xml:54: element bibl: Relax-NG validity error : Element note has extra content: bibl",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-Baza.lex0.xml:33: element body: Relax-NG validity error : Element body failed to validate content",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-Baza.lex0.xml fails to validate"
+      ]
     },
     {
       "file": "skd-DAmArgavaH.lex0.xml",
@@ -1298,13 +1365,25 @@
     },
     {
       "file": "skd-DrAGa.lex0.xml",
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "expectedWitnessRejection": true,
+      "errors": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-DrAGa.lex0.xml:53: element bibl: Relax-NG validity error : Did not expect element bibl there",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-DrAGa.lex0.xml:53: element bibl: Relax-NG validity error : Element note has extra content: bibl",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-DrAGa.lex0.xml:33: element body: Relax-NG validity error : Element body failed to validate content",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-DrAGa.lex0.xml fails to validate"
+      ]
     },
     {
       "file": "skd-GiRa.lex0.xml",
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "expectedWitnessRejection": true,
+      "errors": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-GiRa.lex0.xml:53: element bibl: Relax-NG validity error : Did not expect element bibl there",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-GiRa.lex0.xml:53: element bibl: Relax-NG validity error : Element note has extra content: bibl",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-GiRa.lex0.xml:33: element body: Relax-NG validity error : Element body failed to validate content",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-GiRa.lex0.xml fails to validate"
+      ]
     },
     {
       "file": "skd-SiSutvaM.lex0.xml",
@@ -1363,8 +1442,14 @@
     },
     {
       "file": "skd-garjja.lex0.xml",
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "expectedWitnessRejection": true,
+      "errors": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-garjja.lex0.xml:52: element bibl: Relax-NG validity error : Did not expect element bibl there",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-garjja.lex0.xml:52: element bibl: Relax-NG validity error : Element note has extra content: bibl",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-garjja.lex0.xml:33: element body: Relax-NG validity error : Element body failed to validate content",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-garjja.lex0.xml fails to validate"
+      ]
     },
     {
       "file": "skd-hInasaKyaM.lex0.xml",
@@ -1483,13 +1568,25 @@
     },
     {
       "file": "skd-sarjja.lex0.xml",
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "expectedWitnessRejection": true,
+      "errors": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-sarjja.lex0.xml:54: element bibl: Relax-NG validity error : Did not expect element bibl there",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-sarjja.lex0.xml:54: element bibl: Relax-NG validity error : Element note has extra content: bibl",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-sarjja.lex0.xml:33: element body: Relax-NG validity error : Element body failed to validate content",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-sarjja.lex0.xml fails to validate"
+      ]
     },
     {
       "file": "skd-stamBa.lex0.xml",
-      "ok": true,
-      "errors": []
+      "ok": false,
+      "expectedWitnessRejection": true,
+      "errors": [
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-stamBa.lex0.xml:56: element bibl: Relax-NG validity error : Did not expect element bibl there",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-stamBa.lex0.xml:56: element bibl: Relax-NG validity error : Element note has extra content: bibl",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-stamBa.lex0.xml:33: element body: Relax-NG validity error : Element body failed to validate content",
+        "/opt/uprava/worktrees/H6196-csl/data/pilot/tei-lex0/skd-stamBa.lex0.xml fails to validate"
+      ]
     },
     {
       "file": "skd-tUlaM.lex0.xml",

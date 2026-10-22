@@ -57,7 +57,7 @@
     <body>
 
       <!-- ============ Western: Monier-Williams, gaja (L62306) ============ -->
-      <entry xml:id="mw-gaja" xml:lang="sa">
+      <entry type="entry" xml:id="mw-gaja" xml:lang="sa">
         <form type="lemma">
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#mw-source">gaja</orth>
         </form>
@@ -74,8 +74,11 @@
           <bibl><abbr xml:lang="en">Mn.</abbr></bibl>
           </cit>
         </sense>
-        <!-- ifc. f(A): a feminine compound-final form, attested in R. -->
-        <entry type="relatedEntry" xml:id="mw-gaja-gajA" xml:lang="sa">
+      </entry>
+      <!-- ifc. f(A): a feminine compound-final form, attested in R. The official
+           Lex-0 v0.9.5 RNG admits no nested <entry> (v0.9.4 did), so the
+           related form rides as a sibling top-level entry. -->
+      <entry type="relatedEntry" xml:id="mw-gaja-gajA" xml:lang="sa">
           <form type="inflected">
             <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#mw-source">gajA</orth>
           </form>
@@ -86,11 +89,10 @@
               <bibl><abbr xml:lang="en">R.</abbr><citedRange>ii, 57, 7</citedRange></bibl>
             </cit>
           </sense>
-        </entry>
       </entry>
 
       <!-- ========= Indigenous kosa: Sabdakalpadruma, Darmma (L17667) ========= -->
-      <entry xml:id="skd-dharma" xml:lang="sa">
+      <entry type="entry" xml:id="skd-dharma" xml:lang="sa">
         <form type="lemma">
           <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1" cert="high" resp="#skd-source">Darmma</orth>
         </form>
@@ -109,12 +111,14 @@
             <bibl><title>Hitopadeśa</title><citedRange>1.59</citedRange></bibl>
           </cit>
         </sense>
-        <!-- The paryaya run: a synonym list that IS the sense, terminated by the
-             authority "ity Amaraḥ". In the source these are one indivisible
-             iti-unit; Lex-0 forces them into separate <def> and <bibl>. See the
-             model-loss note below and docs/TEI_LEX0_PILOT.md sec. 5. -->
+          <!-- The paryaya run: a synonym list that IS the sense, terminated by the
+              authority "ity Amaraḥ". In the source these are one indivisible
+              iti-unit; Lex-0 forces them into separate <def> and <bibl>. See the
+              model-loss note below and docs/TEI_LEX0_PILOT.md sec. 5. The <lbl>
+              wrapper the v0.9.4 pin admitted is rejected by the official
+              v0.9.5 RNG (def admits no lbl); the label rides as plain text. -->
         <sense xml:id="skd-dharma-s2">
-          <def xml:lang="sa"><lbl>paryāya</lbl> puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ</def>
+          <def xml:lang="sa">paryāya puṇyam, śreyaḥ, sukṛtam, vṛṣaḥ</def>
           <cit type="example">
           <bibl><author>Amara</author><citedRange>1.4.24</citedRange></bibl>
           </cit>
