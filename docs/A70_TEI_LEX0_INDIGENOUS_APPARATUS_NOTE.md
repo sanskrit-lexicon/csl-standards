@@ -81,9 +81,16 @@ The details are in
   derivation parenthesis has no single marker that separates it from any other
   parenthesis.
 
-Validation against the official DARIAH Lex-0 RNG is a separate pin (Uprava H5320). Until
-it is in CI, "validates" here means "against our profile ODD", which is a strict
-subset of Lex-0 plus our constraints.
+Validation against the official DARIAH Lex-0 RNG is a separate pin (Uprava H5320), in CI
+since 24-09-2026; H6196 (22-10-2026) re-pinned it from v0.9.4 to the released **v0.9.5**
+and recorded the per-gap verdicts verbatim in
+[`A70_LEX0_V095_GAP_VERDICTS.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/A70_LEX0_V095_GAP_VERDICTS.md):
+291/298 exports validate, the seven Dhātupāṭha-commentary witnesses are rejected
+verbatim (the G4 shape — `bibl` inside `note`; the rejection strengthens G4's proposal),
+and the *gram/@type* rejections once expected for G2/G10 do not materialize (the official
+choice is open). So "validates" now has two honest senses: "against our profile ODD"
+(all 297, §1 toolchain above) and "against the official v0.9.5 baseline" (291/298 with
+the G4 witnesses recorded).
 
 ## 3. The twelve gaps: structure, example, workaround, proposal
 
@@ -490,10 +497,16 @@ exactly the it-letter code that G2 asks Lex-0 to name.
   twelve are a floor.
 - **Sample of 47.** The strata guarantee that each structure is witnessed, not that its
   variants are. Corpus counts are marker counts and lower bounds.
-- **Profile validation, not official.** "297/297" is against our ODD. The official
-  DARIAH RNG pin (H5320) may reject a workaround, in which case the proposal for that
-  gap is strengthened, not weakened, but the sentence "validates today" must be
-  re-checked.
+- **Official pin executed, two rejections stand (H6196).** The official DARIAH RNG
+  (v0.9.4 in CI since H5320, v0.9.5 since H6196) was run over the whole pilot: 291/298
+  validate; the seven Dhātupāṭha-commentary witnesses are rejected verbatim
+  (`Element note has extra content: bibl`) — the G4 proposal is strengthened, and the
+  witness shape is kept and asserted-rejected by the gate rather than conformed away
+  (`A70_LEX0_V095_GAP_VERDICTS.md`); the exemplar's `<lbl>`-in-`<def>` and nested
+  `entry` shapes are also rejected by v0.9.5. Everything else — the eleven surviving
+  workaround shapes, including the open `gram/@type` values of G2/G10 — validates as
+  exported. "Validates today" therefore holds against the official v0.9.5 baseline with
+  the G4 rejection recorded, not hidden.
 - **Decode certainty.** The M4 decode is a table; where it is silent the export says
   so. A revision of the table changes `resp="#m4"` values, not the gap list.
 - **Language inference.** `bn-Latn` for the *bhāṣā* gloss is an inference over the
@@ -517,8 +530,13 @@ accordingly. The class-A proposals are already that.
   in a comment.
 - **No submission** is made by this note. The portfolio row is Uprava
   [`ARTICLES.md`](https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md) A70.
-- **Next engineering step**: run the sample against the official DARIAH RNG (H5320)
-  and record per gap which workaround it rejects.
+- **Next engineering step — done (H6196, 22-10-2026):** the sample was run against the
+  official DARIAH RNG, re-pinned v0.9.4 → v0.9.5. The run showed: one new requirement
+  (`entry/@type`, conformed at the generator), two genuine v0.9.5 strictnesses over
+  v0.9.4 (no `bibl` in `note` — the seven G4 witnesses, recorded verbatim; no `lbl` in
+  `def`, no nested `entry` — exemplar conformed), and no rejection of the *gram/@type*
+  workarounds (the official choice is open, so G2/G10's constructs survive). Per-gap
+  verdicts: `A70_LEX0_V095_GAP_VERDICTS.md`.
 
 ## References
 

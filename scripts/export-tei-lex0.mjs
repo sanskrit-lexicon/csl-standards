@@ -330,7 +330,7 @@ function entryXml(model) {
   }
 
   const body = [];
-  body.push(`<entry xml:id="${id}-entry" xml:lang="sa">`);
+  body.push(`<entry xml:id="${id}-entry" type="entry" xml:lang="sa">`);
   body.push(`  <form type="lemma">`);
   body.push(`    <orth notation="SLP1" xml:lang="sa-Latn-x-SLP1"${cert("observed")}>${escapeXml(form.orth || model.key)}</orth>`);
   body.push(`  </form>`);

@@ -54,8 +54,25 @@ jobs:
         run: npm run validate-tei-lex0
 
       - name: Validate TEI Lex-0 against official v0.9.5 schema
+        shell: bash
         run: |
-          which xmllint >/dev/null 2>&1 || { sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils; }
+          # The official v0.9.5 RNG hangs libxml2 < 2.15 forever (xmlRelaxNGSimplify
+          # recursion; verified H6196 on 2.9.13 + 2.14.6, clean on 2.15.4) — and the
+          # runners ship 2.9.x. Build the pinned xmllint unless the runner already
+          # has >= 2.15 (libxml version encoding: major*10000 + minor*100 + patch).
+          ok=0
+          if command -v xmllint >/dev/null 2>&1; then
+            v=$(xmllint --version 2>&1 | sed -n 's/.*using libxml version \([0-9]*\).*/\1/p')
+            if [ -n "$v" ] && [ "$v" -ge 21500 ]; then ok=1; fi
+          fi
+          if [ "$ok" -ne 1 ]; then
+            echo "building libxml2 2.15.4 (official v0.9.5 RNG hangs libxml2 < 2.15 — H6196)"
+            curl -sSL --retry 3 -o /tmp/libxml2.tar.xz https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz
+            tar -xJf /tmp/libxml2.tar.xz -C /tmp
+            (cd /tmp/libxml2-2.15.4 && ./configure --prefix=/tmp/libxml2-inst --without-python --disable-shared --enable-static > configure.log 2>&1 && make -j2 > make.log 2>&1 && make install > install.log 2>&1)
+            echo "/tmp/libxml2-inst/bin" >> "$GITHUB_PATH"
+            export PATH=/tmp/libxml2-inst/bin:$PATH
+          fi
           npm run validate-tei-lex0-schema
 
       - name: Build Observable site
