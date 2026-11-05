@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/denominator-ledger.schema.json",
+  "title": "Denominator ledger",
+  "description": "Machine-checkable form of the canon rule 'no percentage without its base' (docs/CITATION_MASS_CANON.md §1). One row per published measure: the value, its unit, the base it is a percentage of, the machine source that produced it, and a provenance class. Generalizes the PD canon ledger (csl-atlas/data/pd/pd_canon_ledger.tsv, 12 TSV columns) to any corpus. Cross-row invariants (enforced by scripts/validate-denominator-ledger.mjs, not expressible in JSON Schema): (1) measure_id unique; (2) pct_of_base present => pct_kind present, and the base is carried per kind: share_of_base requires base_id resolving to another row's measure_id, covered_over_value carries its base in-row (covered_works over the row's own value); (3) every percentage recomputes from the ledger's own values within rounding.",
+  "type": "array",
+  "minItems": 1,
+  "items": { "$ref": "#/definitions/measure" },
+  "definitions": {
+    "measure": {
+      "type": "object",
+      "required": ["measure_id", "label", "value", "unit", "source_file", "source_field", "provenance"],
+      "additionalProperties": false,
+      "properties": {
+        "measure_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "Stable row key, snake_case (TSV column 1: measure_id)."
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human label of the measure (TSV column 2: label)."
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "The measured count (TSV column 3: value)."
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "examples": ["rows", "sigla", "occurrences", "entries", "lemmas", "works", "pages", "tokens"],
+          "description": "Counting unit (TSV column 4: unit). Open set; the reference PD ledger uses rows and sigla."
+        },
+        "base_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "measure_id of the denominator row when the measure carries a percentage (TSV column 5: base_id)."
+        },
+        "covered_works": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of covered works when the measure is coverage-shaped (TSV column 6: covered_works)."
+        },
+        "pct_of_base": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The published percentage over the named base, one decimal (TSV column 7: pct_of_base)."
+        },
+        "pct_kind": {
+          "enum": ["covered_over_value", "share_of_base"],
+          "description": "The denominator relation (TSV column 8: pct_kind). covered_over_value: covered material over this row's own value. share_of_base: this row's value over base_id's value."
+        },
+        "source_file": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Machine artifact the number is read from, repo-relative or cross-repo path (TSV column 9: source_file)."
+        },
+        "source_field": {
+          "type": ["string", "null"],
+          "description": "Key/field inside source_file (TSV column 10: source_field)."
+        },
+        "provenance": {
+          "enum": ["observed", "recorded", "press", "derived"],
+          "description": "How the number came to be (TSV column 11: provenance). observed: measured on the machine text. recorded: recorded by the producer, not re-derived. press: external print count. derived: computed from other ledger rows."
+        },
+        "note": {
+          "type": "string",
+          "description": "Free note, including retirement/retraction semantics (TSV column 12: note)."
+        }
+      }
+    }
+  }
+}

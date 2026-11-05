@@ -27,6 +27,7 @@
     "merge-lift-lexicon": "node scripts/merge-lift-lexicon.mjs",
     "build-pilot": "npm run sample-hard-cases && npm run select-review-cases && npm run build-neutral-model && npm run parse-skd-kosa && npm run build-loss-reports && npm run export-tei && npm run export-tei-lex0 && npm run export-ontolex && npm run export-mdf && npm run export-lift && npm run validate-pilot && npm run validate-tei-profile && npm run validate-tei-lex0 && npm run validate-tei-lex0-schema && npm run validate-ontolex-profile && npm run validate-mdf-profile && npm run smoke-mdf-consumer-display && npm run validate-lift-profile && npm run smoke-lift-consumer-display && npm run analyze-loss && npm run build-figures",
     "validate-pilot": "node scripts/validate-pilot.mjs",
+    "validate-denominator-ledger": "node scripts/validate-denominator-ledger.mjs",
     "validate-tei-profile": "node scripts/validate-tei-profile.mjs",
     "validate-tei-lex0": "node scripts/validate-tei-lex0.mjs",
     "validate-tei-lex0-schema": "node scripts/validate-tei-lex0-schema.mjs",

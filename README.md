@@ -1,6 +1,6 @@
 # csl-standards
 
-_Created: 04-06-2026 · Last updated: 11-10-2026_
+_Created: 04-06-2026 · Last updated: 05-11-2026_
 
 Technical standards and export workbench for CDSL dictionary data.
 
@@ -123,6 +123,9 @@ step-by-step runbook for that later phase is
 
 ## Key documents
 
+- [`docs/CITATION_MASS_CANON.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/CITATION_MASS_CANON.md) — the citation-mass canon: the primary/structural/secondary trichotomy for citation-siglum occurrences, the counting-rule reconciliation, the three coverage denominators, and the residue method (no percentage without its base), generalized from the A68/PD letter-*a* measurement; enforced by [`data/schema/denominator-ledger.schema.json`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/data/schema/denominator-ledger.schema.json) + `npm run validate-denominator-ledger`.
+- [`docs/POLICY_MATCHED_DENSITY.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/POLICY_MATCHED_DENSITY.md) — the policy-matched density method: cross-dictionary attestation comparison that survives lemmatisation-policy differences (shared lemmas, morphological strata, stratified lemma bootstrap, dual pooling, below-parity reporting); reference instance PD:PWG pooled 8.4×.
+- [`docs/ENTRY_ANATOMY.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/ENTRY_ANATOMY.md) — the graduated entry-anatomy canon: the uniform CDSL `<L>…<LEND>` skeleton, the ten-part taxonomy of a headword record, per-dictionary inline markers, and the new-dictionary extension recipe (producer: the machine-local `entry-anatomy` skill, H791).
 - [`docs/DEMO.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/DEMO.md) — guided end-to-end walkthroughs of three contrasting hard cases (the verbal root √ac with 6 source dictionaries; the compound *annavid*; the suppressed-headword continuation *āyana*): raw CDSL records → neutral model → TEI + OntoLex profiles → the loss reports they generate → the `csl:` constructs that answer them. The fastest way to see the whole instrument on real data.
 - [`docs/PAPER.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER.md) — the full prose draft: *Sanskrit Lexicography Between TEI and OntoLex*. The TEI-vs-OntoLex asymmetry, the evidence/derivation/compression findings, and the implemented + validated `csl:` extension layer (every proposal construct, `extensionCoverage` 722/722, `lineageCoverage` 369/369). [`docs/PAPER_OUTLINE.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/PAPER_OUTLINE.md) is the planning outline.
 - [`docs/BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-standards/blob/main/docs/BOUNDARY_RULES.md) — what belongs here vs. delegates.
