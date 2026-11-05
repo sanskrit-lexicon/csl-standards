@@ -32,6 +32,9 @@ jobs:
       - name: Validate pilot artifacts
         run: npm run validate-pilot
 
+      - name: Validate denominator-ledger fixture
+        run: npm run validate-denominator-ledger
+
       - name: Validate TEI archival profile
         run: npm run validate-tei-profile
 
